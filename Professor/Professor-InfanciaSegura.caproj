@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Professor-InfanciaSegura</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>Alexandre e Tiago</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2325hcmnxi4pf</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>2000</width>
+        <height>2000</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>TelaInicial</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="ObjetosTelaInicial">
+            <object-type name="BotaoConectar" sid="890643213994158">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313058239488741" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoConectar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoCriarConta" sid="845828918000911">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435677193416870" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoCriarConta.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoEsqueceuSenha" sid="423020605552201">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613043501106597" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoEsqueci.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoOuvidoria" sid="172790003197300">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249593807845292" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoOuvidoria.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSobre" sid="573109492147791">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914608486548787" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoSobre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CampoEmail" sid="730134271879857">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoSenha" sid="916003499883323">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="TextoEmail" sid="380991561342441">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenha" sid="655865778553873">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloInfanciaSegura" sid="230519047361412">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677780129570164" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Titulo-InfanciaSegura.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="ObjetosTelaCadastro">
+            <object-type name="BotaoCriarContaCadastro" sid="531568715258232">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="117692250094703" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoCriarContaCadastro.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoDuvidaCidade" sid="156142699335199">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="693979655145578" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoInterrogacao.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoDuvidaEmail" sid="628574053734939">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333336477702864" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoInterrogacao.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoDuvidaEscola" sid="726932767808007">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="748389020217532" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoInterrogacao.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoDuvidaNome" sid="223877013118221">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154089991537128" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoInterrogacao.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoDuvidaSenha" sid="141782974181092">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812510112396162" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoInterrogacao.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoVoltarCadastroInicial" sid="380470382083804">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="642820522804811" speed="5">
+                        <frame duration="1" hotspotX="0.500826" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoVoltar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Branco" sid="859817908729249">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852462586937331" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Branco.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CampoEmailCadastro" sid="587707530053186">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoEscolaCadastro" sid="308763216558091">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoNomeCadastro" sid="604680689822346">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoSenhaCadastro" sid="452538918911110">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="ListaCidadeCadastro" sid="237957546954940">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListaEstadoCadastro" sid="522236584453443">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="Preto" sid="928717428012800">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="109414845776325" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Preto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoCidadeCadastro" sid="809315329004725">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDuvidaCidade" sid="885159207253604">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDuvidaEmail" sid="393375902127579">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDuvidaEscola" sid="766537574593157">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDuvidaNome" sid="458526546013073">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDuvidaSenha" sid="991561904637561">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEmailCadastro" sid="769755889504650">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoErroConexao" sid="304213201355386">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEscolaCadastro" sid="279426944715353">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEstadoCadastro" sid="454382658551004">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomeCadastro" sid="816566289857392">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaCadastro" sid="796754126566437">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TopoCriarConta" sid="801612467654125">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652747177433989" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoCriarConta.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="ObjetosTelaPrincipal">
+            <object-type name="BotaoMaterialApoio" sid="277086588841477">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338548879434553" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoMaterial.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoPerfil" sid="828163757736901">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411605554996224" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoPerfil.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSobre2" sid="720274714612802">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="957690276540116" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoSobre2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoTurmas" sid="386535150191604">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="229724548315779" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoTurmas.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TituloInfanciaSeguraMenu" sid="431654713144568">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245281895965658" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Titulo-InfanciaSegura.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="289643519652373">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Mouse" sid="746801909930812">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="AJAX" sid="365669457837136">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="TituloMaterialApoio" sid="644096645924890">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969507315198701" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoMaterialApoio.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoVoltarApoioPrincipal" sid="422798547683065">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598598576097641" speed="5">
+                    <frame duration="1" hotspotX="0.500826" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoVoltar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="459007976579222">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="TextoDescricaoMaterialApoio" sid="560769977420573">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoEnderecos" sid="387000137788426">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="VetorEnderecos" sid="870369957109712">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="BotaoComunicar" sid="211787737375463">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248943287662670" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoComunicar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>TelaInicial.xml</layout>
+        <layout>TelaCadastro.xml</layout>
+        <layout>TelaPrincipal.xml</layout>
+        <layout>TelaMaterialApoio.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Eventos-TelaInicial.xml</event-sheet>
+        <event-sheet>Eventos-TelaCadastro.xml</event-sheet>
+        <event-sheet>Eventos-TelaPrincipal.xml</event-sheet>
+        <event-sheet>Eventos-MaterialApoio.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="10">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="11" />
+        <global-instance type="AJAX" uid="32" />
+        <global-instance type="Browser" uid="48" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

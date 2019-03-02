@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos-TelaPrincipal</name>
+    <events>
+        <comment>Função necessária para deixar as posições absolutas corretas, baseadas nas dimensões da tela</comment>
+        <event-block sid="795461834574422">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="256309520411239" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="836373269893138" type="System">
+                    <param id="0" name="Width">WindowWidth</param>
+                    <param id="1" name="Height">WindowHeight</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="105948364335736" title="TamanhoPosicaoDosObjetosTelaPrincipal">
+            <sub-events>
+                <comment>Condições para tela no modo paisagem</comment>
+                <event-block sid="489678556978161">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="708552929125417" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="963773536572076" type="BotaoTurmas">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="809335468620408" type="BotaoPerfil">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="603933627858348" type="BotaoMaterialApoio">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="702936118027769" type="BotaoSobre2">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="619218383342122" type="TituloInfanciaSeguraMenu">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="157527437043867" type="TituloInfanciaSeguraMenu">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)+RolagemAcumulada</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="584038089223533" type="BotaoTurmas">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">TituloInfanciaSeguraMenu.Y +180</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="961054820852976" type="BotaoPerfil">
+                            <param id="0" name="X">BotaoTurmas.X</param>
+                            <param id="1" name="Y">BotaoTurmas.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="354561058195664" type="BotaoMaterialApoio">
+                            <param id="0" name="X">BotaoPerfil.X</param>
+                            <param id="1" name="Y">BotaoPerfil.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="344645436518527" type="BotaoSobre2">
+                            <param id="0" name="X">BotaoMaterialApoio.X</param>
+                            <param id="1" name="Y">BotaoMaterialApoio.Y+100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Condições para tela no modo retrato</comment>
+                <event-block sid="808144347372570">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="671422743485389" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="504868894634388" type="BotaoTurmas">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="757720475926521" type="BotaoPerfil">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="692022062527497" type="BotaoMaterialApoio">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="906848054267308" type="BotaoSobre2">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="391150384032616" type="TituloInfanciaSeguraMenu">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)+RolagemAcumulada</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="786179942573355" type="TituloInfanciaSeguraMenu">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="946841019735886" type="BotaoTurmas">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1200-(WindowHeight/2)+RolagemAcumulada</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="917477213345592" type="BotaoPerfil">
+                            <param id="0" name="X">BotaoTurmas.X</param>
+                            <param id="1" name="Y">BotaoTurmas.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="604510959040134" type="BotaoMaterialApoio">
+                            <param id="0" name="X">BotaoPerfil.X</param>
+                            <param id="1" name="Y">BotaoPerfil.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="615718241451739" type="BotaoSobre2">
+                            <param id="0" name="X">BotaoMaterialApoio.X</param>
+                            <param id="1" name="Y">BotaoMaterialApoio.Y+100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="297738770211724" title="BotoesPrincipal">
+            <sub-events>
+                <event-group description="" sid="553027391717521" title="BotaoTURMAS">
+                    <sub-events>
+                        <event-block sid="115027421098388">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="547558492616164" type="Touch">
+                                    <param id="0" name="Object">BotaoTurmas</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="538032344529036" type="BotaoTurmas">
+                                    <param id="0" name="Width">BotaoTurmas.Width/1.1</param>
+                                    <param id="1" name="Height">BotaoTurmas.Height/1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="209552462340969">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="417553927394604" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="205380865706476" type="Touch">
+                                    <param id="0" name="Object">BotaoTurmas</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="694279223338444" type="BotaoTurmas">
+                                    <param id="0" name="Width">BotaoTurmas.Width*1.1</param>
+                                    <param id="1" name="Height">BotaoTurmas.Height*1.1</param>
+                                </action>
+                                <action disabled="1" id="-2" name="Go to layout" sid="779940967692952" type="System">
+                                    <param id="0" name="Layout">TelaCadastro</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="577536782279551" title="BotaoPERFIL">
+                    <sub-events>
+                        <event-block sid="229368738224665">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="384878596492682" type="Touch">
+                                    <param id="0" name="Object">BotaoPerfil</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="841646693918421" type="BotaoPerfil">
+                                    <param id="0" name="Width">BotaoPerfil.Width/1.1</param>
+                                    <param id="1" name="Height">BotaoPerfil.Height/1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="313421203445420">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="641321157200300" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="386339277325551" type="Touch">
+                                    <param id="0" name="Object">BotaoPerfil</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="618213528176030" type="BotaoPerfil">
+                                    <param id="0" name="Width">BotaoPerfil.Width*1.1</param>
+                                    <param id="1" name="Height">BotaoPerfil.Height*1.1</param>
+                                </action>
+                                <action disabled="1" id="-2" name="Go to layout" sid="612784145963283" type="System">
+                                    <param id="0" name="Layout">TelaCadastro</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="758113427878156" title="BotaoMATERIALAPOIO">
+                    <sub-events>
+                        <event-block sid="839337987702107">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="661256544214637" type="Touch">
+                                    <param id="0" name="Object">BotaoMaterialApoio</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="568410422163960" type="BotaoMaterialApoio">
+                                    <param id="0" name="Width">BotaoMaterialApoio.Width/1.1</param>
+                                    <param id="1" name="Height">BotaoMaterialApoio.Height/1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="844139098888793">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="871497911876196" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="726862735306749" type="Touch">
+                                    <param id="0" name="Object">BotaoMaterialApoio</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="254533789217045" type="BotaoMaterialApoio">
+                                    <param id="0" name="Width">BotaoMaterialApoio.Width*1.1</param>
+                                    <param id="1" name="Height">BotaoMaterialApoio.Height*1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="297749559560445" type="System">
+                                    <param id="0" name="Layout">TelaMaterialApoio</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="339300931649139" title="BotaoSOBRE2">
+                    <sub-events>
+                        <event-block sid="466110506123019">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="848997599433003" type="Touch">
+                                    <param id="0" name="Object">BotaoSobre2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="574250505116263" type="BotaoSobre2">
+                                    <param id="0" name="Width">BotaoSobre2.Width/1.1</param>
+                                    <param id="1" name="Height">BotaoSobre2.Height/1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="776208141515145">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="494169299771842" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="865909239326579" type="Touch">
+                                    <param id="0" name="Object">BotaoSobre2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="895004988987186" type="BotaoSobre2">
+                                    <param id="0" name="Width">BotaoSobre2.Width*1.1</param>
+                                    <param id="1" name="Height">BotaoSobre2.Height*1.1</param>
+                                </action>
+                                <action disabled="1" id="-2" name="Go to layout" sid="924773845749779" type="System">
+                                    <param id="0" name="Layout">TelaCadastro</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="228102678402389" title="RolagemTelaPrincipal">
+            <sub-events>
+                <event-block sid="490979231346385">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="330876880940746" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="287363333241145" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemAcumulada</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="115718752371505">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="951136719630435" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="909317144068116" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="847267393436665">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="799356047056015" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="479099777496773" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="486688034466995">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="775158996021097" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="951763705799207" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="685617957822678">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="332001481892223" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="339814250408983" type="System">
+                            <param id="0" name="Variable">RolagemAcumulada</param>
+                            <param id="1" name="Value">RolagemDiferenca</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

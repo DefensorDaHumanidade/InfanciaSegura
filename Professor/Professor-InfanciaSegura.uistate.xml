@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">TelaInicial</layout>
+        <layout order="2">TelaCadastro</layout>
+        <layout order="4">TelaPrincipal</layout>
+        <layout order="6">TelaMaterialApoio</layout>
+        <event-sheet order="1">Eventos-TelaInicial</event-sheet>
+        <event-sheet order="3">Eventos-TelaCadastro</event-sheet>
+        <event-sheet order="5">Eventos-TelaPrincipal</event-sheet>
+        <event-sheet active="1" order="7">Eventos-MaterialApoio</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/ObjetosTelaInicial/" />
+        <folder expanded="1" path="object-folder/ObjetosTelaCadastro/" />
+        <folder expanded="1" path="object-folder/ObjetosTelaPrincipal/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/BotaoConectar/" />
+        <folder expanded="1" path="animation-folder/BotaoCriarConta/" />
+        <folder expanded="1" path="animation-folder/BotaoEsqueceuSenha/" />
+        <folder expanded="1" path="animation-folder/BotaoOuvidoria/" />
+        <folder expanded="1" path="animation-folder/BotaoSobre/" />
+        <folder expanded="1" path="animation-folder/TituloInfanciaSegura/" />
+        <folder expanded="1" path="animation-folder/BotaoCriarContaCadastro/" />
+        <folder expanded="1" path="animation-folder/BotaoDuvidaCidade/" />
+        <folder expanded="1" path="animation-folder/BotaoDuvidaEmail/" />
+        <folder expanded="1" path="animation-folder/BotaoDuvidaEscola/" />
+        <folder expanded="1" path="animation-folder/BotaoDuvidaNome/" />
+        <folder expanded="1" path="animation-folder/BotaoDuvidaSenha/" />
+        <folder expanded="1" path="animation-folder/BotaoVoltarCadastroInicial/" />
+        <folder expanded="1" path="animation-folder/Branco/" />
+        <folder expanded="1" path="animation-folder/Preto/" />
+        <folder expanded="1" path="animation-folder/TopoCriarConta/" />
+        <folder expanded="1" path="animation-folder/BotaoMaterialApoio/" />
+        <folder expanded="1" path="animation-folder/BotaoPerfil/" />
+        <folder expanded="1" path="animation-folder/BotaoSobre2/" />
+        <folder expanded="1" path="animation-folder/BotaoTurmas/" />
+        <folder expanded="1" path="animation-folder/TituloInfanciaSeguraMenu/" />
+        <folder expanded="1" path="animation-folder/TituloMaterialApoio/" />
+        <folder expanded="1" path="animation-folder/BotaoVoltarApoioPrincipal/" />
+        <folder expanded="1" path="animation-folder/BotaoComunicar/" />
+    </folders-expanded>
+</c2uistate>
