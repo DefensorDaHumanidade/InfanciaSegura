@@ -289,6 +289,27 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="ObjetosTelaSobre">
+            <object-type name="BotaoVoltarSOBREPRINCIPAL" sid="346654408935401">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338835401317816" speed="5">
+                        <frame duration="1" hotspotX="0.500826" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoVoltar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoSobre" sid="479650570664462">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloSobre" sid="770289539857484">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432614477391942" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoSobre.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Touch" sid="289643519652373">
             <plugin id="Touch" />
         </object-type>
@@ -334,6 +355,36 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="MaterialApoioFundoAvisoPreto" sid="691817304757975">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769266820048286" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Preto.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MaterialApoioFundoAvisoBranco" sid="605523184927177">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="385468140908546" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Branco.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoComunicarMaterialApoio" sid="270962965210456">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CampoComunicacao" sid="660193031234012">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="BotaoComunicarEnviar" sid="657307984045029">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="124369218851160" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoComunicarEnviar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -341,12 +392,14 @@
         <layout>TelaCadastro.xml</layout>
         <layout>TelaPrincipal.xml</layout>
         <layout>TelaMaterialApoio.xml</layout>
+        <layout>TelaSobre.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Eventos-TelaInicial.xml</event-sheet>
         <event-sheet>Eventos-TelaCadastro.xml</event-sheet>
         <event-sheet>Eventos-TelaPrincipal.xml</event-sheet>
         <event-sheet>Eventos-MaterialApoio.xml</event-sheet>
+        <event-sheet>Eventos-TelaSobre.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="10">

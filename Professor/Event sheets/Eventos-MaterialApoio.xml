@@ -15,15 +15,21 @@
                     <param id="0" name="Width">WindowWidth</param>
                     <param id="1" name="Height">WindowHeight</param>
                 </action>
+                <action id="-16" name="Set opacity" sid="711265478238152" type="TextoEnderecos">
+                    <param id="0" name="Opacity">100-TextoEnderecos.Y+1200</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="901722508827826">
             <conditions>
-                <condition id="-1" name="Every tick" sid="927710625677172" type="System" />
+                <condition id="-18" name="On created" sid="927710625677172" type="TituloMaterialApoio" />
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="711265478238152" type="TextoEnderecos">
-                    <param id="0" name="Opacity">100-TextoEnderecos.Y+1200</param>
+                <action id="-26" name="Move to layer" sid="511649408002775" type="TituloMaterialApoio">
+                    <param id="0" name="Layer">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="773463335296762" type="BotaoVoltarApoioPrincipal">
+                    <param id="0" name="Layer">1</param>
                 </action>
             </actions>
         </event-block>
@@ -55,11 +61,11 @@
                         </action>
                         <action id="-3" name="Set position" sid="196083030924728" type="TextoDescricaoMaterialApoio">
                             <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">TituloMaterialApoio.Y+100+RolagemAcumulada</param>
+                            <param id="1" name="Y">TituloMaterialApoio.Y+300+RolagemAcumulada</param>
                         </action>
                         <action id="-3" name="Set position" sid="105475597380421" type="TextoEnderecos">
                             <param id="0" name="X">550</param>
-                            <param id="1" name="Y">TextoDescricaoMaterialApoio.Y+100+((TextoEnderecos.IID)*(100))</param>
+                            <param id="1" name="Y">TextoDescricaoMaterialApoio.Y+((TextoEnderecos.IID)*(100))</param>
                         </action>
                         <action id="-7" name="Set size" sid="843075704829293" type="TextoEnderecos">
                             <param id="0" name="Width">900</param>
@@ -71,6 +77,45 @@
                         <action id="-3" name="Set position" sid="630141546406694" type="BotaoComunicar">
                             <param id="0" name="X">1000</param>
                             <param id="1" name="Y">WindowHeight+400</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="337144506331069" type="MaterialApoioFundoAvisoPreto">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="360339763793576" type="MaterialApoioFundoAvisoPreto">
+                            <param id="0" name="Width">WindowWidth</param>
+                            <param id="1" name="Height">WindowHeight</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="415078489576954" type="MaterialApoioFundoAvisoBranco">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="993308992587873" type="MaterialApoioFundoAvisoBranco">
+                            <param id="0" name="Width">640</param>
+                            <param id="1" name="Height">260</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="215464673736971" type="TextoComunicarMaterialApoio">
+                            <param id="0" name="Width">600</param>
+                            <param id="1" name="Height">240</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="668462523255580" type="TextoComunicarMaterialApoio">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="348300459690017" type="CampoComunicacao">
+                            <param id="0" name="Width">450</param>
+                            <param id="1" name="Height">20</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="782328088318750" type="CampoComunicacao">
+                            <param id="0" name="X">700</param>
+                            <param id="1" name="Y">1090</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="925894340954220" type="BotaoComunicarEnviar">
+                            <param id="0" name="Scale">EscalaDosObjetos/2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="532479821297364" type="BotaoComunicarEnviar">
+                            <param id="0" name="X">CampoComunicacao.X+CampoComunicacao.Width+100</param>
+                            <param id="1" name="Y">CampoComunicacao.Y+10</param>
                         </action>
                     </actions>
                 </event-block>
@@ -100,7 +145,7 @@
                         </action>
                         <action id="-3" name="Set position" sid="729195674029681" type="TextoDescricaoMaterialApoio">
                             <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">TituloMaterialApoio.Y+100+RolagemAcumulada</param>
+                            <param id="1" name="Y">TituloMaterialApoio.Y+300+RolagemAcumulada</param>
                         </action>
                         <action id="-7" name="Set size" sid="131734739013908" type="TextoDescricaoMaterialApoio">
                             <param id="0" name="Width">WindowWidth/2</param>
@@ -108,7 +153,7 @@
                         </action>
                         <action id="-3" name="Set position" sid="863159252496118" type="TextoEnderecos">
                             <param id="0" name="X">1080-(WindowWidth/2)</param>
-                            <param id="1" name="Y">TextoDescricaoMaterialApoio.Y+100+((TextoEnderecos.IID)*(200-WindowWidth/10))</param>
+                            <param id="1" name="Y">TextoDescricaoMaterialApoio.Y+((TextoEnderecos.IID)*(200-WindowWidth/10))</param>
                         </action>
                         <action id="-7" name="Set size" sid="264957217204093" type="TextoEnderecos">
                             <param id="0" name="Width">WindowWidth-100</param>
@@ -121,12 +166,61 @@
                             <param id="0" name="X">1000</param>
                             <param id="1" name="Y">WindowHeight+400</param>
                         </action>
+                        <action id="-3" name="Set position" sid="121886693223664" type="MaterialApoioFundoAvisoPreto">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="932917915388929" type="MaterialApoioFundoAvisoPreto">
+                            <param id="0" name="Width">WindowWidth</param>
+                            <param id="1" name="Height">WindowHeight</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="840040672790380" type="MaterialApoioFundoAvisoBranco">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="647976285874370" type="MaterialApoioFundoAvisoBranco">
+                            <param id="0" name="Width">WindowWidth/1.5</param>
+                            <param id="1" name="Height">WindowHeight/4</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="210672015230649" type="TextoComunicarMaterialApoio">
+                            <param id="0" name="Width">WindowWidth/1.6</param>
+                            <param id="1" name="Height">WindowHeight/4</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="187541587428978" type="TextoComunicarMaterialApoio">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="537100091542433" type="CampoComunicacao">
+                            <param id="0" name="Width">WindowWidth/2</param>
+                            <param id="1" name="Height">20</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="294259258602357" type="CampoComunicacao">
+                            <param id="0" name="X">800-WindowWidth/2</param>
+                            <param id="1" name="Y">1090</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="122828334058583" type="BotaoComunicarEnviar">
+                            <param id="0" name="Scale">EscalaDosObjetos/2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="864178270660084" type="BotaoComunicarEnviar">
+                            <param id="0" name="X">CampoComunicacao.X+CampoComunicacao.Width+50</param>
+                            <param id="1" name="Y">CampoComunicacao.Y+10</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="935516286210208" title="BotoesMATERIALAPOIO">
             <sub-events>
+                <event-group description="" sid="563928519938402" title="BotaoMaterialApoioENVIAR">
+                    <sub-events>
+                        <event-block sid="845679053666892">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="217590037041021" type="BotaoComunicarEnviar" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="788393329009412" title="BotaoVOLTARtelaPRINCIPAL">
                     <sub-events>
                         <event-block sid="481420209215069">
@@ -156,6 +250,75 @@
                                 </action>
                                 <action id="-2" name="Go to layout" sid="798743107771710" type="System">
                                     <param id="0" name="Layout">TelaPrincipal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="564696283977046" title="BotaoCOMUNICAR">
+                    <sub-events>
+                        <event-block sid="598803899753748">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="956784011462135" type="Touch" />
+                                <condition id="-9" name="Is visible" sid="784647721566451" type="MaterialApoioFundoAvisoPreto" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="933651758173558" type="MaterialApoioFundoAvisoPreto">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="250867147675238" type="MaterialApoioFundoAvisoBranco">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="148331808968644" type="TextoComunicarMaterialApoio">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="868667803258358" type="CampoComunicacao">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="380675594464977" type="BotaoComunicarEnviar">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="869003471670421">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="263903793131923" type="Touch">
+                                    <param id="0" name="Object">BotaoComunicar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="753771264061253" type="BotaoComunicar">
+                                    <param id="0" name="Width">BotaoComunicar.Width/1.1</param>
+                                    <param id="1" name="Height">BotaoComunicar.Height/1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="847149538927241">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="621049839607104" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="569615074412298" type="Touch">
+                                    <param id="0" name="Object">BotaoComunicar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="329642410586919" type="BotaoComunicar">
+                                    <param id="0" name="Width">BotaoComunicar.Width*1.1</param>
+                                    <param id="1" name="Height">BotaoComunicar.Height*1.1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="436445597781750" type="MaterialApoioFundoAvisoPreto">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="511723358904546" type="MaterialApoioFundoAvisoBranco">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="345112613585504" type="TextoComunicarMaterialApoio">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="447402942770244" type="CampoComunicacao">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="392022838816251" type="BotaoComunicarEnviar">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>

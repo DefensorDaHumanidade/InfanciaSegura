@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos-TelaSobre</name>
+    <events>
+        <event-block sid="844415790052268">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="343477680103852" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="462076150842068" type="System">
+                    <param id="0" name="Width">WindowWidth</param>
+                    <param id="1" name="Height">WindowHeight</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="447935431096751" title="TamanhoPosicaoDosObjetosTelaSobre">
+            <sub-events>
+                <comment>Condições para tela no modo paisagem</comment>
+                <event-block sid="774442074494829">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="364760919829865" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="531952440689922" type="TituloSobre">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="661979304894757" type="TituloSobre">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="313498526053254" type="TextoSobre">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000+RolagemAcumulada</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="790133761753210" type="TextoSobre">
+                            <param id="0" name="Width">900</param>
+                            <param id="1" name="Height">400</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="947642746178816" type="BotaoVoltarSOBREPRINCIPAL">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="762308496459924" type="BotaoVoltarSOBREPRINCIPAL">
+                            <param id="0" name="X">600</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Condições para tela no modo retrato</comment>
+                <event-block sid="960157777447548">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="640209028313218" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="408041794239858" type="TituloSobre">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="917465415768448" type="TituloSobre">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="445492920495156" type="TextoSobre">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000+RolagemAcumulada</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="139659344289144" type="TextoSobre">
+                            <param id="0" name="Width">WindowWidth-100</param>
+                            <param id="1" name="Height">700</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="921642061606827" type="BotaoVoltarSOBREPRINCIPAL">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="299995738001074" type="BotaoVoltarSOBREPRINCIPAL">
+                            <param id="0" name="X">1080-(WindowWidth/2)</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="240486923734476" title="BotaoVoltarSobre">
+            <sub-events>
+                <event-block sid="243973413008484">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="999413314443968" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarSOBREPRINCIPAL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="998521921446931" type="BotaoVoltarSOBREPRINCIPAL">
+                            <param id="0" name="Width">BotaoVoltarSOBREPRINCIPAL.Width/1.1</param>
+                            <param id="1" name="Height">BotaoVoltarSOBREPRINCIPAL.Height/1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="784969636336257">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="880948943241119" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="428141562982733" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarSOBREPRINCIPAL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="772790167376626" type="BotaoVoltarSOBREPRINCIPAL">
+                            <param id="0" name="Width">BotaoVoltarSOBREPRINCIPAL.Width*1.1</param>
+                            <param id="1" name="Height">BotaoVoltarSOBREPRINCIPAL.Height*1.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="856248278168199" type="System">
+                            <param id="0" name="Layout">TelaPrincipal</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="477386391082075" title="RolagemTelaSobre">
+            <sub-events>
+                <event-block sid="330825757486733">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="942702387984177" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="728480763805256" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemAcumulada</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="157912265312431">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="956551513083315" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="821474222861846" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="337405795040484">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="327047063205120" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="857174513929797" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="203395825931120">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="186330397358565" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="381694704968553" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="159873028569113">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="493623068535129" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="872376766089296" type="System">
+                            <param id="0" name="Variable">RolagemAcumulada</param>
+                            <param id="1" name="Value">RolagemDiferenca</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
