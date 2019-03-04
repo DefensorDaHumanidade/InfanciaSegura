@@ -310,6 +310,71 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="ObjetosMaterialApoio">
+            <object-type name="BotaoComunicar" sid="211787737375463">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248943287662670" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoComunicar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoComunicarEnviar" sid="657307984045029">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="124369218851160" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoComunicarEnviar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoVoltarApoioPrincipal" sid="422798547683065">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598598576097641" speed="5">
+                        <frame duration="1" hotspotX="0.500826" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoVoltar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CampoComunicacao" sid="660193031234012">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="MaterialApoioFundoAvisoBranco" sid="605523184927177">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="385468140908546" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Branco.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MaterialApoioFundoAvisoPreto" sid="691817304757975">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769266820048286" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Preto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoComunicarMaterialApoio" sid="270962965210456">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloMaterialApoio" sid="644096645924890">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969507315198701" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoMaterialApoio.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="VetorEnderecos" sid="870369957109712">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="TextoEnderecos" sid="387000137788426">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDescricaoMaterialApoio" sid="560769977420573">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Touch" sid="289643519652373">
             <plugin id="Touch" />
         </object-type>
@@ -319,71 +384,49 @@
         <object-type name="AJAX" sid="365669457837136">
             <plugin id="AJAX" />
         </object-type>
-        <object-type name="TituloMaterialApoio" sid="644096645924890">
+        <object-type name="Browser" sid="459007976579222">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="TituloTelaPerfil" sid="264361146886419">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969507315198701" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoMaterialApoio.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830141836611599" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoPerfil.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoVoltarApoioPrincipal" sid="422798547683065">
+        <object-type name="BotaoVoltarPerfilPrincipal" sid="759829621517450">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598598576097641" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442258518604328" speed="5">
                     <frame duration="1" hotspotX="0.500826" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoVoltar.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Browser" sid="459007976579222">
-            <plugin id="Browser" />
+        <object-type name="BotaoAdicionarEscola" sid="277054874448486">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733096741509593" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoCadastrarNovaEscola.png" />
+                </animation>
+            </animation-folder>
         </object-type>
-        <object-type name="TextoDescricaoMaterialApoio" sid="560769977420573">
+        <object-type name="BotaoExcluirPerfil" sid="194474105642328">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506235261982591" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoExcluirPerfil.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoNomePerfil" sid="798432477254043">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TextoEnderecos" sid="387000137788426">
+        <object-type name="TextoEmailPerfil" sid="990717446401044">
             <plugin id="Text" />
         </object-type>
-        <object-type global="1" name="VetorEnderecos" sid="870369957109712">
-            <plugin id="Arr" />
-        </object-type>
-        <object-type name="BotaoComunicar" sid="211787737375463">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248943287662670" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoComunicar.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="MaterialApoioFundoAvisoPreto" sid="691817304757975">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769266820048286" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Preto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="MaterialApoioFundoAvisoBranco" sid="605523184927177">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="385468140908546" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Branco.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextoComunicarMaterialApoio" sid="270962965210456">
+        <object-type name="TextoSenhaPerfil" sid="736585982469671">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="CampoComunicacao" sid="660193031234012">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="BotaoComunicarEnviar" sid="657307984045029">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="124369218851160" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoComunicarEnviar.png" />
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -393,6 +436,7 @@
         <layout>TelaPrincipal.xml</layout>
         <layout>TelaMaterialApoio.xml</layout>
         <layout>TelaSobre.xml</layout>
+        <layout>TelaPerfil.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Eventos-TelaInicial.xml</event-sheet>
@@ -400,6 +444,7 @@
         <event-sheet>Eventos-TelaPrincipal.xml</event-sheet>
         <event-sheet>Eventos-MaterialApoio.xml</event-sheet>
         <event-sheet>Eventos-TelaSobre.xml</event-sheet>
+        <event-sheet>Eventos-TelaPerfil.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="10">

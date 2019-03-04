@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos-TelaPerfil</name>
+    <events>
+        <variable constant="0" name="BaixandoDadosPerfil" sid="254970360608557" static="0" type="number">1</variable>
+        <event-block sid="439478062907824">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="801567913690143" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="813299341900476" type="System">
+                    <param id="0" name="Width">WindowWidth</param>
+                    <param id="1" name="Height">WindowHeight</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="462984897405911" title="TamanhoPosicaoDosObjetosTelaSobre2">
+            <sub-events>
+                <comment>Condições para tela no modo paisagem</comment>
+                <event-block sid="458308032165357">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="283673754150809" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="954116306197621" type="TituloTelaPerfil">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="288049270194561" type="TituloTelaPerfil">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="746028449252513" type="TextoNomePerfil">
+                            <param id="0" name="X">515</param>
+                            <param id="1" name="Y">1150-WindowHeight/2+RolagemAcumulada</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="864271734033187" type="TextoEmailPerfil">
+                            <param id="0" name="X">TextoNomePerfil.X</param>
+                            <param id="1" name="Y">TextoNomePerfil.Y+50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="958126321934890" type="TextoSenhaPerfil">
+                            <param id="0" name="X">TextoEmailPerfil.X</param>
+                            <param id="1" name="Y">TextoEmailPerfil.Y+50</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="277645691495272" type="BotaoVoltarPerfilPrincipal">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="145418804921647" type="BotaoVoltarPerfilPrincipal">
+                            <param id="0" name="X">600</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="201176792058554" type="BotaoAdicionarEscola">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="678701109593972" type="BotaoAdicionarEscola">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">850+WindowHeight/2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="149587019702958" type="BotaoExcluirPerfil">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="895618878877329" type="BotaoExcluirPerfil">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">950+WindowHeight/2</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="401158030962168" type="TextoNomePerfil">
+                            <param id="0" name="Width">WindowWidth-20</param>
+                            <param id="1" name="Height">30</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="334157925484412" type="TextoEmailPerfil">
+                            <param id="0" name="Width">WindowWidth-20</param>
+                            <param id="1" name="Height">30</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="605307583823838" type="TextoSenhaPerfil">
+                            <param id="0" name="Width">WindowWidth-20</param>
+                            <param id="1" name="Height">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Condições para tela no modo retrato</comment>
+                <event-block sid="622971991423482">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="372474949558517" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="118796535220724" type="TituloTelaPerfil">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="769676438197869" type="TituloTelaPerfil">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="316711932755661" type="TextoNomePerfil">
+                            <param id="0" name="X">1020-(WindowWidth/2)</param>
+                            <param id="1" name="Y">1150-(WindowHeight/2)+RolagemAcumulada</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="927992756052458" type="TextoEmailPerfil">
+                            <param id="0" name="X">TextoNomePerfil.X</param>
+                            <param id="1" name="Y">TextoNomePerfil.Y+50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="142249964559466" type="TextoSenhaPerfil">
+                            <param id="0" name="X">TextoEmailPerfil.X</param>
+                            <param id="1" name="Y">TextoEmailPerfil.Y+50</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="460055204549798" type="BotaoVoltarPerfilPrincipal">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="944983074700528" type="BotaoVoltarPerfilPrincipal">
+                            <param id="0" name="X">1080-(WindowWidth/2)</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="409546595144822" type="BotaoAdicionarEscola">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="501701677868212" type="BotaoAdicionarEscola">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">850+WindowHeight/2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="760087980982653" type="BotaoExcluirPerfil">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="159429782118827" type="BotaoExcluirPerfil">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">950+WindowHeight/2</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="386662458526582" type="TextoNomePerfil">
+                            <param id="0" name="Width">WindowWidth-20</param>
+                            <param id="1" name="Height">30</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="500878170418641" type="TextoEmailPerfil">
+                            <param id="0" name="Width">WindowWidth-20</param>
+                            <param id="1" name="Height">30</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="849161783508193" type="TextoSenhaPerfil">
+                            <param id="0" name="Width">WindowWidth-20</param>
+                            <param id="1" name="Height">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="158467545707614" title="BotaoVoltarPerfil">
+            <sub-events>
+                <event-block sid="524045059408419">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="650812115373586" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarPerfilPrincipal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="352919587193080" type="BotaoVoltarPerfilPrincipal">
+                            <param id="0" name="Width">BotaoVoltarPerfilPrincipal.Width/1.1</param>
+                            <param id="1" name="Height">BotaoVoltarPerfilPrincipal.Height/1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="751749152448977">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="179186443523868" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="457782715591583" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarPerfilPrincipal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="876217988913396" type="BotaoVoltarPerfilPrincipal">
+                            <param id="0" name="Width">BotaoVoltarPerfilPrincipal.Width*1.1</param>
+                            <param id="1" name="Height">BotaoVoltarPerfilPrincipal.Height*1.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="359935093918331" type="System">
+                            <param id="0" name="Layout">TelaPrincipal</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="603599394979647" title="RolagemTelaPerfil">
+            <sub-events>
+                <event-block sid="573732279583005">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="129182101478965" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="737991472695138" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemAcumulada</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="325686135937268">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="668135964087255" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="725685150430871" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456828618379698">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="885146819130632" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="479182015619300" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575666595867969">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="343665436251261" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="580054381242078" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="916528017073696">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="322964383931439" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="904053700797867" type="System">
+                            <param id="0" name="Variable">RolagemAcumulada</param>
+                            <param id="1" name="Value">RolagemDiferenca</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="271959639052483" title="DadosPerfil">
+            <sub-events>
+                <event-group description="" sid="732456983382756" title="BaixandoDados">
+                    <sub-events>
+                        <event-block sid="838338779302967">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="813833906519822" type="System">
+                                    <param id="0" name="Variable">BaixandoDadosPerfil</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="652489400446586" type="System">
+                                    <param id="0" name="Variable">BaixandoDadosPerfil</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="962219241624927" type="AJAX">
+                                    <param id="0" name="Tag">&quot;DadosPerfil&quot;</param>
+                                    <param id="1" name="URL">&quot;C:\Users\Alexandre\Desktop\DadosProfessorEspecifico.txt&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="690477962507174">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="299580999949489" type="AJAX">
+                                    <param id="0" name="Tag">&quot;DadosPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="587170677252616" type="System">
+                                    <param id="0" name="Variable">BaixandoDadosPerfil</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="790922818854739" type="System">
+                                    <param id="0" name="Group name">&quot;PreenchendoDados&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="521235163389241" type="System">
+                                    <param id="0" name="Group name">&quot;BaixandoDados&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903135873306150">
+                            <conditions>
+                                <condition id="4" name="On any error" sid="828445572073689" type="AJAX" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="562116527409784" type="System">
+                                    <param id="0" name="Variable">BaixandoDadosPerfil</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="121076165040815" type="TextoErroConexao">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="-12" name="Set group active" sid="223946837776754" type="System">
+                                    <param id="0" name="Group name">&quot;BotaoAvisoDuvidaGeral&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="468544859023846" title="PreenchendoDados">
+                    <sub-events>
+                        <event-block sid="853653459695283">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="775738495829096" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="651414600736861" type="TextoNomePerfil">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="314407207296740">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="943752294448369" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="663851025222832" type="TextoEmailPerfil">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 1, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="648789124151056">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="359777310515865" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="736658769054257" type="TextoSenhaPerfil">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 2, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

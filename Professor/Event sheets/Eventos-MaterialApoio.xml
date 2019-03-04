@@ -76,7 +76,7 @@
                         </action>
                         <action id="-3" name="Set position" sid="630141546406694" type="BotaoComunicar">
                             <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">WindowHeight+400</param>
+                            <param id="1" name="Y">950+WindowHeight/2</param>
                         </action>
                         <action id="-3" name="Set position" sid="337144506331069" type="MaterialApoioFundoAvisoPreto">
                             <param id="0" name="X">1000</param>
@@ -164,7 +164,7 @@
                         </action>
                         <action id="-3" name="Set position" sid="461447726451888" type="BotaoComunicar">
                             <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">WindowHeight+400</param>
+                            <param id="1" name="Y">950+WindowHeight/2</param>
                         </action>
                         <action id="-3" name="Set position" sid="121886693223664" type="MaterialApoioFundoAvisoPreto">
                             <param id="0" name="X">1000</param>

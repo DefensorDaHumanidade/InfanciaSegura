@@ -176,8 +176,8 @@
                                     <param id="0" name="Width">BotaoPerfil.Width*1.1</param>
                                     <param id="1" name="Height">BotaoPerfil.Height*1.1</param>
                                 </action>
-                                <action disabled="1" id="-2" name="Go to layout" sid="612784145963283" type="System">
-                                    <param id="0" name="Layout">TelaCadastro</param>
+                                <action id="-2" name="Go to layout" sid="612784145963283" type="System">
+                                    <param id="0" name="Layout">TelaPerfil</param>
                                 </action>
                             </actions>
                         </event-block>
