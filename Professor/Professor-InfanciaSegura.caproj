@@ -375,6 +375,66 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="ObjetosTelaPerfil">
+            <object-type name="BotaoAdicionarEscola" sid="277054874448486">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733096741509593" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoCadastrarNovaEscola.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoExcluirPerfil" sid="194474105642328">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506235261982591" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoExcluirPerfil.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoVoltarPerfilPrincipal" sid="759829621517450">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442258518604328" speed="5">
+                        <frame duration="1" hotspotX="0.500826" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoVoltar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoPretoEscolas" sid="235902612620573">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="945573952759608" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Preto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoEmailPerfil" sid="990717446401044">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEscolaEstado" sid="617546373031033">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEscolasCidade" sid="611145820931846">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEscolasNome" sid="645472996468837">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomePerfil" sid="798432477254043">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaPerfil" sid="736585982469671">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloTelaPerfil" sid="264361146886419">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830141836611599" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoPerfil.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Touch" sid="289643519652373">
             <plugin id="Touch" />
         </object-type>
@@ -387,46 +447,44 @@
         <object-type name="Browser" sid="459007976579222">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="TituloTelaPerfil" sid="264361146886419">
+        <object-type name="Topo" sid="900674992842233">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830141836611599" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoPerfil.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="680997759843503" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\TopoGenerico.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoVoltarPerfilPrincipal" sid="759829621517450">
+        <object-type name="BotaoVoltarAdcionarPerfil" sid="554800530903168">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442258518604328" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="501657982552515" speed="5">
                     <frame duration="1" hotspotX="0.500826" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoVoltar.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoAdicionarEscola" sid="277054874448486">
+        <object-type name="TextoTopoPerfilAdicionarEscola" sid="551472342560010">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoAdicionarNovaEscolaNome" sid="427703673700643">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoAdicionarNovaEscolaCidade" sid="789812308942943">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoAdicionarNovaEscolaEstado" sid="406891603367914">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CampoNovaEscolaNome" sid="401457634194311">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="BotaoSalvarEscola" sid="477350366768174">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733096741509593" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758421935504224" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoCadastrarNovaEscola.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="BotaoExcluirPerfil" sid="194474105642328">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506235261982591" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoExcluirPerfil.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextoNomePerfil" sid="798432477254043">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoEmailPerfil" sid="990717446401044">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoSenhaPerfil" sid="736585982469671">
-            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
@@ -437,6 +495,7 @@
         <layout>TelaMaterialApoio.xml</layout>
         <layout>TelaSobre.xml</layout>
         <layout>TelaPerfil.xml</layout>
+        <layout>TelaPerfilAdicionarEscola.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Eventos-TelaInicial.xml</event-sheet>
@@ -445,6 +504,7 @@
         <event-sheet>Eventos-MaterialApoio.xml</event-sheet>
         <event-sheet>Eventos-TelaSobre.xml</event-sheet>
         <event-sheet>Eventos-TelaPerfil.xml</event-sheet>
+        <event-sheet>Eventos-TelaPerfilAdicionarEscola.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="10">

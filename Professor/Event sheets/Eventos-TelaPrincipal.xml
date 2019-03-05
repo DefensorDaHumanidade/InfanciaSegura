@@ -15,6 +15,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="795179861066534">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="568275645743246" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="112645940646833" type="System">
+                    <param id="0" name="Variable">RolagemDiferenca</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="105948364335736" title="TamanhoPosicaoDosObjetosTelaPrincipal">
             <sub-events>
                 <comment>Condições para tela no modo paisagem</comment>

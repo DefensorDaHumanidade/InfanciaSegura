@@ -16,12 +16,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="6">TelaMaterialApoio</layout>
         <layout order="8">TelaSobre</layout>
         <layout order="10">TelaPerfil</layout>
+        <layout order="12">TelaPerfilAdicionarEscola</layout>
         <event-sheet order="1">Eventos-TelaInicial</event-sheet>
         <event-sheet order="3">Eventos-TelaCadastro</event-sheet>
         <event-sheet order="5">Eventos-TelaPrincipal</event-sheet>
         <event-sheet order="7">Eventos-MaterialApoio</event-sheet>
         <event-sheet order="9">Eventos-TelaSobre</event-sheet>
-        <event-sheet active="1" order="11">Eventos-TelaPerfil</event-sheet>
+        <event-sheet order="11">Eventos-TelaPerfil</event-sheet>
+        <event-sheet active="1" order="13">Eventos-TelaPerfilAdicionarEscola</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -37,6 +39,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/ObjetosTelaPrincipal/" />
         <folder expanded="1" path="object-folder/ObjetosTelaSobre/" />
         <folder expanded="1" path="object-folder/ObjetosMaterialApoio/" />
+        <folder expanded="1" path="object-folder/ObjetosTelaPerfil/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -72,9 +75,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/MaterialApoioFundoAvisoBranco/" />
         <folder expanded="1" path="animation-folder/MaterialApoioFundoAvisoPreto/" />
         <folder expanded="1" path="animation-folder/TituloMaterialApoio/" />
-        <folder expanded="1" path="animation-folder/TituloTelaPerfil/" />
-        <folder expanded="1" path="animation-folder/BotaoVoltarPerfilPrincipal/" />
         <folder expanded="1" path="animation-folder/BotaoAdicionarEscola/" />
         <folder expanded="1" path="animation-folder/BotaoExcluirPerfil/" />
+        <folder expanded="1" path="animation-folder/BotaoVoltarPerfilPrincipal/" />
+        <folder expanded="1" path="animation-folder/FundoPretoEscolas/" />
+        <folder expanded="1" path="animation-folder/TituloTelaPerfil/" />
+        <folder expanded="1" path="animation-folder/Topo/" />
+        <folder expanded="1" path="animation-folder/BotaoVoltarAdcionarPerfil/" />
+        <folder expanded="1" path="animation-folder/BotaoSalvarEscola/" />
     </folders-expanded>
 </c2uistate>
