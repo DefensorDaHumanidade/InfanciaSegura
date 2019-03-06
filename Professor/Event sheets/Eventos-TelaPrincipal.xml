@@ -153,8 +153,8 @@
                                     <param id="0" name="Width">BotaoTurmas.Width*1.1</param>
                                     <param id="1" name="Height">BotaoTurmas.Height*1.1</param>
                                 </action>
-                                <action disabled="1" id="-2" name="Go to layout" sid="779940967692952" type="System">
-                                    <param id="0" name="Layout">TelaCadastro</param>
+                                <action id="-2" name="Go to layout" sid="779940967692952" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
                                 </action>
                             </actions>
                         </event-block>

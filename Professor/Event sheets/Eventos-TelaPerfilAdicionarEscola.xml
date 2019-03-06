@@ -112,18 +112,18 @@
                         </action>
                         <action id="-3" name="Set position" sid="104332814467158" type="BotaoVoltarAdcionarPerfil">
                             <param id="0" name="X">600</param>
-                            <param id="1" name="Y">1050-(WindowHeight/2)+RolagemAcumulada</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
                         </action>
                         <action id="9" name="Set scale" sid="909154362854688" type="Topo">
                             <param id="0" name="Scale">EscalaDosObjetos</param>
                         </action>
                         <action id="-3" name="Set position" sid="603580404390381" type="Topo">
                             <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1050-(WindowHeight/2)+RolagemAcumulada</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
                         </action>
                         <action id="-3" name="Set position" sid="156414262519096" type="TextoTopoPerfilAdicionarEscola">
                             <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1050-(WindowHeight/2)+RolagemAcumulada</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
                         </action>
                         <action id="-3" name="Set position" sid="274169995984618" type="ListaCidadeCadastro">
                             <param id="0" name="X">TextoAdicionarNovaEscolaCidade.X+100</param>
@@ -225,69 +225,6 @@
                         <action id="-3" name="Set position" sid="342518150701962" type="BotaoSalvarEscola">
                             <param id="0" name="X">1000</param>
                             <param id="1" name="Y">950+WindowHeight/2</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="388381856142518" title="RolagemTelaAdicionarEscola">
-            <sub-events>
-                <event-block sid="712735282797962">
-                    <conditions>
-                        <condition id="0" name="On any touch start" sid="409860890316838" type="Touch" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="263655805957701" type="System">
-                            <param id="0" name="Variable">RolagemInicio</param>
-                            <param id="1" name="Value">Touch.AbsoluteY+RolagemAcumulada</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="762102104439512">
-                    <conditions>
-                        <condition id="2" name="Is in touch" sid="894233624150358" type="Touch" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="323145998442550" type="System">
-                            <param id="0" name="Variable">RolagemDiferenca</param>
-                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="618106889461828">
-                    <conditions>
-                        <condition id="8" name="On mouse wheel" sid="631885712713827" type="Mouse">
-                            <param id="0" name="Direction">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="842535545816127" type="System">
-                            <param id="0" name="Variable">RolagemDiferenca</param>
-                            <param id="1" name="Value">10</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="345155568288444">
-                    <conditions>
-                        <condition id="8" name="On mouse wheel" sid="483374550422377" type="Mouse">
-                            <param id="0" name="Direction">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="410729501088863" type="System">
-                            <param id="0" name="Variable">RolagemDiferenca</param>
-                            <param id="1" name="Value">-10</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="633154329007780">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="953365477921586" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="644705259914081" type="System">
-                            <param id="0" name="Variable">RolagemAcumulada</param>
-                            <param id="1" name="Value">RolagemDiferenca</param>
                         </action>
                     </actions>
                 </event-block>
@@ -724,6 +661,69 @@
                         <action id="-12" name="Set group active" sid="842103776006181" type="System">
                             <param id="0" name="Group name">&quot;BaixandoQuantidadeCidadesEscola&quot;</param>
                             <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="388381856142518" title="RolagemTelaAdicionarEscola">
+            <sub-events>
+                <event-block sid="712735282797962">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="409860890316838" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="263655805957701" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemAcumulada</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="762102104439512">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="894233624150358" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="323145998442550" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="618106889461828">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="631885712713827" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="842535545816127" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="345155568288444">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="483374550422377" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="410729501088863" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="633154329007780">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="953365477921586" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="644705259914081" type="System">
+                            <param id="0" name="Variable">RolagemAcumulada</param>
+                            <param id="1" name="Value">RolagemDiferenca</param>
                         </action>
                     </actions>
                 </event-block>
