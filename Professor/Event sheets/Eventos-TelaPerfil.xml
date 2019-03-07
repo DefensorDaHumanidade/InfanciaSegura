@@ -4,6 +4,32 @@
     <name>Eventos-TelaPerfil</name>
     <events>
         <variable constant="0" name="BaixandoDadosPerfil" sid="254970360608557" static="0" type="number">1</variable>
+        <event-block sid="140568117070555">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="611257476600547" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="168107041308088" type="System">
+                    <param id="0" name="Width">WindowWidth</param>
+                    <param id="1" name="Height">WindowHeight</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="203800092282268">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="424330637247298" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="955814642107493" type="System">
+                    <param id="0" name="Variable">RolagemDiferenca</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="145655887611850" type="System">
+                    <param id="0" name="Variable">BaixandoDadosPerfil</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="439478062907824">
             <conditions>
                 <condition id="-1" name="Every tick" sid="801567913690143" type="System" />

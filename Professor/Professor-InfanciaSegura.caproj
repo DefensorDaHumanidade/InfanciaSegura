@@ -491,6 +491,33 @@
         <object-type name="TextoTituloTurma" sid="402030209138799">
             <plugin id="Text" />
         </object-type>
+        <object-type name="BotaoAdicionarTurma" sid="529227315583640">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142877866227030" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoAdicionarTurma.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoConfigurarTurma" sid="407354990988172">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211759945207174" speed="5">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\configuracoes.png">
+                        <collision-poly>
+                            <point x="0.140187" y="0.139752" />
+                            <point x="0.498442" y="0.00931677" />
+                            <point x="0.847352" y="0.152174" />
+                            <point x="0.984424" y="0.5" />
+                            <point x="0.859813" y="0.860248" />
+                            <point x="0.498442" y="0.984472" />
+                            <point x="0.137072" y="0.863354" />
+                            <point x="0.0124611" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

@@ -10,14 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">TelaCadastro</layout>
-        <layout order="3">TelaPerfil</layout>
-        <layout order="5">TelaPerfilAdicionarEscola</layout>
-        <layout order="7">TelaTurma</layout>
-        <event-sheet order="0">Eventos-TelaInicial</event-sheet>
-        <event-sheet order="2">Eventos-TelaCadastro</event-sheet>
-        <event-sheet order="4">Eventos-TelaPerfil</event-sheet>
-        <event-sheet active="1" order="6">Eventos-TelaTurma</event-sheet>
+        <layout order="0">TelaCadastro</layout>
+        <layout order="2">TelaPerfil</layout>
+        <layout order="5">TelaTurma</layout>
+        <layout active="1" order="6">TelaPrincipal</layout>
+        <event-sheet order="1">Eventos-TelaCadastro</event-sheet>
+        <event-sheet order="3">Eventos-TelaPerfil</event-sheet>
+        <event-sheet order="4">Eventos-TelaTurma</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -78,5 +77,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoSalvarEscola/" />
         <folder expanded="1" path="animation-folder/BotaoVoltarAdcionarPerfil/" />
         <folder expanded="1" path="animation-folder/Topo/" />
+        <folder expanded="1" path="animation-folder/BotaoAdicionarTurma/" />
+        <folder expanded="1" path="animation-folder/BotaoConfigurarTurma/" />
     </folders-expanded>
 </c2uistate>
