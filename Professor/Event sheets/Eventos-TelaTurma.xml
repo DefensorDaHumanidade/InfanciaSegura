@@ -29,6 +29,10 @@
                     <param id="0" name="Variable">BaixandoDadosTurma</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action disabled="1" id="-9" name="Destroy" sid="427337660359024" type="TextoEscolasNome" />
+                <action disabled="1" id="-9" name="Destroy" sid="200551552728721" type="TextoEscolasCidade" />
+                <action disabled="1" id="-9" name="Destroy" sid="974324880470198" type="TextoEscolaEstado" />
+                <action disabled="1" id="-9" name="Destroy" sid="443343375690167" type="FundoPretoEscolas" />
             </actions>
         </event-block>
         <event-group description="" sid="807077258339411" title="TamanhoPosicaoDosObjetosTelaTurma">
@@ -504,6 +508,62 @@
                         <action id="-9" name="Set value" sid="647436995005613" type="System">
                             <param id="0" name="Variable">RolagemAcumulada</param>
                             <param id="1" name="Value">RolagemDiferenca</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="537971611544337" title="ClicarTurma">
+            <sub-events>
+                <event-block sid="624847171908422">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="641730519688410" type="TextoEscolasNome">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="423756727665294" type="Touch">
+                            <param id="0" name="Object">TextoEscolasNome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set font size" sid="990608347569017" type="TextoEscolasNome">
+                            <param id="0" name="Size (pt)">18</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993734224269215">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="611418396024018" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="127389609390262" type="Touch">
+                            <param id="0" name="Object">TextoEscolasNome</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="367856880136136" type="TextoEscolasNome">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set font size" sid="697979900957227" type="TextoEscolasNome">
+                            <param id="0" name="Size (pt)">20</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="531546419645216" type="System">
+                            <param id="0" name="Variable">TurmaSelecionada</param>
+                            <param id="1" name="Value">TextoEscolasNome.Text</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="545212615888783" type="System">
+                            <param id="0" name="Variable">TurmaSelecionada</param>
+                            <param id="1" name="Value">replace(lowercase(TextoEscolasNome.Text), &quot; &quot;, &quot;&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="223896790478792" type="System">
+                            <param id="0" name="Group name">&quot;Turmas&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="256170787472102" type="System">
+                            <param id="0" name="Group name">&quot;BaixandoTurmas&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="493341033386255" type="System">
+                            <param id="0" name="Layout">TelaTurmaEspecifica</param>
                         </action>
                     </actions>
                 </event-block>

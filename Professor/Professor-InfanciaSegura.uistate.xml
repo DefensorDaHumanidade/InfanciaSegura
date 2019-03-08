@@ -13,10 +13,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">TelaCadastro</layout>
         <layout order="2">TelaPerfil</layout>
         <layout order="5">TelaTurma</layout>
-        <layout active="1" order="6">TelaPrincipal</layout>
+        <layout order="3">TelaPrincipal</layout>
+        <layout order="6">TelaTurmaEspecifica</layout>
         <event-sheet order="1">Eventos-TelaCadastro</event-sheet>
-        <event-sheet order="3">Eventos-TelaPerfil</event-sheet>
-        <event-sheet order="4">Eventos-TelaTurma</event-sheet>
+        <event-sheet order="4">Eventos-TelaPerfil</event-sheet>
+        <event-sheet active="1" order="7">Eventos-TelaTurmaEspecifica</event-sheet>
+        <event-sheet order="8">Eventos-TelaTurma</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -34,6 +36,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/ObjetosMaterialApoio/" />
         <folder expanded="1" path="object-folder/ObjetosTelaPerfil/" />
         <folder expanded="1" path="object-folder/ObjetosTelaPerfilEscola/" />
+        <folder expanded="1" path="object-folder/ObjetosTelaTurma/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />

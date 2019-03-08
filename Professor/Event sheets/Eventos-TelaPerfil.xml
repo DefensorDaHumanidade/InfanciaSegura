@@ -28,6 +28,10 @@
                     <param id="0" name="Variable">BaixandoDadosPerfil</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action disabled="1" id="-9" name="Destroy" sid="774299518048900" type="TextoEscolasNome" />
+                <action disabled="1" id="-9" name="Destroy" sid="719633502153252" type="TextoEscolasCidade" />
+                <action disabled="1" id="-9" name="Destroy" sid="904185334116593" type="TextoEscolaEstado" />
+                <action disabled="1" id="-9" name="Destroy" sid="689148860602745" type="FundoPretoEscolas" />
             </actions>
         </event-block>
         <event-block sid="439478062907824">
