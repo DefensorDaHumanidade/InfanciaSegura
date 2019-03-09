@@ -10,15 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">TelaCadastro</layout>
-        <layout order="2">TelaPerfil</layout>
-        <layout order="5">TelaTurma</layout>
-        <layout order="3">TelaPrincipal</layout>
-        <layout order="6">TelaTurmaEspecifica</layout>
-        <event-sheet order="1">Eventos-TelaCadastro</event-sheet>
-        <event-sheet order="4">Eventos-TelaPerfil</event-sheet>
-        <event-sheet active="1" order="7">Eventos-TelaTurmaEspecifica</event-sheet>
-        <event-sheet order="8">Eventos-TelaTurma</event-sheet>
+        <layout order="0">TelaPrincipal</layout>
+        <layout order="1">TelaTurmaEspecifica</layout>
+        <layout order="4">TelaTurma</layout>
+        <layout active="1" order="7">TelaTurmaEspecificaAluno</layout>
+        <event-sheet order="2">Eventos-TelaTurmaEspecifica</event-sheet>
+        <event-sheet order="3">Eventos-TelaTurma</event-sheet>
+        <event-sheet order="5">Eventos-TelaCadastro</event-sheet>
+        <event-sheet order="6">Eventos-TelaTurmaEspecificaAluno</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -37,6 +36,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/ObjetosTelaPerfil/" />
         <folder expanded="1" path="object-folder/ObjetosTelaPerfilEscola/" />
         <folder expanded="1" path="object-folder/ObjetosTelaTurma/" />
+        <folder expanded="1" path="object-folder/ObjetosTelaTurmaEspecifica/" />
+        <folder expanded="1" path="object-folder/ObjetosTelaTurmaEspecificaAluno/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -82,5 +83,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Topo/" />
         <folder expanded="1" path="animation-folder/BotaoAdicionarTurma/" />
         <folder expanded="1" path="animation-folder/BotaoConfigurarTurma/" />
+        <folder expanded="1" path="animation-folder/BotaoExpulsar/" />
+        <folder expanded="1" path="animation-folder/FotoAluno/" />
     </folders-expanded>
 </c2uistate>

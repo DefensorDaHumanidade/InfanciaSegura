@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos-TelaTurmaEspecificaAluno</name>
+    <events>
+        <variable constant="0" name="QuantidadePontuacao" sid="278072089447848" static="0" type="number">0</variable>
+        <variable constant="0" name="QuantidadeDeAbusos" sid="691626001594340" static="0" type="number">0</variable>
+        <variable constant="0" name="QuantidadeDeErros" sid="995032092276342" static="0" type="number">0</variable>
+        <variable constant="0" name="AlunoSelecionado" sid="165631336947708" static="0" type="text"></variable>
+        <event-block sid="913215897888818">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="680961945107774" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="304620074854248" type="System">
+                    <param id="0" name="Width">WindowWidth</param>
+                    <param id="1" name="Height">WindowHeight</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="442848654085424">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="924248811396427" type="System" />
+                <condition id="-14" name="Compare variable" sid="370220419101330" type="System">
+                    <param id="0" name="Variable">AlunoSelecionado</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="302755603078631" type="TextoNomeDaCrianca">
+                    <param id="0" name="Text">AlunoSelecionado</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="530190772673432" type="System">
+                    <param id="0" name="Variable">AlunoSelecionado</param>
+                    <param id="1" name="Value">replace(lowercase(AlunoSelecionado), &quot; &quot;, &quot;&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="896751179660010" title="TamanhoPosicaoDosObjetosTelaTurmaEspecificaAluno">
+            <sub-events>
+                <comment>Condições para tela no modo paisagem</comment>
+                <event-block sid="640814604209825">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="156955829531031" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="750414939294628" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="182733468734020" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="X">600</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="530705120589972" type="Topo">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="153068885040525" type="Topo">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="283741493956802" type="TextoNomeDaCrianca">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="771251800939416" type="TextoApelidoAluno">
+                            <param id="0" name="X">600</param>
+                            <param id="1" name="Y">Topo.Y+150+RolagemAcumulada</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="316684107892702" type="FotoAluno">
+                            <param id="0" name="X">TextoApelidoAluno.X</param>
+                            <param id="1" name="Y">TextoApelidoAluno.Y+50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="417225731824232" type="TextoIdadeAluno">
+                            <param id="0" name="X">FotoAluno.X</param>
+                            <param id="1" name="Y">FotoAluno.Y+300</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="521871238525372" type="TextoDiaCadastro">
+                            <param id="0" name="X">TextoApelidoAluno.X+300</param>
+                            <param id="1" name="Y">TextoApelidoAluno.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="494988393284351" type="TextoUltimaJogo">
+                            <param id="0" name="X">TextoDiaCadastro.X</param>
+                            <param id="1" name="Y">TextoDiaCadastro.Y+80</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="843978391693866" type="TextoTempoDeJogo">
+                            <param id="0" name="X">TextoUltimaJogo.X</param>
+                            <param id="1" name="Y">TextoUltimaJogo.Y+80</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="834554993500790" type="TextoSenhaAluno">
+                            <param id="0" name="X">TextoTempoDeJogo.X</param>
+                            <param id="1" name="Y">TextoTempoDeJogo.Y+80</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="915505606779212" type="BotaoExpulsar">
+                            <param id="0" name="X">TextoTempoDeJogo.X+150</param>
+                            <param id="1" name="Y">TextoTempoDeJogo.Y+200</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="447328382803362" type="BotaoExpulsar">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="666166991098758" type="TextoNumeroAbusos">
+                            <param id="0" name="X">TextoIdadeAluno.X-100</param>
+                            <param id="1" name="Y">TextoIdadeAluno.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="344521716032010" type="ListaAbusos">
+                            <param id="0" name="X">TextoNumeroAbusos.X</param>
+                            <param id="1" name="Y">TextoNumeroAbusos.Y+50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="215337692073746" type="TextoQuantidadeErros">
+                            <param id="0" name="X">TextoNumeroAbusos.X</param>
+                            <param id="1" name="Y">TextoNumeroAbusos.Y+200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="291379126831543" type="ListaErros">
+                            <param id="0" name="X">TextoQuantidadeErros.X</param>
+                            <param id="1" name="Y">TextoQuantidadeErros.Y+50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="626175871263562" type="TextoQuantidadePontuacao">
+                            <param id="0" name="X">TextoQuantidadeErros.X</param>
+                            <param id="1" name="Y">TextoQuantidadeErros.Y+200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="789858885342790" type="ListaPontuacao">
+                            <param id="0" name="X">TextoQuantidadePontuacao.X</param>
+                            <param id="1" name="Y">TextoQuantidadePontuacao.Y+50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Condições para tela no modo retrato</comment>
+                <event-block sid="867024871177108">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="381099604745673" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="688576428504845" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="663162863117377" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="X">1080-(WindowWidth/2)</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="546625377902670" type="Topo">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="759510089900829" type="Topo">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="819246195882917" type="TextoTituloTurmaEspecifica">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="394819006040752" title="BotaoVoltarAlunoTurma">
+            <sub-events>
+                <event-block sid="707090507030225">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="216398998821192" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarAdcionarPerfil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="899976403321492" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Width">BotaoVoltarAdcionarPerfil.Width/1.1</param>
+                            <param id="1" name="Height">BotaoVoltarAdcionarPerfil.Height/1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="101700523231446">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="391376436547954" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="821387328159868" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarAdcionarPerfil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="989712668396716" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Width">BotaoVoltarAdcionarPerfil.Width*1.1</param>
+                            <param id="1" name="Height">BotaoVoltarAdcionarPerfil.Height*1.1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="299998495560179" type="System">
+                            <param id="0" name="Group name">&quot;PreenchendoDadosTurma&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="839843993220658" type="System">
+                            <param id="0" name="Group name">&quot;BaixandoDadosTurmaEspecifica&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="257882076747964" type="System">
+                            <param id="0" name="Group name">&quot;PreencheInformacoes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="879085043221900" type="System">
+                            <param id="0" name="Group name">&quot;CarregaInformacoes&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="260265001203911" type="System">
+                            <param id="0" name="Layout">TelaTurmaEspecifica</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="577450442122072" title="CarregandoDadosAluno">
+            <sub-events>
+                <event-block sid="244485753349769">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="864512827467257" type="FotoAluno" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Load image from URL" sid="434362634446140" type="FotoAluno">
+                            <param id="0" name="URI">&quot;C:/Users/Alexandre/Desktop/imagem&quot;&amp;replace(lowercase(AlunoSelecionado), &quot; &quot;, &quot;&quot;)&amp;&quot;.jpg&quot;</param>
+                            <param id="1" name="Size">1</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="999902176137344" title="CarregaInformacoes">
+                    <sub-events>
+                        <event-block sid="826322890315880">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="281141223346742" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="105122458870228" type="AJAX">
+                                    <param id="0" name="Tag">&quot;RequisicaoCrianca&quot;</param>
+                                    <param id="1" name="URL">&quot;C:/Users/Alexandre/Desktop/&quot;&amp;replace(lowercase(AlunoSelecionado), &quot; &quot;, &quot;&quot;)&amp;&quot;.txt&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="307601089891869">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="370798842936916" type="AJAX">
+                                    <param id="0" name="Tag">&quot;RequisicaoCrianca&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="155609863802565" type="System">
+                                    <param id="0" name="Group name">&quot;PreencheInformacoes&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="508408040290666" type="System">
+                                    <param id="0" name="Group name">&quot;CarregaInformacoes&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="956599366014541">
+                            <conditions>
+                                <condition id="4" name="On any error" sid="854408716263498" type="AJAX" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="914101000999718" type="System">
+                                    <param id="0" name="Variable">FacaUMAvez</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="587263433257073" type="TextoErroConexao">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="-12" name="Set group active" sid="534270898466759" type="System">
+                                    <param id="0" name="Group name">&quot;BotaoAvisoDuvidaGeral&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="749490737112588" title="PreencheInformacoes">
+            <sub-events>
+                <event-block sid="690115990065508">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="418089693392524" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="497810489257722" type="TextoApelidoAluno">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="947044895934348" type="TextoIdadeAluno">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 1, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="195421678731972" type="TextoDiaCadastro">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 2, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="591658122034071" type="TextoUltimaJogo">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="166615406429183" type="TextoTempoDeJogo">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 4, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="706415439699755" type="TextoNumeroAbusos">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 5, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="278415272212993" type="System">
+                            <param id="0" name="Variable">QuantidadeDeAbusos</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData, 5, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="11" name="Clear" sid="619553227790393" type="ListaAbusos" />
+                        <action id="11" name="Clear" sid="138137371575747" type="ListaErros" />
+                        <action id="11" name="Clear" sid="965685747658269" type="ListaPontuacao" />
+                    </actions>
+                </event-block>
+                <event-block sid="265936675879648">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="989835714323979" type="System" />
+                        <condition id="-10" name="For" sid="932160457985864" type="System">
+                            <param id="0" name="Name">&quot;QuantidadeAbusos&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">QuantidadeDeAbusos</param>
+                        </condition>
+                        <condition disabled="1" id="-10" name="For" sid="786414802884617" type="System">
+                            <param id="0" name="Name">&quot;QuantidadeAbusos&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">int(tokenat(AJAX.LastData, 5, &quot;&lt;br&gt;&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="502528597276523" type="ListaAbusos">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, loopindex+5, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="417880072268913" type="System">
+                            <param id="0" name="Variable">QuantidadeDeErros</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData, loopindex+5+1, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="420855651545480">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="768433095669914" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="176837490770798" type="TextoQuantidadeErros">
+                            <param id="0" name="Text">QuantidadeDeErros</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="294413499951610">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="185918334586658" type="System" />
+                        <condition id="-10" name="For" sid="615240955974246" type="System">
+                            <param id="0" name="Name">&quot;QuantidadeAbusos&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">QuantidadeDeErros</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="238014097853197" type="ListaErros">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, loopindex+5+1+QuantidadeDeAbusos, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="602309932703521" type="System">
+                            <param id="0" name="Variable">QuantidadePontuacao</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData, loopindex+5+2+QuantidadeDeAbusos, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="477480945619941">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="688028181068524" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="133377947618287" type="TextoQuantidadePontuacao">
+                            <param id="0" name="Text">QuantidadePontuacao</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="381663522223480" title="RolagemTelaTurmaEspecificaAluno">
+            <sub-events>
+                <event-block sid="505928444088646">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="285546414119500" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="313710251368993" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemAcumulada</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="752730131641774">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="691902174315567" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="232077601974138" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="726309794404122">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="423112980185893" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="733915732071022" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="491344556561275">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="309175902479381" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="893833382227660" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137796570017622">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="654006795466881" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="212852771415940" type="System">
+                            <param id="0" name="Variable">RolagemAcumulada</param>
+                            <param id="1" name="Value">RolagemDiferenca</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

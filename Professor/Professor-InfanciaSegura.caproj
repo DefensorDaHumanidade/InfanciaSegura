@@ -508,6 +508,92 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="ObjetosTelaTurmaEspecifica">
+            <object-type name="TextoAbusos" sid="683300692105172">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoErrinhos" sid="925479814825109">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoErros" sid="278561855888043">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomeAluno" sid="666985728725955">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomezinho" sid="659547723904051">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoPontinhos" sid="935391287153174">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoPontuacao" sid="278384262899035">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoQuantidadeAbusos" sid="820161877922604">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTituloTurmaEspecifica" sid="933525196510944">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="ObjetosTelaTurmaEspecificaAluno">
+            <object-type name="BotaoExpulsar" sid="945655036472970">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246821423940687" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoExplusarAluno.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FotoAluno" sid="481920516812704">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="955959126279328" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ListaAbusos" sid="166052915183167">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListaErros" sid="830341596173361">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListaPontuacao" sid="902852150559602">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="TextoApelidoAluno" sid="680852863461240">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDiaCadastro" sid="882265295467902">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoIdadeAluno" sid="599972063978421">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomeDaCrianca" sid="481501165584497">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNumeroAbusos" sid="225079915451815">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoQuantidadeErros" sid="405854638806028">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoQuantidadePontuacao" sid="779169246708168">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaAluno" sid="448891672869770">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTempoDeJogo" sid="951409193780801">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoUltimaJogo" sid="965325662184597">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Touch" sid="289643519652373">
             <plugin id="Touch" />
         </object-type>
@@ -519,33 +605,6 @@
         </object-type>
         <object-type name="Browser" sid="459007976579222">
             <plugin id="Browser" />
-        </object-type>
-        <object-type name="TextoTituloTurmaEspecifica" sid="933525196510944">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoQuantidadeAbusos" sid="820161877922604">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoNomeAluno" sid="666985728725955">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoErros" sid="278561855888043">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoPontuacao" sid="278384262899035">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoAbusos" sid="683300692105172">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoNomezinho" sid="659547723904051">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoErrinhos" sid="925479814825109">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoPontinhos" sid="935391287153174">
-            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
@@ -559,6 +618,7 @@
         <layout>TelaPerfilAdicionarEscola.xml</layout>
         <layout>TelaTurma.xml</layout>
         <layout>TelaTurmaEspecifica.xml</layout>
+        <layout>TelaTurmaEspecificaAluno.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Eventos-TelaInicial.xml</event-sheet>
@@ -570,6 +630,7 @@
         <event-sheet>Eventos-TelaPerfilAdicionarEscola.xml</event-sheet>
         <event-sheet>Eventos-TelaTurma.xml</event-sheet>
         <event-sheet>Eventos-TelaTurmaEspecifica.xml</event-sheet>
+        <event-sheet>Eventos-TelaTurmaEspecificaAluno.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="10">
