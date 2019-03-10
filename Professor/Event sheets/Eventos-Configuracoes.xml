@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos-Configuracoes</name>
+    <events>
+        <event-block sid="921261502208570">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="220453843615516" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="900479487176602" type="System">
+                    <param id="0" name="Width">WindowWidth</param>
+                    <param id="1" name="Height">WindowHeight</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="270726759471629" type="TextoTamanhoLetra">
+                    <param id="0" name="Opacity">100-TextoTamanhoLetra.Y+1200</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="593110906109854" type="CampoTamanhoLetra">
+                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&amp;100-TextoTamanhoLetra.Y+1200</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="680818479469126" type="TextoTipoDaLetra">
+                    <param id="0" name="Opacity">100-TextoTipoDaLetra.Y+1200</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="573208984084808" type="ListaTipoLetra">
+                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&amp;100-TextoTipoDaLetra.Y+1200</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="574142271611120" type="TextoFonteDaLetra">
+                    <param id="0" name="Opacity">100-TextoFonteDaLetra.Y+1200</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="959209660290945" type="ListaFonteLetra">
+                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&amp;100-TextoFonteDaLetra.Y+1200</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="702798709414516" type="TextoIdioma">
+                    <param id="0" name="Opacity">100-TextoIdioma.Y+1200</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="460814729350072" type="ListaIdioma">
+                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&amp;100-TextoIdioma.Y+1200</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="107350968902989" type="TextoVolume">
+                    <param id="0" name="Opacity">100-TextoVolume.Y+1200</param>
+                </action>
+                <action id="2" name="Set CSS style" sid="379974526305025" type="BarraVolume">
+                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&amp;100-TextoVolume.Y+1200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="654403966132895" title="TamanhoPosicaoDosObjetosTelaConfiguracoes">
+            <sub-events>
+                <comment>Condições para tela no modo paisagem</comment>
+                <event-block sid="669934825646392">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="544828233205055" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="721251418912762" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="170305417185973" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="X">600</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="640360208934671" type="Topo">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="323735989281071" type="Topo">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="422558280720989" type="TextoTituloConfiguracoes">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="854018794935468" type="TextoTamanhoLetra">
+                            <param id="0" name="X">515</param>
+                            <param id="1" name="Y">Topo.Y+150+RolagemAcumulada</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="862782148940058" type="CampoTamanhoLetra">
+                            <param id="0" name="X">TextoTamanhoLetra.X+250</param>
+                            <param id="1" name="Y">TextoTamanhoLetra.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="377601617132304" type="TextoTipoDaLetra">
+                            <param id="0" name="X">TextoTamanhoLetra.X</param>
+                            <param id="1" name="Y">TextoTamanhoLetra.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="911945469014285" type="ListaTipoLetra">
+                            <param id="0" name="X">TextoTipoDaLetra.X+250</param>
+                            <param id="1" name="Y">TextoTipoDaLetra.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="946569643573296" type="TextoFonteDaLetra">
+                            <param id="0" name="X">TextoTipoDaLetra.X</param>
+                            <param id="1" name="Y">TextoTipoDaLetra.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="202448953075727" type="ListaFonteLetra">
+                            <param id="0" name="X">TextoFonteDaLetra.X+250</param>
+                            <param id="1" name="Y">TextoFonteDaLetra.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="360492517837784" type="TextoIdioma">
+                            <param id="0" name="X">TextoFonteDaLetra.X</param>
+                            <param id="1" name="Y">TextoFonteDaLetra.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="665217231677514" type="ListaIdioma">
+                            <param id="0" name="X">TextoIdioma.X+250</param>
+                            <param id="1" name="Y">TextoIdioma.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="715462460275216" type="TextoVolume">
+                            <param id="0" name="X">TextoIdioma.X</param>
+                            <param id="1" name="Y">TextoIdioma.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="215788177118372" type="BarraVolume">
+                            <param id="0" name="X">TextoVolume.X+250</param>
+                            <param id="1" name="Y">TextoVolume.Y</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="342885665269689" type="BotaoSalvar">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="704570806274135" type="BotaoRestaurar">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="122864165216032" type="BotaoRestaurar">
+                            <param id="0" name="X">1200</param>
+                            <param id="1" name="Y">950+WindowHeight/2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="960586286165238" type="BotaoSalvar">
+                            <param id="0" name="X">800</param>
+                            <param id="1" name="Y">950+WindowHeight/2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Condições para tela no modo retrato</comment>
+                <event-block sid="171155287473641">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="978301249488629" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="914232043046858" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="679165298303286" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="X">1080-(WindowWidth/2)</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="881103338633495" type="Topo">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="176739441044671" type="Topo">
+                            <param id="0" name="Scale">(WindowWidth/(1500+WindowHeight))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="486472989581349" type="TextoTituloConfiguracoes">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1050-(WindowHeight/2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="775643460646594" title="BotaoVoltarConfiguracoesPrinciapal">
+            <sub-events>
+                <event-block sid="881824359844244">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="964309411880696" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarAdcionarPerfil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="763566774089339" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Width">BotaoVoltarAdcionarPerfil.Width/1.1</param>
+                            <param id="1" name="Height">BotaoVoltarAdcionarPerfil.Height/1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="213073304770721">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="504565450537614" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="562410188142194" type="Touch">
+                            <param id="0" name="Object">BotaoVoltarAdcionarPerfil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="109552628784452" type="BotaoVoltarAdcionarPerfil">
+                            <param id="0" name="Width">BotaoVoltarAdcionarPerfil.Width*1.1</param>
+                            <param id="1" name="Height">BotaoVoltarAdcionarPerfil.Height*1.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="640017934814317" type="System">
+                            <param id="0" name="Layout">TelaPrincipal</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="593312778223927" title="BotaoSalvar">
+            <sub-events>
+                <event-block sid="238521262846695">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="719481433136759" type="Touch">
+                            <param id="0" name="Object">BotaoSalvar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="190413696431249" type="BotaoSalvar">
+                            <param id="0" name="Width">BotaoSalvar.Width/1.1</param>
+                            <param id="1" name="Height">BotaoSalvar.Height/1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390192452842712">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="838611133709707" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="992443607421699" type="Touch">
+                            <param id="0" name="Object">BotaoSalvar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="833994232756996" type="BotaoSalvar">
+                            <param id="0" name="Width">BotaoSalvar.Width*1.1</param>
+                            <param id="1" name="Height">BotaoSalvar.Height*1.1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="813163272159694" type="TextoAvisoOK">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="825828769077687" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="589500727986555" type="TextoAvisoOK">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="378624733658870" title="BotaoRestaurar">
+            <sub-events>
+                <event-block sid="962203967828609">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="965716036534632" type="Touch">
+                            <param id="0" name="Object">BotaoRestaurar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="541255005904152" type="BotaoRestaurar">
+                            <param id="0" name="Width">BotaoRestaurar.Width/1.1</param>
+                            <param id="1" name="Height">BotaoRestaurar.Height/1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="679677602014636">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="599351489170425" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="399303119252311" type="Touch">
+                            <param id="0" name="Object">BotaoRestaurar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="981350452156672" type="BotaoRestaurar">
+                            <param id="0" name="Width">BotaoRestaurar.Width*1.1</param>
+                            <param id="1" name="Height">BotaoRestaurar.Height*1.1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="461316023087971" type="TextoAvisoOK">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="366581970586219" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="917858712304227" type="TextoAvisoOK">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="649484594168466" title="RolagemConfiguracoes">
+            <sub-events>
+                <event-block sid="144616188592549">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="644416304286292" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="219535645202464" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemAcumulada</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="709992270967507">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="525475605903317" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="246486259961355" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742693502962148">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="378488012318035" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="465675909609471" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="923435318498686">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="774334174701804" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="366756092412152" type="System">
+                            <param id="0" name="Variable">RolagemDiferenca</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="251277032329183">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="179424993216995" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="440635778091838" type="System">
+                            <param id="0" name="Variable">RolagemAcumulada</param>
+                            <param id="1" name="Value">RolagemDiferenca</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

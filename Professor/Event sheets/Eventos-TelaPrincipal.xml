@@ -50,6 +50,9 @@
                         <action id="9" name="Set scale" sid="702936118027769" type="BotaoSobre2">
                             <param id="0" name="Scale">EscalaDosObjetos</param>
                         </action>
+                        <action id="9" name="Set scale" sid="278337127827833" type="BotaoConfiguracoes">
+                            <param id="0" name="Scale">EscalaDosObjetos</param>
+                        </action>
                         <action id="9" name="Set scale" sid="619218383342122" type="TituloInfanciaSeguraMenu">
                             <param id="0" name="Scale">EscalaDosObjetos</param>
                         </action>
@@ -65,11 +68,15 @@
                             <param id="0" name="X">BotaoTurmas.X</param>
                             <param id="1" name="Y">BotaoTurmas.Y+100</param>
                         </action>
-                        <action id="-3" name="Set position" sid="354561058195664" type="BotaoMaterialApoio">
+                        <action id="-3" name="Set position" sid="354561058195664" type="BotaoConfiguracoes">
                             <param id="0" name="X">BotaoPerfil.X</param>
                             <param id="1" name="Y">BotaoPerfil.Y+100</param>
                         </action>
-                        <action id="-3" name="Set position" sid="344645436518527" type="BotaoSobre2">
+                        <action id="-3" name="Set position" sid="344645436518527" type="BotaoMaterialApoio">
+                            <param id="0" name="X">BotaoConfiguracoes.X</param>
+                            <param id="1" name="Y">BotaoConfiguracoes.Y+100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="122930193475287" type="BotaoSobre2">
                             <param id="0" name="X">BotaoMaterialApoio.X</param>
                             <param id="1" name="Y">BotaoMaterialApoio.Y+100</param>
                         </action>
@@ -95,6 +102,9 @@
                             <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
                         </action>
                         <action id="9" name="Set scale" sid="906848054267308" type="BotaoSobre2">
+                            <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="401947244003605" type="BotaoConfiguracoes">
                             <param id="0" name="Scale">EscalaRelativaDosObjetos</param>
                         </action>
                         <action id="-3" name="Set position" sid="391150384032616" type="TituloInfanciaSeguraMenu">
@@ -189,6 +199,40 @@
                                 </action>
                                 <action id="-2" name="Go to layout" sid="612784145963283" type="System">
                                     <param id="0" name="Layout">TelaPerfil</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="941622541470758" title="BotaoCONFIGURACOES">
+                    <sub-events>
+                        <event-block sid="193999639987531">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="687199832211391" type="Touch">
+                                    <param id="0" name="Object">BotaoConfiguracoes</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="833908777823251" type="BotaoConfiguracoes">
+                                    <param id="0" name="Width">BotaoConfiguracoes.Width/1.1</param>
+                                    <param id="1" name="Height">BotaoConfiguracoes.Height/1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="995567200032456">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="647840865196772" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="745557470027000" type="Touch">
+                                    <param id="0" name="Object">BotaoConfiguracoes</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="769761379070104" type="BotaoConfiguracoes">
+                                    <param id="0" name="Width">BotaoConfiguracoes.Width*1.1</param>
+                                    <param id="1" name="Height">BotaoConfiguracoes.Height*1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="943305086714928" type="System">
+                                    <param id="0" name="Layout">TelaConfiguracoes</param>
                                 </action>
                             </actions>
                         </event-block>
