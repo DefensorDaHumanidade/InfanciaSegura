@@ -14,12 +14,15 @@
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="UserMedia" version="1">User Media</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors />
@@ -742,6 +745,228 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="ObjetosTurmaAdd">
+            <object-type name="BotaoProximaEtapa" sid="833455407790240">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839284782784956" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoProximaEtapa.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CampoNovaSenhaTurma" sid="299751499335646">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoNovoNomeTurma" sid="592662198085415">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="ComSenha" sid="835554365991912">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="106103429431813" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\CadeadoFechado.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ListaEscolaDisponiveis" sid="456581765480800">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListandoFotoTurmas" sid="428882426848191">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="64" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783362066312682" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SemSenha" sid="529699594551302">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357078776241104" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\CadeadoAberto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoAssociarTurmaEscola" sid="874647276731642">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCriarNomeTurma" sid="683857103778851">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCriarSenhaTurma" sid="796754096398443">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoElementoEstadoTurma" sid="645811842317029">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoListandoAsTurmas" sid="121364199545646">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTituloAdd1" sid="481092270786865">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTurmasCadastradas" sid="826535589202676">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoFotografar" sid="122610116257296">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747686831089339" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoTirarFoto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoHabilitarCamera" sid="532609695781536">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821008598149737" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoHabilitarCamera.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoOutraFoto" sid="967795518391132">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861346884962393" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoTirarOutraFoto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSalvarFoto" sid="508921664695721">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431582233857790" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoUsarFoto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSemFoto" sid="784056771581817">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466940909837101" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoContinuarSemFoto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FotoCamare" sid="206023560038723">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990188192668954" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoDescricaoFoto" sid="540263660868238">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTurma2" sid="738223662371518">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="WebCam" sid="564323035230210">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="991122721685509" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\SemFoto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoCancelar" sid="446550659953591">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648167285974788" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoCancelar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSalvarTurmaCriada" sid="152991390548678">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524899695238704" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoSalvar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FotoTodasAsTurmas" sid="826163005866233">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="578907105556132" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoFinalizacaoTurma" sid="613895982805320">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTodasAsTurmas" sid="354038028573915">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTurma3" sid="441988430120626">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Touch" sid="289643519652373">
             <plugin id="Touch" />
         </object-type>
@@ -762,158 +987,18 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TextoTituloAdd1" sid="481092270786865">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoCriarNomeTurma" sid="683857103778851">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoCriarSenhaTurma" sid="796754096398443">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoAssociarTurmaEscola" sid="874647276731642">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="CampoNovoNomeTurma" sid="592662198085415">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="CampoNovaSenhaTurma" sid="299751499335646">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="ListaEscolaDisponiveis" sid="456581765480800">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="TextoTurmasCadastradas" sid="826535589202676">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoListandoAsTurmas" sid="121364199545646">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="ListandoFotoTurmas" sid="428882426848191">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783362066312682" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoProximaEtapa" sid="833455407790240">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839284782784956" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoProximaEtapa.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextoTurma2" sid="738223662371518">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoDescricaoFoto" sid="540263660868238">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="BotaoSemFoto" sid="784056771581817">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466940909837101" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoContinuarSemFoto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoHabilitarCamera" sid="532609695781536">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821008598149737" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoHabilitarCamera.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoFotografar" sid="122610116257296">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747686831089339" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoTirarFoto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoSalvarFoto" sid="508921664695721">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431582233857790" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoUsarFoto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoOutraFoto" sid="967795518391132">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861346884962393" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoTirarOutraFoto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FotoCamare" sid="206023560038723">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990188192668954" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextoTurma3" sid="441988430120626">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoFinalizacaoTurma" sid="613895982805320">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoTodasAsTurmas" sid="354038028573915">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="FotoTodasAsTurmas" sid="826163005866233">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="578907105556132" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoCancelar" sid="446550659953591">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648167285974788" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoCancelar.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoSalvarTurmaCriada" sid="152991390548678">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524899695238704" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\BotaoSalvar.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SemSenha" sid="529699594551302">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357078776241104" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\CadeadoAberto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ComSenha" sid="835554365991912">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="106103429431813" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\CadeadoFechado.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextoElementoEstadoTurma" sid="645811842317029">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="TiledBackground" sid="485215872753560">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="UserMedia" sid="596902861260297">
+            <plugin id="UserMedia" />
+        </object-type>
+        <object-type global="1" name="XML" sid="779033758746158">
+            <plugin id="XML" />
+        </object-type>
+        <object-type name="LocalStorage" sid="106878909804245">
+            <plugin id="LocalStorage" />
         </object-type>
     </object-folder>
     <families />
@@ -960,6 +1045,7 @@
         <global-instance type="Mouse" uid="11" />
         <global-instance type="AJAX" uid="32" />
         <global-instance type="Browser" uid="48" />
+        <global-instance type="LocalStorage" uid="196" />
     </global-instances>
     <sounds-folder />
     <music-folder />
@@ -972,5 +1058,10 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file-folder name="PastaIdiomas">
+            <file name="ES.xml" />
+            <file name="PT-BR.xml" />
+        </file-folder>
+        <file-folder name="PastaPHP" />
     </files-folder>
 </c2project>

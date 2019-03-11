@@ -294,8 +294,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1704</x>
-                        <y>981</y>
+                        <x>2245</x>
+                        <y>1015</y>
                         <z>0</z>
                         <width>300</width>
                         <height>168</height>
@@ -316,8 +316,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1720</x>
-                        <y>1194</y>
+                        <x>2253</x>
+                        <y>1314</y>
                         <z>0</z>
                         <width>284</width>
                         <height>140</height>
@@ -331,7 +331,7 @@
                 <instance type="TextoElementoEstadoTurma" uid="190">
                     <properties>
                         <text>Carregando...</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-27,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>

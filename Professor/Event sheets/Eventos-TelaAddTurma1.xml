@@ -365,6 +365,14 @@
                             <param id="2" name="X">0</param>
                             <param id="3" name="Y">0</param>
                         </action>
+                        <action id="5" name="Set frame" sid="121244805389663" type="ListandoFotoTurmas">
+                            <param id="0" name="Frame number">loopindex</param>
+                        </action>
+                        <action id="10" name="Load image from URL" sid="730514103797048" type="ListandoFotoTurmas">
+                            <param id="0" name="URI">&quot;http://localhost/InfanciaSegura/ConsultaBanco-ListaTurmasImagem.php?ID=&quot;&amp;loopindex+1</param>
+                            <param id="1" name="Size">1</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="756352553055205">
@@ -374,9 +382,6 @@
                     <actions>
                         <action id="0" name="Set text" sid="138308422629351" type="TextoListandoAsTurmas">
                             <param id="0" name="Text">tokenat(AJAX.LastData, TextoListandoAsTurmas.IID*2, &quot;&lt;br&gt;&quot;)</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="618827552753550" type="ListandoFotoTurmas">
-                            <param id="0" name="Frame number">4</param>
                         </action>
                     </actions>
                 </event-block>
@@ -473,7 +478,7 @@
             </conditions>
             <actions />
         </event-block>
-        <event-block sid="484338494891681">
+        <event-block disabled="1" sid="484338494891681">
             <conditions>
                 <condition id="3" name="Compare frame" sid="378244078478638" type="ListandoFotoTurmas">
                     <param id="0" name="Comparison">0</param>
@@ -488,7 +493,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="467840769985199">
+        <event-block disabled="1" sid="467840769985199">
             <conditions>
                 <condition id="3" name="Compare frame" sid="842983757152427" type="ListandoFotoTurmas">
                     <param id="0" name="Comparison">0</param>
@@ -503,7 +508,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="657960239205055">
+        <event-block disabled="1" sid="657960239205055">
             <conditions>
                 <condition id="3" name="Compare frame" sid="954653418729634" type="ListandoFotoTurmas">
                     <param id="0" name="Comparison">0</param>
@@ -518,7 +523,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="109564086990365">
+        <event-block disabled="1" sid="109564086990365">
             <conditions>
                 <condition id="3" name="Compare frame" sid="642993239792288" type="ListandoFotoTurmas">
                     <param id="0" name="Comparison">0</param>
@@ -533,7 +538,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="241711723640357">
+        <event-block disabled="1" sid="241711723640357">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="308609263175286" type="System">
                     <param id="0" name="First value">ListandoFotoTurmas.IID</param>
@@ -547,7 +552,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="526110866757836">
+        <event-block disabled="1" sid="526110866757836">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="332579836096253" type="System">
                     <param id="0" name="First value">ListandoFotoTurmas.IID</param>
@@ -561,7 +566,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="294194539913204">
+        <event-block disabled="1" sid="294194539913204">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="614693419661860" type="System">
                     <param id="0" name="First value">ListandoFotoTurmas.IID</param>
@@ -575,7 +580,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="947525418374111">
+        <event-block disabled="1" sid="947525418374111">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="291778990237674" type="System">
                     <param id="0" name="First value">ListandoFotoTurmas.IID</param>
@@ -586,6 +591,102 @@
             <actions>
                 <action id="5" name="Set frame" sid="904165960863010" type="ListandoFotoTurmas">
                     <param id="0" name="Frame number">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="251406590178592">
+            <conditions>
+                <condition disabled="1" id="-6" name="Every X seconds" sid="472671249475579" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="6" name="Set speed" sid="480975797553259" type="ListandoFotoTurmas">
+                    <param id="0" name="Speed">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="889425531968968">
+            <conditions />
+            <actions>
+                <action id="3" name="Start" sid="226762288165566" type="ListandoFotoTurmas">
+                    <param id="0" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="548560074610414" title="BotaoProximaEtapa">
+            <sub-events>
+                <event-block sid="738891934558310">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="860174361788829" type="Touch">
+                            <param id="0" name="Object">BotaoProximaEtapa</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="362518230343646" type="BotaoProximaEtapa">
+                            <param id="0" name="Width">BotaoProximaEtapa.Width/1.1</param>
+                            <param id="1" name="Height">BotaoProximaEtapa.Height/1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="112998930378167">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="234297341348133" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="702269192588045" type="Touch">
+                            <param id="0" name="Object">BotaoProximaEtapa</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="369994504858051" type="BotaoProximaEtapa">
+                            <param id="0" name="Width">BotaoProximaEtapa.Width*1.1</param>
+                            <param id="1" name="Height">BotaoProximaEtapa.Height*1.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="988310523099436" type="System">
+                            <param id="0" name="Layout">TelaAddTurma2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block any="1" sid="190440529254466">
+            <conditions>
+                <condition id="0" name="Compare text" sid="505092773295729" type="CampoNovoNomeTurma">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+                <condition id="4" name="Compare selected item text" sid="597256237458495" type="ListaEscolaDisponiveis">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="344775656225321" type="BotaoProximaEtapa">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-12" name="Set group active" sid="431744746006089" type="System">
+                    <param id="0" name="Group name">&quot;BotaoProximaEtapa&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="186237209785616">
+            <conditions>
+                <condition id="0" inverted="1" name="Compare text" sid="611824181603046" type="CampoNovoNomeTurma">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+                <condition id="4" inverted="1" name="Compare selected item text" sid="718010045451474" type="ListaEscolaDisponiveis">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="160789494211159" type="BotaoProximaEtapa">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-12" name="Set group active" sid="342881424954789" type="System">
+                    <param id="0" name="Group name">&quot;BotaoProximaEtapa&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
             </actions>
         </event-block>

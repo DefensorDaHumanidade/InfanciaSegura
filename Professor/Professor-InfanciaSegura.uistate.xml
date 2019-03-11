@@ -11,15 +11,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">TelaPrincipal</layout>
-        <layout order="1">TelaTurmaAjustes</layout>
-        <layout order="2">TelaAddTurma1</layout>
-        <layout order="5">TelaAddTurma2</layout>
-        <layout order="6">TelaAddTurma3</layout>
-        <event-sheet active="1" order="3">Eventos-TelaAddTurma1</event-sheet>
-        <event-sheet order="4">Eventos-TelaAddTurma2</event-sheet>
-        <event-sheet order="7">Eventos-TelaAddTurma3</event-sheet>
-        <event-sheet order="8">Eventos-TelaCadastro</event-sheet>
-        <event-sheet order="9">Eventos-TelaTurma</event-sheet>
+        <layout order="1">TelaAddTurma1</layout>
+        <layout order="4">TelaAddTurma2</layout>
+        <layout order="5">TelaAddTurma3</layout>
+        <layout order="9">TelaConfiguracoes</layout>
+        <layout order="11">TelaInicial</layout>
+        <layout order="12">TelaCadastro</layout>
+        <event-sheet active="1" order="2">Eventos-TelaAddTurma1</event-sheet>
+        <event-sheet order="3">Eventos-TelaAddTurma2</event-sheet>
+        <event-sheet order="6">Eventos-TelaAddTurma3</event-sheet>
+        <event-sheet order="7">Eventos-TelaCadastro</event-sheet>
+        <event-sheet order="8">Eventos-TelaTurma</event-sheet>
+        <event-sheet order="10">Eventos-Configuracoes</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -42,12 +45,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/ObjetosTelaTurmaEspecificaAluno/" />
         <folder expanded="1" path="object-folder/ObejetosConfiguracoes/" />
         <folder expanded="1" path="object-folder/ObjetosTurmaAjustes/" />
+        <folder expanded="1" path="object-folder/ObjetosTurmaAdd/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/PastaIdiomas/" />
+        <folder expanded="1" path="file-folder/PastaPHP/" />
         <folder expanded="1" path="animation-folder/BotaoConectar/" />
         <folder expanded="1" path="animation-folder/BotaoCriarConta/" />
         <folder expanded="1" path="animation-folder/BotaoEsqueceuSenha/" />
@@ -97,19 +103,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoSalvarAlteracoesTurma/" />
         <folder expanded="1" path="animation-folder/BotaoSubistituirFoto/" />
         <folder expanded="1" path="animation-folder/FotoTurminha/" />
-        <folder expanded="1" path="animation-folder/BotaoConfiguracoes/" />
-        <folder expanded="1" path="animation-folder/ListandoFotoTurmas/" />
         <folder expanded="1" path="animation-folder/BotaoProximaEtapa/" />
-        <folder expanded="1" path="animation-folder/BotaoSemFoto/" />
-        <folder expanded="1" path="animation-folder/BotaoHabilitarCamera/" />
+        <folder expanded="1" path="animation-folder/ComSenha/" />
+        <folder expanded="1" path="animation-folder/ListandoFotoTurmas/" />
+        <folder expanded="1" path="animation-folder/SemSenha/" />
         <folder expanded="1" path="animation-folder/BotaoFotografar/" />
-        <folder expanded="1" path="animation-folder/BotaoSalvarFoto/" />
+        <folder expanded="1" path="animation-folder/BotaoHabilitarCamera/" />
         <folder expanded="1" path="animation-folder/BotaoOutraFoto/" />
+        <folder expanded="1" path="animation-folder/BotaoSalvarFoto/" />
+        <folder expanded="1" path="animation-folder/BotaoSemFoto/" />
         <folder expanded="1" path="animation-folder/FotoCamare/" />
-        <folder expanded="1" path="animation-folder/FotoTodasAsTurmas/" />
+        <folder expanded="1" path="animation-folder/WebCam/" />
         <folder expanded="1" path="animation-folder/BotaoCancelar/" />
         <folder expanded="1" path="animation-folder/BotaoSalvarTurmaCriada/" />
-        <folder expanded="1" path="animation-folder/SemSenha/" />
-        <folder expanded="1" path="animation-folder/ComSenha/" />
+        <folder expanded="1" path="animation-folder/FotoTodasAsTurmas/" />
+        <folder expanded="1" path="animation-folder/BotaoConfiguracoes/" />
     </folders-expanded>
 </c2uistate>

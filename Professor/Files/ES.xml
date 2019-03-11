@@ -1,0 +1,8 @@
+<?xml version="1.0" enconding="UTF-8">
+<grupo>
+    <paragrafo id ='TextoTamanhoLetra'>Tamango de la letra</paragrafo>
+    <paragrafo id ='TextoTipoDaLetra'>Familia de la letra</paragrafo>
+    <paragrafo id ='TextoFonteDaLetra'>Classe de la letra</paragrafo>
+    <paragrafo id ='TextoIdioma'>Lengua</paragrafo>
+    <paragrafo id ='TextoVolume'>Soñito</paragrafo>
+</grupo>
