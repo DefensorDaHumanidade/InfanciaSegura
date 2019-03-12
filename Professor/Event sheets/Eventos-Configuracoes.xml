@@ -15,7 +15,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="691366661393529">
+        <event-block sid="691366661393529">
             <conditions>
                 <condition id="9" name="On item exists" sid="833974834801057" type="LocalStorage">
                     <param id="0" name="Key">&quot;Tamanho&quot;</param>
@@ -37,7 +37,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="637744684164651">
+        <event-block sid="637744684164651">
             <conditions>
                 <condition id="1" name="On item get" sid="983986644259905" type="LocalStorage">
                     <param id="0" name="Key">&quot;Tamanho&quot;</param>
