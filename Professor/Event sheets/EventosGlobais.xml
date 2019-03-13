@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventosGlobais</name>
+    <events>
+        <event-block sid="276480242007008">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="896140282333748" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="839081333908403" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="250960317934543" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="440265165124800">
+            <conditions>
+                <condition id="9" name="On item exists" sid="778612779680487" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="634136865239183" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="595833677902815">
+            <conditions>
+                <condition id="1" name="On item get" sid="547456215164771" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Set value" sid="298615239225983" type="System">
+                    <param id="0" name="Variable">FonteLetra</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="2" name="Set font face" sid="277184407569189" type="TextoNomeCadastro">
+                    <param id="0" name="Font face">LocalStorage.ItemValue</param>
+                    <param id="1" name="Style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="142682869185008">
+            <conditions>
+                <condition id="9" name="On item exists" sid="853219612669709" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="953702363127974" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="375755356408473">
+            <conditions>
+                <condition id="1" name="On item get" sid="422559504285779" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Set value" sid="913940530466575" type="System">
+                    <param id="0" name="Variable">TamanhoDosTextos</param>
+                    <param id="1" name="Value">int(LocalStorage.ItemValue)</param>
+                </action>
+                <action id="3" name="Set font size" sid="755394362987100" type="TextoNomeCadastro">
+                    <param id="0" name="Size (pt)">40</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

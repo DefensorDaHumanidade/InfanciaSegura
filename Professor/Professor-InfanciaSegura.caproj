@@ -1035,6 +1035,7 @@
         <event-sheet>Eventos-TelaAddTurma1.xml</event-sheet>
         <event-sheet>Eventos-TelaAddTurma2.xml</event-sheet>
         <event-sheet>Eventos-TelaAddTurma3.xml</event-sheet>
+        <event-sheet>EventosGlobais.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="10">

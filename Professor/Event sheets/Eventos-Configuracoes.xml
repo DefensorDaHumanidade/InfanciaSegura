@@ -5,51 +5,74 @@
     <events>
         <variable constant="0" name="TipoDaLetra" sid="816979879010235" static="0" type="text"></variable>
         <variable constant="0" name="TamanhoDosTextos" sid="227641553046639" static="0" type="number">10</variable>
+        <variable constant="0" name="FonteLetra" sid="626396136851691" static="0" type="text">Times New Roman</variable>
         <event-block sid="142834084229918">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="932350179108470" type="System" />
             </conditions>
             <actions>
                 <action id="5" name="Check item exists" sid="142522059545985" type="LocalStorage">
-                    <param id="0" name="Key">&quot;Tamanho&quot;</param>
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="360224851668653" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="691366661393529">
+        <event-block sid="636963169190086">
             <conditions>
-                <condition id="9" name="On item exists" sid="833974834801057" type="LocalStorage">
-                    <param id="0" name="Key">&quot;Tamanho&quot;</param>
+                <condition id="9" name="On item exists" sid="312066521837793" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Get item" sid="271901331611409" type="LocalStorage">
-                    <param id="0" name="Key">&quot;Tamanho&quot;</param>
-                </action>
-                <action id="-9" name="Set value" sid="748889276416746" type="System">
-                    <param id="0" name="Variable">TamanhoDosTextos</param>
-                    <param id="1" name="Value">int(LocalStorage.ItemValue)</param>
-                </action>
-                <action id="3" name="Set font size" sid="680472564600570" type="TextoFonteDaLetra">
-                    <param id="0" name="Size (pt)">TamanhoDosTextos</param>
-                </action>
-                <action id="-15" name="Set visible" sid="868213839638305" type="TextoAvisoOK">
-                    <param id="0" name="Visibility">1</param>
+                <action id="1" name="Get item" sid="414334430569459" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="637744684164651">
             <conditions>
                 <condition id="1" name="On item get" sid="983986644259905" type="LocalStorage">
-                    <param id="0" name="Key">&quot;Tamanho&quot;</param>
+                    <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Get item" sid="234444082441581" type="LocalStorage">
-                    <param id="0" name="Key">&quot;Tamanho&quot;</param>
+                <action id="-9" name="Set value" sid="212065746565473" type="System">
+                    <param id="0" name="Variable">FonteLetra</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
                 </action>
-                <action id="-9" name="Set value" sid="783464166988853" type="System">
+                <action id="2" name="Set font face" sid="341921973915096" type="TextoTituloConfiguracoes">
+                    <param id="0" name="Font face">FonteLetra</param>
+                    <param id="1" name="Style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691366661393529">
+            <conditions>
+                <condition id="9" name="On item exists" sid="833974834801057" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="271901331611409" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="865031435235748">
+            <conditions>
+                <condition id="1" name="On item get" sid="299098759291258" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="592151335427480" type="System">
                     <param id="0" name="Variable">TamanhoDosTextos</param>
                     <param id="1" name="Value">int(LocalStorage.ItemValue)</param>
+                </action>
+                <action id="3" name="Set font size" sid="867054517916768" type="TextoTituloConfiguracoes">
+                    <param id="0" name="Size (pt)">LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>
@@ -325,9 +348,13 @@
                             <param id="0" name="Property name">&quot;font-size&quot;</param>
                             <param id="1" name="Value">TamanhoDosTextos&amp;&quot;px&quot;</param>
                         </action>
-                        <action id="0" name="Set item" sid="714551396984868" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Tamanho&quot;</param>
-                            <param id="1" name="Value">TextoFonteDaLetra.Text</param>
+                        <action id="0" name="Set item" sid="431763500422106" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ArmazenaDado&quot;</param>
+                            <param id="1" name="Value">ListaTipoLetra.SelectedText</param>
+                        </action>
+                        <action id="0" name="Set item" sid="501548425305566" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Tamanhinho&quot;</param>
+                            <param id="1" name="Value">CampoTamanhoLetra.SelectedText</param>
                         </action>
                     </actions>
                 </event-block>

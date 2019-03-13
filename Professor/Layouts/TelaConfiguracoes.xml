@@ -190,7 +190,7 @@
                 </instance>
                 <instance type="ListaTipoLetra" uid="130">
                     <properties>
-                        <items>Arial;Times New Roman</items>
+                        <items>Arial;Times New Roman; Forte</items>
                         <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
@@ -343,8 +343,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>611</x>
-                        <y>606</y>
+                        <x>588</x>
+                        <y>936</y>
                         <z>0</z>
                         <width>853</width>
                         <height>201</height>

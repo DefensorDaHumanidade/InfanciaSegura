@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Eventos-TelaCadastro</name>
     <events>
+        <include>EventosGlobais</include>
         <variable constant="0" name="FacaUMAvez" sid="589438093572290" static="0" type="number">1</variable>
         <variable constant="0" name="QuantidadeCidades" sid="868858449227925" static="0" type="number">0</variable>
         <variable constant="0" name="Indice" sid="502843961249278" static="0" type="number">0</variable>

@@ -23,6 +23,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="7">Eventos-TelaCadastro</event-sheet>
         <event-sheet order="8">Eventos-TelaTurma</event-sheet>
         <event-sheet active="1" order="10">Eventos-Configuracoes</event-sheet>
+        <event-sheet order="13">Eventos-TelaPrincipal</event-sheet>
+        <event-sheet order="14">EventosGlobais</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
