@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventosGlobais</name>
     <events>
+        <variable constant="0" name="SegundosCarregando" sid="867980094771865" static="0" type="number">0.1</variable>
         <event-block sid="276480242007008">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="896140282333748" type="System" />
@@ -70,6 +71,91 @@
                 </action>
                 <action id="3" name="Set font size" sid="755394362987100" type="TextoNomeCadastro">
                     <param id="0" name="Size (pt)">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="166819581364409">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="898909744265177" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="979096292791753" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="1" name="Append text" sid="609056596579465" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;C&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="129271586439383" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="904232094319934" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;a&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="134030905423034" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="955792627666904" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;r&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="590593784243250" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="806612842007180" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;r&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="763503629254193" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="319025515379535" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;e&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="125703846969659" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="283055984526339" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;g&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="279290105950396" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="986691061643707" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;a&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="358889571353426" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="873488835402491" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;n&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="890748655189417" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="202942878070577" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;d&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="982552140313610" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="827560603609604" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;o&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="786772564553427" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="691678163098529" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="608499582056997" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="440486310457385" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="922610390221606" type="System">
+                    <param id="0" name="Seconds">SegundosCarregando</param>
+                </action>
+                <action id="1" name="Append text" sid="984564543517416" type="TextoCarregando">
+                    <param id="0" name="Text">&quot;.&quot;</param>
                 </action>
             </actions>
         </event-block>

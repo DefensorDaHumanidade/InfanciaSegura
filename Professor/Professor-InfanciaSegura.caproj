@@ -1000,6 +1000,9 @@
         <object-type name="LocalStorage" sid="106878909804245">
             <plugin id="LocalStorage" />
         </object-type>
+        <object-type name="TextoCarregando" sid="116528471876102">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1018,6 +1021,7 @@
         <layout>TelaAddTurma1.xml</layout>
         <layout>TelaAddTurma2.xml</layout>
         <layout>TelaAddTurma3.xml</layout>
+        <layout>TelaCarregamento.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Eventos-TelaInicial.xml</event-sheet>
