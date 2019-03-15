@@ -157,6 +157,25 @@
                 <action id="1" name="Append text" sid="984564543517416" type="TextoCarregando">
                     <param id="0" name="Text">&quot;.&quot;</param>
                 </action>
+                <action id="-28" name="Set effect parameter" sid="824708623448412" type="Branquinho">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">1</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="714646938863410" type="OutroBranquinho">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">2</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="552443592109341" type="OutroBranquinhoNovo">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">50</param>
+                </action>
+                <action id="-7" name="Set size" sid="990969949941725" type="OutroBranquinhoNovo">
+                    <param id="0" name="Width">80</param>
+                    <param id="1" name="Height">20</param>
+                </action>
             </actions>
         </event-block>
     </events>

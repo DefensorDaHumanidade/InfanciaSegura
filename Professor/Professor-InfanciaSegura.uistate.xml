@@ -121,5 +121,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoSalvarTurmaCriada/" />
         <folder expanded="1" path="animation-folder/FotoTodasAsTurmas/" />
         <folder expanded="1" path="animation-folder/BotaoConfiguracoes/" />
+        <folder expanded="1" path="animation-folder/Branquinho/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/OutroBranquinho/" />
+        <folder expanded="1" path="animation-folder/OutroBranquinhoNovo/" />
     </folders-expanded>
 </c2uistate>
