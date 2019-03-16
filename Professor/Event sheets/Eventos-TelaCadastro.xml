@@ -105,6 +105,10 @@
                                 </action>
                                 <action id="0" name="Request URL" sid="984683669277817" type="AJAX">
                                     <param id="0" name="Tag">&quot;RequisicaoEstados&quot;</param>
+                                    <param id="1" name="URL">&quot;ConsultaBanco-ListaEstados.php&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Request URL" sid="793673585514250" type="AJAX">
+                                    <param id="0" name="Tag">&quot;RequisicaoEstados&quot;</param>
                                     <param id="1" name="URL">&quot;http://localhost/InfanciaSegura/ConsultaBanco-ListaEstados.php&quot;</param>
                                 </action>
                             </actions>

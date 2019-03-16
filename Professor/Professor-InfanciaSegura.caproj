@@ -1018,14 +1018,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="396104046844778">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="482361040139895" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="OutroBranquinho" sid="538709441266015">
             <plugin id="Sprite" />
             <effects>
@@ -1049,6 +1041,32 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736735930288194" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Externo\Imagens\Branco.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ArquivoInserido" sid="416293223114201">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="SetColor">
+                    <effect id="setcolor" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628235853746424" speed="5">
+                    <frame duration="1" hotspotX="0.500444" hotspotY="0.504673" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Files\{45D447B4-F730-44D6-A6DC-2BCBAA65BF23}.png.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ArquivoInserido2" sid="159661604437249">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="SetColor">
+                    <effect id="setcolor" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129332860695498" speed="5">
+                    <frame duration="1" hotspotX="0.500444" hotspotY="0.504673" original-source="C:\Users\Alexandre\Desktop\Professor-InfanciaSegura\Files\{45D447B4-F730-44D6-A6DC-2BCBAA65BF23}.png.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1116,6 +1134,10 @@
             <file name="ES.xml" />
             <file name="PT-BR.xml" />
         </file-folder>
-        <file-folder name="PastaPHP" />
+        <file-folder name="PastaPHP">
+            <file name="BrancoIMPORT.png" />
+            <file name="{45D447B4-F730-44D6-A6DC-2BCBAA65BF23}.png.jpg" />
+            <file name="ConsultaBanco-ListaEstados.php" />
+        </file-folder>
     </files-folder>
 </c2project>

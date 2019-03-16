@@ -21,11 +21,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="2">Eventos-TelaAddTurma1</event-sheet>
         <event-sheet order="3">Eventos-TelaAddTurma2</event-sheet>
         <event-sheet order="6">Eventos-TelaAddTurma3</event-sheet>
-        <event-sheet order="7">Eventos-TelaCadastro</event-sheet>
+        <event-sheet active="1" order="7">Eventos-TelaCadastro</event-sheet>
         <event-sheet order="8">Eventos-TelaTurma</event-sheet>
         <event-sheet order="10">Eventos-Configuracoes</event-sheet>
         <event-sheet order="13">Eventos-TelaPrincipal</event-sheet>
-        <event-sheet active="1" order="14">EventosGlobais</event-sheet>
+        <event-sheet order="14">EventosGlobais</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -122,8 +122,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/FotoTodasAsTurmas/" />
         <folder expanded="1" path="animation-folder/BotaoConfiguracoes/" />
         <folder expanded="1" path="animation-folder/Branquinho/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/OutroBranquinho/" />
         <folder expanded="1" path="animation-folder/OutroBranquinhoNovo/" />
+        <folder expanded="1" path="animation-folder/ArquivoInserido/" />
+        <folder expanded="1" path="animation-folder/ArquivoInserido2/" />
     </folders-expanded>
 </c2uistate>
