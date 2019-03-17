@@ -103,11 +103,11 @@
                                     <param id="0" name="Variable">FacaUMAvez</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
-                                <action id="0" name="Request URL" sid="984683669277817" type="AJAX">
+                                <action disabled="1" id="0" name="Request URL" sid="984683669277817" type="AJAX">
                                     <param id="0" name="Tag">&quot;RequisicaoEstados&quot;</param>
-                                    <param id="1" name="URL">&quot;ConsultaBanco-ListaEstados.php&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infancia-segura.firebaseapp.com/lerDados.html&quot;</param>
                                 </action>
-                                <action disabled="1" id="0" name="Request URL" sid="793673585514250" type="AJAX">
+                                <action id="0" name="Request URL" sid="793673585514250" type="AJAX">
                                     <param id="0" name="Tag">&quot;RequisicaoEstados&quot;</param>
                                     <param id="1" name="URL">&quot;http://localhost/InfanciaSegura/ConsultaBanco-ListaEstados.php&quot;</param>
                                 </action>
@@ -167,6 +167,9 @@
                             <actions>
                                 <action id="7" name="Add item" sid="842271276497126" type="ListaEstadoCadastro">
                                     <param id="0" name="Text">tokenat(AJAX.LastData, Indice, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action disabled="1" id="7" name="Add item" sid="651710841217408" type="ListaEstadoCadastro">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, Indice, &quot;,&quot;)</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="393736025224521" type="System">
                                     <param id="0" name="Variable">Indice</param>
