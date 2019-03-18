@@ -1,8 +1,16 @@
-<?xml version="1.0" enconding="UTF-8">
-<strings>
-    <string id='TextoTamanhoLetra'>Tamanho letrinha</string>
-    <string id='TextoTipoDaLetra'>Tipo letrinha</string>
-    <string id='TextoFonteDaLetra'>Fonte letrinha</string>
-    <string id='TextoIdioma'>Lingua</string>
-    <string id='TextoVolume'>Som</string>
-</strings>
+<?xml version="1.0" encoding="UTF-8"?>
+<textos>
+    <TextoCarregandoCARREGAMENTO>Carregando...</TextoCarregandoCARREGAMENTO>
+    <TextoEmailINICIAL>Email:</TextoEmailINICIAL>
+    <TextoSenhaINICIAL>Senha:</TextoSenhaINICIAL>
+    <TextoBotaoConectarINICIAL>Conectar</TextoBotaoConectarINICIAL>
+    <TextoBotaoCriarContaINICIAL>Criar Conta</TextoBotaoCriarContaINICIAL>
+    <TextoBotaoEsqueciSenhaINICIAL>Esqueci Minha Senha</TextoBotaoEsqueciSenhaINICIAL>
+    <TextoBotaoOuvidoriaINICIAL>Ouvidoria</TextoBotaoOuvidoriaINICIAL>
+    <TextoBotaoSobreINICIAL>Sobre</TextoBotaoSobreINICIAL>
+    <TextoBotaoTurmasPRINCIPAL>Turmas</TextoBotaoTurmasPRINCIPAL>
+    <TextoBotaoPerfilPRINCIPAL>Perfil</TextoBotaoPerfilPRINCIPAL>
+    <TextoBotaoMaterialApoioPRINCIPAL>Material de Apoio</TextoBotaoMaterialApoioPRINCIPAL>
+    <TextoBotaoConfiguracoesPrincipal>Configurações</TextoBotaoConfiguracoesPrincipal>
+    <TextoBotaoSobrePRINCIPAL>Sobre</TextoBotaoSobrePRINCIPAL>
+</textos>

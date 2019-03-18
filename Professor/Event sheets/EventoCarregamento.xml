@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoCarregamento</name>
+    <events>
+        <include>Global</include>
+        <comment>Grupo onde são executadas as rotinas de rolagem dos elementos da &apos;TelaCarregamento&apos;</comment>
+        <event-group description="" sid="165052860205664" title="PosicaoElementosCARREGAMENTO">
+            <sub-events>
+                <event-block sid="446758353957139">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="753307207635141" type="TextoCarregandoCARREGAMENTO" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="389188937969261" type="TextoCarregandoCARREGAMENTO">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="412693149331815">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="535362398704919" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="384932441460034" type="TextoCarregandoCARREGAMENTO">
+                            <param id="0" name="Y">1000+Rolagem</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="772131129272163">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="606107937694533" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="136529970719459" type="TextoCarregandoCARREGAMENTO">
+                            <param id="0" name="Y">1000+Rolagem</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="481228654225468">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="572150004137769" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="392022744510239" type="TextoCarregandoCARREGAMENTO">
+                            <param id="0" name="Y">1000+Rolagem</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

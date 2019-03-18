@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Monitoramento-InfanciaSegura</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>Alexandre, Carla e Tiago</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id></app-id>
+    <unique-id>3h4raretwq2qd</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>2000</width>
+        <height>2000</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>TelaCarregamento</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Crop</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Carregamento">
+            <object-type name="TextoCarregandoCARREGAMENTO" sid="306235661381544">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Inicial">
+            <object-type name="BotaoConectarINICIAL" sid="643050840853881">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309552544298310" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoCriarContaINICIAL" sid="536226906007144">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677453870882611" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoEsqueciSenhaINICIAL" sid="529673754193509">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535672536213197" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoOuvidoriaINICIAL" sid="205142719511404">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="423126480263524" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSobreINICIAL" sid="168761478425089">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="308047574207940" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CampoEmailNICIAL" sid="811844927655429">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoSenhaINICIAL" sid="645507513659182">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="TextoBotaoConectarINICIAL" sid="321821640825809">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoCriarContaINICIAL" sid="823441518664151">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoEsqueciSenhaINICIAL" sid="734561101076661">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoOuvidoriaINICIAL" sid="813867365979311">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoSobreINICIAL" sid="332819703939266">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEmailINICIAL" sid="669311514025673">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaINICIAL" sid="517894039380559">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="564603889974030">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="LocalStorage" sid="147617319113657">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type global="1" name="XML" sid="801707949129871">
+            <plugin id="XML" />
+        </object-type>
+        <object-type name="AJAX" sid="821112726557617">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="Mouse" sid="233280222164506">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Browser" sid="291480691597766">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="ImagemBranco" sid="717000744205728">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="614383028463966" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ImagemDeFundo" sid="906937374534557">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601783992822084" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\fundo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ImagemLogo" sid="268659005623697">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="376832417736192" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\Logo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ImagemVerde" sid="509322945748963">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915550865563782" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ImagemVermelho" sid="648272616982801">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894485026037805" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ImagemAzul" sid="834086078296761">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465851046413001" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoTurmasPRINCIPAL" sid="102193652821610">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811905866395449" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoPerfilPRINCIPAL" sid="362417771682572">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593189577544313" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoMaterialApoioPRINCIPAL" sid="399009551082861">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188691710098075" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoConfiguracoesPRINCIPAL" sid="922793875131276">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="615286813832564" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSobrePRINCIPAL" sid="685594006468568">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990595799039028" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Logo" sid="820095983753741">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837185533611516" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\Logo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoBotaoTurmasPRINCIPAL" sid="828246633444602">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoBotaoPerfilPRINCIPAL" sid="397755232353043">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoBotaoMaterialApoioPRINCIPAL" sid="187591315662317">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoBotaoConfiguracoesPrincipal" sid="383575065573694">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoBotaoSobrePRINCIPAL" sid="791815182639858">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>TelaCarregamento.xml</layout>
+        <layout>TelaInicial.xml</layout>
+        <layout>TelaPrincipal.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>EventoCarregamento.xml</event-sheet>
+        <event-sheet>Global.xml</event-sheet>
+        <event-sheet>EventoInicial.xml</event-sheet>
+        <event-sheet>EventoPrincipal.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="0">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="1" />
+        <global-instance type="AJAX" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Browser" uid="5" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="idioma">
+            <file name="PT-BR.xml" />
+            <file name="EN.xml" />
+        </file-folder>
+    </files-folder>
+</c2project>

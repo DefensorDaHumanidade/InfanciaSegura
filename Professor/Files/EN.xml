@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<textos>
+    <TextoCarregandoCARREGAMENTO>Loading...</TextoCarregandoCARREGAMENTO>
+    <TextoEmailINICIAL>Email:</TextoEmailINICIAL>
+    <TextoSenhaINICIAL>Password:</TextoSenhaINICIAL>
+    <TextoBotaoConectarINICIAL>Login</TextoBotaoConectarINICIAL>
+    <TextoBotaoCriarContaINICIAL>Create Account</TextoBotaoCriarContaINICIAL>
+    <TextoBotaoEsqueciSenhaINICIAL>Forgot my Password</TextoBotaoEsqueciSenhaINICIAL>
+    <TextoBotaoOuvidoriaINICIAL>Ombudsman</TextoBotaoOuvidoriaINICIAL>
+    <TextoBotaoSobreINICIAL>About</TextoBotaoSobreINICIAL>
+    <TextoBotaoTurmasPRINCIPAL>Class</TextoBotaoTurmasPRINCIPAL>
+    <TextoBotaoPerfilPRINCIPAL>Profile</TextoBotaoPerfilPRINCIPAL>
+    <TextoBotaoMaterialApoioPRINCIPAL>Suport Material</TextoBotaoMaterialApoioPRINCIPAL>
+    <TextoBotaoConfiguracoesPrincipal>Configuration</TextoBotaoConfiguracoesPrincipal>
+    <TextoBotaoSobrePRINCIPAL>About</TextoBotaoSobrePRINCIPAL>
+</textos>

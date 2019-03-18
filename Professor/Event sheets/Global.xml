@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Global</name>
+    <events>
+        <variable constant="0" name="AlturaBotao" sid="131433985648109" static="0" type="number">60</variable>
+        <variable constant="0" name="ComprimentoBotao" sid="184477890897347" static="0" type="number">200</variable>
+        <variable constant="0" name="OpacidadeMinimaBotao" sid="137297831410062" static="0" type="number">70</variable>
+        <variable constant="0" name="Rolagem" sid="876989086793515" static="0" type="number">0</variable>
+        <variable constant="0" name="RolagemTotal" sid="493334857874969" static="0" type="number">0</variable>
+        <variable constant="0" name="RolagemInicio" sid="552295763489229" static="0" type="number">0</variable>
+        <variable constant="0" name="IdiomaTexto" sid="124183374099700" static="0" type="text">PT-BR</variable>
+        <variable constant="0" name="TamanhoTexto" sid="644397033399137" static="0" type="number">18</variable>
+        <event-block sid="976867143572851">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="779919145221943" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="533697779105520" type="System">
+                    <param id="0" name="Width">WindowWidth</param>
+                    <param id="1" name="Height">WindowWidth</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="372117655565696">
+            <conditions>
+                <condition id="-18" name="On created" sid="135544849774749" type="ImagemDeFundo" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="829106894388138" type="ImagemDeFundo">
+                    <param id="0" name="X">1000</param>
+                    <param id="1" name="Y">1000</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Todo o momento o sistema atualiza a posição dos objeto com base nas proporções da janela. Deveria ser criada um função que verifica se a janela foi redimensionada, para daí em endiante realizar as atualizações das posições, e não da forma como é feito.</comment>
+        <event-group description="" sid="790926078759663" title="Posições/Proporções">
+            <sub-events>
+                <event-group description="" sid="352440308471365" title="Posições/Porporções absolutas">
+                    <sub-events>
+                        <event-block sid="573871053687991">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="396586493773714" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="720985459852889" type="ImagemLogo">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000-(WindowHeight/2)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="509196191128563" type="Logo">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000-(WindowHeight/2)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="956692192150585" type="ImagemDeFundo">
+                                    <param id="0" name="Width">WindowWidth</param>
+                                    <param id="1" name="Height">WindowHeight</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="881973204242802" type="BotaoTurmasPRINCIPAL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">Logo.Y+Logo.Height+(AlturaBotao/2)+20+RolagemTotal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="950130567270232" title="Posições/Proporções Paisagem">
+                    <sub-events>
+                        <event-block sid="175427190492750">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="788982483686264" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="512421487668767" type="ImagemLogo">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="408270374860630" type="Logo">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="953936848082860" title="Posições/Proporções Retrato">
+                    <sub-events>
+                        <event-block sid="339893636184450">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="199430043958053" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="130889357536222" type="ImagemLogo">
+                                    <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="333893924796410" type="Logo">
+                                    <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="739337715189758" title="AtualizarTextos">
+            <sub-events>
+                <comment>Grupo onde são executadas as rotinas para a atualização do tamanho dos textos.</comment>
+                <event-group description="" sid="522403929903755" title="AtualizarTamanho">
+                    <sub-events>
+                        <event-block sid="608236161150984">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="348008306188429" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="251432838995048" type="TextoCarregandoCARREGAMENTO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="537890969887942" type="TextoEmailINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="308630835499634" type="TextoSenhaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="543704209443928" type="TextoBotaoConectarINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="591866747981036" type="TextoBotaoCriarContaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="572513359683056" type="TextoBotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="418385938600588" type="TextoBotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="304005949828554" type="TextoBotaoSobreINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="676146814075523" type="TextoBotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="405892727386212" type="TextoBotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="591037387384041" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="136494429361628" type="TextoBotaoConfiguracoesPrincipal">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="258860298278178" type="TextoBotaoSobrePRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="387988979676479" type="System">
+                                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Grupo onde são executadas as rotinas para a atualização do idioma.</comment>
+                <event-group description="" sid="608243067460139" title="AtualizarIdioma">
+                    <sub-events>
+                        <event-block sid="738985322013170">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="753118547147272" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="270882025693800" type="AJAX">
+                                    <param id="0" name="Tag">&quot;buscar&quot;</param>
+                                    <param id="1" name="URL">IdiomaTexto&amp;&quot;.xml&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="812906043310064">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="382189588847786" type="AJAX">
+                                    <param id="0" name="Tag">&quot;buscar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Load" sid="656301348416897" type="XML">
+                                    <param id="0" name="XML">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="876435134444750">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="293513471658461" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="986479899765109" type="TextoCarregandoCARREGAMENTO">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoCarregandoCARREGAMENTO/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="148803442365494" type="TextoEmailINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEmailINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="597276895913105" type="TextoSenhaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoSenhaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="665754540830298" type="TextoBotaoConectarINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoConectarINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="397999363996907" type="TextoBotaoCriarContaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoCriarContaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="195370273197536" type="TextoBotaoEsqueciSenhaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoEsqueciSenhaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="652984102782578" type="TextoBotaoOuvidoriaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoOuvidoriaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="173165195114011" type="TextoBotaoSobreINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSobreINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="654851963700839" type="TextoBotaoTurmasPRINCIPAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoTurmasPRINCIPAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="785913348128056" type="TextoBotaoPerfilPRINCIPAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoPerfilPRINCIPAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="859718710559203" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoMaterialApoioPRINCIPAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="750575094040047" type="TextoBotaoConfiguracoesPrincipal">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoConfiguracoesPrincipal/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="168019548057319" type="TextoBotaoSobrePRINCIPAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSobrePRINCIPAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="367187836438621" type="System">
+                                            <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="116254906000764" title="Configurações dos botões">
+            <sub-events>
+                <event-group description="" sid="533811561703930" title="Criando Botões PRINCIPAL">
+                    <sub-events>
+                        <event-block sid="473392719999629">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="196371356887344" type="BotaoTurmasPRINCIPAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="432771780759737" type="BotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="323302539242107" type="BotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="293977609828078">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="326446617558836" type="BotaoPerfilPRINCIPAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="959838308512767" type="BotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="615614182240237" type="BotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372148022646444">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="763360287397059" type="BotaoMaterialApoioPRINCIPAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="970968657089376" type="BotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="986246107021507" type="BotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="667362292380056">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="762027916170479" type="BotaoConfiguracoesPRINCIPAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="916473674399502" type="BotaoConfiguracoesPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="747064583724403" type="BotaoConfiguracoesPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="283417808650558">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="114978664165024" type="BotaoSobrePRINCIPAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="674978877508486" type="BotaoSobrePRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="968575112247051" type="BotaoSobrePRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="985657859973190" title="Configurações Texto dos Botões PRINCIPAL">
+                            <sub-events>
+                                <event-block sid="139652133943664">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="491144944919571" type="TextoBotaoTurmasPRINCIPAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="135228219213442" type="TextoBotaoTurmasPRINCIPAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="275592266567676">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="236914363178826" type="TextoBotaoPerfilPRINCIPAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="895414433681056" type="TextoBotaoPerfilPRINCIPAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="187361310979076">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="922495655700444" type="TextoBotaoMaterialApoioPRINCIPAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="282827555829456" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="286686572684221">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="846838427297503" type="TextoBotaoMaterialApoioPRINCIPAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="541263489872475" type="TextoBotaoConfiguracoesPrincipal">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="422630444318083">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="458517991841966" type="TextoBotaoSobrePRINCIPAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="420982168692411" type="TextoBotaoSobrePRINCIPAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="554413050627797" title="Criando Botões INICIAL">
+                    <sub-events>
+                        <event-block sid="792044634004058">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="418022724172304" type="BotaoConectarINICIAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="423139965260582" type="BotaoConectarINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="463182696389503" type="BotaoConectarINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="578455124454057">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="177086455101104" type="BotaoCriarContaINICIAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="910374340757139" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="688007789630100" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="412658563568563">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="793580795791612" type="BotaoEsqueciSenhaINICIAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="378636795848708" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="751956666125203" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372497125790461">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="166368723948999" type="BotaoOuvidoriaINICIAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="323584148529412" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="508236624023278" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="975973858581851">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="677161485928413" type="BotaoSobreINICIAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="801629716707574" type="BotaoSobreINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="511268544203632" type="BotaoSobreINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="746460454282696" title="Configurações Texto dos Botões INICIAL">
+                            <sub-events>
+                                <event-block sid="657841107323036">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="856382461965730" type="TextoBotaoConectarINICIAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="534136095523216" type="TextoBotaoConectarINICIAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="412489074057560">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="486709688449322" type="TextoBotaoCriarContaINICIAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="983386517503394" type="TextoBotaoCriarContaINICIAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="325593925739489">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="635896562232985" type="TextoBotaoEsqueciSenhaINICIAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="380688488944711" type="TextoBotaoEsqueciSenhaINICIAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="310766958961131">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="546252850631028" type="TextoBotaoOuvidoriaINICIAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="490863687599324" type="TextoBotaoOuvidoriaINICIAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="722481663162652">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="641954029047525" type="TextoBotaoSobreINICIAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="807761407618761" type="TextoBotaoSobreINICIAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <comment>Grupo onde são executadas as rotinas para a rolagem dos elementos em tela.</comment>
+        <event-group description="" sid="496635207015082" title="Rolagem">
+            <sub-events>
+                <event-block sid="302144218575501">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="369435739640771" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="786495937449854" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemTotal</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="123731457477503">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="967367309749169" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="375138592726607" type="System">
+                            <param id="0" name="Variable">Rolagem</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="401967999840611">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="493192960683537" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="847872513783426" type="System">
+                            <param id="0" name="Variable">Rolagem</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="541352846706934">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="969773156362359" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="876985562871137" type="System">
+                            <param id="0" name="Variable">Rolagem</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="710287450018100">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="293785778635678" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="890194438894731" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">Rolagem</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

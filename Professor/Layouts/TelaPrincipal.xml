@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>TelaPrincipal</name>
-    <sid>944215971426252</sid>
-    <event-sheet>Eventos-TelaPrincipal</event-sheet>
+    <sid>364415615924322</sid>
+    <event-sheet>EventoPrincipal</event-sheet>
     <size>
         <width>2000</width>
         <height>2000</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Fundo" sid="819562649116552">
+        <layer name="Fundo" sid="904344014235062">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TituloInfanciaSeguraMenu" uid="41">
+                <instance type="ImagemDeFundo" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -39,11 +39,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1052</x>
-                        <y>130</y>
+                        <x>1007</x>
+                        <y>931</y>
                         <z>0</z>
-                        <width>2800</width>
-                        <height>262</height>
+                        <width>100</width>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -54,7 +54,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Elementos" sid="911240243074261">
+        <layer name="Elementos" sid="109914058069792">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BotaoTurmas" uid="42">
+                <instance type="BotaoTurmasPRINCIPAL" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -80,11 +80,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>995</x>
-                        <y>632</y>
+                        <x>538</x>
+                        <y>705</y>
                         <z>0</z>
-                        <width>600</width>
-                        <height>200</height>
+                        <width>100</width>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -92,7 +92,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoPerfil" uid="43">
+                <instance type="BotaoPerfilPRINCIPAL" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -102,11 +102,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>997</x>
-                        <y>917</y>
+                        <x>537</x>
+                        <y>835</y>
                         <z>0</z>
-                        <width>600</width>
-                        <height>200</height>
+                        <width>100</width>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -114,7 +114,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoMaterialApoio" uid="44">
+                <instance type="BotaoMaterialApoioPRINCIPAL" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -124,11 +124,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1002</x>
-                        <y>1418</y>
+                        <x>545</x>
+                        <y>962</y>
                         <z>0</z>
-                        <width>600</width>
-                        <height>200</height>
+                        <width>100</width>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -136,7 +136,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoSobre2" uid="45">
+                <instance type="BotaoConfiguracoesPRINCIPAL" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -146,11 +146,168 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1008</x>
-                        <y>1686</y>
+                        <x>549</x>
+                        <y>1092</y>
                         <z>0</z>
-                        <width>600</width>
-                        <height>200</height>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BotaoSobrePRINCIPAL" uid="34">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>556</x>
+                        <y>1207</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoBotaoTurmasPRINCIPAL" uid="28">
+                    <properties>
+                        <text>Turmas</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>530</x>
+                        <y>707</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoBotaoPerfilPRINCIPAL" uid="36">
+                    <properties>
+                        <text>Perfil</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>540</x>
+                        <y>842</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoBotaoMaterialApoioPRINCIPAL" uid="37">
+                    <properties>
+                        <text>Material de Apoio</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>542</x>
+                        <y>960</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoBotaoConfiguracoesPrincipal" uid="38">
+                    <properties>
+                        <text>Configurações</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>547</x>
+                        <y>1085</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoBotaoSobrePRINCIPAL" uid="39">
+                    <properties>
+                        <text>Sobre</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>561</x>
+                        <y>1207</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -161,7 +318,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Avisos" sid="898683459011151">
+        <layer name="Topo" sid="880238409055708">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -177,7 +334,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BotaoConfiguracoes" uid="120">
+                <instance type="Logo" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -187,14 +344,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1006</x>
-                        <y>1163</y>
+                        <x>1010</x>
+                        <y>91</y>
                         <z>0</z>
-                        <width>600</width>
-                        <height>200</height>
+                        <width>1920</width>
+                        <height>340</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
