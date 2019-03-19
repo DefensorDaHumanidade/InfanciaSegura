@@ -13,10 +13,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">TelaCarregamento</layout>
         <layout order="3">TelaInicial</layout>
         <layout order="5">TelaPrincipal</layout>
+        <layout order="7">TelaCriarConta</layout>
         <event-sheet order="1">EventoCarregamento</event-sheet>
-        <event-sheet active="1" order="2">Global</event-sheet>
+        <event-sheet order="2">Global</event-sheet>
         <event-sheet order="4">EventoInicial</event-sheet>
         <event-sheet order="6">EventoPrincipal</event-sheet>
+        <event-sheet active="1" order="8">EventoCriarConta</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,6 +31,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Carregamento/" />
         <folder expanded="1" path="object-folder/Inicial/" />
+        <folder expanded="1" path="object-folder/Principal/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -41,17 +44,24 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoEsqueciSenhaINICIAL/" />
         <folder expanded="1" path="animation-folder/BotaoOuvidoriaINICIAL/" />
         <folder expanded="1" path="animation-folder/BotaoSobreINICIAL/" />
+        <folder expanded="1" path="animation-folder/BrancoAvisoINICIAL/" />
+        <folder expanded="1" path="animation-folder/ImagemLogo/" />
+        <folder expanded="1" path="animation-folder/PretoAvisoINICIAL/" />
+        <folder expanded="1" path="animation-folder/BotaoConfiguracoesPRINCIPAL/" />
+        <folder expanded="1" path="animation-folder/BotaoMaterialApoioPRINCIPAL/" />
+        <folder expanded="1" path="animation-folder/BotaoPerfilPRINCIPAL/" />
+        <folder expanded="1" path="animation-folder/BotaoSobrePRINCIPAL/" />
+        <folder expanded="1" path="animation-folder/BotaoTurmasPRINCIPAL/" />
+        <folder expanded="1" path="animation-folder/Logo/" />
         <folder expanded="1" path="animation-folder/ImagemBranco/" />
         <folder expanded="1" path="animation-folder/ImagemDeFundo/" />
-        <folder expanded="1" path="animation-folder/ImagemLogo/" />
         <folder expanded="1" path="animation-folder/ImagemVerde/" />
         <folder expanded="1" path="animation-folder/ImagemVermelho/" />
         <folder expanded="1" path="animation-folder/ImagemAzul/" />
-        <folder expanded="1" path="animation-folder/BotaoTurmasPRINCIPAL/" />
-        <folder expanded="1" path="animation-folder/BotaoPerfilPRINCIPAL/" />
-        <folder expanded="1" path="animation-folder/BotaoMaterialApoioPRINCIPAL/" />
-        <folder expanded="1" path="animation-folder/BotaoConfiguracoesPRINCIPAL/" />
-        <folder expanded="1" path="animation-folder/BotaoSobrePRINCIPAL/" />
-        <folder expanded="1" path="animation-folder/Logo/" />
+        <folder expanded="1" path="animation-folder/ImagemPreto/" />
+        <folder expanded="1" path="animation-folder/TopoCriarConta/" />
+        <folder expanded="1" path="animation-folder/Voltar/" />
+        <folder expanded="1" path="animation-folder/CriarContaVOLTARInicial/" />
+        <folder expanded="1" path="animation-folder/BotaoCriarContaCRIARCONTA/" />
     </folders-expanded>
 </c2uistate>

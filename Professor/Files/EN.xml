@@ -13,4 +13,16 @@
     <TextoBotaoMaterialApoioPRINCIPAL>Suport Material</TextoBotaoMaterialApoioPRINCIPAL>
     <TextoBotaoConfiguracoesPrincipal>Configuration</TextoBotaoConfiguracoesPrincipal>
     <TextoBotaoSobrePRINCIPAL>About</TextoBotaoSobrePRINCIPAL>
+    <TextoConectandoINICIAL>Loading...</TextoConectandoINICIAL>
+    <TextoConectadoINICIAL>Connected</TextoConectadoINICIAL>
+    <TextoConexaoInvalidaINICIAL>Password invalid</TextoConexaoInvalidaINICIAL>
+    <TextoConexaoFalhaINICIAL>ERROR. No conection.</TextoConexaoFalhaINICIAL>
+    <TituloCriarContaCRIARCONTA>Create Account</TituloCriarContaCRIARCONTA>
+    <TextoNomeCRIARCONTA>Name:</TextoNomeCRIARCONTA>
+    <TextoEmailCRIARCONTA>Email:</TextoEmailCRIARCONTA>
+    <TextoSenhaCRIARCONTA>Password:</TextoSenhaCRIARCONTA>
+    <TextoEscolaCRIARCONTA>School:</TextoEscolaCRIARCONTA>
+    <TextoCidadeCRIARCONTA>City:</TextoCidadeCRIARCONTA>
+    <TextoEstadoCRIARCONTA>State:</TextoEstadoCRIARCONTA>
+    <TextoBotaoCriarContaCRIARCONTA>Create</TextoBotaoCriarContaCRIARCONTA>    
 </textos>

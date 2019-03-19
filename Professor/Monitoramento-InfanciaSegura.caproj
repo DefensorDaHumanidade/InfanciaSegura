@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -122,6 +123,107 @@
             <object-type name="TextoSenhaINICIAL" sid="517894039380559">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="BrancoAvisoINICIAL" sid="529130874348851">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="594674048883414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ImagemLogo" sid="268659005623697">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="376832417736192" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\Logo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PretoAvisoINICIAL" sid="847674213756638">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="439473180127470" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoConectadoINICIAL" sid="432856449369820">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoConectandoINICIAL" sid="464939195098265">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoConexaoFalhaINICIAL" sid="978631352467810">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoConexaoInvalidaINICIAL" sid="508538090497960">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Principal">
+            <object-type name="BotaoConfiguracoesPRINCIPAL" sid="922793875131276">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="615286813832564" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoMaterialApoioPRINCIPAL" sid="399009551082861">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188691710098075" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoPerfilPRINCIPAL" sid="362417771682572">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593189577544313" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSobrePRINCIPAL" sid="685594006468568">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990595799039028" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoTurmasPRINCIPAL" sid="102193652821610">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811905866395449" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoBotaoConfiguracoesPrincipal" sid="383575065573694">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoPerfilPRINCIPAL" sid="397755232353043">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoSobrePRINCIPAL" sid="791815182639858">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoTurmasPRINCIPAL" sid="828246633444602">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Logo" sid="820095983753741">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837185533611516" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\Logo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoBotaoMaterialApoioPRINCIPAL" sid="187591315662317">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-type name="Touch" sid="564603889974030">
             <plugin id="Touch" />
@@ -157,14 +259,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ImagemLogo" sid="268659005623697">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="376832417736192" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\Logo.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="ImagemVerde" sid="509322945748963">
             <plugin id="Sprite" />
             <animation-folder>
@@ -189,67 +283,120 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoTurmasPRINCIPAL" sid="102193652821610">
+        <object-type name="ImagemPreto" sid="762852831796210">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811905866395449" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481364709472591" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoPerfilPRINCIPAL" sid="362417771682572">
+        <object-type name="TopoCriarConta" sid="293893624707432">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593189577544313" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121844558631845" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\LogoVazia.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoMaterialApoioPRINCIPAL" sid="399009551082861">
+        <object-type name="Voltar" sid="710507024211440">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188691710098075" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861431252384146" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.00700281" y="0.502801" />
+                            <point x="0.122549" y="0.184874" />
+                            <point x="0.464986" y="0.0154062" />
+                            <point x="0.837535" y="0.15056" />
+                            <point x="0.988796" y="0.485994" />
+                            <point x="0.875351" y="0.815826" />
+                            <point x="0.492997" y="0.992997" />
+                            <point x="0.12395" y="0.820728" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoConfiguracoesPRINCIPAL" sid="922793875131276">
+        <object-type name="CriarContaVOLTARInicial" sid="750534333786855">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="615286813832564" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="386002464504468" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.00700281" y="0.502801" />
+                            <point x="0.122549" y="0.184874" />
+                            <point x="0.464986" y="0.0154062" />
+                            <point x="0.837535" y="0.15056" />
+                            <point x="0.988796" y="0.485994" />
+                            <point x="0.875351" y="0.815826" />
+                            <point x="0.492997" y="0.992997" />
+                            <point x="0.12395" y="0.820728" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.00700281" y="0.502801" />
+                            <point x="0.122549" y="0.184874" />
+                            <point x="0.464986" y="0.0154062" />
+                            <point x="0.837535" y="0.15056" />
+                            <point x="0.988796" y="0.485994" />
+                            <point x="0.875351" y="0.815826" />
+                            <point x="0.492997" y="0.992997" />
+                            <point x="0.12395" y="0.820728" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BotaoSobrePRINCIPAL" sid="685594006468568">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990595799039028" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Logo" sid="820095983753741">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837185533611516" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\Logo.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextoBotaoTurmasPRINCIPAL" sid="828246633444602">
+        <object-type name="TituloCriarContaCRIARCONTA" sid="507591517230669">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TextoBotaoPerfilPRINCIPAL" sid="397755232353043">
+        <object-type name="TextoNomeCRIARCONTA" sid="666698373510375">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TextoBotaoMaterialApoioPRINCIPAL" sid="187591315662317">
+        <object-type name="TextoEmailCRIARCONTA" sid="793246514875217">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TextoBotaoConfiguracoesPrincipal" sid="383575065573694">
+        <object-type name="TextoSenhaCRIARCONTA" sid="298718958136747">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TextoBotaoSobrePRINCIPAL" sid="791815182639858">
+        <object-type name="TextoEscolaCRIARCONTA" sid="888326072239124">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoCidadeCRIARCONTA" sid="398383697800288">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoEstadoCRIARCONTA" sid="187936286653321">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CampoNomeCRIARCONTA" sid="733591942824545">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="CampoEmailCRIARCONTA" sid="312425027299019">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="CampoSenhaCRIARCONTA" sid="223654986483826">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="CampoEscolaCRIARCONTA" sid="926442450282835">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="ListaCidadeCRIARCONTA" sid="921705412228647">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="ListaEstadoCRIARCONTA" sid="363083200042209">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="BotaoCriarContaCRIARCONTA" sid="325805050216160">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686740946450234" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoBotaoCriarContaCRIARCONTA" sid="631480644138578">
             <plugin id="Text" />
         </object-type>
     </object-folder>
@@ -258,12 +405,14 @@
         <layout>TelaCarregamento.xml</layout>
         <layout>TelaInicial.xml</layout>
         <layout>TelaPrincipal.xml</layout>
+        <layout>TelaCriarConta.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
         <event-sheet>Global.xml</event-sheet>
         <event-sheet>EventoInicial.xml</event-sheet>
         <event-sheet>EventoPrincipal.xml</event-sheet>
+        <event-sheet>EventoCriarConta.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">

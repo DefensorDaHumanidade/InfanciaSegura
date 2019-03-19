@@ -4,6 +4,22 @@
     <name>EventoInicial</name>
     <events>
         <include>Global</include>
+        <comment>Função para atualizar os textos quando a TelaPrincipal for carregada</comment>
+        <event-block sid="722788455269980">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="372969688645670" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="802353919661980" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="780698639599174" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
         <event-group description="" sid="157830249247341" title="Limitar rolagem INICIAL">
             <sub-events>
@@ -157,6 +173,10 @@
                                     <param id="0" name="Object">BotaoSobreINICIAL</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="873766556818527" type="PretoAvisoINICIAL">
+                                    <param id="0" name="Width">WindowWidth</param>
+                                    <param id="1" name="Height">WindowHeight</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -240,6 +260,10 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-12" name="Set group active" sid="842564529999404" type="System">
+                                    <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="481844328368928" type="BotaoConectarINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
@@ -255,9 +279,6 @@
                         <event-block sid="177141041922841">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="206281052281439" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="347591404457198" type="Touch">
-                                    <param id="0" name="Object">BotaoConectarINICIAL</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-7" name="Set size" sid="585501608135216" type="BotaoConectarINICIAL">
@@ -270,9 +291,87 @@
                                 <action id="3" name="Set font size" sid="713673390091602" type="TextoBotaoConectarINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="842564529999404" type="System">
+                                <action id="-12" name="Set group active" sid="408237875244947" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="112536618536737">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="497836665594295" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="747306155098638" type="Touch">
+                                    <param id="0" name="Object">BotaoConectarINICIAL</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="231332011435412" type="CampoEmailNICIAL">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="881670180924379" type="CampoEmailNICIAL">
+                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                    <param id="1" name="Value">&quot;red&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="244344552170452" type="CampoEmailNICIAL">
+                                    <param id="0" name="Text">&quot;Preencha aqui seu email de cadastro&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="659239573387935">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="233699542483472" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="349298383934338" type="Touch">
+                                    <param id="0" name="Object">BotaoConectarINICIAL</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="609821591767725" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="611397582040197" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                    <param id="1" name="Value">&quot;red&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="573374815661850" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Text">&quot;Preencha aqui a senha cadastrada&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="498563468557779">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="481905830600119" type="CampoEmailNICIAL" />
+                                <condition id="0" name="Compare text" sid="645698976316825" type="CampoEmailNICIAL">
+                                    <param id="0" name="Text">&quot;Preencha aqui seu email de cadastro&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="412080171859277" type="CampoEmailNICIAL">
+                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="324752269426578" type="CampoEmailNICIAL">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="928060186669876">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="626743548594499" type="CampoSenhaINICIAL" />
+                                <condition id="0" name="Compare text" sid="445147101697849" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Text">&quot;Preencha aqui a senha cadastrada&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="650779152701306" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="110232227295033" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -302,14 +401,14 @@
                                 <action id="3" name="Set font size" sid="818276553694591" type="TextoBotaoCriarContaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
+                                <action id="-2" name="Go to layout" sid="925853555944614" type="System">
+                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="535502833511004">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="752719160290438" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="438124851892998" type="Touch">
-                                    <param id="0" name="Object">BotaoCriarContaINICIAL</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-7" name="Set size" sid="299600026168459" type="BotaoCriarContaINICIAL">
@@ -359,9 +458,6 @@
                         <event-block sid="455933893968644">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="616262610073182" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="847045147547952" type="Touch">
-                                    <param id="0" name="Object">BotaoEsqueciSenhaINICIAL</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-7" name="Set size" sid="480913743466910" type="BotaoEsqueciSenhaINICIAL">
@@ -411,9 +507,6 @@
                         <event-block sid="428332100125170">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="568778373686782" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="544133830977503" type="Touch">
-                                    <param id="0" name="Object">BotaoOuvidoriaINICIAL</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-7" name="Set size" sid="456129770891248" type="BotaoOuvidoriaINICIAL">
@@ -463,9 +556,6 @@
                         <event-block sid="536910035197830">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="120692951664742" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="311924273033538" type="Touch">
-                                    <param id="0" name="Object">BotaoSobreINICIAL</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-7" name="Set size" sid="861267941063760" type="BotaoSobreINICIAL">
@@ -486,6 +576,267 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="424114702206726" title="Conexão do Usuário">
+            <sub-events>
+                <event-block any="1" sid="618223236528554">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="432827445785992" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;Preencha aqui seu email de cadastro&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="734119173209515" type="CampoSenhaINICIAL">
+                            <param id="0" name="Text">&quot;Preencha aqui a senha cadastrada&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="553162031179029" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="381442903483399" type="CampoSenhaINICIAL">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="907842756553482" type="System">
+                            <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="662385275289227">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="164819900209095" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;Preencha aqui seu email de cadastro&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="751872820042856" type="CampoSenhaINICIAL">
+                            <param id="0" name="Text">&quot;Preencha aqui a senha cadastrada&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="967582023428656" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="569446246340059" type="CampoSenhaINICIAL">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="709603906603642" type="CampoEmailNICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;0.5&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="422486813938822" type="CampoSenhaINICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;0.5&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="410973895552085" type="PretoAvisoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="108955631736108" type="PretoAvisoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="506497095289779" type="BrancoAvisoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="633131359951563" type="TextoConectandoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="323470161896176" type="TextoConectadoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="784914066204062" type="TextoConexaoInvalidaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="475803245898252" type="TextoConexaoFalhaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="788359271663944" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="277789138325112" type="TextoConectandoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="915145199411654" type="TextoConectadoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="901023759712767" type="TextoConexaoInvalidaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="646129085631496" type="TextoConexaoFalhaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="291442911426999" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="273856599184940" type="TextoConectandoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="500448419622016">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="937142274076686" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="314454809583280" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarCredenciais&quot;</param>
+                                    <param id="1" name="URL">&quot;http://localhost/InfanciaSegura/InfanciaSegura-VerificacaoUsuario.php&quot;</param>
+                                    <param id="2" name="Data">&quot;email=&quot;&amp;CampoEmailNICIAL.Text</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="770290995895671">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="442508488695007" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarCredenciais&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="838220499919970">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="922633190185142" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">CampoSenhaINICIAL.Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="681744139789227" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="438951195405643" type="TextoConectadoINICIAL">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="882155872639080" type="System">
+                                            <param id="0" name="Variable">EmailUsuario</param>
+                                            <param id="1" name="Value">CampoEmailNICIAL.Text</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="195626122544639" type="System">
+                                            <param id="0" name="Variable">SenhaUsuario</param>
+                                            <param id="1" name="Value">CampoSenhaINICIAL.Text</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="405543020222514" type="System">
+                                            <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action disabled="1" id="-16" name="Wait" sid="308349340006295" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="232147754189344" type="System">
+                                            <param id="0" name="Layout">TelaPrincipal</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="962574405311605">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="672522026365954" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">CampoSenhaINICIAL.Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="146879442581057" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="519947408339519" type="TextoConexaoInvalidaINICIAL">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="397342827240669" type="System">
+                                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="777026966141678" type="System">
+                                            <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="715720700671326">
+                            <conditions>
+                                <condition id="1" name="On error" sid="961414980117975" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarCredenciais&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="352158706195891" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="122242284441568" type="TextoConexaoFalhaINICIAL">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="678439683443812" type="System">
+                                    <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="570573124966259" type="System">
+                                    <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Nesse grupo as chamadas para desativar o aviso de conexão mal sucedida são executadas.</comment>
+        <event-group description="" inactive="1" sid="380621081024391" title="Desabilitar Aviso INICIAL">
+            <sub-events>
+                <event-block sid="107342734225550">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="731277553730944" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="994943560031980" type="CampoEmailNICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="195292820736403" type="CampoSenhaINICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="812326574255040" type="TextoConexaoInvalidaINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="189585504673396" type="TextoConexaoFalhaINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="986157421747552" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="122375307658629" type="PretoAvisoINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="941219711570721" type="System">
+                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="778817490114326" type="System">
+                            <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

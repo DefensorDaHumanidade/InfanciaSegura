@@ -54,5 +54,96 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="624205541177351" title="Verificação de Armazenamento Interno CARREGAMENTO">
+            <sub-events>
+                <event-block sid="573556410131485">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="196020346483731" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="580815310083962" type="LocalStorage">
+                            <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="381923531465347" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="669444490642190">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="230925686429124" type="LocalStorage">
+                            <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="331166968751027" type="System">
+                            <param id="0" name="Layout">TelaInicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="917453124108807">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="331760671745441" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="353367304048961" type="System">
+                            <param id="0" name="Layout">TelaInicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725249491655101">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="589871354849609" type="LocalStorage">
+                            <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="105078610383612" type="LocalStorage">
+                            <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="718330532856547">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="946235728164808" type="LocalStorage">
+                            <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="796309415650637" type="System">
+                            <param id="0" name="Variable">EmailUsuario</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="796843506964133">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="771177933035481" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="701687657256655" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="138717852368569">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="109122931136263" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="496967095171819" type="System">
+                            <param id="0" name="Variable">SenhaUsuario</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

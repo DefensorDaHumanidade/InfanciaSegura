@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="SenhaUsuario" sid="266918364847421" static="0" type="text"></variable>
+        <variable constant="0" name="EmailUsuario" sid="118662498669709" static="0" type="text"></variable>
         <variable constant="0" name="AlturaBotao" sid="131433985648109" static="0" type="number">60</variable>
         <variable constant="0" name="ComprimentoBotao" sid="184477890897347" static="0" type="number">200</variable>
         <variable constant="0" name="OpacidadeMinimaBotao" sid="137297831410062" static="0" type="number">70</variable>
@@ -51,6 +53,10 @@
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">1000-(WindowHeight/2)</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="106717961354836" type="TopoCriarConta">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000-(WindowHeight/2)</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="956692192150585" type="ImagemDeFundo">
                                     <param id="0" name="Width">WindowWidth</param>
                                     <param id="1" name="Height">WindowHeight</param>
@@ -80,6 +86,16 @@
                                 <action id="9" name="Set scale" sid="408270374860630" type="Logo">
                                     <param id="0" name="Scale">0.5</param>
                                 </action>
+                                <action id="9" name="Set scale" sid="935492898678570" type="TopoCriarConta">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="596344132152731" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="X">610</param>
+                                    <param id="1" name="Y">1080-(WindowHeight/2)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="898087753509909" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Scale">0.2</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -100,6 +116,16 @@
                                 </action>
                                 <action id="9" name="Set scale" sid="333893924796410" type="Logo">
                                     <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="743013307413775" type="TopoCriarConta">
+                                    <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="667079873192032" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="X">1040-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/2</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="648540550105523" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Scale">0.1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -154,6 +180,42 @@
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="258860298278178" type="TextoBotaoSobrePRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="941599834210294" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="963002695697713" type="TextoConectadoINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="711309154467439" type="TextoConexaoFalhaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="292588946359157" type="TextoConexaoInvalidaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="865396059727007" type="TituloCriarContaCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="360455746048365" type="TextoNomeCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="545436202760481" type="TextoEmailCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="869762555165464" type="TextoSenhaCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="353253696489114" type="TextoEscolaCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="501950317039867" type="TextoCidadeCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="279816149451085" type="TextoEstadoCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="592761900189453" type="TextoBotaoCriarContaCRIARCONTA">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="387988979676479" type="System">
@@ -234,6 +296,42 @@
                                         <action id="0" name="Set text" sid="168019548057319" type="TextoBotaoSobrePRINCIPAL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSobrePRINCIPAL/text()&quot;)</param>
                                         </action>
+                                        <action id="0" name="Set text" sid="368918509542180" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConectandoINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="677102936994006" type="TextoConectadoINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConectadoINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="441883593275330" type="TextoConexaoFalhaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoFalhaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="155107674901274" type="TextoConexaoInvalidaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoInvalidaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="785769310921586" type="TituloCriarContaCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloCriarContaCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="792146134869271" type="TextoNomeCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoNomeCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="336933278517343" type="TextoEmailCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEmailCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="349313696208529" type="TextoSenhaCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoSenhaCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="674138863019729" type="TextoEscolaCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEscolaCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="759202124825397" type="TextoCidadeCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoCidadeCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="601063664298117" type="TextoEstadoCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEstadoCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="315315008135980" type="TextoBotaoCriarContaCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoCriarContaCRIARCONTA/text()&quot;)</param>
+                                        </action>
                                         <action id="-12" name="Set group active" sid="367187836438621" type="System">
                                             <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
                                             <param id="1" name="State">0</param>
@@ -246,8 +344,35 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-group description="" sid="535225083023643" title="Configuração Texto Títulos">
+            <sub-events>
+                <event-block sid="249447000772651">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="177479123323086" type="TituloCriarContaCRIARCONTA" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="985947468379406" type="TituloCriarContaCRIARCONTA">
+                            <param id="0" name="Width">WindowWidth</param>
+                            <param id="1" name="Height">TopoCriarConta.ImageHeight</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="116254906000764" title="Configurações dos botões">
             <sub-events>
+                <event-group description="" sid="151070569513805" title="Criando Botões Voltar">
+                    <sub-events>
+                        <event-block sid="592490528132804">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="143028920417239" type="CriarContaVOLTARInicial" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Stop" sid="393327451593327" type="CriarContaVOLTARInicial" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="533811561703930" title="Criando Botões PRINCIPAL">
                     <sub-events>
                         <event-block sid="473392719999629">
@@ -372,6 +497,39 @@
                                     </conditions>
                                     <actions>
                                         <action id="-7" name="Set size" sid="420982168692411" type="TextoBotaoSobrePRINCIPAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="546313154394024" title="Criando Botões CRIARCONTA">
+                    <sub-events>
+                        <event-block sid="828016850339775">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="356598885698750" type="BotaoCriarContaCRIARCONTA" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="298865338114542" type="BotaoCriarContaCRIARCONTA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="373587424054587" type="BotaoCriarContaCRIARCONTA">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="204937341258926" title="Configurações Texto dos Botões CRIARCONTA">
+                            <sub-events>
+                                <event-block sid="896198112507079">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="902033964122221" type="TextoBotaoCriarContaCRIARCONTA" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="813643919629168" type="TextoBotaoCriarContaCRIARCONTA">
                                             <param id="0" name="Width">ComprimentoBotao</param>
                                             <param id="1" name="Height">AlturaBotao</param>
                                         </action>
