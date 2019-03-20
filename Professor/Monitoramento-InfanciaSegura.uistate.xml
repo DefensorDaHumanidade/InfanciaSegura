@@ -32,6 +32,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/Carregamento/" />
         <folder expanded="1" path="object-folder/Inicial/" />
         <folder expanded="1" path="object-folder/Principal/" />
+        <folder expanded="1" path="object-folder/CriarConta/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />

@@ -225,6 +225,7 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="CriarConta" />
         <object-type name="Touch" sid="564603889974030">
             <plugin id="Touch" />
         </object-type>
