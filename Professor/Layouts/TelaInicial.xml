@@ -84,8 +84,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>434</x>
-                        <y>532</y>
+                        <x>427</x>
+                        <y>579</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -439,7 +439,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ImagemLogo" uid="9">
+                <instance type="TopoInicial" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -452,8 +452,8 @@
                         <x>1022</x>
                         <y>1</y>
                         <z>0</z>
-                        <width>1920</width>
-                        <height>326</height>
+                        <width>2278</width>
+                        <height>514.888183594</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>

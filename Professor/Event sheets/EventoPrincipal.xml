@@ -57,7 +57,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="732111416572162" type="BotaoTurmasPRINCIPAL">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">Logo.Y+Logo.Height+(AlturaBotao/2)+20+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoPrincipal.Y+TopoPrincipal.Height+(AlturaBotao/2)+20+RolagemTotal</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -77,7 +77,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="914216515243205" type="BotaoTurmasPRINCIPAL">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">Logo.Y+Logo.Height+(AlturaBotao/2)+20+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoPrincipal.Y+TopoPrincipal.Height+(AlturaBotao/2)+20+RolagemTotal</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -334,7 +334,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Logo" uid="35">
+                <instance type="TopoPrincipal" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -348,7 +348,7 @@
                         <y>91</y>
                         <z>0</z>
                         <width>1920</width>
-                        <height>340</height>
+                        <height>340.634338379</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>

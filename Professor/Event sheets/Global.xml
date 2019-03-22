@@ -45,11 +45,11 @@
                                 <condition id="-1" name="Every tick" sid="396586493773714" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="720985459852889" type="ImagemLogo">
+                                <action id="-3" name="Set position" sid="720985459852889" type="TopoInicial">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">1000-(WindowHeight/2)</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="509196191128563" type="Logo">
+                                <action id="-3" name="Set position" sid="509196191128563" type="TopoPrincipal">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">1000-(WindowHeight/2)</param>
                                 </action>
@@ -63,7 +63,7 @@
                                 </action>
                                 <action id="-3" name="Set position" sid="881973204242802" type="BotaoTurmasPRINCIPAL">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">Logo.Y+Logo.Height+(AlturaBotao/2)+20+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoPrincipal.Y+TopoPrincipal.Height+(AlturaBotao/2)+20+RolagemTotal</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -80,10 +80,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="9" name="Set scale" sid="512421487668767" type="ImagemLogo">
+                                <action id="9" name="Set scale" sid="512421487668767" type="TopoInicial">
                                     <param id="0" name="Scale">0.5</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="408270374860630" type="Logo">
+                                <action id="9" name="Set scale" sid="408270374860630" type="TopoPrincipal">
                                     <param id="0" name="Scale">0.5</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="935492898678570" type="TopoCriarConta">
@@ -111,10 +111,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="9" name="Set scale" sid="130889357536222" type="ImagemLogo">
+                                <action id="9" name="Set scale" sid="130889357536222" type="TopoInicial">
                                     <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="333893924796410" type="Logo">
+                                <action id="9" name="Set scale" sid="333893924796410" type="TopoPrincipal">
                                     <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="743013307413775" type="TopoCriarConta">

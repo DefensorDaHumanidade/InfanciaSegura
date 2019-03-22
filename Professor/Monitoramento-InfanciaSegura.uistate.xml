@@ -10,7 +10,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">TelaCarregamento</layout>
+        <layout active="1" order="0">TelaCarregamento</layout>
         <layout order="3">TelaInicial</layout>
         <layout order="5">TelaPrincipal</layout>
         <layout order="7">TelaCriarConta</layout>
@@ -18,7 +18,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="2">Global</event-sheet>
         <event-sheet order="4">EventoInicial</event-sheet>
         <event-sheet order="6">EventoPrincipal</event-sheet>
-        <event-sheet active="1" order="8">EventoCriarConta</event-sheet>
+        <event-sheet order="8">EventoCriarConta</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -46,14 +46,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoOuvidoriaINICIAL/" />
         <folder expanded="1" path="animation-folder/BotaoSobreINICIAL/" />
         <folder expanded="1" path="animation-folder/BrancoAvisoINICIAL/" />
-        <folder expanded="1" path="animation-folder/ImagemLogo/" />
+        <folder expanded="1" path="animation-folder/TopoInicial/" />
         <folder expanded="1" path="animation-folder/PretoAvisoINICIAL/" />
         <folder expanded="1" path="animation-folder/BotaoConfiguracoesPRINCIPAL/" />
         <folder expanded="1" path="animation-folder/BotaoMaterialApoioPRINCIPAL/" />
         <folder expanded="1" path="animation-folder/BotaoPerfilPRINCIPAL/" />
         <folder expanded="1" path="animation-folder/BotaoSobrePRINCIPAL/" />
         <folder expanded="1" path="animation-folder/BotaoTurmasPRINCIPAL/" />
-        <folder expanded="1" path="animation-folder/Logo/" />
+        <folder expanded="1" path="animation-folder/TopoPrincipal/" />
         <folder expanded="1" path="animation-folder/ImagemBranco/" />
         <folder expanded="1" path="animation-folder/ImagemDeFundo/" />
         <folder expanded="1" path="animation-folder/ImagemVerde/" />
