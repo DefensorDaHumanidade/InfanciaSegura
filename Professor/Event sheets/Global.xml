@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="QuantidadeMunicipios" sid="233259708173400" static="0" type="number">0</variable>
+        <variable constant="0" name="Conexao" sid="199778270566323" static="0" type="text">conectar</variable>
         <variable constant="0" name="SenhaUsuario" sid="266918364847421" static="0" type="text"></variable>
         <variable constant="0" name="EmailUsuario" sid="118662498669709" static="0" type="text"></variable>
         <variable constant="0" name="AlturaBotao" sid="131433985648109" static="0" type="number">60</variable>
@@ -63,7 +65,7 @@
                                 </action>
                                 <action id="-3" name="Set position" sid="881973204242802" type="BotaoTurmasPRINCIPAL">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">TopoPrincipal.Y+TopoPrincipal.Height+(AlturaBotao/2)+20+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoPrincipal.Y+(TopoPrincipal.Height/1.6)+(AlturaBotao/2)+20+RolagemTotal</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -122,7 +124,7 @@
                                 </action>
                                 <action id="-3" name="Set position" sid="667079873192032" type="CriarContaVOLTARInicial">
                                     <param id="0" name="X">1040-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/2</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="648540550105523" type="CriarContaVOLTARInicial">
                                     <param id="0" name="Scale">0.1</param>

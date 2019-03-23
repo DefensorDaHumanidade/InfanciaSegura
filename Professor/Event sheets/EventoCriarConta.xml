@@ -10,12 +10,20 @@
                 <condition id="-2" name="On start of layout" sid="466499970003476" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="625729628884450" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;BaixarEstados&quot;</param>
+                </action>
                 <action id="-12" name="Set group active" sid="857671651391799" type="System">
                     <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="-12" name="Set group active" sid="368362923814950" type="System">
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="217976213945336" type="System">
+                    <param id="0" name="Group name">&quot;Baixar Estados CRIARCONTA&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
             </actions>
@@ -69,7 +77,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="205197737202394" type="TextoNomeCRIARCONTA">
                                     <param id="0" name="X">600</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height+30+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="964070743947211" type="CampoNomeCRIARCONTA">
                                     <param id="0" name="Width">600</param>
@@ -106,7 +114,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="946178587116393" type="TextoNomeCRIARCONTA">
                                     <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height+30+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="243543822369098" type="CampoNomeCRIARCONTA">
                                     <param id="0" name="Width">WindowWidth-155</param>
@@ -140,7 +148,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="388241526648781" type="TituloCriarContaCRIARCONTA">
                                     <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/2</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="984576931784639" type="TextoEmailCRIARCONTA">
                                     <param id="0" name="X">TextoNomeCRIARCONTA.X</param>
@@ -208,7 +216,7 @@
                         <condition id="-8" name="Compare two values" sid="905610899665777" type="System">
                             <param id="0" name="First value">CampoNomeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -222,7 +230,7 @@
                         <condition id="-8" name="Compare two values" sid="699626096058516" type="System">
                             <param id="0" name="First value">CampoNomeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -236,7 +244,7 @@
                         <condition id="-8" name="Compare two values" sid="768078464049892" type="System">
                             <param id="0" name="First value">CampoEmailCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -250,7 +258,7 @@
                         <condition id="-8" name="Compare two values" sid="861480347826814" type="System">
                             <param id="0" name="First value">CampoEmailCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -264,7 +272,7 @@
                         <condition id="-8" name="Compare two values" sid="722289902184603" type="System">
                             <param id="0" name="First value">CampoSenhaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -278,7 +286,7 @@
                         <condition id="-8" name="Compare two values" sid="516991798037631" type="System">
                             <param id="0" name="First value">CampoSenhaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -292,7 +300,7 @@
                         <condition id="-8" name="Compare two values" sid="362000413121810" type="System">
                             <param id="0" name="First value">CampoEscolaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -306,7 +314,7 @@
                         <condition id="-8" name="Compare two values" sid="269718925781606" type="System">
                             <param id="0" name="First value">CampoEscolaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -320,7 +328,7 @@
                         <condition id="-8" name="Compare two values" sid="262305809637741" type="System">
                             <param id="0" name="First value">ListaCidadeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -335,7 +343,7 @@
                         <condition id="-8" name="Compare two values" sid="208069338609264" type="System">
                             <param id="0" name="First value">ListaCidadeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -350,7 +358,7 @@
                         <condition id="-8" name="Compare two values" sid="223006469239001" type="System">
                             <param id="0" name="First value">ListaEstadoCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -365,7 +373,7 @@
                         <condition id="-8" name="Compare two values" sid="305363897451696" type="System">
                             <param id="0" name="First value">ListaEstadoCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+TopoCriarConta.Height</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -655,6 +663,10 @@
                                     <param id="0" name="Property name">&quot;color&quot;</param>
                                     <param id="1" name="Value">&quot;black&quot;</param>
                                 </action>
+                                <action disabled="1" id="10" name="Set item text" sid="139047070840570" type="ListaEstadoCRIARCONTA">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Text">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -695,6 +707,257 @@
                                 </action>
                                 <action id="-12" name="Set group active" sid="484927653394122" type="System">
                                     <param id="0" name="Group name">&quot;Cadastrar Usuário CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="302365685304992" title="Conexão BancoDados CRIARCONTA">
+            <sub-events>
+                <event-block sid="543986767738264">
+                    <conditions>
+                        <condition id="2" name="On clicked" sid="752663082722620" type="ListaEstadoCRIARCONTA" />
+                        <condition id="4" inverted="1" name="Compare selected item text" sid="970314709841147" type="ListaEstadoCRIARCONTA">
+                            <param id="0" name="Text to compare">&quot;Selecione um Estado&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Compare selected item text" sid="303332416873786" type="ListaEstadoCRIARCONTA">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Clear" sid="934327950901247" type="ListaCidadeCRIARCONTA" />
+                        <action id="-9" name="Set value" sid="841270011217325" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;BaixarQuantidadeMunicipios&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="197944825814636" type="System">
+                            <param id="0" name="Group name">&quot;Baixar Quantidade de Municipios CRIARCONTA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="682186777601769" title="Baixar Estados CRIARCONTA">
+                    <sub-events>
+                        <event-block sid="654529385536369">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="551847797546579" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BaixarEstados&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="220477192041084" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixandoEstados&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="715766844359038" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoEstados&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ListaEstados.php&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="503214966022860">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="929900724447719" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoEstados&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="882653747532907" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;EstadosBaixados&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="599473201014102" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Estados na Lista CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="391082786877075" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Estados CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="469928401231988">
+                            <conditions>
+                                <condition id="1" name="On error" sid="378940906677600" type="AJAX">
+                                    <param id="0" name="Tag">&quot;RequisicaoEstados&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="599266854691380" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarEstados&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="788986070985128" title="Carregar Estados na Lista CRIARCONTA">
+                    <sub-events>
+                        <event-block sid="351057458136358">
+                            <conditions>
+                                <condition id="-10" name="For" sid="599606870768865" type="System">
+                                    <param id="0" name="Name">&quot;indice&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">26</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="245466385317889" type="ListaEstadoCRIARCONTA">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="114616410797268" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Estados na Lista CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="827529049363829" title="Baixar Quantidade de Municipios CRIARCONTA">
+                    <sub-events>
+                        <event-block sid="658229756090265">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="819097630490024" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BaixarQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="614442805388704" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixandoQuantidadeMunicipios&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="712441559319270" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-QuantidadeMunicipios.php?UF=&quot;&amp;ListaEstadoCRIARCONTA.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="877029287603429">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="561985419906946" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="866570799014109" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;QuantidadeMunicipiosBaixado&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="626358179268322" type="System">
+                                    <param id="0" name="Variable">QuantidadeMunicipios</param>
+                                    <param id="1" name="Value">AJAX.LastData</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="152542734143025" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarMunicipios&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="864723526846466" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Municipios CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="532809131496128" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Quantidade de Municipios CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="665942414531741">
+                            <conditions>
+                                <condition id="1" name="On error" sid="658053204822652" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="342487574585702" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarQuantidadeMunicipios&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="721545579011532" title="Baixar Municipios CRIARCONTA">
+                    <sub-events>
+                        <event-block sid="868022497498215">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="440240480126948" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BaixarMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="975600719717050" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixandoMunicipios&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="134912522546298" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoMunicipios&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ListaMunicipios.php?UF=&quot;&amp;ListaEstadoCRIARCONTA.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="361762302065697">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="732958673846064" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="853733774487318" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;MunicipiosBaixados&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="953245052466586" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Municipios na Lista CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="661325622584744" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Municipios CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855246032862222">
+                            <conditions>
+                                <condition id="1" name="On error" sid="546910006155419" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="113385504926605" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarMunicipios&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="330838949568296" title="Carregar Municipios na Lista CRIARCONTA">
+                    <sub-events>
+                        <event-block sid="994350824962040">
+                            <conditions>
+                                <condition id="-10" name="For" sid="892466421767916" type="System">
+                                    <param id="0" name="Name">&quot;indice&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">QuantidadeMunicipios-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="436960164595864" type="ListaCidadeCRIARCONTA">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="355175864722275" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Municipios na Lista CRIARCONTA&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
                             </actions>

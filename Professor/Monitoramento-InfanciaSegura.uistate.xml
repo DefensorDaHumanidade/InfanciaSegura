@@ -10,7 +10,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">TelaCarregamento</layout>
+        <layout order="0">TelaCarregamento</layout>
         <layout order="3">TelaInicial</layout>
         <layout order="5">TelaPrincipal</layout>
         <layout order="7">TelaCriarConta</layout>
@@ -18,7 +18,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="2">Global</event-sheet>
         <event-sheet order="4">EventoInicial</event-sheet>
         <event-sheet order="6">EventoPrincipal</event-sheet>
-        <event-sheet order="8">EventoCriarConta</event-sheet>
+        <event-sheet active="1" order="8">EventoCriarConta</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
