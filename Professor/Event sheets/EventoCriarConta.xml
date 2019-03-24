@@ -202,6 +202,10 @@
                                     <param id="0" name="Object">BotaoCriarContaCRIARCONTA</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="671504012762460" type="PretoAvisoCRIARCONTA">
+                                    <param id="0" name="Width">WindowWidth</param>
+                                    <param id="1" name="Height">WindowHeight</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -449,6 +453,10 @@
                                 <action id="3" name="Set font size" sid="891446503109416" type="TextoBotaoCriarContaCRIARCONTA">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="235377582477815" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;CadastrarUsuario&quot;</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="573087644774471" type="System">
                                     <param id="0" name="Group name">&quot;Cadastrar Usuário CRIARCONTA&quot;</param>
                                     <param id="1" name="State">1</param>
@@ -581,7 +589,7 @@
                         <event-block sid="266964429509215">
                             <conditions>
                                 <condition id="2" name="On clicked" sid="607143742620336" type="CampoNomeCRIARCONTA" />
-                                <condition disabled="1" id="0" name="Compare text" sid="858904964691006" type="CampoNomeCRIARCONTA">
+                                <condition id="0" name="Compare text" sid="858904964691006" type="CampoNomeCRIARCONTA">
                                     <param id="0" name="Text">&quot;Informe seu nome&quot;</param>
                                     <param id="1" name="Case">0</param>
                                 </condition>
@@ -599,7 +607,7 @@
                         <event-block sid="581960571372499">
                             <conditions>
                                 <condition id="2" name="On clicked" sid="265419688835020" type="CampoEmailCRIARCONTA" />
-                                <condition disabled="1" id="0" name="Compare text" sid="648192669336684" type="CampoEmailCRIARCONTA">
+                                <condition id="0" name="Compare text" sid="648192669336684" type="CampoEmailCRIARCONTA">
                                     <param id="0" name="Text">&quot;Informe seu email&quot;</param>
                                     <param id="1" name="Case">0</param>
                                 </condition>
@@ -617,7 +625,7 @@
                         <event-block sid="397731714428284">
                             <conditions>
                                 <condition id="2" name="On clicked" sid="109116418526505" type="CampoSenhaCRIARCONTA" />
-                                <condition disabled="1" id="0" name="Compare text" sid="518601002051871" type="CampoSenhaCRIARCONTA">
+                                <condition id="0" name="Compare text" sid="518601002051871" type="CampoSenhaCRIARCONTA">
                                     <param id="0" name="Text">&quot;Crie uma senha&quot;</param>
                                     <param id="1" name="Case">0</param>
                                 </condition>
@@ -635,7 +643,7 @@
                         <event-block sid="405749985889462">
                             <conditions>
                                 <condition id="2" name="On clicked" sid="905624409581417" type="CampoEscolaCRIARCONTA" />
-                                <condition disabled="1" id="0" name="Compare text" sid="470471201811697" type="CampoEscolaCRIARCONTA">
+                                <condition id="0" name="Compare text" sid="470471201811697" type="CampoEscolaCRIARCONTA">
                                     <param id="0" name="Text">&quot;Informe sua escola de atuação&quot;</param>
                                     <param id="1" name="Case">0</param>
                                 </condition>
@@ -666,48 +674,6 @@
                                 <action disabled="1" id="10" name="Set item text" sid="139047070840570" type="ListaEstadoCRIARCONTA">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-            </sub-events>
-        </event-group>
-        <event-group description="" inactive="1" sid="739248800595383" title="Cadastrar Usuário CRIARCONTA">
-            <sub-events>
-                <comment>Fazer igual ao grupo que esta em &apos;&apos;EventoPrincipal&apos;&apos;   -&gt; depois apagar esse comentario     {GRUPO: Conexão do Usuário}</comment>
-                <event-group description="" sid="317310030551838" title="Verificando Campos CRIARCONTA">
-                    <sub-events>
-                        <event-block any="1" sid="119667442394351">
-                            <conditions>
-                                <condition id="0" name="Compare text" sid="763927150938942" type="CampoNomeCRIARCONTA">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                    <param id="1" name="Case">0</param>
-                                </condition>
-                                <condition id="0" name="Compare text" sid="140047730402680" type="CampoEmailCRIARCONTA">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                    <param id="1" name="Case">0</param>
-                                </condition>
-                                <condition id="0" name="Compare text" sid="752316311303055" type="CampoSenhaCRIARCONTA">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                    <param id="1" name="Case">0</param>
-                                </condition>
-                                <condition id="0" name="Compare text" sid="747578547173356" type="CampoEscolaCRIARCONTA">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                    <param id="1" name="Case">0</param>
-                                </condition>
-                                <condition id="4" name="Compare selected item text" sid="512860103172910" type="ListaEstadoCRIARCONTA">
-                                    <param id="0" name="Text to compare">&quot;&quot;</param>
-                                    <param id="1" name="Case sensitivity">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="0" name="Set text" sid="611683791396753" type="CampoNomeCRIARCONTA">
-                                    <param id="0" name="Text">&quot;Informe seu nome&quot;</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="484927653394122" type="System">
-                                    <param id="0" name="Group name">&quot;Cadastrar Usuário CRIARCONTA&quot;</param>
-                                    <param id="1" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -964,6 +930,447 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="739248800595383" title="Cadastrar Usuário CRIARCONTA">
+            <sub-events>
+                <event-group description="" sid="317310030551838" title="Verificando Campos CRIARCONTA">
+                    <sub-events>
+                        <event-block any="1" sid="119667442394351">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="763927150938942" type="CampoNomeCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="140047730402680" type="CampoEmailCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="752316311303055" type="CampoSenhaCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="747578547173356" type="CampoEscolaCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="4" name="Compare selected item text" sid="512860103172910" type="ListaCidadeCRIARCONTA">
+                                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                                    <param id="1" name="Case sensitivity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="484927653394122" type="System">
+                                    <param id="0" name="Group name">&quot;Verificando Campos CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="201157643078497">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Compare text" sid="512089930249201" type="CampoNomeCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="Compare text" sid="317458008501473" type="CampoEmailCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="Compare text" sid="348114194413714" type="CampoSenhaCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="Compare text" sid="520006701127088" type="CampoEscolaCRIARCONTA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Compare selected item text" sid="851610790599621" type="ListaCidadeCRIARCONTA">
+                                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                                    <param id="1" name="Case sensitivity">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="839277592165270" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;CadastrarUsuario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="173997286353935" type="TextoNomeCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="181247813105469" type="TextoEmailCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="725896046032275" type="TextoSenhaCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="443337456781555" type="TextoEscolaCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="899643088788315" type="TextoCidadeCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="328222431216121" type="TextoEstadoCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="146914572131095" type="CampoNomeCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                                    <param id="1" name="Value">&quot;0.0&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="308532774612770" type="CampoEmailCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                                    <param id="1" name="Value">&quot;0.0&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="355811684646663" type="CampoSenhaCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                                    <param id="1" name="Value">&quot;0.0&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="671364412742897" type="CampoEscolaCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                                    <param id="1" name="Value">&quot;0.0&quot;</param>
+                                </action>
+                                <action id="2" name="Set visible" sid="251511882268211" type="ListaEstadoCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="2" name="Set visible" sid="302538619012156" type="ListaCidadeCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="725412535127095" type="PretoAvisoCRIARCONTA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="697085957397604" type="BrancoAvisoCRIARCONTA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="241931133624409" type="BrancoAvisoCRIARCONTA">
+                                    <param id="0" name="Width">300</param>
+                                    <param id="1" name="Height">100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="170404758146388" type="TextoConectandoCRIARCONTA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="268313346452185" type="TextoConectadoCRIARCONTA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="669964181864110" type="TextoConexaoInvalidaCRIARCONTA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="410213889431223" type="TextoConexaoFalhaCRIARCONTA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="198052800021273" type="PretoAvisoCRIARCONTA">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="752138572714903" type="BrancoAvisoCRIARCONTA">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="109662264226188" type="TextoConectandoCRIARCONTA">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="864432833698213" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;VerificandoEmail&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="718920153235205">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="611617769218220" type="System">
+                                            <param id="0" name="Variable">Conexao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;VerificandoEmail&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Request URL" sid="840638722705918" type="AJAX">
+                                            <param id="0" name="Tag">&quot;verificarEmail&quot;</param>
+                                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-VerificarEmail.php?Email=&quot;&amp;CampoEmailCRIARCONTA.Text</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="819537276813120">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="716577862041771" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarEmail&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Já existe algum usuário usando esse Email</comment>
+                                <event-block sid="172261723731705">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="166512217980430" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="630012718453952" type="TextoConectandoCRIARCONTA">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="869908689016356" type="TextoConexaoInvalidaCRIARCONTA">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="585669235877820" type="System">
+                                            <param id="0" name="Group name">&quot;Desabilitar Aviso CRIARCONTA&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="877709560934439" type="System">
+                                            <param id="0" name="Group name">&quot;Cadastrar Usuário CRIARCONTA&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Ninguém cadastrou esse email. Válido para cadastro.</comment>
+                                <event-block sid="186366316762766">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="233511309685199" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="994928953519292" type="TextoConectandoCRIARCONTA">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="235155208276142" type="TextoConectadoCRIARCONTA">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="189262453532811" type="System">
+                                            <param id="0" name="Variable">EmailUsuario</param>
+                                            <param id="1" name="Value">CampoEmailCRIARCONTA.Text</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="936403905539602" type="System">
+                                            <param id="0" name="Variable">SenhaUsuario</param>
+                                            <param id="1" name="Value">CampoSenhaCRIARCONTA.Text</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="884713274816599" type="System">
+                                            <param id="0" name="Variable">Conexao</param>
+                                            <param id="1" name="Value">&quot;PreencherBancoDeDados&quot;</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="542185206588900" type="System">
+                                            <param id="0" name="Group name">&quot;Submeter informações para o Banco de Dados CRIARCONTA&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="516659680093267">
+                            <conditions>
+                                <condition id="1" name="On error" sid="288438339902623" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarEmail&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="787607649198324" type="TextoConectandoCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="414562971133250" type="TextoConexaoFalhaCRIARCONTA">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="575212145409496" type="System">
+                                    <param id="0" name="Group name">&quot;Desabilitar Aviso CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="832932764073930" type="System">
+                                    <param id="0" name="Group name">&quot;Cadastrar Usuário CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="590035792037155" title="Submeter informações para o Banco de Dados CRIARCONTA">
+                    <sub-events>
+                        <comment>Depois verificar porque o construct 2 não está entrando na função AJAX: &apos;On preencherUsuario&apos; completed</comment>
+                        <event-block sid="719053770654144">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="653892165492931" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PreencherBancoDeDados&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="399389368151597" type="AJAX">
+                                    <param id="0" name="Tag">&quot;preencherUsuario&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-CadastrarProfessor.php&quot;</param>
+                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomeCRIARCONTA.Text&amp;&quot;&amp;email=&quot;&amp;CampoEmailCRIARCONTA.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaCRIARCONTA.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaCRIARCONTA.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadeCRIARCONTA.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoCRIARCONTA.SelectedText</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="667572634887223" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;PreenchendoUsuario&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="959489884347820">
+                                    <conditions>
+                                        <condition disabled="1" id="0" name="On completed" sid="902211181586125" type="AJAX">
+                                            <param id="0" name="Tag">&quot;preencherUsuario&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="810563278249731" type="System">
+                                            <param id="0" name="Variable">Conexao</param>
+                                            <param id="1" name="Value">&quot;UsuarioCadastrado&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="393784313903981" type="System">
+                                            <param id="0" name="Variable">EmailUsuario</param>
+                                            <param id="1" name="Value">CampoEmailCRIARCONTA.Text</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="643205816239363" type="System">
+                                            <param id="0" name="Variable">SenhaUsuario</param>
+                                            <param id="1" name="Value">CampoSenhaCRIARCONTA.Text</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="704375453528467" type="System">
+                                            <param id="0" name="Group name">&quot;Submeter informações para o Banco de Dados CRIARCONTA&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="985452673576469" type="System">
+                                            <param id="0" name="Group name">&quot;Cadastrar Usuário CRIARCONTA&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="508809252869303" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                                            <param id="1" name="Value">EmailUsuario</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="695251216283215" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                                            <param id="1" name="Value">SenhaUsuario</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="190266240215076" type="System">
+                                            <param id="0" name="Layout">TelaPrincipal</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="939662000845238">
+                            <conditions>
+                                <condition id="1" name="On error" sid="710163416120607" type="AJAX">
+                                    <param id="0" name="Tag">&quot;preencherUsuario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="907250733888858" type="TextoConectandoCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="328110589419229" type="TextoConectadoCRIARCONTA">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="128260154811117" type="TextoConexaoFalhaCRIARCONTA">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="943056374524110" type="System">
+                                    <param id="0" name="Group name">&quot;Desabilitar Aviso CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="125492713868809" type="System">
+                                    <param id="0" name="Group name">&quot;Cadastrar Usuário CRIARCONTA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Set value" sid="216584478439290" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;PreencherBancoDeDados&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <comment>Nesse grupo as chamadas para desativar o aviso são executadas.</comment>
+        <event-group description="" inactive="1" sid="890430933366300" title="Desabilitar Aviso CRIARCONTA">
+            <sub-events>
+                <event-block sid="566791378465959">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="669260279940007" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="566995385193876" type="TextoNomeCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="316140888274106" type="TextoEmailCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="508753825976318" type="TextoSenhaCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="178656527812338" type="TextoEscolaCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="530077470803698" type="TextoCidadeCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="350676508151175" type="TextoEstadoCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="600317015901393" type="CampoNomeCRIARCONTA">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="717510624964695" type="CampoEmailCRIARCONTA">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="816832854033530" type="CampoSenhaCRIARCONTA">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="499741424728654" type="CampoEscolaCRIARCONTA">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action disabled="1" id="6" name="Set CSS style" sid="953324851016755" type="ListaCidadeCRIARCONTA">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action disabled="1" id="6" name="Set CSS style" sid="678682577761698" type="ListaEstadoCRIARCONTA">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;1.0&quot;</param>
+                        </action>
+                        <action id="2" name="Set visible" sid="583108510073970" type="ListaCidadeCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="2" name="Set visible" sid="899015999295291" type="ListaEstadoCRIARCONTA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="104002924142329" type="TextoConexaoInvalidaCRIARCONTA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="870552241839247" type="TextoConexaoFalhaCRIARCONTA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="204633483227574" type="TextoConectandoCRIARCONTA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="827224181483033" type="BrancoAvisoCRIARCONTA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="283047449047970" type="PretoAvisoCRIARCONTA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="791657748725439" type="System">
+                            <param id="0" name="Group name">&quot;Verificando Campos CRIARCONTA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="838871153906911" type="System">
+                            <param id="0" name="Group name">&quot;Desabilitar Aviso CRIARCONTA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

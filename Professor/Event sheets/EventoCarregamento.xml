@@ -143,6 +143,76 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="424382029643475">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="385511936295220" type="System">
+                            <param id="0" name="Variable">EmailUsuario</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="192107267034667" type="System">
+                            <param id="0" name="Variable">SenhaUsuario</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="893723361200331" type="System">
+                            <param id="0" name="Group name">&quot;Redirecionamento CARREGAMENTO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="637176658173108" title="Redirecionamento CARREGAMENTO">
+            <sub-events>
+                <event-block sid="544606364028376">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="598487586274901" type="System">
+                            <param id="0" name="Variable">EmailUsuario</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;desconectado&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="768871213116470" type="System">
+                            <param id="0" name="Variable">SenhaUsuario</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;desconectado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="972451943704387" type="System">
+                            <param id="0" name="Layout">TelaPrincipal</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="883809438524188" type="System">
+                            <param id="0" name="Group name">&quot;Redirecionamento CARREGAMENTO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="574026638096515">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="558608301446286" type="System">
+                            <param id="0" name="Variable">EmailUsuario</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;desconectado&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="217217347897793" type="System">
+                            <param id="0" name="Variable">SenhaUsuario</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;desconectado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="492160527968611" type="System">
+                            <param id="0" name="Layout">TelaInicial</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="317491507937447" type="System">
+                            <param id="0" name="Group name">&quot;Redirecionamento CARREGAMENTO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

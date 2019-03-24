@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoPerfil</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="576749274098077">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="678273333449041" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="547152203771582" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="228363944314575" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

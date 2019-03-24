@@ -24,5 +24,13 @@
     <TextoEscolaCRIARCONTA>School:</TextoEscolaCRIARCONTA>
     <TextoCidadeCRIARCONTA>City:</TextoCidadeCRIARCONTA>
     <TextoEstadoCRIARCONTA>State:</TextoEstadoCRIARCONTA>
-    <TextoBotaoCriarContaCRIARCONTA>Create</TextoBotaoCriarContaCRIARCONTA>    
+    <TextoBotaoCriarContaCRIARCONTA>Create</TextoBotaoCriarContaCRIARCONTA>
+    <TextoConectandoCRIARCONTA>Loading...</TextoConectandoCRIARCONTA>
+    <TextoConectadoCRIARCONTA>Everting is fine</TextoConectadoCRIARCONTA>
+    <TextoConexaoInvalidaCRIARCONTA>Please change the email</TextoConexaoInvalidaCRIARCONTA>
+    <TextoConexaoFalhaCRIARCONTA>ERROR. No conection.</TextoConexaoFalhaCRIARCONTA>
+    <TituloSobreSOBRE>About</TituloSobreSOBRE>
+    <TextoDescricaoSOBRE>This is a project in progress.</TextoDescricaoSOBRE>
+    <TituloMaterialApoioMATERIALAPOIO>Support Material</TituloMaterialApoioMATERIALAPOIO>
+    <TextoDescricaoMaterialApoioMATERIALAPOIO>Please, click in the links below:</TextoDescricaoMaterialApoioMATERIALAPOIO>
 </textos>

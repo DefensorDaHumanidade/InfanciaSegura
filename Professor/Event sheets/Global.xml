@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="QuantidadeMateriaisDeApoio" sid="654562794583928" static="0" type="number">0</variable>
         <variable constant="0" name="QuantidadeMunicipios" sid="233259708173400" static="0" type="number">0</variable>
         <variable constant="0" name="Conexao" sid="199778270566323" static="0" type="text">conectar</variable>
         <variable constant="0" name="SenhaUsuario" sid="266918364847421" static="0" type="text"></variable>
@@ -220,6 +221,33 @@
                                 <action id="3" name="Set font size" sid="592761900189453" type="TextoBotaoCriarContaCRIARCONTA">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="632885226965189" type="TextoConectandoCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="536254778386158" type="TextoConectadoCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="766079891926699" type="TextoConexaoFalhaCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="342771561922802" type="TextoConexaoInvalidaCRIARCONTA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="528002450400242" type="TituloSobreSOBRE">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="181302857286217" type="TextoDescricaoSOBRE">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="908091135777540" type="TituloMaterialApoioMATERIALAPOIO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="941163885497624" type="TextoDescricaoMaterialApoioMATERIALAPOIO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="344453684339512" type="TextoEnderecoMateriaisMATERIALAPOIO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="387988979676479" type="System">
                                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                                     <param id="1" name="State">0</param>
@@ -333,6 +361,30 @@
                                         </action>
                                         <action id="0" name="Set text" sid="315315008135980" type="TextoBotaoCriarContaCRIARCONTA">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoCriarContaCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="335767340676683" type="TextoConectandoCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConectandoCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="601685966713260" type="TextoConectadoCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConectadoCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="843565090593130" type="TextoConexaoFalhaCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoFalhaCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="885258943125607" type="TextoConexaoInvalidaCRIARCONTA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoInvalidaCRIARCONTA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="814527123108915" type="TituloSobreSOBRE">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloSobreSOBRE/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="740620376062752" type="TextoDescricaoSOBRE">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoDescricaoSOBRE/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="869491729886448" type="TituloMaterialApoioMATERIALAPOIO">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloMaterialApoioMATERIALAPOIO/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="548724591502916" type="TextoDescricaoMaterialApoioMATERIALAPOIO">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoDescricaoMaterialApoioMATERIALAPOIO/text()&quot;)</param>
                                         </action>
                                         <action id="-12" name="Set group active" sid="367187836438621" type="System">
                                             <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>

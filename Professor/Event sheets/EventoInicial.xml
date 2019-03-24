@@ -689,7 +689,6 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>ERROR - Verificar a conexão com o banco de dados</comment>
                         <event-block sid="500448419622016">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="937142274076686" type="System" />
@@ -741,17 +740,31 @@
                                         <action disabled="1" id="-16" name="Wait" sid="308349340006295" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
+                                        <action id="0" name="Set item" sid="789028669337390" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                                            <param id="1" name="Value">EmailUsuario</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="136826239970531" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                                            <param id="1" name="Value">SenhaUsuario</param>
+                                        </action>
                                         <action id="-2" name="Go to layout" sid="232147754189344" type="System">
                                             <param id="0" name="Layout">TelaPrincipal</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="962574405311605">
+                                <comment>Fururamente fazer mensagem separdas de Email Inválido e Senha Inválida</comment>
+                                <event-block any="1" sid="962574405311605">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="672522026365954" type="System">
                                             <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Email Invalido&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="152977125881226" type="System">
+                                            <param id="0" name="First value">CampoSenhaINICIAL.Text</param>
                                             <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Second value">CampoSenhaINICIAL.Text</param>
+                                            <param id="2" name="Second value">AJAX.LastData</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -800,7 +813,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>Nesse grupo as chamadas para desativar o aviso de conexão mal sucedida são executadas.</comment>
+        <comment>Nesse grupo as chamadas para desativar o aviso são executadas.</comment>
         <event-group description="" inactive="1" sid="380621081024391" title="Desabilitar Aviso INICIAL">
             <sub-events>
                 <event-block sid="107342734225550">

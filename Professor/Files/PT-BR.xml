@@ -25,4 +25,12 @@
     <TextoCidadeCRIARCONTA>Cidade:</TextoCidadeCRIARCONTA>
     <TextoEstadoCRIARCONTA>Estado:</TextoEstadoCRIARCONTA>
     <TextoBotaoCriarContaCRIARCONTA>Criar</TextoBotaoCriarContaCRIARCONTA>
+    <TextoConectandoCRIARCONTA>Conectando...</TextoConectandoCRIARCONTA>
+    <TextoConectadoCRIARCONTA>Credenciais Aceitas</TextoConectadoCRIARCONTA>
+    <TextoConexaoInvalidaCRIARCONTA>Email já cadastrado</TextoConexaoInvalidaCRIARCONTA>
+    <TextoConexaoFalhaCRIARCONTA>Erro de conexão. Sem acesso ao servidor.</TextoConexaoFalhaCRIARCONTA>
+    <TituloSobreSOBRE>Sobre</TituloSobreSOBRE>
+    <TextoDescricaoSOBRE>Este é um projeto de educação sexual infantil, desenvolvido na Universidade do Estado de Santa Catarina.</TextoDescricaoSOBRE>
+    <TituloMaterialApoioMATERIALAPOIO>Material de Apoio</TituloMaterialApoioMATERIALAPOIO>
+    <TextoDescricaoMaterialApoioMATERIALAPOIO>Abaixo encontram-se endereços de internet que visam auxiliar o professor:</TextoDescricaoMaterialApoioMATERIALAPOIO>
 </textos>

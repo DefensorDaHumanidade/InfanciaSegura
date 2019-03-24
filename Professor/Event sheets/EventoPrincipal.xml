@@ -18,6 +18,10 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="821484457627106" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
@@ -257,6 +261,9 @@
                                 <action id="3" name="Set font size" sid="128074814876304" type="TextoBotaoMaterialApoioPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
+                                <action id="-2" name="Go to layout" sid="471930594163022" type="System">
+                                    <param id="0" name="Layout">TelaMaterialApoio</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="776059457611926">
@@ -354,6 +361,9 @@
                                 </action>
                                 <action id="3" name="Set font size" sid="387722330909214" type="TextoBotaoSobrePRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="274115334119619" type="System">
+                                    <param id="0" name="Layout">TelaSobre</param>
                                 </action>
                             </actions>
                         </event-block>

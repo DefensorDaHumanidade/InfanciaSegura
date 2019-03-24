@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoSobre</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="873277760252000">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="614222425751916" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="535393205961926" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="116349628065137" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="245811047856344" title="Posições/Proporções SOBRE">
+            <sub-events>
+                <event-group description="" sid="746080509213696" title="Posições/Proporções Paisagem SOBRE">
+                    <sub-events>
+                        <event-block sid="803165034580243">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="139946249406993" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="728232775633969" type="TextoDescricaoSOBRE">
+                                    <param id="0" name="Width">500</param>
+                                    <param id="1" name="Height">300</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="392316124776350" type="TextoDescricaoSOBRE">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+60</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="937294674527254" title="Posições/Proporções Retrato SOBRE">
+                    <sub-events>
+                        <event-block sid="549876321573319">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="677854493190926" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="413201211292480" type="TextoDescricaoSOBRE">
+                                    <param id="0" name="Width">WindowWidth-20</param>
+                                    <param id="1" name="Height">600</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="775583528667980" type="TextoDescricaoSOBRE">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="472535670974054" title="Posições/Proporções Relativas SOBRE">
+                    <sub-events>
+                        <event-block sid="460350342143899">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="393003590579623" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="737815026740960" type="TituloSobreSOBRE">
+                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="482699255806274" title="Pressionar Botões SOBRE">
+            <sub-events>
+                <event-group description="" sid="670057549217392" title="Botão Voltar SOBRE">
+                    <sub-events>
+                        <event-block sid="309433579719067">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="360815384485585" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="862684727394782" type="Touch">
+                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="175963642216280" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="195247712781846" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="484473232532657" type="System">
+                                    <param id="0" name="Layout">TelaPrincipal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="430866820711721">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="695777481758323" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="998069844398591" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="927049343159074" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
