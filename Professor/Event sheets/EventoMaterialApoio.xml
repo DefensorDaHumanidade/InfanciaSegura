@@ -27,6 +27,26 @@
                 </action>
             </actions>
         </event-block>
+        <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
+        <event-group description="" sid="952718784466706" title="Limitar rolagem MATERIALAPOIO">
+            <sub-events>
+                <event-block sid="884384004263844">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="438871298783583" type="System">
+                            <param id="0" name="First value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">RolagemTotal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="845814233937417" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="707973441704664" title="Posições/Proporções MATERIALAPOIO">
             <sub-events>
                 <event-group description="" sid="812691047755553" title="Posições/Proporções Paisagem MATERIALAPOIO">

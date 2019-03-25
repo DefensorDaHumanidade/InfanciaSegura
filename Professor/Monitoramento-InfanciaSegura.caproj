@@ -45,7 +45,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -343,10 +343,109 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TituloTurmasTURMA" sid="601534845827457">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Perfil">
+            <object-type name="BotaoExcluirPERFIL" sid="381820830093437">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445849764054129" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSairPERFIL" sid="910606876467474">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571901534143618" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSalvarPERFIL" sid="675377915453316">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="252988434016081" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CampoEmailPERFIL" sid="398789689092209">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoEscolaPERFIL" sid="294284188919960">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoNomePERFIL" sid="833084094783850">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoSenhaPERFIL" sid="440483977046919">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="ListaCidadePERFIL" sid="118622812042089">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListaEstadoPERFIL" sid="470732856092801">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="TextoBotaoExcluirPERFIL" sid="486137926310891">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoSairPERFIL" sid="136104262002758">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoSalvarPERFIL" sid="531176853204381">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCidadePERFIL" sid="379336529647864">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEmailPERFIL" sid="617145267937009">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEscolaPERFIL" sid="330703636450108">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEstadoPERFIL" sid="825661507014990">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomePERFIL" sid="246044467727678">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaPERFIL" sid="210239470080305">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloPerfilPERFIL" sid="251634131217126">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoTurmaTURMA" sid="842312142539285">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCadastroTurmaTURMA" sid="931972938103115">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoAdicionarTurmaTURMA" sid="499426019217741">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Sobre">
             <object-type name="TituloSobreSOBRE" sid="646032822307725">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TextoDescricaoSOBRE" sid="867721007138113">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="MaterialApoio">
             <object-type name="TituloMaterialApoioMATERIALAPOIO" sid="957358527850789">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDescricaoMaterialApoioMATERIALAPOIO" sid="562866267296676">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEnderecoMateriaisMATERIALAPOIO" sid="673912157611271">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -435,14 +534,29 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TextoDescricaoSOBRE" sid="867721007138113">
-            <plugin id="Text" />
+        <object-type name="BotaoTurmaTURMA" sid="516172357234503">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399146373193833" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
         </object-type>
-        <object-type name="TextoEnderecoMateriaisMATERIALAPOIO" sid="673912157611271">
-            <plugin id="Text" />
+        <object-type name="FundoBotaoTurmaTURMA" sid="829967176100868">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="923060156105364" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                </animation>
+            </animation-folder>
         </object-type>
-        <object-type name="TextoDescricaoMaterialApoioMATERIALAPOIO" sid="562866267296676">
-            <plugin id="Text" />
+        <object-type name="BotaoAdicionarTurmaTURMA" sid="428609017265725">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160644020206392" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

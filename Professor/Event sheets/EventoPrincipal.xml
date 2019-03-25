@@ -163,6 +163,9 @@
                                 <action id="3" name="Set font size" sid="253964705279602" type="TextoBotaoTurmasPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
+                                <action id="-2" name="Go to layout" sid="274894309533265" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="837318244587101">
@@ -211,6 +214,9 @@
                                 </action>
                                 <action id="3" name="Set font size" sid="606399450097269" type="TextoBotaoPerfilPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="139706370517605" type="System">
+                                    <param id="0" name="Layout">TelaPerfil</param>
                                 </action>
                             </actions>
                         </event-block>

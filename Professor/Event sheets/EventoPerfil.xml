@@ -17,7 +17,517 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="616986146907105" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                </action>
+                <action id="-12" name="Set group active" sid="546234723279967" type="System">
+                    <param id="0" name="Group name">&quot;Baixar Dados do Professor PERFIL&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="131889436450200" type="System">
+                    <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
             </actions>
         </event-block>
+        <event-group description="" sid="302354417803768" title="Limitar rolagem PERFIL">
+            <sub-events>
+                <event-block sid="834864323289024">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="508092386831509" type="System">
+                            <param id="0" name="First value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">RolagemTotal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="472654756071844" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="820693686290859" title="Baixar Dados do Professor PERFIL">
+            <sub-events>
+                <event-block sid="930012390772896">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="836093362847166" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Post to URL" sid="872647614741184" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaProfessor.php&quot;</param>
+                            <param id="2" name="Data">&quot;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario</param>
+                            <param id="3" name="Method">&quot;POST&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="311001475049875" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixandoDadosProfessor&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="274229240298537">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="896284758784656" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="656941209554855" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="568290506708096" type="System">
+                            <param id="0" name="Group name">&quot;Baixar Dados do Professor PERFIL&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="546106956492440">
+                    <conditions>
+                        <condition id="1" name="On error" sid="349454419876860" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="222842860642119" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Carregar a lista de todas as cidades e todos os estados para caso o professor troque de Escola</comment>
+        <event-group description="" inactive="1" sid="438484705961769" title="Preencher Dados do Professor PERFIL">
+            <sub-events>
+                <event-block sid="289503944649823">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="271412086846049" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="782790323035158" type="CampoNomePERFIL">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="470583898972768" type="CampoEmailPERFIL">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 1, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="542015053390323" type="CampoSenhaPERFIL">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 2, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="905521823395672" type="CampoEscolaPERFIL">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="7" name="Add item" sid="178722408961873" type="ListaCidadePERFIL">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 4, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="7" name="Add item" sid="843337688410247" type="ListaEstadoPERFIL">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 5, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="459447532530183" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
+        <event-group description="" sid="397809505390571" title="Posições/Proporções PERFIL">
+            <sub-events>
+                <event-group description="" sid="434788410990346" title="Posições/Proporções Paisagem PERFIL">
+                    <sub-events>
+                        <event-block sid="760802184302434">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="837368617490407" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="346564244999730" type="TextoNomePERFIL">
+                                    <param id="0" name="X">600</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="423898290252228" type="CampoNomePERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="169252717857732" type="CampoEmailPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="382363899632529" type="CampoSenhaPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="538509735610171" type="CampoEscolaPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="196701421785024" type="ListaCidadePERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="323931363201480" type="ListaEstadoPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="183754657626828" type="BotaoSairPERFIL">
+                                    <param id="0" name="X">1000-(ComprimentoBotao+10)</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="353480474009791" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="333258738531271" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="X">1000+(ComprimentoBotao+10)</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="725667032196625" title="Posições/Proporções Retrato PERFIL">
+                    <sub-events>
+                        <event-block sid="576426405033972">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="894650673243186" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="364674554087698" type="TextoNomePERFIL">
+                                    <param id="0" name="X">1020-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="499856933221933" type="CampoNomePERFIL">
+                                    <param id="0" name="Width">WindowWidth-155</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="722682233740157" type="CampoEmailPERFIL">
+                                    <param id="0" name="Width">WindowWidth-155</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="792909415514654" type="CampoSenhaPERFIL">
+                                    <param id="0" name="Width">WindowWidth-155</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="274625440205974" type="CampoEscolaPERFIL">
+                                    <param id="0" name="Width">WindowWidth-155</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="126548518871701" type="ListaCidadePERFIL">
+                                    <param id="0" name="Width">WindowWidth-155</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="995523470792012" type="ListaEstadoPERFIL">
+                                    <param id="0" name="Width">WindowWidth-155</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="230382263161059" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TextoEstadoPERFIL.Y+AlturaBotao+10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="150714829269902" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">BotaoSalvarPERFIL.Y+AlturaBotao+10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="972220216291945" type="BotaoSairPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">BotaoExcluirPERFIL.Y+AlturaBotao+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="457784051767318" title="Posições/Proporções Relativas PERFIL">
+                    <sub-events>
+                        <event-block sid="216578261856356">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="816657920973889" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="111722108511264" type="TituloPerfilPERFIL">
+                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="599024645771911" type="TextoEmailPERFIL">
+                                    <param id="0" name="X">TextoNomePERFIL.X</param>
+                                    <param id="1" name="Y">TextoNomePERFIL.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="396672370532177" type="TextoSenhaPERFIL">
+                                    <param id="0" name="X">TextoEmailPERFIL.X</param>
+                                    <param id="1" name="Y">TextoEmailPERFIL.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="254237647351256" type="TextoEscolaPERFIL">
+                                    <param id="0" name="X">TextoSenhaPERFIL.X</param>
+                                    <param id="1" name="Y">TextoSenhaPERFIL.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="499925748812539" type="TextoCidadePERFIL">
+                                    <param id="0" name="X">TextoEscolaPERFIL.X</param>
+                                    <param id="1" name="Y">TextoEscolaPERFIL.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="302218014808401" type="TextoEstadoPERFIL">
+                                    <param id="0" name="X">TextoCidadePERFIL.X</param>
+                                    <param id="1" name="Y">TextoCidadePERFIL.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="665365425957265" type="CampoNomePERFIL">
+                                    <param id="0" name="X">TextoNomePERFIL.X+120</param>
+                                    <param id="1" name="Y">TextoNomePERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="761231088214569" type="CampoEmailPERFIL">
+                                    <param id="0" name="X">TextoEmailPERFIL.X+120</param>
+                                    <param id="1" name="Y">TextoEmailPERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="836316584176621" type="CampoSenhaPERFIL">
+                                    <param id="0" name="X">TextoSenhaPERFIL.X+120</param>
+                                    <param id="1" name="Y">TextoSenhaPERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="786351526734371" type="CampoEscolaPERFIL">
+                                    <param id="0" name="X">TextoEscolaPERFIL.X+120</param>
+                                    <param id="1" name="Y">TextoEscolaPERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="750661395218785" type="ListaCidadePERFIL">
+                                    <param id="0" name="X">TextoCidadePERFIL.X+120</param>
+                                    <param id="1" name="Y">TextoCidadePERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="604941840408678" type="ListaEstadoPERFIL">
+                                    <param id="0" name="X">TextoEstadoPERFIL.X+120</param>
+                                    <param id="1" name="Y">TextoEstadoPERFIL.Y</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="449463475897545" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Object">BotaoSairPERFIL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="123457034028215" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Object">BotaoExcluirPERFIL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="207955028459714" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Object">BotaoSalvarPERFIL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="835731031559335" title="Pressionar Botões PERFIL">
+            <sub-events>
+                <comment>Acrescentar os demais botões e suas respectivas funções</comment>
+                <event-group description="" sid="161466366081327" title="Botão Voltar PERFIL">
+                    <sub-events>
+                        <event-block sid="544351369482083">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="513742850918753" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="510882197294803" type="Touch">
+                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="254431556210014" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="861029406905367" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="671652151875638" type="System">
+                                    <param id="0" name="Layout">TelaPrincipal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106863571618058">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="252365150548694" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="576658228020972" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="701144650292082" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <comment>Grupo onde são executadas as rotinas para ocultar os campos. Esse grupo é necessário, pois nativamente o Construct 2coloca os &apos;textbox&apos; no topo do layout. Resumo: Oculta os campos quando eles enconstam na imagem do topo.</comment>
+        <event-group description="" sid="937932934846179" title="Ocultar Campos PERFIL">
+            <sub-events>
+                <event-block sid="260160922067828">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="939317234229057" type="System">
+                            <param id="0" name="First value">CampoNomePERFIL.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="377459291291556" type="CampoNomePERFIL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="350388388114822">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="721793871673273" type="System">
+                            <param id="0" name="First value">CampoNomePERFIL.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="575519968064186" type="CampoNomePERFIL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640114940753938">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="183933689414142" type="System">
+                            <param id="0" name="First value">CampoEmailPERFIL.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="781285538748897" type="CampoEmailPERFIL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="118581880363823">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="764485402066453" type="System">
+                            <param id="0" name="First value">CampoEmailPERFIL.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="916224966778872" type="CampoEmailPERFIL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="984557422515847">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="376021017196096" type="System">
+                            <param id="0" name="First value">CampoSenhaPERFIL.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="767097724223930" type="CampoSenhaPERFIL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="830836732577842">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="970083934149252" type="System">
+                            <param id="0" name="First value">CampoSenhaPERFIL.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="668948930745692" type="CampoSenhaPERFIL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="769535577817443">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="403446434327226" type="System">
+                            <param id="0" name="First value">CampoEscolaPERFIL.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="242036931731432" type="CampoEscolaPERFIL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="124172974232868">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="780651073927561" type="System">
+                            <param id="0" name="First value">CampoEscolaPERFIL.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="254660481285337" type="CampoEscolaPERFIL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="411231513594413">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="755247988643967" type="System">
+                            <param id="0" name="First value">ListaCidadePERFIL.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="237048516687742" type="ListaCidadePERFIL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="788827609402295">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="185491554521384" type="System">
+                            <param id="0" name="First value">ListaCidadePERFIL.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="966734983766665" type="ListaCidadePERFIL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741151886471947">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="780975284164648" type="System">
+                            <param id="0" name="First value">ListaEstadoPERFIL.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="256895550560137" type="ListaEstadoPERFIL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="648222380495892">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="955303738156884" type="System">
+                            <param id="0" name="First value">ListaEstadoPERFIL.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="590356135676803" type="ListaEstadoPERFIL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

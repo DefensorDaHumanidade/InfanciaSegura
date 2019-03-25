@@ -10,24 +10,25 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">TelaCriarConta</layout>
         <layout order="3">TelaInicial</layout>
-        <layout order="5">TelaPrincipal</layout>
+        <layout order="4">TelaPrincipal</layout>
+        <layout order="6">TelaCriarConta</layout>
         <layout order="10">TelaMaterialApoio</layout>
         <layout order="11">TelaSobre</layout>
         <layout order="12">TelaCarregamento</layout>
         <layout order="17">TelaTurma</layout>
+        <layout order="23">TelaPerfil</layout>
         <event-sheet order="0">EventoCarregamento</event-sheet>
-        <event-sheet active="1" order="2">Global</event-sheet>
-        <event-sheet order="4">EventoInicial</event-sheet>
-        <event-sheet order="6">EventoPrincipal</event-sheet>
-        <event-sheet order="7">EventoCriarConta</event-sheet>
+        <event-sheet order="1">EventoInicial</event-sheet>
+        <event-sheet order="2">Global</event-sheet>
+        <event-sheet order="5">EventoCriarConta</event-sheet>
+        <event-sheet order="7">EventoPrincipal</event-sheet>
         <event-sheet order="8">EventoSobre</event-sheet>
         <event-sheet order="9">EventoMaterialApoio</event-sheet>
         <event-sheet order="13">EventoConfiguracoes</event-sheet>
         <event-sheet order="14">EventoPerfil</event-sheet>
         <event-sheet order="15">EventoPerfilAdicionarEscola</event-sheet>
-        <event-sheet order="16">EventoTurma</event-sheet>
+        <event-sheet active="1" order="16">EventoTurma</event-sheet>
         <event-sheet order="18">EventoTurmaAdicionar</event-sheet>
         <event-sheet order="19">EventoTurmaAdicionarFinal</event-sheet>
         <event-sheet order="20">EventoTurmaEspecifica</event-sheet>
@@ -47,6 +48,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/Inicial/" />
         <folder expanded="1" path="object-folder/Principal/" />
         <folder expanded="1" path="object-folder/CriarConta/" />
+        <folder expanded="1" path="object-folder/Perfil/" />
+        <folder expanded="1" path="object-folder/Sobre/" />
+        <folder expanded="1" path="object-folder/MaterialApoio/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -73,6 +77,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TopoCriarConta/" />
         <folder expanded="1" path="animation-folder/PretoAvisoCRIARCONTA/" />
         <folder expanded="1" path="animation-folder/BrancoAvisoCRIARCONTA/" />
+        <folder expanded="1" path="animation-folder/BotaoExcluirPERFIL/" />
+        <folder expanded="1" path="animation-folder/BotaoSairPERFIL/" />
+        <folder expanded="1" path="animation-folder/BotaoSalvarPERFIL/" />
         <folder expanded="1" path="animation-folder/ImagemBranco/" />
         <folder expanded="1" path="animation-folder/ImagemDeFundo/" />
         <folder expanded="1" path="animation-folder/ImagemVerde/" />
@@ -80,5 +87,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ImagemAzul/" />
         <folder expanded="1" path="animation-folder/ImagemPreto/" />
         <folder expanded="1" path="animation-folder/Voltar/" />
+        <folder expanded="1" path="animation-folder/BotaoTurmaTURMA/" />
+        <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMA/" />
+        <folder expanded="1" path="animation-folder/BotaoAdicionarTurmaTURMA/" />
     </folders-expanded>
 </c2uistate>

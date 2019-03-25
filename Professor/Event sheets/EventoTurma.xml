@@ -17,7 +17,365 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="865854130040779" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;baixarTurmas&quot;</param>
+                </action>
+                <action id="-12" name="Set group active" sid="107540951264304" type="System">
+                    <param id="0" name="Group name">&quot;Consultar Turmas Cadastradas TURMA&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="390826947906913" type="System">
+                    <param id="0" name="Group name">&quot;Consulta Vazia TURMA&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="129222052843016" type="System">
+                    <param id="0" name="Object to create">FundoBotaoTurmaTURMA</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
             </actions>
         </event-block>
+        <event-block sid="176930406822923">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="481629096431362" type="FundoBotaoTurmaTURMA">
+                    <param id="0" name="Object">BotaoTurmaTURMA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="990131976137871" type="BotaoAdicionarTurmaTURMA">
+                    <param id="0" name="X">1000</param>
+                    <param id="1" name="Y">FundoBotaoTurmaTURMA.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="435612351197473" title="Limitar rolagem TURMAS">
+            <sub-events>
+                <event-block sid="636245280093401">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="621964544304408" type="System">
+                            <param id="0" name="First value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">RolagemTotal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="898000657542548" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="403880789462357" title="Posições/Proporções TURMAS">
+            <sub-events>
+                <event-group description="" sid="554869831298677" title="Posições/Proporções Paisagem TURMAS">
+                    <sub-events>
+                        <event-block sid="526454686705772">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="302377065374250" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="887264021230800" type="FundoBotaoTurmaTURMA">
+                                    <param id="0" name="Width">800</param>
+                                    <param id="1" name="Height">90</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="130484715375120" type="BotaoTurmaTURMA">
+                                    <param id="0" name="X">800</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+120+BotaoTurmaTURMA.IID*100+RolagemTotal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="869656286655407" title="Posições/Proporções Retrato TURMAS">
+                    <sub-events>
+                        <event-block sid="922640383865432">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="341182387928650" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="495568825222841" type="FundoBotaoTurmaTURMA">
+                                    <param id="0" name="Width">WindowWidth-20</param>
+                                    <param id="1" name="Height">90</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="959729996043548" type="BotaoTurmaTURMA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+120+BotaoTurmaTURMA.IID*100+RolagemTotal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="327647104535013" title="Posições/Proporções Relativas TURMAS">
+                    <sub-events>
+                        <event-block sid="281876683989131">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="395141264691556" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="957519716907606" type="TituloTurmasTURMA">
+                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="663353517520876" type="TextoBotaoTurmaTURMA">
+                                    <param id="0" name="X">BotaoTurmaTURMA.X</param>
+                                    <param id="1" name="Y">BotaoTurmaTURMA.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="372032344384024" type="TextoBotaoAdicionarTurmaTURMA">
+                                    <param id="0" name="X">BotaoAdicionarTurmaTURMA.X</param>
+                                    <param id="1" name="Y">BotaoAdicionarTurmaTURMA.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="194347063969773" type="TextoCadastroTurmaTURMA">
+                                    <param id="0" name="X">BotaoTurmaTURMA.X+300</param>
+                                    <param id="1" name="Y">BotaoTurmaTURMA.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="979029738477130" type="FundoBotaoTurmaTURMA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+120+FundoBotaoTurmaTURMA.IID*100+RolagemTotal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="862191586413721" title="Pressionar Botões TURMA">
+            <sub-events>
+                <event-group description="" sid="646790925179362" title="Botão Voltar TURMA">
+                    <sub-events>
+                        <event-block sid="858230548730378">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="913266929426962" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="583614387093565" type="Touch">
+                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="505750119209538" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="718858057702321" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="208119555071298" type="System">
+                                    <param id="0" name="Layout">TelaPrincipal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="155651827212460">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="697088660553745" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="999145061755467" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="937471945455575" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="241517418726570" title="Consultar Turmas Cadastradas TURMA">
+            <sub-events>
+                <event-block sid="469060006276629">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="793166690860826" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baixarTurmas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Post to URL" sid="651628048300724" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarTurminhas&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaTurma.php&quot;</param>
+                            <param id="2" name="Data">&quot;email=&quot;&amp;EmailUsuario</param>
+                            <param id="3" name="Method">&quot;POST&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="606554216419809" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixandoTurmas&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="291588124662461">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="724608019607180" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarTurminhas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="566237522622928" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Turmas TURMA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="325852201613753" type="System">
+                            <param id="0" name="Group name">&quot;Consultar Turmas Cadastradas TURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="315440036517200" type="TextoBotaoTurmaTURMA" />
+                        <action id="-9" name="Destroy" sid="658028037307222" type="TextoCadastroTurmaTURMA" />
+                        <action id="-9" name="Destroy" sid="896473303103505" type="BotaoTurmaTURMA" />
+                        <action id="-9" name="Destroy" sid="474059297024075" type="FundoBotaoTurmaTURMA" />
+                    </actions>
+                </event-block>
+                <event-block sid="987716864003342">
+                    <conditions>
+                        <condition id="1" name="On error" sid="582738384850824" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarTurminhas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="247285716632370" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixarTurmas&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="644049908275182" title="Preencher Turmas TURMA">
+            <sub-events>
+                <event-block sid="877534446739458">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="522180027749161" type="System" />
+                        <condition id="-10" name="For" sid="904359097427746" type="System">
+                            <param id="0" name="Name">&quot;indice&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)/2)-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="470129858195703" type="System">
+                            <param id="0" name="Object to create">FundoBotaoTurmaTURMA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="981311081617808" type="System">
+                            <param id="0" name="Object to create">BotaoTurmaTURMA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="848769001609896" type="System">
+                            <param id="0" name="Object to create">TextoBotaoTurmaTURMA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="614406861474215" type="System">
+                            <param id="0" name="Object to create">TextoCadastroTurmaTURMA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="730785457433629" type="TextoBotaoTurmaTURMA">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 2*loopindex, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="287778669996828" type="TextoCadastroTurmaTURMA">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, (2*loopindex)+1, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="215315289085370" type="System">
+                            <param id="0" name="Group name">&quot;Criar Mais um Campo em Branco TURMA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="735072382414977" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Turmas TURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="360331669736265" title="Criar Mais um Campo em Branco TURMA">
+            <sub-events>
+                <event-block sid="723781416868914">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="162115434845240" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="237754990657988" type="System">
+                            <param id="0" name="Object to create">FundoBotaoTurmaTURMA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="573444059723311" type="System">
+                            <param id="0" name="Group name">&quot;Criar Mais um Campo em Branco TURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="519312484658750" title="Consulta Vazia TURMA">
+            <sub-events>
+                <event-block sid="506871572039163">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="924811418053756" type="System">
+                            <param id="0" name="First value">AJAX.LastData</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="438226384385344" type="BotaoTurmaTURMA" />
+                        <action id="-3" name="Set position" sid="941394223796372" type="BotaoAdicionarTurmaTURMA">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">FundoBotaoTurmaTURMA.Y</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="353154889695789" type="System">
+                            <param id="0" name="Group name">&quot;Destruir um Campo em Branco TURMA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="199061600681792" type="System">
+                            <param id="0" name="Group name">&quot;Consultar Turmas Cadastradas TURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="196584243887449" type="System">
+                            <param id="0" name="Group name">&quot;Consulta Vazia TURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="593280330260638" title="Destruir um Campo em Branco TURMA">
+            <sub-events>
+                <event-block sid="353203633221856">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="700458969596323" type="System" />
+                        <condition id="1" name="Is overlapping another object" sid="242576352727199" type="FundoBotaoTurmaTURMA">
+                            <param id="0" name="Object">BotaoAdicionarTurmaTURMA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="115026233704156" type="FundoBotaoTurmaTURMA" />
+                        <action id="-12" name="Set group active" sid="143133142270922" type="System">
+                            <param id="0" name="Group name">&quot;Destruir um Campo em Branco TURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -33,4 +33,14 @@
     <TextoDescricaoSOBRE>Este é um projeto de educação sexual infantil, desenvolvido na Universidade do Estado de Santa Catarina.</TextoDescricaoSOBRE>
     <TituloMaterialApoioMATERIALAPOIO>Material de Apoio</TituloMaterialApoioMATERIALAPOIO>
     <TextoDescricaoMaterialApoioMATERIALAPOIO>Abaixo encontram-se endereços de internet que visam auxiliar o professor:</TextoDescricaoMaterialApoioMATERIALAPOIO>
+    <TituloPerfilPERFIL>Perfil</TituloPerfilPERFIL>
+    <TextoNomePERFIL>Nome: </TextoNomePERFIL>
+    <TextoEmailPERFIL>Email: </TextoEmailPERFIL>
+    <TextoSenhaPERFIL>Senha: </TextoSenhaPERFIL>
+    <TextoEscolaPERFIL>Escola: </TextoEscolaPERFIL>
+    <TextoCidadePERFIL>Cidade: </TextoCidadePERFIL>
+    <TextoEstadoPERFIL>Estado: </TextoEstadoPERFIL>
+    <TextoBotaoSairPERFIL>Sair</TextoBotaoSairPERFIL>
+    <TextoBotaoExcluirPERFIL>Excluir</TextoBotaoExcluirPERFIL>
+    <TextoBotaoSalvarPERFIL>Salvar</TextoBotaoSalvarPERFIL>
 </textos>

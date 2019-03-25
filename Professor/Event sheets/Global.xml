@@ -248,6 +248,36 @@
                                 <action id="3" name="Set font size" sid="344453684339512" type="TextoEnderecoMateriaisMATERIALAPOIO">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="896217076123420" type="TituloPerfilPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="691012989042466" type="TextoNomePERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="676093638164650" type="TextoEmailPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="170525729813696" type="TextoSenhaPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="688684774773056" type="TextoEscolaPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="966031853930637" type="TextoCidadePERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="443926260647165" type="TextoEstadoPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="795407107346918" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="845106753695043" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="670809908449216" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="387988979676479" type="System">
                                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                                     <param id="1" name="State">0</param>
@@ -385,6 +415,36 @@
                                         </action>
                                         <action id="0" name="Set text" sid="548724591502916" type="TextoDescricaoMaterialApoioMATERIALAPOIO">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoDescricaoMaterialApoioMATERIALAPOIO/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="926575616186614" type="TituloPerfilPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloPerfilPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="157660193039007" type="TextoNomePERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoNomePERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="857531586211887" type="TextoEmailPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEmailPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="846120749247822" type="TextoSenhaPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoSenhaPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="611509467987054" type="TextoEscolaPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEscolaPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="392020808844203" type="TextoCidadePERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoCidadePERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="872372094712702" type="TextoEstadoPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEstadoPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="649532525641103" type="TextoBotaoSalvarPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSairPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="960720780283097" type="TextoBotaoSairPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoExcluirPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="235776396264217" type="TextoBotaoExcluirPERFIL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSalvarPERFIL/text()&quot;)</param>
                                         </action>
                                         <action id="-12" name="Set group active" sid="367187836438621" type="System">
                                             <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
@@ -584,6 +644,136 @@
                                     </conditions>
                                     <actions>
                                         <action id="-7" name="Set size" sid="813643919629168" type="TextoBotaoCriarContaCRIARCONTA">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="116485775813716" title="Criando Botões TURMA">
+                    <sub-events>
+                        <event-block sid="982032626148189">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="979933266847409" type="BotaoTurmaTURMA" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="414159183550979" type="BotaoTurmaTURMA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="904763531604064" type="ImagemAzul">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="559776559784958">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="269478804387685" type="BotaoAdicionarTurmaTURMA" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="605840208484148" type="BotaoAdicionarTurmaTURMA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="777888091957133" type="BotaoAdicionarTurmaTURMA">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="964216521392503" title="Configurações Texto dos Botões TURMA">
+                            <sub-events>
+                                <event-block sid="129489655263237">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="631143408910073" type="TextoBotaoTurmaTURMA" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="336394668265294" type="TextoBotaoTurmaTURMA">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="886118922375292" title="Criando Botões PERFIL">
+                    <sub-events>
+                        <event-block sid="834883995107736">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="890413402933667" type="BotaoSalvarPERFIL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="415260429101393" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="988158598634909" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="283408622383784">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="343882860044625" type="BotaoSairPERFIL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="427320310410417" type="BotaoSairPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="597276995791290" type="BotaoSairPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="234896724523317">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="755701001458033" type="BotaoExcluirPERFIL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="470789998089393" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="224578994413016" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="130522647325131" title="Configurações Texto dos Botões PERFIL">
+                            <sub-events>
+                                <event-block sid="585631672910621">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="515547968496577" type="TextoBotaoSalvarPERFIL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="412053495355048" type="TextoBotaoSalvarPERFIL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="345557247322094">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="273844723917074" type="TextoBotaoSairPERFIL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="427990082284450" type="TextoBotaoSairPERFIL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="326112938937173">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="262060400666705" type="TextoBotaoExcluirPERFIL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="456786774428706" type="TextoBotaoExcluirPERFIL">
                                             <param id="0" name="Width">ComprimentoBotao</param>
                                             <param id="1" name="Height">AlturaBotao</param>
                                         </action>

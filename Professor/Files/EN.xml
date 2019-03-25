@@ -33,4 +33,14 @@
     <TextoDescricaoSOBRE>This is a project in progress.</TextoDescricaoSOBRE>
     <TituloMaterialApoioMATERIALAPOIO>Support Material</TituloMaterialApoioMATERIALAPOIO>
     <TextoDescricaoMaterialApoioMATERIALAPOIO>Please, click in the links below:</TextoDescricaoMaterialApoioMATERIALAPOIO>
+    <TituloPerfilPERFIL>Profile</TituloPerfilPERFIL>
+    <TextoNomePERFIL>Name: </TextoNomePERFIL>
+    <TextoEmailPERFIL>Email: </TextoEmailPERFIL>
+    <TextoSenhaPERFIL>Password: </TextoSenhaPERFIL>
+    <TextoEscolaPERFIL>School: </TextoEscolaPERFIL>
+    <TextoCidadePERFIL>City: </TextoCidadePERFIL>
+    <TextoEstadoPERFIL>State: </TextoEstadoPERFIL>
+    <TextoBotaoSairPERFIL>Exit</TextoBotaoSairPERFIL>
+    <TextoBotaoExcluirPERFIL>Delete</TextoBotaoExcluirPERFIL>
+    <TextoBotaoSalvarPERFIL>Save</TextoBotaoSalvarPERFIL>
 </textos>
