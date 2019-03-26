@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="NomeAluno" sid="786910338194507" static="0" type="text"></variable>
+        <variable constant="0" name="NomeTurma" sid="572028829421611" static="0" type="text"></variable>
         <variable constant="0" name="QuantidadeMateriaisDeApoio" sid="654562794583928" static="0" type="number">0</variable>
         <variable constant="0" name="QuantidadeMunicipios" sid="233259708173400" static="0" type="number">0</variable>
         <variable constant="0" name="Conexao" sid="199778270566323" static="0" type="text">conectar</variable>
@@ -278,6 +280,18 @@
                                 <action id="3" name="Set font size" sid="670809908449216" type="TextoBotaoExcluirPERFIL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="405749405196295" type="TituloTurmasTURMA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="895474382127961" type="TextoBotaoTurmaTURMA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="111395460870828" type="TextoCadastroTurmaTURMA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="602837821762165" type="TextoBotaoAdicionarTurmaTURMA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="387988979676479" type="System">
                                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                                     <param id="1" name="State">0</param>
@@ -445,6 +459,18 @@
                                         </action>
                                         <action id="0" name="Set text" sid="235776396264217" type="TextoBotaoExcluirPERFIL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSalvarPERFIL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="799325416798098" type="TituloTurmasTURMA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloTurmasTURMA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="897639296403113" type="TextoBotaoTurmaTURMA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoTurmaTURMA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="352938207940047" type="TextoCadastroTurmaTURMA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoCadastroTurmaTURMA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="123858780159553" type="TextoBotaoAdicionarTurmaTURMA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoAdicionarTurmaTURMA/text()&quot;)</param>
                                         </action>
                                         <action id="-12" name="Set group active" sid="367187836438621" type="System">
                                             <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>

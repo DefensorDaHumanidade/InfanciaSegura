@@ -17,7 +17,160 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="0" name="Set text" sid="701195463653396" type="TituloNomeTurmaTURMAESPECIFICA">
+                    <param id="0" name="Text">NomeTurma</param>
+                </action>
             </actions>
         </event-block>
+        <event-group description="" sid="552094822393654" title="Limitar rolagem TURMAESPECIFICA">
+            <sub-events>
+                <event-block sid="862532219489257">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="643835281446368" type="System">
+                            <param id="0" name="First value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">RolagemTotal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="993918489135254" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="342500149114104" title="Posições/Proporções TURMAESPECIFICA">
+            <sub-events>
+                <event-group description="" sid="427987340832898" title="Posições/Proporções Paisagem TURMAESPECIFICA">
+                    <sub-events>
+                        <event-block sid="148991622072688">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="963744494487674" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-7" name="Set size" sid="130701731188219" type="FundoBotaoTurmaTURMA">
+                                    <param id="0" name="Width">800</param>
+                                    <param id="1" name="Height">90</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="578780037005482" type="BotaoTurmaTURMA">
+                                    <param id="0" name="X">800</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+120+BotaoTurmaTURMA.IID*100+RolagemTotal</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="763454519800361" type="BotaoConfiguracoesTURMA">
+                                    <param id="0" name="X">BotaoTurmaTURMA.X+500</param>
+                                    <param id="1" name="Y">BotaoTurmaTURMA.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="692755205803495" title="Posições/Proporções Retrato TURMAESPECIFICA">
+                    <sub-events>
+                        <event-block sid="166848762037297">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="293751033260547" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-7" name="Set size" sid="101445540837450" type="FundoBotaoTurmaTURMA">
+                                    <param id="0" name="Width">WindowWidth-20</param>
+                                    <param id="1" name="Height">90</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="517776755729133" type="BotaoTurmaTURMA">
+                                    <param id="0" name="X">1120-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+120+BotaoTurmaTURMA.IID*100+RolagemTotal</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="291167911840508" type="BotaoConfiguracoesTURMA">
+                                    <param id="0" name="X">940+(WindowWidth/2)</param>
+                                    <param id="1" name="Y">BotaoTurmaTURMA.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="892525655085615" title="Posições/Proporções Relativas TURMAESPECIFICA">
+                    <sub-events>
+                        <event-block sid="907450288504853">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="328336114221125" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="788501773006627" type="TituloNomeTurmaTURMAESPECIFICA">
+                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="105844997736782" type="TextoBotaoTurmaTURMA">
+                                    <param id="0" name="X">BotaoTurmaTURMA.X</param>
+                                    <param id="1" name="Y">BotaoTurmaTURMA.Y</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="768086164333103" type="TextoBotaoAdicionarTurmaTURMA">
+                                    <param id="0" name="X">BotaoAdicionarTurmaTURMA.X</param>
+                                    <param id="1" name="Y">BotaoAdicionarTurmaTURMA.Y</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="301966797127893" type="TextoCadastroTurmaTURMA">
+                                    <param id="0" name="X">BotaoTurmaTURMA.X+300</param>
+                                    <param id="1" name="Y">BotaoTurmaTURMA.Y</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="783121580168881" type="FundoBotaoTurmaTURMA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+120+FundoBotaoTurmaTURMA.IID*100+RolagemTotal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="648482884775043" title="Pressionar Botões TURMAESPECIFICA">
+            <sub-events>
+                <event-group description="" sid="967538375862760" title="Botão Voltar TURMAESPECIFICA">
+                    <sub-events>
+                        <event-block sid="435543220390847">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="860158960667925" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="478672968033286" type="Touch">
+                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="203663542674832" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="806303937502116" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="819014416226905" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="693575887108680">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="348395229125070" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="745729276999307" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="356849373732147" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

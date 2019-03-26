@@ -18,6 +18,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="12">TelaCarregamento</layout>
         <layout order="17">TelaTurma</layout>
         <layout order="23">TelaPerfil</layout>
+        <layout order="24">TelaPerfilAdicionarEscola</layout>
+        <layout active="1" order="25">TelaTurmaEspecifica</layout>
         <event-sheet order="0">EventoCarregamento</event-sheet>
         <event-sheet order="1">EventoInicial</event-sheet>
         <event-sheet order="2">Global</event-sheet>
@@ -28,7 +30,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="13">EventoConfiguracoes</event-sheet>
         <event-sheet order="14">EventoPerfil</event-sheet>
         <event-sheet order="15">EventoPerfilAdicionarEscola</event-sheet>
-        <event-sheet active="1" order="16">EventoTurma</event-sheet>
+        <event-sheet order="16">EventoTurma</event-sheet>
         <event-sheet order="18">EventoTurmaAdicionar</event-sheet>
         <event-sheet order="19">EventoTurmaAdicionarFinal</event-sheet>
         <event-sheet order="20">EventoTurmaEspecifica</event-sheet>
@@ -90,5 +92,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoTurmaTURMA/" />
         <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMA/" />
         <folder expanded="1" path="animation-folder/BotaoAdicionarTurmaTURMA/" />
+        <folder expanded="1" path="animation-folder/BotaoConfiguracoesTURMA/" />
+        <folder expanded="1" path="animation-folder/BotaoAlunoTURMAESPECIFICA/" />
+        <folder expanded="1" path="animation-folder/FundoBotaoAlunoTURMAESPECIFICA/" />
     </folders-expanded>
 </c2uistate>

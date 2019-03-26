@@ -43,4 +43,8 @@
     <TextoBotaoSairPERFIL>Sair</TextoBotaoSairPERFIL>
     <TextoBotaoExcluirPERFIL>Excluir</TextoBotaoExcluirPERFIL>
     <TextoBotaoSalvarPERFIL>Salvar</TextoBotaoSalvarPERFIL>
+    <TituloTurmasTURMA>Turmas</TituloTurmasTURMA>
+    <TextoBotaoTurmaTURMA>Carregando...</TextoBotaoTurmaTURMA>
+    <TextoCadastroTurmaTURMA>Carregando...</TextoCadastroTurmaTURMA>
+    <TextoBotaoAdicionarTurmaTURMA>Adicionar Turma</TextoBotaoAdicionarTurmaTURMA>
 </textos>

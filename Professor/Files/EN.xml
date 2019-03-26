@@ -43,4 +43,8 @@
     <TextoBotaoSairPERFIL>Exit</TextoBotaoSairPERFIL>
     <TextoBotaoExcluirPERFIL>Delete</TextoBotaoExcluirPERFIL>
     <TextoBotaoSalvarPERFIL>Save</TextoBotaoSalvarPERFIL>
+    <TituloTurmasTURMA>Class</TituloTurmasTURMA>
+    <TextoBotaoTurmaTURMA>Loading...</TextoBotaoTurmaTURMA>
+    <TextoCadastroTurmaTURMA>Loading...</TextoCadastroTurmaTURMA>
+    <TextoBotaoAdicionarTurmaTURMA>Add class</TextoBotaoAdicionarTurmaTURMA>
 </textos>

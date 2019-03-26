@@ -346,6 +346,9 @@
             <object-type name="TituloTurmasTURMA" sid="601534845827457">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TituloNomeTurmaTURMAESPECIFICA" sid="185942360893813">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Perfil">
             <object-type name="BotaoExcluirPERFIL" sid="381820830093437">
@@ -427,6 +430,12 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="TextoBotaoAdicionarTurmaTURMA" sid="499426019217741">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoAlunoTURMAESPECIFICA" sid="844476239992929">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoErrosTURMAESPECIFICA" sid="500780282793703">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -555,6 +564,30 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160644020206392" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoConfiguracoesTURMA" sid="506550241099032">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604188222784016" speed="5">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\configuracoes.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoAlunoTURMAESPECIFICA" sid="186857933043025">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677045315298593" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FundoBotaoAlunoTURMAESPECIFICA" sid="884825009653143">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356605723713889" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
                 </animation>
             </animation-folder>
         </object-type>
