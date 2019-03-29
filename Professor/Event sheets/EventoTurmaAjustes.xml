@@ -19,5 +19,157 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="977776601248813" title="Limitar rolagem TURMAAJUSTES">
+            <sub-events>
+                <event-block sid="803663707017394">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="909398154102191" type="System">
+                            <param id="0" name="First value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">RolagemTotal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="839726035401338" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="706985310762155" title="Posições/Proporções TURMAAJUSTES">
+            <sub-events>
+                <event-group description="" sid="627950607997722" title="Posições/Proporções Paisagem TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="720874412105447">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="118538339448425" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="358829517168656" type="TextoNomeTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">800</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="365472439660292" type="BotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="X">1000-(ComprimentoBotao+10)</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="180309361915702" type="BotaoExcluirTURMAAJUSTES">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="175706309030057" type="BotaoSalvarTURMAAJUSTES">
+                                    <param id="0" name="X">1000+(ComprimentoBotao+10)</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="705682091960273" title="Posições/Proporções Retrato TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="671375844613435">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="796550168566835" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="694938715965928" type="TextoNomeTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">1020-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="856845534487453" type="BotaoSalvarTURMAAJUSTES">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TextoQuatidadeErrosTurmaTURMAAJUSTES.Y+AlturaBotao+10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="528710406065144" type="BotaoExcluirTURMAAJUSTES">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">BotaoSalvarTURMAAJUSTES.Y+AlturaBotao+10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="891442276299045" type="BotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">BotaoExcluirTURMAAJUSTES.Y+AlturaBotao+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="161642212372109" title="Posições/Proporções Relativas TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="952894910171192">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="126158093732960" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="969322634388874" type="TituloAjustesTURMAAJUSTES">
+                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="970467484951927" type="CampoNomeTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoNomeTurmaTURMAAJUSTES.X+220</param>
+                                    <param id="1" name="Y">TextoNomeTurmaTURMAAJUSTES.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="690679787429484" type="TextoSenhaTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoNomeTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoNomeTurmaTURMAAJUSTES.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="992676610799430" type="CampoSenhaTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoSenhaTurmaTURMAAJUSTES.X+220</param>
+                                    <param id="1" name="Y">TextoSenhaTurmaTURMAAJUSTES.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="902243834108477" type="TextoEscolaTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoSenhaTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoSenhaTurmaTURMAAJUSTES.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="754385336279959" type="CampoEscolaTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoEscolaTurmaTURMAAJUSTES.X+220</param>
+                                    <param id="1" name="Y">TextoEscolaTurmaTURMAAJUSTES.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="581041116226757" type="TextoCadastradosTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoEscolaTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoEscolaTurmaTURMAAJUSTES.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="630435061907913" type="ListaCadstradosTURMAAJUSTES">
+                                    <param id="0" name="X">TextoCadastradosTurmaTURMAAJUSTES.X+220</param>
+                                    <param id="1" name="Y">TextoCadastradosTurmaTURMAAJUSTES.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="699875524102826" type="TextoCadastroTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoCadastradosTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoCadastradosTurmaTURMAAJUSTES.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="428500504460338" type="TextoUltimoAcessoTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoCadastroTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoCadastroTurmaTURMAAJUSTES.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="137703642802316" type="TextoQuatidadeErrosTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoUltimoAcessoTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoUltimoAcessoTurmaTURMAAJUSTES.Y+50</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="780913156262829" type="TextoBotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Object">BotaoBloquearTURMAAJUSTES</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="970515297248176" type="TextoBotaoExcluirTURMAAJUSTES">
+                                    <param id="0" name="Object">BotaoExcluirTURMAAJUSTES</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="648508581408732" type="TextoBotaoSalvarTURMAAJUSTES">
+                                    <param id="0" name="Object">BotaoSalvarTURMAAJUSTES</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

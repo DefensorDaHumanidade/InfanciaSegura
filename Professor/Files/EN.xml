@@ -47,4 +47,24 @@
     <TextoBotaoTurmaTURMA>Loading...</TextoBotaoTurmaTURMA>
     <TextoCadastroTurmaTURMA>Loading...</TextoCadastroTurmaTURMA>
     <TextoBotaoAdicionarTurmaTURMA>Add class</TextoBotaoAdicionarTurmaTURMA>
+    <TituloNomeTurmaTURMAESPECIFICA>Loading...</TituloNomeTurmaTURMAESPECIFICA>
+    <TextoBotaoAlunoTURMAESPECIFICA>Loading...</TextoBotaoAlunoTURMAESPECIFICA>
+    <TextoErrosTURMAESPECIFICA>Loading...</TextoErrosTURMAESPECIFICA>
+    <TextoNickTURMAESPECIFICAALUNO>Nick: </TextoNickTURMAESPECIFICAALUNO>
+    <TextoIdadeTURMAESPECIFICAALUNO>Age: </TextoIdadeTURMAESPECIFICAALUNO>
+    <TextoTurmaTURMAESPECIFICAALUNO>Class: </TextoTurmaTURMAESPECIFICAALUNO>
+    <TextoCadastroTURMAESPECIFICAALUNO>Date Begin: </TextoCadastroTURMAESPECIFICAALUNO>
+    <TextoUltimoAcessoTURMAESPECIFICAALUNO>Date End: </TextoUltimoAcessoTURMAESPECIFICAALUNO>
+    <TextoBotaoExplusarTURMAESPECIFICAALUNO>Kick the kid</TextoBotaoExplusarTURMAESPECIFICAALUNO>
+    <TextoErrosTURMAESPECIFICAALUNO>Mistakes: </TextoErrosTURMAESPECIFICAALUNO>
+    <TextoBotaoLimparErrosTURMAESPECIFICAALUNO>Clear the mistakes</TextoBotaoLimparErrosTURMAESPECIFICAALUNO>
+    <TextoAcertosTURMAESPECIFICAALUNO>Right answers: </TextoAcertosTURMAESPECIFICAALUNO>
+    <TextoBotaoLimparAcertosTURMAESPECIFICAALUNO>Clear the right answers</TextoBotaoLimparAcertosTURMAESPECIFICAALUNO>
+    <TituloConfiguracoesCONFIGURACOES>Configuration</TituloConfiguracoesCONFIGURACOES>
+    <TextoTamanhoLetraCONFIGURACOES>Font size: </TextoTamanhoLetraCONFIGURACOES>
+    <TextoFonteLetraCONFIGURACOES>Font type: </TextoFonteLetraCONFIGURACOES>
+    <TextoEstiloLetraCONFIGURACOES>Font style: </TextoEstiloLetraCONFIGURACOES>
+    <TextoIdiomaCONFIGURACOES>Language</TextoIdiomaCONFIGURACOES>
+    <TextoBotaoRestuararCONFIGURACOES>Restore</TextoBotaoRestuararCONFIGURACOES>
+    <TextoBotaoSalvarCONFIGURACOES>Save</TextoBotaoSalvarCONFIGURACOES>
 </textos>

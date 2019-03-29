@@ -46,5 +46,25 @@
     <TituloTurmasTURMA>Turmas</TituloTurmasTURMA>
     <TextoBotaoTurmaTURMA>Carregando...</TextoBotaoTurmaTURMA>
     <TextoCadastroTurmaTURMA>Carregando...</TextoCadastroTurmaTURMA>
-    <TextoBotaoAdicionarTurmaTURMA>Adicionar Turma</TextoBotaoAdicionarTurmaTURMA>
+    <TextoBotaoAdicionarTurmaTURMA>Adicionar Turma</TextoBotaoAdicionarTurmaTURMA>    
+    <TituloNomeTurmaTURMAESPECIFICA>Carregando...</TituloNomeTurmaTURMAESPECIFICA>
+    <TextoBotaoAlunoTURMAESPECIFICA>Carregando...</TextoBotaoAlunoTURMAESPECIFICA>
+    <TextoErrosTURMAESPECIFICA>Carregando...</TextoErrosTURMAESPECIFICA>
+    <TextoNickTURMAESPECIFICAALUNO>Apelido: </TextoNickTURMAESPECIFICAALUNO>
+    <TextoIdadeTURMAESPECIFICAALUNO>Idade: </TextoIdadeTURMAESPECIFICAALUNO>
+    <TextoTurmaTURMAESPECIFICAALUNO>Turma: </TextoTurmaTURMAESPECIFICAALUNO>
+    <TextoCadastroTURMAESPECIFICAALUNO>Cadastro: </TextoCadastroTURMAESPECIFICAALUNO>
+    <TextoUltimoAcessoTURMAESPECIFICAALUNO>Último acesso: </TextoUltimoAcessoTURMAESPECIFICAALUNO>
+    <TextoBotaoExplusarTURMAESPECIFICAALUNO>Expulsar desta Turma</TextoBotaoExplusarTURMAESPECIFICAALUNO>
+    <TextoErrosTURMAESPECIFICAALUNO>Erros: </TextoErrosTURMAESPECIFICAALUNO>
+    <TextoBotaoLimparErrosTURMAESPECIFICAALUNO>Apagar os erros selecionados</TextoBotaoLimparErrosTURMAESPECIFICAALUNO>
+    <TextoAcertosTURMAESPECIFICAALUNO>Acertos: </TextoAcertosTURMAESPECIFICAALUNO>
+    <TextoBotaoLimparAcertosTURMAESPECIFICAALUNO>Apagar os acertos selecionados</TextoBotaoLimparAcertosTURMAESPECIFICAALUNO>
+    <TituloConfiguracoesCONFIGURACOES>Configurações</TituloConfiguracoesCONFIGURACOES>
+    <TextoTamanhoLetraCONFIGURACOES>Tamanho da Letra: </TextoTamanhoLetraCONFIGURACOES>
+    <TextoFonteLetraCONFIGURACOES>Fonte da Letra: </TextoFonteLetraCONFIGURACOES>
+    <TextoEstiloLetraCONFIGURACOES>Estilo da Letra: </TextoEstiloLetraCONFIGURACOES>
+    <TextoIdiomaCONFIGURACOES>Idioma</TextoIdiomaCONFIGURACOES>
+    <TextoBotaoRestuararCONFIGURACOES>Restaurar</TextoBotaoRestuararCONFIGURACOES>
+    <TextoBotaoSalvarCONFIGURACOES>Salvar</TextoBotaoSalvarCONFIGURACOES>
 </textos>

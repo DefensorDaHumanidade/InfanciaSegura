@@ -17,7 +17,521 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="0" name="Set text" sid="316894193540051" type="TituloNomeAlunoTURMAESPECIFICAALUNO">
+                    <param id="0" name="Text">NomeAluno</param>
+                </action>
+                <action id="-9" name="Set value" sid="535024490735611" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;baixardoAluno&quot;</param>
+                </action>
+                <action id="-12" name="Set group active" sid="292987216972945" type="System">
+                    <param id="0" name="Group name">&quot;Consultar dados gerais Aluno TURMAESPECIFICAALUNO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="601038058142476" type="System">
+                    <param id="0" name="Group name">&quot;Consultar Erros Aluno TURMAESPECIFICAALUNO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="838571516437490" type="System">
+                    <param id="0" name="Group name">&quot;Consultar Acertos Aluno TURMAESPECIFICAALUNO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="11" name="Clear" sid="450231826252577" type="ListaErrosTURMAESPECIFICAALUNO" />
+                <action id="11" name="Clear" sid="353653348479633" type="ListaAcertosTURMAESPECIFICAALUNO" />
             </actions>
         </event-block>
+        <event-group description="" sid="985969961560414" title="Limitar rolagem TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="477225034657951">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="291352681939931" type="System">
+                            <param id="0" name="First value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">RolagemTotal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="797072978859976" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="616513246953485" title="Posições/Proporções TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-group description="" sid="621329399019145" title="Posições/Proporções Paisagem TURMAESPECIFICAALUNO">
+                    <sub-events>
+                        <event-block sid="838395431859453">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="381390484923295" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="198674650453138" type="TextoNickTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="648267552343915" type="TextoErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="914731967582743" type="ListaErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
+                                    <param id="1" name="Height">100</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="237500588900639" type="TextoAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="322948361597011" type="ListaAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
+                                    <param id="1" name="Height">100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="658510963584823" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoAcertosTURMAESPECIFICAALUNO.X+ComprimentoBotao</param>
+                                    <param id="1" name="Y">TextoAcertosTURMAESPECIFICAALUNO.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="708839278965973" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoErrosTURMAESPECIFICAALUNO.X+ComprimentoBotao</param>
+                                    <param id="1" name="Y">TextoErrosTURMAESPECIFICAALUNO.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="677675939753887" title="Posições/Proporções Retrato TURMAESPECIFICAALUNO">
+                    <sub-events>
+                        <event-block sid="583244806683080">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="443590059680343" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="160192485101401" type="TextoNickTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="626226168548161" type="TextoNickTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="588774162545899" type="TextoIdadeTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="154947386159818" type="TextoCadastroTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="720443631914721" type="TextoUltimoAcessoTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="581537810948447" type="TextoTurmaTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="827377146555834" type="TextoErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="532294075347466" type="ListaErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="1" name="Height">100</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="244624972546008" type="TextoAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="731098382576355" type="ListaAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="1" name="Height">100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="821324007263054" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">790+ComprimentoBotao/2+(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TextoAcertosTURMAESPECIFICAALUNO.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="807916487339677" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">790+ComprimentoBotao/2+(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TextoErrosTURMAESPECIFICAALUNO.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="934588236474665" title="Posições/Proporções Relativas TURMAESPECIFICAALUNO">
+                    <sub-events>
+                        <event-block sid="173944476081209">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="745135128679976" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="177243076787318" type="TituloNomeAlunoTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
+                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="630949604792852" type="TextoIdadeTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoNickTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">TextoNickTURMAESPECIFICAALUNO.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="343247978754628" type="TextoCadastroTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoIdadeTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">TextoIdadeTURMAESPECIFICAALUNO.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="345547973076210" type="TextoUltimoAcessoTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoCadastroTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">TextoCadastroTURMAESPECIFICAALUNO.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="897379394423187" type="TextoTurmaTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoUltimoAcessoTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">TextoUltimoAcessoTURMAESPECIFICAALUNO.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="775960433330988" type="BotaoExpulsarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoTurmaTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">TextoTurmaTURMAESPECIFICAALUNO.Y+100</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="890577356476269" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Object">BotaoExpulsarTURMAESPECIFICAALUNO</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="355256028237435" type="TextoErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">BotaoExpulsarTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">BotaoExpulsarTURMAESPECIFICAALUNO.Y+100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="936954785586693" type="ListaErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoErrosTURMAESPECIFICAALUNO.X-Self.Width/2</param>
+                                    <param id="1" name="Y">TextoErrosTURMAESPECIFICAALUNO.Y+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="332232782166680" type="TextoAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">ListaErrosTURMAESPECIFICAALUNO.X+ListaErrosTURMAESPECIFICAALUNO.Width/2</param>
+                                    <param id="1" name="Y">ListaErrosTURMAESPECIFICAALUNO.Y+50+ListaErrosTURMAESPECIFICAALUNO.Height</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="634598216996832" type="ListaAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoAcertosTURMAESPECIFICAALUNO.X-Self.Width/2</param>
+                                    <param id="1" name="Y">TextoAcertosTURMAESPECIFICAALUNO.Y+50</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="274280556303869" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Object">BotaoLimparAcertosTURMAESPECIFICAALUNO</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="349276036759343" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Object">BotaoLimparErrosTURMAESPECIFICAALUNO</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="165413136215887" title="Pressionar Botões TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-group description="" sid="473358274267267" title="Botão Voltar TURMAESPECIFICAALUNO">
+                    <sub-events>
+                        <event-block sid="677760010748131">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="143998649557990" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="582737255679907" type="Touch">
+                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="603205232655143" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="208227603597282" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="123483565075745" type="System">
+                                    <param id="0" name="Layout">TelaTurmaEspecifica</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="989881812126745">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="756987787582549" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="365259685612671" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="157433922084628" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="358615520295379" title="Consultar dados gerais Aluno TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="759297911476466">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="756693811950096" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baixardoAluno&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="598732176028798" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarCrianca&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaAlunoDesempenhoGeral.php?turma=&quot;&amp;NomeTurma&amp;&quot;&amp;aluno=&quot;&amp;NomeAluno</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="359727399685491" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixandoAluno&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="377037812415267">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="488950726325290" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarCrianca&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="654771985563039" type="System">
+                            <param id="0" name="Group name">&quot;Preencher dados gerais Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="360674905911197" type="System">
+                            <param id="0" name="Group name">&quot;Consultar dados gerais Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="733449019684755">
+                    <conditions>
+                        <condition id="1" name="On error" sid="464516052501182" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarCrianca&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="977681127178054" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixarAluno&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="721388036608685" title="Preencher dados gerais Aluno TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="530556899523849">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="602488841396345" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="780228242932115" type="TituloNomeAlunoTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="198184194016868" type="TextoNickTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 1, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="655660769903206" type="TextoIdadeTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 2, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="866174017381777" type="TextoTurmaTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="178890919834209" type="TextoCadastroTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 4, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="815776518196194" type="TextoUltimoAcessoTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 5, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="496839709390428" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixarErro&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="814296171500308" type="System">
+                            <param id="0" name="Group name">&quot;Preencher dados gerais Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="338062907583611" title="Consultar Erros Aluno TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="353458346477845">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="455020691331462" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baixarErro&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="199654613632682" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarErros&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaAlunoDesempenhoErros.php?turma=&quot;&amp;NomeTurma&amp;&quot;&amp;aluno=&quot;&amp;NomeAluno</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="361811966289525" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixandoErro&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="334096607941184">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="420272673667548" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarErros&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="949220998991511" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Erros Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="514016760189234" type="System">
+                            <param id="0" name="Group name">&quot;Consultar Erros Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="595422716361923">
+                    <conditions>
+                        <condition id="1" name="On error" sid="477723279437524" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarErros&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="618050245892999" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixarErro&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="354747299041563" title="Preencher Erros Aluno TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="380772037351001">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="863276144157684" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="436002443077345" type="TextoErrosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="949971735687624">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="254534317963968" type="System" />
+                        <condition id="-10" name="For" sid="194016693016085" type="System">
+                            <param id="0" name="Name">&quot;indice&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Add item at" sid="812385470257997" type="ListaErrosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Index">loopindex</param>
+                            <param id="1" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="985520209760938" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixarAcerto&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="161023457144392" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Erros Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="645462715621722" title="Consultar Acertos Aluno TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="955620055179659">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="598743425470213" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baixarAcerto&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="510033406823133" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarAcertos&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaAlunoDesempenhoAcerto.php?turma=&quot;&amp;NomeTurma&amp;&quot;&amp;aluno=&quot;&amp;NomeAluno</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="509521808116614" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixandoAcerto&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="905891566478108">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="101730010338074" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarAcertos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="362030508999643" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Acertos Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="981791663065969" type="System">
+                            <param id="0" name="Group name">&quot;Consultar Acertos Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="910951723286967">
+                    <conditions>
+                        <condition id="1" name="On error" sid="835871320420685" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarAcertos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="426257275568732" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixarAcerto&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="803117534204085" title="Preencher Acertos Aluno TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="366014549399747">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="867663678945849" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="356782052978453" type="TextoAcertosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="339400079705223">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="273909088312044" type="System" />
+                        <condition id="-10" name="For" sid="126469004223307" type="System">
+                            <param id="0" name="Name">&quot;indice&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Add item at" sid="561499738572602" type="ListaAcertosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Index">loopindex</param>
+                            <param id="1" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="948842486484709" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Erros Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

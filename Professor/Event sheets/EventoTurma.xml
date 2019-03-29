@@ -238,7 +238,7 @@
                                     <param id="1" name="Value">TextoBotaoTurmaTURMA.Text</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="326335335985118" type="System">
-                                    <param id="0" name="Layout">TelaConfiguracoes</param>
+                                    <param id="0" name="Layout">TelaTurmaAjustes</param>
                                 </action>
                             </actions>
                         </event-block>
