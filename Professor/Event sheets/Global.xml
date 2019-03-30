@@ -363,6 +363,75 @@
                                 <action id="3" name="Set font size" sid="233697584552547" type="TextoBotaoSalvarCONFIGURACOES">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="489840437010728" type="TituloAjustesTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="664772094657970" type="TextoNomeTurmaTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="654020546363529" type="TextoSenhaTurmaTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="202060026243333" type="TextoEscolaTurmaTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="591328120644857" type="TextoCadastradosTurmaTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="995759555361405" type="TextoCadastroTurmaTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="717137369051170" type="TextoUltimoAcessoTurmaTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="965812280885159" type="TextoQuatidadeErrosTurmaTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="172910793196577" type="TextoBotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="209177179302680" type="TextoBotaoExcluirTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="534779949834090" type="TextoBotaoSalvarTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="709373344043399" type="TituloAdicionarTurmaTURMAADICIONAR">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="409219995102227" type="TextoNomeTURMAADICIONAR">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="858612099746590" type="TextoSenhaTURMAADICIONAR">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="665784571156851" type="TextoEscolaTURMAADICIONAR">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="861485158620238" type="TextoTurmasCadastradasTURMAADICIONAR">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="295141201815752" type="TextoBotaoCriarTurmaTURMAADICIONAR">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="493404238031182" type="TextoBotaoTurmaTURMAADICIONAR">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="682932458032945" type="TituloAdicionarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="937957979985911" type="TextoTurmasCadastradasTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="346788305746931" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="394979701793164" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="967073540631387" type="TextoBotaoTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="387988979676479" type="System">
                                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                                     <param id="1" name="State">0</param>
@@ -603,6 +672,75 @@
                                         <action id="0" name="Set text" sid="274054508747380" type="TextoBotaoSalvarCONFIGURACOES">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSalvarCONFIGURACOES/text()&quot;)</param>
                                         </action>
+                                        <action id="0" name="Set text" sid="251533091654681" type="TituloAjustesTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloAjustesTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="433513171589992" type="TextoNomeTurmaTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoNomeTurmaTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="520821190430371" type="TextoSenhaTurmaTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoSenhaTurmaTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="854983436588157" type="TextoEscolaTurmaTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEscolaTurmaTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="739920199651770" type="TextoCadastradosTurmaTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoCadastradosTurmaTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="179280973488534" type="TextoCadastroTurmaTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoCadastroTurmaTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="299606775975440" type="TextoUltimoAcessoTurmaTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoUltimoAcessoTurmaTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="206855365809956" type="TextoQuatidadeErrosTurmaTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoQuatidadeErrosTurmaTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="813795277488597" type="TextoBotaoBloquearTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoBloquearTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="526505442341741" type="TextoBotaoExcluirTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoExcluirTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="930193020253425" type="TextoBotaoSalvarTURMAAJUSTES">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSalvarTURMAAJUSTES/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="326859354439615" type="TituloAdicionarTurmaTURMAADICIONAR">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloAdicionarTurmaTURMAADICIONAR/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="543238393809153" type="TextoNomeTURMAADICIONAR">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoNomeTURMAADICIONAR/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="536648578509146" type="TextoSenhaTURMAADICIONAR">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoSenhaTURMAADICIONAR/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="293028034520390" type="TextoEscolaTURMAADICIONAR">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEscolaTURMAADICIONAR/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="522268373135332" type="TextoTurmasCadastradasTURMAADICIONAR">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoTurmasCadastradasTURMAADICIONAR/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="223006190016693" type="TextoBotaoCriarTurmaTURMAADICIONAR">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoCriarTurmaTURMAADICIONAR/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="558986854878421" type="TextoBotaoTurmaTURMAADICIONAR">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoTurmaTURMAADICIONAR/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="167303922559887" type="TituloAdicionarTurmaTURMAADICIONARFINAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloAdicionarTurmaTURMAADICIONARFINAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="804706221264533" type="TextoTurmasCadastradasTURMAADICIONARFINAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoTurmasCadastradasTURMAADICIONARFINAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="901885390845593" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoCancelarTurmaTURMAADICIONARFINAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="789143458486794" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoCriarTurmaTURMAADICIONARFINAL/text()&quot;)</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Set text" sid="413070235250790" type="TextoBotaoTurmaTURMAADICIONARFINAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoTurmaTURMAADICIONARFINAL/text()&quot;)</param>
+                                        </action>
                                         <action id="-12" name="Set group active" sid="367187836438621" type="System">
                                             <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
                                             <param id="1" name="State">0</param>
@@ -801,6 +939,147 @@
                                     </conditions>
                                     <actions>
                                         <action id="-7" name="Set size" sid="813643919629168" type="TextoBotaoCriarContaCRIARCONTA">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="154103509835489" title="Criando Botões TURMAADICIONAR">
+                    <sub-events>
+                        <event-block sid="740594618002096">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="788815009406286" type="BotaoCriarTurmaTURMAADICIONAR" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="541523916413518" type="BotaoCriarTurmaTURMAADICIONAR">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="132847840267186" type="BotaoCriarTurmaTURMAADICIONAR">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="896681798050466">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="383303625446981" type="BotaoTurmaTURMAADICIONAR" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="494868838680571" type="BotaoTurmaTURMAADICIONAR">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="950486089630231" type="BotaoTurmaTURMAADICIONAR">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="626920123283291" title="Configurações Texto dos Botões TURMAADICIONAR">
+                            <sub-events>
+                                <event-block sid="538538472915322">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="360788573273756" type="TextoBotaoCriarTurmaTURMAADICIONAR" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="394074536407943" type="TextoBotaoCriarTurmaTURMAADICIONAR">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="749890428220350">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="499565842328610" type="TextoBotaoTurmaTURMAADICIONAR" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="543590800971139" type="TextoBotaoTurmaTURMAADICIONAR">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="895344089688344" title="Criando Botões TURMAADICIONARFINAL">
+                    <sub-events>
+                        <event-block sid="724940817284902">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="901343224874147" type="BotaoCriarTurmaTURMAADICIONARFINAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="276269044346685" type="BotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="295337823314434" type="BotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="929717225866927">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="477725012708258" type="BotaoTurmaTURMAADICIONARFINAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="802353710168132" type="BotaoTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="836920104514914" type="BotaoTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="462611499829956">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="702996298387689" type="BotaoCancelarTurmaTURMAADICIONARFINAL" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="655977118012017" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="898284228349713" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="361518583763170" title="Configurações Texto dos Botões TURMAADICIONARFINAL">
+                            <sub-events>
+                                <event-block sid="932420309462101">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="461773592350666" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="442105479549750" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="720245486192280">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="899925033523756" type="TextoBotaoTurmaTURMAADICIONARFINAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="195156271384885" type="TextoBotaoTurmaTURMAADICIONARFINAL">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="286863172843640">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="724359978033637" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="417809202712018" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
                                             <param id="0" name="Width">ComprimentoBotao</param>
                                             <param id="1" name="Height">AlturaBotao</param>
                                         </action>

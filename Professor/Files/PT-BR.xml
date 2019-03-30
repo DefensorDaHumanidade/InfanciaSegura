@@ -67,4 +67,27 @@
     <TextoIdiomaCONFIGURACOES>Idioma</TextoIdiomaCONFIGURACOES>
     <TextoBotaoRestuararCONFIGURACOES>Restaurar</TextoBotaoRestuararCONFIGURACOES>
     <TextoBotaoSalvarCONFIGURACOES>Salvar</TextoBotaoSalvarCONFIGURACOES>
+    <TituloAjustesTURMAAJUSTES>Ajustes</TituloAjustesTURMAAJUSTES>
+    <TextoNomeTurmaTURMAAJUSTES>Nome: </TextoNomeTurmaTURMAAJUSTES>
+    <TextoSenhaTurmaTURMAAJUSTES>Senha: </TextoSenhaTurmaTURMAAJUSTES>
+    <TextoEscolaTurmaTURMAAJUSTES>Escola: </TextoEscolaTurmaTURMAAJUSTES>
+    <TextoCadastradosTurmaTURMAAJUSTES>Alunos cadastrados: </TextoCadastradosTurmaTURMAAJUSTES>
+    <TextoCadastroTurmaTURMAAJUSTES>Data de criação: </TextoCadastroTurmaTURMAAJUSTES>
+    <TextoUltimoAcessoTurmaTURMAAJUSTES>Último Acesso: </TextoUltimoAcessoTurmaTURMAAJUSTES>
+    <TextoQuatidadeErrosTurmaTURMAAJUSTES>Quantiade total de erros: </TextoQuatidadeErrosTurmaTURMAAJUSTES>
+    <TextoBotaoBloquearTURMAAJUSTES>Bloquear</TextoBotaoBloquearTURMAAJUSTES>
+    <TextoBotaoExcluirTURMAAJUSTES>Excluir</TextoBotaoExcluirTURMAAJUSTES>
+    <TextoBotaoSalvarTURMAAJUSTES>Salvar</TextoBotaoSalvarTURMAAJUSTES>
+    <TituloAdicionarTurmaTURMAADICIONAR>Adicionar Turma</TituloAdicionarTurmaTURMAADICIONAR>
+    <TextoNomeTURMAADICIONAR>Nome: </TextoNomeTURMAADICIONAR>
+    <TextoSenhaTURMAADICIONAR>Senha: </TextoSenhaTURMAADICIONAR>
+    <TextoEscolaTURMAADICIONAR>Escola: </TextoEscolaTURMAADICIONAR>
+    <TextoTurmasCadastradasTURMAADICIONAR>Lista de todas as turmas cadastradas: </TextoTurmasCadastradasTURMAADICIONAR>
+    <TextoBotaoTurmaTURMAADICIONAR>Carregando...</TextoBotaoTurmaTURMAADICIONAR>
+    <TextoBotaoCriarTurmaTURMAADICIONAR>Criar Turma</TextoBotaoCriarTurmaTURMAADICIONAR>
+    <TituloAdicionarTurmaTURMAADICIONARFINAL>Adicionar Turma</TituloAdicionarTurmaTURMAADICIONARFINAL>
+    <TextoTurmasCadastradasTURMAADICIONARFINAL>Veja como ficará a listagem após você clicar em salvar.</TextoTurmasCadastradasTURMAADICIONARFINAL>
+    <TextoBotaoCancelarTurmaTURMAADICIONARFINAL>Cancelar</TextoBotaoCancelarTurmaTURMAADICIONARFINAL>
+    <TextoBotaoCriarTurmaTURMAADICIONARFINAL>Criar</TextoBotaoCriarTurmaTURMAADICIONARFINAL>
+    <TextoBotaoTurmaTURMAADICIONARFINAL>Carregando...</TextoBotaoTurmaTURMAADICIONARFINAL>
 </textos>

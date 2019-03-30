@@ -17,6 +17,15 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="154251384932852" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;BaixarDadosTurma&quot;</param>
+                </action>
+                <action id="11" name="Clear" sid="583296813284149" type="ListaCadstradosTURMAAJUSTES" />
+                <action id="-12" name="Set group active" sid="598435066822681" type="System">
+                    <param id="0" name="Group name">&quot;Baixar dados Turma TURMAAJUSTES&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="977776601248813" title="Limitar rolagem TURMAAJUSTES">
@@ -164,6 +173,191 @@
                                 <action id="-4" name="Set position to another object" sid="648508581408732" type="TextoBotaoSalvarTURMAAJUSTES">
                                     <param id="0" name="Object">BotaoSalvarTURMAAJUSTES</param>
                                     <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="148216620912070" title="Lista dos Materiais de Apoio TURMAAJUSTES">
+            <sub-events>
+                <event-group description="" sid="743563392775806" title="Baixar dados Turma TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="402676421683606">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="714306381938293" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BaixarDadosTurma&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="590877800579107" type="AJAX">
+                                    <param id="0" name="Tag">&quot;baixarTurminha&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaTurmaGeral.php?turma=&quot;&amp;NomeTurma</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="608645579689103" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixandoDadosTurma&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="286598290159356">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="591511609552180" type="AJAX">
+                                    <param id="0" name="Tag">&quot;baixarTurminha&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="575945859877231" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;DadosTurmaBaixados&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="705951303209026" type="System">
+                                    <param id="0" name="Group name">&quot;Carregando dados do inicio Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="683884601382201" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar dados Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="716543326238119">
+                            <conditions>
+                                <condition id="1" name="On error" sid="551754557496456" type="AJAX">
+                                    <param id="0" name="Tag">&quot;baixarTurminha&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="440586911179984" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarDadosTurma&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="332120410754457" title="Carregando dados do inicio Turma TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="958183040549179">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="371785788480291" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="680986209593251" type="CampoNomeTurmaTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="828234846415303" type="CampoSenhaTurmaTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 1, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="794133790190033" type="CampoEscolaTurmaTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 2, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="1" name="Append text" sid="931805632790115" type="TextoCadastradosTurmaTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="588217487322594" type="System">
+                                    <param id="0" name="Group name">&quot;Carregando dados do meio Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="462816654699471" type="System">
+                                    <param id="0" name="Group name">&quot;Carregando dados do inicio Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="314689168715294" title="Carregando dados do meio Turma TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="315155314750572">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="702386116235193" type="System" />
+                                <condition id="-10" name="For" sid="667015502278727" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">4</param>
+                                    <param id="2" name="End index">3+int(tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="170561641843379" type="ListaCadstradosTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="323677011047849" type="System">
+                                    <param id="0" name="Group name">&quot;Carregando dados do fim Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="817838256882399" type="System">
+                                    <param id="0" name="Group name">&quot;Carregando dados do meio Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="581646859727805" title="Carregando dados do fim Turma TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="491096726820795">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="305972652394226" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="446172778212795" type="TextoCadastroTurmaTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 4+int(tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)), &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="1" name="Append text" sid="715263892772166" type="TextoUltimoAcessoTurmaTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 5+int(tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)), &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="1" name="Append text" sid="841295368204653" type="TextoQuatidadeErrosTurmaTURMAAJUSTES">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 6+int(tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)), &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="965611177927355" type="System">
+                                    <param id="0" name="Group name">&quot;Carregando dados do fim Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="816936238583173" title="Pressionar Botões TURMAAJUSTES">
+            <sub-events>
+                <event-group description="" sid="524009756663633" title="Botão Voltar TURMAAJUSTES">
+                    <sub-events>
+                        <event-block sid="689815157091725">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="645499632214538" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="435281185792933" type="Touch">
+                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="282010463010241" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="981748874336990" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="473986885168783" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903872379657402">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="867717002222648" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="926712191301362" type="CriarContaVOLTARInicial">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="478055081332785" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -67,4 +67,27 @@
     <TextoIdiomaCONFIGURACOES>Language</TextoIdiomaCONFIGURACOES>
     <TextoBotaoRestuararCONFIGURACOES>Restore</TextoBotaoRestuararCONFIGURACOES>
     <TextoBotaoSalvarCONFIGURACOES>Save</TextoBotaoSalvarCONFIGURACOES>
+    <TituloAjustesTURMAAJUSTES>Configurations</TituloAjustesTURMAAJUSTES>
+    <TextoNomeTurmaTURMAAJUSTES>Name: </TextoNomeTurmaTURMAAJUSTES>
+    <TextoSenhaTurmaTURMAAJUSTES>Password: </TextoSenhaTurmaTURMAAJUSTES>
+    <TextoEscolaTurmaTURMAAJUSTES>School: </TextoEscolaTurmaTURMAAJUSTES>
+    <TextoCadastradosTurmaTURMAAJUSTES>Children: </TextoCadastradosTurmaTURMAAJUSTES>
+    <TextoCadastroTurmaTURMAAJUSTES>Creation: </TextoCadastroTurmaTURMAAJUSTES>
+    <TextoUltimoAcessoTurmaTURMAAJUSTES>Last acess: </TextoUltimoAcessoTurmaTURMAAJUSTES>
+    <TextoQuatidadeErrosTurmaTURMAAJUSTES>Total mistakes: </TextoQuatidadeErrosTurmaTURMAAJUSTES>
+    <TextoBotaoBloquearTURMAAJUSTES>Block</TextoBotaoBloquearTURMAAJUSTES>
+    <TextoBotaoExcluirTURMAAJUSTES>Delete</TextoBotaoExcluirTURMAAJUSTES>
+    <TextoBotaoSalvarTURMAAJUSTES>Save</TextoBotaoSalvarTURMAAJUSTES>
+    <TituloAdicionarTurmaTURMAADICIONAR>Add class</TituloAdicionarTurmaTURMAADICIONAR>
+    <TextoNomeTURMAADICIONAR>Name: </TextoNomeTURMAADICIONAR>
+    <TextoSenhaTURMAADICIONAR>Password: </TextoSenhaTURMAADICIONAR>
+    <TextoEscolaTURMAADICIONAR>Class: </TextoEscolaTURMAADICIONAR>
+    <TextoTurmasCadastradasTURMAADICIONAR>List: </TextoTurmasCadastradasTURMAADICIONAR>
+    <TextoBotaoTurmaTURMAADICIONAR>Loading...</TextoBotaoTurmaTURMAADICIONAR>
+    <TextoBotaoCriarTurmaTURMAADICIONAR>Create class</TextoBotaoCriarTurmaTURMAADICIONAR>
+    <TituloAdicionarTurmaTURMAADICIONARFINAL>Add class</TituloAdicionarTurmaTURMAADICIONARFINAL>
+    <TextoTurmasCadastradasTURMAADICIONARFINAL>Finish him: </TextoTurmasCadastradasTURMAADICIONARFINAL>
+    <TextoBotaoCancelarTurmaTURMAADICIONARFINAL>Cancel</TextoBotaoCancelarTurmaTURMAADICIONARFINAL>
+    <TextoBotaoCriarTurmaTURMAADICIONARFINAL>Create</TextoBotaoCriarTurmaTURMAADICIONARFINAL>
+    <TextoBotaoTurmaTURMAADICIONARFINAL>Loading...</TextoBotaoTurmaTURMAADICIONARFINAL>
 </textos>

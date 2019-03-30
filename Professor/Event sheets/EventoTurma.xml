@@ -150,11 +150,19 @@
                                     <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
                                     <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="663353517520876" type="TextoBotaoTurmaTURMA">
+                                <action id="-4" name="Set position to another object" sid="131288604864331" type="TextoBotaoTurmaTURMA">
+                                    <param id="0" name="Object">BotaoTurmaTURMA</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="841247983973383" type="TextoBotaoAdicionarTurmaTURMA">
+                                    <param id="0" name="Object">BotaoAdicionarTurmaTURMA</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="663353517520876" type="TextoBotaoTurmaTURMA">
                                     <param id="0" name="X">BotaoTurmaTURMA.X</param>
                                     <param id="1" name="Y">BotaoTurmaTURMA.Y</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="372032344384024" type="TextoBotaoAdicionarTurmaTURMA">
+                                <action disabled="1" id="-3" name="Set position" sid="372032344384024" type="TextoBotaoAdicionarTurmaTURMA">
                                     <param id="0" name="X">BotaoAdicionarTurmaTURMA.X</param>
                                     <param id="1" name="Y">BotaoAdicionarTurmaTURMA.Y</param>
                                 </action>
