@@ -10,33 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">TelaCriarConta</layout>
-        <layout order="5">TelaMaterialApoio</layout>
-        <layout order="6">TelaSobre</layout>
-        <layout order="11">TelaCarregamento</layout>
-        <layout order="12">TelaTurma</layout>
-        <layout order="14">TelaTurmaAdicionarFinal</layout>
-        <layout order="15">TelaTurmaEspecifica</layout>
-        <layout order="19">TelaPerfilAdicionarEscola</layout>
-        <layout order="20">TelaTurmaEspecificaAluno</layout>
-        <layout order="21">TelaConfiguracoes</layout>
-        <layout order="22">TelaTurmaAjustes</layout>
-        <layout order="24">TelaTurmaAdicionar</layout>
-        <layout order="26">TelaPerfil</layout>
-        <event-sheet active="1" order="0">Global</event-sheet>
-        <event-sheet order="2">EventoPrincipal</event-sheet>
-        <event-sheet order="3">EventoSobre</event-sheet>
-        <event-sheet order="4">EventoMaterialApoio</event-sheet>
-        <event-sheet order="7">EventoTurmaEspecifica</event-sheet>
-        <event-sheet order="8">EventoConfiguracoes</event-sheet>
-        <event-sheet order="9">EventoPerfil</event-sheet>
-        <event-sheet order="10">EventoPerfilAdicionarEscola</event-sheet>
-        <event-sheet order="13">EventoTurmaAdicionar</event-sheet>
-        <event-sheet order="16">EventoTurmaAjustes</event-sheet>
-        <event-sheet order="17">EventoTurmaEspecificaAluno</event-sheet>
-        <event-sheet order="18">EventoTurma</event-sheet>
-        <event-sheet order="23">EventoTurmaAdicionarFinal</event-sheet>
-        <event-sheet order="25">EventoCriarConta</event-sheet>
+        <layout order="0">TelaCarregamento</layout>
+        <layout order="2">TelaInicial</layout>
+        <event-sheet order="1">EventoCriarConta</event-sheet>
+        <event-sheet active="1" order="3">EventoInicial</event-sheet>
+        <event-sheet order="4">Global</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -47,13 +25,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Carregamento/" />
-        <folder expanded="1" path="object-folder/Inicial/" />
-        <folder expanded="1" path="object-folder/Principal/" />
-        <folder expanded="1" path="object-folder/CriarConta/" />
-        <folder expanded="1" path="object-folder/Perfil/" />
-        <folder expanded="1" path="object-folder/Sobre/" />
-        <folder expanded="1" path="object-folder/MaterialApoio/" />
+        <folder expanded="0" path="object-folder/Carregamento/" />
+        <folder expanded="0" path="object-folder/Inicial/" />
+        <folder expanded="0" path="object-folder/Principal/" />
+        <folder expanded="0" path="object-folder/CriarConta/" />
+        <folder expanded="0" path="object-folder/Perfil/" />
+        <folder expanded="0" path="object-folder/Sobre/" />
+        <folder expanded="0" path="object-folder/MaterialApoio/" />
+        <folder expanded="0" path="object-folder/Turma/" />
+        <folder expanded="0" path="object-folder/Configuracoes/" />
+        <folder expanded="0" path="object-folder/TurmaAdicionar/" />
+        <folder expanded="0" path="object-folder/TurmaAjustes/" />
+        <folder expanded="0" path="object-folder/TurmaEspecifica/" />
+        <folder expanded="0" path="object-folder/TurmaEspecificaAluno/" />
+        <folder expanded="0" path="object-folder/TurmaAdicionarFinal/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -80,14 +65,36 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TopoCriarConta/" />
         <folder expanded="1" path="animation-folder/PretoAvisoCRIARCONTA/" />
         <folder expanded="1" path="animation-folder/BrancoAvisoCRIARCONTA/" />
-        <folder expanded="1" path="animation-folder/BotaoCriarTurmaTURMAADICIONAR/" />
-        <folder expanded="1" path="animation-folder/BotaoCriarTurmaTURMAADICIONARFINAL/" />
         <folder expanded="1" path="animation-folder/BotaoExcluirPERFIL/" />
         <folder expanded="1" path="animation-folder/BotaoSairPERFIL/" />
         <folder expanded="1" path="animation-folder/BotaoSalvarPERFIL/" />
+        <folder expanded="1" path="animation-folder/BotaoConfiguracoesTURMA/" />
+        <folder expanded="1" path="animation-folder/BotaoAdicionarTurmaTURMA/" />
+        <folder expanded="1" path="animation-folder/BotaoTurmaTURMA/" />
+        <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMA/" />
+        <folder expanded="1" path="animation-folder/BotaoRestaurarCONFIGURACOES/" />
+        <folder expanded="1" path="animation-folder/BotaoSalvarCONFIGURACOES/" />
+        <folder expanded="1" path="animation-folder/BotaoTurmaTURMAADICIONAR/" />
+        <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMAADICIONAR/" />
+        <folder expanded="1" path="animation-folder/FundoTurmaFechadaTURMAADICIONAR/" />
+        <folder expanded="1" path="animation-folder/ImagemTurmaAbertaTURMAADICIONAR/" />
+        <folder expanded="1" path="animation-folder/ImagemTurmaFechadaTURMAADICIONAR/" />
+        <folder expanded="1" path="animation-folder/BotaoCriarTurmaTURMAADICIONAR/" />
         <folder expanded="1" path="animation-folder/BotaoBloquearTURMAAJUSTES/" />
         <folder expanded="1" path="animation-folder/BotaoExcluirTURMAAJUSTES/" />
         <folder expanded="1" path="animation-folder/BotaoSalvarTURMAAJUSTES/" />
+        <folder expanded="1" path="animation-folder/BotaoAlunoTURMAESPECIFICA/" />
+        <folder expanded="1" path="animation-folder/FundoBotaoAlunoTURMAESPECIFICA/" />
+        <folder expanded="1" path="animation-folder/BotaoExpulsarTURMAESPECIFICAALUNO/" />
+        <folder expanded="1" path="animation-folder/BotaoLimparAcertosTURMAESPECIFICAALUNO/" />
+        <folder expanded="1" path="animation-folder/BotaoLimparErrosTURMAESPECIFICAALUNO/" />
+        <folder expanded="1" path="animation-folder/BotaoCancelarTurmaTURMAADICIONARFINAL/" />
+        <folder expanded="1" path="animation-folder/BotaoTurmaTURMAADICIONARFINAL/" />
+        <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMAADICIONARFINAL/" />
+        <folder expanded="1" path="animation-folder/FundoTurmaFechadaTURMAADICIONARFINAL/" />
+        <folder expanded="1" path="animation-folder/ImagemTurmaAbertaTURMAADICIONARFINAL/" />
+        <folder expanded="1" path="animation-folder/ImagemTurmaFechadaTURMAADICIONARFINAL/" />
+        <folder expanded="1" path="animation-folder/BotaoCriarTurmaTURMAADICIONARFINAL/" />
         <folder expanded="1" path="animation-folder/ImagemBranco/" />
         <folder expanded="1" path="animation-folder/ImagemDeFundo/" />
         <folder expanded="1" path="animation-folder/ImagemVerde/" />
@@ -95,27 +102,5 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ImagemAzul/" />
         <folder expanded="1" path="animation-folder/ImagemPreto/" />
         <folder expanded="1" path="animation-folder/Voltar/" />
-        <folder expanded="1" path="animation-folder/BotaoTurmaTURMA/" />
-        <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMA/" />
-        <folder expanded="1" path="animation-folder/BotaoAdicionarTurmaTURMA/" />
-        <folder expanded="1" path="animation-folder/BotaoConfiguracoesTURMA/" />
-        <folder expanded="1" path="animation-folder/BotaoAlunoTURMAESPECIFICA/" />
-        <folder expanded="1" path="animation-folder/FundoBotaoAlunoTURMAESPECIFICA/" />
-        <folder expanded="1" path="animation-folder/BotaoExpulsarTURMAESPECIFICAALUNO/" />
-        <folder expanded="1" path="animation-folder/BotaoLimparErrosTURMAESPECIFICAALUNO/" />
-        <folder expanded="1" path="animation-folder/BotaoLimparAcertosTURMAESPECIFICAALUNO/" />
-        <folder expanded="1" path="animation-folder/BotaoSalvarCONFIGURAÇAO/" />
-        <folder expanded="1" path="animation-folder/BotaoRestaurarCONFIGURACAO/" />
-        <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMAADICIONAR/" />
-        <folder expanded="1" path="animation-folder/BotaoTurmaTURMAADICIONAR/" />
-        <folder expanded="1" path="animation-folder/FundoTurmaFechadaTURMAADICIONAR/" />
-        <folder expanded="1" path="animation-folder/ImagemTurmaAbertaTURMAADICIONAR/" />
-        <folder expanded="1" path="animation-folder/ImagemTurmaFechadaTURMAADICIONAR/" />
-        <folder expanded="1" path="animation-folder/ImagemTurmaAbertaTURMAADICIONARFINAL/" />
-        <folder expanded="1" path="animation-folder/ImagemTurmaFechadaTURMAADICIONARFINAL/" />
-        <folder expanded="1" path="animation-folder/BotaoTurmaTURMAADICIONARFINAL/" />
-        <folder expanded="1" path="animation-folder/FundoBotaoTurmaTURMAADICIONARFINAL/" />
-        <folder expanded="1" path="animation-folder/BotaoCancelarTurmaTURMAADICIONARFINAL/" />
-        <folder expanded="1" path="animation-folder/FundoTurmaFechadaTURMAADICIONARFINAL/" />
     </folders-expanded>
 </c2uistate>

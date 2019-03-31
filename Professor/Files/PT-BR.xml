@@ -16,6 +16,8 @@
     <TextoConectandoINICIAL>Conectando...</TextoConectandoINICIAL>
     <TextoConectadoINICIAL>Conexão Estabelecida</TextoConectadoINICIAL>
     <TextoConexaoInvalidaINICIAL>Credenciais Inválidas</TextoConexaoInvalidaINICIAL>
+    <TextoConexaoEmailInvalidoINICIAL>Email Inválido</TextoConexaoEmailInvalidoINICIAL>
+    <TextoConexaoSenhaInvalidaINICIAL>Senha Inválida</TextoConexaoSenhaInvalidaINICIAL>
     <TextoConexaoFalhaINICIAL>Erro de conexão. Sem acesso ao servidor.</TextoConexaoFalhaINICIAL>
     <TituloCriarContaCRIARCONTA>Criar Conta</TituloCriarContaCRIARCONTA>
     <TextoNomeCRIARCONTA>Nome:</TextoNomeCRIARCONTA>

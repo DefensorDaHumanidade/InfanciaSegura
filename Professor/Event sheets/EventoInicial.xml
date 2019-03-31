@@ -5,6 +5,7 @@
     <events>
         <include>Global</include>
         <comment>Função para atualizar os textos quando a TelaPrincipal for carregada</comment>
+        <comment>NOTA: TELAJÁ VERIFICADA. TUDO APARENTA ESTAR CORRETO, E TUDO QUE HAVIA PARA SER COMENTADO JÁ FOI. RESTA APENAS ACRESCENTAR AS FUNÇÕES PARA OS BOTÕES: &apos;Esqueci Minha Senha&apos;, &apos;Ouvidoria&apos; e &apos;Sobre&apos;. Após fazer isso, apague esse comentário</comment>
         <event-block sid="722788455269980">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="372969688645670" type="System" />
@@ -20,7 +21,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
+        <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela. </comment>
         <event-group description="" sid="157830249247341" title="Limitar rolagem INICIAL">
             <sub-events>
                 <event-block sid="661001484098194">
@@ -38,149 +39,21 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <comment>Todo o momento o sistema atualiza a posição dos objeto com base nas proporções da janela. Deveria ser criada um função que verifica se a janela foi redimensionada, para daí em endiante realizar as atualizações das posições, e não da forma como é feito.</comment>
-        <event-group description="" sid="956335623250007" title="Posições/Proporções INICIAL">
-            <sub-events>
-                <event-group description="" sid="870838198976399" title="Posições/Proporções Paisagem INICIAL">
-                    <sub-events>
-                        <event-block sid="796275479558972">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="216711926414298" type="System">
-                                    <param id="0" name="First value">WindowWidth</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">WindowHeight</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="858673438631231" type="TextoEmailINICIAL">
-                                    <param id="0" name="X">600</param>
-                                    <param id="1" name="Y">TopoInicial.Y+(TopoInicial.Height/1.6)+20+RolagemTotal</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="647403658353337" type="CampoEmailNICIAL">
-                                    <param id="0" name="Width">400</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="151334862450206" type="CampoSenhaINICIAL">
-                                    <param id="0" name="Width">400</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="858268864104892" type="BotaoConectarINICIAL">
-                                    <param id="0" name="X">1300</param>
-                                    <param id="1" name="Y">TopoInicial.Y+(TopoInicial.Height/1.6)+(AlturaBotao/2)+20+RolagemTotal</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="360193518597739" type="BotaoCriarContaINICIAL">
-                                    <param id="0" name="X">1000-(3*ComprimentoBotao/2)</param>
-                                    <param id="1" name="Y">CampoSenhaINICIAL.Y+AlturaBotao+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="198507516185904" type="BotaoEsqueciSenhaINICIAL">
-                                    <param id="0" name="X">BotaoCriarContaINICIAL.X+ComprimentoBotao+10</param>
-                                    <param id="1" name="Y">BotaoCriarContaINICIAL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="289582567623354" type="BotaoOuvidoriaINICIAL">
-                                    <param id="0" name="X">BotaoEsqueciSenhaINICIAL.X+ComprimentoBotao+10</param>
-                                    <param id="1" name="Y">BotaoEsqueciSenhaINICIAL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="947928794082994" type="BotaoSobreINICIAL">
-                                    <param id="0" name="X">BotaoOuvidoriaINICIAL.X+ComprimentoBotao+10</param>
-                                    <param id="1" name="Y">BotaoOuvidoriaINICIAL.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="491842496537115" title="Posições/Proporções Retrato INICIAL">
-                    <sub-events>
-                        <event-block sid="706535727662970">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="217891856364073" type="System">
-                                    <param id="0" name="First value">WindowWidth</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">WindowHeight</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="977564704922715" type="TextoEmailINICIAL">
-                                    <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoInicial.Y+(TopoInicial.Height/1.6)+10+RolagemTotal</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="927008716714388" type="CampoEmailNICIAL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="794244766990879" type="CampoSenhaINICIAL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="595958415727385" type="BotaoConectarINICIAL">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">CampoSenhaINICIAL.Y+100</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="622788767324923" type="BotaoCriarContaINICIAL">
-                                    <param id="0" name="X">BotaoConectarINICIAL.X</param>
-                                    <param id="1" name="Y">BotaoConectarINICIAL.Y+AlturaBotao+10</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="742611141768502" type="BotaoEsqueciSenhaINICIAL">
-                                    <param id="0" name="X">BotaoCriarContaINICIAL.X</param>
-                                    <param id="1" name="Y">BotaoCriarContaINICIAL.Y+AlturaBotao+10</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="747316309069102" type="BotaoOuvidoriaINICIAL">
-                                    <param id="0" name="X">BotaoEsqueciSenhaINICIAL.X</param>
-                                    <param id="1" name="Y">BotaoEsqueciSenhaINICIAL.Y+AlturaBotao+10</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="576770350505681" type="BotaoSobreINICIAL">
-                                    <param id="0" name="X">BotaoOuvidoriaINICIAL.X</param>
-                                    <param id="1" name="Y">BotaoOuvidoriaINICIAL.Y+AlturaBotao+10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
-                <event-group description="" sid="643107760151974" title="Posições/Proporções Relativas INICIAL">
-                    <sub-events>
-                        <event-block sid="430634221630721">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="714254001837654" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="162886469114648" type="TextoSenhaINICIAL">
-                                    <param id="0" name="X">TextoEmailINICIAL.X</param>
-                                    <param id="1" name="Y">TextoEmailINICIAL.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="411292370221278" type="CampoEmailNICIAL">
-                                    <param id="0" name="X">TextoEmailINICIAL.X+120</param>
-                                    <param id="1" name="Y">TextoEmailINICIAL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="949536414879286" type="CampoSenhaINICIAL">
-                                    <param id="0" name="X">TextoSenhaINICIAL.X+120</param>
-                                    <param id="1" name="Y">TextoSenhaINICIAL.Y</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="816410240869356" type="TextoBotaoConectarINICIAL">
-                                    <param id="0" name="Object">BotaoConectarINICIAL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="144431903110724" type="TextoBotaoCriarContaINICIAL">
-                                    <param id="0" name="Object">BotaoCriarContaINICIAL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="781199558149169" type="TextoBotaoEsqueciSenhaINICIAL">
-                                    <param id="0" name="Object">BotaoEsqueciSenhaINICIAL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="332589853093828" type="TextoBotaoOuvidoriaINICIAL">
-                                    <param id="0" name="Object">BotaoOuvidoriaINICIAL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="730225116466527" type="TextoBotaoSobreINICIAL">
-                                    <param id="0" name="Object">BotaoSobreINICIAL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="873766556818527" type="PretoAvisoINICIAL">
-                                    <param id="0" name="Width">WindowWidth</param>
-                                    <param id="1" name="Height">WindowHeight</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
+                <event-block sid="806637456407060">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="869659419202277" type="System">
+                            <param id="0" name="First value">RolagemTotal</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">-200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="987302511189304" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">-200</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <comment>Grupo onde são executadas as rotinas para ocultar os campos &apos;email&apos; e &apos;senha&apos;. Esse grupo é necessário, pois nativamente o Construct 2coloca os &apos;textbox&apos; no topo do layout. Resumo: Oculta os campos quando eles enconstam na imagem do topo.</comment>
@@ -244,6 +117,149 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Todo o momento o sistema atualiza a posição dos objeto com base nas proporções da janela. Deveria ser criada um função que verifica se a janela foi redimensionada, para daí em endiante realizar as atualizações das posições, e não da forma como é feito.</comment>
+        <event-group description="" sid="956335623250007" title="Posições/Proporções INICIAL">
+            <sub-events>
+                <event-group description="" sid="870838198976399" title="Posições/Proporções Paisagem INICIAL">
+                    <sub-events>
+                        <event-block sid="796275479558972">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="216711926414298" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="858673438631231" type="TextoEmailINICIAL">
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">TopoInicial.Y+(TopoInicial.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="647403658353337" type="CampoEmailNICIAL">
+                                    <param id="0" name="Width">400</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="151334862450206" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Width">400</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="858268864104892" type="BotaoConectarINICIAL">
+                                    <param id="0" name="X">1325</param>
+                                    <param id="1" name="Y">TopoInicial.Y+(TopoInicial.Height/1.6)+(AlturaBotao/2)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="360193518597739" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="X">1000-(3*ComprimentoBotao/2)</param>
+                                    <param id="1" name="Y">CampoSenhaINICIAL.Y+AlturaBotao+50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="198507516185904" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="X">BotaoCriarContaINICIAL.X+ComprimentoBotao+DistanciaBotoes</param>
+                                    <param id="1" name="Y">BotaoCriarContaINICIAL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="289582567623354" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="X">BotaoEsqueciSenhaINICIAL.X+ComprimentoBotao+DistanciaBotoes</param>
+                                    <param id="1" name="Y">BotaoEsqueciSenhaINICIAL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="947928794082994" type="BotaoSobreINICIAL">
+                                    <param id="0" name="X">BotaoOuvidoriaINICIAL.X+ComprimentoBotao+DistanciaBotoes</param>
+                                    <param id="1" name="Y">BotaoOuvidoriaINICIAL.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="491842496537115" title="Posições/Proporções Retrato INICIAL">
+                    <sub-events>
+                        <event-block sid="706535727662970">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="217891856364073" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="977564704922715" type="TextoEmailINICIAL">
+                                    <param id="0" name="X">DistanciaLateralRetrato+1000-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoInicial.Y+(TopoInicial.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="927008716714388" type="CampoEmailNICIAL">
+                                    <param id="0" name="Width">WindowWidth-120</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="794244766990879" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Width">WindowWidth-120</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="595958415727385" type="BotaoConectarINICIAL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">CampoSenhaINICIAL.Y+100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="622788767324923" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="X">BotaoConectarINICIAL.X</param>
+                                    <param id="1" name="Y">BotaoConectarINICIAL.Y+AlturaBotao+DistanciaBotoes</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="742611141768502" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="X">BotaoCriarContaINICIAL.X</param>
+                                    <param id="1" name="Y">BotaoCriarContaINICIAL.Y+AlturaBotao+DistanciaBotoes</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="747316309069102" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="X">BotaoEsqueciSenhaINICIAL.X</param>
+                                    <param id="1" name="Y">BotaoEsqueciSenhaINICIAL.Y+AlturaBotao+DistanciaBotoes</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="576770350505681" type="BotaoSobreINICIAL">
+                                    <param id="0" name="X">BotaoOuvidoriaINICIAL.X</param>
+                                    <param id="1" name="Y">BotaoOuvidoriaINICIAL.Y+AlturaBotao+DistanciaBotoes</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
+                <event-group description="" sid="643107760151974" title="Posições/Proporções Relativas INICIAL">
+                    <sub-events>
+                        <event-block sid="430634221630721">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="714254001837654" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="162886469114648" type="TextoSenhaINICIAL">
+                                    <param id="0" name="X">TextoEmailINICIAL.X</param>
+                                    <param id="1" name="Y">TextoEmailINICIAL.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="411292370221278" type="CampoEmailNICIAL">
+                                    <param id="0" name="X">TextoEmailINICIAL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoEmailINICIAL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="949536414879286" type="CampoSenhaINICIAL">
+                                    <param id="0" name="X">TextoSenhaINICIAL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoSenhaINICIAL.Y</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="816410240869356" type="TextoBotaoConectarINICIAL">
+                                    <param id="0" name="Object">BotaoConectarINICIAL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="144431903110724" type="TextoBotaoCriarContaINICIAL">
+                                    <param id="0" name="Object">BotaoCriarContaINICIAL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="781199558149169" type="TextoBotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Object">BotaoEsqueciSenhaINICIAL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="332589853093828" type="TextoBotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Object">BotaoOuvidoriaINICIAL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="730225116466527" type="TextoBotaoSobreINICIAL">
+                                    <param id="0" name="Object">BotaoSobreINICIAL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="873766556818527" type="PretoAvisoINICIAL">
+                                    <param id="0" name="Width">WindowWidth</param>
+                                    <param id="1" name="Height">WindowHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="453866482799665" title="Pressionar Botões INICIAL">
             <sub-events>
                 <event-group description="" sid="986645863324647" title="Botão Conectar INICIAL">
@@ -260,38 +276,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="842564529999404" type="System">
-                                    <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
-                                    <param id="1" name="State">1</param>
+                                <action id="-9" name="Set value" sid="680896223991930" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoConectarINICIAL&quot;</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="481844328368928" type="BotaoConectarINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="209802060564774" type="TextoBotaoConectarINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="162260409297339" type="TextoBotaoConectarINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
                                 <action id="-16" name="Set opacity" sid="732717834372945" type="BotaoConectarINICIAL">
                                     <param id="0" name="Opacity">100</param>
-                                </action>
-                                <action id="3" name="Set font size" sid="209802060564774" type="TextoBotaoConectarINICIAL">
-                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="177141041922841">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="206281052281439" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="609508197572917" type="Touch">
+                                    <param id="0" name="Object">BotaoConectarINICIAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="430041516803893" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoConectarINICIAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="420999016698934" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="585501608135216" type="BotaoConectarINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="713673390091602" type="TextoBotaoConectarINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="664046722743191" type="TextoBotaoConectarINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-16" name="Set opacity" sid="231770770319726" type="BotaoConectarINICIAL">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="713673390091602" type="TextoBotaoConectarINICIAL">
+                                <action id="-12" name="Set group active" sid="408237875244947" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="842564529999404" type="System">
+                                    <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="231581959297600">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="146023580041903" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="639847080041161" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoConectarINICIAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="306995525555785" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="184075854973834" type="BotaoConectarINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="863750346027893" type="TextoBotaoConectarINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="864330394013121" type="TextoBotaoConectarINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="408237875244947" type="System">
+                                <action id="-16" name="Set opacity" sid="560225134665801" type="BotaoConectarINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="640403362228514" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -391,37 +465,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="459666113716770" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoCriarContaINICIAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="930126426601573" type="BotaoCriarContaINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="563593023847253" type="BotaoCriarContaINICIAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="305259534752717" type="TextoBotaoCriarContaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="818276553694591" type="TextoBotaoCriarContaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="925853555944614" type="System">
-                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                <action id="-16" name="Set opacity" sid="563593023847253" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="535502833511004">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="752719160290438" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="539048693350489" type="Touch">
+                                    <param id="0" name="Object">BotaoCriarContaINICIAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="395139936255132" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoCriarContaINICIAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="101618025781823" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="299600026168459" type="BotaoCriarContaINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="818512803605584" type="BotaoCriarContaINICIAL">
-                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                <action id="-7" name="Set size" sid="888778849890750" type="TextoBotaoCriarContaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="362090755808138" type="TextoBotaoCriarContaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="-16" name="Set opacity" sid="818512803605584" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="501253207585414" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="925853555944614" type="System">
+                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="471035721272280">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="807206574552160" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="194047241037133" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoCriarContaINICIAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="394128013106893" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="891497471819344" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="200818586841855" type="TextoBotaoCriarContaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="154390514869183" type="TextoBotaoCriarContaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="188241127970370" type="BotaoCriarContaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="377337694540274" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -443,34 +576,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="584548592370660" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoEsqueciSenhaINICIAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="665443004426155" type="BotaoEsqueciSenhaINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="128634696645052" type="BotaoEsqueciSenhaINICIAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="113561551428743" type="TextoBotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="367377584375153" type="TextoBotaoEsqueciSenhaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="128634696645052" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="455933893968644">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="616262610073182" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="855061429737199" type="Touch">
+                                    <param id="0" name="Object">BotaoEsqueciSenhaINICIAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="684562222957064" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoEsqueciSenhaINICIAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="579272478043162" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="480913743466910" type="BotaoEsqueciSenhaINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="598722615007499" type="BotaoEsqueciSenhaINICIAL">
-                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                <action id="-7" name="Set size" sid="116617615823522" type="TextoBotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="659602890544237" type="TextoBotaoEsqueciSenhaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="-16" name="Set opacity" sid="598722615007499" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="242432771222444" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="-2" name="Go to layout" sid="536018219103049" type="System">
+                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="378627305113580">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="706185396288182" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="190300236699285" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoEsqueciSenhaINICIAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="189926149732409" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="186945738217802" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="797355528746974" type="TextoBotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="242646110244143" type="TextoBotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="725653125530992" type="BotaoEsqueciSenhaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="568360186395340" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -492,34 +687,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="738220224728343" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoOuvidoriaINICIAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="933520287315724" type="BotaoOuvidoriaINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="757248358593782" type="BotaoOuvidoriaINICIAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="858937915815096" type="TextoBotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">ComprimentoBotao/1.1</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="279914516529062" type="TextoBotaoOuvidoriaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="757248358593782" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="428332100125170">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="568778373686782" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="350958966719317" type="Touch">
+                                    <param id="0" name="Object">BotaoOuvidoriaINICIAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="705237535278189" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoOuvidoriaINICIAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="293620214252553" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="456129770891248" type="BotaoOuvidoriaINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="499524769462648" type="BotaoOuvidoriaINICIAL">
-                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                <action id="-7" name="Set size" sid="781853698169704" type="TextoBotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="920465209105878" type="TextoBotaoOuvidoriaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="-16" name="Set opacity" sid="499524769462648" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="696375482170105" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="-2" name="Go to layout" sid="839475476938237" type="System">
+                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="598842556511237">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="957637928747756" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="542243737101176" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoOuvidoriaINICIAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="697436673178255" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="860551073928510" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="210167135529838" type="TextoBotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="293840944123623" type="TextoBotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="190049175898548" type="BotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="983213484328630" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -541,34 +798,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="381670369021986" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoSobreINICIAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="472648327614102" type="BotaoSobreINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="720421396437379" type="BotaoSobreINICIAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="776242382794826" type="TextoBotaoSobreINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">ComprimentoBotao/1.1</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="911165288485875" type="TextoBotaoSobreINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="720421396437379" type="BotaoSobreINICIAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="536910035197830">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="120692951664742" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="175796913916659" type="Touch">
+                                    <param id="0" name="Object">BotaoSobreINICIAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="150017216039603" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSobreINICIAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="651171648910151" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="861267941063760" type="BotaoSobreINICIAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="227634502867497" type="TextoBotaoSobreINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="121944987896339" type="TextoBotaoSobreINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-16" name="Set opacity" sid="134020041184845" type="BotaoSobreINICIAL">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="227634502867497" type="TextoBotaoSobreINICIAL">
+                                <action id="-12" name="Set group active" sid="617999164084701" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="-2" name="Go to layout" sid="555287864775431" type="System">
+                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="231900098960935">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="110381343899934" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="304332545101154" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSobreINICIAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="448720763758468" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="686904737100755" type="BotaoSobreINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="281233382138462" type="TextoBotaoSobreINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="872880314747158" type="TextoBotaoSobreINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="617999164084701" type="System">
+                                <action id="-16" name="Set opacity" sid="869807179497581" type="BotaoSobreINICIAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="770952668590588" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -580,6 +899,7 @@
         </event-group>
         <event-group description="" inactive="1" sid="424114702206726" title="Conexão do Usuário">
             <sub-events>
+                <comment>Esse grupo de operações devem vir primeiro, pois o &apos;Construct 2&apos; executa suas ações de cima para baixo. Destava forma é primeiro verificado se os campos foram preenchidos de maneira correto, se não foram preenchidos corretamente, o grupo inteiro é desabilitado.</comment>
                 <event-block any="1" sid="618223236528554">
                     <conditions>
                         <condition id="0" name="Compare text" sid="432827445785992" type="CampoEmailNICIAL">
@@ -606,6 +926,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Caso os campos estejam preenchidos de forma válida, um aviso é carregado em tela. Especificamente o aviso é &apos;Conectando...&apos;</comment>
                 <event-block sid="662385275289227">
                     <conditions>
                         <condition id="0" inverted="1" name="Compare text" sid="164819900209095" type="CampoEmailNICIAL">
@@ -626,69 +947,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set CSS style" sid="709603906603642" type="CampoEmailNICIAL">
-                            <param id="0" name="Property name">&quot;opacity&quot;</param>
-                            <param id="1" name="Value">&quot;0.5&quot;</param>
-                        </action>
-                        <action id="7" name="Set CSS style" sid="422486813938822" type="CampoSenhaINICIAL">
-                            <param id="0" name="Property name">&quot;opacity&quot;</param>
-                            <param id="1" name="Value">&quot;0.5&quot;</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="410973895552085" type="PretoAvisoINICIAL">
-                            <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1000</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="108955631736108" type="PretoAvisoINICIAL">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="506497095289779" type="BrancoAvisoINICIAL">
-                            <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1000</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="633131359951563" type="TextoConectandoINICIAL">
-                            <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1000</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="323470161896176" type="TextoConectadoINICIAL">
-                            <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1000</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="784914066204062" type="TextoConexaoInvalidaINICIAL">
-                            <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1000</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="475803245898252" type="TextoConexaoFalhaINICIAL">
-                            <param id="0" name="X">1000</param>
-                            <param id="1" name="Y">1000</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="788359271663944" type="BrancoAvisoINICIAL">
-                            <param id="0" name="Width">300</param>
-                            <param id="1" name="Height">100</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="277789138325112" type="TextoConectandoINICIAL">
-                            <param id="0" name="Width">300</param>
-                            <param id="1" name="Height">100</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="915145199411654" type="TextoConectadoINICIAL">
-                            <param id="0" name="Width">300</param>
-                            <param id="1" name="Height">100</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="901023759712767" type="TextoConexaoInvalidaINICIAL">
-                            <param id="0" name="Width">300</param>
-                            <param id="1" name="Height">100</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="646129085631496" type="TextoConexaoFalhaINICIAL">
-                            <param id="0" name="Width">300</param>
-                            <param id="1" name="Height">100</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="291442911426999" type="BrancoAvisoINICIAL">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="273856599184940" type="TextoConectandoINICIAL">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-12" name="Set group active" sid="774282525230868" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso INICIAL&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>O dado preenchido no campo Email é enviado para o Banco de Dados. O qual retorna a respectiva Senha do usuário daquele Email, caso exista. </comment>
                         <event-block sid="500448419622016">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="937142274076686" type="System" />
@@ -710,6 +975,8 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <comment>Caso a Senha retornada pelo Banco de Dados seja equivalente a seja preenchida no campo Senha. A mensagem &apos;Conexão Estabelecida&apos; é apresentada para o usuário, o qual posteriormente é levado para a Tela Principal.</comment>
+                                <comment>NOTA: Os campos Email e Senha, agora são armazenados internamente no dispositivo. Desta forma, quando o usuário se conectar novamente na aplicação, o login automático será realizado. </comment>
                                 <event-block sid="838220499919970">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="922633190185142" type="System">
@@ -748,15 +1015,50 @@
                                             <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
                                             <param id="1" name="Value">SenhaUsuario</param>
                                         </action>
+                                        <action id="-12" name="Set group active" sid="975701393299287" type="System">
+                                            <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
                                         <action id="-2" name="Go to layout" sid="232147754189344" type="System">
                                             <param id="0" name="Layout">TelaPrincipal</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>Fururamente fazer mensagem separdas de Email Inválido e Senha Inválida</comment>
-                                <event-block any="1" sid="962574405311605">
+                                <comment>Caso o Email e a Senha não existam no Banco de Dados, a mensagem &apos;Credenciais Inválidas&apos; é apresentada para o usuário.</comment>
+                                <event-block sid="919481727979509">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="672522026365954" type="System">
+                                        <condition id="-8" name="Compare two values" sid="929259092510320" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Email Invalido&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="807372020974154" type="System">
+                                            <param id="0" name="First value">CampoSenhaINICIAL.Text</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">AJAX.LastData</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="558015189039896" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="144486136922784" type="TextoConexaoInvalidaINICIAL">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="149169299329975" type="System">
+                                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="646669811986576" type="System">
+                                            <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>A mensagem de &apos;Senha Inválida&apos; é apresentada para o usuário caso a Senha retornada pelo Banco de Dados não corresponda com a que fora digitada pelo usuário. </comment>
+                                <event-block sid="962574405311605">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="116307998902016" type="System">
                                             <param id="0" name="First value">AJAX.LastData</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;Email Invalido&quot;</param>
@@ -771,7 +1073,7 @@
                                         <action id="-15" name="Set visible" sid="146879442581057" type="TextoConectandoINICIAL">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="519947408339519" type="TextoConexaoInvalidaINICIAL">
+                                        <action id="-15" name="Set visible" sid="519947408339519" type="TextoConexaoSenhaInvalidaINICIAL">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-12" name="Set group active" sid="397342827240669" type="System">
@@ -784,8 +1086,40 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>Essa condição nunca será verdade, pois se o Email for inválido, obviamente a Senha será inválida. Nem sei por que coloquei isso aqui.</comment>
+                                <event-block sid="985018407238687">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="499456675848757" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Email Invalido&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="133045783829504" type="System">
+                                            <param id="0" name="First value">CampoSenhaINICIAL.Text</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">AJAX.LastData</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="543020844071264" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="908834826191601" type="TextoConexaoEmailInvalidoINICIAL">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="805670099848807" type="System">
+                                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="877346947918051" type="System">
+                                            <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Caso o Banco de Dados não resposta (por estar fora do ar, ou o usuário estar sem acesso a internet), a mensagem &apos;Erro de conexão. Sem acesso ao servidor.&apos; é apresentada para o usuário.</comment>
                         <event-block sid="715720700671326">
                             <conditions>
                                 <condition id="1" name="On error" sid="961414980117975" type="AJAX">
@@ -813,6 +1147,109 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Nesse grupo as chamadas para ativar o aviso são executadas.</comment>
+        <event-group description="" inactive="1" sid="322288886129339" title="Habilitar Aviso INICIAL">
+            <sub-events>
+                <event-block sid="470564492117982">
+                    <conditions>
+                        <condition id="-15" name="Is group active" sid="135221588100397" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso INICIAL&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="388894836294993" type="System">
+                            <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="360511214806303" type="System">
+                            <param id="0" name="Group name">&quot;Pressionar Botões INICIAL&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="709603906603642" type="CampoEmailNICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;0.5&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="422486813938822" type="CampoSenhaINICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;0.5&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="410973895552085" type="PretoAvisoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="108955631736108" type="PretoAvisoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="506497095289779" type="BrancoAvisoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="633131359951563" type="TextoConectandoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="323470161896176" type="TextoConectadoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="784914066204062" type="TextoConexaoInvalidaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="769444623220662" type="TextoConexaoEmailInvalidoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="847855147689127" type="TextoConexaoSenhaInvalidaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="475803245898252" type="TextoConexaoFalhaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="788359271663944" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="277789138325112" type="TextoConectandoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="915145199411654" type="TextoConectadoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="901023759712767" type="TextoConexaoInvalidaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="102595028916589" type="TextoConexaoEmailInvalidoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="401963990884412" type="TextoConexaoSenhaInvalidaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="646129085631496" type="TextoConexaoFalhaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="291442911426999" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="273856599184940" type="TextoConectandoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="424472539092314" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso INICIAL&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Nesse grupo as chamadas para desativar o aviso são executadas.</comment>
         <event-group description="" inactive="1" sid="380621081024391" title="Desabilitar Aviso INICIAL">
             <sub-events>
@@ -832,6 +1269,12 @@
                         <action id="-15" name="Set visible" sid="812326574255040" type="TextoConexaoInvalidaINICIAL">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="462124791437058" type="TextoConexaoEmailInvalidoINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="179361746495999" type="TextoConexaoSenhaInvalidaINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="189585504673396" type="TextoConexaoFalhaINICIAL">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -841,12 +1284,20 @@
                         <action id="-15" name="Set visible" sid="122375307658629" type="PretoAvisoINICIAL">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="941219711570721" type="System">
-                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
-                            <param id="1" name="State">0</param>
+                        <action id="-12" name="Set group active" sid="289468264756030" type="System">
+                            <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="280677796962710" type="System">
+                            <param id="0" name="Group name">&quot;Pressionar Botões INICIAL&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                         <action id="-12" name="Set group active" sid="778817490114326" type="System">
                             <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="941219711570721" type="System">
+                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>

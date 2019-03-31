@@ -16,6 +16,8 @@
     <TextoConectandoINICIAL>Loading...</TextoConectandoINICIAL>
     <TextoConectadoINICIAL>Connected</TextoConectadoINICIAL>
     <TextoConexaoInvalidaINICIAL>Password invalid</TextoConexaoInvalidaINICIAL>
+    <TextoConexaoEmailInvalidoINICIAL>Email invalid</TextoConexaoEmailInvalidoINICIAL>
+    <TextoConexaoSenhaInvalidaINICIAL>Password invalid</TextoConexaoSenhaInvalidaINICIAL>
     <TextoConexaoFalhaINICIAL>ERROR. No conection.</TextoConexaoFalhaINICIAL>
     <TituloCriarContaCRIARCONTA>Create Account</TituloCriarContaCRIARCONTA>
     <TextoNomeCRIARCONTA>Name:</TextoNomeCRIARCONTA>

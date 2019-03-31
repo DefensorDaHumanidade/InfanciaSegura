@@ -3,6 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="Botao" sid="752304881313542" static="0" type="text">nenhum</variable>
+        <variable constant="0" name="DistanciaBotoes" sid="138746721236022" static="0" type="number">10</variable>
+        <variable constant="0" name="EspacamentoLongitudinalElementos" sid="451998056636723" static="0" type="number">50</variable>
+        <variable constant="0" name="EspacamentoLateralElementos" sid="978840279242489" static="0" type="number">100</variable>
+        <variable constant="0" name="DistanciaLateralRetrato" sid="934671055920911" static="0" type="number">10</variable>
+        <variable constant="0" name="DistanciaLateralPaisagem" sid="365428944995645" static="0" type="number">600</variable>
+        <variable constant="0" name="DistanciaTopo" sid="878442778697716" static="0" type="number">30</variable>
         <variable constant="0" name="NomeAluno" sid="786910338194507" static="0" type="text"></variable>
         <variable constant="0" name="NomeTurma" sid="572028829421611" static="0" type="text"></variable>
         <variable constant="0" name="QuantidadeMateriaisDeApoio" sid="654562794583928" static="0" type="number">0</variable>
@@ -145,7 +152,9 @@
                     <sub-events>
                         <event-block sid="608236161150984">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="348008306188429" type="System" />
+                                <condition id="-15" name="Is group active" sid="348008306188429" type="System">
+                                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="3" name="Set font size" sid="251432838995048" type="TextoCarregandoCARREGAMENTO">
@@ -156,6 +165,14 @@
                                 </action>
                                 <action id="3" name="Set font size" sid="308630835499634" type="TextoSenhaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="649520911591253" type="CampoEmailNICIAL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="774642734936425" type="CampoSenhaINICIAL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="543704209443928" type="TextoBotaoConectarINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
@@ -172,6 +189,24 @@
                                 <action id="3" name="Set font size" sid="304005949828554" type="TextoBotaoSobreINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="941599834210294" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="963002695697713" type="TextoConectadoINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="711309154467439" type="TextoConexaoFalhaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="292588946359157" type="TextoConexaoInvalidaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="329697832478979" type="TextoConexaoEmailInvalidoINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="904396061112267" type="TextoConexaoSenhaInvalidaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="3" name="Set font size" sid="676146814075523" type="TextoBotaoTurmasPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
@@ -185,18 +220,6 @@
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="258860298278178" type="TextoBotaoSobrePRINCIPAL">
-                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
-                                </action>
-                                <action id="3" name="Set font size" sid="941599834210294" type="TextoConectandoINICIAL">
-                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
-                                </action>
-                                <action id="3" name="Set font size" sid="963002695697713" type="TextoConectadoINICIAL">
-                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
-                                </action>
-                                <action id="3" name="Set font size" sid="711309154467439" type="TextoConexaoFalhaINICIAL">
-                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
-                                </action>
-                                <action id="3" name="Set font size" sid="292588946359157" type="TextoConexaoInvalidaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="865396059727007" type="TituloCriarContaCRIARCONTA">
@@ -445,7 +468,9 @@
                     <sub-events>
                         <event-block sid="738985322013170">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="753118547147272" type="System" />
+                                <condition id="-15" name="Is group active" sid="753118547147272" type="System">
+                                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Request URL" sid="270882025693800" type="AJAX">
@@ -468,7 +493,9 @@
                             <sub-events>
                                 <event-block sid="876435134444750">
                                     <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="293513471658461" type="System" />
+                                        <condition id="-15" name="Is group active" sid="408682417833444" type="System">
+                                            <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="986479899765109" type="TextoCarregandoCARREGAMENTO">
@@ -521,6 +548,12 @@
                                         </action>
                                         <action id="0" name="Set text" sid="155107674901274" type="TextoConexaoInvalidaINICIAL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoInvalidaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="625235402658977" type="TextoConexaoEmailInvalidoINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoEmailInvalidoINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="599657853711851" type="TextoConexaoSenhaInvalidaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoSenhaInvalidaINICIAL/text()&quot;)</param>
                                         </action>
                                         <action id="0" name="Set text" sid="785769310921586" type="TituloCriarContaCRIARCONTA">
                                             <param id="0" name="Text">XML.StringValue(&quot;TituloCriarContaCRIARCONTA/text()&quot;)</param>
@@ -1317,28 +1350,28 @@
                     <sub-events>
                         <event-block sid="230190448298722">
                             <conditions>
-                                <condition id="-18" name="On created" sid="550344002146101" type="BotaoRestaurarCONFIGURACAO" />
+                                <condition id="-18" name="On created" sid="550344002146101" type="BotaoRestaurarCONFIGURACOES" />
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="451375198793970" type="BotaoRestaurarCONFIGURACAO">
+                                <action id="-7" name="Set size" sid="451375198793970" type="BotaoRestaurarCONFIGURACOES">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="566179107609748" type="BotaoRestaurarCONFIGURACAO">
+                                <action id="-16" name="Set opacity" sid="566179107609748" type="BotaoRestaurarCONFIGURACOES">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="732366542928605">
                             <conditions>
-                                <condition id="-18" name="On created" sid="339162052725236" type="BotaoSalvarCONFIGURAÇAO" />
+                                <condition id="-18" name="On created" sid="339162052725236" type="BotaoSalvarCONFIGURACOES" />
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="650153933852842" type="BotaoSalvarCONFIGURAÇAO">
+                                <action id="-7" name="Set size" sid="650153933852842" type="BotaoSalvarCONFIGURACOES">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="867763774606940" type="BotaoSalvarCONFIGURAÇAO">
+                                <action id="-16" name="Set opacity" sid="867763774606940" type="BotaoSalvarCONFIGURACOES">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
                                 </action>
                             </actions>

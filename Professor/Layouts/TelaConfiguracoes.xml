@@ -267,7 +267,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoSalvarCONFIGURAÇAO" uid="163">
+                <instance type="BotaoSalvarCONFIGURACOES" uid="163">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -289,7 +289,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoRestaurarCONFIGURACAO" uid="164">
+                <instance type="BotaoRestaurarCONFIGURACOES" uid="164">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

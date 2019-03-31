@@ -159,6 +159,12 @@
             <object-type name="TextoConexaoInvalidaINICIAL" sid="508538090497960">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TextoConexaoEmailInvalidoINICIAL" sid="292194033795779">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoConexaoSenhaInvalidaINICIAL" sid="246049010061261">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Principal">
             <object-type name="BotaoConfiguracoesPRINCIPAL" sid="922793875131276">
@@ -343,106 +349,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TituloTurmasTURMA" sid="601534845827457">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TituloNomeTurmaTURMAESPECIFICA" sid="185942360893813">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TituloNomeAlunoTURMAESPECIFICAALUNO" sid="688329297324438">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TituloConfiguracoesCONFIGURACOES" sid="194812671271830">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoTamanhoLetraCONFIGURACOES" sid="446938349293921">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoFonteLetraCONFIGURACOES" sid="850126687803248">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoEstiloLetraCONFIGURACOES" sid="615467729799232">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoIdiomaCONFIGURACOES" sid="508665344654230">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoSalvarCONFIGURACOES" sid="304406869229906">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoRestuararCONFIGURACOES" sid="332299094032903">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TituloAjustesTURMAAJUSTES" sid="333674844028139">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoNomeTurmaTURMAAJUSTES" sid="351957590643589">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoSenhaTurmaTURMAAJUSTES" sid="457491838014132">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoEscolaTurmaTURMAAJUSTES" sid="988963670776374">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoCadastroTurmaTURMAAJUSTES" sid="932053526034637">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoCadastradosTurmaTURMAAJUSTES" sid="892513228276463">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoUltimoAcessoTurmaTURMAAJUSTES" sid="557117034854925">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoQuatidadeErrosTurmaTURMAAJUSTES" sid="634114373287258">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TituloAdicionarTurmaTURMAADICIONAR" sid="977184967122462">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoNomeTURMAADICIONAR" sid="987383797994037">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoSenhaTURMAADICIONAR" sid="221897773103368">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoEscolaTURMAADICIONAR" sid="606808953207289">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoTurmasCadastradasTURMAADICIONAR" sid="893627959679459">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="BotaoCriarTurmaTURMAADICIONAR" sid="232023819809497">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587896852339389" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TextoBotaoCriarTurmaTURMAADICIONAR" sid="954282811774713">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TituloAdicionarTurmaTURMAADICIONARFINAL" sid="837778095877497">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoTurmasCadastradasTURMAADICIONARFINAL" sid="727627316018592">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="BotaoCriarTurmaTURMAADICIONARFINAL" sid="254645595055112">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284427308086995" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TextoBotaoCriarTurmaTURMAADICIONARFINAL" sid="109248611498543">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoCancelarTurmaTURMAADICIONARFINAL" sid="236567348328610">
-                <plugin id="Text" />
-            </object-type>
         </object-folder>
         <object-folder name="Perfil">
             <object-type name="BotaoExcluirPERFIL" sid="381820830093437">
@@ -517,81 +423,6 @@
             <object-type name="TituloPerfilPERFIL" sid="251634131217126">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TextoBotaoTurmaTURMA" sid="842312142539285">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoCadastroTurmaTURMA" sid="931972938103115">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoAdicionarTurmaTURMA" sid="499426019217741">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoAlunoTURMAESPECIFICA" sid="844476239992929">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoErrosTURMAESPECIFICA" sid="500780282793703">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoExplusarTURMAESPECIFICAALUNO" sid="759125788142807">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoLimparErrosTURMAESPECIFICAALUNO" sid="665420850400408">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO" sid="994359577172438">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="BotaoBloquearTURMAAJUSTES" sid="953138898876445">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721601689289783" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TextoBotaoBloquearTURMAAJUSTES" sid="869644854737104">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="BotaoExcluirTURMAAJUSTES" sid="468712407887312">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217955032894629" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TextoBotaoExcluirTURMAAJUSTES" sid="573292704943596">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="BotaoSalvarTURMAAJUSTES" sid="747892853166680">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713743172577499" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="TextoBotaoSalvarTURMAAJUSTES" sid="793644092657979">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoTurmaTURMAADICIONAR" sid="241100462922540">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoSenhaTurmaTURMAADICIONAR" sid="595614206904859">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoStatusTurmaTURMAADICIONAR" sid="660300416304640">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoBotaoTurmaTURMAADICIONARFINAL" sid="305911528698938">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoSenhaTurmaTURMAADICIONARFINAL" sid="366576856643986">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TextoStatusTurmaTURMAADICIONARFINAL" sid="140811957552903">
-                <plugin id="Text" />
-            </object-type>
         </object-folder>
         <object-folder name="Sobre">
             <object-type name="TituloSobreSOBRE" sid="646032822307725">
@@ -610,6 +441,431 @@
             </object-type>
             <object-type name="TextoEnderecoMateriaisMATERIALAPOIO" sid="673912157611271">
                 <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Turma">
+            <object-type name="TituloTurmasTURMA" sid="601534845827457">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoAdicionarTurmaTURMA" sid="499426019217741">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCadastroTurmaTURMA" sid="931972938103115">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoTurmaTURMA" sid="842312142539285">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoConfiguracoesTURMA" sid="506550241099032">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604188222784016" speed="5">
+                        <frame duration="1" hotspotX="0.501558" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\configuracoes.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoAdicionarTurmaTURMA" sid="428609017265725">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160644020206392" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoTurmaTURMA" sid="516172357234503">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399146373193833" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoBotaoTurmaTURMA" sid="829967176100868">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="923060156105364" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Configuracoes">
+            <object-type name="BotaoRestaurarCONFIGURACOES" sid="370101938079914">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662455862732310" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSalvarCONFIGURACOES" sid="893279329481530">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="744027975938848" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ListaFonteLetraCONFIGURACOES" sid="477038678449441">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListaIdiomaCONFIGURACOES" sid="797601970119413">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListaEstiloLetraCONFIGURACOES" sid="855578334714552">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="ListaTamanhoLetraCONFIGURACOES" sid="806544583304236">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="TextoBotaoRestuararCONFIGURACOES" sid="332299094032903">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoSalvarCONFIGURACOES" sid="304406869229906">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoFonteLetraCONFIGURACOES" sid="850126687803248">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTamanhoLetraCONFIGURACOES" sid="446938349293921">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEstiloLetraCONFIGURACOES" sid="615467729799232">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloConfiguracoesCONFIGURACOES" sid="194812671271830">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoIdiomaCONFIGURACOES" sid="508665344654230">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="TurmaAdicionar">
+            <object-type name="CampoEscolaTURMAADICIONAR" sid="559531413032206">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="BotaoTurmaTURMAADICIONAR" sid="638336549327144">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508549096384676" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoBotaoTurmaTURMAADICIONAR" sid="818830309390845">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799935483985993" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CampoNomeTURMAADICIONAR" sid="212416042373424">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoSenhaTURMAADICIONAR" sid="905806612197888">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="FundoTurmaFechadaTURMAADICIONAR" sid="709082274258244">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266069307992147" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ImagemTurmaAbertaTURMAADICIONAR" sid="946838751767719">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840253045880728" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoAberto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ImagemTurmaFechadaTURMAADICIONAR" sid="905059393215622">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563236867694887" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoFechado.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoBotaoCriarTurmaTURMAADICIONAR" sid="954282811774713">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoTurmaTURMAADICIONAR" sid="241100462922540">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaTurmaTURMAADICIONAR" sid="595614206904859">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoStatusTurmaTURMAADICIONAR" sid="660300416304640">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEscolaTURMAADICIONAR" sid="606808953207289">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTurmasCadastradasTURMAADICIONAR" sid="893627959679459">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaTURMAADICIONAR" sid="221897773103368">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloAdicionarTurmaTURMAADICIONAR" sid="977184967122462">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomeTURMAADICIONAR" sid="987383797994037">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoCriarTurmaTURMAADICIONAR" sid="232023819809497">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587896852339389" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="TurmaAjustes">
+            <object-type name="CampoNomeTurmaTURMAAJUSTES" sid="400762619165809">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoSenhaTurmaTURMAAJUSTES" sid="497873895329505">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="CampoEscolaTurmaTURMAAJUSTES" sid="772852437850532">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="ListaCadstradosTURMAAJUSTES" sid="157018641601265">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="BotaoBloquearTURMAAJUSTES" sid="953138898876445">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721601689289783" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoExcluirTURMAAJUSTES" sid="468712407887312">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217955032894629" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoSalvarTURMAAJUSTES" sid="747892853166680">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713743172577499" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoBotaoBloquearTURMAAJUSTES" sid="869644854737104">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoExcluirTURMAAJUSTES" sid="573292704943596">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoSalvarTURMAAJUSTES" sid="793644092657979">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCadastradosTurmaTURMAAJUSTES" sid="892513228276463">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCadastroTurmaTURMAAJUSTES" sid="932053526034637">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEscolaTurmaTURMAAJUSTES" sid="988963670776374">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaTurmaTURMAAJUSTES" sid="457491838014132">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoQuatidadeErrosTurmaTURMAAJUSTES" sid="634114373287258">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloAjustesTURMAAJUSTES" sid="333674844028139">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoUltimoAcessoTurmaTURMAAJUSTES" sid="557117034854925">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNomeTurmaTURMAAJUSTES" sid="351957590643589">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="TurmaEspecifica">
+            <object-type name="BotaoAlunoTURMAESPECIFICA" sid="186857933043025">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677045315298593" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoBotaoAlunoTURMAESPECIFICA" sid="884825009653143">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356605723713889" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoBotaoAlunoTURMAESPECIFICA" sid="844476239992929">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoErrosTURMAESPECIFICA" sid="500780282793703">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloNomeTurmaTURMAESPECIFICA" sid="185942360893813">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="TurmaEspecificaAluno">
+            <object-type name="BotaoExpulsarTURMAESPECIFICAALUNO" sid="616646857525169">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262759628227409" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoLimparAcertosTURMAESPECIFICAALUNO" sid="952073538611694">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816256082310233" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoLimparErrosTURMAESPECIFICAALUNO" sid="375795959573459">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736702771677599" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ListaErrosTURMAESPECIFICAALUNO" sid="601886191887688">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="TextoCadastroTURMAESPECIFICAALUNO" sid="647040281838264">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoErrosTURMAESPECIFICAALUNO" sid="738176324346874">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoIdadeTURMAESPECIFICAALUNO" sid="122956934636260">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoUltimoAcessoTURMAESPECIFICAALUNO" sid="255902450048641">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNickTURMAESPECIFICAALUNO" sid="314263326983494">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTurmaTURMAESPECIFICAALUNO" sid="708470039685825">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoAcertosTURMAESPECIFICAALUNO" sid="254925433860148">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ListaAcertosTURMAESPECIFICAALUNO" sid="309306797059686">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="TextoBotaoExplusarTURMAESPECIFICAALUNO" sid="759125788142807">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO" sid="994359577172438">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoLimparErrosTURMAESPECIFICAALUNO" sid="665420850400408">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloNomeAlunoTURMAESPECIFICAALUNO" sid="688329297324438">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="TurmaAdicionarFinal">
+            <object-type name="BotaoCancelarTurmaTURMAADICIONARFINAL" sid="175200750421950">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206829151195710" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BotaoTurmaTURMAADICIONARFINAL" sid="662831020974313">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712694606833086" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoBotaoTurmaTURMAADICIONARFINAL" sid="672094990481907">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="474616991771701" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FundoTurmaFechadaTURMAADICIONARFINAL" sid="674980776782600">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936744786185998" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ImagemTurmaAbertaTURMAADICIONARFINAL" sid="181041154680033">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="343658375550265" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoAberto.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ImagemTurmaFechadaTURMAADICIONARFINAL" sid="604211050495447">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842075855627261" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoFechado.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoBotaoCancelarTurmaTURMAADICIONARFINAL" sid="236567348328610">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoTurmaTURMAADICIONARFINAL" sid="305911528698938">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotaoCriarTurmaTURMAADICIONARFINAL" sid="109248611498543">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoSenhaTurmaTURMAADICIONARFINAL" sid="366576856643986">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoStatusTurmaTURMAADICIONARFINAL" sid="140811957552903">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoTurmasCadastradasTURMAADICIONARFINAL" sid="727627316018592">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloAdicionarTurmaTURMAADICIONARFINAL" sid="837778095877497">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoCriarTurmaTURMAADICIONARFINAL" sid="254645595055112">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284427308086995" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="Touch" sid="564603889974030">
@@ -694,242 +950,6 @@
                             <point x="0.12395" y="0.820728" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoTurmaTURMA" sid="516172357234503">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399146373193833" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FundoBotaoTurmaTURMA" sid="829967176100868">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="923060156105364" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoAdicionarTurmaTURMA" sid="428609017265725">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160644020206392" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoConfiguracoesTURMA" sid="506550241099032">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604188222784016" speed="5">
-                    <frame duration="1" hotspotX="0.501558" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\configuracoes.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoAlunoTURMAESPECIFICA" sid="186857933043025">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677045315298593" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FundoBotaoAlunoTURMAESPECIFICA" sid="884825009653143">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356605723713889" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextoNickTURMAESPECIFICAALUNO" sid="314263326983494">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoIdadeTURMAESPECIFICAALUNO" sid="122956934636260">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoTurmaTURMAESPECIFICAALUNO" sid="708470039685825">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoCadastroTURMAESPECIFICAALUNO" sid="647040281838264">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoUltimoAcessoTURMAESPECIFICAALUNO" sid="255902450048641">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="BotaoExpulsarTURMAESPECIFICAALUNO" sid="616646857525169">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262759628227409" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ListaErrosTURMAESPECIFICAALUNO" sid="601886191887688">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="TextoErrosTURMAESPECIFICAALUNO" sid="738176324346874">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextoAcertosTURMAESPECIFICAALUNO" sid="254925433860148">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="ListaAcertosTURMAESPECIFICAALUNO" sid="309306797059686">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="BotaoLimparErrosTURMAESPECIFICAALUNO" sid="375795959573459">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736702771677599" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoLimparAcertosTURMAESPECIFICAALUNO" sid="952073538611694">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816256082310233" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoSalvarCONFIGURAÇAO" sid="893279329481530">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="744027975938848" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoRestaurarCONFIGURACAO" sid="370101938079914">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662455862732310" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ListaTamanhoLetraCONFIGURACOES" sid="806544583304236">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="ListaFonteLetraCONFIGURACOES" sid="477038678449441">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="ListaEstiloLetraCONFIGURACOES" sid="855578334714552">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="ListaIdiomaCONFIGURACOES" sid="797601970119413">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="CampoNomeTurmaTURMAAJUSTES" sid="400762619165809">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="CampoSenhaTurmaTURMAAJUSTES" sid="497873895329505">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="CampoEscolaTurmaTURMAAJUSTES" sid="772852437850532">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="ListaCadstradosTURMAAJUSTES" sid="157018641601265">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="CampoNomeTURMAADICIONAR" sid="212416042373424">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="CampoSenhaTURMAADICIONAR" sid="905806612197888">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="CampoEscolaTURMAADICIONAR" sid="559531413032206">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="FundoBotaoTurmaTURMAADICIONAR" sid="818830309390845">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799935483985993" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoTurmaTURMAADICIONAR" sid="638336549327144">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508549096384676" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FundoTurmaFechadaTURMAADICIONAR" sid="709082274258244">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266069307992147" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ImagemTurmaAbertaTURMAADICIONAR" sid="946838751767719">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840253045880728" speed="5">
-                    <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoAberto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ImagemTurmaFechadaTURMAADICIONAR" sid="905059393215622">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563236867694887" speed="5">
-                    <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoFechado.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ImagemTurmaAbertaTURMAADICIONARFINAL" sid="181041154680033">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="343658375550265" speed="5">
-                    <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoAberto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ImagemTurmaFechadaTURMAADICIONARFINAL" sid="604211050495447">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842075855627261" speed="5">
-                    <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\cadeadoFechado.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoTurmaTURMAADICIONARFINAL" sid="662831020974313">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712694606833086" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FundoBotaoTurmaTURMAADICIONARFINAL" sid="672094990481907">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="474616991771701" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BotaoCancelarTurmaTURMAADICIONARFINAL" sid="175200750421950">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206829151195710" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FundoTurmaFechadaTURMAADICIONARFINAL" sid="674980776782600">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936744786185998" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
                 </animation>
             </animation-folder>
         </object-type>

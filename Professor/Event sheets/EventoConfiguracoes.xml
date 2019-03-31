@@ -90,11 +90,11 @@
                                     <param id="0" name="X">800</param>
                                     <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="384262760272313" type="BotaoRestaurarCONFIGURACAO">
+                                <action id="-3" name="Set position" sid="384262760272313" type="BotaoRestaurarCONFIGURACOES">
                                     <param id="0" name="X">1000-ComprimentoBotao/2-10</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="356351344097069" type="BotaoSalvarCONFIGURAÇAO">
+                                <action id="-3" name="Set position" sid="356351344097069" type="BotaoSalvarCONFIGURACOES">
                                     <param id="0" name="X">1000+ComprimentoBotao/2+10</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
@@ -117,13 +117,13 @@
                                     <param id="0" name="X">1020-(WindowWidth/2)</param>
                                     <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="433479755767223" type="BotaoRestaurarCONFIGURACAO">
+                                <action id="-3" name="Set position" sid="433479755767223" type="BotaoRestaurarCONFIGURACOES">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">TextoIdiomaCONFIGURACOES.Y+100</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="985850028808914" type="BotaoSalvarCONFIGURAÇAO">
+                                <action id="-3" name="Set position" sid="985850028808914" type="BotaoSalvarCONFIGURACOES">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">BotaoRestaurarCONFIGURACAO.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoRestaurarCONFIGURACOES.Y+AlturaBotao+10</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -169,11 +169,11 @@
                                     <param id="1" name="Y">TextoIdiomaCONFIGURACOES.Y</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="133345382045751" type="TextoBotaoRestuararCONFIGURACOES">
-                                    <param id="0" name="Object">BotaoRestaurarCONFIGURACAO</param>
+                                    <param id="0" name="Object">BotaoRestaurarCONFIGURACOES</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="787310617137068" type="TextoBotaoSalvarCONFIGURACOES">
-                                    <param id="0" name="Object">BotaoSalvarCONFIGURAÇAO</param>
+                                    <param id="0" name="Object">BotaoSalvarCONFIGURACOES</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
                             </actions>
@@ -228,7 +228,7 @@
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="427299050533945" type="Touch" />
                                 <condition id="4" name="Is touching object" sid="753476159130599" type="Touch">
-                                    <param id="0" name="Object">BotaoSalvarCONFIGURAÇAO</param>
+                                    <param id="0" name="Object">BotaoSalvarCONFIGURACOES</param>
                                 </condition>
                             </conditions>
                             <actions>
