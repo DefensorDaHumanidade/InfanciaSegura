@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoOuvidoria</name>
+    <events>
+        <comment>NOTA: EventoOuvidoria e TelaOuvidoria já foram VERIFICADOS</comment>
+        <comment>NOTA: Tudo funcionando corretamente, apenas um único erro no grupo &apos;Enviar Mensagem OUVIDORIA&apos;, onde o enviou do e-mail por PHP não é concluido pelo AJAX. Como um erro era apresentado, a mensagem de erro foi invertida com a mensagem de acerto.</comment>
+        <include>Global</include>
+        <comment>Função para atualizar os textos quando a TelaPrincipal for carregada</comment>
+        <event-block sid="757802147002654">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="367531741345424" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="893981842593933" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="312893581402826" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela. </comment>
+        <event-group description="" sid="157707886096433" title="Limitar rolagem OUVIDORIA">
+            <sub-events>
+                <event-block sid="117062882991502">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="480122954522972" type="System">
+                            <param id="0" name="First value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">RolagemTotal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="678620584451647" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="830509051751314">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="682207195580110" type="System">
+                            <param id="0" name="First value">RolagemTotal</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">-300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="626815851201053" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">-300</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Todo o momento o sistema atualiza a posição dos objeto com base nas proporções da janela. Deveria ser criada um função que verifica se a janela foi redimensionada, para daí em endiante realizar as atualizações das posições, e não da forma como é feito.</comment>
+        <event-group description="" sid="852909017027247" title="Posições/Proporções OUVIDORIA">
+            <sub-events>
+                <event-group description="" sid="932996485276605" title="Posições/Proporções Paisagem OUVIDORIA">
+                    <sub-events>
+                        <event-block sid="911139531593217">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="230152563643447" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="863966640210893" type="TextoDescricaoOUVIDORIA">
+                                    <param id="0" name="Width">800</param>
+                                    <param id="1" name="Height">800</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="716006444858588" type="TextoDescricaoOUVIDORIA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="157095907536045" type="CampoMensagemOUVIDORIA">
+                                    <param id="0" name="Width">800</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="363453039221411" type="CampoMensagemOUVIDORIA">
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">900</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="567643390804559" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">1000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="701845859501736" title="Posições/Proporções Retrato OUVIDORIA">
+                    <sub-events>
+                        <event-block sid="448283944912569">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="885724938011743" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="727822851904822" type="TextoDescricaoOUVIDORIA">
+                                    <param id="0" name="Width">WindowWidth-(DistanciaLateralRetrato*2)</param>
+                                    <param id="1" name="Height">800</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="939896517625124" type="TextoDescricaoOUVIDORIA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="873659963826469" type="CampoMensagemOUVIDORIA">
+                                    <param id="0" name="Width">WindowWidth-(DistanciaLateralRetrato*2)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="682890276613798" type="CampoMensagemOUVIDORIA">
+                                    <param id="0" name="X">DistanciaLateralRetrato+1000-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">950+WindowHeight/2-AlturaBotao</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="284222847465865" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
+                <event-group description="" sid="423036343150557" title="Posições/Proporções Relativas OUVIDORIA">
+                    <sub-events>
+                        <event-block sid="329284439464198">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="793252803015430" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="196463260446427" type="TituloOuvidoriaOUVIDORIA">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="899062576087235" type="TextoBotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Object">BotaoEnviarOUVIDORIA</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="892261894266383" title="Pressionar Botões OUVIDORIA">
+            <sub-events>
+                <event-group description="" sid="479666335736208" title="Botão Voltar OUVIDORIA">
+                    <sub-events>
+                        <event-block sid="460848206358326">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="414345501230287" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="967393480000713" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="673315455386880" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="595680660146738" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="452032816551195" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="172432215721261">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="247496515256398" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="198728146423667" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="342562986485570" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="836177931407401" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="979813457848076" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="448372717171868" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="593863811016097" type="System">
+                                    <param id="0" name="Layout">TelaInicial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="987660501307260">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="133943908879659" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="223315579993405" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="512011947729389" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="873003101553447" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="627921234999578" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="918733796776232" title="Botão Enviar OUVIDORIA">
+                    <sub-events>
+                        <event-block sid="513041280437883">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="325054870634928" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="963949829626363" type="Touch">
+                                    <param id="0" name="Object">BotaoEnviarOUVIDORIA</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="273963782418427" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="653135873788377" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoEnviarOUVIDORIA&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="672174857945185" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="853027389319448" type="TextoBotaoOuvidoriaINICIAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">ComprimentoBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="747745015699229" type="TextoBotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="916220646883667" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="932580812660265">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="257888141200304" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="576510356080501" type="Touch">
+                                    <param id="0" name="Object">BotaoEnviarOUVIDORIA</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="867646629159223" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoEnviarOUVIDORIA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="307637131228730" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="817090974797570" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="914771619323534" type="TextoBotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="141018236387362" type="TextoBotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="145816249582813" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="143238041620964" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="338066476410900" type="System">
+                                    <param id="0" name="Group name">&quot;Enviar Mensagem OUVIDORIA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="319735674473569">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="433784128737227" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="304399744241343" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoEnviarOUVIDORIA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="921660475003002" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="415935666749462" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="613120314404464" type="TextoBotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="381427212507032" type="TextoBotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="316048008365749" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="877890331787202" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="453020376210879" title="Configurar Campo Mensagem OUVIDORIA">
+            <sub-events>
+                <event-block sid="732207866167535">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="180274946139682" type="CampoMensagemOUVIDORIA" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="758225337355557" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;gray&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="776480613903524" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;Escreva aqui sua mensgem...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="985220978967916">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="437525464979607" type="Touch" />
+                        <condition id="0" name="Compare text" sid="462865688566894" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="390315806112494" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;gray&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="418076185481020" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;Escreva aqui sua mensgem...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="806157307954434">
+                    <conditions>
+                        <condition id="2" name="On clicked" sid="463868619440835" type="CampoMensagemOUVIDORIA" />
+                        <condition id="0" name="Compare text" sid="284852290274133" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;Escreva aqui sua mensgem...&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="655393795796049" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;black&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="941042276197251" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="592450460394947" title="Enviar Mensagem OUVIDORIA">
+            <sub-events>
+                <event-block any="1" sid="391137170764345">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="663486804465435" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;Escreva aqui sua mensgem...&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="618848972333294" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="715923961804733" type="System">
+                            <param id="0" name="Group name">&quot;Enviar Mensagem OUVIDORIA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="526714543218690">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="649237375948814" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;Escreva aqui sua mensgem...&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="218061758216204" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="642464777035713" type="TextoConectandoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="194615477700338" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso OUVIDORIA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>A mensagem preenchida no campo Mensagem é enviado para o email: educa.brasil.gov@gmail.com.</comment>
+                        <event-block sid="202133900872335">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="977248713756311" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="438612172524286" type="AJAX">
+                                    <param id="0" name="Tag">&quot;enviarMensagem&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-EnviarMensagem.php&quot;</param>
+                                    <param id="2" name="Data">&quot;mensagem=&quot;&amp;CampoMensagemOUVIDORIA.Text</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="715123152957086">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="723561285179261" type="AJAX">
+                                    <param id="0" name="Tag">&quot;enviarMensagem&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Caso a conexão seja estabelecida o PHP retorna &apos;Mensagem enviada&apos;.</comment>
+                                <event-block sid="909477481613511">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="527981635518733" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Mensagem enviada.&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="128418745649673" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="303370171301836" type="TextoMensagemEnviadaOUVIDORIA">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="786054478720064" type="CampoMensagemOUVIDORIA">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="930113082020844" type="System">
+                                            <param id="0" name="Group name">&quot;Desabilitar Aviso OUVIDORIA&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="706773378266455" type="System">
+                                            <param id="0" name="Group name">&quot;Enviar Mensagem OUVIDORIA&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="639278577537614">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="262359356108017" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Mensagem enviada.&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="697553527035173" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="526324009573370" type="TextoMensagemNaoEnviadaOUVIDORIA">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="455391134202637" type="CampoMensagemOUVIDORIA">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="563832575215525" type="System">
+                                            <param id="0" name="Group name">&quot;Desabilitar Aviso OUVIDORIA&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="536008990696375" type="System">
+                                            <param id="0" name="Group name">&quot;Enviar Mensagem OUVIDORIA&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Por alguma razão o Construct 2 não compreende requisições de email, logo aqui, ao invés de ser mostrada a mensagem de erro, é mostrada uma mensagem dizendo que a operação foi bem sucedida.</comment>
+                        <event-block sid="967432897909650">
+                            <conditions>
+                                <condition id="1" name="On error" sid="778492276359552" type="AJAX">
+                                    <param id="0" name="Tag">&quot;enviarMensagem&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="539392388414709" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="576820125730460" type="TextoMensagemEnviadaOUVIDORIA">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="383176724121163" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="256722457908274" type="TextoMensagemNaoEnviadaOUVIDORIA">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="469650450426031" type="CampoMensagemOUVIDORIA">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="526056383805826" type="System">
+                                    <param id="0" name="Group name">&quot;Desabilitar Aviso OUVIDORIA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="268132631178976" type="System">
+                                    <param id="0" name="Group name">&quot;Enviar Mensagem OUVIDORIA&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Nesse grupo as chamadas para ativar o aviso são executadas.</comment>
+        <event-group description="" inactive="1" sid="574918940974735" title="Habilitar Aviso OUVIDORIA">
+            <sub-events>
+                <event-block sid="114533790059062">
+                    <conditions>
+                        <condition id="-15" name="Is group active" sid="886055392699765" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso OUVIDORIA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="337394388852131" type="System">
+                            <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="183611983581682" type="System">
+                            <param id="0" name="Group name">&quot;Pressionar Botões OUVIDORIA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="558746257573730" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="500695829768959" type="PretoAvisoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="664383146701329" type="PretoAvisoINICIAL">
+                            <param id="0" name="Width">WindowWidth</param>
+                            <param id="1" name="Height">WindowHeight</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="838633280290488" type="PretoAvisoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="951515252815349" type="BrancoAvisoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="428500047846887" type="TextoConectandoINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="640216082686691" type="TextoMensagemEnviadaOUVIDORIA">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="375594463618187" type="TextoMensagemNaoEnviadaOUVIDORIA">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="775032930216923" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="463144057066317" type="TextoConectandoINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="355147386711765" type="TextoMensagemEnviadaOUVIDORIA">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="496677058970692" type="TextoMensagemNaoEnviadaOUVIDORIA">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="310033535428101" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="432263870735091" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso OUVIDORIA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Nesse grupo as chamadas para desativar o aviso são executadas.</comment>
+        <event-group description="" inactive="1" sid="382521125649596" title="Desabilitar Aviso OUVIDORIA">
+            <sub-events>
+                <event-block sid="614240732173241">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="662580214637327" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="656160657601299" type="CampoMensagemOUVIDORIA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="797887512192472" type="TextoMensagemEnviadaOUVIDORIA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="740736747808353" type="TextoMensagemNaoEnviadaOUVIDORIA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="158705527341939" type="BrancoAvisoINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="376386922493655" type="PretoAvisoINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="812054993811541" type="System">
+                            <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="677645625817004" type="System">
+                            <param id="0" name="Group name">&quot;Pressionar Botões OUVIDORIA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="813486612493917" type="System">
+                            <param id="0" name="Group name">&quot;Enviar Mensagem OUVIDORIA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="632049044200325" type="System">
+                            <param id="0" name="Group name">&quot;Desabilitar Aviso OUVIDORIA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

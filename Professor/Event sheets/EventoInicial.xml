@@ -3,9 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoInicial</name>
     <events>
+        <comment>NOTA: EventoInicial e TelaInicial já foram VERIFICADOS</comment>
+        <comment>NOTA: Tudo funcionando corretamente, apenas um único erro no grupo &apos;Envio de Senha do Usuário&apos;, onde o enviou do e-mail por PHP não é concluido pelo AJAX. Como um erro era apresentado, a mensagem de erro foi invertida com a mensagem de acerto.</comment>
         <include>Global</include>
         <comment>Função para atualizar os textos quando a TelaPrincipal for carregada</comment>
-        <comment>NOTA: TELAJÁ VERIFICADA. TUDO APARENTA ESTAR CORRETO, E TUDO QUE HAVIA PARA SER COMENTADO JÁ FOI. RESTA APENAS ACRESCENTAR AS FUNÇÕES PARA OS BOTÕES: &apos;Esqueci Minha Senha&apos;, &apos;Ouvidoria&apos; e &apos;Sobre&apos;. Após fazer isso, apague esse comentário</comment>
         <event-block sid="722788455269980">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="372969688645670" type="System" />
@@ -249,10 +250,6 @@
                                 <action id="-4" name="Set position to another object" sid="730225116466527" type="TextoBotaoSobreINICIAL">
                                     <param id="0" name="Object">BotaoSobreINICIAL</param>
                                     <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="873766556818527" type="PretoAvisoINICIAL">
-                                    <param id="0" name="Width">WindowWidth</param>
-                                    <param id="1" name="Height">WindowHeight</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -631,8 +628,9 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="-2" name="Go to layout" sid="536018219103049" type="System">
-                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                <action id="-12" name="Set group active" sid="581926329652380" type="System">
+                                    <param id="0" name="Group name">&quot;Envido de Senha do Usuário&quot;</param>
+                                    <param id="1" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -668,6 +666,28 @@
                                 <action id="-12" name="Set group active" sid="568360186395340" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Aqui não é necessário definir o CampoEmailINICIAL com suas configurações iniciais, pois essa operação já é realizada no grupo &apos;Botão Conectar INICIAL&apos;</comment>
+                        <event-block sid="846252763830432">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="322341883668899" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="891105495635883" type="Touch">
+                                    <param id="0" name="Object">BotaoEsqueciSenhaINICIAL</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="513931512030723" type="CampoEmailNICIAL">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="895513285633962" type="CampoEmailNICIAL">
+                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                    <param id="1" name="Value">&quot;red&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="474887533051903" type="CampoEmailNICIAL">
+                                    <param id="0" name="Text">&quot;Preencha aqui seu email de cadastro&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -742,8 +762,8 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="-2" name="Go to layout" sid="839475476938237" type="System">
-                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                <action id="-2" name="Go to layout" sid="839475476938237" type="System">
+                                    <param id="0" name="Layout">TelaOuvidoria</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -853,8 +873,8 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="-2" name="Go to layout" sid="555287864775431" type="System">
-                                    <param id="0" name="Layout">TelaCriarConta</param>
+                                <action id="-2" name="Go to layout" sid="555287864775431" type="System">
+                                    <param id="0" name="Layout">TelaSobreInicial</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -947,6 +967,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="273856599184940" type="TextoConectandoINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="-12" name="Set group active" sid="774282525230868" type="System">
                             <param id="0" name="Group name">&quot;Habilitar Aviso INICIAL&quot;</param>
                             <param id="1" name="State">1</param>
@@ -1133,12 +1156,221 @@
                                 <action id="-15" name="Set visible" sid="122242284441568" type="TextoConexaoFalhaINICIAL">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="678439683443812" type="System">
+                                <action id="-12" name="Set group active" sid="260043037277044" type="System">
                                     <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="570573124966259" type="System">
                                     <param id="0" name="Group name">&quot;Conexão do Usuário&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="477216514777352" title="Envido de Senha do Usuário">
+            <sub-events>
+                <comment>Esse grupo de operações devem vir primeiro, pois o &apos;Construct 2&apos; executa suas ações de cima para baixo. Destava forma é primeiro verificado se o campo foi preenchido de maneira correto, se não foi preenchido corretamente, o grupo inteiro é desabilitado.</comment>
+                <comment>Caso os campos estejam preenchidos de forma invalida a mesagem a seguir é apresentada ao usuário: &apos;Por favor, preencha antes o campo Email, com seu Email cadastrado, que enviaremos sua senha.&apos;</comment>
+                <event-block any="1" sid="946221268407344">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="365384942616737" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;Preencha aqui seu email de cadastro&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="424466347394661" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="620746105139729" type="TextoEnviarSenhaINICIAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="947476238432264" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso INICIAL&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="678439683443812" type="System">
+                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="852515392711783" type="System">
+                            <param id="0" name="Group name">&quot;Envido de Senha do Usuário&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Caso o campo esteja preenchido de forma válida, um aviso é carregado em tela. Especificamente o aviso é &apos;Conectando...&apos;</comment>
+                <event-block sid="693096526871761">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="897371063460844" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;Preencha aqui seu email de cadastro&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="710668409261496" type="CampoEmailNICIAL">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="128668768197416" type="System">
+                            <param id="0" name="Group name">&quot;Habilitar Aviso INICIAL&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>O dado preenchido no campo Email é enviado para o Banco de Dados. O qual retorna a respectiva Senha do usuário daquele Email, caso exista. </comment>
+                        <event-block sid="272931599150999">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="413758766666173" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="704920144268529" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarSenha&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-VerificacaoUsuario.php&quot;</param>
+                                    <param id="2" name="Data">&quot;email=&quot;&amp;CampoEmailNICIAL.Text</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="420989590028415" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="944160290210594">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="211078091278372" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarSenha&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Caso o Email não exista no Banco de Dados a seguinte mensagem é apresentada ao usuário: ERRO. Esse Email não se encontra cadastrado em nosso Banco de Dados. Tente outro Email ou nos contacte através do botão &apos;Ouvidoria&apos;</comment>
+                                <event-block sid="417165451588928">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="484042556168190" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Email Invalido&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="998156638645429" type="TextoConectandoINICIAL">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="152664831591581" type="TextoNaoEnviadaSenhaINICIAL">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="843641605058728" type="System">
+                                            <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="953438267018205" type="System">
+                                            <param id="0" name="Group name">&quot;Envido de Senha do Usuário&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Caso o Email exista no Banco de Dados, o PHP para enviar um e-mail para o usuário é executado.</comment>
+                                <event-block sid="659094475900900">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="869688276164846" type="System">
+                                            <param id="0" name="First value">AJAX.LastData</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Email Invalido&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="320687556971743" type="System">
+                                            <param id="0" name="Variable">SenhaUsuario</param>
+                                            <param id="1" name="Value">AJAX.LastData</param>
+                                        </action>
+                                        <action id="2" name="Post to URL" sid="349562100080407" type="AJAX">
+                                            <param id="0" name="Tag">&quot;enviarEmail&quot;</param>
+                                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-EnviarEmail.php&quot;</param>
+                                            <param id="2" name="Data">&quot;email=&quot;&amp;CampoEmailNICIAL.Text&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario</param>
+                                            <param id="3" name="Method">&quot;POST&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Caso o Banco de Dados não resposta (por estar fora do ar, ou o usuário estar sem acesso a internet), a mensagem &apos;Erro de conexão. Sem acesso ao servidor.&apos; é apresentada para o usuário.</comment>
+                        <event-block sid="416877376421397">
+                            <conditions>
+                                <condition id="1" name="On error" sid="558509095786963" type="AJAX">
+                                    <param id="0" name="Tag">&quot;verificarSenha&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="621195945150177" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="501948711517036" type="TextoConexaoFalhaINICIAL">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="468213063469710" type="System">
+                                    <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="154887582140728" type="System">
+                                    <param id="0" name="Group name">&quot;Envido de Senha do Usuário&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Nesse grupo ele deveria apresentar a mensagem &apos;Senha enviada por Email. Por favor, não esqueça de verificar sua caixa de Spam.&apos; Contudo, o AJAX está dando um erro e caindo na mensagem de baixo. </comment>
+                        <event-block sid="756622992790315">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="471210215753431" type="AJAX">
+                                    <param id="0" name="Tag">&quot;enviarEmail&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="538453863670562" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="116408133297583" type="TextoEnviadaSenhaINICIAL">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="861073826330909" type="System">
+                                    <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="856808205190320" type="System">
+                                    <param id="0" name="Group name">&quot;Envido de Senha do Usuário&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Por alguma razão a requisição enviarEmail está retornando um Erro. Porém o Email está sendo enviado. É por isso que a seguinte mensagem é apresentada aqui: &apos;Senha enviada por Email. Por favor, não esqueça de verificar sua caixa de Spam.&apos;</comment>
+                        <event-block sid="322142290705585">
+                            <conditions>
+                                <condition id="1" name="On error" sid="559261596349141" type="AJAX">
+                                    <param id="0" name="Tag">&quot;enviarEmail&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-15" name="Set visible" sid="420767237428251" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="717957310289287" type="TextoConexaoFalhaINICIAL">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="381175313571965" type="TextoConectandoINICIAL">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="426403862928992" type="TextoEnviadaSenhaINICIAL">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="185471736327192" type="System">
+                                    <param id="0" name="Group name">&quot;Desabilitar Aviso INICIAL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="399547362086114" type="System">
+                                    <param id="0" name="Group name">&quot;Envido de Senha do Usuário&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
                             </actions>
@@ -1177,6 +1409,10 @@
                             <param id="0" name="X">1000</param>
                             <param id="1" name="Y">1000</param>
                         </action>
+                        <action id="-7" name="Set size" sid="873766556818527" type="PretoAvisoINICIAL">
+                            <param id="0" name="Width">WindowWidth</param>
+                            <param id="1" name="Height">WindowHeight</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="108955631736108" type="PretoAvisoINICIAL">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1208,6 +1444,18 @@
                             <param id="0" name="X">1000</param>
                             <param id="1" name="Y">1000</param>
                         </action>
+                        <action id="-3" name="Set position" sid="360836606484414" type="TextoEnviarSenhaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="184893494443317" type="TextoEnviadaSenhaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="990214676040733" type="TextoNaoEnviadaSenhaINICIAL">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
                         <action id="-7" name="Set size" sid="788359271663944" type="BrancoAvisoINICIAL">
                             <param id="0" name="Width">300</param>
                             <param id="1" name="Height">100</param>
@@ -1236,10 +1484,19 @@
                             <param id="0" name="Width">300</param>
                             <param id="1" name="Height">100</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="291442911426999" type="BrancoAvisoINICIAL">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-7" name="Set size" sid="613830760091465" type="TextoEnviarSenhaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="273856599184940" type="TextoConectandoINICIAL">
+                        <action id="-7" name="Set size" sid="948456263280588" type="TextoEnviadaSenhaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="545385898976865" type="TextoNaoEnviadaSenhaINICIAL">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="291442911426999" type="BrancoAvisoINICIAL">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-12" name="Set group active" sid="424472539092314" type="System">
@@ -1276,6 +1533,15 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="189585504673396" type="TextoConexaoFalhaINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="655653641325065" type="TextoEnviarSenhaINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="563750342259791" type="TextoEnviadaSenhaINICIAL">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="995140409816195" type="TextoNaoEnviadaSenhaINICIAL">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="986157421747552" type="BrancoAvisoINICIAL">

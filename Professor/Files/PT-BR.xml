@@ -19,6 +19,9 @@
     <TextoConexaoEmailInvalidoINICIAL>Email Inválido</TextoConexaoEmailInvalidoINICIAL>
     <TextoConexaoSenhaInvalidaINICIAL>Senha Inválida</TextoConexaoSenhaInvalidaINICIAL>
     <TextoConexaoFalhaINICIAL>Erro de conexão. Sem acesso ao servidor.</TextoConexaoFalhaINICIAL>
+    <TextoEnviarSenhaINICIAL>Preencha o campo Email para enviarmos sua senha.</TextoEnviarSenhaINICIAL>
+    <TextoEnviadaSenhaINICIAL>Senha Enviada, verifique sua caixa de Spam.</TextoEnviadaSenhaINICIAL>
+    <TextoNaoEnviadaSenhaINICIAL>Email inválido. Fale conosco pela 'Ouvidoria'</TextoNaoEnviadaSenhaINICIAL>
     <TituloCriarContaCRIARCONTA>Criar Conta</TituloCriarContaCRIARCONTA>
     <TextoNomeCRIARCONTA>Nome:</TextoNomeCRIARCONTA>
     <TextoEmailCRIARCONTA>Email:</TextoEmailCRIARCONTA>
@@ -32,7 +35,7 @@
     <TextoConexaoInvalidaCRIARCONTA>Email já cadastrado</TextoConexaoInvalidaCRIARCONTA>
     <TextoConexaoFalhaCRIARCONTA>Erro de conexão. Sem acesso ao servidor.</TextoConexaoFalhaCRIARCONTA>
     <TituloSobreSOBRE>Sobre</TituloSobreSOBRE>
-    <TextoDescricaoSOBRE>Este é um projeto de educação sexual infantil, desenvolvido na Universidade do Estado de Santa Catarina.</TextoDescricaoSOBRE>
+    <TextoDescricaoSOBRE>Este é um projeto de educação sexual infantil, desenvolvido na Universidade do Estado de Santa Catarina. Essa aplicação foi desenvolvida por Alexandre Mendonça Fava, sob orientação da doutora Carla Diacui Medeiros Berkenbrock baseado na ideia original de Tiago Francisco Andrade Diocesano. O objetivo desta aplicação antes da obtenção de nota para o Trabalho de Conclusão de Curso é proporcionar um sistema que possa ajudar a prevenir e evitar a violência sexual infantil.</TextoDescricaoSOBRE>
     <TituloMaterialApoioMATERIALAPOIO>Material de Apoio</TituloMaterialApoioMATERIALAPOIO>
     <TextoDescricaoMaterialApoioMATERIALAPOIO>Abaixo encontram-se endereços de internet que visam auxiliar o professor:</TextoDescricaoMaterialApoioMATERIALAPOIO>
     <TituloPerfilPERFIL>Perfil</TituloPerfilPERFIL>
@@ -92,4 +95,9 @@
     <TextoBotaoCancelarTurmaTURMAADICIONARFINAL>Cancelar</TextoBotaoCancelarTurmaTURMAADICIONARFINAL>
     <TextoBotaoCriarTurmaTURMAADICIONARFINAL>Criar</TextoBotaoCriarTurmaTURMAADICIONARFINAL>
     <TextoBotaoTurmaTURMAADICIONARFINAL>Carregando...</TextoBotaoTurmaTURMAADICIONARFINAL>
+    <TituloOuvidoriaOUVIDORIA>Ouvidoria</TituloOuvidoriaOUVIDORIA>
+    <TextoDescricaoOUVIDORIA>No campo abaixo, redija um texto, relatando um problema, dando uma sugestão, ou um elogio. Todas as críticas são bem-vindas, desde que estejam acompanhadas dos seus devidos argumentos. Caso queira receber uma resposta, não esqueça de informar um email pessoal para que possamos estabelecer contato. Para enviar suas mensagem, após redigi-la é necessário apenas precionar o botão 'Enviar' abaixo. </TextoDescricaoOUVIDORIA>
+    <TextoMensagemEnviadaOUVIDORIA>Mensagem enviada com sucesso.</TextoMensagemEnviadaOUVIDORIA>
+    <TextoMensagemNaoEnviadaOUVIDORIA>Falha no envio da mensagem.</TextoMensagemNaoEnviadaOUVIDORIA>
+    <TextoBotaoEnviarOUVIDORIA>Enviar</TextoBotaoEnviarOUVIDORIA>
 </textos>

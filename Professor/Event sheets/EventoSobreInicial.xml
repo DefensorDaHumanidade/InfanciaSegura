@@ -1,55 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>EventoSobre</name>
+    <name>EventoSobreInicial</name>
     <events>
-        <comment>NOTA: EventoSobre e TelaSobre já foram VERIFICADOS</comment>
+        <comment>NOTA: EventoSobreInicial e TelaSobreInicial já foram VERIFICADOS</comment>
         <comment>NOTA: Tudo parece funcionar como deveria</comment>
         <include>Global</include>
         <comment>Função para atualizar os textos quando a TelaPrincipal for carregada</comment>
-        <event-block sid="873277760252000">
+        <event-block sid="123619623122693">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="614222425751916" type="System" />
+                <condition id="-2" name="On start of layout" sid="956465811128022" type="System" />
             </conditions>
             <actions>
-                <action id="-12" name="Set group active" sid="535393205961926" type="System">
+                <action id="-12" name="Set group active" sid="407938040885453" type="System">
                     <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="-12" name="Set group active" sid="116349628065137" type="System">
+                <action id="-12" name="Set group active" sid="359361060882381" type="System">
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
             </actions>
         </event-block>
         <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>
-        <event-group description="" sid="806676057529185" title="Limitar rolagem SOBRE">
+        <event-group description="" sid="667259746379000" title="Limitar rolagem SOBREINICIAL">
             <sub-events>
-                <event-block sid="601354933408106">
+                <event-block sid="762887924408084">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="311106877041143" type="System">
+                        <condition id="-8" name="Compare two values" sid="447865137363161" type="System">
                             <param id="0" name="First value">0</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">RolagemTotal</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="696120308497006" type="System">
+                        <action id="-9" name="Set value" sid="979729498526269" type="System">
                             <param id="0" name="Variable">RolagemTotal</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="490927267889228">
+                <event-block sid="922359295944913">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="984020311400127" type="System">
+                        <condition id="-8" name="Compare two values" sid="750928322225794" type="System">
                             <param id="0" name="First value">RolagemTotal</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">-300</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="891497303895880" type="System">
+                        <action id="-9" name="Set value" sid="301886374794673" type="System">
                             <param id="0" name="Variable">RolagemTotal</param>
                             <param id="1" name="Value">-300</param>
                         </action>
@@ -57,24 +57,24 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="245811047856344" title="Posições/Proporções SOBRE">
+        <event-group description="" sid="454556055915178" title="Posições/Proporções SOBREINICIAL">
             <sub-events>
-                <event-group description="" sid="746080509213696" title="Posições/Proporções Paisagem SOBRE">
+                <event-group description="" sid="259727551768289" title="Posições/Proporções Paisagem SOBREINICIAL">
                     <sub-events>
-                        <event-block sid="803165034580243">
+                        <event-block sid="836674831165914">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="139946249406993" type="System">
+                                <condition id="-8" name="Compare two values" sid="273857196470266" type="System">
                                     <param id="0" name="First value">WindowWidth</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Second value">WindowHeight</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="728232775633969" type="TextoDescricaoSOBRE">
+                                <action id="-7" name="Set size" sid="185945378957750" type="TextoDescricaoSOBRE">
                                     <param id="0" name="Width">800</param>
                                     <param id="1" name="Height">800</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="392316124776350" type="TextoDescricaoSOBRE">
+                                <action id="-3" name="Set position" sid="323504118299671" type="TextoDescricaoSOBRE">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo</param>
                                 </action>
@@ -82,22 +82,22 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="937294674527254" title="Posições/Proporções Retrato SOBRE">
+                <event-group description="" sid="253536080295365" title="Posições/Proporções Retrato SOBREINICIAL">
                     <sub-events>
-                        <event-block sid="549876321573319">
+                        <event-block sid="109199771909563">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="677854493190926" type="System">
+                                <condition id="-8" name="Compare two values" sid="702821210589578" type="System">
                                     <param id="0" name="First value">WindowWidth</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">WindowHeight</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="413201211292480" type="TextoDescricaoSOBRE">
+                                <action id="-7" name="Set size" sid="694010265536886" type="TextoDescricaoSOBRE">
                                     <param id="0" name="Width">WindowWidth-(DistanciaLateralRetrato*2)</param>
                                     <param id="1" name="Height">800</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="775583528667980" type="TextoDescricaoSOBRE">
+                                <action id="-3" name="Set position" sid="160462440316515" type="TextoDescricaoSOBRE">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
                                 </action>
@@ -105,14 +105,14 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="472535670974054" title="Posições/Proporções Relativas SOBRE">
+                <event-group description="" sid="659412749815215" title="Posições/Proporções Relativas SOBREINICIAL">
                     <sub-events>
-                        <event-block sid="460350342143899">
+                        <event-block sid="625156759021928">
                             <conditions>
-                                <condition id="-1" name="Every tick" sid="393003590579623" type="System" />
+                                <condition id="-1" name="Every tick" sid="349912589109579" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="737815026740960" type="TituloSobreSOBRE">
+                                <action id="-3" name="Set position" sid="268911755623114" type="TituloSobreSOBRE">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
                                 </action>
@@ -122,79 +122,79 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="482699255806274" title="Pressionar Botões SOBRE">
+        <event-group description="" sid="879146839207717" title="Pressionar Botões SOBREINICIAL">
             <sub-events>
-                <event-group description="" sid="670057549217392" title="Botão Voltar SOBRE">
+                <event-group description="" sid="885951014994328" title="Botão Voltar SOBREINICIAL">
                     <sub-events>
-                        <event-block sid="309433579719067">
+                        <event-block sid="561606578139151">
                             <conditions>
-                                <condition id="0" name="On any touch start" sid="360815384485585" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="862684727394782" type="Touch">
+                                <condition id="0" name="On any touch start" sid="833249710042325" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="898004360992507" type="Touch">
                                     <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="175963642216280" type="System">
+                                <action id="-12" name="Set group active" sid="656183407874994" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="378995597691205" type="System">
+                                <action id="-9" name="Set value" sid="526551855786148" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Value">&quot;BotaoVoltar&quot;</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="655186655433232" type="BotaoVoltar">
+                                <action id="5" name="Set frame" sid="693909405687587" type="BotaoVoltar">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="430866820711721">
+                        <event-block sid="973306595927154">
                             <conditions>
-                                <condition id="1" name="On any touch end" sid="695777481758323" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="948311028275985" type="Touch">
+                                <condition id="1" name="On any touch end" sid="236210779047551" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="629153827644013" type="Touch">
                                     <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="782695179854598" type="System">
+                                <condition id="-14" name="Compare variable" sid="363995988881405" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="143497947811190" type="System">
+                                <action id="-9" name="Set value" sid="960883324482647" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Value">&quot;nenhum&quot;</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="951147113668192" type="BotaoVoltar">
+                                <action id="5" name="Set frame" sid="287541643128983" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="927049343159074" type="System">
+                                <action id="-12" name="Set group active" sid="705069185759134" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="484473232532657" type="System">
-                                    <param id="0" name="Layout">TelaPrincipal</param>
+                                <action id="-2" name="Go to layout" sid="103598709890328" type="System">
+                                    <param id="0" name="Layout">TelaInicial</param>
                                 </action>
                             </actions>
                         </event-block>
                         <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
-                        <event-block sid="974820643772567">
+                        <event-block sid="825776609642318">
                             <conditions>
-                                <condition id="1" name="On any touch end" sid="893790513311730" type="Touch" />
-                                <condition id="-14" name="Compare variable" sid="151960438632738" type="System">
+                                <condition id="1" name="On any touch end" sid="750821366315975" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="776465621490548" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="534876588126284" type="System">
+                                <action id="-9" name="Set value" sid="511460401699940" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Value">&quot;nenhum&quot;</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="896315157463165" type="BotaoVoltar">
+                                <action id="5" name="Set frame" sid="669343946872970" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="518143319051909" type="System">
+                                <action id="-12" name="Set group active" sid="308733210176226" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>

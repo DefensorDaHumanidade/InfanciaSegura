@@ -11,9 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">TelaCarregamento</layout>
-        <layout order="2">TelaInicial</layout>
+        <layout active="1" order="2">TelaInicial</layout>
+        <layout order="5">TelaCriarConta</layout>
         <event-sheet order="1">EventoCriarConta</event-sheet>
-        <event-sheet active="1" order="3">EventoInicial</event-sheet>
+        <event-sheet order="3">EventoInicial</event-sheet>
         <event-sheet order="4">Global</event-sheet>
     </open-tabs>
     <properties>
@@ -54,6 +55,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BrancoAvisoINICIAL/" />
         <folder expanded="1" path="animation-folder/TopoInicial/" />
         <folder expanded="1" path="animation-folder/PretoAvisoINICIAL/" />
+        <folder expanded="1" path="animation-folder/BotaoEnviarOUVIDORIA/" />
         <folder expanded="1" path="animation-folder/BotaoConfiguracoesPRINCIPAL/" />
         <folder expanded="1" path="animation-folder/BotaoMaterialApoioPRINCIPAL/" />
         <folder expanded="1" path="animation-folder/BotaoPerfilPRINCIPAL/" />
@@ -61,8 +63,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoTurmasPRINCIPAL/" />
         <folder expanded="1" path="animation-folder/TopoPrincipal/" />
         <folder expanded="1" path="animation-folder/BotaoCriarContaCRIARCONTA/" />
-        <folder expanded="1" path="animation-folder/CriarContaVOLTARInicial/" />
-        <folder expanded="1" path="animation-folder/TopoCriarConta/" />
+        <folder expanded="1" path="animation-folder/BotaoVoltar/" />
+        <folder expanded="1" path="animation-folder/TopoTelaSemTitulo/" />
         <folder expanded="1" path="animation-folder/PretoAvisoCRIARCONTA/" />
         <folder expanded="1" path="animation-folder/BrancoAvisoCRIARCONTA/" />
         <folder expanded="1" path="animation-folder/BotaoExcluirPERFIL/" />

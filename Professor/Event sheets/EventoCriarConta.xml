@@ -77,7 +77,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="205197737202394" type="TextoNomeCRIARCONTA">
                                     <param id="0" name="X">600</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="964070743947211" type="CampoNomeCRIARCONTA">
                                     <param id="0" name="Width">600</param>
@@ -114,7 +114,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="946178587116393" type="TextoNomeCRIARCONTA">
                                     <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="243543822369098" type="CampoNomeCRIARCONTA">
                                     <param id="0" name="Width">WindowWidth-155</param>
@@ -147,8 +147,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="388241526648781" type="TituloCriarContaCRIARCONTA">
-                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                    <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="984576931784639" type="TextoEmailCRIARCONTA">
                                     <param id="0" name="X">TextoNomeCRIARCONTA.X</param>
@@ -220,7 +220,7 @@
                         <condition id="-8" name="Compare two values" sid="905610899665777" type="System">
                             <param id="0" name="First value">CampoNomeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -234,7 +234,7 @@
                         <condition id="-8" name="Compare two values" sid="699626096058516" type="System">
                             <param id="0" name="First value">CampoNomeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -248,7 +248,7 @@
                         <condition id="-8" name="Compare two values" sid="768078464049892" type="System">
                             <param id="0" name="First value">CampoEmailCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -262,7 +262,7 @@
                         <condition id="-8" name="Compare two values" sid="861480347826814" type="System">
                             <param id="0" name="First value">CampoEmailCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -276,7 +276,7 @@
                         <condition id="-8" name="Compare two values" sid="722289902184603" type="System">
                             <param id="0" name="First value">CampoSenhaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -290,7 +290,7 @@
                         <condition id="-8" name="Compare two values" sid="516991798037631" type="System">
                             <param id="0" name="First value">CampoSenhaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -304,7 +304,7 @@
                         <condition id="-8" name="Compare two values" sid="362000413121810" type="System">
                             <param id="0" name="First value">CampoEscolaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -318,7 +318,7 @@
                         <condition id="-8" name="Compare two values" sid="269718925781606" type="System">
                             <param id="0" name="First value">CampoEscolaCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -332,7 +332,7 @@
                         <condition id="-8" name="Compare two values" sid="262305809637741" type="System">
                             <param id="0" name="First value">ListaCidadeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -347,7 +347,7 @@
                         <condition id="-8" name="Compare two values" sid="208069338609264" type="System">
                             <param id="0" name="First value">ListaCidadeCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -362,7 +362,7 @@
                         <condition id="-8" name="Compare two values" sid="223006469239001" type="System">
                             <param id="0" name="First value">ListaEstadoCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -377,7 +377,7 @@
                         <condition id="-8" name="Compare two values" sid="305363897451696" type="System">
                             <param id="0" name="First value">ListaEstadoCRIARCONTA.Y</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -397,7 +397,7 @@
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="919133621340505" type="Touch" />
                                 <condition id="4" name="Is touching object" sid="912617513985116" type="Touch">
-                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                    <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -405,7 +405,7 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="315740439290918" type="CriarContaVOLTARInicial">
+                                <action id="5" name="Set frame" sid="315740439290918" type="BotaoVoltar">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="473879633593144" type="System">
@@ -418,7 +418,7 @@
                                 <condition id="1" name="On any touch end" sid="481459920610206" type="Touch" />
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="483660639292181" type="CriarContaVOLTARInicial">
+                                <action id="5" name="Set frame" sid="483660639292181" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="356422408066746" type="System">

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>TelaSobre</name>
-    <sid>313924258545392</sid>
-    <event-sheet>EventoSobre</event-sheet>
+    <name>TelaSobreInicial</name>
+    <sid>486725284456562</sid>
+    <event-sheet>EventoSobreInicial</event-sheet>
     <size>
         <width>2000</width>
         <height>2000</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Fundo" sid="929771719975820">
+        <layer name="Fundo" sid="827837983902806">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ImagemDeFundo" uid="72">
+                <instance type="ImagemDeFundo" uid="226">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -54,7 +54,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Elementos" sid="973733930470946">
+        <layer name="Elementos" sid="454151043598825">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TextoDescricaoSOBRE" uid="75">
+                <instance type="TextoDescricaoSOBRE" uid="227">
                     <properties>
                         <text>Este é um projeto de educação sexual infantil, desenvolvido na Universidade do Estado de Santa Catarina.</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -100,7 +100,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Topo" sid="627440574737243">
+        <layer name="Topo" sid="665265952769545">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -116,7 +116,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TopoTelaSemTitulo" uid="73">
+                <instance type="TopoTelaSemTitulo" uid="228">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -138,7 +138,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TituloSobreSOBRE" uid="74">
+                <instance type="TituloSobreSOBRE" uid="229">
                     <properties>
                         <text>Sobre</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -165,7 +165,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoVoltar" uid="76">
+                <instance type="BotaoVoltar" uid="230">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

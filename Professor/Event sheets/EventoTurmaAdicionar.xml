@@ -128,7 +128,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="739675343152065" type="TextoNomeTURMAADICIONAR">
                                     <param id="0" name="X">600</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="353845818618353" type="FundoBotaoTurmaTURMAADICIONAR">
                                     <param id="0" name="Width">800</param>
@@ -159,7 +159,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="256764567290937" type="TextoNomeTURMAADICIONAR">
                                     <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="896267169212391" type="FundoBotaoTurmaTURMAADICIONAR">
                                     <param id="0" name="Width">WindowWidth-20</param>
@@ -197,8 +197,8 @@
                                     <param id="1" name="Y">TextoSenhaTurmaTURMAADICIONAR.Y</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="816032121569040" type="TituloAdicionarTurmaTURMAADICIONAR">
-                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                    <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="350078098198171" type="CampoNomeTURMAADICIONAR">
                                     <param id="0" name="X">TextoNomeTURMAADICIONAR.X+120</param>
@@ -401,7 +401,7 @@
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="712326882783852" type="Touch" />
                                 <condition id="4" name="Is touching object" sid="651277673303218" type="Touch">
-                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                    <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -409,7 +409,7 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="393263341572864" type="CriarContaVOLTARInicial">
+                                <action id="5" name="Set frame" sid="393263341572864" type="BotaoVoltar">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="425144838452381" type="System">
@@ -422,7 +422,7 @@
                                 <condition id="1" name="On any touch end" sid="651483020345310" type="Touch" />
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="176237918999546" type="CriarContaVOLTARInicial">
+                                <action id="5" name="Set frame" sid="176237918999546" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="637405164237332" type="System">

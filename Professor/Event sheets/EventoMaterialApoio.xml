@@ -103,16 +103,16 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="924126777438653" type="TituloMaterialApoioMATERIALAPOIO">
-                                    <param id="0" name="X">1000+TopoCriarConta.Width/20</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                    <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="517146406535765" type="TextoDescricaoMaterialApoioMATERIALAPOIO">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+50+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+50+RolagemTotal</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="153885858989464" type="TextoEnderecoMateriaisMATERIALAPOIO">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+(TopoCriarConta.Height/1.6)+120+TextoEnderecoMateriaisMATERIALAPOIO.IID*100+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+120+TextoEnderecoMateriaisMATERIALAPOIO.IID*100+RolagemTotal</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -128,7 +128,7 @@
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="515991300001889" type="Touch" />
                                 <condition id="4" name="Is touching object" sid="631726493584938" type="Touch">
-                                    <param id="0" name="Object">CriarContaVOLTARInicial</param>
+                                    <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -136,7 +136,7 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="706310758299954" type="CriarContaVOLTARInicial">
+                                <action id="5" name="Set frame" sid="706310758299954" type="BotaoVoltar">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="792950548193603" type="System">
@@ -149,7 +149,7 @@
                                 <condition id="1" name="On any touch end" sid="813744915729067" type="Touch" />
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="764553796996636" type="CriarContaVOLTARInicial">
+                                <action id="5" name="Set frame" sid="764553796996636" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="502910095320305" type="System">

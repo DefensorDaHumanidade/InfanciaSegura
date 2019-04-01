@@ -85,8 +85,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>377</x>
-                        <y>-310</y>
+                        <x>242</x>
+                        <y>-496</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -112,8 +112,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>372</x>
-                        <y>-244</y>
+                        <x>237</x>
+                        <y>-430</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -140,8 +140,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>501</x>
-                        <y>-308</y>
+                        <x>366</x>
+                        <y>-494</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
@@ -166,8 +166,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>495</x>
-                        <y>-237</y>
+                        <x>360</x>
+                        <y>-423</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
@@ -186,8 +186,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>798</x>
-                        <y>-263</y>
+                        <x>663</x>
+                        <y>-449</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -208,8 +208,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>977</x>
-                        <y>-263</y>
+                        <x>842</x>
+                        <y>-449</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -230,8 +230,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1176</x>
-                        <y>-256</y>
+                        <x>1041</x>
+                        <y>-442</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -252,8 +252,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1399</x>
-                        <y>-261</y>
+                        <x>1264</x>
+                        <y>-447</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -274,8 +274,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1612</x>
-                        <y>-263</y>
+                        <x>1477</x>
+                        <y>-449</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -301,8 +301,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>791</x>
-                        <y>-261</y>
+                        <x>656</x>
+                        <y>-447</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -328,8 +328,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>979</x>
-                        <y>-265</y>
+                        <x>844</x>
+                        <y>-451</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -355,8 +355,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1190</x>
-                        <y>-266</y>
+                        <x>1055</x>
+                        <y>-452</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -382,8 +382,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1398</x>
-                        <y>-265</y>
+                        <x>1263</x>
+                        <y>-451</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -409,8 +409,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1619</x>
-                        <y>-262</y>
+                        <x>1484</x>
+                        <y>-448</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -491,8 +491,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1767</x>
-                        <y>-264</y>
+                        <x>1632</x>
+                        <y>-450</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -513,8 +513,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1890</x>
-                        <y>-261</y>
+                        <x>1755</x>
+                        <y>-447</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -540,8 +540,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1838</x>
-                        <y>-200</y>
+                        <x>1703</x>
+                        <y>-386</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -567,8 +567,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1821</x>
-                        <y>-171</y>
+                        <x>1686</x>
+                        <y>-357</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -594,8 +594,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1826</x>
-                        <y>-145</y>
+                        <x>1691</x>
+                        <y>-331</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -621,8 +621,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1824</x>
-                        <y>-54</y>
+                        <x>1689</x>
+                        <y>-240</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -648,8 +648,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1816</x>
-                        <y>-116</y>
+                        <x>1681</x>
+                        <y>-302</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -675,8 +675,89 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1824</x>
-                        <y>-89</y>
+                        <x>1689</x>
+                        <y>-275</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoEnviarSenhaINICIAL" uid="223">
+                    <properties>
+                        <text>Preencha o campo Email que enviaremos sua senha.</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1698</x>
+                        <y>-191</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoEnviadaSenhaINICIAL" uid="224">
+                    <properties>
+                        <text>Senha Enviada, verifique sua caixa de Spam.</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1708</x>
+                        <y>-118</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoNaoEnviadaSenhaINICIAL" uid="225">
+                    <properties>
+                        <text>Email inválido. Fale conosco pela &apos;Ouvidoria&apos;</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1713</x>
+                        <y>-52</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>

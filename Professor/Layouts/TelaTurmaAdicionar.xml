@@ -88,7 +88,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TopoCriarConta" uid="93">
+                <instance type="TopoTelaSemTitulo" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -110,7 +110,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CriarContaVOLTARInicial" uid="94">
+                <instance type="BotaoVoltar" uid="94">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -123,10 +123,10 @@
                         <x>-464</x>
                         <y>340</y>
                         <z>0</z>
-                        <width>739</width>
-                        <height>738</height>
+                        <width>800</width>
+                        <height>800</height>
                         <depth>0</depth>
-                        <hotspotX>0.500676572</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

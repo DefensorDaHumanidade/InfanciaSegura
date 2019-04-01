@@ -65,7 +65,7 @@
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">1000-(WindowHeight/2)</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="106717961354836" type="TopoCriarConta">
+                                <action id="-3" name="Set position" sid="106717961354836" type="TopoTelaSemTitulo">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">1000-(WindowHeight/2)</param>
                                 </action>
@@ -98,15 +98,15 @@
                                 <action id="9" name="Set scale" sid="408270374860630" type="TopoPrincipal">
                                     <param id="0" name="Scale">0.5</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="935492898678570" type="TopoCriarConta">
+                                <action id="9" name="Set scale" sid="935492898678570" type="TopoTelaSemTitulo">
                                     <param id="0" name="Scale">0.5</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="596344132152731" type="CriarContaVOLTARInicial">
+                                <action id="-3" name="Set position" sid="596344132152731" type="BotaoVoltar">
                                     <param id="0" name="X">610</param>
                                     <param id="1" name="Y">1080-(WindowHeight/2)</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="898087753509909" type="CriarContaVOLTARInicial">
-                                    <param id="0" name="Scale">0.2</param>
+                                <action id="9" name="Set scale" sid="898087753509909" type="BotaoVoltar">
+                                    <param id="0" name="Scale">0.15</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -129,15 +129,15 @@
                                 <action id="9" name="Set scale" sid="333893924796410" type="TopoPrincipal">
                                     <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="743013307413775" type="TopoCriarConta">
+                                <action id="9" name="Set scale" sid="743013307413775" type="TopoTelaSemTitulo">
                                     <param id="0" name="Scale">WindowWidth/(800+WindowHeight)</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="667079873192032" type="CriarContaVOLTARInicial">
+                                <action id="-3" name="Set position" sid="667079873192032" type="BotaoVoltar">
                                     <param id="0" name="X">1040-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoCriarConta.Y+TopoCriarConta.Height/3</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="648540550105523" type="CriarContaVOLTARInicial">
-                                    <param id="0" name="Scale">0.1</param>
+                                <action id="9" name="Set scale" sid="648540550105523" type="BotaoVoltar">
+                                    <param id="0" name="Scale">0.08</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -205,6 +205,15 @@
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="904396061112267" type="TextoConexaoSenhaInvalidaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="129475531567519" type="TextoEnviarSenhaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="416024086044192" type="TextoEnviadaSenhaINICIAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="460285376452563" type="TextoNaoEnviadaSenhaINICIAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="676146814075523" type="TextoBotaoTurmasPRINCIPAL">
@@ -455,6 +464,25 @@
                                 <action id="3" name="Set font size" sid="967073540631387" type="TextoBotaoTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="565994267287234" type="TituloOuvidoriaOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="496401581470575" type="TextoDescricaoOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="122744751017971" type="CampoMensagemOUVIDORIA">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="410714971668248" type="TextoBotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="267563351057094" type="TextoMensagemEnviadaOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="581559772537467" type="TextoMensagemNaoEnviadaOUVIDORIA">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="387988979676479" type="System">
                                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                                     <param id="1" name="State">0</param>
@@ -554,6 +582,15 @@
                                         </action>
                                         <action id="0" name="Set text" sid="599657853711851" type="TextoConexaoSenhaInvalidaINICIAL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoConexaoSenhaInvalidaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="653922846622622" type="TextoEnviarSenhaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEnviarSenhaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="895015354916686" type="TextoEnviadaSenhaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoEnviadaSenhaINICIAL/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="233343385159077" type="TextoNaoEnviadaSenhaINICIAL">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoNaoEnviadaSenhaINICIAL/text()&quot;)</param>
                                         </action>
                                         <action id="0" name="Set text" sid="785769310921586" type="TituloCriarContaCRIARCONTA">
                                             <param id="0" name="Text">XML.StringValue(&quot;TituloCriarContaCRIARCONTA/text()&quot;)</param>
@@ -774,6 +811,21 @@
                                         <action disabled="1" id="0" name="Set text" sid="413070235250790" type="TextoBotaoTurmaTURMAADICIONARFINAL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoTurmaTURMAADICIONARFINAL/text()&quot;)</param>
                                         </action>
+                                        <action id="0" name="Set text" sid="935694618330905" type="TituloOuvidoriaOUVIDORIA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TituloOuvidoriaOUVIDORIA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="137537330240490" type="TextoDescricaoOUVIDORIA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoDescricaoOUVIDORIA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="161686235270680" type="TextoBotaoEnviarOUVIDORIA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoEnviarOUVIDORIA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="340067460011233" type="TextoMensagemEnviadaOUVIDORIA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoMensagemEnviadaOUVIDORIA/text()&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="460300956563625" type="TextoMensagemNaoEnviadaOUVIDORIA">
+                                            <param id="0" name="Text">XML.StringValue(&quot;TextoMensagemNaoEnviadaOUVIDORIA/text()&quot;)</param>
+                                        </action>
                                         <action id="-12" name="Set group active" sid="367187836438621" type="System">
                                             <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
                                             <param id="1" name="State">0</param>
@@ -795,7 +847,7 @@
                     <actions>
                         <action id="-7" name="Set size" sid="985947468379406" type="TituloCriarContaCRIARCONTA">
                             <param id="0" name="Width">WindowWidth</param>
-                            <param id="1" name="Height">TopoCriarConta.ImageHeight</param>
+                            <param id="1" name="Height">TopoTelaSemTitulo.ImageHeight</param>
                         </action>
                     </actions>
                 </event-block>
@@ -807,10 +859,10 @@
                     <sub-events>
                         <event-block sid="592490528132804">
                             <conditions>
-                                <condition id="-18" name="On created" sid="143028920417239" type="CriarContaVOLTARInicial" />
+                                <condition id="-18" name="On created" sid="143028920417239" type="BotaoVoltar" />
                             </conditions>
                             <actions>
-                                <action id="2" name="Stop" sid="393327451593327" type="CriarContaVOLTARInicial" />
+                                <action id="2" name="Stop" sid="393327451593327" type="BotaoVoltar" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -972,6 +1024,39 @@
                                     </conditions>
                                     <actions>
                                         <action id="-7" name="Set size" sid="813643919629168" type="TextoBotaoCriarContaCRIARCONTA">
+                                            <param id="0" name="Width">ComprimentoBotao</param>
+                                            <param id="1" name="Height">AlturaBotao</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="775044290570351" title="Criando Botões OUVIDORIA">
+                    <sub-events>
+                        <event-block sid="749068983161471">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="437925673966683" type="BotaoEnviarOUVIDORIA" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="529448825404681" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="230551464294291" type="BotaoEnviarOUVIDORIA">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="817563823609333" title="Configurações Texto dos Botões OUVIDORIA">
+                            <sub-events>
+                                <event-block sid="406471880494260">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="800500746806692" type="TextoBotaoEnviarOUVIDORIA" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="303070310963855" type="TextoBotaoEnviarOUVIDORIA">
                                             <param id="0" name="Width">ComprimentoBotao</param>
                                             <param id="1" name="Height">AlturaBotao</param>
                                         </action>

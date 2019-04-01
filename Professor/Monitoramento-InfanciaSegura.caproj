@@ -165,6 +165,35 @@
             <object-type name="TextoConexaoSenhaInvalidaINICIAL" sid="246049010061261">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TextoEnviarSenhaINICIAL" sid="738098693132242">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoEnviadaSenhaINICIAL" sid="190982275479827">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoNaoEnviadaSenhaINICIAL" sid="388187069831245">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoDescricaoOUVIDORIA" sid="319215092217368">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoEnviarOUVIDORIA" sid="523049673757132">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598675145641766" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextoBotaoEnviarOUVIDORIA" sid="630931792377604">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoMensagemEnviadaOUVIDORIA" sid="101938243228458">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoMensagemNaoEnviadaOUVIDORIA" sid="321578667860493">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Principal">
             <object-type name="BotaoConfiguracoesPRINCIPAL" sid="922793875131276">
@@ -252,34 +281,12 @@
             <object-type name="CampoSenhaCRIARCONTA" sid="223654986483826">
                 <plugin id="TextBox" />
             </object-type>
-            <object-type name="CriarContaVOLTARInicial" sid="750534333786855">
+            <object-type name="BotaoVoltar" sid="750534333786855">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="386002464504468" speed="5">
-                        <frame duration="1" hotspotX="0.500677" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.0584236" y="0.379495" />
-                                <point x="0.309288" y="0.140159" />
-                                <point x="0.822226" y="0.355515" />
-                                <point x="0.928198" y="0.504218" />
-                                <point x="0.929635" y="0.644531" />
-                                <point x="0.840169" y="0.786016" />
-                                <point x="0.675676" y="0.853431" />
-                                <point x="0.0982396" y="0.805823" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.500677" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.00700281" y="0.502801" />
-                                <point x="0.122549" y="0.184874" />
-                                <point x="0.464986" y="0.0154062" />
-                                <point x="0.837535" y="0.15056" />
-                                <point x="0.988796" y="0.485994" />
-                                <point x="0.875351" y="0.815826" />
-                                <point x="0.492997" y="0.992997" />
-                                <point x="0.12395" y="0.820728" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -313,7 +320,7 @@
             <object-type name="TituloCriarContaCRIARCONTA" sid="507591517230669">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TopoCriarConta" sid="293893624707432">
+            <object-type name="TopoTelaSemTitulo" sid="293893624707432">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121844558631845" speed="5">
@@ -429,6 +436,9 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="TextoDescricaoSOBRE" sid="867721007138113">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TituloOuvidoriaOUVIDORIA" sid="811226495493757">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -953,6 +963,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CampoMensagemOUVIDORIA" sid="892224567280339">
+            <plugin id="TextBox" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -961,10 +974,11 @@
         <layout>TelaPrincipal.xml</layout>
         <layout>TelaCriarConta.xml</layout>
         <layout>TelaSobre.xml</layout>
+        <layout>TelaSobreInicial.xml</layout>
         <layout>TelaMaterialApoio.xml</layout>
         <layout>TelaConfiguracoes.xml</layout>
         <layout>TelaPerfil.xml</layout>
-        <layout>TelaPerfilAdicionarEscola.xml</layout>
+        <layout>TelaOuvidoria.xml</layout>
         <layout>TelaTurma.xml</layout>
         <layout>TelaTurmaAdicionar.xml</layout>
         <layout>TelaTurmaAdicionarFinal.xml</layout>
@@ -982,13 +996,14 @@
         <event-sheet>EventoMaterialApoio.xml</event-sheet>
         <event-sheet>EventoConfiguracoes.xml</event-sheet>
         <event-sheet>EventoPerfil.xml</event-sheet>
-        <event-sheet>EventoPerfilAdicionarEscola.xml</event-sheet>
+        <event-sheet>EventoOuvidoria.xml</event-sheet>
         <event-sheet>EventoTurma.xml</event-sheet>
         <event-sheet>EventoTurmaAdicionar.xml</event-sheet>
         <event-sheet>EventoTurmaAdicionarFinal.xml</event-sheet>
         <event-sheet>EventoTurmaEspecifica.xml</event-sheet>
         <event-sheet>EventoTurmaAjustes.xml</event-sheet>
         <event-sheet>EventoTurmaEspecificaAluno.xml</event-sheet>
+        <event-sheet>EventoSobreInicial.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">
