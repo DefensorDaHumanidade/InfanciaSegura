@@ -11,11 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">TelaCarregamento</layout>
-        <layout active="1" order="2">TelaInicial</layout>
-        <layout order="5">TelaCriarConta</layout>
-        <event-sheet order="1">EventoCriarConta</event-sheet>
+        <layout order="2">TelaInicial</layout>
+        <layout order="4">TelaCriarConta</layout>
+        <event-sheet active="1" order="5">EventoCriarConta</event-sheet>
         <event-sheet order="3">EventoInicial</event-sheet>
-        <event-sheet order="4">Global</event-sheet>
+        <event-sheet order="1">Global</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

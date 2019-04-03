@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="DistanciaLateralDireita" sid="920210085273091" static="0" type="number">120</variable>
         <variable constant="0" name="Botao" sid="752304881313542" static="0" type="text">nenhum</variable>
         <variable constant="0" name="DistanciaBotoes" sid="138746721236022" static="0" type="number">10</variable>
         <variable constant="0" name="EspacamentoLongitudinalElementos" sid="451998056636723" static="0" type="number">50</variable>
@@ -251,6 +252,30 @@
                                 </action>
                                 <action id="3" name="Set font size" sid="279816149451085" type="TextoEstadoCRIARCONTA">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="275999513918962" type="CampoNomeCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="292231743773131" type="CampoEmailCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="307048640361236" type="CampoSenhaCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="993650769770087" type="CampoEscolaCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="593549321043458" type="ListaCidadeCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="944480915691261" type="ListaEstadoCRIARCONTA">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="592761900189453" type="TextoBotaoCriarContaCRIARCONTA">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>

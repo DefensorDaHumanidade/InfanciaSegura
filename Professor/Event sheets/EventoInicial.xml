@@ -182,10 +182,10 @@
                                     <param id="1" name="Y">TopoInicial.Y+(TopoInicial.Height/1.6)+DistanciaTopo+RolagemTotal</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="927008716714388" type="CampoEmailNICIAL">
-                                    <param id="0" name="Width">WindowWidth-120</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="794244766990879" type="CampoSenhaINICIAL">
-                                    <param id="0" name="Width">WindowWidth-120</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="595958415727385" type="BotaoConectarINICIAL">
                                     <param id="0" name="X">1000</param>

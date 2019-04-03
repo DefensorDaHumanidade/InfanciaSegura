@@ -85,8 +85,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>533</x>
-                        <y>519</y>
+                        <x>935</x>
+                        <y>-467</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -112,8 +112,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>536</x>
-                        <y>597</y>
+                        <x>941</x>
+                        <y>-420</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -139,8 +139,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>547</x>
-                        <y>696</y>
+                        <x>943</x>
+                        <y>-367</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -166,8 +166,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>547</x>
-                        <y>793</y>
+                        <x>943</x>
+                        <y>-318</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -193,8 +193,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>538</x>
-                        <y>901</y>
+                        <x>940</x>
+                        <y>-270</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -220,8 +220,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>533</x>
-                        <y>1006</y>
+                        <x>949</x>
+                        <y>-211</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -242,14 +242,14 @@
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>
                         <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>783</x>
-                        <y>530</y>
+                        <x>1071</x>
+                        <y>-473</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
@@ -268,14 +268,14 @@
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>
                         <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>776</x>
-                        <y>596</y>
+                        <x>1067</x>
+                        <y>-436</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
@@ -294,14 +294,14 @@
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>
                         <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>780</x>
-                        <y>684</y>
+                        <x>1068</x>
+                        <y>-387</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
@@ -320,14 +320,14 @@
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>
                         <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>772</x>
-                        <y>764</y>
+                        <x>1072</x>
+                        <y>-336</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
@@ -344,14 +344,14 @@
                         <enabled>Yes</enabled>
                         <type>Dropdown list</type>
                         <multi-select>No</multi-select>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>784</x>
-                        <y>858</y>
+                        <x>1072</x>
+                        <y>-282</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
@@ -368,20 +368,69 @@
                         <enabled>Yes</enabled>
                         <type>Dropdown list</type>
                         <multi-select>No</multi-select>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>797</x>
-                        <y>949</y>
+                        <x>1088</x>
+                        <y>-208</y>
                         <z>0</z>
                         <width>150</width>
                         <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="BotaoCriarContaCRIARCONTA" uid="64">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1553</x>
+                        <y>-418</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextoBotaoCriarContaCRIARCONTA" uid="65">
+                    <properties>
+                        <text>Criar</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1550</x>
+                        <y>-414</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
@@ -435,8 +484,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-511</x>
-                        <y>291</y>
+                        <x>284</x>
+                        <y>-496</y>
                         <z>0</z>
                         <width>800</width>
                         <height>800</height>
@@ -474,55 +523,25 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoCriarContaCRIARCONTA" uid="64">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>997</x>
-                        <y>1078</y>
-                        <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextoBotaoCriarContaCRIARCONTA" uid="65">
-                    <properties>
-                        <text>Criar</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>997</x>
-                        <y>1282</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Avisos" sid="439487889336245">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
                 <instance type="PretoAvisoCRIARCONTA" uid="66">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -533,8 +552,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1134</x>
-                        <y>1085</y>
+                        <x>1730</x>
+                        <y>-411</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -555,8 +574,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1193</x>
-                        <y>1103</y>
+                        <x>1878</x>
+                        <y>-408</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -582,8 +601,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1248</x>
-                        <y>1129</y>
+                        <x>1881</x>
+                        <y>-327</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -609,8 +628,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1246</x>
-                        <y>1198</y>
+                        <x>1873</x>
+                        <y>-281</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -636,8 +655,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1253</x>
-                        <y>1266</y>
+                        <x>1880</x>
+                        <y>-233</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
@@ -663,8 +682,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1254</x>
-                        <y>1359</y>
+                        <x>1870</x>
+                        <y>-177</y>
                         <z>0</z>
                         <width>400</width>
                         <height>80</height>
