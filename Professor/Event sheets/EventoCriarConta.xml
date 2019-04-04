@@ -3,7 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoCriarConta</name>
     <events>
-        <comment>NOTA: EventoInicial e TelaInicial já foram VERIFICADOS</comment>
+        <comment>NOTA: EventoCriarConta e TelaCriarConta já foram VERIFICADOS</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria</comment>
         <include>Global</include>
         <comment>Função para atualizar os textos quando a TelaCriarConta for carregada &amp; Ativa os grupos &amp; Configura as variáveis &amp; Limpa as ListBox</comment>
         <event-block sid="917023818565868">
@@ -560,6 +561,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
                         <event-block sid="879232562961153">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="557555167534548" type="Touch" />

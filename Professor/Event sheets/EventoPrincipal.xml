@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoPrincipal</name>
     <events>
+        <comment>NOTA: EventoPrincipal e TelaPrincipal já foram VERIFICADOS</comment>
         <include>Global</include>
         <comment>Função para atualizar os textos quando a TelaPrincipal for carregada</comment>
         <event-block sid="197063988638845">
@@ -24,7 +25,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
+        <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>
         <event-group description="" sid="698543889243265" title="Limitar rolagem PRINCIPAL">
             <sub-events>
                 <event-block sid="345098355155538">
@@ -39,6 +40,21 @@
                         <action id="-9" name="Set value" sid="911727551262284" type="System">
                             <param id="0" name="Variable">RolagemTotal</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="943424061538981">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="341226764918244" type="System">
+                            <param id="0" name="First value">RolagemTotal</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">-200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="903566669428220" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">-200</param>
                         </action>
                     </actions>
                 </event-block>
@@ -97,19 +113,19 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="705311931460027" type="BotaoPerfilPRINCIPAL">
                                     <param id="0" name="X">BotaoTurmasPRINCIPAL.X</param>
-                                    <param id="1" name="Y">BotaoTurmasPRINCIPAL.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoTurmasPRINCIPAL.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="587996031902438" type="BotaoMaterialApoioPRINCIPAL">
                                     <param id="0" name="X">BotaoPerfilPRINCIPAL.X</param>
-                                    <param id="1" name="Y">BotaoPerfilPRINCIPAL.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoPerfilPRINCIPAL.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="369791759880550" type="BotaoConfiguracoesPRINCIPAL">
                                     <param id="0" name="X">BotaoMaterialApoioPRINCIPAL.X</param>
-                                    <param id="1" name="Y">BotaoMaterialApoioPRINCIPAL.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoMaterialApoioPRINCIPAL.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="894590464544479" type="BotaoSobrePRINCIPAL">
                                     <param id="0" name="X">BotaoConfiguracoesPRINCIPAL.X</param>
-                                    <param id="1" name="Y">BotaoConfiguracoesPRINCIPAL.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoConfiguracoesPRINCIPAL.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="981131813699071" type="TextoBotaoTurmasPRINCIPAL">
                                     <param id="0" name="Object">BotaoTurmasPRINCIPAL</param>
@@ -153,37 +169,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="319485030434270" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoTurmasPRINCIPAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="504219994114297" type="BotaoTurmasPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="458631207806709" type="BotaoTurmasPRINCIPAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="352729356200295" type="TextoBotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="253964705279602" type="TextoBotaoTurmasPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="274894309533265" type="System">
-                                    <param id="0" name="Layout">TelaTurma</param>
+                                <action id="-16" name="Set opacity" sid="458631207806709" type="BotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="837318244587101">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="800670324768326" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="666010345489060" type="Touch">
+                                    <param id="0" name="Object">BotaoTurmasPRINCIPAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="542023075444475" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoTurmasPRINCIPAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="864785521350513" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="595803409702564" type="BotaoTurmasPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="975987385833387" type="TextoBotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="329601000458484" type="TextoBotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-16" name="Set opacity" sid="872292632306199" type="BotaoTurmasPRINCIPAL">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="148023627121071" type="TextoBotaoTurmasPRINCIPAL">
+                                <action id="-12" name="Set group active" sid="739753427844672" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="274894309533265" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="963035723215797">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="320881565470848" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="549938983925336" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoTurmasPRINCIPAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="808114903470250" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="600553809717354" type="BotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="155679016424914" type="TextoBotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="741405064246500" type="TextoBotaoTurmasPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="739753427844672" type="System">
+                                <action id="-16" name="Set opacity" sid="366641058881473" type="BotaoTurmasPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="116188979460931" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -205,37 +280,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="355818154567581" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoPerfilPRINCIPAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="426657094024709" type="BotaoPerfilPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="182791568365494" type="BotaoPerfilPRINCIPAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="861174667824495" type="TextoBotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="606399450097269" type="TextoBotaoPerfilPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="139706370517605" type="System">
-                                    <param id="0" name="Layout">TelaPerfil</param>
+                                <action id="-16" name="Set opacity" sid="182791568365494" type="BotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="180719134945389">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="136804793820086" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="468558184447818" type="Touch">
+                                    <param id="0" name="Object">BotaoPerfilPRINCIPAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="886339751777374" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoPerfilPRINCIPAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="855247884964045" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="949845466048887" type="BotaoPerfilPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="262676020303972" type="BotaoPerfilPRINCIPAL">
-                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                <action id="-7" name="Set size" sid="101343727641557" type="TextoBotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="381076836033714" type="TextoBotaoPerfilPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="-16" name="Set opacity" sid="262676020303972" type="BotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="806584411169125" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="139706370517605" type="System">
+                                    <param id="0" name="Layout">TelaPerfil</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="589420069320501">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="890895955590749" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="494097979499383" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoPerfilPRINCIPAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="284986802083826" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="954521540585754" type="BotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="366266333425270" type="TextoBotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="907231066948557" type="TextoBotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="686123621000354" type="BotaoPerfilPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="756671930828043" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -257,37 +391,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="256983104591146" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoMaterialApoioPRINCIPAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="108191682288703" type="BotaoMaterialApoioPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="220779202364178" type="BotaoMaterialApoioPRINCIPAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="128074814876304" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="128074814876304" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                <action id="3" name="Set font size" sid="475618555142813" type="TextoBotaoMaterialApoioPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="471930594163022" type="System">
-                                    <param id="0" name="Layout">TelaMaterialApoio</param>
+                                <action id="-16" name="Set opacity" sid="220779202364178" type="BotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="776059457611926">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="256200662176260" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="954165563789573" type="Touch">
+                                    <param id="0" name="Object">BotaoMaterialApoioPRINCIPAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="214039809355558" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoMaterialApoioPRINCIPAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="892094028431482" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="128673156042896" type="BotaoMaterialApoioPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="417480548367599" type="BotaoMaterialApoioPRINCIPAL">
-                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                <action id="-7" name="Set size" sid="385706646691814" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="528532124602376" type="TextoBotaoMaterialApoioPRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="-16" name="Set opacity" sid="417480548367599" type="BotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="602468437558314" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="471930594163022" type="System">
+                                    <param id="0" name="Layout">TelaMaterialApoio</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="845938626931433">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="249645210942693" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="113221823729736" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoMaterialApoioPRINCIPAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="352794085892126" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="512288338317670" type="BotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="681079140234606" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="226843832340185" type="TextoBotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="146739900660452" type="BotaoMaterialApoioPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="666916352359809" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -309,37 +502,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="524992171207434" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoConfiguracoesPRINCIPAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="551451682039125" type="BotaoConfiguracoesPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="945804032159264" type="BotaoConfiguracoesPRINCIPAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="313529860099371" type="TextoBotaoConfiguracoesPrincipal">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="313529860099371" type="TextoBotaoConfiguracoesPrincipal">
+                                <action id="3" name="Set font size" sid="672633765877215" type="TextoBotaoConfiguracoesPrincipal">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="675724404535303" type="System">
-                                    <param id="0" name="Layout">TelaConfiguracoes</param>
+                                <action id="-16" name="Set opacity" sid="945804032159264" type="BotaoConfiguracoesPRINCIPAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="772977755410179">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="612309875302286" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="610163612085069" type="Touch">
+                                    <param id="0" name="Object">BotaoConfiguracoesPRINCIPAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="964171325972256" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoConfiguracoesPRINCIPAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="593341497834271" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="227114973305343" type="BotaoConfiguracoesPRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="766503239379464" type="TextoBotaoConfiguracoesPrincipal">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="252663175811405" type="TextoBotaoConfiguracoesPrincipal">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
                                 <action id="-16" name="Set opacity" sid="511348514194793" type="BotaoConfiguracoesPRINCIPAL">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="766503239379464" type="TextoBotaoConfiguracoesPrincipal">
+                                <action id="-12" name="Set group active" sid="932028610343455" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="675724404535303" type="System">
+                                    <param id="0" name="Layout">TelaConfiguracoes</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="435618778786599">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="636275513301955" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="426702649645980" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoConfiguracoesPRINCIPAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="145866064958362" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="240937492311907" type="BotaoConfiguracoesPRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="149606916876266" type="TextoBotaoConfiguracoesPrincipal">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="420325925008229" type="TextoBotaoConfiguracoesPrincipal">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="932028610343455" type="System">
+                                <action id="-16" name="Set opacity" sid="939505772788800" type="BotaoConfiguracoesPRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="766446325985236" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -361,37 +613,96 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="488838279495104" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoSobrePRINCIPAL&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="645908434193143" type="BotaoSobrePRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="617165343273432" type="BotaoSobrePRINCIPAL">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-7" name="Set size" sid="387722330909214" type="TextoBotaoSobrePRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="387722330909214" type="TextoBotaoSobrePRINCIPAL">
+                                <action id="3" name="Set font size" sid="347978086288242" type="TextoBotaoSobrePRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto-4</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="274115334119619" type="System">
-                                    <param id="0" name="Layout">TelaSobre</param>
+                                <action id="-16" name="Set opacity" sid="617165343273432" type="BotaoSobrePRINCIPAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="836737563257183">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="739104230404032" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="629434483831015" type="Touch">
+                                    <param id="0" name="Object">BotaoSobrePRINCIPAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="540495710684787" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSobrePRINCIPAL&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="910316673104177" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="476443680797754" type="BotaoSobrePRINCIPAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="777094646374860" type="BotaoSobrePRINCIPAL">
-                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                <action id="-7" name="Set size" sid="610193599014923" type="TextoBotaoSobrePRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="951064016137927" type="TextoBotaoSobrePRINCIPAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="-16" name="Set opacity" sid="777094646374860" type="BotaoSobrePRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="707215206348860" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="274115334119619" type="System">
+                                    <param id="0" name="Layout">TelaSobre</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="971799882597966">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="486284135974891" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="222706866933605" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSobrePRINCIPAL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="977807068764693" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="194382815367392" type="BotaoSobrePRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="851073769804960" type="TextoBotaoSobrePRINCIPAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="784811908441651" type="TextoBotaoSobrePRINCIPAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="844095237697758" type="BotaoSobrePRINCIPAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="312272951706558" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>

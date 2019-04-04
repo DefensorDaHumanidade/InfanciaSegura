@@ -13,9 +13,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">TelaCarregamento</layout>
         <layout order="2">TelaInicial</layout>
         <layout order="4">TelaCriarConta</layout>
-        <event-sheet active="1" order="5">EventoCriarConta</event-sheet>
-        <event-sheet order="3">EventoInicial</event-sheet>
+        <layout order="6">TelaMaterialApoio</layout>
         <event-sheet order="1">Global</event-sheet>
+        <event-sheet order="3">EventoInicial</event-sheet>
+        <event-sheet order="5">EventoCriarConta</event-sheet>
+        <event-sheet active="1" order="7">EventoMaterialApoio</event-sheet>
+        <event-sheet order="8">EventoSobre</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
