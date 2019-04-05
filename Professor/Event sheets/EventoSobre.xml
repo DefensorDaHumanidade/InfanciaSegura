@@ -20,6 +20,10 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="351695048051498" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>

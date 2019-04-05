@@ -17,17 +17,22 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="154251384932852" type="System">
-                    <param id="0" name="Variable">Conexao</param>
-                    <param id="1" name="Value">&quot;BaixarDadosTurma&quot;</param>
-                </action>
-                <action id="11" name="Clear" sid="583296813284149" type="ListaCadstradosTURMAAJUSTES" />
                 <action id="-12" name="Set group active" sid="598435066822681" type="System">
                     <param id="0" name="Group name">&quot;Baixar dados Turma TURMAAJUSTES&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="11" name="Clear" sid="583296813284149" type="ListaCadstradosTURMAAJUSTES" />
+                <action id="-9" name="Set value" sid="154251384932852" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;BaixarDadosTurma&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="718122248351951" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
+        <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>
         <event-group description="" sid="977776601248813" title="Limitar rolagem TURMAAJUSTES">
             <sub-events>
                 <event-block sid="803663707017394">
@@ -42,6 +47,21 @@
                         <action id="-9" name="Set value" sid="839726035401338" type="System">
                             <param id="0" name="Variable">RolagemTotal</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="941620423425030">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="991398346672268" type="System">
+                            <param id="0" name="First value">RolagemTotal</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">-200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="802165000487087" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">-200</param>
                         </action>
                     </actions>
                 </event-block>
@@ -61,11 +81,11 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="358829517168656" type="TextoNomeTurmaTURMAAJUSTES">
-                                    <param id="0" name="X">800</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="365472439660292" type="BotaoBloquearTURMAAJUSTES">
-                                    <param id="0" name="X">1000-(ComprimentoBotao+10)</param>
+                                    <param id="0" name="X">1000-(ComprimentoBotao+DistanciaBotoes)</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="180309361915702" type="BotaoExcluirTURMAAJUSTES">
@@ -73,7 +93,7 @@
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="175706309030057" type="BotaoSalvarTURMAAJUSTES">
-                                    <param id="0" name="X">1000+(ComprimentoBotao+10)</param>
+                                    <param id="0" name="X">1000+(ComprimentoBotao+DistanciaBotoes)</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
                             </actions>
@@ -92,20 +112,20 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="694938715965928" type="TextoNomeTurmaTURMAAJUSTES">
-                                    <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralRetrato+1000-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="856845534487453" type="BotaoSalvarTURMAAJUSTES">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">TextoQuatidadeErrosTurmaTURMAAJUSTES.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">TextoQuatidadeErrosTurmaTURMAAJUSTES.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="528710406065144" type="BotaoExcluirTURMAAJUSTES">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">BotaoSalvarTURMAAJUSTES.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoSalvarTURMAAJUSTES.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="891442276299045" type="BotaoBloquearTURMAAJUSTES">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">BotaoExcluirTURMAAJUSTES.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoExcluirTURMAAJUSTES.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -122,29 +142,29 @@
                                     <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
                                     <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="690679787429484" type="TextoSenhaTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoNomeTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoNomeTurmaTURMAAJUSTES.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="902243834108477" type="TextoEscolaTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoSenhaTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoSenhaTurmaTURMAAJUSTES.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="581041116226757" type="TextoCadastradosTurmaTURMAAJUSTES">
+                                    <param id="0" name="X">TextoEscolaTurmaTURMAAJUSTES.X</param>
+                                    <param id="1" name="Y">TextoEscolaTurmaTURMAAJUSTES.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
                                 <action id="-3" name="Set position" sid="970467484951927" type="CampoNomeTurmaTURMAAJUSTES">
                                     <param id="0" name="X">TextoNomeTurmaTURMAAJUSTES.X+220</param>
                                     <param id="1" name="Y">TextoNomeTurmaTURMAAJUSTES.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="690679787429484" type="TextoSenhaTurmaTURMAAJUSTES">
-                                    <param id="0" name="X">TextoNomeTurmaTURMAAJUSTES.X</param>
-                                    <param id="1" name="Y">TextoNomeTurmaTURMAAJUSTES.Y+50</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="992676610799430" type="CampoSenhaTurmaTURMAAJUSTES">
                                     <param id="0" name="X">TextoSenhaTurmaTURMAAJUSTES.X+220</param>
                                     <param id="1" name="Y">TextoSenhaTurmaTURMAAJUSTES.Y</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="902243834108477" type="TextoEscolaTurmaTURMAAJUSTES">
-                                    <param id="0" name="X">TextoSenhaTurmaTURMAAJUSTES.X</param>
-                                    <param id="1" name="Y">TextoSenhaTurmaTURMAAJUSTES.Y+50</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="754385336279959" type="CampoEscolaTurmaTURMAAJUSTES">
                                     <param id="0" name="X">TextoEscolaTurmaTURMAAJUSTES.X+220</param>
                                     <param id="1" name="Y">TextoEscolaTurmaTURMAAJUSTES.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="581041116226757" type="TextoCadastradosTurmaTURMAAJUSTES">
-                                    <param id="0" name="X">TextoEscolaTurmaTURMAAJUSTES.X</param>
-                                    <param id="1" name="Y">TextoEscolaTurmaTURMAAJUSTES.Y+50</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="630435061907913" type="ListaCadstradosTURMAAJUSTES">
                                     <param id="0" name="X">TextoCadastradosTurmaTURMAAJUSTES.X+220</param>

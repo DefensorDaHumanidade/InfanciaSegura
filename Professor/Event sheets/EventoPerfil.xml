@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoPerfil</name>
     <events>
+        <comment>NOTA: EventoPerfil e TelaPerfil já foram VERIFICADOS      [RESTA APENAS ACRESCENTAR OS AVISOS]</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria.</comment>
         <include>Global</include>
         <event-block sid="576749274098077">
             <conditions>
@@ -17,22 +19,28 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="616986146907105" type="System">
-                    <param id="0" name="Variable">Conexao</param>
-                    <param id="1" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                <action id="-12" name="Set group active" sid="792141338732950" type="System">
+                    <param id="0" name="Group name">&quot;Baixar Estados PERFIL&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
                 <action id="-12" name="Set group active" sid="546234723279967" type="System">
                     <param id="0" name="Group name">&quot;Baixar Dados do Professor PERFIL&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="-12" name="Set group active" sid="131889436450200" type="System">
-                    <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
-                    <param id="1" name="State">0</param>
+                <action id="-9" name="Set value" sid="616986146907105" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="946912368354950" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
+        <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>
         <event-group description="" sid="302354417803768" title="Limitar rolagem PERFIL">
             <sub-events>
+                <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
                 <event-block sid="834864323289024">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="508092386831509" type="System">
@@ -48,312 +56,21 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="820693686290859" title="Baixar Dados do Professor PERFIL">
-            <sub-events>
-                <event-block sid="930012390772896">
+                <event-block sid="883041078105216">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="836093362847166" type="System">
-                            <param id="0" name="Variable">Conexao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                        <condition id="-8" name="Compare two values" sid="687926683138243" type="System">
+                            <param id="0" name="First value">RolagemTotal</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">-300</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Post to URL" sid="872647614741184" type="AJAX">
-                            <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
-                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaProfessor.php&quot;</param>
-                            <param id="2" name="Data">&quot;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario</param>
-                            <param id="3" name="Method">&quot;POST&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="311001475049875" type="System">
-                            <param id="0" name="Variable">Conexao</param>
-                            <param id="1" name="Value">&quot;baixandoDadosProfessor&quot;</param>
+                        <action id="-9" name="Set value" sid="562652965058227" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">-300</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="274229240298537">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="896284758784656" type="AJAX">
-                            <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="656941209554855" type="System">
-                            <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="568290506708096" type="System">
-                            <param id="0" name="Group name">&quot;Baixar Dados do Professor PERFIL&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="546106956492440">
-                    <conditions>
-                        <condition id="1" name="On error" sid="349454419876860" type="AJAX">
-                            <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="222842860642119" type="System">
-                            <param id="0" name="Variable">Conexao</param>
-                            <param id="1" name="Value">&quot;baixarDadosProfessor&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <comment>Carregar a lista de todas as cidades e todos os estados para caso o professor troque de Escola</comment>
-        <event-group description="" inactive="1" sid="438484705961769" title="Preencher Dados do Professor PERFIL">
-            <sub-events>
-                <event-block sid="289503944649823">
-                    <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="271412086846049" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="782790323035158" type="CampoNomePERFIL">
-                            <param id="0" name="Text">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="470583898972768" type="CampoEmailPERFIL">
-                            <param id="0" name="Text">tokenat(AJAX.LastData, 1, &quot;&lt;br&gt;&quot;)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="542015053390323" type="CampoSenhaPERFIL">
-                            <param id="0" name="Text">tokenat(AJAX.LastData, 2, &quot;&lt;br&gt;&quot;)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="905521823395672" type="CampoEscolaPERFIL">
-                            <param id="0" name="Text">tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)</param>
-                        </action>
-                        <action id="7" name="Add item" sid="178722408961873" type="ListaCidadePERFIL">
-                            <param id="0" name="Text">tokenat(AJAX.LastData, 4, &quot;&lt;br&gt;&quot;)</param>
-                        </action>
-                        <action id="7" name="Add item" sid="843337688410247" type="ListaEstadoPERFIL">
-                            <param id="0" name="Text">tokenat(AJAX.LastData, 5, &quot;&lt;br&gt;&quot;)</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="459447532530183" type="System">
-                            <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
-        <event-group description="" sid="397809505390571" title="Posições/Proporções PERFIL">
-            <sub-events>
-                <event-group description="" sid="434788410990346" title="Posições/Proporções Paisagem PERFIL">
-                    <sub-events>
-                        <event-block sid="760802184302434">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="837368617490407" type="System">
-                                    <param id="0" name="First value">WindowWidth</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">WindowHeight</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="346564244999730" type="TextoNomePERFIL">
-                                    <param id="0" name="X">600</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="423898290252228" type="CampoNomePERFIL">
-                                    <param id="0" name="Width">600</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="169252717857732" type="CampoEmailPERFIL">
-                                    <param id="0" name="Width">600</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="382363899632529" type="CampoSenhaPERFIL">
-                                    <param id="0" name="Width">600</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="538509735610171" type="CampoEscolaPERFIL">
-                                    <param id="0" name="Width">600</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="196701421785024" type="ListaCidadePERFIL">
-                                    <param id="0" name="Width">600</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="323931363201480" type="ListaEstadoPERFIL">
-                                    <param id="0" name="Width">600</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="183754657626828" type="BotaoSairPERFIL">
-                                    <param id="0" name="X">1000-(ComprimentoBotao+10)</param>
-                                    <param id="1" name="Y">950+WindowHeight/2</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="353480474009791" type="BotaoExcluirPERFIL">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">950+WindowHeight/2</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="333258738531271" type="BotaoSalvarPERFIL">
-                                    <param id="0" name="X">1000+(ComprimentoBotao+10)</param>
-                                    <param id="1" name="Y">950+WindowHeight/2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="725667032196625" title="Posições/Proporções Retrato PERFIL">
-                    <sub-events>
-                        <event-block sid="576426405033972">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="894650673243186" type="System">
-                                    <param id="0" name="First value">WindowWidth</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">WindowHeight</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="364674554087698" type="TextoNomePERFIL">
-                                    <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="499856933221933" type="CampoNomePERFIL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="722682233740157" type="CampoEmailPERFIL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="792909415514654" type="CampoSenhaPERFIL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="274625440205974" type="CampoEscolaPERFIL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="126548518871701" type="ListaCidadePERFIL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="995523470792012" type="ListaEstadoPERFIL">
-                                    <param id="0" name="Width">WindowWidth-155</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="230382263161059" type="BotaoSalvarPERFIL">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">TextoEstadoPERFIL.Y+AlturaBotao+10</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="150714829269902" type="BotaoExcluirPERFIL">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">BotaoSalvarPERFIL.Y+AlturaBotao+10</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="972220216291945" type="BotaoSairPERFIL">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">BotaoExcluirPERFIL.Y+AlturaBotao+10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="457784051767318" title="Posições/Proporções Relativas PERFIL">
-                    <sub-events>
-                        <event-block sid="216578261856356">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="816657920973889" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="111722108511264" type="TituloPerfilPERFIL">
-                                    <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="599024645771911" type="TextoEmailPERFIL">
-                                    <param id="0" name="X">TextoNomePERFIL.X</param>
-                                    <param id="1" name="Y">TextoNomePERFIL.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="396672370532177" type="TextoSenhaPERFIL">
-                                    <param id="0" name="X">TextoEmailPERFIL.X</param>
-                                    <param id="1" name="Y">TextoEmailPERFIL.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="254237647351256" type="TextoEscolaPERFIL">
-                                    <param id="0" name="X">TextoSenhaPERFIL.X</param>
-                                    <param id="1" name="Y">TextoSenhaPERFIL.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="499925748812539" type="TextoCidadePERFIL">
-                                    <param id="0" name="X">TextoEscolaPERFIL.X</param>
-                                    <param id="1" name="Y">TextoEscolaPERFIL.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="302218014808401" type="TextoEstadoPERFIL">
-                                    <param id="0" name="X">TextoCidadePERFIL.X</param>
-                                    <param id="1" name="Y">TextoCidadePERFIL.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="665365425957265" type="CampoNomePERFIL">
-                                    <param id="0" name="X">TextoNomePERFIL.X+120</param>
-                                    <param id="1" name="Y">TextoNomePERFIL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="761231088214569" type="CampoEmailPERFIL">
-                                    <param id="0" name="X">TextoEmailPERFIL.X+120</param>
-                                    <param id="1" name="Y">TextoEmailPERFIL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="836316584176621" type="CampoSenhaPERFIL">
-                                    <param id="0" name="X">TextoSenhaPERFIL.X+120</param>
-                                    <param id="1" name="Y">TextoSenhaPERFIL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="786351526734371" type="CampoEscolaPERFIL">
-                                    <param id="0" name="X">TextoEscolaPERFIL.X+120</param>
-                                    <param id="1" name="Y">TextoEscolaPERFIL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="750661395218785" type="ListaCidadePERFIL">
-                                    <param id="0" name="X">TextoCidadePERFIL.X+120</param>
-                                    <param id="1" name="Y">TextoCidadePERFIL.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="604941840408678" type="ListaEstadoPERFIL">
-                                    <param id="0" name="X">TextoEstadoPERFIL.X+120</param>
-                                    <param id="1" name="Y">TextoEstadoPERFIL.Y</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="449463475897545" type="TextoBotaoSairPERFIL">
-                                    <param id="0" name="Object">BotaoSairPERFIL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="123457034028215" type="TextoBotaoExcluirPERFIL">
-                                    <param id="0" name="Object">BotaoExcluirPERFIL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="207955028459714" type="TextoBotaoSalvarPERFIL">
-                                    <param id="0" name="Object">BotaoSalvarPERFIL</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="835731031559335" title="Pressionar Botões PERFIL">
-            <sub-events>
-                <comment>Acrescentar os demais botões e suas respectivas funções</comment>
-                <event-group description="" sid="161466366081327" title="Botão Voltar PERFIL">
-                    <sub-events>
-                        <event-block sid="544351369482083">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="513742850918753" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="510882197294803" type="Touch">
-                                    <param id="0" name="Object">BotaoVoltar</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Set group active" sid="254431556210014" type="System">
-                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="861029406905367" type="BotaoVoltar">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                                <action id="-2" name="Go to layout" sid="671652151875638" type="System">
-                                    <param id="0" name="Layout">TelaPrincipal</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="106863571618058">
-                            <conditions>
-                                <condition id="1" name="On any touch end" sid="252365150548694" type="Touch" />
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="576658228020972" type="BotaoVoltar">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="701144650292082" type="System">
-                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
             </sub-events>
         </event-group>
         <comment>Grupo onde são executadas as rotinas para ocultar os campos. Esse grupo é necessário, pois nativamente o Construct 2coloca os &apos;textbox&apos; no topo do layout. Resumo: Oculta os campos quando eles enconstam na imagem do topo.</comment>
@@ -527,6 +244,1035 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="397809505390571" title="Posições/Proporções PERFIL">
+            <sub-events>
+                <event-group description="" sid="434788410990346" title="Posições/Proporções Paisagem PERFIL">
+                    <sub-events>
+                        <event-block sid="760802184302434">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="837368617490407" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="346564244999730" type="TextoNomePERFIL">
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="423898290252228" type="CampoNomePERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="169252717857732" type="CampoEmailPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="382363899632529" type="CampoSenhaPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="538509735610171" type="CampoEscolaPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="196701421785024" type="ListaCidadePERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="323931363201480" type="ListaEstadoPERFIL">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="183754657626828" type="BotaoSairPERFIL">
+                                    <param id="0" name="X">1000-(ComprimentoBotao+DistanciaBotoes)</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="353480474009791" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="333258738531271" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="X">1000+(ComprimentoBotao+DistanciaBotoes)</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="725667032196625" title="Posições/Proporções Retrato PERFIL">
+                    <sub-events>
+                        <event-block sid="576426405033972">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="894650673243186" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">WindowHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="364674554087698" type="TextoNomePERFIL">
+                                    <param id="0" name="X">DistanciaLateralRetrato+1000-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="499856933221933" type="CampoNomePERFIL">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="722682233740157" type="CampoEmailPERFIL">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="792909415514654" type="CampoSenhaPERFIL">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="274625440205974" type="CampoEscolaPERFIL">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="126548518871701" type="ListaCidadePERFIL">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="995523470792012" type="ListaEstadoPERFIL">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="230382263161059" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">TextoEstadoPERFIL.Y+AlturaBotao+DistanciaBotoes</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="150714829269902" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">BotaoSalvarPERFIL.Y+AlturaBotao+DistanciaBotoes</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="972220216291945" type="BotaoSairPERFIL">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">BotaoExcluirPERFIL.Y+AlturaBotao+DistanciaBotoes</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
+                <event-group description="" sid="457784051767318" title="Posições/Proporções Relativas PERFIL">
+                    <sub-events>
+                        <event-block sid="216578261856356">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="816657920973889" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="111722108511264" type="TituloPerfilPERFIL">
+                                    <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="599024645771911" type="TextoEmailPERFIL">
+                                    <param id="0" name="X">TextoNomePERFIL.X</param>
+                                    <param id="1" name="Y">TextoNomePERFIL.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="396672370532177" type="TextoSenhaPERFIL">
+                                    <param id="0" name="X">TextoEmailPERFIL.X</param>
+                                    <param id="1" name="Y">TextoEmailPERFIL.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="254237647351256" type="TextoEscolaPERFIL">
+                                    <param id="0" name="X">TextoSenhaPERFIL.X</param>
+                                    <param id="1" name="Y">TextoSenhaPERFIL.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="499925748812539" type="TextoCidadePERFIL">
+                                    <param id="0" name="X">TextoEscolaPERFIL.X</param>
+                                    <param id="1" name="Y">TextoEscolaPERFIL.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="302218014808401" type="TextoEstadoPERFIL">
+                                    <param id="0" name="X">TextoCidadePERFIL.X</param>
+                                    <param id="1" name="Y">TextoCidadePERFIL.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="665365425957265" type="CampoNomePERFIL">
+                                    <param id="0" name="X">TextoNomePERFIL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoNomePERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="761231088214569" type="CampoEmailPERFIL">
+                                    <param id="0" name="X">TextoEmailPERFIL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoEmailPERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="836316584176621" type="CampoSenhaPERFIL">
+                                    <param id="0" name="X">TextoSenhaPERFIL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoSenhaPERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="786351526734371" type="CampoEscolaPERFIL">
+                                    <param id="0" name="X">TextoEscolaPERFIL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoEscolaPERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="750661395218785" type="ListaCidadePERFIL">
+                                    <param id="0" name="X">TextoCidadePERFIL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoCidadePERFIL.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="604941840408678" type="ListaEstadoPERFIL">
+                                    <param id="0" name="X">TextoEstadoPERFIL.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoEstadoPERFIL.Y</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="449463475897545" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Object">BotaoSairPERFIL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="123457034028215" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Object">BotaoExcluirPERFIL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="207955028459714" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Object">BotaoSalvarPERFIL</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="835731031559335" title="Pressionar Botões PERFIL">
+            <sub-events>
+                <event-group description="" sid="161466366081327" title="Botão Voltar PERFIL">
+                    <sub-events>
+                        <event-block sid="847050109240047">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="787137667985759" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="804891347319952" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="209099399450704" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="134144280960863" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="415761453841775" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="509707691150982">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="693691541560914" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="777785753461361" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="457596577116542" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="855755527698856" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="291108256295708" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="434100615480950" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="389941554051851" type="System">
+                                    <param id="0" name="Layout">TelaPrincipal</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="958458113159662">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="582274839177590" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="990334015180608" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="829211895336605" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="113215725250158" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="672031536875190" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="440928075742433" title="Botão Salvar PERFIL">
+                    <sub-events>
+                        <event-block sid="932923541903195">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="702739087983388" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="151204599661135" type="Touch">
+                                    <param id="0" name="Object">BotaoSalvarPERFIL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="494075910205100" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="966401801956912" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoSalvarPerfil&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="499361395333897" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="665716204352280" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="453480538843442" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="454402807003529" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="201155868776274">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="663306351083926" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="218806855772249" type="Touch">
+                                    <param id="0" name="Object">BotaoSalvarPERFIL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="655754856967539" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSalvarPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="933768778389419" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="454896040458565" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="831937436727773" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="854205632403118" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="492875862884980" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="736081557312393" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Post to URL" sid="991951131464691" type="AJAX">
+                                    <param id="0" name="Tag">&quot;atualizarUsuario&quot;</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
+                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="320409044139958">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="433557116469445" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="795441947048337" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSalvarPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="390163307227353" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="540616739134825" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="271840309527189" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="370569662539113" type="TextoBotaoSalvarPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="397655364092941" type="BotaoSalvarPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="432771664816338" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Uma vez que o usuário é atualizando no Banco de Dados, as informações internas do aparelho também são atualizadas com as novas informações.</comment>
+                        <event-block sid="363031939606429">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="296452103278450" type="AJAX">
+                                    <param id="0" name="Tag">&quot;atualizarUsuario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="182305820987258" type="System">
+                                    <param id="0" name="Variable">EmailUsuario</param>
+                                    <param id="1" name="Value">CampoEmailPERFIL.Text</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="632893710446162" type="System">
+                                    <param id="0" name="Variable">SenhaUsuario</param>
+                                    <param id="1" name="Value">CampoSenhaPERFIL.Text</param>
+                                </action>
+                                <action id="0" name="Set item" sid="916184077944212" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                                    <param id="1" name="Value">EmailUsuario</param>
+                                </action>
+                                <action id="0" name="Set item" sid="912574825995301" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                                    <param id="1" name="Value">SenhaUsuario</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="415563246600955" type="System" />
+                            </actions>
+                        </event-block>
+                        <comment>Uma mensagem de Erro deveria ser apresentada nesta ação.</comment>
+                        <event-block sid="447712183224976">
+                            <conditions>
+                                <condition id="1" name="On error" sid="470975928550557" type="AJAX">
+                                    <param id="0" name="Tag">&quot;atualizarUsuario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="277885236909561" title="Botão Sair PERFIL">
+                    <sub-events>
+                        <event-block sid="320716315917758">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="231788732651889" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="206845008168076" type="Touch">
+                                    <param id="0" name="Object">BotaoSairPERFIL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="611949579633950" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="516409741543788" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoSairPerfil&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="549080923572654" type="BotaoSairPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="836550897330046" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="938209236822473" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="929021981922345" type="BotaoSairPERFIL">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="770605060786710">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="523938787753789" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="844153363510468" type="Touch">
+                                    <param id="0" name="Object">BotaoSairPERFIL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="756542051159748" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSairPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="411008760471703" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="424985379024442" type="BotaoSairPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="999898777186208" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="735033415153383" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="563715632812594" type="BotaoSairPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="805619819808710" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="895083205632653" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                                    <param id="1" name="Value">&quot;desconectado&quot;</param>
+                                </action>
+                                <action id="0" name="Set item" sid="660065010440039" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                                    <param id="1" name="Value">&quot;desconectado&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="486245487854645" type="System">
+                                    <param id="0" name="Layout">TelaCarregamento</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="547186030109159">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="687733105388669" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="324601839484667" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSairPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="881949168578571" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="966343535955062" type="BotaoSairPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="998640643770784" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="115981617985665" type="TextoBotaoSairPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="679763373097750" type="BotaoSairPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="470762225478917" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="110736808839739" title="Botão Excluir PERFIL">
+                    <sub-events>
+                        <event-block sid="583833381597390">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="366067250380507" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="846841273315351" type="Touch">
+                                    <param id="0" name="Object">BotaoExcluirPERFIL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="197886940486185" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="667377326794379" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoExcluirPerfil&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="110152094783749" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="613904761836029" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="363094748803320" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="951937188251120" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="808727890362921">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="394176735184382" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="931014806416121" type="Touch">
+                                    <param id="0" name="Object">BotaoExcluirPERFIL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="163297575065969" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoExcluirPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="795251838208734" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="842829266745511" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="420972550473465" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="300525833926202" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="868773675819249" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="997001948217955" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Post to URL" sid="421961784019180" type="AJAX">
+                                    <param id="0" name="Tag">&quot;excluirUsuario&quot;</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-ExcluirUsuario.php&quot;</param>
+                                    <param id="2" name="Data">&quot;email=&quot;&amp;EmailUsuario      </param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="151298087194275">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="289268725026430" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="330227643681243" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoExcluirPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="537570390969408" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="374081217274984" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="350620453446255" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="609616339600639" type="TextoBotaoExcluirPERFIL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="689661332634925" type="BotaoExcluirPERFIL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="930939202165050" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Quando o usuário for excluido do Banco de Dados, os dados dele são apagado do aparelho e então o usuário é encaminhado para a Tela de Carregamento.</comment>
+                        <event-block sid="838177162900407">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="922978987601877" type="AJAX">
+                                    <param id="0" name="Tag">&quot;excluirUsuario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set item" sid="669461148026569" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;EmailRegistrado&quot;</param>
+                                    <param id="1" name="Value">&quot;desconectado&quot;</param>
+                                </action>
+                                <action id="0" name="Set item" sid="116420525807853" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
+                                    <param id="1" name="Value">&quot;desconectado&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="597107692690599" type="System">
+                                    <param id="0" name="Layout">TelaCarregamento</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Uma mensagem de Erro deveria ser apresentada nesta ação.</comment>
+                        <event-block sid="382709684409585">
+                            <conditions>
+                                <condition id="1" name="On error" sid="983454373309541" type="AJAX">
+                                    <param id="0" name="Tag">&quot;excluirUsuario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="776875913641435" title="Conexão Banco de Dados PERFIL">
+            <sub-events>
+                <event-block sid="902092229665835">
+                    <conditions>
+                        <condition id="1" name="On selection changed" sid="435593777720807" type="ListaEstadoPERFIL" />
+                        <condition disabled="1" id="4" inverted="1" name="Compare selected item text" sid="970556849000552" type="ListaEstadoCRIARCONTA">
+                            <param id="0" name="Text to compare">&quot;Selecione um Estado&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Compare selected item text" sid="546307231834697" type="ListaEstadoPERFIL">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Clear" sid="634673473601236" type="ListaCidadePERFIL" />
+                        <action id="-9" name="Set value" sid="752520386818210" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;BaixarQuantidadeMunicipios&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="872661731611659" type="System">
+                            <param id="0" name="Group name">&quot;Baixar Quantidade de Municipios PERFIL&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Grupo para baixar as informações do professor.</comment>
+                <event-group description="" sid="820693686290859" title="Baixar Dados do Professor PERFIL">
+                    <sub-events>
+                        <event-block sid="930012390772896">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="836093362847166" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="872647614741184" type="AJAX">
+                                    <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaProfessor.php&quot;</param>
+                                    <param id="2" name="Data">&quot;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="311001475049875" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;baixandoDadosProfessor&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="274229240298537">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="896284758784656" type="AJAX">
+                                    <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="656941209554855" type="System">
+                                    <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="568290506708096" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Dados do Professor PERFIL&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="546106956492440">
+                            <conditions>
+                                <condition id="1" name="On error" sid="349454419876860" type="AJAX">
+                                    <param id="0" name="Tag">&quot;baixarProfessor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="222842860642119" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;baixarDadosProfessor&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Carregar a lista de todas as cidades e todos os estados para caso o professor troque de Escola</comment>
+                <event-group description="" inactive="1" sid="438484705961769" title="Preencher Dados do Professor PERFIL">
+                    <sub-events>
+                        <event-block sid="289503944649823">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="271412086846049" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="782790323035158" type="CampoNomePERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="470583898972768" type="CampoEmailPERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 1, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="542015053390323" type="CampoSenhaPERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 2, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="905521823395672" type="CampoEscolaPERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="7" name="Add item" sid="178722408961873" type="ListaCidadePERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 4, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="7" name="Add item" sid="843337688410247" type="ListaEstadoPERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, 5, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="428198906574116" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarEstadosPerfil&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="459447532530183" type="System">
+                                    <param id="0" name="Group name">&quot;Preencher Dados do Professor PERFIL&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Grupo para baixar todos os Estados.</comment>
+                <event-group description="" sid="434596111501839" title="Baixar Estados PERFIL">
+                    <sub-events>
+                        <event-block sid="200199415254043">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="385283819253996" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BaixarEstadosPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="345446836383095" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixandoEstadosPerfil&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="556573032359268" type="AJAX">
+                                    <param id="0" name="Tag">&quot;BaixandoEstadosPerfil&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ListaEstados.php&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="703450672541877">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="137050569115068" type="AJAX">
+                                    <param id="0" name="Tag">&quot;BaixandoEstadosPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="531193709222399" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;EstadosBaixadosPerfil&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="791550714366557" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Estados na Lista PERFIL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="621089382692976" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Estados PERFIL&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="363691983170710">
+                            <conditions>
+                                <condition id="1" name="On error" sid="491898739515735" type="AJAX">
+                                    <param id="0" name="Tag">&quot;BaixandoEstadosPerfil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="725075295738093" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarEstadosPerfil&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Grupo para escrever todos os estados na ListBox dos Estados.</comment>
+                <event-group description="" inactive="1" sid="644011654011235" title="Carregar Estados na Lista PERFIL">
+                    <sub-events>
+                        <comment>-2, pois o PHP pula linhas no finais do arquivo.</comment>
+                        <event-block sid="424750822194483">
+                            <conditions>
+                                <condition id="-10" name="For" sid="361830642320521" type="System">
+                                    <param id="0" name="Name">&quot;indice&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="194133215129123" type="ListaEstadoPERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="724095845823392" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarQuantidadeMunicipios&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="439374416834042" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Quantidade de Municipios PERFIL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="287139567429405" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Estados na Lista PERFIL&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Com o Estado selecionado, uma requisição PHP retorna quantas cidades determinado Estado possui.</comment>
+                <event-group description="" inactive="1" sid="209164882264223" title="Baixar Quantidade de Municipios PERFIL">
+                    <sub-events>
+                        <event-block sid="528550686037680">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="856350673121296" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BaixarQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="387488782968845" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixandoQuantidadeMunicipios&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="403107912990582" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-QuantidadeMunicipios.php?UF=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="460683713830644">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="999833595385270" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="130631988901965" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;QuantidadeMunicipiosBaixado&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="209466338148360" type="System">
+                                    <param id="0" name="Variable">QuantidadeMunicipios</param>
+                                    <param id="1" name="Value">AJAX.LastData</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="617730294795134" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarMunicipios&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="665319775497208" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Municipios PERFIL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="742526639844503" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Quantidade de Municipios PERFIL&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="421667832054659">
+                            <conditions>
+                                <condition id="1" name="On error" sid="101042573595244" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="929482096264078" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarQuantidadeMunicipios&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Grupo para baixar todos os Municípios.</comment>
+                <event-group description="" inactive="1" sid="837164821871970" title="Baixar Municipios PERFIL">
+                    <sub-events>
+                        <event-block sid="161935932153755">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="804981945204822" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BaixarMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="688446365762003" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixandoMunicipios&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="889434271177748" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoMunicipios&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ListaMunicipios.php?UF=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="304122854368124">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="987436744321137" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="824521424202992" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;MunicipiosBaixados&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="432766848580468" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Municipios na Lista PERFIL&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="599486310804180" type="System">
+                                    <param id="0" name="Group name">&quot;Baixar Municipios PERFIL&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="730860851347550">
+                            <conditions>
+                                <condition id="1" name="On error" sid="947967301719010" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ResquisicaoQuantidadeMunicipios&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="571201362834592" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;BaixarMunicipios&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Grupo para listar todos os municípios na ListBox dos Municípios.</comment>
+                <event-group description="" inactive="1" sid="814853441087134" title="Carregar Municipios na Lista PERFIL">
+                    <sub-events>
+                        <comment>Infelizmente eu não sabia da existência do tokenetcount, quando criei essa operação e a operação acima para baixar a quantidade de municípios. Furutamente, remover essas operações desnecessárias.</comment>
+                        <event-block sid="992257084357231">
+                            <conditions>
+                                <condition id="-10" name="For" sid="115416418180447" type="System">
+                                    <param id="0" name="Name">&quot;indice&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">QuantidadeMunicipios-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="226791527796361" type="ListaCidadePERFIL">
+                                    <param id="0" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="551052309559665" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Municipios na Lista PERFIL&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

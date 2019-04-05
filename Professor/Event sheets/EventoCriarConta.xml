@@ -38,6 +38,10 @@
                     <param id="0" name="Index">0</param>
                     <param id="1" name="Text">&quot;&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="972557598525716" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>
@@ -338,7 +342,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="388241526648781" type="TituloCriarContaCRIARCONTA">
                                     <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="984576931784639" type="TextoEmailCRIARCONTA">
                                     <param id="0" name="X">TextoNomeCRIARCONTA.X</param>
@@ -798,7 +802,7 @@
             <sub-events>
                 <event-block sid="543986767738264">
                     <conditions>
-                        <condition id="2" name="On clicked" sid="752663082722620" type="ListaEstadoCRIARCONTA" />
+                        <condition id="1" name="On selection changed" sid="752663082722620" type="ListaEstadoCRIARCONTA" />
                         <condition disabled="1" id="4" inverted="1" name="Compare selected item text" sid="970314709841147" type="ListaEstadoCRIARCONTA">
                             <param id="0" name="Text to compare">&quot;Selecione um Estado&quot;</param>
                             <param id="1" name="Case sensitivity">0</param>

@@ -337,6 +337,30 @@
                                 <action id="3" name="Set font size" sid="670809908449216" type="TextoBotaoExcluirPERFIL">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="7" name="Set CSS style" sid="655218716035517" type="CampoNomePERFIL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="927238549846323" type="CampoEmailPERFIL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="503840293502055" type="CampoSenhaPERFIL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="985555025316852" type="CampoEscolaPERFIL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="274589601955944" type="ListaCidadePERFIL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="746425727475998" type="ListaEstadoPERFIL">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
                                 <action id="3" name="Set font size" sid="405749405196295" type="TituloTurmasTURMA">
                                     <param id="0" name="Size (pt)">TamanhoTexto+10</param>
                                 </action>
@@ -420,6 +444,22 @@
                                 <action id="3" name="Set font size" sid="233697584552547" type="TextoBotaoSalvarCONFIGURACOES">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="6" name="Set CSS style" sid="610815110802154" type="ListaTamanhoLetraCONFIGURACOES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="742419868715684" type="ListaFonteLetraCONFIGURACOES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="867388301264628" type="ListaEstiloLetraCONFIGURACOES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="759636140389583" type="ListaIdiomaCONFIGURACOES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
                                 <action id="3" name="Set font size" sid="489840437010728" type="TituloAjustesTURMAAJUSTES">
                                     <param id="0" name="Size (pt)">TamanhoTexto+10</param>
                                 </action>
@@ -452,6 +492,22 @@
                                 </action>
                                 <action id="3" name="Set font size" sid="534779949834090" type="TextoBotaoSalvarTURMAAJUSTES">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="199542433636535" type="CampoEscolaTurmaTURMAAJUSTES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="568020478348613" type="CampoNomeTurmaTURMAAJUSTES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="522777302985045" type="CampoSenhaTurmaTURMAAJUSTES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="6" name="Set CSS style" sid="170202542726737" type="ListaCadstradosTURMAAJUSTES">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="709373344043399" type="TituloAdicionarTurmaTURMAADICIONAR">
                                     <param id="0" name="Size (pt)">TamanhoTexto+10</param>
@@ -686,13 +742,13 @@
                                         <action id="0" name="Set text" sid="872372094712702" type="TextoEstadoPERFIL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoEstadoPERFIL/text()&quot;)</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="649532525641103" type="TextoBotaoSalvarPERFIL">
+                                        <action id="0" name="Set text" sid="649532525641103" type="TextoBotaoSairPERFIL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSairPERFIL/text()&quot;)</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="960720780283097" type="TextoBotaoSairPERFIL">
+                                        <action id="0" name="Set text" sid="960720780283097" type="TextoBotaoExcluirPERFIL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoExcluirPERFIL/text()&quot;)</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="235776396264217" type="TextoBotaoExcluirPERFIL">
+                                        <action id="0" name="Set text" sid="235776396264217" type="TextoBotaoSalvarPERFIL">
                                             <param id="0" name="Text">XML.StringValue(&quot;TextoBotaoSalvarPERFIL/text()&quot;)</param>
                                         </action>
                                         <action id="0" name="Set text" sid="799325416798098" type="TituloTurmasTURMA">
@@ -1425,6 +1481,16 @@
                                 </action>
                                 <action id="-16" name="Set opacity" sid="777888091957133" type="BotaoAdicionarTurmaTURMA">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="642510492965996">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="513625085962681" type="BotaoConfiguracoesTURMA" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="829219674969429" type="BotaoConfiguracoesTURMA">
+                                    <param id="0" name="Scale">0.2</param>
                                 </action>
                             </actions>
                         </event-block>

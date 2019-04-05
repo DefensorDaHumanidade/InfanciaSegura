@@ -49,6 +49,62 @@
                         <action id="5" name="Check item exists" sid="381923531465347" type="LocalStorage">
                             <param id="0" name="Key">&quot;SenhaRegistrada&quot;</param>
                         </action>
+                        <action id="5" name="Check item exists" sid="386316746858816" type="LocalStorage">
+                            <param id="0" name="Key">&quot;TamanhoLetraRegistrada&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="630379336076751" type="LocalStorage">
+                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="677790529076113">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="430987195595855" type="LocalStorage">
+                            <param id="0" name="Key">&quot;TamanhoLetraRegistrada&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="250178990890230" type="LocalStorage">
+                            <param id="0" name="Key">&quot;TamanhoLetraRegistrada&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130250681852372">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="917047966780603" type="LocalStorage">
+                            <param id="0" name="Key">&quot;TamanhoLetraRegistrada&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="853238704867229" type="System">
+                            <param id="0" name="Variable">TamanhoTexto</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="420486870489635">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="225833338882772" type="LocalStorage">
+                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="113662612998015" type="LocalStorage">
+                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="476115655586272">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="432747771174026" type="LocalStorage">
+                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="619494720898084" type="System">
+                            <param id="0" name="Variable">IdiomaTexto</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Caso o Email não esteja registrado no aparelho, o usuário é enviado para a Tela Inicial</comment>

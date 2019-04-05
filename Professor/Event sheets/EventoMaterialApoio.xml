@@ -27,6 +27,10 @@
                     <param id="0" name="Variable">Conexao</param>
                     <param id="1" name="Value">&quot;BaixarMateriaisDeApoio&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="871506391801554" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>A função presente neste grupo impede que o usuário busque por informações acima da tela. </comment>
@@ -121,12 +125,41 @@
                             </conditions>
                             <actions>
                                 <action id="-7" name="Set size" sid="663311522754090" type="TextoDescricaoMaterialApoioMATERIALAPOIO">
-                                    <param id="0" name="Width">WindowWidth-DistanciaLateralRetrato*2</param>
+                                    <param id="0" name="Width">WindowWidth-(DistanciaLateralRetrato*2)</param>
                                     <param id="1" name="Height">100</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="701319755931771" type="TextoEnderecoMateriaisMATERIALAPOIO">
-                                    <param id="0" name="Width">WindowWidth-DistanciaLateralRetrato*2</param>
+                                    <param id="0" name="Width">WindowWidth-(DistanciaLateralRetrato*2)</param>
                                     <param id="1" name="Height">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>As duas funções abaixo serve para diminuir o título &apos;Material de Apoio&apos; com base em algumas dimensões de aparelhos que &quot;comeriam&quot; parte do texto por serem muito estreitos.</comment>
+                        <event-block sid="688435336269015">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="595594618870271" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">400</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="989956780990565" type="TituloMaterialApoioMATERIALAPOIO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="710558891043845">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="445580261645537" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">400</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="283147620158010" type="TituloMaterialApoioMATERIALAPOIO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
                                 </action>
                             </actions>
                         </event-block>

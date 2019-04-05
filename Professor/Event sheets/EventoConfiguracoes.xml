@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoConfiguracoes</name>
     <events>
+        <comment>NOTA: EventoMaterialApoio e TelaMaterialApoio já foram VERIFICADOS      [RESTA APENAS ACRESCENTAR OS AVISOS]</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria.</comment>
         <include>Global</include>
         <event-block sid="839483159902259">
             <conditions>
@@ -19,6 +21,10 @@
                 </action>
                 <action id="0" name="Set selection" sid="473564088642577" type="ListaTamanhoLetraCONFIGURACOES">
                     <param id="0" name="Index">TamanhoTexto-10</param>
+                </action>
+                <action id="-9" name="Set value" sid="183300450453526" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -54,6 +60,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela. </comment>
         <event-group description="" sid="912797111200205" title="Limitar rolagem CONFIGURACOES">
             <sub-events>
                 <event-block sid="549159031151443">
@@ -68,6 +75,137 @@
                         <action id="-9" name="Set value" sid="373134294287443" type="System">
                             <param id="0" name="Variable">RolagemTotal</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="926617659384775">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="928852991845578" type="System">
+                            <param id="0" name="First value">RolagemTotal</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">-100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="740482720012907" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">-100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="675063005834179" title="Ocultar Campos CONFIGURACOES">
+            <sub-events>
+                <event-block sid="114284849172330">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="621198179090801" type="System">
+                            <param id="0" name="First value">ListaTamanhoLetraCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="635810765705472" type="ListaTamanhoLetraCONFIGURACOES">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="709914054998886">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="247576745973245" type="System">
+                            <param id="0" name="First value">ListaTamanhoLetraCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="376343017332201" type="ListaTamanhoLetraCONFIGURACOES">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893843705349082">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="437134441146009" type="System">
+                            <param id="0" name="First value">ListaFonteLetraCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="485534781802979" type="ListaFonteLetraCONFIGURACOES">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="593174901999105">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="245102633740667" type="System">
+                            <param id="0" name="First value">ListaFonteLetraCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="914981637084611" type="ListaFonteLetraCONFIGURACOES">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167709050743575">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="828669214163346" type="System">
+                            <param id="0" name="First value">ListaEstiloLetraCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="190578561669709" type="ListaEstiloLetraCONFIGURACOES">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="143677777938367">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="889918263363362" type="System">
+                            <param id="0" name="First value">ListaEstiloLetraCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="914197601416775" type="ListaEstiloLetraCONFIGURACOES">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="389913435273120">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="841823173593857" type="System">
+                            <param id="0" name="First value">ListaIdiomaCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="787471609351359" type="ListaIdiomaCONFIGURACOES">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="400968868920924">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="468752897226985" type="System">
+                            <param id="0" name="First value">ListaIdiomaCONFIGURACOES.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="902410082770986" type="ListaIdiomaCONFIGURACOES">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -87,15 +225,27 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="558929541097169" type="TextoTamanhoLetraCONFIGURACOES">
-                                    <param id="0" name="X">800</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="840393215398846" type="ListaTamanhoLetraCONFIGURACOES">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="482406039742639" type="ListaFonteLetraCONFIGURACOES">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="678728732505606" type="ListaEstiloLetraCONFIGURACOES">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="385316550695600" type="ListaIdiomaCONFIGURACOES">
+                                    <param id="0" name="Width">600</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="384262760272313" type="BotaoRestaurarCONFIGURACOES">
-                                    <param id="0" name="X">1000-ComprimentoBotao/2-10</param>
+                                    <param id="0" name="X">1000-ComprimentoBotao/2-DistanciaBotoes</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="356351344097069" type="BotaoSalvarCONFIGURACOES">
-                                    <param id="0" name="X">1000+ComprimentoBotao/2+10</param>
+                                    <param id="0" name="X">1000+ComprimentoBotao/2+DistanciaBotoes</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
                             </actions>
@@ -114,8 +264,20 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="427747856600222" type="TextoTamanhoLetraCONFIGURACOES">
-                                    <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralRetrato+1000-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="315889587151168" type="ListaTamanhoLetraCONFIGURACOES">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="171831752068151" type="ListaFonteLetraCONFIGURACOES">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="679402971818865" type="ListaEstiloLetraCONFIGURACOES">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="251580555081991" type="ListaIdiomaCONFIGURACOES">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="433479755767223" type="BotaoRestaurarCONFIGURACOES">
                                     <param id="0" name="X">1000</param>
@@ -127,8 +289,38 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>As duas funções abaixo serve para diminuir o título &apos;Configurações&apos; com base em algumas dimensões de aparelhos que &quot;comeriam&quot; parte do texto por serem muito estreitos.</comment>
+                        <event-block sid="287105596759964">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="953519356649734" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">400</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="615790810313463" type="TituloConfiguracoesCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="523679110997063">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="447314990443385" type="System">
+                                    <param id="0" name="First value">WindowWidth</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">400</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="891878556185258" type="TituloConfiguracoesCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
+                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
                 <event-group description="" sid="863793000550523" title="Posições/Proporções Relativas CONFIGURACOES">
                     <sub-events>
                         <event-block sid="517727202823434">
@@ -138,34 +330,34 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="602166098064848" type="TituloConfiguracoesCONFIGURACOES">
                                     <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="874827845692060" type="ListaTamanhoLetraCONFIGURACOES">
-                                    <param id="0" name="X">TextoTamanhoLetraCONFIGURACOES.X+220</param>
-                                    <param id="1" name="Y">TextoTamanhoLetraCONFIGURACOES.Y</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="270704493161001" type="TextoFonteLetraCONFIGURACOES">
                                     <param id="0" name="X">TextoTamanhoLetraCONFIGURACOES.X</param>
                                     <param id="1" name="Y">TextoTamanhoLetraCONFIGURACOES.Y+50</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="106432825253542" type="ListaFonteLetraCONFIGURACOES">
-                                    <param id="0" name="X">TextoFonteLetraCONFIGURACOES.X+220</param>
-                                    <param id="1" name="Y">TextoFonteLetraCONFIGURACOES.Y</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="443316194675027" type="TextoEstiloLetraCONFIGURACOES">
                                     <param id="0" name="X">TextoFonteLetraCONFIGURACOES.X</param>
                                     <param id="1" name="Y">TextoFonteLetraCONFIGURACOES.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="986791695187606" type="ListaEstiloLetraCONFIGURACOES">
-                                    <param id="0" name="X">TextoEstiloLetraCONFIGURACOES.X+220</param>
-                                    <param id="1" name="Y">TextoEstiloLetraCONFIGURACOES.Y</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="919071980696692" type="TextoIdiomaCONFIGURACOES">
                                     <param id="0" name="X">TextoEstiloLetraCONFIGURACOES.X</param>
                                     <param id="1" name="Y">TextoEstiloLetraCONFIGURACOES.Y+50</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="874827845692060" type="ListaTamanhoLetraCONFIGURACOES">
+                                    <param id="0" name="X">TextoTamanhoLetraCONFIGURACOES.X+(EspacamentoLateralElementos*2)</param>
+                                    <param id="1" name="Y">TextoTamanhoLetraCONFIGURACOES.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="106432825253542" type="ListaFonteLetraCONFIGURACOES">
+                                    <param id="0" name="X">TextoFonteLetraCONFIGURACOES.X+(EspacamentoLateralElementos*2)</param>
+                                    <param id="1" name="Y">TextoFonteLetraCONFIGURACOES.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="986791695187606" type="ListaEstiloLetraCONFIGURACOES">
+                                    <param id="0" name="X">TextoEstiloLetraCONFIGURACOES.X+(EspacamentoLateralElementos*2)</param>
+                                    <param id="1" name="Y">TextoEstiloLetraCONFIGURACOES.Y</param>
+                                </action>
                                 <action id="-3" name="Set position" sid="369247138086299" type="ListaIdiomaCONFIGURACOES">
-                                    <param id="0" name="X">TextoIdiomaCONFIGURACOES.X+220</param>
+                                    <param id="0" name="X">TextoIdiomaCONFIGURACOES.X+(EspacamentoLateralElementos*2)</param>
                                     <param id="1" name="Y">TextoIdiomaCONFIGURACOES.Y</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="133345382045751" type="TextoBotaoRestuararCONFIGURACOES">
@@ -186,35 +378,246 @@
             <sub-events>
                 <event-group description="" sid="206406361443633" title="Botão Voltar CONFIGURACOES">
                     <sub-events>
-                        <event-block sid="662105736931089">
+                        <event-block sid="658371811480538">
                             <conditions>
-                                <condition id="0" name="On any touch start" sid="933643923107223" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="888575579330826" type="Touch">
+                                <condition id="0" name="On any touch start" sid="218643762409114" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="968182796761935" type="Touch">
                                     <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="434303242180229" type="System">
+                                <action id="-12" name="Set group active" sid="427644090694143" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="869161613393721" type="BotaoVoltar">
+                                <action id="-9" name="Set value" sid="912574282614096" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="179249771427714" type="BotaoVoltar">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="632066836369603" type="System">
+                            </actions>
+                        </event-block>
+                        <event-block sid="474807429864999">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="741195929826697" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="948704785760847" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="624488183376897" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="827523357834010" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="980849756647547" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="539281038337699" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="166233225268038" type="System">
                                     <param id="0" name="Layout">TelaPrincipal</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="310115250092579">
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="156864495466584">
                             <conditions>
-                                <condition id="1" name="On any touch end" sid="828063503248869" type="Touch" />
+                                <condition id="1" name="On any touch end" sid="626084744435596" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="596761287824516" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="574481375308858" type="BotaoVoltar">
+                                <action id="-9" name="Set value" sid="581447767948655" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="902620886286470" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="436413107033362" type="System">
+                                <action id="-12" name="Set group active" sid="149240827951067" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="807537303720931" title="Botão Restaurar CONFIGURACOES">
+                    <sub-events>
+                        <event-block sid="966253400712878">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="756568202113662" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="923270199247380" type="Touch">
+                                    <param id="0" name="Object">BotaoRestaurarCONFIGURACOES</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="556201779452912" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="824997856451174" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoRestaurarCONFIGURACOES&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="272828975615924" type="BotaoRestaurarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="627564660379918" type="TextoBotaoRestuararCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="893628318166738" type="TextoBotaoRestuararCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="617421422922451" type="BotaoRestaurarCONFIGURACOES">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="947510463123109">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="785888034205826" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="371332772525543" type="Touch">
+                                    <param id="0" name="Object">BotaoRestaurarCONFIGURACOES</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="639729339913962" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoRestaurarCONFIGURACOES&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="690268134486814" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="685298177671155" type="BotaoRestaurarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="829160705256896" type="TextoBotaoRestuararCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="234881445367704" type="TextoBotaoRestuararCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="249680879032748" type="BotaoRestaurarCONFIGURACOES">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="897039708152317" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="0" name="Set selection" sid="869631756222353" type="ListaTamanhoLetraCONFIGURACOES">
+                                    <param id="0" name="Index">8</param>
+                                </action>
+                                <action id="0" name="Set selection" sid="858126701687766" type="ListaFonteLetraCONFIGURACOES">
+                                    <param id="0" name="Index">0</param>
+                                </action>
+                                <action id="0" name="Set selection" sid="806795335946296" type="ListaEstiloLetraCONFIGURACOES">
+                                    <param id="0" name="Index">0</param>
+                                </action>
+                                <action id="0" name="Set selection" sid="877558416134604" type="ListaIdiomaCONFIGURACOES">
+                                    <param id="0" name="Index">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="426715404445834" type="System">
+                                    <param id="0" name="Variable">TamanhoTexto</param>
+                                    <param id="1" name="Value">ListaTamanhoLetraCONFIGURACOES.SelectedText</param>
+                                </action>
+                                <action id="0" name="Set item" sid="491932452555768" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;TamanhoLetraRegistrada&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="496456468033636" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;UPDATE&quot;</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="831564551417898" type="System" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="607980803706554">
+                                    <conditions>
+                                        <condition id="4" name="Compare selected item text" sid="269556589192100" type="ListaIdiomaCONFIGURACOES">
+                                            <param id="0" name="Text to compare">&quot;Inglês&quot;</param>
+                                            <param id="1" name="Case sensitivity">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="107345114535463" type="System">
+                                            <param id="0" name="Variable">IdiomaTexto</param>
+                                            <param id="1" name="Value">&quot;EN&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="317922174956650" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                                            <param id="1" name="Value">IdiomaTexto</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="184385019039924">
+                                    <conditions>
+                                        <condition id="4" name="Compare selected item text" sid="494540517234266" type="ListaIdiomaCONFIGURACOES">
+                                            <param id="0" name="Text to compare">&quot;Português&quot;</param>
+                                            <param id="1" name="Case sensitivity">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="734890989542619" type="System">
+                                            <param id="0" name="Variable">IdiomaTexto</param>
+                                            <param id="1" name="Value">&quot;PT-BR&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="937109381532018" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                                            <param id="1" name="Value">IdiomaTexto</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="703473424060176">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="962123632434399" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="721682131136883" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoRestaurarCONFIGURACOES&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="877673955185521" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="818758635714717" type="BotaoRestaurarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="822716920260919" type="TextoBotaoRestuararCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="586187635253060" type="TextoBotaoRestuararCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="386341523590547" type="BotaoRestaurarCONFIGURACOES">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="102240571914871" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -236,9 +639,72 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="468417977863058" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoSalvarCONFIGURACOES&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="300665710376885" type="BotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="561245685128697" type="TextoBotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="426014781076562" type="TextoBotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="816557343217807" type="BotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="858955444555391">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="950255627103819" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="598659094235594" type="Touch">
+                                    <param id="0" name="Object">BotaoSalvarCONFIGURACOES</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="115851966815753" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSalvarCONFIGURACOES&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="774758971468675" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="564659908707922" type="BotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="168926608786313" type="TextoBotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="513766403701864" type="TextoBotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="624930545108782" type="BotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="220926366652262" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="161737707286979" type="System">
                                     <param id="0" name="Variable">TamanhoTexto</param>
                                     <param id="1" name="Value">ListaTamanhoLetraCONFIGURACOES.SelectedText</param>
+                                </action>
+                                <action id="0" name="Set item" sid="236944124309913" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;TamanhoLetraRegistrada&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="657609007359564" type="System">
+                                    <param id="0" name="Variable">Conexao</param>
+                                    <param id="1" name="Value">&quot;UPDATE&quot;</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="304852039027331" type="System" />
                             </actions>
@@ -255,6 +721,10 @@
                                             <param id="0" name="Variable">IdiomaTexto</param>
                                             <param id="1" name="Value">&quot;EN&quot;</param>
                                         </action>
+                                        <action id="0" name="Set item" sid="824441793227515" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                                            <param id="1" name="Value">IdiomaTexto</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="723637170645030">
@@ -269,16 +739,44 @@
                                             <param id="0" name="Variable">IdiomaTexto</param>
                                             <param id="1" name="Value">&quot;PT-BR&quot;</param>
                                         </action>
+                                        <action id="0" name="Set item" sid="534791018990837" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
+                                            <param id="1" name="Value">IdiomaTexto</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="858955444555391">
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="724122485446516">
                             <conditions>
-                                <condition id="1" name="On any touch end" sid="950255627103819" type="Touch" />
+                                <condition id="1" name="On any touch end" sid="181969373256369" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="785435130205318" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoSalvarCONFIGURACOES&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="220926366652262" type="System">
+                                <action id="-9" name="Set value" sid="533054812002413" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="516600530903691" type="BotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="818709999148819" type="TextoBotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="323014055796162" type="TextoBotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="814464097576062" type="BotaoSalvarCONFIGURACOES">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="776281341515432" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -286,6 +784,56 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <comment>O grupo a baixo coordena as ações para carregar as configurações do usuário no Banco de Dados. Aqui não é apresentado nenhum aviso caso a conexão com o Banco de Dados não seja estabelecida, pois acredita-se que essa é uma informação desnecessária ao usuário, até porque os dados das configurações dos usuários só são pretinentes para grau de estatística, ex: saber o tamanho de letra mais usado entre os professores.</comment>
+        <event-group description="" sid="755788304937868" title="Atualizar Bando De Dados CONFIGURACOES">
+            <sub-events>
+                <event-block sid="236256534652261">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="251354230524843" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UPDATE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="975663447003472" type="AJAX">
+                            <param id="0" name="Tag">&quot;atualizandoCampos&quot;</param>
+                            <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-ConfiguracaoUsuario.php?email=carla.teste&amp;tamanho=&quot;&amp;ListaTamanhoLetraCONFIGURACOES.SelectedText&amp;&quot;&amp;fonte=&quot;&amp;ListaFonteLetraCONFIGURACOES.SelectedText&amp;&quot;&amp;estilo=&quot;&amp;ListaEstiloLetraCONFIGURACOES.SelectedText&amp;&quot;&amp;idioma=&quot;&amp;ListaIdiomaCONFIGURACOES.SelectedText</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="946314280201435" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;AtualizandoInformacoes&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="910672703902066">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="642347208705550" type="AJAX">
+                            <param id="0" name="Tag">&quot;atualizandoCampos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="886098191028983" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;InformacoesAtualizadas&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="673748048846181">
+                    <conditions>
+                        <condition id="1" name="On error" sid="306351502545497" type="AJAX">
+                            <param id="0" name="Tag">&quot;atualizandoCampos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="382129153251046" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;UPDATE&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
