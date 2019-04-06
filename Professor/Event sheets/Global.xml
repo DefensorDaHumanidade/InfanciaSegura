@@ -530,6 +530,18 @@
                                 <action id="3" name="Set font size" sid="493404238031182" type="TextoBotaoTurmaTURMAADICIONAR">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
+                                <action id="7" name="Set CSS style" sid="545014521955500" type="CampoNomeTURMAADICIONAR">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="680344267277610" type="CampoSenhaTURMAADICIONAR">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="308878789885397" type="CampoEscolaTURMAADICIONAR">
+                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                    <param id="1" name="Value">TamanhoTexto&amp;&quot;px&quot;</param>
+                                </action>
                                 <action id="3" name="Set font size" sid="682932458032945" type="TituloAdicionarTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="Size (pt)">TamanhoTexto+10</param>
                                 </action>

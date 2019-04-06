@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoTurmaEspecificaAluno</name>
     <events>
+        <comment>NOTA: EventoTurmaEspecificaAluno e TelaTurmaEspecificaAluno já foram VERIFICADOS      [RESTA APENAS ACRESCENTAR OS AVISOS]</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria.         ACRESCENTAR OS PHP    AVISOOOOOOOOOOOOOOOO</comment>
         <include>Global</include>
         <event-block sid="796324045917820">
             <conditions>
@@ -17,13 +19,6 @@
                     <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="0" name="Set text" sid="316894193540051" type="TituloNomeAlunoTURMAESPECIFICAALUNO">
-                    <param id="0" name="Text">NomeAluno</param>
-                </action>
-                <action id="-9" name="Set value" sid="535024490735611" type="System">
-                    <param id="0" name="Variable">Conexao</param>
-                    <param id="1" name="Value">&quot;baixardoAluno&quot;</param>
-                </action>
                 <action id="-12" name="Set group active" sid="292987216972945" type="System">
                     <param id="0" name="Group name">&quot;Consultar dados gerais Aluno TURMAESPECIFICAALUNO&quot;</param>
                     <param id="1" name="State">1</param>
@@ -36,10 +31,18 @@
                     <param id="0" name="Group name">&quot;Consultar Acertos Aluno TURMAESPECIFICAALUNO&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="535024490735611" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;baixardoAluno&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="316894193540051" type="TituloNomeAlunoTURMAESPECIFICAALUNO">
+                    <param id="0" name="Text">NomeAluno</param>
+                </action>
                 <action id="11" name="Clear" sid="450231826252577" type="ListaErrosTURMAESPECIFICAALUNO" />
                 <action id="11" name="Clear" sid="353653348479633" type="ListaAcertosTURMAESPECIFICAALUNO" />
             </actions>
         </event-block>
+        <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>
         <event-group description="" sid="985969961560414" title="Limitar rolagem TURMAESPECIFICAALUNO">
             <sub-events>
                 <event-block sid="477225034657951">
@@ -54,6 +57,82 @@
                         <action id="-9" name="Set value" sid="797072978859976" type="System">
                             <param id="0" name="Variable">RolagemTotal</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="169736529465505">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="662167378755102" type="System">
+                            <param id="0" name="First value">RolagemTotal</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">-600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="170989799126171" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">-600</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Grupo onde são executadas as rotinas para ocultar os campos. Esse grupo é necessário, pois nativamente o Construct 2coloca os &apos;textbox&apos; no topo do layout. Resumo: Oculta os campos quando eles enconstam na imagem do topo.</comment>
+        <event-group description="" sid="145772904636531" title="Ocultar Campos TURMAESPECIFICAALUNO">
+            <sub-events>
+                <event-block sid="687241582683652">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="872520810927419" type="System">
+                            <param id="0" name="First value">ListaErrosTURMAESPECIFICAALUNO.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="682900685866756" type="ListaErrosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="655888934464455">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="727770539754441" type="System">
+                            <param id="0" name="First value">ListaErrosTURMAESPECIFICAALUNO.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="898928388899759" type="ListaErrosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="645498251498246">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="474317922303192" type="System">
+                            <param id="0" name="First value">ListaAcertosTURMAESPECIFICAALUNO.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="338779308226476" type="ListaAcertosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="263080185566525">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="377019201638712" type="System">
+                            <param id="0" name="First value">ListaAcertosTURMAESPECIFICAALUNO.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="246186170235708" type="ListaAcertosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -73,29 +152,41 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="198674650453138" type="TextoNickTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="166833870767895" type="TextoNickTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="956198687522248" type="TextoIdadeTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="966672733732296" type="TextoCadastroTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="672844877628665" type="TextoUltimoAcessoTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">600</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="648267552343915" type="TextoErrosTURMAESPECIFICAALUNO">
                                     <param id="0" name="Width">600</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="914731967582743" type="ListaErrosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">600</param>
-                                    <param id="1" name="Height">100</param>
-                                </action>
                                 <action id="-5" name="Set width" sid="237500588900639" type="TextoAcertosTURMAESPECIFICAALUNO">
                                     <param id="0" name="Width">600</param>
                                 </action>
+                                <action id="-7" name="Set size" sid="914731967582743" type="ListaErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">800</param>
+                                    <param id="1" name="Height">100</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="322948361597011" type="ListaAcertosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">600</param>
+                                    <param id="0" name="Width">800</param>
                                     <param id="1" name="Height">100</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="658510963584823" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">TextoAcertosTURMAESPECIFICAALUNO.X+ComprimentoBotao</param>
+                                    <param id="0" name="X">TextoAcertosTURMAESPECIFICAALUNO.X+ComprimentoBotao+50</param>
                                     <param id="1" name="Y">TextoAcertosTURMAESPECIFICAALUNO.Y</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="708839278965973" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">TextoErrosTURMAESPECIFICAALUNO.X+ComprimentoBotao</param>
+                                    <param id="0" name="X">TextoErrosTURMAESPECIFICAALUNO.X+ComprimentoBotao+50</param>
                                     <param id="1" name="Y">TextoErrosTURMAESPECIFICAALUNO.Y</param>
                                 </action>
                             </actions>
@@ -114,36 +205,36 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="160192485101401" type="TextoNickTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralRetrato+1000-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="626226168548161" type="TextoNickTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="588774162545899" type="TextoIdadeTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="154947386159818" type="TextoCadastroTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="720443631914721" type="TextoUltimoAcessoTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="581537810948447" type="TextoTurmaTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="827377146555834" type="TextoErrosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="532294075347466" type="ListaErrosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
-                                    <param id="1" name="Height">100</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="244624972546008" type="TextoAcertosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="532294075347466" type="ListaErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">WindowWidth-20</param>
+                                    <param id="1" name="Height">100</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="731098382576355" type="ListaAcertosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="Width">WindowWidth-10</param>
+                                    <param id="0" name="Width">WindowWidth-20</param>
                                     <param id="1" name="Height">100</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="821324007263054" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
@@ -158,6 +249,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
                 <event-group description="" sid="934588236474665" title="Posições/Proporções Relativas TURMAESPECIFICAALUNO">
                     <sub-events>
                         <event-block sid="173944476081209">
@@ -167,47 +259,47 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="177243076787318" type="TituloNomeAlunoTURMAESPECIFICAALUNO">
                                     <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="630949604792852" type="TextoIdadeTURMAESPECIFICAALUNO">
                                     <param id="0" name="X">TextoNickTURMAESPECIFICAALUNO.X</param>
-                                    <param id="1" name="Y">TextoNickTURMAESPECIFICAALUNO.Y+50</param>
+                                    <param id="1" name="Y">TextoNickTURMAESPECIFICAALUNO.Y+EspacamentoLongitudinalElementos</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="343247978754628" type="TextoCadastroTURMAESPECIFICAALUNO">
                                     <param id="0" name="X">TextoIdadeTURMAESPECIFICAALUNO.X</param>
-                                    <param id="1" name="Y">TextoIdadeTURMAESPECIFICAALUNO.Y+50</param>
+                                    <param id="1" name="Y">TextoIdadeTURMAESPECIFICAALUNO.Y+EspacamentoLongitudinalElementos</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="345547973076210" type="TextoUltimoAcessoTURMAESPECIFICAALUNO">
                                     <param id="0" name="X">TextoCadastroTURMAESPECIFICAALUNO.X</param>
-                                    <param id="1" name="Y">TextoCadastroTURMAESPECIFICAALUNO.Y+50</param>
+                                    <param id="1" name="Y">TextoCadastroTURMAESPECIFICAALUNO.Y+EspacamentoLongitudinalElementos</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="897379394423187" type="TextoTurmaTURMAESPECIFICAALUNO">
                                     <param id="0" name="X">TextoUltimoAcessoTURMAESPECIFICAALUNO.X</param>
-                                    <param id="1" name="Y">TextoUltimoAcessoTURMAESPECIFICAALUNO.Y+50</param>
+                                    <param id="1" name="Y">TextoUltimoAcessoTURMAESPECIFICAALUNO.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="355256028237435" type="TextoErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoNickTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">BotaoExpulsarTURMAESPECIFICAALUNO.Y+100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="332232782166680" type="TextoAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoNickTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">ListaErrosTURMAESPECIFICAALUNO.Y+EspacamentoLongitudinalElementos+ListaErrosTURMAESPECIFICAALUNO.Height</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="936954785586693" type="ListaErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoErrosTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">TextoErrosTURMAESPECIFICAALUNO.Y+EspacamentoLongitudinalElementos</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="634598216996832" type="ListaAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="X">TextoAcertosTURMAESPECIFICAALUNO.X</param>
+                                    <param id="1" name="Y">TextoAcertosTURMAESPECIFICAALUNO.Y+EspacamentoLongitudinalElementos</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="775960433330988" type="BotaoExpulsarTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">TextoTurmaTURMAESPECIFICAALUNO.X</param>
+                                    <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">TextoTurmaTURMAESPECIFICAALUNO.Y+100</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="890577356476269" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
                                     <param id="0" name="Object">BotaoExpulsarTURMAESPECIFICAALUNO</param>
                                     <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="355256028237435" type="TextoErrosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">BotaoExpulsarTURMAESPECIFICAALUNO.X</param>
-                                    <param id="1" name="Y">BotaoExpulsarTURMAESPECIFICAALUNO.Y+100</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="936954785586693" type="ListaErrosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">TextoErrosTURMAESPECIFICAALUNO.X-Self.Width/2</param>
-                                    <param id="1" name="Y">TextoErrosTURMAESPECIFICAALUNO.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="332232782166680" type="TextoAcertosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">ListaErrosTURMAESPECIFICAALUNO.X+ListaErrosTURMAESPECIFICAALUNO.Width/2</param>
-                                    <param id="1" name="Y">ListaErrosTURMAESPECIFICAALUNO.Y+50+ListaErrosTURMAESPECIFICAALUNO.Height</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="634598216996832" type="ListaAcertosTURMAESPECIFICAALUNO">
-                                    <param id="0" name="X">TextoAcertosTURMAESPECIFICAALUNO.X-Self.Width/2</param>
-                                    <param id="1" name="Y">TextoAcertosTURMAESPECIFICAALUNO.Y+50</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="274280556303869" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
                                     <param id="0" name="Object">BotaoLimparAcertosTURMAESPECIFICAALUNO</param>
@@ -227,35 +319,75 @@
             <sub-events>
                 <event-group description="" sid="473358274267267" title="Botão Voltar TURMAESPECIFICAALUNO">
                     <sub-events>
-                        <event-block sid="677760010748131">
+                        <event-block sid="117806228015372">
                             <conditions>
-                                <condition id="0" name="On any touch start" sid="143998649557990" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="582737255679907" type="Touch">
+                                <condition id="0" name="On any touch start" sid="363632243001783" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="863297095410951" type="Touch">
                                     <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="603205232655143" type="System">
+                                <action id="-12" name="Set group active" sid="339642629408710" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="208227603597282" type="BotaoVoltar">
-                                    <param id="0" name="Frame number">1</param>
+                                <action id="-9" name="Set value" sid="149190830027319" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoVoltar&quot;</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="123483565075745" type="System">
-                                    <param id="0" name="Layout">TelaTurmaEspecifica</param>
+                                <action id="5" name="Set frame" sid="316345741488118" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="989881812126745">
+                        <event-block sid="544144349484741">
                             <conditions>
-                                <condition id="1" name="On any touch end" sid="756987787582549" type="Touch" />
+                                <condition id="1" name="On any touch end" sid="867235221673012" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="610882535977333" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="905521728839012" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="365259685612671" type="BotaoVoltar">
+                                <action id="-9" name="Set value" sid="198584948471861" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="231178402700905" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="157433922084628" type="System">
+                                <action id="-12" name="Set group active" sid="913564897116964" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="163027263250018" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="406095311286138">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="306394331789813" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="540039410499552" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="193814474615584" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="456761724589879" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="537074126286545" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -263,8 +395,413 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-group description="" sid="471490120574151" title="Botão Explusar TURMAESPECIFICAALUNO">
+                    <sub-events>
+                        <event-block sid="161331357059215">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="788747559161507" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="707981769284106" type="Touch">
+                                    <param id="0" name="Object">BotaoExpulsarTURMAESPECIFICAALUNO</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="151128168374167" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="903891307512898" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoExplusarAluno&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="370177716082336" type="BotaoExpulsarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="182268514622361" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="337792312023182" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="827780786614537" type="BotaoExpulsarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="278112407945879">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="855466742635898" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="554121080135564" type="Touch">
+                                    <param id="0" name="Object">BotaoExpulsarTURMAESPECIFICAALUNO</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="266089217644979" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoExplusarAluno&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="263374784184239" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="994349037793727" type="BotaoExpulsarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="746787333729801" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="980364516974099" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="331288256559085" type="BotaoExpulsarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="476510482724779" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="2" name="Post to URL" sid="540813578325670" type="AJAX">
+                                    <param id="0" name="Tag">&quot;explusarAluno&quot;</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
+                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="976866760245288">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="673124363513750" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="414975149942198" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoExplusarAluno&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="674188166265495" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="337535426179571" type="BotaoExpulsarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="633430943627249" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="586582019771614" type="TextoBotaoExplusarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="461004799586718" type="BotaoExpulsarTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="624050431789452" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Uma vez que o usuário é atualizando no Banco de Dados, as informações internas do aparelho também são atualizadas com as novas informações.</comment>
+                        <event-block sid="894157018779769">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="567011643016713" type="AJAX">
+                                    <param id="0" name="Tag">&quot;explusarAluno&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="915977195164706" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Uma mensagem de Erro deveria ser apresentada nesta ação.</comment>
+                        <event-block sid="658420112655192">
+                            <conditions>
+                                <condition id="1" name="On error" sid="181467797753181" type="AJAX">
+                                    <param id="0" name="Tag">&quot;explusarAluno&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="263482461363161" title="Botão Limpar Erros TURMAESPECIFICAALUNO">
+                    <sub-events>
+                        <event-block sid="746233808456521">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="342361491403830" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="897840241126647" type="Touch">
+                                    <param id="0" name="Object">BotaoLimparErrosTURMAESPECIFICAALUNO</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="775493669060926" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="992168454886887" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoLimparErros&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="332790091638534" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="443465593286876" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="754737382507313" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="956751602189883" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="705133265112456">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="127650235101304" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="531094584888521" type="Touch">
+                                    <param id="0" name="Object">BotaoLimparErrosTURMAESPECIFICAALUNO</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="795520214544853" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoLimparErros&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="687705408588459" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="124713686240030" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="162858747831614" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="670429646267205" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="918858283455019" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="509553185807490" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="2" name="Post to URL" sid="789552156511587" type="AJAX">
+                                    <param id="0" name="Tag">&quot;limparErros&quot;</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
+                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="459362060007374">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="510669709105811" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="810999860400121" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoLimparErros&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="482496211932462" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="517621025306461" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="517089407783915" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="822251141219776" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="980667253463073" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="239422513135314" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Uma vez que o usuário é atualizando no Banco de Dados, as informações internas do aparelho também são atualizadas com as novas informações.</comment>
+                        <event-block sid="796848605030835">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="690199690346986" type="AJAX">
+                                    <param id="0" name="Tag">&quot;limparErros&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="773387265300969" type="System" />
+                            </actions>
+                        </event-block>
+                        <comment>Uma mensagem de Erro deveria ser apresentada nesta ação.</comment>
+                        <event-block sid="898945280328357">
+                            <conditions>
+                                <condition id="1" name="On error" sid="133018309212752" type="AJAX">
+                                    <param id="0" name="Tag">&quot;limparErros&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="994191740573112" title="Botão Limpar Acertos TURMAESPECIFICAALUNO">
+                    <sub-events>
+                        <event-block sid="848888642412268">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="950213829856154" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="940484741931682" type="Touch">
+                                    <param id="0" name="Object">BotaoLimparAcertosTURMAESPECIFICAALUNO</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="434669213508496" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="483128858016479" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoLimparAcertos&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="703975788577211" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="267370605134726" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="996259882846871" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="751130311090238" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="151888352136413">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="944961785910094" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="795588704279637" type="Touch">
+                                    <param id="0" name="Object">BotaoLimparAcertosTURMAESPECIFICAALUNO</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="566783544943013" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoLimparAcertos&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="926336233969208" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="382830923908201" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="371155773172197" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="588892909575517" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="159682945036150" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="165346167298421" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="2" name="Post to URL" sid="807233120214571" type="AJAX">
+                                    <param id="0" name="Tag">&quot;limparErros&quot;</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
+                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="623543258736063">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="834494439983841" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="666915784315133" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoLimparAcertos&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="313025012122839" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="229150067549146" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="570619029789603" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="876627742127364" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="388262201145928" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="215873646826314" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Uma vez que o usuário é atualizando no Banco de Dados, as informações internas do aparelho também são atualizadas com as novas informações.</comment>
+                        <event-block sid="905439821293866">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="374346739282486" type="AJAX">
+                                    <param id="0" name="Tag">&quot;limparErros&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="745631162690784" type="System" />
+                            </actions>
+                        </event-block>
+                        <comment>Uma mensagem de Erro deveria ser apresentada nesta ação.</comment>
+                        <event-block sid="222210317049994">
+                            <conditions>
+                                <condition id="1" name="On error" sid="260673864406863" type="AJAX">
+                                    <param id="0" name="Tag">&quot;limparErros&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
+        <comment>Grupo para baixar os dados do Aluno.</comment>
         <event-group description="" sid="358615520295379" title="Consultar dados gerais Aluno TURMAESPECIFICAALUNO">
             <sub-events>
                 <event-block sid="759297911476466">
@@ -318,6 +855,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Grupo para carregar os dados gerais do Aluno.</comment>
         <event-group description="" inactive="1" sid="721388036608685" title="Preencher dados gerais Aluno TURMAESPECIFICAALUNO">
             <sub-events>
                 <event-block sid="530556899523849">
@@ -355,6 +893,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Grupo para baixar os erros do Aluno.</comment>
         <event-group description="" sid="338062907583611" title="Consultar Erros Aluno TURMAESPECIFICAALUNO">
             <sub-events>
                 <event-block sid="353458346477845">
@@ -408,6 +947,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Grupo para carregar os erros do Aluno.</comment>
         <event-group description="" inactive="1" sid="354747299041563" title="Preencher Erros Aluno TURMAESPECIFICAALUNO">
             <sub-events>
                 <event-block sid="380772037351001">
@@ -420,6 +960,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>O loop percorre a quantidade de acertos que foi baixada. Ou seja: tokecount, conta quantos &quot;item&quot; foram baixados, com base na quantidade de linha puladas de item para item, então usa esse valor convertido para inteiro no loop.</comment>
                 <event-block sid="949971735687624">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="254534317963968" type="System" />
@@ -446,6 +987,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Grupo para baixar os acertos do Aluno. Ou seja: as fases que foram concluidas e suas pontuação final.</comment>
         <event-group description="" sid="645462715621722" title="Consultar Acertos Aluno TURMAESPECIFICAALUNO">
             <sub-events>
                 <event-block sid="955620055179659">
@@ -499,6 +1041,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Grupo para carregar os acertos baixados.</comment>
         <event-group description="" inactive="1" sid="803117534204085" title="Preencher Acertos Aluno TURMAESPECIFICAALUNO">
             <sub-events>
                 <event-block sid="366014549399747">
@@ -511,6 +1054,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>O loop percorre a quantidade de acertos que foi baixada. Ou seja: tokecount, conta quantos &quot;item&quot; foram baixados, com base na quantidade de linha puladas de item para item, então usa esse valor convertido para inteiro no loop.</comment>
                 <event-block sid="339400079705223">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="273909088312044" type="System" />

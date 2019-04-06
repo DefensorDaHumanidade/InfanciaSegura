@@ -131,8 +131,20 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="739675343152065" type="TextoNomeTURMAADICIONAR">
-                                    <param id="0" name="X">600</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="200129635784740" type="CampoNomeTURMAADICIONAR">
+                                    <param id="0" name="Width">700</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="777277574277381" type="CampoSenhaTURMAADICIONAR">
+                                    <param id="0" name="Width">700</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="427056174817217" type="CampoEscolaTURMAADICIONAR">
+                                    <param id="0" name="Width">700</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="528902991399197" type="TextoTurmasCadastradasTURMAADICIONAR">
+                                    <param id="0" name="Width">700</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="353845818618353" type="FundoBotaoTurmaTURMAADICIONAR">
                                     <param id="0" name="Width">800</param>
@@ -162,15 +174,27 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="256764567290937" type="TextoNomeTURMAADICIONAR">
-                                    <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralRetrato+1000-(WindowWidth/2)</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="499277149354123" type="CampoNomeTURMAADICIONAR">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="695358815701420" type="CampoSenhaTURMAADICIONAR">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="902858473611977" type="CampoEscolaTURMAADICIONAR">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="164163177919641" type="TextoTurmasCadastradasTURMAADICIONAR">
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralDireita</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="896267169212391" type="FundoBotaoTurmaTURMAADICIONAR">
-                                    <param id="0" name="Width">WindowWidth-20</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralRetrato</param>
                                     <param id="1" name="Height">90</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="844818472355225" type="FundoTurmaFechadaTURMAADICIONAR">
-                                    <param id="0" name="Width">WindowWidth-20</param>
+                                    <param id="0" name="Width">WindowWidth-DistanciaLateralRetrato</param>
                                     <param id="1" name="Height">90</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="353962105364957" type="BotaoTurmaTURMAADICIONAR">
@@ -181,6 +205,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
                 <event-group description="" sid="136855380762935" title="Posições/Proporções Relativas TURMAADICIONAR">
                     <sub-events>
                         <event-block sid="570824223154954">
@@ -188,6 +213,10 @@
                                 <condition id="-1" name="Every tick" sid="865495700234464" type="System" />
                             </conditions>
                             <actions>
+                                <action id="-3" name="Set position" sid="816032121569040" type="TituloAdicionarTurmaTURMAADICIONAR">
+                                    <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
+                                </action>
                                 <action id="-3" name="Set position" sid="356492847231079" type="TextoBotaoTurmaTURMAADICIONAR">
                                     <param id="0" name="X">BotaoTurmaTURMAADICIONAR.X</param>
                                     <param id="1" name="Y">BotaoTurmaTURMAADICIONAR.Y</param>
@@ -200,41 +229,29 @@
                                     <param id="0" name="X">TextoSenhaTurmaTURMAADICIONAR.X+150</param>
                                     <param id="1" name="Y">TextoSenhaTurmaTURMAADICIONAR.Y</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="816032121569040" type="TituloAdicionarTurmaTURMAADICIONAR">
-                                    <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="350078098198171" type="CampoNomeTURMAADICIONAR">
-                                    <param id="0" name="X">TextoNomeTURMAADICIONAR.X+120</param>
+                                    <param id="0" name="X">TextoNomeTURMAADICIONAR.X+EspacamentoLateralElementos</param>
                                     <param id="1" name="Y">TextoNomeTURMAADICIONAR.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="865978552193179" type="CampoSenhaTURMAADICIONAR">
+                                    <param id="0" name="X">TextoSenhaTURMAADICIONAR.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoSenhaTURMAADICIONAR.Y</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="342858747227133" type="CampoEscolaTURMAADICIONAR">
+                                    <param id="0" name="X">TextoEscolaTURMAADICIONAR.X+EspacamentoLateralElementos</param>
+                                    <param id="1" name="Y">TextoEscolaTURMAADICIONAR.Y</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="671422320956769" type="TextoSenhaTURMAADICIONAR">
                                     <param id="0" name="X">TextoNomeTURMAADICIONAR.X</param>
-                                    <param id="1" name="Y">TextoNomeTURMAADICIONAR.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="865978552193179" type="CampoSenhaTURMAADICIONAR">
-                                    <param id="0" name="X">TextoSenhaTURMAADICIONAR.X+120</param>
-                                    <param id="1" name="Y">TextoSenhaTURMAADICIONAR.Y</param>
+                                    <param id="1" name="Y">TextoNomeTURMAADICIONAR.Y+EspacamentoLongitudinalElementos</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="810070759475825" type="TextoEscolaTURMAADICIONAR">
                                     <param id="0" name="X">TextoSenhaTURMAADICIONAR.X</param>
-                                    <param id="1" name="Y">TextoSenhaTURMAADICIONAR.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="342858747227133" type="CampoEscolaTURMAADICIONAR">
-                                    <param id="0" name="X">TextoEscolaTURMAADICIONAR.X+120</param>
-                                    <param id="1" name="Y">TextoEscolaTURMAADICIONAR.Y</param>
+                                    <param id="1" name="Y">TextoSenhaTURMAADICIONAR.Y+EspacamentoLongitudinalElementos</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="879825533431117" type="TextoTurmasCadastradasTURMAADICIONAR">
                                     <param id="0" name="X">TextoEscolaTURMAADICIONAR.X</param>
-                                    <param id="1" name="Y">TextoEscolaTURMAADICIONAR.Y+50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="804097483553249" type="BotaoCriarTurmaTURMAADICIONAR">
-                                    <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">950+WindowHeight/2</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="851810121482288" type="TextoBotaoCriarTurmaTURMAADICIONAR">
-                                    <param id="0" name="Object">BotaoCriarTurmaTURMAADICIONAR</param>
-                                    <param id="1" name="Image point (optional)">0</param>
+                                    <param id="1" name="Y">TextoEscolaTURMAADICIONAR.Y+EspacamentoLongitudinalElementos</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="796574327400362" type="FundoBotaoTurmaTURMAADICIONAR">
                                     <param id="0" name="X">1000</param>
@@ -243,6 +260,14 @@
                                 <action disabled="1" id="-3" name="Set position" sid="713534253747545" type="FundoTurmaFechadaTURMAADICIONAR">
                                     <param id="0" name="X">1000</param>
                                     <param id="1" name="Y">TextoTurmasCadastradasTURMAADICIONAR.Y+120+FundoBotaoTurmaTURMAADICIONAR.IID*100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="804097483553249" type="BotaoCriarTurmaTURMAADICIONAR">
+                                    <param id="0" name="X">1000</param>
+                                    <param id="1" name="Y">950+WindowHeight/2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="851810121482288" type="TextoBotaoCriarTurmaTURMAADICIONAR">
+                                    <param id="0" name="Object">BotaoCriarTurmaTURMAADICIONAR</param>
+                                    <param id="1" name="Image point (optional)">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -401,35 +426,75 @@
             <sub-events>
                 <event-group description="" sid="126480665919988" title="Botão Voltar TURMAADICIONAR">
                     <sub-events>
-                        <event-block sid="758344112455088">
+                        <event-block sid="274755308147712">
                             <conditions>
-                                <condition id="0" name="On any touch start" sid="712326882783852" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="651277673303218" type="Touch">
+                                <condition id="0" name="On any touch start" sid="120306700996415" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="260195699107829" type="Touch">
                                     <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="468886944877800" type="System">
+                                <action id="-12" name="Set group active" sid="336196084186836" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="393263341572864" type="BotaoVoltar">
+                                <action id="-9" name="Set value" sid="228150390774606" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="712953037461257" type="BotaoVoltar">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="425144838452381" type="System">
+                            </actions>
+                        </event-block>
+                        <event-block sid="737076744930662">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="201261539362969" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="915433312433277" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="504275471314134" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="367481134384616" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="369993943956315" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="216714418501851" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="183763301356804" type="System">
                                     <param id="0" name="Layout">TelaTurma</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="399819231709739">
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="186603666463625">
                             <conditions>
-                                <condition id="1" name="On any touch end" sid="651483020345310" type="Touch" />
+                                <condition id="1" name="On any touch end" sid="591942727826711" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="428624247466961" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="176237918999546" type="BotaoVoltar">
+                                <action id="-9" name="Set value" sid="920167644415235" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="423170908768712" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="637405164237332" type="System">
+                                <action id="-12" name="Set group active" sid="624986773564985" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>

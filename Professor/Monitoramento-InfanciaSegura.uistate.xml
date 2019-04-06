@@ -10,17 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">TelaCarregamento</layout>
-        <layout order="7">TelaTurma</layout>
-        <layout order="9">TelaTurmaAjustes</layout>
-        <event-sheet order="0">EventoCarregamento</event-sheet>
-        <event-sheet order="2">Global</event-sheet>
-        <event-sheet order="3">EventoInicial</event-sheet>
-        <event-sheet order="4">EventoCriarConta</event-sheet>
-        <event-sheet order="5">EventoMaterialApoio</event-sheet>
-        <event-sheet order="6">EventoPerfil</event-sheet>
-        <event-sheet active="1" order="8">EventoTurma</event-sheet>
-        <event-sheet order="10">EventoTurmaAjustes</event-sheet>
+        <layout order="0">TelaCarregamento</layout>
+        <layout order="5">TelaTurma</layout>
+        <layout order="9">TelaTurmaAdicionar</layout>
+        <event-sheet order="1">Global</event-sheet>
+        <event-sheet order="2">EventoInicial</event-sheet>
+        <event-sheet order="3">EventoCriarConta</event-sheet>
+        <event-sheet order="4">EventoPerfil</event-sheet>
+        <event-sheet order="6">EventoTurma</event-sheet>
+        <event-sheet order="7">EventoTurmaAjustes</event-sheet>
+        <event-sheet active="1" order="8">EventoTurmaAdicionar</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
