@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoTurmaAdicionarFinal</name>
     <events>
+        <comment>NOTA: EventoTurmaAdicionarFinal e TelaTurmaAdicionarFinal já foram VERIFICADOS      [RESTA APENAS ACRESCENTAR OS AVISOS]</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria.         ACRESCENTAR OS PHP    AVISOOOOOOOOOOOOOOOO</comment>
         <include>Global</include>
         <event-block sid="731989232490697">
             <conditions>
@@ -26,33 +28,13 @@
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="0" name="Set text" sid="524927734967668" type="TextoBotaoTurmaTURMAADICIONARFINAL">
-                    <param id="0" name="Text">&quot;EUUU&quot;</param>
+                    <param id="0" name="Text">CriarTurmaNome</param>
                 </action>
                 <action id="0" name="Set text" sid="291274252743323" type="TextoSenhaTurmaTURMAADICIONARFINAL">
-                    <param id="0" name="Text">&quot;111&quot;</param>
+                    <param id="0" name="Text">CriarTurmaSenha</param>
                 </action>
                 <action id="0" name="Set text" sid="755858616672396" type="TextoStatusTurmaTURMAADICIONARFINAL">
                     <param id="0" name="Text">&quot;aberto&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="820040125993677">
-            <conditions>
-                <condition id="-18" name="On created" sid="632943603099932" type="ImagemTurmaAbertaTURMAADICIONARFINAL" />
-            </conditions>
-            <actions>
-                <action id="9" name="Set scale" sid="164842845366471" type="ImagemTurmaAbertaTURMAADICIONARFINAL">
-                    <param id="0" name="Scale">0.1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="723986216624906">
-            <conditions>
-                <condition id="-18" name="On created" sid="842648790466096" type="ImagemTurmaFechadaTURMAADICIONARFINAL" />
-            </conditions>
-            <actions>
-                <action id="9" name="Set scale" sid="823227947137913" type="ImagemTurmaFechadaTURMAADICIONARFINAL">
-                    <param id="0" name="Scale">0.1</param>
                 </action>
             </actions>
         </event-block>
@@ -108,6 +90,69 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Grupo onde são executadas as rotinas para ocultar as turmas.</comment>
+        <event-group description="" sid="680151759464977" title="Ocultar Campos TURMAADICIONARFINAL">
+            <sub-events>
+                <event-block sid="932874171219676">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="232568532371378" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="803533352408432" type="BotaoTurmaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1400-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="550092065585570" type="FundoTurmaFechadaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1400-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="142950009319716" type="FundoBotaoTurmaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1400-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="170392012127295" type="TextoBotaoTurmaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1400-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="149593104151346" type="ImagemTurmaAbertaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1400-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="612042901208877" type="ImagemTurmaFechadaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1400-Self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="489172785975831">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="168734333104545" type="System">
+                            <param id="0" name="First value">WindowWidth</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">WindowHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="546711077696800" type="BotaoTurmaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1300*(WindowWidth/WindowHeight)+WindowWidth-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="102511142742421" type="FundoTurmaFechadaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1300*(WindowWidth/WindowHeight)+WindowWidth-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="932306234379425" type="FundoBotaoTurmaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1300*(WindowWidth/WindowHeight)+WindowWidth-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="519206856832001" type="TextoBotaoTurmaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1300*(WindowWidth/WindowHeight)+WindowWidth-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="447289401075842" type="ImagemTurmaAbertaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1300*(WindowWidth/WindowHeight)+WindowWidth-Self.Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="399182323216265" type="ImagemTurmaFechadaTURMAADICIONARFINAL">
+                            <param id="0" name="Opacity">1300*(WindowWidth/WindowHeight)+WindowWidth-Self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="527475587337404" title="Posições/Proporções TURMAADICIONARFINAL">
             <sub-events>
                 <event-group description="" sid="254433115461725" title="Posições/Proporções Paisagem TURMAADICIONARFINAL">
@@ -122,8 +167,11 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="378461488987493" type="TextoTurmasCadastradasTURMAADICIONARFINAL">
-                                    <param id="0" name="X">600</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="0" name="X">DistanciaLateralPaisagem</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="388750574642440" type="TextoTurmasCadastradasTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">700</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="356251082478527" type="FundoBotaoTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="Width">800</param>
@@ -138,11 +186,11 @@
                                     <param id="1" name="Y">TextoTurmasCadastradasTURMAADICIONARFINAL.Y+120+BotaoTurmaTURMAADICIONARFINAL.IID*100</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="319986272898666" type="BotaoCriarTurmaTURMAADICIONARFINAL">
-                                    <param id="0" name="X">1000+ComprimentoBotao/2+10</param>
+                                    <param id="0" name="X">1000+ComprimentoBotao/2+DistanciaBotoes</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="998182214436411" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
-                                    <param id="0" name="X">1000-ComprimentoBotao/2-10</param>
+                                    <param id="0" name="X">1000-ComprimentoBotao/2-DistanciaBotoes</param>
                                     <param id="1" name="Y">950+WindowHeight/2</param>
                                 </action>
                             </actions>
@@ -162,7 +210,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="417046536999935" type="TextoTurmasCadastradasTURMAADICIONARFINAL">
                                     <param id="0" name="X">1020-(WindowWidth/2)</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+30+RolagemTotal</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo+RolagemTotal</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="680958758321780" type="FundoBotaoTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="Width">WindowWidth-20</param>
@@ -182,12 +230,13 @@
                                 </action>
                                 <action id="-3" name="Set position" sid="922411461568813" type="BotaoCriarTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="X">1000</param>
-                                    <param id="1" name="Y">BotaoCancelarTurmaTURMAADICIONARFINAL.Y+AlturaBotao+10</param>
+                                    <param id="1" name="Y">BotaoCancelarTurmaTURMAADICIONARFINAL.Y+AlturaBotao+DistanciaBotoes</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
+                <comment>Os objetos presentes nesse grupo estão associados a posição de outros objetos situados nos grupos acima. Esse grupo deve estar por último pois o Construct 2 realiza suas operações de cima para baixo.</comment>
                 <event-group description="" sid="579215710719583" title="Posições/Proporções Relativas TURMAADICIONARFINAL">
                     <sub-events>
                         <event-block sid="425795645746812">
@@ -197,7 +246,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="863755765366040" type="TituloAdicionarTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="X">1000+TopoTelaSemTitulo.Width/20</param>
-                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/3</param>
+                                    <param id="1" name="Y">TopoTelaSemTitulo.Y+TopoTelaSemTitulo.Height/2.8</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="147614605544526" type="TextoBotaoTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="X">BotaoTurmaTURMAADICIONARFINAL.X</param>
@@ -233,35 +282,75 @@
             <sub-events>
                 <event-group description="" sid="446280254293868" title="Botão Voltar TURMAADICIONARFINAL">
                     <sub-events>
-                        <event-block sid="874658827253983">
+                        <event-block sid="166526987141154">
                             <conditions>
-                                <condition id="0" name="On any touch start" sid="303708893433365" type="Touch" />
-                                <condition id="4" name="Is touching object" sid="390680094001377" type="Touch">
+                                <condition id="0" name="On any touch start" sid="693485985745817" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="487464818063465" type="Touch">
                                     <param id="0" name="Object">BotaoVoltar</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="230858515844028" type="System">
+                                <action id="-12" name="Set group active" sid="991029649088613" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="490248795892248" type="BotaoVoltar">
+                                <action id="-9" name="Set value" sid="234706608513818" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="883656762080292" type="BotaoVoltar">
                                     <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="666955532595994">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="397819471469150" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="624459079449908" type="Touch">
+                                    <param id="0" name="Object">BotaoVoltar</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="825509269608987" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="658950538852744" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="339408119390324" type="BotaoVoltar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="907791129988353" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="535117147813427" type="System">
                                     <param id="0" name="Layout">TelaTurmaAdicionar</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="393558229048852">
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="487203840246227">
                             <conditions>
-                                <condition id="1" name="On any touch end" sid="648312059178695" type="Touch" />
+                                <condition id="1" name="On any touch end" sid="949805745112148" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="531271103054349" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoVoltar&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="434126873002200" type="BotaoVoltar">
+                                <action id="-9" name="Set value" sid="535917963244878" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="246883600625200" type="BotaoVoltar">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="821749997722558" type="System">
+                                <action id="-12" name="Set group active" sid="692948390978568" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -269,13 +358,13 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" disabled="1" sid="482943860300497" title="Botão AdicionarTumra TURMAADICIONAR2">
+                <event-group description="" sid="482943860300497" title="Botão AdicionarTurma TURMAADICIONAR">
                     <sub-events>
-                        <event-block disabled="1" sid="185798772745870">
+                        <event-block sid="185798772745870">
                             <conditions>
                                 <condition id="0" name="On any touch start" sid="144155684312426" type="Touch" />
                                 <condition id="4" name="Is touching object" sid="395178916582291" type="Touch">
-                                    <param id="0" name="Object">BotaoCriarTurmaTURMAADICIONAR</param>
+                                    <param id="0" name="Object">BotaoCriarTurmaTURMAADICIONARFINAL</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -283,25 +372,230 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="253726156669671" type="BotaoCriarTurmaTURMAADICIONAR">
+                                <action id="-9" name="Set value" sid="775276162954795" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoCriarTurma&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="253726156669671" type="BotaoCriarTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="Width">ComprimentoBotao/1.1</param>
                                     <param id="1" name="Height">AlturaBotao/1.1</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="509699214220991" type="System">
-                                    <param id="0" name="Layout">TelaTurmaAdicionarFinal</param>
+                                <action id="-7" name="Set size" sid="393016307166034" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="443903498952551" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="630513191894010" type="BotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="929400762855305">
+                        <event-block sid="929400762855305">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="533852183071111" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="760428775972316" type="Touch">
+                                    <param id="0" name="Object">BotaoCriarTurmaTURMAADICIONARFINAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="460960662153682" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoCriarTurma&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="652178221271560" type="BotaoCriarTurmaTURMAADICIONAR">
+                                <action id="-9" name="Set value" sid="940336837862577" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="652178221271560" type="BotaoCriarTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="Width">ComprimentoBotao</param>
                                     <param id="1" name="Height">AlturaBotao</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="228421930232217" type="System">
+                                <action id="-7" name="Set size" sid="213005807991364" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="664150619056718" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="647931986384561" type="BotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="599713976120374" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Post to URL" sid="217548351963000" type="AJAX">
+                                    <param id="0" name="Tag">&quot;criarTurma&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-AdicionarTurma.php&quot;</param>
+                                    <param id="2" name="Data">&quot;professor=&quot;&amp;EmailUsuario&amp;&quot;&amp;turma=&quot;&amp;CriarTurmaNome&amp;&quot;&amp;senha=&quot;&amp;CriarTurmaSenha&amp;&quot;&amp;escola=&quot;&amp;CriarTurmaEscola</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="386227751094832">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="591860862945372" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="243682679815517" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoCriarTurma&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="468158557642918" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="245066501120693" type="BotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="101189501610851" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="209134344846631" type="TextoBotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="215770790998873" type="BotaoCriarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="884947050746084" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="361098002981020">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="475495286070772" type="AJAX">
+                                    <param id="0" name="Tag">&quot;criarTurma&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="680699334172647" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="363902855847105">
+                            <conditions>
+                                <condition id="1" name="On error" sid="507489255181357" type="AJAX">
+                                    <param id="0" name="Tag">&quot;criarTurma&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="372744049208952" title="Botão Cancelar TURMAADICIONARFINAL">
+                    <sub-events>
+                        <event-block sid="596453208507619">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="584602651325493" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="520298326006208" type="Touch">
+                                    <param id="0" name="Object">BotaoCancelarTurmaTURMAADICIONARFINAL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="100641905179530" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="373930671511000" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;BotaoCancelar&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="368501414467462" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.1</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="533260903952598" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao/1.3</param>
+                                    <param id="1" name="Height">AlturaBotao/1.1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="776005619528299" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto-4</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="124497288717439" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="482044061711671">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="933588051789791" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="396329201317168" type="Touch">
+                                    <param id="0" name="Object">BotaoCancelarTurmaTURMAADICIONARFINAL</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="839961772447230" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoCancelar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="772708152992819" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="315458926767034" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="363205180613645" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="801778719167133" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="982458152356292" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="482907829348751" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="592461815853204" type="System">
+                                    <param id="0" name="Layout">TelaTurma</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, e tire o dedo/mouse do botão, a operação é cancelada.</comment>
+                        <event-block sid="282691266934156">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="268142914415726" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="193598347230177" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoCancelar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="781420455029157" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="626410242810379" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="596301406565453" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="625028875866285" type="TextoBotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="949895994902182" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="777123950464238" type="System">
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
@@ -311,6 +605,7 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <comment>Grupo destinado a baixar apenas as turmas que estão visíveis.</comment>
         <event-group description="" sid="793894050460877" title="Consultar Turmas Cadastradas TURMAADICIONARFINAL">
             <sub-events>
                 <event-block sid="221531495400943">
@@ -324,7 +619,7 @@
                     <actions>
                         <action id="0" name="Request URL" sid="980357989371113" type="AJAX">
                             <param id="0" name="Tag">&quot;baixandoTodasTurmasNovamente&quot;</param>
-                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaTodasTurmas.php&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaTodasTurmasVisiveis.php&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="347946320783301" type="System">
                             <param id="0" name="Variable">Conexao</param>
@@ -372,6 +667,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Grupo destinado a preencher na tela todas as turmas baixadas.</comment>
         <event-group description="" inactive="1" sid="302925096687258" title="Preencher Turmas TURMAADICIONARFINAL">
             <sub-events>
                 <event-block sid="495716012839094">

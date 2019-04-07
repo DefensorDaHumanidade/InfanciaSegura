@@ -719,7 +719,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="519613490853390" type="System">
                                             <param id="0" name="Variable">IdiomaTexto</param>
-                                            <param id="1" name="Value">&quot;EN&quot;</param>
+                                            <param id="1" name="Value">&quot;en&quot;</param>
                                         </action>
                                         <action id="0" name="Set item" sid="824441793227515" type="LocalStorage">
                                             <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>
@@ -737,7 +737,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="222707717923538" type="System">
                                             <param id="0" name="Variable">IdiomaTexto</param>
-                                            <param id="1" name="Value">&quot;PT-BR&quot;</param>
+                                            <param id="1" name="Value">&quot;pt-br&quot;</param>
                                         </action>
                                         <action id="0" name="Set item" sid="534791018990837" type="LocalStorage">
                                             <param id="0" name="Key">&quot;IdiomaRegistrado&quot;</param>

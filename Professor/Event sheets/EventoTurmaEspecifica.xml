@@ -4,7 +4,7 @@
     <name>EventoTurmaEspecifica</name>
     <events>
         <comment>NOTA: EventoTurmaEspecifica e TelaTurmaEspecifica já foram VERIFICADOS      [RESTA APENAS ACRESCENTAR OS AVISOS]</comment>
-        <comment>NOTA: Tudo parece funcionar como deveria.        ARRUMAR OS PHP    AVISOOOOOOOOOOOOOOOO    E      TIRAR O ÚLTIMO BOTAO QUE É CRIADO</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria.</comment>
         <include>Global</include>
         <event-block sid="213887327458830">
             <conditions>
@@ -74,6 +74,10 @@
                                     <param id="0" name="X">800</param>
                                     <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo*2+BotaoAlunoTURMAESPECIFICA.IID*100+RolagemTotal</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="301966797127893" type="TextoErrosTURMAESPECIFICA">
+                                    <param id="0" name="X">BotaoAlunoTURMAESPECIFICA.X+300</param>
+                                    <param id="1" name="Y">BotaoAlunoTURMAESPECIFICA.Y</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -97,6 +101,10 @@
                                     <param id="0" name="X">1120-(WindowWidth/2)</param>
                                     <param id="1" name="Y">TopoTelaSemTitulo.Y+(TopoTelaSemTitulo.Height/1.6)+DistanciaTopo*2+BotaoAlunoTURMAESPECIFICA.IID*100+RolagemTotal</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="668695652795352" type="TextoErrosTURMAESPECIFICA">
+                                    <param id="0" name="X">BotaoAlunoTURMAESPECIFICA.X+150</param>
+                                    <param id="1" name="Y">BotaoAlunoTURMAESPECIFICA.Y</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -118,10 +126,6 @@
                                 </action>
                                 <action id="-3" name="Set position" sid="105844997736782" type="TextoBotaoAlunoTURMAESPECIFICA">
                                     <param id="0" name="X">BotaoAlunoTURMAESPECIFICA.X</param>
-                                    <param id="1" name="Y">BotaoAlunoTURMAESPECIFICA.Y</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="301966797127893" type="TextoErrosTURMAESPECIFICA">
-                                    <param id="0" name="X">BotaoAlunoTURMAESPECIFICA.X+300</param>
                                     <param id="1" name="Y">BotaoAlunoTURMAESPECIFICA.Y</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="783121580168881" type="FundoBotaoAlunoTURMAESPECIFICA">
@@ -222,6 +226,7 @@
                                 <condition id="4" name="Is touching object" sid="141651049457123" type="Touch">
                                     <param id="0" name="Object">BotaoAlunoTURMAESPECIFICA</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="204388947376089" type="BotaoAlunoTURMAESPECIFICA" />
                                 <condition id="-2" name="Compare Y" sid="235702657589771" type="TextoBotaoAlunoTURMAESPECIFICA">
                                     <param id="0" name="Comparison">0</param>
                                     <param id="1" name="Y co-ordinate">BotaoAlunoTURMAESPECIFICA.Y</param>
@@ -259,6 +264,7 @@
                                 <condition id="-14" name="Pick by unique ID" sid="413634994402031" type="BotaoAlunoTURMAESPECIFICA">
                                     <param id="0" name="Unique ID">Botao</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="822865750090980" type="BotaoAlunoTURMAESPECIFICA" />
                                 <condition id="4" name="Is touching object" sid="612495271849733" type="Touch">
                                     <param id="0" name="Object">BotaoAlunoTURMAESPECIFICA</param>
                                 </condition>
@@ -306,6 +312,7 @@
                                 <condition id="-14" name="Pick by unique ID" sid="504161927071284" type="BotaoAlunoTURMAESPECIFICA">
                                     <param id="0" name="Unique ID">Botao</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="792203792435633" type="BotaoAlunoTURMAESPECIFICA" />
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="418481291516396" type="System">
@@ -363,6 +370,11 @@
                         <condition id="0" name="On completed" sid="147512611192834" type="AJAX">
                             <param id="0" name="Tag">&quot;baixarCriancas&quot;</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="451067314259864" type="System">
+                            <param id="0" name="First value">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;0&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-12" name="Set group active" sid="794847693434746" type="System">
@@ -377,6 +389,29 @@
                         <action id="-9" name="Destroy" sid="860879777988668" type="TextoErrosTURMAESPECIFICA" />
                         <action id="-9" name="Destroy" sid="394992033219197" type="BotaoAlunoTURMAESPECIFICA" />
                         <action id="-9" name="Destroy" sid="930682083101916" type="FundoBotaoAlunoTURMAESPECIFICA" />
+                    </actions>
+                </event-block>
+                <event-block sid="608204586162094">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="858926647049329" type="AJAX">
+                            <param id="0" name="Tag">&quot;baixarCriancas&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="568855459608272" type="System">
+                            <param id="0" name="First value">tokenat(AJAX.LastData, 0, &quot;&lt;br&gt;&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;0&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="231032223278741" type="TextoBotaoAlunoTURMAESPECIFICA">
+                            <param id="0" name="Text">&quot;Não há alunos cadastrados&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="837713487419609" type="TextoErrosTURMAESPECIFICA">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="249355803736916" type="BotaoAlunoTURMAESPECIFICA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="294480971340900">
@@ -403,7 +438,7 @@
                         <condition id="-10" name="For" sid="985967039852805" type="System">
                             <param id="0" name="Name">&quot;indice&quot;</param>
                             <param id="1" name="Start index">0</param>
-                            <param id="2" name="End index">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)/2)-1</param>
+                            <param id="2" name="End index">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)/2)-2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -443,8 +478,70 @@
                         <action id="0" name="Set text" sid="803949457052971" type="TextoErrosTURMAESPECIFICA">
                             <param id="0" name="Text">tokenat(AJAX.LastData, (2*loopindex)+1, &quot;&lt;br&gt;&quot;)</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="135270390061786" type="System">
+                            <param id="0" name="Group name">&quot;Preencher dados Gerais TURMA ESPECIFICA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
                         <action id="-12" name="Set group active" sid="795635572483581" type="System">
                             <param id="0" name="Group name">&quot;Preencher Turmas TURMAESPECIFICA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Grupo para criar mais uma linha contendo as informações totais da consulta: Quantidade total de crianças cadastradas na turma, e quantidade total de erros cometidos.</comment>
+        <event-group description="" inactive="1" sid="753903612679318" title="Preencher dados Gerais TURMA ESPECIFICA">
+            <sub-events>
+                <comment>Aqui os dados gerais não devem ser botões, por essa razão o botão é colocado como invisível. O botão ainda é criado, pois as funções criadas acima pedem que os Textos sejam colocando em relação a posição do botão.</comment>
+                <event-block sid="928865346754942">
+                    <conditions>
+                        <condition id="-15" name="Is group active" sid="850458509058595" type="System">
+                            <param id="0" name="Group name">&quot;Preencher dados Gerais TURMA ESPECIFICA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="310756124638543" type="System">
+                            <param id="0" name="Object to create">FundoBotaoAlunoTURMAESPECIFICA</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="529574695859943" type="System">
+                            <param id="0" name="Object to create">BotaoAlunoTURMAESPECIFICA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="568427493966501" type="BotaoAlunoTURMAESPECIFICA">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="430209289609438" type="System">
+                            <param id="0" name="Object to create">TextoBotaoAlunoTURMAESPECIFICA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="257319063806406" type="System">
+                            <param id="0" name="Object to create">TextoErrosTURMAESPECIFICA</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="341862018911055" type="TextoBotaoAlunoTURMAESPECIFICA">
+                            <param id="0" name="Size (pt)">TamanhoTexto</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="617256144429718" type="TextoErrosTURMAESPECIFICA">
+                            <param id="0" name="Size (pt)">TamanhoTexto</param>
+                        </action>
+                        <action id="0" name="Set text" sid="300347328899799" type="TextoBotaoAlunoTURMAESPECIFICA">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-3), &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="509092065642351" type="TextoErrosTURMAESPECIFICA">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-2), &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="515309157837747" type="System">
+                            <param id="0" name="Group name">&quot;Preencher dados Gerais TURMA ESPECIFICA&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>

@@ -4,8 +4,9 @@
     <name>EventoTurmaEspecificaAluno</name>
     <events>
         <comment>NOTA: EventoTurmaEspecificaAluno e TelaTurmaEspecificaAluno já foram VERIFICADOS      [RESTA APENAS ACRESCENTAR OS AVISOS]</comment>
-        <comment>NOTA: Tudo parece funcionar como deveria.         ACRESCENTAR OS PHP    AVISOOOOOOOOOOOOOOOO</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria.</comment>
         <include>Global</include>
+        <comment>Os botões Limpar Erros e Acertos, foram apagados. Suas funções são um pouco complexas e por isso foram deixadas de lado no presente momento.</comment>
         <event-block sid="796324045917820">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="150929405938505" type="System" />
@@ -38,8 +39,18 @@
                 <action id="0" name="Set text" sid="316894193540051" type="TituloNomeAlunoTURMAESPECIFICAALUNO">
                     <param id="0" name="Text">NomeAluno</param>
                 </action>
-                <action id="11" name="Clear" sid="450231826252577" type="ListaErrosTURMAESPECIFICAALUNO" />
-                <action id="11" name="Clear" sid="353653348479633" type="ListaAcertosTURMAESPECIFICAALUNO" />
+                <action id="-15" name="Set visible" sid="919348315811437" type="TextoBotaoLimparAcertosTURMAESPECIFICAALUNO">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="524337922765983" type="TextoBotaoLimparErrosTURMAESPECIFICAALUNO">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="246427775097178" type="BotaoLimparAcertosTURMAESPECIFICAALUNO">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="138572378623451" type="BotaoLimparErrosTURMAESPECIFICAALUNO">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>A função presente neste grupo impede que o usuário busque por informações fora da tela.</comment>
@@ -365,7 +376,7 @@
                                     <param id="1" name="State">1</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="163027263250018" type="System">
-                                    <param id="0" name="Layout">TelaTurma</param>
+                                    <param id="0" name="Layout">TelaTurmaEspecifica</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -466,8 +477,8 @@
                                 </action>
                                 <action disabled="1" id="2" name="Post to URL" sid="540813578325670" type="AJAX">
                                     <param id="0" name="Tag">&quot;explusarAluno&quot;</param>
-                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
-                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ExplusarAluno.php&quot;</param>
+                                    <param id="2" name="Data">&quot;nome=&quot;&amp;NomeAluno&amp;&quot;&amp;turma=&quot;&amp;NomeTurma</param>
                                     <param id="3" name="Method">&quot;POST&quot;</param>
                                 </action>
                             </actions>
@@ -507,7 +518,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Uma vez que o usuário é atualizando no Banco de Dados, as informações internas do aparelho também são atualizadas com as novas informações.</comment>
+                        <comment>Uma vez que o aluno é expluso da turma no Banco de Dados, o professor é redirecionado para tela turma.</comment>
                         <event-block sid="894157018779769">
                             <conditions>
                                 <condition id="0" name="On completed" sid="567011643016713" type="AJAX">
@@ -515,8 +526,11 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action disabled="1" id="-16" name="Wait" sid="220297921008974" type="System">
+                                    <param id="0" name="Seconds">15.0</param>
+                                </action>
                                 <action id="-2" name="Go to layout" sid="915977195164706" type="System">
-                                    <param id="0" name="Layout">TelaTurma</param>
+                                    <param id="0" name="Layout">TelaTurmaEspecifica</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -953,11 +967,33 @@
                 <event-block sid="380772037351001">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="863276144157684" type="System" />
+                        <condition id="-8" name="Compare two values" sid="904892695264516" type="System">
+                            <param id="0" name="First value">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="1" name="Append text" sid="436002443077345" type="TextoErrosTURMAESPECIFICAALUNO">
                             <param id="0" name="Text">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
                         </action>
+                        <action id="11" name="Clear" sid="450231826252577" type="ListaErrosTURMAESPECIFICAALUNO" />
+                    </actions>
+                </event-block>
+                <event-block sid="965924573690919">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="798629732635519" type="System" />
+                        <condition id="-8" name="Compare two values" sid="934263296037385" type="System">
+                            <param id="0" name="First value">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="218243628388163" type="TextoErrosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">&quot;0&quot;</param>
+                        </action>
+                        <action id="11" name="Clear" sid="900390682652803" type="ListaErrosTURMAESPECIFICAALUNO" />
                     </actions>
                 </event-block>
                 <comment>O loop percorre a quantidade de acertos que foi baixada. Ou seja: tokecount, conta quantos &quot;item&quot; foram baixados, com base na quantidade de linha puladas de item para item, então usa esse valor convertido para inteiro no loop.</comment>
@@ -1016,6 +1052,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="429590560772004" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;acertosBaixados&quot;</param>
+                        </action>
                         <action id="-12" name="Set group active" sid="362030508999643" type="System">
                             <param id="0" name="Group name">&quot;Preencher Acertos Aluno TURMAESPECIFICAALUNO&quot;</param>
                             <param id="1" name="State">1</param>
@@ -1047,11 +1087,33 @@
                 <event-block sid="366014549399747">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="867663678945849" type="System" />
+                        <condition id="-8" name="Compare two values" sid="452907592893840" type="System">
+                            <param id="0" name="First value">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="1" name="Append text" sid="356782052978453" type="TextoAcertosTURMAESPECIFICAALUNO">
                             <param id="0" name="Text">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
                         </action>
+                        <action id="11" name="Clear" sid="353653348479633" type="ListaAcertosTURMAESPECIFICAALUNO" />
+                    </actions>
+                </event-block>
+                <event-block sid="784654064128126">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="477801995684819" type="System" />
+                        <condition id="-8" name="Compare two values" sid="246803701344957" type="System">
+                            <param id="0" name="First value">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)-1)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="363568370903262" type="TextoAcertosTURMAESPECIFICAALUNO">
+                            <param id="0" name="Text">&quot;0&quot;</param>
+                        </action>
+                        <action id="11" name="Clear" sid="137096194868761" type="ListaAcertosTURMAESPECIFICAALUNO" />
                     </actions>
                 </event-block>
                 <comment>O loop percorre a quantidade de acertos que foi baixada. Ou seja: tokecount, conta quantos &quot;item&quot; foram baixados, com base na quantidade de linha puladas de item para item, então usa esse valor convertido para inteiro no loop.</comment>
@@ -1070,7 +1132,7 @@
                             <param id="1" name="Text">tokenat(AJAX.LastData, loopindex, &quot;&lt;br&gt;&quot;)</param>
                         </action>
                         <action id="-12" name="Set group active" sid="948842486484709" type="System">
-                            <param id="0" name="Group name">&quot;Preencher Erros Aluno TURMAESPECIFICAALUNO&quot;</param>
+                            <param id="0" name="Group name">&quot;Preencher Acertos Aluno TURMAESPECIFICAALUNO&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>

@@ -512,10 +512,10 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="2" name="Post to URL" sid="358893441714656" type="AJAX">
+                                <action id="2" name="Post to URL" sid="358893441714656" type="AJAX">
                                     <param id="0" name="Tag">&quot;atualizarTurma&quot;</param>
-                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
-                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarTurma.php&quot;</param>
+                                    <param id="2" name="Data">&quot;turma=&quot;&amp;NomeTurma&amp;&quot;&amp;nome=&quot;&amp;CampoNomeTurmaTURMAAJUSTES.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaTurmaTURMAAJUSTES.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaTurmaTURMAAJUSTES.Text</param>
                                     <param id="3" name="Method">&quot;POST&quot;</param>
                                 </action>
                             </actions>
@@ -563,6 +563,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="853268749449987" type="System">
+                                    <param id="0" name="Variable">NomeTurma</param>
+                                    <param id="1" name="Value">CampoNomeTurmaTURMAAJUSTES.Text</param>
+                                </action>
                                 <action id="-26" name="Restart layout" sid="120671865693203" type="System" />
                             </actions>
                         </event-block>
@@ -622,6 +626,11 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;BotaoBloquearTurma&quot;</param>
                                 </condition>
+                                <condition id="-8" name="Compare two values" sid="855320136386801" type="System">
+                                    <param id="0" name="First value">TextoBotaoBloquearTURMAAJUSTES.Text</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;BLOQUEAR&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="413041951200738" type="System">
@@ -646,10 +655,58 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="2" name="Post to URL" sid="447991646758949" type="AJAX">
+                                <action id="2" name="Post to URL" sid="447991646758949" type="AJAX">
                                     <param id="0" name="Tag">&quot;bloquearTurma&quot;</param>
-                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
-                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-BloquearTurma.php&quot;</param>
+                                    <param id="2" name="Data">&quot;turma=&quot;&amp;NomeTurma</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="330890433765182">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="499644916239494" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="151683757713626" type="Touch">
+                                    <param id="0" name="Object">BotaoBloquearTURMAAJUSTES</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="141103098448942" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;BotaoBloquearTurma&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="294661199227315" type="System">
+                                    <param id="0" name="First value">TextoBotaoBloquearTURMAAJUSTES.Text</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;BLOQUEAR&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="622526575857861" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;nenhum&quot;</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="101656995646533" type="BotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="173782961054786" type="TextoBotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Width">ComprimentoBotao</param>
+                                    <param id="1" name="Height">AlturaBotao</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="529563250616369" type="TextoBotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="550827929252031" type="BotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="373955345838798" type="System">
+                                    <param id="0" name="Group name">&quot;Rolagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Post to URL" sid="981499596322057" type="AJAX">
+                                    <param id="0" name="Tag">&quot;desbloquearTurma&quot;</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-DesbloquearTurma.php&quot;</param>
+                                    <param id="2" name="Data">&quot;turma=&quot;&amp;NomeTurma</param>
                                     <param id="3" name="Method">&quot;POST&quot;</param>
                                 </action>
                             </actions>
@@ -705,6 +762,26 @@
                             <conditions>
                                 <condition id="1" name="On error" sid="675354403409459" type="AJAX">
                                     <param id="0" name="Tag">&quot;bloquearTurma&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <comment>Uma vez que o usuário é atualizando no Banco de Dados, as informações internas do aparelho também são atualizadas com as novas informações.</comment>
+                        <event-block sid="149530380607647">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="982664157514902" type="AJAX">
+                                    <param id="0" name="Tag">&quot;desbloquearTurma&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="646216232408784" type="System" />
+                            </actions>
+                        </event-block>
+                        <comment>Uma mensagem de Erro deveria ser apresentada nesta ação.</comment>
+                        <event-block sid="438383799507238">
+                            <conditions>
+                                <condition id="1" name="On error" sid="574760373445261" type="AJAX">
+                                    <param id="0" name="Tag">&quot;desbloquearTurma&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -780,10 +857,10 @@
                                     <param id="0" name="Group name">&quot;Rolagem&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action disabled="1" id="2" name="Post to URL" sid="764265602531447" type="AJAX">
+                                <action id="2" name="Post to URL" sid="764265602531447" type="AJAX">
                                     <param id="0" name="Tag">&quot;excluirTurma&quot;</param>
-                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarUsuario.php&quot;</param>
-                                    <param id="2" name="Data">&quot;nome=&quot;&amp;CampoNomePERFIL.Text&amp;&quot;&amp;email=&quot;&amp;EmailUsuario&amp;&quot;&amp;novoemail=&quot;&amp;CampoEmailPERFIL.Text&amp;&quot;&amp;senha=&quot;&amp;CampoSenhaPERFIL.Text&amp;&quot;&amp;escola=&quot;&amp;CampoEscolaPERFIL.Text&amp;&quot;&amp;cidade=&quot;&amp;ListaCidadePERFIL.SelectedText&amp;&quot;&amp;estado=&quot;&amp;ListaEstadoPERFIL.SelectedText</param>
+                                    <param id="1" name="URL">&quot;http://infanciasegura.000webhostapp.com/InfanciaSegura-ExcluirTurma.php&quot;</param>
+                                    <param id="2" name="Data">&quot;turma=&quot;&amp;NomeTurma</param>
                                     <param id="3" name="Method">&quot;POST&quot;</param>
                                 </action>
                             </actions>
@@ -849,7 +926,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="148216620912070" title="Lista dos Materiais de Apoio TURMAAJUSTES">
+        <event-group description="" sid="148216620912070" title="Lista dos Informações TURMAAJUSTES">
             <sub-events>
                 <comment>Grupo para baixar os dados da turma.</comment>
                 <event-group description="" sid="743563392775806" title="Baixar dados Turma TURMAAJUSTES">
@@ -987,7 +1064,41 @@
                                 <action id="1" name="Append text" sid="841295368204653" type="TextoQuatidadeErrosTurmaTURMAAJUSTES">
                                     <param id="0" name="Text">tokenat(AJAX.LastData, 6+int(tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)), &quot;&lt;br&gt;&quot;)</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="965611177927355" type="System">
+                            </actions>
+                        </event-block>
+                        <event-block sid="344601881131295">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="820437949896717" type="System" />
+                                <condition id="-8" name="Compare two values" sid="817219139839441" type="System">
+                                    <param id="0" name="First value">tokenat(AJAX.LastData, 7+int(tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)), &quot;&lt;br&gt;&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;aberto&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="186815598059185" type="TextoBotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Text">&quot;BLOQUEAR&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="349226155908543" type="System">
+                                    <param id="0" name="Group name">&quot;Carregando dados do fim Turma TURMAAJUSTES&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="370275259018104">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="682934180443412" type="System" />
+                                <condition id="-8" name="Compare two values" sid="845196499953728" type="System">
+                                    <param id="0" name="First value">tokenat(AJAX.LastData, 7+int(tokenat(AJAX.LastData, 3, &quot;&lt;br&gt;&quot;)), &quot;&lt;br&gt;&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;aberto&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="851796967670471" type="TextoBotaoBloquearTURMAAJUSTES">
+                                    <param id="0" name="Text">&quot;DESBLOQUEAR&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="673091079089857" type="System">
                                     <param id="0" name="Group name">&quot;Carregando dados do fim Turma TURMAAJUSTES&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>

@@ -10,16 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">TelaCarregamento</layout>
-        <layout order="5">TelaTurma</layout>
-        <layout order="9">TelaTurmaAdicionar</layout>
+        <layout active="1" order="0">TelaCarregamento</layout>
+        <layout order="2">TelaTurma</layout>
+        <layout order="8">TelaTurmaAdicionar</layout>
         <event-sheet order="1">Global</event-sheet>
-        <event-sheet order="2">EventoInicial</event-sheet>
-        <event-sheet order="3">EventoCriarConta</event-sheet>
-        <event-sheet order="4">EventoPerfil</event-sheet>
-        <event-sheet order="6">EventoTurma</event-sheet>
+        <event-sheet order="3">EventoTurmaAdicionar</event-sheet>
+        <event-sheet order="4">EventoTurmaAdicionarFinal</event-sheet>
+        <event-sheet order="5">EventoTurmaEspecifica</event-sheet>
+        <event-sheet order="6">EventoTurmaEspecificaAluno</event-sheet>
         <event-sheet order="7">EventoTurmaAjustes</event-sheet>
-        <event-sheet active="1" order="8">EventoTurmaAdicionar</event-sheet>
+        <event-sheet order="9">EventoConfiguracoes</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -107,6 +107,5 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ImagemVermelho/" />
         <folder expanded="1" path="animation-folder/ImagemAzul/" />
         <folder expanded="1" path="animation-folder/ImagemPreto/" />
-        <folder expanded="1" path="animation-folder/Voltar/" />
     </folders-expanded>
 </c2uistate>

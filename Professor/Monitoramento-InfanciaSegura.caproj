@@ -5,7 +5,7 @@
     <version>1.0.0.0</version>
     <author>Alexandre, Carla e Tiago</author>
     <author-email></author-email>
-    <author-website>http://</author-website>
+    <author-website>https://infancia-segura.firebaseapp.com/</author-website>
     <app-id></app-id>
     <unique-id>3h4raretwq2qd</unique-id>
     <saved-with-version>26500</saved-with-version>
@@ -944,25 +944,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Voltar" sid="710507024211440">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861431252384146" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.00700281" y="0.502801" />
-                            <point x="0.122549" y="0.184874" />
-                            <point x="0.464986" y="0.0154062" />
-                            <point x="0.837535" y="0.15056" />
-                            <point x="0.988796" y="0.485994" />
-                            <point x="0.875351" y="0.815826" />
-                            <point x="0.492997" y="0.992997" />
-                            <point x="0.12395" y="0.820728" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="CampoMensagemOUVIDORIA" sid="892224567280339">
             <plugin id="TextBox" />
         </object-type>
@@ -1028,8 +1009,8 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file-folder name="idioma">
-            <file name="PT-BR.xml" />
-            <file name="EN.xml" />
+            <file name="pt-br.xml" />
+            <file name="en.xml" />
         </file-folder>
     </files-folder>
 </c2project>

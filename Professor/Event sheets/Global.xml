@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="CriarTurmaEscola" sid="618458405496071" static="0" type="text"></variable>
+        <variable constant="0" name="CriarTurmaSenha" sid="876773248293866" static="0" type="text"></variable>
+        <variable constant="0" name="CriarTurmaNome" sid="626243508904602" static="0" type="text"></variable>
         <variable constant="0" name="DistanciaLateralDireita" sid="920210085273091" static="0" type="number">120</variable>
         <variable constant="0" name="Botao" sid="752304881313542" static="0" type="text">nenhum</variable>
         <variable constant="0" name="DistanciaBotoes" sid="138746721236022" static="0" type="number">10</variable>
@@ -24,7 +27,7 @@
         <variable constant="0" name="Rolagem" sid="876989086793515" static="0" type="number">0</variable>
         <variable constant="0" name="RolagemTotal" sid="493334857874969" static="0" type="number">0</variable>
         <variable constant="0" name="RolagemInicio" sid="552295763489229" static="0" type="number">0</variable>
-        <variable constant="0" name="IdiomaTexto" sid="124183374099700" static="0" type="text">PT-BR</variable>
+        <variable constant="0" name="IdiomaTexto" sid="124183374099700" static="0" type="text">pt-br</variable>
         <variable constant="0" name="TamanhoTexto" sid="644397033399137" static="0" type="number">18</variable>
         <event-block sid="976867143572851">
             <conditions>
@@ -596,7 +599,7 @@
                             <actions>
                                 <action id="0" name="Request URL" sid="270882025693800" type="AJAX">
                                     <param id="0" name="Tag">&quot;buscar&quot;</param>
-                                    <param id="1" name="URL">IdiomaTexto&amp;&quot;.xml&quot;</param>
+                                    <param id="1" name="URL">&quot;../&quot;&amp;IdiomaTexto&amp;&quot;.xml&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1189,6 +1192,26 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="942552871288404">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="486396314142636" type="ImagemTurmaAbertaTURMAADICIONAR" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="132219157765270" type="ImagemTurmaAbertaTURMAADICIONAR">
+                                    <param id="0" name="Scale">0.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="795061096703589">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="614727835860375" type="ImagemTurmaFechadaTURMAADICIONAR" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="147841682588835" type="ImagemTurmaFechadaTURMAADICIONAR">
+                                    <param id="0" name="Scale">0.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-group description="" sid="626920123283291" title="Configurações Texto dos Botões TURMAADICIONAR">
                             <sub-events>
                                 <event-block sid="538538472915322">
@@ -1258,6 +1281,26 @@
                                 </action>
                                 <action id="-16" name="Set opacity" sid="898284228349713" type="BotaoCancelarTurmaTURMAADICIONARFINAL">
                                     <param id="0" name="Opacity">OpacidadeMinimaBotao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="157440041930022">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="625848005824885" type="ImagemTurmaAbertaTURMAADICIONARFINAL" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="156417531632214" type="ImagemTurmaAbertaTURMAADICIONARFINAL">
+                                    <param id="0" name="Scale">0.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="649924497547246">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="451992322806244" type="ImagemTurmaFechadaTURMAADICIONARFINAL" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="479203830938851" type="ImagemTurmaFechadaTURMAADICIONARFINAL">
+                                    <param id="0" name="Scale">0.1</param>
                                 </action>
                             </actions>
                         </event-block>
