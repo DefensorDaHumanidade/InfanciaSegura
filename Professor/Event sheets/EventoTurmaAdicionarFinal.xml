@@ -36,6 +36,10 @@
                 <action id="0" name="Set text" sid="755858616672396" type="TextoStatusTurmaTURMAADICIONARFINAL">
                     <param id="0" name="Text">&quot;aberto&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="325501780385346" type="System">
+                    <param id="0" name="Variable">Rolagem</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="268332130658389">

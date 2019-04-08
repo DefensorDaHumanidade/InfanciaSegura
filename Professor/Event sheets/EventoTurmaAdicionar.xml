@@ -4,7 +4,7 @@
     <name>EventoTurmaAdicionar</name>
     <events>
         <comment>NOTA: EventoTurmaAdicionar e TelaTurmaAdicionar já foram VERIFICADOS      [RESTA APENAS ACRESCENTAR OS AVISOS]</comment>
-        <comment>NOTA: Tudo parece funcionar como deveria.         ACRESCENTAR OS PHP    AVISOOOOOOOOOOOOOOOO</comment>
+        <comment>NOTA: Tudo parece funcionar como deveria.</comment>
         <include>Global</include>
         <event-block sid="762234857724931">
             <conditions>

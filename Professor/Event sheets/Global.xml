@@ -36,7 +36,7 @@
             <actions>
                 <action id="-28" name="Set canvas size" sid="533697779105520" type="System">
                     <param id="0" name="Width">WindowWidth</param>
-                    <param id="1" name="Height">WindowWidth</param>
+                    <param id="1" name="Height">WindowHeight</param>
                 </action>
             </actions>
         </event-block>
