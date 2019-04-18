@@ -1,0 +1,36 @@
+<?php
+    header("Access-Control-Allow-Origin: *");
+
+    $servidor = "";
+    $usuario = "";
+    $senha = "";
+    $banco = "";
+
+    $conexao = new mysqli($servidor, $usuario, $senha, $banco) or die("Erro 500. Falha ao se conectar.");
+    mysqli_set_charset($conexao,"utf8");
+
+    $turma = $_GET['turma'];
+    $aluno = $_GET['aluno'];
+
+    $consultaSQL = "SELECT alu.Id, alu.Nome, alu.Nick, alu.Idade, tur.Nome as turminha FROM Aluno alu INNER JOIN Turma tur ON tur.Id=alu.Turma WHERE tur.Nome='$turma' AND alu.Nome='$aluno'";
+    $resultado=mysqli_query($conexao, $consultaSQL) or die("Erro 404. Falha ao realizar a consulta SQL.");
+    ini_set ('default_charset', 'UTF8');
+
+    $IdAluno = mysqli_fetch_array($resultado);
+    
+    echo $IdAluno['Nome'] . "<br>";
+    echo $IdAluno['Nick'] . "<br>";
+    echo $IdAluno['Idade'] . "<br>";
+    echo $IdAluno['turminha'] . "<br>";
+
+    $consultaSQL = "SELECT * FROM Geral WHERE Aluno='$IdAluno[0]'";
+    $resultado=mysqli_query($conexao, $consultaSQL) or die("Erro 404. Falha ao realizar a consulta SQL.");
+    ini_set ('default_charset', 'UTF8');
+
+    while($dados = mysqli_fetch_array($resultado)){
+        echo $dados['Cadastro'] . "<br>";
+        echo $dados['UltimoAcesso'] . "<br>";
+    }
+
+    mysqli_close($conexao);
+?>
