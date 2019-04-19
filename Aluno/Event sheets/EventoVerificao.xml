@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoVerificao</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="320056448432771">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="579671295664431" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="525920720371281" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="881333754338687" type="ProfessorAfirmacaoVERIFICACAO">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="688118891410417" type="ProfessoraPerguntaVERIFICACAO">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

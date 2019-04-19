@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>InfanciaSegura</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>TelaCarregamento</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Logo" sid="284040270467687">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="277233110825497">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="147646439888362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Logo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Azul" sid="953883683058375">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="260369539152254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\azul.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fundo" sid="174413055920299">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="828995596562131" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\fundo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Preto" sid="299621847984562">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="516653650006961" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Verde" sid="202844964794463">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819257759277214" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\verde.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Vermelho" sid="777932006802503">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="548911069533278">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="126889478898619" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoCarregandoCARREGAMENTO" sid="411320801375874">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AJAX" sid="661972174492203">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type global="1" name="XML" sid="364190160589423">
+            <plugin id="XML" />
+        </object-type>
+        <object-type name="Branco" sid="668600891172529">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="377542370336937" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CaixaDialogoAbertura" sid="808836743650755">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="560718969664731">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="240982526193232" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\caixaDialogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoAbertura" sid="787297282507928">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="796233617301229">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ProfessoraABERTURA" sid="488279437098200">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="182815162221203">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="611021339869219">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="763650575931584" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500692" original-source="C:\Users\Alexandre\Desktop\professora.png">
+                        <collision-poly>
+                            <point x="0.132867" y="0.105118" />
+                            <point x="0.5" y="0.0525588" />
+                            <point x="0.671329" y="0.260028" />
+                            <point x="0.629371" y="0.499308" />
+                            <point x="0.762238" y="0.811895" />
+                            <point x="0.5" y="0.962656" />
+                            <point x="0.0646853" y="0.948824" />
+                            <point x="0.0594406" y="0.499308" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="248908051682493">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="BotaoJogar" sid="438463062708641">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984485884397079" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\JogarPadrao.PNG" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\JogarPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="648925024837146">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="TextoDialogoAberturaTermos" sid="949935936166391">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="434684809137552">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Browser" sid="798825694811054">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="TextoDialogoVerificacao" sid="443277308905415">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="808043982981532">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="CaixaDialogoAbertura2" sid="362864633577372">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555498920814089" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\caixaDialogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProfessorAfirmacaoVERIFICACAO" sid="370460481153110">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175004871743776" speed="5">
+                    <frame duration="1" hotspotX="0.500907" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 2.png">
+                        <collision-poly>
+                            <point x="0.136116" y="0.104167" />
+                            <point x="0.499093" y="0.0444444" />
+                            <point x="0.69147" y="0.236111" />
+                            <point x="0.845735" y="0.5" />
+                            <point x="0.782214" y="0.833333" />
+                            <point x="0.499093" y="0.963889" />
+                            <point x="0.0653358" y="0.95" />
+                            <point x="0.0598911" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProfessoraPerguntaVERIFICACAO" sid="668021357275701">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188149633757652" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 3.png">
+                        <collision-poly>
+                            <point x="0.221739" y="0.2125" />
+                            <point x="0.5" y="0.0263889" />
+                            <point x="0.750725" y="0.238889" />
+                            <point x="0.721739" y="0.5" />
+                            <point x="0.710145" y="0.722222" />
+                            <point x="0.5" y="0.981944" />
+                            <point x="0.26087" y="0.75" />
+                            <point x="0.227536" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoNao" sid="503233098949299">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901576569249696" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoNaoSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\Alexandre\Desktop\BotaoNaoPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="205278852354449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379699409970502" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoSimSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\Alexandre\Desktop\BotaoSimPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>TelaCarregamento.xml</layout>
+        <layout>TelaAbertura.xml</layout>
+        <layout>TelaVerificacao.xml</layout>
+        <layout>Tela.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>EventoCarregamento.xml</event-sheet>
+        <event-sheet>Global.xml</event-sheet>
+        <event-sheet>EventoAbertura.xml</event-sheet>
+        <event-sheet>EventoVerificao.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="AJAX" uid="7" />
+        <global-instance type="Audio" uid="14">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Touch" uid="16">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="18" />
+    </global-instances>
+    <sounds-folder>
+        <file name="ProfessorAbertura.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="en.xml" />
+        <file name="pt-br.xml" />
+    </files-folder>
+</c2project>

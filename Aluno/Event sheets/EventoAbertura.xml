@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoAbertura</name>
+    <events>
+        <variable constant="0" name="letra" sid="829944336668532" static="0" type="number">0</variable>
+        <include>Global</include>
+        <event-block sid="427838218265342">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="393211603339154" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="313328142924432" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="873416814930211" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="4" name="Preload" sid="863326146966624" type="Audio">
+                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="965321891986275">
+            <conditions>
+                <condition id="-18" name="On created" sid="563428974942709" type="CaixaDialogoAbertura" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="340299050801442" type="CaixaDialogoAbertura">
+                    <param id="0" name="X">960</param>
+                    <param id="1" name="Y">WindowHeight+CaixaDialogoAbertura.Height/4</param>
+                </action>
+                <action id="-5" name="Set width" sid="610067787106530" type="CaixaDialogoAbertura">
+                    <param id="0" name="Width">WindowWidth</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="998942484605203">
+            <conditions>
+                <condition id="-18" name="On created" sid="919871322101239" type="BotaoJogar" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="460385449281883" type="BotaoJogar" />
+            </actions>
+        </event-block>
+        <event-block sid="305278476119731">
+            <conditions>
+                <condition behavior="Sine" id="0" name="Is active" sid="253474351392950" type="CaixaDialogoAbertura" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="128940452516107" type="System">
+                    <param id="0" name="Seconds">1.1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="900237217954805" type="CaixaDialogoAbertura">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="811053124039720" type="ProfessoraABERTURA">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="571642654719626" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoAbertura- ABERTURA&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="801029740029321">
+            <conditions>
+                <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="700851728459800" type="CaixaDialogoAbertura" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="748745834335855" type="CaixaDialogoAbertura">
+                    <param id="0" name="Y">TextoDialogoAbertura.Y-50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="366798370201280" title="Máquina de Escrever -DialogoAbertura- ABERTURA">
+            <sub-events>
+                <event-block sid="578146420346362">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="592757471078716" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="649039242756686" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="268134058464612" type="TextoDialogoAberturaTermos">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="903590243115610" type="TextoDialogoAbertura">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="870501786400045" type="TextoDialogoAberturaTermos">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="543284321352755" type="TextoDialogoAbertura">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="461726659924900" type="TextoDialogoAberturaTermos">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="576030110226352">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="844052846280924" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoAberturaTermos/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="248053267399804" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="237900073279091" type="TextoDialogoAbertura">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoAbertura/text()&quot;), letra)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="492062667870636" type="TextoDialogoAberturaTermos">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoAberturaTermos/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="716675212250653" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="670676523871604">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="195091391038784" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoAberturaTermos/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="314482726738359" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoAbertura- ABERTURA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="951608682421045" title="Botao Jogar ABERTURA">
+            <sub-events>
+                <event-block sid="277430728247893">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="791216028575186" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="257567211189297" type="Touch">
+                            <param id="0" name="Object">BotaoJogar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="242065342660027" type="BotaoJogar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="169787513750312" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Jogar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="276049228888722">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="530298560985637" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="187759247758770" type="Touch">
+                            <param id="0" name="Object">BotaoJogar</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="351586066881874" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="663862892972145" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="692241469421998" type="BotaoJogar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="341854474263704" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="503939994498478" type="System">
+                            <param id="0" name="Layout">TelaVerificacao</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="954362513646539">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="557801208803683" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="495622385841137" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="813912511322149" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="565205343832390" type="BotaoJogar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="986839759262887" title="Clicar Termos de Uso ABERTURA">
+            <sub-events>
+                <event-block sid="270530478787747">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="261871324872341" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="732789998201469" type="Touch">
+                            <param id="0" name="Object">TextoDialogoAberturaTermos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="736768157528421" type="TextoDialogoAberturaTermos">
+                            <param id="0" name="Color">rgb(0, 0, 155)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="913259392207986" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Termos&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="761938459766315">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="287680401249915" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="521636083454982" type="Touch">
+                            <param id="0" name="Object">TextoDialogoAberturaTermos</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="219396588136406" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Termos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="417448372603735" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="493258743655412" type="TextoDialogoAberturaTermos">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="8" name="Open URL in new window" sid="596198003305691" type="Browser">
+                            <param id="0" name="URL">&quot;http://www.google.com&quot;</param>
+                            <param id="1" name="Tag">&quot;TermosUso&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="717272760916926">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="761234205066760" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="208613830029236" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Termos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="473305521053745" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="905858565679493" type="TextoDialogoAberturaTermos">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
