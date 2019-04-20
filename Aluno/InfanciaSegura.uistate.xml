@@ -10,13 +10,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">TelaCarregamento</layout>
+        <layout active="1" order="0">TelaCarregamento</layout>
         <layout order="3">TelaAbertura</layout>
-        <layout active="1" order="6">TelaVerificacao</layout>
+        <layout order="6">TelaVerificacao</layout>
+        <layout order="7">TelaInicial</layout>
+        <layout order="10">TelaPergunta</layout>
         <event-sheet order="1">EventoCarregamento</event-sheet>
         <event-sheet order="2">Global</event-sheet>
         <event-sheet order="4">EventoAbertura</event-sheet>
         <event-sheet order="5">EventoVerificao</event-sheet>
+        <event-sheet order="8">EventoInicial</event-sheet>
+        <event-sheet order="9">EventoPergunta</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -43,10 +47,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CaixaDialogoAbertura/" />
         <folder expanded="1" path="animation-folder/ProfessoraABERTURA/" />
         <folder expanded="1" path="animation-folder/BotaoJogar/" />
-        <folder expanded="1" path="animation-folder/CaixaDialogoAbertura2/" />
+        <folder expanded="1" path="animation-folder/CaixaDialogoVERIFICACAO/" />
         <folder expanded="1" path="animation-folder/ProfessorAfirmacaoVERIFICACAO/" />
         <folder expanded="1" path="animation-folder/ProfessoraPerguntaVERIFICACAO/" />
         <folder expanded="1" path="animation-folder/BotaoNao/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/BotaoSim/" />
+        <folder expanded="1" path="animation-folder/BotaoProximo/" />
+        <folder expanded="1" path="animation-folder/MaoBotaoProximoVERIFICACAO/" />
+        <folder expanded="1" path="animation-folder/MaoBotaoProximoABERTUTA/" />
+        <folder expanded="1" path="animation-folder/ProfessorBuscaINICIAL/" />
+        <folder expanded="1" path="animation-folder/BotaoVoltar/" />
     </folders-expanded>
 </c2uistate>

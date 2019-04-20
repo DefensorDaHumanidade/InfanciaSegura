@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>TelaVerificacao</name>
-    <sid>235086780830962</sid>
-    <event-sheet>EventoVerificao</event-sheet>
+    <name>TelaPergunta</name>
+    <sid>362849097731889</sid>
+    <event-sheet>EventoPergunta</event-sheet>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Fundo" sid="299801808828015">
+        <layer name="Fundo" sid="652533335829520">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Fundo" uid="19">
+                <instance type="Fundo" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ProfessorAfirmacaoVERIFICACAO" uid="20">
+                <instance type="ProfessoraPerguntaVERIFICACAO" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -72,19 +72,38 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>349</x>
-                        <y>467</y>
+                        <x>288</x>
+                        <y>460</y>
                         <z>0</z>
-                        <width>551</width>
+                        <width>690</width>
                         <height>720</height>
                         <depth>0</depth>
-                        <hotspotX>0.500907421</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CaixaDialogoVERIFICACAO" uid="23">
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Elementos" sid="841840086841077">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="CaixaDialogoVERIFICACAO" uid="39">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -106,28 +125,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Elementos" sid="522553188682310">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>0</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="TextoDialogoAfirmacaoVERIFICACAO" uid="21">
+                <instance type="TextoDialogoPerguntaVERIFICACAO" uid="40">
                     <properties>
-                        <text>Antes da brincadeira começar eu preciso saber de uma coisinha.</text>
+                        <text>Você já brincou com esse jogo antes?</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Comic Sans MS,-27,400,0</font>
                         <color>0,0,0</color>
@@ -163,7 +163,26 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoNao" uid="24">
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Topo" sid="575246468153544">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="BotaoNao" uid="42">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -205,7 +224,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoSim" uid="25">
+                <instance type="BotaoSim" uid="43">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -244,113 +263,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.504000008</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="BotaoProximo" uid="27">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window right</left-edge>
-                                <top-edge>Window bottom</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1850</x>
-                        <y>1000</y>
-                        <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Topo" sid="422882001777256">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>0</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="MaoBotaoProximoVERIFICACAO" uid="28">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Vertical</movement>
-                                <wave>Sine</wave>
-                                <period>5</period>
-                                <period-random>0</period-random>
-                                <period-offset>3</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>150</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>1</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window right</left-edge>
-                                <top-edge>None</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1816</x>
-                        <y>764</y>
-                        <z>0</z>
-                        <width>450</width>
-                        <height>580</height>
-                        <depth>0</depth>
-                        <hotspotX>0.355932206</hotspotX>
-                        <hotspotY>0.027777778</hotspotY>
-                        <angle>2.593533278</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

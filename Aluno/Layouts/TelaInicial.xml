@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>TelaAbertura</name>
-    <sid>988561904909306</sid>
-    <event-sheet>EventoAbertura</event-sheet>
+    <name>TelaInicial</name>
+    <sid>651338677008858</sid>
+    <event-sheet>EventoInicial</event-sheet>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Fundo" sid="977449090512401">
+        <layer name="Fundo" sid="495434644983529">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Fundo" uid="9">
+                <instance type="Fundo" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ProfessoraABERTURA" uid="13">
+                <instance type="ProfessorBuscaINICIAL" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -62,140 +62,58 @@
                         <behavior-instance type="Anchor">
                             <properties>
                                 <left-edge>Window left</left-edge>
-                                <top-edge>None</top-edge>
+                                <top-edge>Window top</top-edge>
                                 <right-edge>None</right-edge>
                                 <bottom-edge>None</bottom-edge>
                                 <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Vertical</movement>
-                                <wave>Sine</wave>
-                                <period>4</period>
-                                <period-random>0</period-random>
-                                <period-offset>2</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>1000</magnitude>
-                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>360</x>
-                        <y>1460</y>
+                        <x>281</x>
+                        <y>447</y>
                         <z>0</z>
-                        <width>572</width>
-                        <height>723</height>
+                        <width>597</width>
+                        <height>720</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.500691593</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="BotaoJogar" uid="15">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1240</x>
-                        <y>250</y>
-                        <z>0</z>
-                        <width>592</width>
-                        <height>100</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.500837505</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MaoBotaoProximoABERTUTA" uid="29">
+                <instance type="CampoNomeINICIAL" uid="34">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <text></text>
+                        <placeholder></placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Text</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Vertical</movement>
-                                <wave>Sine</wave>
-                                <period>5</period>
-                                <period-random>0</period-random>
-                                <period-offset>3</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>150</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>1</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window right</left-edge>
-                                <top-edge>None</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1239</x>
-                        <y>378</y>
+                        <x>720</x>
+                        <y>540</y>
                         <z>0</z>
-                        <width>450</width>
-                        <height>580</height>
+                        <width>778</width>
+                        <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.355932206</hotspotX>
-                        <hotspotY>0.027777778</hotspotY>
-                        <angle>0.365531981</angle>
-                        <opacity>1</opacity>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Elementos" sid="510500770829183">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>0</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="Topo" sid="316292998581016">
+        <layer name="Elementos" sid="535855295460918">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -211,33 +129,18 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="CaixaDialogoAbertura" uid="11">
+                <instance type="CaixaDialogoVERIFICACAO" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Vertical</movement>
-                                <wave>Sine</wave>
-                                <period>4</period>
-                                <period-random>0</period-random>
-                                <period-offset>2</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>400</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960</x>
-                        <y>1090</y>
+                        <y>680</y>
                         <z>0</z>
                         <width>1920</width>
                         <height>400</height>
@@ -248,9 +151,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextoDialogoAbertura" uid="12">
+                <instance type="TextoDialogoBuscaINICIAL" uid="32">
                     <properties>
-                        <text>Olá, ao clicar no botão verde JOGAR, você concorda com nossos termos de uso.</text>
+                        <text>Nossa, que legal. Escreva seu nome no quadrado em branco para que eu possa encontrar o seu personagem no jogo no meu computador.</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Comic Sans MS,-27,400,0</font>
                         <color>0,0,0</color>
@@ -286,24 +189,19 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextoDialogoAberturaTermos" uid="17">
+                <instance type="BotaoVoltar" uid="35">
                     <properties>
-                        <text>termos de uso</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Comic Sans MS,-27,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Anchor">
                             <properties>
                                 <left-edge>Window left</left-edge>
-                                <top-edge>None</top-edge>
-                                <right-edge>Window right</right-edge>
+                                <top-edge>Window bottom</top-edge>
+                                <right-edge>None</right-edge>
                                 <bottom-edge>None</bottom-edge>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -312,19 +210,37 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>10</x>
-                        <y>730</y>
+                        <x>70</x>
+                        <y>1000</y>
                         <z>0</z>
-                        <width>1900</width>
-                        <height>350</height>
+                        <width>100</width>
+                        <height>100</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Topo" sid="538312949407687">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
     </layers>

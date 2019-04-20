@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoAbertura</name>
     <events>
-        <variable constant="0" name="letra" sid="829944336668532" static="0" type="number">0</variable>
         <include>Global</include>
         <event-block sid="427838218265342">
             <conditions>
@@ -20,6 +19,10 @@
                 </action>
                 <action id="4" name="Preload" sid="863326146966624" type="Audio">
                     <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+                <action id="-9" name="Set value" sid="381005736870042" type="System">
+                    <param id="0" name="Variable">letra</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -43,6 +46,20 @@
             </conditions>
             <actions>
                 <action id="2" name="Stop" sid="460385449281883" type="BotaoJogar" />
+            </actions>
+        </event-block>
+        <event-block sid="985271554975380">
+            <conditions>
+                <condition id="-18" name="On created" sid="813950274945791" type="MaoBotaoProximoABERTUTA" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="676502614483390" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="309904726599538" type="MaoBotaoProximoABERTUTA">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="448349454074650" type="MaoBotaoProximoABERTUTA" />
             </actions>
         </event-block>
         <event-block sid="305278476119731">

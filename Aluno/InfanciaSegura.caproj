@@ -15,11 +15,13 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
     </used-behaviors>
     <used-effects />
@@ -198,7 +200,7 @@
         <object-type name="Browser" sid="798825694811054">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="TextoDialogoVerificacao" sid="443277308905415">
+        <object-type name="TextoDialogoAfirmacaoVERIFICACAO" sid="443277308905415">
             <plugin id="Text" />
             <behaviors>
                 <behavior-type name="Anchor" sid="808043982981532">
@@ -206,7 +208,7 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="CaixaDialogoAbertura2" sid="362864633577372">
+        <object-type name="CaixaDialogoVERIFICACAO" sid="362864633577372">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555498920814089" speed="5">
@@ -216,6 +218,11 @@
         </object-type>
         <object-type name="ProfessorAfirmacaoVERIFICACAO" sid="370460481153110">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="135974832192986">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175004871743776" speed="5">
                     <frame duration="1" hotspotX="0.500907" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 2.png">
@@ -235,6 +242,11 @@
         </object-type>
         <object-type name="ProfessoraPerguntaVERIFICACAO" sid="668021357275701">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="272681475473273">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188149633757652" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 3.png">
@@ -254,19 +266,210 @@
         </object-type>
         <object-type name="BotaoNao" sid="503233098949299">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="588251835940673">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="373240160718054">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901576569249696" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoNaoSolto.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\Alexandre\Desktop\BotaoNaoPressionado.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508065" original-source="C:\Users\Alexandre\Desktop\BotaoNaoPressionado.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="205278852354449">
+        <object-type name="BotaoSim" sid="205278852354449">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="159119539004127">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="382727203307174">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379699409970502" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoSimSolto.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\Alexandre\Desktop\BotaoSimPressionado.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508065" original-source="C:\Users\Alexandre\Desktop\BotaoSimPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoPerguntaVERIFICACAO" sid="650466396741005">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="999796576523466">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="BotaoProximo" sid="898514759768646">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="865008631991877">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="448507855979962" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\BotaoProximoSolto.png">
+                        <collision-poly>
+                            <point x="0.1475" y="0.1475" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8525" y="0.1475" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8525" y="0.8525" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1475" y="0.8525" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501266" original-source="C:\Users\Alexandre\Desktop\BotaoProximoPressionado.png">
+                        <collision-poly>
+                            <point x="0.147208" y="0.146835" />
+                            <point x="0.5" y="0" />
+                            <point x="0.852792" y="0.146835" />
+                            <point x="1" y="0.498734" />
+                            <point x="0.852792" y="0.853165" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147208" y="0.853165" />
+                            <point x="0" y="0.498734" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MaoBotaoProximoVERIFICACAO" sid="850006179183086">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="360340692068426">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="268137769975783">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="588532228193147">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460880570530873" speed="5">
+                    <frame duration="1" hotspotX="0.355932" hotspotY="0.0277778" original-source="C:\Users\Alexandre\Desktop\mao.png">
+                        <collision-poly>
+                            <point x="0.250847" y="0.205556" />
+                            <point x="0.5" y="0.198611" />
+                            <point x="0.732203" y="0.219444" />
+                            <point x="1" y="0.5" />
+                            <point x="0.877966" y="0.9" />
+                            <point x="0.5" y="0.911111" />
+                            <point x="0.237288" y="0.805556" />
+                            <point x="0.0305085" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MaoBotaoProximoABERTUTA" sid="543040134514148">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="692546840425611">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="560393755200786">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="681535383651494">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930008821707437" speed="5">
+                    <frame duration="1" hotspotX="0.355932" hotspotY="0.0277778" original-source="C:\Users\Alexandre\Desktop\mao.png">
+                        <collision-poly>
+                            <point x="0.250847" y="0.205556" />
+                            <point x="0.5" y="0.198611" />
+                            <point x="0.732203" y="0.219444" />
+                            <point x="1" y="0.5" />
+                            <point x="0.877966" y="0.9" />
+                            <point x="0.5" y="0.911111" />
+                            <point x="0.237288" y="0.805556" />
+                            <point x="0.0305085" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoBuscaINICIAL" sid="126292964238161">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="293329295263228">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ProfessorBuscaINICIAL" sid="688976155601283">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="388637600391651">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722277098395595" speed="5">
+                    <frame duration="1" hotspotX="0.500838" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 4.png">
+                        <collision-poly>
+                            <point x="0.232831" y="0.193056" />
+                            <point x="0.499162" y="0" />
+                            <point x="0.782245" y="0.180556" />
+                            <point x="0.757119" y="0.5" />
+                            <point x="0.79397" y="0.829167" />
+                            <point x="0.499162" y="0.940278" />
+                            <point x="0.21608" y="0.820833" />
+                            <point x="0.271357" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CampoNomeINICIAL" sid="310597477224162">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="BotaoVoltar" sid="339913182378712">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="842849892032332">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="113471767688167" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\BotaoAnteriorSolto.png">
+                        <collision-poly>
+                            <point x="0.1475" y="0.1475" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8525" y="0.1475" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8525" y="0.8525" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1475" y="0.8525" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501266" original-source="C:\Users\Alexandre\Desktop\BotaoAnteriorPressionado.png">
+                        <collision-poly>
+                            <point x="0.147208" y="0.146835" />
+                            <point x="0.5" y="0" />
+                            <point x="0.852792" y="0.146835" />
+                            <point x="1" y="0.498734" />
+                            <point x="0.852792" y="0.853165" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147208" y="0.853165" />
+                            <point x="0" y="0.498734" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -276,13 +479,17 @@
         <layout>TelaCarregamento.xml</layout>
         <layout>TelaAbertura.xml</layout>
         <layout>TelaVerificacao.xml</layout>
-        <layout>Tela.xml</layout>
+        <layout>TelaPergunta.xml</layout>
+        <layout>TelaInicial.xml</layout>
+        <layout>Te.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
         <event-sheet>Global.xml</event-sheet>
         <event-sheet>EventoAbertura.xml</event-sheet>
         <event-sheet>EventoVerificao.xml</event-sheet>
+        <event-sheet>EventoInicial.xml</event-sheet>
+        <event-sheet>EventoPergunta.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />

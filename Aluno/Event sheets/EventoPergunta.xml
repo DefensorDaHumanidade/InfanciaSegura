@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoPergunta</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="397577345628951">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="483428431497442" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="937514073173850" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="506022148971986" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="745697351686311">
+            <conditions>
+                <condition id="-18" name="On created" sid="404828394326012" type="BotaoNao" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="765570047740863" type="BotaoNao" />
+            </actions>
+        </event-block>
+        <event-block sid="372120162453231">
+            <conditions>
+                <condition id="-18" name="On created" sid="453984570539689" type="BotaoSim" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="330557976277524" type="BotaoSim" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="428545116582624" title="Máquina de Escrever -DialogoPergunta- PERGUNTA">
+            <sub-events>
+                <event-block sid="855818518581386">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="963263717124580" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="823686390218850" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="950169301598648" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="729346188906376" type="TextoDialogoPerguntaVERIFICACAO">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="599675542777964" type="TextoDialogoPerguntaVERIFICACAO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="637249555700853">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="288688608721624" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoPerguntaVERIFICACAO/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="814353527403646" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="539132109281713" type="TextoDialogoPerguntaVERIFICACAO">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoPerguntaVERIFICACAO/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="854215015371223" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="467588845568418">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="730037664722383" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="280647674928136" type="BotaoSim">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="422370253174118" type="BotaoSim" />
+                                <action id="-12" name="Set group active" sid="242716242261139" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Sim PERGUNTA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="809924590275865">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="844718675974386" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">150</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="407716289418525" type="BotaoNao">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="468566669537922" type="BotaoNao" />
+                                <action id="-12" name="Set group active" sid="840456926235540" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Nao PERGUNTA&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="550117774893181">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="767209779226520" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoPerguntaVERIFICACAO/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="997996303133301" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoPergunta- VERIFICACAO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="566156781937691" title="Botao Nao PERGUNTA">
+            <sub-events>
+                <event-block sid="710647370265174">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="921361388988472" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="147593877198341" type="Touch">
+                            <param id="0" name="Object">BotaoNao</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="439756291007004" type="BotaoNao">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="230330304404761" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nao&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="473410073916794">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="771673986803727" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="252898663219539" type="Touch">
+                            <param id="0" name="Object">BotaoNao</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="385763811665853" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Nao&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="996900587838508" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="122728198768513" type="BotaoNao">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="232982809359365" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="601375074019501" type="System">
+                            <param id="0" name="Group name">&quot;Botao Nao PERGUNTA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="115522269111186">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="694145355146498" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="844195329249343" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Nao&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="387925817536089" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="326138858962741" type="BotaoNao">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="104633108816930" title="Botao Sim PERGUNTA">
+            <sub-events>
+                <event-block sid="498525506152414">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="682389078848053" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="111079050275739" type="Touch">
+                            <param id="0" name="Object">BotaoSim</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="295527322409055" type="BotaoSim">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="258878581163225" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Sim&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="676654235930102">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="592533910427677" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="717451691827874" type="Touch">
+                            <param id="0" name="Object">BotaoSim</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="942367644058388" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Sim&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="346175231835603" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="777038202027236" type="BotaoSim">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="920456070871676" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="902648856206714" type="System">
+                            <param id="0" name="Layout">TelaInicial</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="607438442077403" type="System">
+                            <param id="0" name="Group name">&quot;Botao Sim PERGUNTA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="437188862202394">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="518423696681224" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="538587477394628" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Sim&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="822283307507577" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="812318144908688" type="BotaoSim">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

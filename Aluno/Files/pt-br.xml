@@ -3,4 +3,7 @@
     <TextoCarregandoCARREGAMENTO>Carregando...</TextoCarregandoCARREGAMENTO>
     <TextoDialogoAbertura>Olá, ao clicar no botão verde JOGAR, você concorda com os nossos: </TextoDialogoAbertura>
     <TextoDialogoAberturaTermos>                                                                                                           termos de uso</TextoDialogoAberturaTermos>
+    <TextoDialogoAfirmacaoVERIFICACAO>Antes da brincadeira começar eu preciso saber de uma coisinha. Para que eu possa perguntar uma coisinha, clique no botão azul.</TextoDialogoAfirmacaoVERIFICACAO>
+    <TextoDialogoPerguntaVERIFICACAO>Muito bem, o que eu queria perguntar é: Você já brincou com esse jogo antes? Clique no botão verde SIM caso você já tenha jogado esse jogo antes, ou clique no botão vermelho NÃO se essa é a sua primeira vez.</TextoDialogoPerguntaVERIFICACAO>
+    <TextoDialogoBuscaINICIAL>Nossa, que legal. Escreva seu nome no quadrado em branco para que eu possa encontrar o seu personagem do jogo no meu computador.</TextoDialogoBuscaINICIAL>
 </textos>
