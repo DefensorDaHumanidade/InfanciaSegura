@@ -61,8 +61,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-82</x>
-                        <y>1072</y>
+                        <x>1074</x>
+                        <y>-160</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -105,8 +105,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1991</x>
-                        <y>334</y>
+                        <x>1294</x>
+                        <y>-158</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -124,22 +124,11 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>None</left-edge>
-                                <top-edge>Window bottom</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1014</x>
-                        <y>1012</y>
+                        <x>1184</x>
+                        <y>-158</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -276,6 +265,13 @@
     </layers>
     <nonworld-instances>
         <instance type="XML" uid="8" />
+        <instance type="Array" uid="51">
+            <properties>
+                <width>100</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

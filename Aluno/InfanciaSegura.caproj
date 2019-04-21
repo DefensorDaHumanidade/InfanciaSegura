@@ -11,6 +11,7 @@
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -98,11 +99,6 @@
         </object-type>
         <object-type name="Vermelho" sid="777932006802503">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="548911069533278">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="126889478898619" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\vermelho.png" />
@@ -436,6 +432,11 @@
         </object-type>
         <object-type name="CampoNomeINICIAL" sid="310597477224162">
             <plugin id="TextBox" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="560847628274683">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="BotaoVoltar" sid="339913182378712">
             <plugin id="Sprite" />
@@ -473,6 +474,131 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PorfessoraTristeNAOENCONTRADO" sid="894735159219385">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956202544544507" speed="5">
+                    <frame duration="1" hotspotX="0.500838" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoTristeNAOENCONTRADO" sid="476795020413188">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="743236343265972">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="BotaoPesquisar" sid="909598668105562">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="181390969262124">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767892346318324" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoPesquisarSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoPesquisarPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoTristeSIMENCONTRADO" sid="503750379759658">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="153514350918281">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ProfessoraFelizSIMENCONTRADO" sid="507096510705251">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="962009553072498">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101377579055074" speed="5">
+                    <frame duration="1" hotspotX="0.500838" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSelecionar" sid="406335276145714">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="902998929285525">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="828230436257239" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoSelecionarSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoSelecionarPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Senha" sid="801372212412233">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="785928982985553">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="37" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802548285336225" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Array" sid="510390276311268">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Selecao" sid="961128777055340">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643031068197305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -481,6 +607,8 @@
         <layout>TelaVerificacao.xml</layout>
         <layout>TelaPergunta.xml</layout>
         <layout>TelaInicial.xml</layout>
+        <layout>TelaNaoEncontrado.xml</layout>
+        <layout>TelaSimEncontrado.xml</layout>
         <layout>Te.xml</layout>
     </layout-folder>
     <event-folder>
@@ -490,6 +618,8 @@
         <event-sheet>EventoVerificao.xml</event-sheet>
         <event-sheet>EventoInicial.xml</event-sheet>
         <event-sheet>EventoPergunta.xml</event-sheet>
+        <event-sheet>EventoNaoEncontrado.xml</event-sheet>
+        <event-sheet>EventoSimEncontrado.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />

@@ -40,14 +40,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="998942484605203">
-            <conditions>
-                <condition id="-18" name="On created" sid="919871322101239" type="BotaoJogar" />
-            </conditions>
-            <actions>
-                <action id="2" name="Stop" sid="460385449281883" type="BotaoJogar" />
-            </actions>
-        </event-block>
         <event-block sid="985271554975380">
             <conditions>
                 <condition id="-18" name="On created" sid="813950274945791" type="MaoBotaoProximoABERTUTA" />

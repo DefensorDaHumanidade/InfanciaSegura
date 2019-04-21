@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoSimEncontrado</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="584042023975502">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="137711568927073" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="794552748098669" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="324733031730073" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="782654181478823" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoEncontrado- SIMENCONTRADO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="4" name="Preload" sid="681202092970086" type="Audio">
+                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+                <action disabled="1" id="7" name="Set CSS style" sid="585639905083923" type="CampoNomeINICIAL">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;gray&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="320815790522186" type="CampoNomeINICIAL">
+                    <param id="0" name="Text">&quot;Nome não encontrado...&quot;</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="333132904101341" type="BotaoSelecionar">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="614981540859559" title="Máquina de Escrever -DialogoEncontrado- SIMENCONTRADO">
+            <sub-events>
+                <event-block sid="555991690733918">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="176700011155928" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="218076650740740" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="713020825246771" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="749733062380471" type="TextoDialogoTristeSIMENCONTRADO">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="568738670833620" type="TextoDialogoTristeSIMENCONTRADO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="419026225139131">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="183010544799018" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoTristeSIMENCONTRADO/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="996518681776116" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="588981690504973" type="TextoDialogoTristeSIMENCONTRADO">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoTristeSIMENCONTRADO/text()&quot;), letra)</param>
+                        </action>
+                        <action disabled="1" id="7" name="Set CSS style" sid="669170646006029" type="CampoNomeINICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">str(letra/100)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="221887437117298" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="467942212968963">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="598591927146275" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoTristeSIMENCONTRADO/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="967044135686926" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoEncontrado- SIMENCONTRADO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="628262844016511" title="Botao Anterior SIMENCONTRADO">
+            <sub-events>
+                <event-block sid="638672805787272">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="354367397959754" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="672775237953583" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="225543897295811" type="BotaoVoltar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="194666640347191" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Anterior&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="974646353814595">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="583035885044247" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="773294434542069" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="252329504065514" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="153531794007515" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="567045776586434" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="872881123140256" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="767498132030813" type="System">
+                            <param id="0" name="Layout">TelaPergunta</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="941981923635347" type="System">
+                            <param id="0" name="Group name">&quot;Botao Anterior SIMENCONTRADO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="842803430944475">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="662622288700069" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="125232508898518" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="829223822120626" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="575001420172833" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="703799190605449" title="Botao Selecionar SIMENCONTRADO">
+            <sub-events>
+                <event-block sid="154691050109911">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="242473636132370" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="782052456670125" type="Touch">
+                            <param id="0" name="Object">BotaoSelecionar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="378722105309820" type="BotaoSelecionar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="543309384190592" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Selecionar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="577187724695231">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="308235844401285" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="464041848840723" type="Touch">
+                            <param id="0" name="Object">BotaoSelecionar</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="113328757868795" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Selecionar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="182262290187542" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="628783180927241" type="BotaoSelecionar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="269742608561225" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action disabled="1" id="-2" name="Go to layout" sid="247225383189411" type="System">
+                            <param id="0" name="Layout">TelaPergunta</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="483578681985088" type="System">
+                            <param id="0" name="Group name">&quot;Botao Selecionar SIMENCONTRADO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="807449002506012">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="992431039182364" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="413446805488719" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Selecionar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="279316744416165" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="316234253830243" type="BotaoSelecionar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="413562259593393">
+            <conditions>
+                <condition id="3" name="On touched object" sid="170271698374610" type="Touch">
+                    <param id="0" name="Object">Senha</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="169620194955275" type="BotaoSelecionar">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-3" name="Set position" sid="850962588290117" type="Selecao">
+                    <param id="0" name="X">Senha.X</param>
+                    <param id="1" name="Y">Senha.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="833203528541228" type="System">
+                    <param id="0" name="Variable">SenhaSelecionada</param>
+                    <param id="1" name="Value">Senha.AnimationFrame</param>
+                </action>
+                <action id="-12" name="Set group active" sid="834661853556991" type="System">
+                    <param id="0" name="Group name">&quot;Botao Selecionar SIMENCONTRADO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="883295766585299" title="Dispor Senhas">
+            <sub-events>
+                <variable constant="0" name="i" sid="848865545547247" static="0" type="number">0</variable>
+                <variable constant="0" name="aleatorio" sid="373081984101438" static="0" type="number">0</variable>
+                <event-block sid="507337962092371">
+                    <conditions>
+                        <condition id="-23" name="While" sid="264847959704267" type="System" />
+                        <condition id="-8" name="Compare two values" sid="702977977292410" type="System">
+                            <param id="0" name="First value">i</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="359463271453227" type="System">
+                            <param id="0" name="Variable">aleatorio</param>
+                            <param id="1" name="Value">floor(random(0,35))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="408497180269529">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Contains value" sid="597098093197658" type="Array">
+                                    <param id="0" name="Value">aleatorio</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="983735345312681" type="Array">
+                                    <param id="0" name="X">i</param>
+                                    <param id="1" name="Value">aleatorio</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="417739577741609" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="973015849578043" type="System">
+                                    <param id="0" name="Object to create">Senha</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">600+i*200</param>
+                                    <param id="3" name="Y">100</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="198381217421014" type="Senha">
+                                    <param id="0" name="Frame number">aleatorio</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="713239491918866">
+                    <conditions>
+                        <condition id="-23" name="While" sid="919903801466159" type="System" />
+                        <condition id="-8" name="Compare two values" sid="722925934633576" type="System">
+                            <param id="0" name="First value">i</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="558489652171754" type="System">
+                            <param id="0" name="Variable">aleatorio</param>
+                            <param id="1" name="Value">floor(random(0,35))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="419865908249914">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Contains value" sid="143272293227575" type="Array">
+                                    <param id="0" name="Value">aleatorio</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="455797795971543" type="Array">
+                                    <param id="0" name="X">i</param>
+                                    <param id="1" name="Value">aleatorio</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="828073631881560" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="696328993871355" type="System">
+                                    <param id="0" name="Object to create">Senha</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">600+(i-6)*200</param>
+                                    <param id="3" name="Y">300</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="405545816424659" type="Senha">
+                                    <param id="0" name="Frame number">aleatorio</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="807547268353049">
+                    <conditions>
+                        <condition id="-23" name="While" sid="366920117255095" type="System" />
+                        <condition id="-8" name="Compare two values" sid="940138185518914" type="System">
+                            <param id="0" name="First value">i</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="711056466395786" type="System">
+                            <param id="0" name="Variable">aleatorio</param>
+                            <param id="1" name="Value">floor(random(0,35))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="751199189506618">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Contains value" sid="885720457108002" type="Array">
+                                    <param id="0" name="Value">aleatorio</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="148186634508716" type="Array">
+                                    <param id="0" name="X">i</param>
+                                    <param id="1" name="Value">aleatorio</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="387010492352385" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="858237655126102" type="System">
+                                    <param id="0" name="Object to create">Senha</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">600+(i-12)*200</param>
+                                    <param id="3" name="Y">500</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="913214255300080" type="Senha">
+                                    <param id="0" name="Frame number">aleatorio</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="550591129433888" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Senha da Crianca&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="507516284691310" type="System">
+                                    <param id="0" name="Group name">&quot;Dispor Senhas&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="221825091515767" title="Carregar Senha da Crianca">
+            <sub-events>
+                <event-block sid="613521452470716">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="765051756372837" type="System">
+                            <param id="0" name="Object">Senha</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Colocar o frame da crianca</comment>
+                        <event-block sid="975777566485769">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="497190324199259" type="Senha">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="693237595043402" type="Senha">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="742007769070158" type="System">
+                                    <param id="0" name="Group name">&quot;Carregar Senha da Crianca&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

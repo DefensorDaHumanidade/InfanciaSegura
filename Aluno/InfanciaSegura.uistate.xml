@@ -10,17 +10,21 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">TelaCarregamento</layout>
+        <layout order="0">TelaCarregamento</layout>
         <layout order="3">TelaAbertura</layout>
         <layout order="6">TelaVerificacao</layout>
         <layout order="7">TelaInicial</layout>
-        <layout order="10">TelaPergunta</layout>
+        <layout order="11">TelaSimEncontrado</layout>
+        <layout order="12">TelaPergunta</layout>
+        <layout order="13">TelaNaoEncontrado</layout>
         <event-sheet order="1">EventoCarregamento</event-sheet>
         <event-sheet order="2">Global</event-sheet>
         <event-sheet order="4">EventoAbertura</event-sheet>
         <event-sheet order="5">EventoVerificao</event-sheet>
         <event-sheet order="8">EventoInicial</event-sheet>
         <event-sheet order="9">EventoPergunta</event-sheet>
+        <event-sheet order="10">EventoNaoEncontrado</event-sheet>
+        <event-sheet active="1" order="14">EventoSimEncontrado</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -57,5 +61,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/MaoBotaoProximoABERTUTA/" />
         <folder expanded="1" path="animation-folder/ProfessorBuscaINICIAL/" />
         <folder expanded="1" path="animation-folder/BotaoVoltar/" />
+        <folder expanded="1" path="animation-folder/PorfessoraTristeNAOENCONTRADO/" />
+        <folder expanded="1" path="animation-folder/BotaoPesquisar/" />
+        <folder expanded="1" path="animation-folder/ProfessoraFelizSIMENCONTRADO/" />
+        <folder expanded="1" path="animation-folder/BotaoSelecionar/" />
+        <folder expanded="1" path="animation-folder/Senha/" />
+        <folder expanded="1" path="animation-folder/Selecao/" />
     </folders-expanded>
 </c2uistate>

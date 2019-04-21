@@ -5,5 +5,7 @@
     <TextoDialogoAberturaTermos>                                                                                                           termos de uso</TextoDialogoAberturaTermos>
     <TextoDialogoAfirmacaoVERIFICACAO>Antes da brincadeira começar eu preciso saber de uma coisinha. Para que eu possa perguntar uma coisinha, clique no botão azul.</TextoDialogoAfirmacaoVERIFICACAO>
     <TextoDialogoPerguntaVERIFICACAO>Muito bem, o que eu queria perguntar é: Você já brincou com esse jogo antes? Clique no botão verde SIM caso você já tenha jogado esse jogo antes, ou clique no botão vermelho NÃO se essa é a sua primeira vez.</TextoDialogoPerguntaVERIFICACAO>
-    <TextoDialogoBuscaINICIAL>Nossa, que legal. Escreva seu nome no quadrado em branco para que eu possa encontrar o seu personagem do jogo no meu computador.</TextoDialogoBuscaINICIAL>
+    <TextoDialogoBuscaINICIAL>Nossa, que legal. Escreva seu nome no quadrado em branco e clique no botão verde PESQUISAR para que eu possa encontrar o seu personagem do jogo no meu computador. Ou clique no botão azul para voltar para a pergunta anterior.</TextoDialogoBuscaINICIAL>
+    <TextoDialogoTristeNAOENCONTRADO>Esse nome não está registrado no meu sistema. Se você quiser, você pode tentar outro nome, ou pode voltar para a minha pergunta anterior clicanco no botão azul.</TextoDialogoTristeNAOENCONTRADO>
+    <TextoDialogoTristeSIMENCONTRADO>Encontrei. Agora basta você clicar no desenho que você escolheu para ser a nossa senha secreta e depois clicar em selecionar.</TextoDialogoTristeSIMENCONTRADO>
 </textos>
