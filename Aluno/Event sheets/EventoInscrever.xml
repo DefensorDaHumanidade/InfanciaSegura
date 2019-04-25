@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoInscrever</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="644505791265268">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="313904020649099" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="767026896867677" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="789639227552795" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="642982808199047" type="System">
+                    <param id="0" name="Group name">&quot;Botao Anterior INSCREVER&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="553027778485098" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoInscrever - INSCREVER&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="4" name="Preload" sid="103057807731406" type="Audio">
+                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="560414619578992" type="CampoNomeINICIAL">
+                    <param id="0" name="Property name">&quot;opacity&quot;</param>
+                    <param id="1" name="Value">&quot;0&quot;</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="718798179765138" type="BotaoInscrever">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="305594336443483" title="Máquina de Escrever -DialogoInscrever - INSCREVER">
+            <sub-events>
+                <event-block sid="361954078751270">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="884694892550496" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="208708019389232" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="732487954998845" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="492880153928437" type="TextoDialogoInscricaoINSCREVER">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="484929280243840" type="TextoDialogoInscricaoINSCREVER">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="620140739335771">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="760360300688655" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoInscricaoINSCREVER/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="335255569466859" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="897276130056355" type="TextoDialogoInscricaoINSCREVER">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoInscricaoINSCREVER/text()&quot;), letra)</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="884161834174540" type="CampoNomeINICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">str(letra/100)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="773376585674474" type="BotaoInscrever">
+                            <param id="0" name="Opacity">clamp(letra, 0, 50)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="438557776996858" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="581428474256473">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="841621816610826" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoInscricaoINSCREVER/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="480397545299803" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoInscrever - INSCREVER&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="880107040499306" title="Botao Anterior INSCREVER">
+            <sub-events>
+                <event-block sid="900006412239433">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="744506264409645" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="329137587635526" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="505377620528274" type="BotaoVoltar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="768733061813848" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Anterior&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="908859187908565">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="865774330087954" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="393146292880108" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="420025651503066" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="103893037211499" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="452303794228147" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="925717082256667" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="123051093208875" type="System">
+                            <param id="0" name="Layout">TelaPergunta</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="810604982156979" type="System">
+                            <param id="0" name="Group name">&quot;Botao Anterior INSCREVER&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="484874149259153">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="587235623914379" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="758021102732559" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="921563525421066" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="295620614723769" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="601439164462331" title="Botao Inscrever INSCREVER">
+            <sub-events>
+                <event-block sid="407525755351472">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="634848868051668" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="904088158400953" type="Touch">
+                            <param id="0" name="Object">BotaoInscrever</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="528144227133715" type="BotaoInscrever">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="435422005897911" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Inscrever&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="499509844669292">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="297870792993860" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="188286386555751" type="Touch">
+                            <param id="0" name="Object">BotaoInscrever</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="985747679419566" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Inscrever&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="611344120394920" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="605466390362896" type="BotaoInscrever">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="151180494413166" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="661380981089070" type="System">
+                            <param id="0" name="Layout">TelaGeneroUsuario</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="601259476821885" type="System">
+                            <param id="0" name="Variable">NomeUsuario</param>
+                            <param id="1" name="Value">CampoNomeINICIAL.Text</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="633931539454663" type="System">
+                            <param id="0" name="Group name">&quot;Botao Inscrever INSCREVER&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="756936611288806">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="323336348849418" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="897685149978553" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Inscrever&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="343146743751860" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="887160860272852" type="BotaoInscrever">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="245402283563393">
+            <conditions>
+                <condition id="-15" inverted="1" name="Is group active" sid="761286224680985" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoInscrever - INSCREVER&quot;</param>
+                </condition>
+                <condition id="0" name="Compare text" sid="811075236993506" type="CampoNomeINICIAL">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="258414452785763" type="BotaoInscrever">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-12" name="Set group active" sid="648027430440262" type="System">
+                    <param id="0" name="Group name">&quot;Botao Inscrever INSCREVER&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="771260043734128">
+            <conditions>
+                <condition id="-15" inverted="1" name="Is group active" sid="612512156132738" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoInscrever - INSCREVER&quot;</param>
+                </condition>
+                <condition id="0" inverted="1" name="Compare text" sid="141725809216552" type="CampoNomeINICIAL">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="399837393238966" type="BotaoInscrever">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-12" name="Set group active" sid="598843964381915" type="System">
+                    <param id="0" name="Group name">&quot;Botao Inscrever INSCREVER&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

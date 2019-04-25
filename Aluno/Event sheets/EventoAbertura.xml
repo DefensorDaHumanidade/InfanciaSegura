@@ -20,6 +20,12 @@
                 <action id="4" name="Preload" sid="863326146966624" type="Audio">
                     <param id="0" name="Audio file">ProfessorAbertura</param>
                 </action>
+                <action id="-16" name="Set opacity" sid="385916107748560" type="BotaoPause">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="244383703460941" type="BotaoSom">
+                    <param id="0" name="Opacity">0</param>
+                </action>
                 <action id="-9" name="Set value" sid="381005736870042" type="System">
                     <param id="0" name="Variable">letra</param>
                     <param id="1" name="Value">0</param>
@@ -81,6 +87,26 @@
             <actions>
                 <action id="-2" name="Set Y" sid="748745834335855" type="CaixaDialogoAbertura">
                     <param id="0" name="Y">TextoDialogoAbertura.Y-50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="909395917771269">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="469221161224136" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="882167082969701" type="BotaoPause">
+                    <param id="0" name="Opacity">clamp(time*100, 0, 100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="340031115570409">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="118415683038325" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="615482384424003" type="BotaoSom">
+                    <param id="0" name="Opacity">clamp(time*100, 0, 100)</param>
                 </action>
             </actions>
         </event-block>

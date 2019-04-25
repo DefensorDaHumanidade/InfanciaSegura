@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoInscreverTurma</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="702842378622137">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="404599161739000" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="182178124076728" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="792612792228481" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="4" name="Preload" sid="976709862832213" type="Audio">
+                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+                <action disabled="1" id="7" name="Set CSS style" sid="514617154099460" type="CampoNomeINICIAL">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;gray&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="202055779465978" type="CampoNomeINICIAL">
+                    <param id="0" name="Text">&quot;Nome não encontrado...&quot;</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="334752878408108" type="BotaoJogarMenor">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="582458321175272" type="System">
+                    <param id="0" name="Variable">Conexao</param>
+                    <param id="1" name="Value">&quot;baixarTurmas&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="778137368407526" type="CampoSenhaTurma">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;gray&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="748231545976201">
+            <conditions>
+                <condition id="0" name="Compare text" sid="527308561513705" type="TextoSenhaTurma">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="765135261116096" type="CadeadoAberto">
+                    <param id="0" name="Object">TextoSenhaTurma</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="694405170983414">
+            <conditions>
+                <condition id="0" inverted="1" name="Compare text" sid="550148507364620" type="TextoSenhaTurma">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="347113366622390" type="CadeadoFechado">
+                    <param id="0" name="Object">TextoSenhaTurma</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="998290190484985">
+            <conditions>
+                <condition id="2" name="On clicked" sid="360810866576350" type="CampoSenhaTurma" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set CSS style" sid="856742202165068" type="CampoSenhaTurma">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;black&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="734322662311352" type="CampoSenhaTurma">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="923851403048726" title="Selecionar Turma">
+            <sub-events>
+                <event-block sid="657806540746231">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="860476924700750" type="Touch">
+                            <param id="0" name="Object">Branco</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="232800576134410" type="TextoSenhaTurma">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">Branco.Y</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="390416669107381" type="TextoIDTurma">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">Branco.Y</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="795182775381151" type="TextoSenhaTurma">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="251924973723899" type="SelecaoTurma">
+                            <param id="0" name="X">Branco.X</param>
+                            <param id="1" name="Y">Branco.Y</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="984980506319296" type="CampoSenhaTurma">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="972692576040863" type="CampoSenhaTurma">
+                            <param id="0" name="Text">&quot;Digita a senha...&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="136609041769454" type="CampoSenhaTurma">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;gray&quot;</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="620842984458960" type="BotaoJogarMenor">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="841868912433625" type="System">
+                            <param id="0" name="Variable">NomeTurma</param>
+                            <param id="1" name="Value">TextoIDTurma.Text</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="340569923977572" type="System">
+                            <param id="0" name="Group name">&quot;Botao Selecionar INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="618040501675877">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="465312062392210" type="Touch">
+                            <param id="0" name="Object">Branco</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="625356356046119" type="TextoSenhaTurma">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">Branco.Y</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="639694236337022" type="TextoIDTurma">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">Branco.Y</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="406419736618699" type="TextoSenhaTurma">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="821835755570364" type="CampoSenhaTurma">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="825019697313479" type="SelecaoTurma">
+                            <param id="0" name="X">Branco.X</param>
+                            <param id="1" name="Y">Branco.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="732328512858903" type="CampoSenhaTurma">
+                            <param id="0" name="X">Branco.X</param>
+                            <param id="1" name="Y">Branco.Y-Branco.Height/2+10</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="736428442359028" type="BotaoJogarMenor">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="208616770365083" type="System">
+                            <param id="0" name="Variable">NomeTurma</param>
+                            <param id="1" name="Value">TextoIDTurma.Text</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="589382279636130" type="System">
+                            <param id="0" name="Group name">&quot;Botao Selecionar INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="975704735483821" title="Rolagem Turmas">
+            <sub-events>
+                <event-block sid="920283421562297">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="553360637730537" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="816889606052241" type="Azul">
+                            <param id="0" name="X">Branco.X-Branco.Width/2+Azul.Width/2+10</param>
+                            <param id="1" name="Y">120*(Azul.IID+1)+RolagemTotal</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="424935639657615" type="Branco">
+                            <param id="0" name="X">200+(WindowWidth/2)</param>
+                            <param id="1" name="Y">120*(Azul.IID+1)+RolagemTotal</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="595251181531787" type="TextoNomeTurma">
+                            <param id="0" name="X">Branco.X-Branco.Width/2+Azul.Width/2+10</param>
+                            <param id="1" name="Y">120*(Azul.IID+1)+RolagemTotal</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="155203775960991" type="TextoSenhaTurma">
+                            <param id="0" name="X">Branco.X-Branco.Width/2+Azul.Width/2+300</param>
+                            <param id="1" name="Y">120*(Azul.IID+1)+RolagemTotal</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="671103035759738" type="TextoIDTurma">
+                            <param id="0" name="X">Branco.X-Branco.Width/2+Azul.Width/2+400</param>
+                            <param id="1" name="Y">120*(Azul.IID+1)+RolagemTotal</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="351345045071984" type="System">
+                            <param id="0" name="Variable">RolagemTotal</param>
+                            <param id="1" name="Value">Rolagem</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="561587434263805">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="807373920541018" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="691267435523601" type="System">
+                            <param id="0" name="Variable">RolagemInicio</param>
+                            <param id="1" name="Value">Touch.AbsoluteY+RolagemTotal</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="925385649570604">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="549495899194503" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="215263062331826" type="System">
+                            <param id="0" name="Variable">Rolagem</param>
+                            <param id="1" name="Value">RolagemInicio-Touch.AbsoluteY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="333408670017963">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="891453328297911" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="129779192573967" type="System">
+                            <param id="0" name="Variable">Rolagem</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390605645191198">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="796460921597382" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="843891383819896" type="System">
+                            <param id="0" name="Variable">Rolagem</param>
+                            <param id="1" name="Value">-10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="605173909555544" title="Máquina de Escrever -DialogoEncontrado- INSCREVERTURMA">
+            <sub-events>
+                <event-block sid="831788627943136">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="114648644205509" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="390910686306876" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="505505987132058" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="308204469990297" type="TextoDialogoSenhaINSCREVERTURMA">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="580686338246414" type="TextoDialogoSenhaINSCREVERTURMA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="819580348002464">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="323566312437967" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoSenhaINSCREVERTURMA/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="399027020426024" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="846480755133804" type="TextoDialogoSenhaINSCREVERTURMA">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoSenhaINSCREVERTURMA/text()&quot;), letra)</param>
+                        </action>
+                        <action disabled="1" id="7" name="Set CSS style" sid="484953667864477" type="CampoNomeINICIAL">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">str(letra/100)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="160412989954303" type="Senha">
+                            <param id="0" name="Opacity">clamp(letra,0, 100)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="248053328715355" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267298624991324">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="117667811451015" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoSenhaINSCREVERTURMA/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="468946852736201" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoEncontrado- INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="211836703074389" title="Botao Anterior INSCREVERTURMA">
+            <sub-events>
+                <event-block sid="951009488533443">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="590588145941939" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="637645417168043" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="914617500662867" type="BotaoVoltar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="825325838219194" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Anterior&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="485623033864905">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="334944735530065" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="742565470966191" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="782099718756648" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="742750581066688" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="814900277910572" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="969780452394500" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="228412693929783" type="System">
+                            <param id="0" name="Layout">TelaInscreverSenha</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="574369692760036" type="System">
+                            <param id="0" name="Group name">&quot;Botao Anterior INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="575585771714765">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="821331833806359" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="931599489326515" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="410421836446861" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="258687010268831" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="659808156833785" title="Botao Selecionar INSCREVERTURMA">
+            <sub-events>
+                <event-block sid="820776663102517">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="684838923786034" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="337960083365263" type="Touch">
+                            <param id="0" name="Object">BotaoJogarMenor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="160321513757557" type="BotaoJogarMenor">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="225053465125167" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Jogar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="774284601467865">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="216887428602174" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="593091353433590" type="Touch">
+                            <param id="0" name="Object">BotaoJogarMenor</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="383563923847391" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="403713944329950" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="650949878591730" type="BotaoJogarMenor">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="507656713599034" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action disabled="1" id="-2" name="Go to layout" sid="127950674953316" type="System">
+                            <param id="0" name="Layout">TelaPergunta</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="230229182646155">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="415934444679979" type="CampoSenhaTurma">
+                                    <param id="0" name="Text">TextoSenhaTurma.Text</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="188494749837112" type="TextoSenhaTurma">
+                                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                                    <param id="1" name="Case sensitivity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="877993508964518" type="AJAX">
+                                    <param id="0" name="Tag">&quot;AdicionarAluno&quot;</param>
+                                    <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-AdicionarAluno.php&quot;</param>
+                                    <param id="2" name="Data">&quot;nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;turma=&quot;&amp;NomeTurma&amp;&quot;&amp;senha=&quot;&amp;SenhaSelecionada&amp;&quot;&amp;genero=&quot;&amp;GeneroUsuario</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="158122099463546">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Compare text" sid="793826504465373" type="CampoSenhaTurma">
+                                    <param id="0" name="Text">TextoSenhaTurma.Text</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="108949951135758" type="CampoSenhaTurma">
+                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                    <param id="1" name="Value">&quot;red&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="966429044368241" type="CampoSenhaTurma">
+                                    <param id="0" name="Text">&quot;Senha Invalida&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="122839766084698">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="843593985470108" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="595417837313668" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="401776741934701" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="351220676718853" type="BotaoJogarMenor">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="968314485514549">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="238399740872087" type="AJAX">
+                            <param id="0" name="Tag">&quot;AdicionarAluno&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="450731482673755" type="System">
+                            <param id="0" name="Group name">&quot;Botao Selecionar INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126420268669186">
+                    <conditions>
+                        <condition id="1" name="On error" sid="933907759597334" type="AJAX">
+                            <param id="0" name="Tag">&quot;AdicionarAluno&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="555843193758883" title="Consultar Turmas Cadastradas INSCREVERTURMA">
+            <sub-events>
+                <event-block sid="376245116510390">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="243820212364297" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baixarTurmas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="957864353725028" type="Azul">
+                            <param id="0" name="X">Branco.X-Branco.Width/2+Azul.Width/2+10</param>
+                            <param id="1" name="Y">120*(Azul.IID+1)+RolagemTotal</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="311309273600828" type="TextoNomeTurma">
+                            <param id="0" name="X">Branco.X-Branco.Width/2+Azul.Width/2+10</param>
+                            <param id="1" name="Y">120*(Azul.IID+1)+RolagemTotal</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="726502695367081" type="Azul">
+                            <param id="0" name="Width">500</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="191442556017211" type="AJAX">
+                            <param id="0" name="Tag">&quot;Turmas&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-ConsultaTodasTurmasVisiveisID.php&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="962721137046634" type="System">
+                            <param id="0" name="Variable">Conexao</param>
+                            <param id="1" name="Value">&quot;baixandoTurmas&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605101476190189">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="828861439979765" type="AJAX">
+                            <param id="0" name="Tag">&quot;Turmas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="240725546033261" type="System">
+                            <param id="0" name="Group name">&quot;Consultar Turmas Cadastradas INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="721183723039655" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Turmas INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="420292424449695" type="System">
+                            <param id="0" name="Group name">&quot;Rolagem Turmas&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="611911242706380" type="SelecaoTurma">
+                            <param id="0" name="Width">WindowWidth/1.5</param>
+                            <param id="1" name="Height">110</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="643070108214624" type="TextoNomeTurma" />
+                        <action id="-9" name="Destroy" sid="200580798244855" type="TextoSenhaTurma" />
+                        <action id="-9" name="Destroy" sid="820383193317592" type="TextoIDTurma" />
+                        <action id="-9" name="Destroy" sid="646377491945403" type="Branco" />
+                        <action id="-9" name="Destroy" sid="707357315390721" type="Azul" />
+                        <action disabled="1" id="-9" name="Destroy" sid="442613354019825" type="CadeadoFechado" />
+                        <action disabled="1" id="-9" name="Destroy" sid="435515597771796" type="CadeadoAberto" />
+                    </actions>
+                </event-block>
+                <event-block sid="518128172514257">
+                    <conditions>
+                        <condition id="1" name="On error" sid="139342125366061" type="AJAX">
+                            <param id="0" name="Tag">&quot;Turmas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="726956353512731" title="Preencher Turmas INSCREVERTURMA">
+            <sub-events>
+                <event-block sid="195199215677890">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="921692237749330" type="System" />
+                        <condition id="-10" name="For" sid="854264709229046" type="System">
+                            <param id="0" name="Name">&quot;indice&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">int(tokencount(AJAX.LastData, &quot;&lt;br&gt;&quot;)/3)-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="206613471688769" type="System">
+                            <param id="0" name="Object to create">Branco</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="970918922134511" type="System">
+                            <param id="0" name="Object to create">Azul</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="887614708718926" type="Azul">
+                            <param id="0" name="Width">500</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="309790114812620" type="Branco">
+                            <param id="0" name="Width">WindowWidth/1.5</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="161260214798023" type="Branco">
+                            <param id="0" name="Height">110</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="232752614797381" type="System">
+                            <param id="0" name="Object to create">CadeadoAberto</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="456729550401275" type="System">
+                            <param id="0" name="Object to create">CadeadoFechado</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="632324182515489" type="System">
+                            <param id="0" name="Object to create">TextoNomeTurma</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="240791455972468" type="System">
+                            <param id="0" name="Object to create">TextoSenhaTurma</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="334070981975223" type="System">
+                            <param id="0" name="Object to create">TextoIDTurma</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="159645553161426" type="TextoNomeTurma">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 3*loopindex, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="160468165239808" type="TextoNomeTurma">
+                            <param id="0" name="Size (pt)">TamanhoTexto</param>
+                        </action>
+                        <action id="0" name="Set text" sid="269622968688083" type="TextoSenhaTurma">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 3*loopindex+1, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="336197216943289" type="TextoSenhaTurma">
+                            <param id="0" name="Size (pt)">TamanhoTexto</param>
+                        </action>
+                        <action id="0" name="Set text" sid="978477596122747" type="TextoIDTurma">
+                            <param id="0" name="Text">tokenat(AJAX.LastData, 3*loopindex+2, &quot;&lt;br&gt;&quot;)</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="660614078643403" type="TextoIDTurma">
+                            <param id="0" name="Size (pt)">TamanhoTexto</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="246819977522074" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Turmas INSCREVERTURMA&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

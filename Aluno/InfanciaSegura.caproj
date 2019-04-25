@@ -14,6 +14,8 @@
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
@@ -599,6 +601,207 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BotaoInscrever" sid="616687135201748">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="998473241874590" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoInscreverSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoInscreverPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoInscricaoINSCREVER" sid="915665545772978">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="121566179275824">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Keyboard" sid="417110574631061">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TextoDialogoGeneroGENEROUSUARIO" sid="906270016070157">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="926028952663602">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="BotaoMenino" sid="146486782421907">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653625849187409" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoMeninoSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoMeninoPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoMenina" sid="339810816018843">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215524486080738" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoMeninaSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoMeninaPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoSenhaINSCREVERSENHA" sid="277712138007771">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="934986080368965">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ProfessoraFelizSenha" sid="499227284450146">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="280518168556592">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356978012827046" speed="5">
+                    <frame duration="1" hotspotX="0.500838" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoSenhaINSCREVERTURMA" sid="556107982355906">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="900657474828736">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="CadeadoAberto" sid="764879764440394">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619992103038773" speed="5">
+                    <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\Imagens InfanciaSegura Professor\cadeadoAberto.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CadeadoFechado" sid="364030754803614">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512244492255603" speed="5">
+                    <frame duration="1" hotspotX="0.500971" hotspotY="0.50073" original-source="C:\Users\Alexandre\Desktop\Imagens InfanciaSegura Professor\cadeadoFechado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoNomeTurma" sid="491409269688412">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CampoSenhaTurma" sid="851592931213123">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="TextoSenhaTurma" sid="391636978975746">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SelecaoTurma" sid="410971302423295">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201313233911503" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="764229758646368">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="BotaoSom" sid="292289576587333">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="632051125631558">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735556125752913" speed="5">
+                    <frame duration="1" hotspotX="0.550388" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.554688" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoPause" sid="899178520036282">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="569012118209400">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683270070190525" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoJogarMenor" sid="175059084545218">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="987092790427413">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481567707886755" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoJogarSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoJogarPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoIDTurma" sid="328971378365341">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextoDialogoERRO" sid="572121728881395">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="550602104833447">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="PorfessoraTristeERRO" sid="679462321523961">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="285734816853319" speed="5">
+                    <frame duration="1" hotspotX="0.500838" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoACERTO" sid="215256124549194">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="915520997883723">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ProfessoraFelizACERTO" sid="656249087129847">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="473430845198909">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="280202922599830" speed="5">
+                    <frame duration="1" hotspotX="0.500838" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoGeneroGENEROPERSONAGEM" sid="233569257733091">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="562263534430477">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -607,9 +810,15 @@
         <layout>TelaVerificacao.xml</layout>
         <layout>TelaPergunta.xml</layout>
         <layout>TelaInicial.xml</layout>
+        <layout>TelaInscrever.xml</layout>
         <layout>TelaNaoEncontrado.xml</layout>
         <layout>TelaSimEncontrado.xml</layout>
-        <layout>Te.xml</layout>
+        <layout>TelaInscreverSenha.xml</layout>
+        <layout>TelaInscreverTurma.xml</layout>
+        <layout>TelaGeneroUsuario.xml</layout>
+        <layout>TelaGeneroPersonagem.xml</layout>
+        <layout>TelaErro.xml</layout>
+        <layout>TelaAcerto.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
@@ -620,6 +829,13 @@
         <event-sheet>EventoPergunta.xml</event-sheet>
         <event-sheet>EventoNaoEncontrado.xml</event-sheet>
         <event-sheet>EventoSimEncontrado.xml</event-sheet>
+        <event-sheet>EventoInscrever.xml</event-sheet>
+        <event-sheet>EventoInscreverSenha.xml</event-sheet>
+        <event-sheet>EventoGeneroUsuario.xml</event-sheet>
+        <event-sheet>EventoInscreverTurma.xml</event-sheet>
+        <event-sheet>EventoErro.xml</event-sheet>
+        <event-sheet>EventoAcerto.xml</event-sheet>
+        <event-sheet>EventoGeneroPersonagem.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />
@@ -643,6 +859,8 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="18" />
+        <global-instance type="Keyboard" uid="62" />
+        <global-instance type="Mouse" uid="87" />
     </global-instances>
     <sounds-folder>
         <file name="ProfessorAbertura.ogg" />

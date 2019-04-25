@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoGeneroUsuario</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="765285464515506">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="594460503576649" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="248686374796484" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="856522787942738" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="932478548929517" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoGenero- GENEROUSUARIO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="308269489744213" type="System">
+                    <param id="0" name="Group name">&quot;Botao Menino GENEROUSUARIO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="899114993383080" type="System">
+                    <param id="0" name="Group name">&quot;Botao Menina GENEROUSUARIO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="4" name="Preload" sid="160561682516912" type="Audio">
+                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="464906299384934" type="BotaoMenina">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="337521349703939" type="BotaoMenino">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="531153676512223" title="Máquina de Escrever -DialogoGenero- GENEROUSUARIO">
+            <sub-events>
+                <event-block sid="675937392224970">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="728326872792711" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="686871382918709" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="315162106068398" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="795997870037976" type="TextoDialogoGeneroGENEROUSUARIO">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="302904169063324" type="TextoDialogoGeneroGENEROUSUARIO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="854293960892109">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="988494876578138" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoGeneroGENEROUSUARIO/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="697070968432294" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="504595001333742" type="TextoDialogoGeneroGENEROUSUARIO">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoGeneroGENEROUSUARIO/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="724874120477690" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="570832791047392">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="834824341566249" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">120</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="880982056498196" type="BotaoMenina">
+                                    <param id="0" name="Opacity">clamp(letra-120, 0, 100)</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="465864179135440" type="BotaoMenino">
+                                    <param id="0" name="Opacity">clamp(letra-120, 0, 100)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="444715254611609">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="278465170380557" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoGeneroGENEROUSUARIO/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="273561682949150" type="System">
+                            <param id="0" name="Group name">&quot;Botao Menino GENEROUSUARIO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="702771726837348" type="System">
+                            <param id="0" name="Group name">&quot;Botao Menina GENEROUSUARIO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="419047107248889" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoGenero- GENEROUSUARIO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="216795457088521" title="Botao Anterior GENEROUSUARIO">
+            <sub-events>
+                <event-block sid="463141500083936">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="643301340068327" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="922761283320853" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="300468905860368" type="BotaoVoltar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="626333204072064" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Anterior&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="483276106504210">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="262268528232762" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="147523761815434" type="Touch">
+                            <param id="0" name="Object">BotaoVoltar</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="857088837503414" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="333533089469590" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="597622841666846" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="134054180310936" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="276755798725356" type="System">
+                            <param id="0" name="Layout">TelaInscrever</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="688792609522536" type="System">
+                            <param id="0" name="Group name">&quot;Botao Anterior GENEROUSUARIO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="646792410356674">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="168266277670150" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="564899528998428" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Anterior&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="789442842042485" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="496165010776667" type="BotaoVoltar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="721213134696184" title="Botao Menino GENEROUSUARIO">
+            <sub-events>
+                <event-block sid="332914920344110">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="619215872748644" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="779336578216981" type="Touch">
+                            <param id="0" name="Object">BotaoMenino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="762892760921255" type="BotaoMenino">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="914745303953390" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Menino&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="589169060233444">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="891372207099806" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="831037093557602" type="Touch">
+                            <param id="0" name="Object">BotaoMenino</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="702317735545362" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="509170746473103" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="379292118043461" type="BotaoMenino">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="983396544202529" type="System">
+                            <param id="0" name="Variable">GeneroUsuario</param>
+                            <param id="1" name="Value">&quot;Menino&quot;</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="363074734749664" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="966727363122428" type="System">
+                            <param id="0" name="Layout">TelaInscreverSenha</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="164657040341594" type="System">
+                            <param id="0" name="Group name">&quot;Botao Menino GENEROUSUARIO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="351268290540941">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="886654156458727" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="847363891836621" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="957686610945963" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="505822356673128" type="BotaoMenino">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="679816321223281" title="Botao Menina GENEROUSUARIO">
+            <sub-events>
+                <event-block sid="317797960732363">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="170018864224334" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="268798473251778" type="Touch">
+                            <param id="0" name="Object">BotaoMenina</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="541119031481164" type="BotaoMenina">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="703737820407818" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Menina&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307697824200476">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="787817447084693" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="689139478441382" type="Touch">
+                            <param id="0" name="Object">BotaoMenina</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="613157893905308" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menina&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="260175706109587" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="413403731572957" type="BotaoMenina">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="456144710383187" type="System">
+                            <param id="0" name="Variable">GeneroUsuario</param>
+                            <param id="1" name="Value">&quot;Menina&quot;</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="145593999385475" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="258318391086454" type="System">
+                            <param id="0" name="Layout">TelaInscreverSenha</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="305331860618959" type="System">
+                            <param id="0" name="Group name">&quot;Botao Menina GENEROUSUARIO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="455584950583547">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="802706180615440" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="600236691704412" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menina&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="381242716552296" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="845276582853925" type="BotaoMenina">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="476731515462349" title="Dispor Botoes de Genero">
+            <sub-events>
+                <variable constant="0" name="aleatorio" sid="613566330245022" static="0" type="number">0</variable>
+                <event-block sid="364338207892378">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="734344515823639" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="898970679769347" type="System">
+                            <param id="0" name="Variable">aleatorio</param>
+                            <param id="1" name="Value">floor(random(1,3))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="998669536792417">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="843234322075508" type="System">
+                                    <param id="0" name="First value">aleatorio</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="326395068313010" type="BotaoMenino">
+                                    <param id="0" name="X">1080-WindowWidth/10</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="759063681875681" type="BotaoMenina">
+                                    <param id="0" name="X">1580-WindowWidth/10</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="690201992422564" type="System">
+                                    <param id="0" name="Group name">&quot;Dispor Botoes de Genero&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="127884554990911">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="793676831980606" type="System">
+                                    <param id="0" name="First value">aleatorio</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="905817882533923" type="BotaoMenino">
+                                    <param id="0" name="X">1580-WindowWidth/10</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="943792385459294" type="BotaoMenina">
+                                    <param id="0" name="X">1080-WindowWidth/10</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="255465259562350" type="System">
+                                    <param id="0" name="Group name">&quot;Dispor Botoes de Genero&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

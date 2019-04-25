@@ -11,20 +11,27 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">TelaCarregamento</layout>
-        <layout order="3">TelaAbertura</layout>
-        <layout order="6">TelaVerificacao</layout>
-        <layout order="7">TelaInicial</layout>
-        <layout order="11">TelaSimEncontrado</layout>
-        <layout order="12">TelaPergunta</layout>
-        <layout order="13">TelaNaoEncontrado</layout>
-        <event-sheet order="1">EventoCarregamento</event-sheet>
-        <event-sheet order="2">Global</event-sheet>
-        <event-sheet order="4">EventoAbertura</event-sheet>
-        <event-sheet order="5">EventoVerificao</event-sheet>
-        <event-sheet order="8">EventoInicial</event-sheet>
-        <event-sheet order="9">EventoPergunta</event-sheet>
-        <event-sheet order="10">EventoNaoEncontrado</event-sheet>
-        <event-sheet active="1" order="14">EventoSimEncontrado</event-sheet>
+        <layout order="3">TelaInscrever</layout>
+        <layout order="4">TelaInscreverSenha</layout>
+        <layout order="5">TelaGeneroUsuario</layout>
+        <layout order="6">TelaInscreverTurma</layout>
+        <layout order="10">TelaInicial</layout>
+        <layout order="12">TelaSimEncontrado</layout>
+        <layout order="13">TelaErro</layout>
+        <layout order="14">TelaNaoEncontrado</layout>
+        <layout order="16">TelaAbertura</layout>
+        <layout order="18">TelaAcerto</layout>
+        <layout order="19">TelaGeneroPersonagem</layout>
+        <event-sheet order="1">Global</event-sheet>
+        <event-sheet order="2">EventoSimEncontrado</event-sheet>
+        <event-sheet order="7">EventoInscreverTurma</event-sheet>
+        <event-sheet order="8">EventoInscreverSenha</event-sheet>
+        <event-sheet order="9">EventoVerificao</event-sheet>
+        <event-sheet order="11">EventoInicial</event-sheet>
+        <event-sheet order="15">EventoErro</event-sheet>
+        <event-sheet order="17">EventoAcerto</event-sheet>
+        <event-sheet active="1" order="20">EventoGeneroPersonagem</event-sheet>
+        <event-sheet order="21">EventoGeneroUsuario</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -67,5 +74,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoSelecionar/" />
         <folder expanded="1" path="animation-folder/Senha/" />
         <folder expanded="1" path="animation-folder/Selecao/" />
+        <folder expanded="1" path="animation-folder/BotaoInscrever/" />
+        <folder expanded="1" path="animation-folder/BotaoMenino/" />
+        <folder expanded="1" path="animation-folder/BotaoMenina/" />
+        <folder expanded="1" path="animation-folder/ProfessoraFelizSenha/" />
+        <folder expanded="1" path="animation-folder/CadeadoAberto/" />
+        <folder expanded="1" path="animation-folder/CadeadoFechado/" />
+        <folder expanded="1" path="animation-folder/SelecaoTurma/" />
+        <folder expanded="1" path="animation-folder/BotaoSom/" />
+        <folder expanded="1" path="animation-folder/BotaoPause/" />
+        <folder expanded="1" path="animation-folder/BotaoJogarMenor/" />
+        <folder expanded="1" path="animation-folder/PorfessoraTristeERRO/" />
+        <folder expanded="1" path="animation-folder/ProfessoraFelizACERTO/" />
     </folders-expanded>
 </c2uistate>

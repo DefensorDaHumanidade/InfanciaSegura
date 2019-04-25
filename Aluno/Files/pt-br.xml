@@ -2,10 +2,17 @@
 <textos>
     <TextoCarregandoCARREGAMENTO>Carregando...</TextoCarregandoCARREGAMENTO>
     <TextoDialogoAbertura>Olá, ao clicar no botão verde JOGAR, você concorda com os nossos: </TextoDialogoAbertura>
-    <TextoDialogoAberturaTermos>                                                                                                           termos de uso</TextoDialogoAberturaTermos>
+    <TextoDialogoAberturaTermos>                                                                                                                                   termos de uso</TextoDialogoAberturaTermos>
     <TextoDialogoAfirmacaoVERIFICACAO>Antes da brincadeira começar eu preciso saber de uma coisinha. Para que eu possa perguntar uma coisinha, clique no botão azul.</TextoDialogoAfirmacaoVERIFICACAO>
     <TextoDialogoPerguntaVERIFICACAO>Muito bem, o que eu queria perguntar é: Você já brincou com esse jogo antes? Clique no botão verde SIM caso você já tenha jogado esse jogo antes, ou clique no botão vermelho NÃO se essa é a sua primeira vez.</TextoDialogoPerguntaVERIFICACAO>
     <TextoDialogoBuscaINICIAL>Nossa, que legal. Escreva seu nome no quadrado em branco e clique no botão verde PESQUISAR para que eu possa encontrar o seu personagem do jogo no meu computador. Ou clique no botão azul para voltar para a pergunta anterior.</TextoDialogoBuscaINICIAL>
     <TextoDialogoTristeNAOENCONTRADO>Esse nome não está registrado no meu sistema. Se você quiser, você pode tentar outro nome, ou pode voltar para a minha pergunta anterior clicanco no botão azul.</TextoDialogoTristeNAOENCONTRADO>
     <TextoDialogoTristeSIMENCONTRADO>Encontrei. Agora basta você clicar no desenho que você escolheu para ser a nossa senha secreta e depois clicar em selecionar.</TextoDialogoTristeSIMENCONTRADO>
+    <TextoDialogoInscricaoINSCREVER>Tudo bem, para poder brincar nesse jogo tudo que você precisa fazer é escrever seu nome nesse quadrado em branco e depois clicar em INSCREVER. Do contrário, você pode voltar para a pergunta anterior clicando no botão azul.</TextoDialogoInscricaoINSCREVER>
+    <TextoDialogoGeneroGENEROUSUARIO>Muito bem. Agora para registrar você aqui no meu computador, eu preciso saber se esse nome é um nome de menina ou menino? Clique no botão menino caso você seja um menino, ou clique no botão menina, caso você seja uma menina.</TextoDialogoGeneroGENEROUSUARIO>
+    <TextoDialogoSenhaINSCREVERSENHA>Legal, agora eu só preciso registrar uma senha só para você. Escolha e clique em um dos desenhos para ser a sua senha secreta, depois clique no botão verde SELECIONAR.</TextoDialogoSenhaINSCREVERSENHA>
+    <TextoDialogoSenhaINSCREVERTURMA>Tudo certo, agora você só precisa selecionar uma turma e clicar no botão verde JOGAR para começar a se divertir. Lembre-se que as turmas com o cadeado vermelho precisam de uma senha.</TextoDialogoSenhaINSCREVERTURMA>
+    <TextoDialogoERRO>Hmmm, a senha que você escolheu não é igual a senha que eu tenho registrada aqui no meu computador. Caso você não se lembre da sua senha, você pode conversar com sua professora. Agora, aguarde um pouquinho que você será redirecionando você para a Tela Inicial.</TextoDialogoERRO>
+    <TextoDialogoACERTO>Meus parabéns, você cumprir todos os requisitos com perfeição. Agora, aguarde um momentinho enquanto lhe redirecionamos para o seu personagem no jogo.</TextoDialogoACERTO>
+    <TextoDialogoGeneroGENEROPERSONAGEM>Você gostaria que seu personagem no jogo fosse uma menina ou um menino?</TextoDialogoGeneroGENEROPERSONAGEM>
 </textos>

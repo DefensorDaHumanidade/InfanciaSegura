@@ -223,11 +223,45 @@
                         <action disabled="1" id="-2" name="Go to layout" sid="247225383189411" type="System">
                             <param id="0" name="Layout">TelaPergunta</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="483578681985088" type="System">
-                            <param id="0" name="Group name">&quot;Botao Selecionar SIMENCONTRADO&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="422529526283519">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="513801447665999" type="System">
+                                    <param id="0" name="First value">SenhaBaixada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">SenhaSelecionada</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="461893281564264" type="System">
+                                    <param id="0" name="Layout">TelaAcerto</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="483578681985088" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Selecionar SIMENCONTRADO&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="778235626957504">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="310337552484076" type="System">
+                                    <param id="0" name="First value">SenhaBaixada</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">SenhaSelecionada</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="328186575185917" type="System">
+                                    <param id="0" name="Layout">TelaErro</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="841198071555172" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Selecionar SIMENCONTRADO&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
                 <event-block sid="807449002506012">
@@ -302,9 +336,14 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="2" name="Set at X" sid="983735345312681" type="Array">
+                                <action disabled="1" id="2" name="Set at X" sid="983735345312681" type="Array">
                                     <param id="0" name="X">i</param>
                                     <param id="1" name="Value">aleatorio</param>
+                                </action>
+                                <action id="5" name="Push" sid="722540512385810" type="Array">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">aleatorio</param>
+                                    <param id="2" name="Axis">0</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="417739577741609" type="System">
                                     <param id="0" name="Variable">i</param>
@@ -346,9 +385,14 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="2" name="Set at X" sid="455797795971543" type="Array">
+                                <action disabled="1" id="2" name="Set at X" sid="455797795971543" type="Array">
                                     <param id="0" name="X">i</param>
                                     <param id="1" name="Value">aleatorio</param>
+                                </action>
+                                <action id="5" name="Push" sid="737404676001283" type="Array">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">aleatorio</param>
+                                    <param id="2" name="Axis">0</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="828073631881560" type="System">
                                     <param id="0" name="Variable">i</param>
@@ -390,9 +434,14 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="2" name="Set at X" sid="148186634508716" type="Array">
+                                <action disabled="1" id="2" name="Set at X" sid="148186634508716" type="Array">
                                     <param id="0" name="X">i</param>
                                     <param id="1" name="Value">aleatorio</param>
+                                </action>
+                                <action id="5" name="Push" sid="869714482611568" type="Array">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">aleatorio</param>
+                                    <param id="2" name="Axis">0</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="387010492352385" type="System">
                                     <param id="0" name="Variable">i</param>
@@ -431,7 +480,6 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <comment>Colocar o frame da crianca</comment>
                         <event-block sid="975777566485769">
                             <conditions>
                                 <condition id="3" name="Compare frame" sid="497190324199259" type="Senha">
@@ -441,7 +489,7 @@
                             </conditions>
                             <actions>
                                 <action id="5" name="Set frame" sid="693237595043402" type="Senha">
-                                    <param id="0" name="Frame number">0</param>
+                                    <param id="0" name="Frame number">SenhaBaixada</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="742007769070158" type="System">
                                     <param id="0" name="Group name">&quot;Carregar Senha da Crianca&quot;</param>
