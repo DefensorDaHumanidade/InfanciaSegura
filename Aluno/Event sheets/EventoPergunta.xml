@@ -151,6 +151,12 @@
                         <action id="5" name="Set frame" sid="439756291007004" type="BotaoNao">
                             <param id="0" name="Frame number">1</param>
                         </action>
+                        <action id="0" name="Play" sid="451998790192992" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="230330304404761" type="System">
                             <param id="0" name="Variable">Botao</param>
                             <param id="1" name="Value">&quot;Nao&quot;</param>
@@ -180,6 +186,12 @@
                         <action disabled="1" id="22" name="Set paused" sid="232982809359365" type="Audio">
                             <param id="0" name="Tag">&quot;Ola&quot;</param>
                             <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="175241292789011" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="943975313753445" type="System">
                             <param id="0" name="Layout">TelaInscrever</param>
@@ -225,6 +237,12 @@
                         <action id="5" name="Set frame" sid="295527322409055" type="BotaoSim">
                             <param id="0" name="Frame number">1</param>
                         </action>
+                        <action id="0" name="Play" sid="119731042580948" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="258878581163225" type="System">
                             <param id="0" name="Variable">Botao</param>
                             <param id="1" name="Value">&quot;Sim&quot;</param>
@@ -254,6 +272,12 @@
                         <action disabled="1" id="22" name="Set paused" sid="920456070871676" type="Audio">
                             <param id="0" name="Tag">&quot;Ola&quot;</param>
                             <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="141704806656707" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="902648856206714" type="System">
                             <param id="0" name="Layout">TelaInicial</param>

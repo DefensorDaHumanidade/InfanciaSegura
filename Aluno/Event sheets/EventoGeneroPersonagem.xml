@@ -122,6 +122,12 @@
                         <action id="5" name="Set frame" sid="721831487124811" type="BotaoMenino">
                             <param id="0" name="Frame number">1</param>
                         </action>
+                        <action id="0" name="Play" sid="586978960287687" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="230462714511001" type="System">
                             <param id="0" name="Variable">Botao</param>
                             <param id="1" name="Value">&quot;Menino&quot;</param>
@@ -155,6 +161,12 @@
                         <action disabled="1" id="22" name="Set paused" sid="202685464584864" type="Audio">
                             <param id="0" name="Tag">&quot;Ola&quot;</param>
                             <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="467045628476881" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="493149712927398" type="System">
                             <param id="0" name="Layout">TelaInscreverSenha</param>
@@ -200,6 +212,12 @@
                         <action id="5" name="Set frame" sid="570646696987470" type="BotaoMenina">
                             <param id="0" name="Frame number">1</param>
                         </action>
+                        <action id="0" name="Play" sid="684564729193838" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="751469686696049" type="System">
                             <param id="0" name="Variable">Botao</param>
                             <param id="1" name="Value">&quot;Menina&quot;</param>
@@ -233,6 +251,12 @@
                         <action disabled="1" id="22" name="Set paused" sid="210800169471358" type="Audio">
                             <param id="0" name="Tag">&quot;Ola&quot;</param>
                             <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="554614346254374" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="433979760029639" type="System">
                             <param id="0" name="Layout">TelaInscreverSenha</param>

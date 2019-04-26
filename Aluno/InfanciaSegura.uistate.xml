@@ -15,23 +15,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="4">TelaInscreverSenha</layout>
         <layout order="5">TelaGeneroUsuario</layout>
         <layout order="6">TelaInscreverTurma</layout>
-        <layout order="10">TelaInicial</layout>
-        <layout order="12">TelaSimEncontrado</layout>
-        <layout order="13">TelaErro</layout>
-        <layout order="14">TelaNaoEncontrado</layout>
-        <layout order="16">TelaAbertura</layout>
-        <layout order="18">TelaAcerto</layout>
-        <layout order="19">TelaGeneroPersonagem</layout>
+        <layout order="8">TelaInicial</layout>
+        <layout order="9">TelaSimEncontrado</layout>
+        <layout order="10">TelaErro</layout>
+        <layout order="11">TelaNaoEncontrado</layout>
+        <layout order="12">TelaAbertura</layout>
+        <layout order="13">TelaAcerto</layout>
+        <layout order="14">TelaGeneroPersonagem</layout>
         <event-sheet order="1">Global</event-sheet>
         <event-sheet order="2">EventoSimEncontrado</event-sheet>
-        <event-sheet order="7">EventoInscreverTurma</event-sheet>
-        <event-sheet order="8">EventoInscreverSenha</event-sheet>
-        <event-sheet order="9">EventoVerificao</event-sheet>
-        <event-sheet order="11">EventoInicial</event-sheet>
-        <event-sheet order="15">EventoErro</event-sheet>
-        <event-sheet order="17">EventoAcerto</event-sheet>
-        <event-sheet active="1" order="20">EventoGeneroPersonagem</event-sheet>
-        <event-sheet order="21">EventoGeneroUsuario</event-sheet>
+        <event-sheet active="1" order="7">EventoVerificao</event-sheet>
+        <event-sheet order="15">EventoAbertura</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

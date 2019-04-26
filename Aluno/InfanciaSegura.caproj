@@ -864,6 +864,8 @@
     </global-instances>
     <sounds-folder>
         <file name="ProfessorAbertura.ogg" />
+        <file name="ApertarBotao.ogg" />
+        <file name="SoltarBotao.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
