@@ -802,6 +802,110 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="TextoDialogoInicialAMIGO" sid="682819442739397">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="353904285503829">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="MeninoApresentacao" sid="964875156495786">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="8" loop="1" name="Girar" pingpong="0" repeatcount="1" repeatto="0" sid="969605481481816" speed="0">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="1.00437" original-source="C:\Users\Alexandre\Desktop\Imagens\Menino.png">
+                        <collision-poly>
+                            <point x="0.0700955" y="0.0348739" />
+                            <point x="1" y="0.0348739" />
+                            <point x="1" y="1" />
+                            <point x="0.117115" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.451128" hotspotY="0.991525" />
+                    <frame duration="1" hotspotX="0.491803" hotspotY="0.987179" />
+                    <frame duration="1" hotspotX="0.458015" hotspotY="0.973799" />
+                    <frame duration="1" hotspotX="0.48" hotspotY="0.991228" />
+                    <frame duration="1" hotspotX="0.454545" hotspotY="0.995763" />
+                    <frame duration="1" hotspotX="0.413223" hotspotY="0.991701" />
+                    <frame duration="1" hotspotX="0.451128" hotspotY="0.9875" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MeninaApresentacao" sid="523626928483084">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="8" loop="1" name="Girar" pingpong="0" repeatcount="1" repeatto="0" sid="203880237428404" speed="0">
+                    <frame duration="1" hotspotX="0.474453" hotspotY="0.991525" />
+                    <frame duration="1" hotspotX="0.551724" hotspotY="0.98374" />
+                    <frame duration="1" hotspotX="0.483871" hotspotY="0.991667" />
+                    <frame duration="1" hotspotX="0.544218" hotspotY="0.991736" />
+                    <frame duration="1" hotspotX="0.481481" hotspotY="0.983122" />
+                    <frame duration="1" hotspotX="0.4" hotspotY="0.979839" />
+                    <frame duration="1" hotspotX="0.390625" hotspotY="0.9875" />
+                    <frame duration="1" hotspotX="0.451389" hotspotY="0.988" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FundoMenino" sid="378883196855283">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481078633685639" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FundoMenina" sid="792383232292637">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="402381149599463" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProfessorAfirmacaoAMIGO" sid="169179139121633">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="376025836595917">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="715116926440074">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="949603944723074" speed="5">
+                    <frame duration="1" hotspotX="0.500907" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\professora 2.png">
+                        <collision-poly>
+                            <point x="0.136116" y="0.104167" />
+                            <point x="0.499093" y="0.0444444" />
+                            <point x="0.69147" y="0.236111" />
+                            <point x="0.845735" y="0.5" />
+                            <point x="0.782214" y="0.833333" />
+                            <point x="0.499093" y="0.963889" />
+                            <point x="0.0653358" y="0.95" />
+                            <point x="0.0598911" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProfessoraComputador" sid="800342548850635">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="544195244698655">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="461798277830595">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314034604981682" speed="5">
+                    <frame duration="1" hotspotX="0.491935" hotspotY="0.530882" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -819,6 +923,7 @@
         <layout>TelaGeneroPersonagem.xml</layout>
         <layout>TelaErro.xml</layout>
         <layout>TelaAcerto.xml</layout>
+        <layout>TelaAmigo.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
@@ -836,6 +941,7 @@
         <event-sheet>EventoErro.xml</event-sheet>
         <event-sheet>EventoAcerto.xml</event-sheet>
         <event-sheet>EventoGeneroPersonagem.xml</event-sheet>
+        <event-sheet>EventoAmigo.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />

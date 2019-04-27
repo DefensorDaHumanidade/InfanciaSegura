@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoAmigo</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="738830050827952">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="732575823239050" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="253447457289398" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarTamanho&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="106222574644316" type="System">
+                    <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="-12" name="Set group active" sid="738182324980973" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoAcerto- ACERTO&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="4" name="Preload" sid="824375450973419" type="Audio">
+                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+                <action disabled="1" id="7" name="Set CSS style" sid="669023067349437" type="CampoNomeINICIAL">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;gray&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="552287027379887" type="CampoNomeINICIAL">
+                    <param id="0" name="Text">&quot;Nome não encontrado...&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="893058493206712" title="Máquina de Escrever -DialogoInicio- AMIGO">
+            <sub-events>
+                <event-block sid="432231723832999">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="312738312128076" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="924879459075418" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="471534262152831" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="899126335773631" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="808572403071831" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="816004338730209">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="235514402381222" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoInicialAMIGO/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="531608085674491" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="542017062700438" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoInicialAMIGO/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="641631135334185" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="797474750017632">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="763417305731164" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoInicialAMIGO/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="241766793942449">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="632782622546509" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="669566437227525" type="BotaoProximo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="893237555405724" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Proximo AMIGO&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="838863667844332" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoInicio- AMIGO&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="732734530225223" title="Botao Proximo AMIGO">
+            <sub-events>
+                <event-block sid="349563781445674">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="617406922472385" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="889257674210399" type="Touch">
+                            <param id="0" name="Object">BotaoProximo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="638714505464889" type="BotaoProximo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="938218616594431" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="505321411719887" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Proximo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="274125270721014">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="162858932523114" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="607198402061229" type="Touch">
+                            <param id="0" name="Object">BotaoProximo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="476989093204478" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Proximo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="203595372548135" type="ProfessoraComputador">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="708225491095420" type="ProfessorAfirmacaoAMIGO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="442476596153538" type="ProfessoraComputador">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="547607738546375" type="ProfessoraFelizACERTO">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="268182573008505" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="378210572746287" type="BotaoProximo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="408632559660486" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="972201221695848" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="446674611534597" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMeio- AMIGO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="839379031617578" type="BotaoProximo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="115761638106719" type="System">
+                            <param id="0" name="Seconds">1.7</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="579304761822704" type="ProfessoraComputador">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="582931353640030" type="ProfessoraComputador">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="621576782334530" type="ProfessoraComputador" />
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="840476206152773">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="686860582539090" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="548141226820010" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Proximo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="821185208347003" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="175734089605795" type="BotaoProximo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="133462771629620" title="Máquina de Escrever -DialogoMeio- AMIGO">
+            <sub-events>
+                <event-block sid="460859375635842">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="441926489108649" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="478306600637940" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="765157068466866" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="151204918426043" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="532412677184373" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="701413749544337">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="162160760549250" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMeioAMIGO/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="270647207949244" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="131759158751926" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoMeioAMIGO/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="385968166432830" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="322250520250199">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="843591817922561" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMeioAMIGO/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="856831787798994">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="619530232929102" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="321443533403107" type="BotaoProximo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="533386869209707" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Proximo AMIGO2&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="978666337485861" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMeio- AMIGO&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="713781066018570" title="Botao Proximo AMIGO2">
+            <sub-events>
+                <event-block sid="778505882870466">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="763735519028533" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="171588987751417" type="Touch">
+                            <param id="0" name="Object">BotaoProximo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="373430326559519" type="BotaoProximo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="686671502499736" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="443480004151473" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Proximo2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891983836432459">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="635697457703972" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="127402415148390" type="Touch">
+                            <param id="0" name="Object">BotaoProximo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="612064904775467" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Proximo2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="114052334103734" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="785063689930535" type="BotaoProximo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="544375632423163" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="610789540260958" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="621732913051593" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFinal- AMIGO&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="391488355607636">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="397968666725064" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="663829428111186" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Proximo2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="459823340325158" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="985512008126981" type="BotaoProximo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="230917476617853" title="Máquina de Escrever -DialogoFinal- AMIGO">
+            <sub-events>
+                <event-block sid="968474025797799">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="136864976189991" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="847444562132237" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="438119532469257" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="411655055031844" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="195603821785666" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="620008628637820">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="595877480435006" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoFinalAMIGO/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="841154008153942" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="841333954208899" type="TextoDialogoInicialAMIGO">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoFinalAMIGO/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="532864202861754" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="708980119641221">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="639305726847326" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" disabled="1" id="0" name="Set active" sid="790799081122244" type="ProfessorAfirmacaoAMIGO">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Anchor" id="0" name="Set enabled" sid="783556702743117" type="ProfessorAfirmacaoAMIGO">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="316776081408714" type="ProfessorAfirmacaoAMIGO">
+                                    <param id="0" name="Y">Self.Y-time/3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="689122236604191">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="955889567639294" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="185717180877857" type="ProfessorAfirmacaoAMIGO">
+                                    <param id="0" name="Y">Self.Y+time/3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="392755369585168">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="763159768018175" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoFinalAMIGO/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="368833604341151" type="ProfessorAfirmacaoAMIGO">
+                            <param id="0" name="Y">Self.Y+time/10</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>CRIAR UMA TELA SÓ PARA APRESENTAR OS AMIGOS VIRTUAIS E CRIAR UMA JANELA DE DIALOGO DIVIDIDA AO MEIO PARA NAO TER QUE USAR CORES DIFERENTES PARA CADA PERSONAGEM</comment>
+                        <event-block sid="112774932377017">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="251596722167211" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-15" name="Set visible" sid="564152293235899" type="BotaoProximo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="-12" name="Set group active" sid="131441248266787" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Proximo AMIGO2&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="-12" name="Set group active" sid="938373099573010" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFinal- AMIGO&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

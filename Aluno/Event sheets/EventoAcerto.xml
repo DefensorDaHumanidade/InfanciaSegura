@@ -79,6 +79,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>NESSE CASO ESTAMOS INDO PARA TELA DE CRIACAO DO PERSONAGEM, MAS PRECISA SER FEITO UMA VERIFICACAO COM O BANCO DE DADOS E ENVIAR O JOGADOR PARA A EXATA TELA ONDE ELE PAROU</comment>
                 <event-block sid="556142878901785">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="511041661716761" type="System">
@@ -88,11 +89,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="708136795485749" type="System">
+                        <action disabled="1" id="-16" name="Wait" sid="708136795485749" type="System">
                             <param id="0" name="Seconds">10.0</param>
                         </action>
-                        <action disabled="1" id="-2" name="Go to layout" sid="544207135348411" type="System">
-                            <param id="0" name="Layout">TelaAbertura</param>
+                        <action id="-2" name="Go to layout" sid="544207135348411" type="System">
+                            <param id="0" name="Layout">TelaGeneroPersonagem</param>
                         </action>
                         <action id="-12" name="Set group active" sid="790976710673762" type="System">
                             <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoAcerto- ACERTO&quot;</param>

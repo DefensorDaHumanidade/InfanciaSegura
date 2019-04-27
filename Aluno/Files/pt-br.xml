@@ -15,4 +15,7 @@
     <TextoDialogoERRO>Hmmm, a senha que você escolheu não é igual a senha que eu tenho registrada aqui no meu computador. Caso você não se lembre da sua senha, você pode conversar com sua professora. Agora, aguarde um pouquinho que você será redirecionando você para a Tela Inicial.</TextoDialogoERRO>
     <TextoDialogoACERTO>Meus parabéns, você cumprir todos os requisitos com perfeição. Agora, aguarde um momentinho enquanto lhe redirecionamos para o seu personagem no jogo.</TextoDialogoACERTO>
     <TextoDialogoGeneroGENEROPERSONAGEM>Você gostaria que seu personagem no jogo fosse uma menina ou um menino?</TextoDialogoGeneroGENEROPERSONAGEM>
+    <TextoDialogoInicialAMIGO>Que legal, agora que você já tem um personagem no jogo, uma criança, sempre que possível deve estar acompanhada, então você vai precisar de um amiguinho virtual para te acompanhar nessa aventura.</TextoDialogoInicialAMIGO>
+    <TextoDialogoMeioAMIGO>Eu adoraria ser a sua amiguinha virtual e lhe mostrar as coisas fantásticas que existem nesse jogo, porém eu preciso guardar meu computador e ficar aqui para ajudar novas crianças.</TextoDialogoMeioAMIGO>
+    <TextoDialogoFinalAMIGO>A propósito, eu tenho que ir agora, existem outras crianças esperando por mim, para eu ajuda-las a criar o personagem delas. Deixarei você com o Ugo e a Ana, escolha apenas um deles para ser seu amiguinho ou sua amiguinha.</TextoDialogoFinalAMIGO>
 </textos>

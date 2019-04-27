@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="TelaCorrente" sid="326395265049394" static="0" type="text"></variable>
         <variable constant="0" name="Pause" sid="783266935032043" static="0" type="text">Rodando</variable>
         <variable constant="0" name="Som" sid="319975165910119" static="0" type="text">Ligado</variable>
         <variable constant="0" name="SenhaBaixada" sid="408915389615864" static="0" type="number">0</variable>
@@ -85,6 +86,9 @@
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="240181567188512" type="TextoDialogoGeneroGENEROPERSONAGEM">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="618187736718729" type="TextoDialogoInicialAMIGO">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="575206175409421" type="System">
@@ -624,5 +628,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="896705045396711" title="Atualizar TelaCorrente" />
     </events>
 </c2eventsheet>

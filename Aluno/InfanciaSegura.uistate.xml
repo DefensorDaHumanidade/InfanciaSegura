@@ -22,10 +22,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="12">TelaAbertura</layout>
         <layout order="13">TelaAcerto</layout>
         <layout order="14">TelaGeneroPersonagem</layout>
+        <layout order="17">TelaAmigo</layout>
+        <layout order="20">TelaVerificacao</layout>
+        <layout order="21">TelaPergunta</layout>
         <event-sheet order="1">Global</event-sheet>
         <event-sheet order="2">EventoSimEncontrado</event-sheet>
-        <event-sheet active="1" order="7">EventoVerificao</event-sheet>
+        <event-sheet order="7">EventoVerificao</event-sheet>
         <event-sheet order="15">EventoAbertura</event-sheet>
+        <event-sheet order="16">EventoAcerto</event-sheet>
+        <event-sheet active="1" order="18">EventoAmigo</event-sheet>
+        <event-sheet order="19">EventoGeneroPersonagem</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -80,5 +86,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoJogarMenor/" />
         <folder expanded="1" path="animation-folder/PorfessoraTristeERRO/" />
         <folder expanded="1" path="animation-folder/ProfessoraFelizACERTO/" />
+        <folder expanded="1" path="animation-folder/MeninoApresentacao/" />
+        <folder expanded="1" path="animation-folder/MeninaApresentacao/" />
+        <folder expanded="1" path="animation-folder/FundoMenino/" />
+        <folder expanded="1" path="animation-folder/FundoMenina/" />
+        <folder expanded="1" path="animation-folder/ProfessorAfirmacaoAMIGO/" />
+        <folder expanded="1" path="animation-folder/ProfessoraComputador/" />
     </folders-expanded>
 </c2uistate>
