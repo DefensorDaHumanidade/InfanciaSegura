@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="Amigo" sid="838606600562110" static="0" type="text"></variable>
+        <variable constant="0" name="Atualizar" sid="967928737155972" static="0" type="text"></variable>
         <variable constant="0" name="TelaCorrente" sid="326395265049394" static="0" type="text"></variable>
         <variable constant="0" name="Pause" sid="783266935032043" static="0" type="text">Rodando</variable>
         <variable constant="0" name="Som" sid="319975165910119" static="0" type="text">Ligado</variable>
@@ -20,6 +22,66 @@
         <variable constant="0" name="SenhaUsuario" sid="267526514398636" static="0" type="text"></variable>
         <variable constant="0" name="IdiomaTexto" sid="371010972831892" static="0" type="text">pt-br</variable>
         <variable constant="0" name="TamanhoTexto" sid="628676800568916" static="0" type="number">38</variable>
+        <comment>Função para atualizar o nome do layout onde a criança parou.</comment>
+        <event-block sid="342586852234663">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="677241554057202" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Set value" sid="851162459879996" type="System">
+                    <param id="0" name="Variable">NomeUsuario</param>
+                    <param id="1" name="Value">&quot;Ana&quot;</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="209872395477222" type="System">
+                    <param id="0" name="Variable">SenhaUsuario</param>
+                    <param id="1" name="Value">&quot;1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="457974394381574" type="System">
+                    <param id="0" name="Variable">Atualizar</param>
+                    <param id="1" name="Value">&quot;Atualize&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="855129843733742">
+            <conditions>
+                <condition id="-18" name="On created" sid="595756737497243" type="Amigo" />
+                <condition id="-14" name="Compare variable" sid="504015547731184" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Masculino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="871492254051378" type="Amigo" />
+                <action id="5" name="Set frame" sid="898430336112504" type="Amigo">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="2" name="Stop" sid="369367732159310" type="AmigoPersonagem" />
+                <action id="5" name="Set frame" sid="452658111754034" type="AmigoPersonagem">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="862255994780166">
+            <conditions>
+                <condition id="-18" name="On created" sid="262258121657091" type="Amigo" />
+                <condition id="-14" name="Compare variable" sid="621821318229940" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Feminino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="601101681725777" type="Amigo" />
+                <action id="5" name="Set frame" sid="506999792561549" type="Amigo">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="2" name="Stop" sid="603911305454725" type="AmigoPersonagem" />
+                <action id="5" name="Set frame" sid="608745619625510" type="AmigoPersonagem">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="747370336109804" title="AtualizarTextos">
             <sub-events>
                 <comment>Grupo onde são atualizados os tamanhos dos textos.</comment>
@@ -89,6 +151,15 @@
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="3" name="Set font size" sid="618187736718729" type="TextoDialogoInicialAMIGO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="879514641344897" type="TextoDialogoMeninaESCOLHAAMIGO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="939374496634509" type="TextoDialogoMeninoESCOLHAAMIGO">
+                                    <param id="0" name="Size (pt)">TamanhoTexto</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="282098563405610" type="TextoDialogoApresentacao">
                                     <param id="0" name="Size (pt)">TamanhoTexto</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="575206175409421" type="System">
@@ -628,6 +699,60 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="896705045396711" title="Atualizar TelaCorrente" />
+        <event-group description="" sid="896705045396711" title="Atualizar TelaCorrente">
+            <sub-events>
+                <event-block sid="287369810115681">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="690368744364126" type="System">
+                            <param id="0" name="Variable">Atualizar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Atualize&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="951097796280738" type="System">
+                            <param id="0" name="Variable">NomeUsuario</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="619556907954650" type="System">
+                            <param id="0" name="Variable">TelaCorrente</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                        <action id="2" name="Post to URL" sid="256866099349048" type="AJAX">
+                            <param id="0" name="Tag">&quot;Atualizar&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-AtualizarTela.php&quot;</param>
+                            <param id="2" name="Data">&quot;nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;tela=&quot;&amp;TelaCorrente</param>
+                            <param id="3" name="Method">&quot;POST&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="955437446310025" type="System">
+                            <param id="0" name="Variable">Atualizar</param>
+                            <param id="1" name="Value">&quot;Atualizando&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="381079413624678">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="139919531661121" type="AJAX">
+                            <param id="0" name="Tag">&quot;Atualizar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="923978621841088" type="System">
+                            <param id="0" name="Variable">Atualizar</param>
+                            <param id="1" name="Value">&quot;Atualizado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388869271464966">
+                    <conditions>
+                        <condition id="1" name="On error" sid="787331179297118" type="AJAX">
+                            <param id="0" name="Tag">&quot;Atualizar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

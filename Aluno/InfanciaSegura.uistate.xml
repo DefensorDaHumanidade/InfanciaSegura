@@ -24,14 +24,24 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="14">TelaGeneroPersonagem</layout>
         <layout order="17">TelaAmigo</layout>
         <layout order="20">TelaVerificacao</layout>
-        <layout order="21">TelaPergunta</layout>
+        <layout order="23">TelaEscolhaAmigo</layout>
+        <layout order="26">TelaPergunta</layout>
+        <layout active="1" order="30">Mundo</layout>
         <event-sheet order="1">Global</event-sheet>
         <event-sheet order="2">EventoSimEncontrado</event-sheet>
         <event-sheet order="7">EventoVerificao</event-sheet>
         <event-sheet order="15">EventoAbertura</event-sheet>
         <event-sheet order="16">EventoAcerto</event-sheet>
-        <event-sheet active="1" order="18">EventoAmigo</event-sheet>
+        <event-sheet order="18">EventoAmigo</event-sheet>
         <event-sheet order="19">EventoGeneroPersonagem</event-sheet>
+        <event-sheet order="21">EventoInscreverTurma</event-sheet>
+        <event-sheet order="22">EventoCarregamento</event-sheet>
+        <event-sheet order="24">EventoEscolhaAmigo</event-sheet>
+        <event-sheet order="25">EventoNaoEncontrado</event-sheet>
+        <event-sheet order="27">EventoPergunta</event-sheet>
+        <event-sheet order="28">EventoGeneroUsuario</event-sheet>
+        <event-sheet order="29">EventoEntrarMundo</event-sheet>
+        <event-sheet order="31">EventoMundo</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -92,5 +102,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/FundoMenina/" />
         <folder expanded="1" path="animation-folder/ProfessorAfirmacaoAMIGO/" />
         <folder expanded="1" path="animation-folder/ProfessoraComputador/" />
+        <folder expanded="1" path="animation-folder/CaixaDialogoMenino/" />
+        <folder expanded="1" path="animation-folder/CaixaDialogoMenina/" />
+        <folder expanded="1" path="animation-folder/AmigaEscolha/" />
+        <folder expanded="1" path="animation-folder/AmigoEscolha/" />
+        <folder expanded="1" path="animation-folder/Amigo/" />
+        <folder expanded="1" path="animation-folder/FundoAmigo/" />
+        <folder expanded="1" path="animation-folder/AmigoPersonagem/" />
+        <folder expanded="1" path="animation-folder/Menino/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
     </folders-expanded>
 </c2uistate>

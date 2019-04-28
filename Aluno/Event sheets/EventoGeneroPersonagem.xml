@@ -331,6 +331,12 @@
                         <action id="-1" name="Set X" sid="242545647998247" type="FundoMenino">
                             <param id="0" name="X">1580-WindowWidth/10</param>
                         </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="887482169193973" type="BotaoMenina">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="970159119914462" type="BotaoMenino">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="784206081383212">
@@ -353,6 +359,12 @@
                                 </action>
                                 <action id="-1" name="Set X" sid="301566414259333" type="MeninaApresentacao">
                                     <param id="0" name="X">1580-WindowWidth/10</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="101795857449519" type="BotaoMenina">
+                                    <param id="0" name="Y">MeninaApresentacao.Y+10+Self.Height/2</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="193997077857084" type="BotaoMenino">
+                                    <param id="0" name="Y">MeninoApresentacao.Y+10+Self.Height/2</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="363194499798188" type="System">
                                     <param id="0" name="Group name">&quot;Dispor Botoes de GeneroPersonagem&quot;</param>
@@ -380,6 +392,12 @@
                                 </action>
                                 <action id="-1" name="Set X" sid="724523230827338" type="MeninoApresentacao">
                                     <param id="0" name="X">1580-WindowWidth/10</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="308235528297914" type="BotaoMenina">
+                                    <param id="0" name="Y">MeninaApresentacao.Y+10+Self.Height/2</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="207622056556669" type="BotaoMenino">
+                                    <param id="0" name="Y">MeninoApresentacao.Y+10+Self.Height/2</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="604492588950027" type="System">
                                     <param id="0" name="Group name">&quot;Dispor Botoes de GeneroPersonagem&quot;</param>

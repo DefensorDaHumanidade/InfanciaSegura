@@ -24,6 +24,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
     </used-behaviors>
@@ -118,6 +119,11 @@
         </object-type>
         <object-type name="Branco" sid="668600891172529">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="554875462823249">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="377542370336937" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
@@ -631,6 +637,11 @@
         </object-type>
         <object-type name="BotaoMenino" sid="146486782421907">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="486595736750413">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653625849187409" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoMeninoSolto.png" />
@@ -640,6 +651,11 @@
         </object-type>
         <object-type name="BotaoMenina" sid="339810816018843">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="875785159324921">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215524486080738" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoMeninaSolto.png" />
@@ -906,6 +922,188 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TextoDialogoMeninoESCOLHAAMIGO" sid="171513829827161">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="998830537907140">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="CaixaDialogoMenino" sid="727325319245170">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932263540130790" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\caixaDialogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CaixaDialogoMenina" sid="107093841702304">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348942727943004" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\caixaDialogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmigaEscolha" sid="982555383920833">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="639223085820578">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="305625430167084">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359219298504572" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501149" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmigoEscolha" sid="896182262295126">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="731489485759781">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="907452589925587">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907025224699294" speed="5">
+                    <frame duration="1" hotspotX="0.501319" hotspotY="0.501048" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoMeninaESCOLHAAMIGO" sid="877623486315120">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="654633296969494">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Amigo" sid="951470113345243">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="644405421491906">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284784316834085" speed="5">
+                    <frame duration="1" hotspotX="0.501319" hotspotY="0.501048" />
+                    <frame duration="1" hotspotX="0.428125" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoApresentacao" sid="198543932712861">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="553690753179090">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="FundoAmigo" sid="848461572509069">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918773751574109" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmigoPersonagem" sid="995938971951253">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="627954337919384" speed="5">
+                    <frame duration="1" hotspotX="0.521368" hotspotY="0.545024" />
+                    <frame duration="1" hotspotX="0.474074" hotspotY="0.474178" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Menino" sid="748084743379583">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Sentido" sid="327628786929276" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="107527817784463">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Sul" pingpong="0" repeatcount="1" repeatto="0" sid="104099734095566" speed="10">
+                    <frame duration="1" hotspotX="0.485075" hotspotY="0.414938" />
+                    <frame duration="1" hotspotX="0.485075" hotspotY="0.4" />
+                    <frame duration="1" hotspotX="0.485075" hotspotY="0.414938" />
+                    <frame duration="1" hotspotX="0.485075" hotspotY="0.4" />
+                </animation>
+                <animation framecount="4" loop="1" name="Norte" pingpong="0" repeatcount="1" repeatto="0" sid="724143765746752" speed="10">
+                    <frame duration="1" hotspotX="0.496183" hotspotY="0.41841" />
+                    <frame duration="1" hotspotX="0.488722" hotspotY="0.411523" />
+                    <frame duration="1" hotspotX="0.496183" hotspotY="0.41841" />
+                    <frame duration="1" hotspotX="0.492424" hotspotY="0.409836" />
+                </animation>
+                <animation framecount="4" loop="1" name="Leste" pingpong="0" repeatcount="1" repeatto="0" sid="906346418502419" speed="10">
+                    <frame duration="1" hotspotX="0.511811" hotspotY="0.408163" />
+                    <frame duration="1" hotspotX="0.511811" hotspotY="0.413223" />
+                    <frame duration="1" hotspotX="0.511811" hotspotY="0.408163" />
+                    <frame duration="1" hotspotX="0.515873" hotspotY="0.413223" />
+                </animation>
+                <animation framecount="4" loop="1" name="Oeste" pingpong="0" repeatcount="1" repeatto="0" sid="316007603798854" speed="10">
+                    <frame duration="1" hotspotX="0.511811" hotspotY="0.395257" />
+                    <frame duration="1" hotspotX="0.515873" hotspotY="0.401606" />
+                    <frame duration="1" hotspotX="0.511811" hotspotY="0.395257" />
+                    <frame duration="1" hotspotX="0.515873" hotspotY="0.401606" />
+                </animation>
+                <animation framecount="4" loop="1" name="Sudeste" pingpong="0" repeatcount="1" repeatto="0" sid="221250810592668" speed="10">
+                    <frame duration="1" hotspotX="0.467626" hotspotY="0.403226" />
+                    <frame duration="1" hotspotX="0.464286" hotspotY="0.408163" />
+                    <frame duration="1" hotspotX="0.467626" hotspotY="0.403226" />
+                    <frame duration="1" hotspotX="0.464286" hotspotY="0.395257" />
+                </animation>
+                <animation framecount="4" loop="1" name="Sudoeste" pingpong="0" repeatcount="1" repeatto="0" sid="405843132851224" speed="10">
+                    <frame duration="1" hotspotX="0.464286" hotspotY="0.396825" />
+                    <frame duration="1" hotspotX="0.464286" hotspotY="0.387597" />
+                    <frame duration="1" hotspotX="0.464286" hotspotY="0.396825" />
+                    <frame duration="1" hotspotX="0.464286" hotspotY="0.4" />
+                </animation>
+                <animation framecount="4" loop="1" name="Nordeste" pingpong="0" repeatcount="1" repeatto="0" sid="262144012637056" speed="10">
+                    <frame duration="1" hotspotX="0.474453" hotspotY="0.414938" original-source="C:\Users\Alexandre\Desktop\Imagens\Menino.png">
+                        <collision-poly>
+                            <point x="0.0656935" y="0.20332" />
+                            <point x="1" y="0.20332" />
+                            <point x="1" y="1" />
+                            <point x="0.255474" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.471014" hotspotY="0.411523" />
+                    <frame duration="1" hotspotX="0.474453" hotspotY="0.414938" />
+                    <frame duration="1" hotspotX="0.471014" hotspotY="0.42735" />
+                </animation>
+                <animation framecount="4" loop="1" name="Noroeste" pingpong="0" repeatcount="1" repeatto="0" sid="230680268474444" speed="10">
+                    <frame duration="1" hotspotX="0.467626" hotspotY="0.403226" />
+                    <frame duration="1" hotspotX="0.474453" hotspotY="0.41841" />
+                    <frame duration="1" hotspotX="0.467626" hotspotY="0.403226" />
+                    <frame duration="1" hotspotX="0.474453" hotspotY="0.403226" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="692777215252956">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759857689962141" speed="5">
+                    <frame duration="1" hotspotX="7.03175" hotspotY="3.98198" />
+                    <frame duration="1" hotspotX="4.47368" hotspotY="3.06164" />
+                    <frame duration="1" hotspotX="6.17647" hotspotY="3" />
+                    <frame duration="1" hotspotX="4.06173" hotspotY="3.10417" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -924,6 +1122,9 @@
         <layout>TelaErro.xml</layout>
         <layout>TelaAcerto.xml</layout>
         <layout>TelaAmigo.xml</layout>
+        <layout>TelaEscolhaAmigo.xml</layout>
+        <layout>TelaEntrarMundo.xml</layout>
+        <layout>Mundo.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
@@ -942,6 +1143,9 @@
         <event-sheet>EventoAcerto.xml</event-sheet>
         <event-sheet>EventoGeneroPersonagem.xml</event-sheet>
         <event-sheet>EventoAmigo.xml</event-sheet>
+        <event-sheet>EventoEscolhaAmigo.xml</event-sheet>
+        <event-sheet>EventoEntrarMundo.xml</event-sheet>
+        <event-sheet>EventoMundo.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />

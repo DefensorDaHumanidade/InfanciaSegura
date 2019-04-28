@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoMundo</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="815046952002722">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="448998361329247" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="959636680119971" type="System">
+                    <param id="0" name="Variable">GeneroUsuario</param>
+                    <param id="1" name="Value">&quot;Masculino&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="874989471043402">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="700145306726577" type="System">
+                    <param id="0" name="Variable">GeneroUsuario</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Masculino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="835080184355303" type="System">
+                    <param id="0" name="Group name">&quot;Andar Menino&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="443755461823418" title="Andar Menino">
+            <sub-events>
+                <event-block sid="445165470368212">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="627050004245905" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="203776105873224" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Leste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="438110759083585">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="817068096660833" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="926029576128856" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Oeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="309723653618474">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="688137334594453" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="946542536169181" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Norte&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="360597530713657">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="298030139533861" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="469125106051194" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sul&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="290393806425347">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="946870814712236" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="121431472368650" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="741543120905334" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sudoeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="104449191074051">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="179962925250589" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="844030749823195" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="284645851919243" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sudeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="453918726489398">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="542252597180412" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="247353366921712" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="927588738745002" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Noroeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="815120248983739">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="126185732519314" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="921563631298351" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="717285349999047" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Nordeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="339648140322897">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="899934456203490" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="632885258231238" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="895083013746948" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="645074789399222" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="200556500186773" type="Menino">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="825423172648899">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="177734489308787" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="787051114443466" type="Menino">
+                            <param id="0" name="Animation">Menino.Sentido</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
