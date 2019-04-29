@@ -106,10 +106,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CaixaDialogoMenina/" />
         <folder expanded="1" path="animation-folder/AmigaEscolha/" />
         <folder expanded="1" path="animation-folder/AmigoEscolha/" />
-        <folder expanded="1" path="animation-folder/Amigo/" />
+        <folder expanded="1" path="animation-folder/Amigos/" />
         <folder expanded="1" path="animation-folder/FundoAmigo/" />
         <folder expanded="1" path="animation-folder/AmigoPersonagem/" />
         <folder expanded="1" path="animation-folder/Menino/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Amigo/" />
+        <folder expanded="1" path="animation-folder/Menina/" />
+        <folder expanded="1" path="animation-folder/Amiga/" />
+        <folder expanded="1" path="animation-folder/CaixaDialogoMundo/" />
+        <folder expanded="1" path="animation-folder/PlacaMUNDO/" />
+        <folder expanded="1" path="animation-folder/ColisaoMundo/" />
     </folders-expanded>
 </c2uistate>

@@ -117,7 +117,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Amigo" uid="166">
+                <instance type="Amigos" uid="166">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -185,11 +185,11 @@
                         <x>1257</x>
                         <y>389</y>
                         <z>0</z>
-                        <width>117</width>
-                        <height>211</height>
+                        <width>300</width>
+                        <height>453</height>
                         <depth>0</depth>
-                        <hotspotX>0.52136755</hotspotX>
-                        <hotspotY>0.54502368</hotspotY>
+                        <hotspotX>0.556666672</hotspotX>
+                        <hotspotY>0.494481236</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
