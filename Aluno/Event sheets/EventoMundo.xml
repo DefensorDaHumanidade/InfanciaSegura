@@ -43,6 +43,10 @@
                     <param id="0" name="Scale">0.1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="878500422080490" type="Menina" />
+                <action id="-3" name="Set position" sid="622814362717722" type="BrancoMundo">
+                    <param id="0" name="X">Menino.X</param>
+                    <param id="1" name="Y">Menino.Y</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="187700117468618">
@@ -61,6 +65,10 @@
                 <action id="-9" name="Destroy" sid="820689410849703" type="Menino" />
                 <action id="9" name="Set scale" sid="214101865421739" type="Menina">
                     <param id="0" name="Scale">0.1</param>
+                </action>
+                <action id="-3" name="Set position" sid="272173316857975" type="BrancoMundo">
+                    <param id="0" name="X">Menina.X</param>
+                    <param id="1" name="Y">Menina.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -102,6 +110,57 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="533212394322623" title="Apresentacao Mundo">
+            <sub-events>
+                <event-block disabled="1" sid="640426673205851">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="755155006157621" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="418732631398537" type="CaixaDialogoMundo">
+                            <param id="0" name="X">Menino.X</param>
+                            <param id="1" name="Y">Menino.Y+30</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="715978770925117" type="TextoDialogoMundo">
+                            <param id="0" name="X">CaixaDialogoMundo.X-CaixaDialogoMundo.Width/2+10</param>
+                            <param id="1" name="Y">CaixaDialogoMundo.Y+10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="517507369471381">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="621928914227295" type="System" />
+                        <condition id="-14" name="Compare variable" sid="425670979813921" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="232461746420138" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menino.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menino.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="598053797710991">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="242533124614668" type="System" />
+                        <condition id="-14" name="Compare variable" sid="475466126644590" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="321200889028687" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menina.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menina.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" inactive="1" sid="443755461823418" title="Andar Menino">
             <sub-events>
                 <event-block sid="445165470368212">
@@ -233,6 +292,18 @@
                         </condition>
                         <condition id="2" inverted="1" name="Key is down" sid="645074789399222" type="Keyboard">
                             <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="295439394516533" type="Touch">
+                            <param id="0" name="Object">BotaoSetaCima</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="171845418202148" type="Touch">
+                            <param id="0" name="Object">BotaoSetaBaixo</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="390618198491345" type="Touch">
+                            <param id="0" name="Object">BotaoSetaDireita</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="807482489449086" type="Touch">
+                            <param id="0" name="Object">BotaoSetaEsquerda</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -385,6 +456,18 @@
                         </condition>
                         <condition id="2" inverted="1" name="Key is down" sid="185534220449681" type="Keyboard">
                             <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="256448308354403" type="Touch">
+                            <param id="0" name="Object">BotaoSetaCima</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="451072439335803" type="Touch">
+                            <param id="0" name="Object">BotaoSetaBaixo</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="634172316292929" type="Touch">
+                            <param id="0" name="Object">BotaoSetaDireita</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="704979268953113" type="Touch">
+                            <param id="0" name="Object">BotaoSetaEsquerda</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -858,22 +941,423 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="347792160724365">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="645607281331886" type="System">
-                    <param id="0" name="Interval (seconds)">3.0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="418732631398537" type="CaixaDialogoMundo">
-                    <param id="0" name="X">Menino.X</param>
-                    <param id="1" name="Y">Menino.Y+30</param>
-                </action>
-                <action id="-3" name="Set position" sid="715978770925117" type="TextoDialogoMundo">
-                    <param id="0" name="X">CaixaDialogoMundo.X-CaixaDialogoMundo.Width/2+10</param>
-                    <param id="1" name="Y">CaixaDialogoMundo.Y+10</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="450153338749940" title="Setas Menino">
+            <sub-events>
+                <event-group description="" sid="371054603512531" title="Botao Seta Cima Menino">
+                    <sub-events>
+                        <event-block sid="647580764288342">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="106859401607859" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaCima</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="975658335543356" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="643747404426788" type="Menino">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="420435397544787" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Norte&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="957900909656212" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Cima&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="658427086911886">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="567804957547013" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="394480924725019" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Cima&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="738406898651607" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="542340320388112" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="472687491310711" title="Botao Seta Baixo Menino">
+                    <sub-events>
+                        <event-block sid="316247642038152">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="967540271534198" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaBaixo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="514055455700268" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="336200679463255" type="Menino">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="597392059251050" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Sul&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="936699156251679" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Baixo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="999732285405807">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="733644582962740" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="836069228618968" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Baixo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="499350232821215" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="516952539471853" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="159675059760652" title="Botao Seta Direita Menino">
+                    <sub-events>
+                        <event-block sid="931088427955899">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="496263521461905" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaDireita</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="998740924682931" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="956398127795202" type="Menino">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="426198156533785" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Leste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="743680148133048" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Direita&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="446023604067046">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="156617478047472" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="349267418658163" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Direita&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="212203527645331" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="703054068438737" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="659822985521101" title="Botao Seta Esquerda Menino">
+                    <sub-events>
+                        <event-block sid="267892081329833">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="487082215236561" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaEsquerda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="978539737521439" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="130704954871178" type="Menino">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="545971243806448" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Oeste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="402059201148120" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Esquerda&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="830446177056061">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="577500745982119" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="667477207214540" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Esquerda&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="499685353652540" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="369508438059533" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="591152287971701" title="Setas Menina">
+            <sub-events>
+                <event-group description="" sid="341980414985427" title="Botao Seta Cima Menina">
+                    <sub-events>
+                        <event-block sid="267530525638250">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="955195340430871" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaCima</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="665449620442248" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="361225821469510" type="Menina" />
+                                <action id="-10" name="Set value" sid="955493792404710" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Norte&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="965147841585191" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Cima&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="382603713886609">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="802301975431889" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="366346994524108" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Cima&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="597599741890062" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="220913378103100" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="749458017119544" title="Botao Seta Baixo Menina">
+                    <sub-events>
+                        <event-block sid="784893977419001">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="392285600131500" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaBaixo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="755783933573344" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="718820158961301" type="Menina" />
+                                <action id="-10" name="Set value" sid="383832762086879" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Sul&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="145176422503682" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Baixo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="232603145492451">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="154853124601342" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="448983003537669" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Baixo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="995703024476864" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="151195439792614" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="138206206754619" title="Botao Seta Direita Menina">
+                    <sub-events>
+                        <event-block sid="956033300057583">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="548704122521614" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaDireita</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="325821495813965" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="942794221384409" type="Menina" />
+                                <action id="-10" name="Set value" sid="579221715383876" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Leste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="939444433892603" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Direita&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="946222920510430">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="780992191805628" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="200795275481035" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Direita&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="724242032817802" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="359723304747674" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="200265376363966" title="Botao Seta Esquerda Menina">
+                    <sub-events>
+                        <event-block sid="928516421269722">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="582618548205912" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaEsquerda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="982888025878824" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="297892708089392" type="Menina" />
+                                <action id="-10" name="Set value" sid="523051809489754" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Oeste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="442001730402903" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Esquerda&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="815153194943588">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="467876513846303" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="274375992050475" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Esquerda&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="137234427478678" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="984723977823819" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="970289423185517" title="Portas">
+            <sub-events>
+                <event-block sid="549392639469091">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="791138704338010" type="Porta">
+                            <param id="0" name="Object">Menino</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="825923350447286" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Hospital&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="128784919982323" type="PretoMundo">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="878009417981419" type="PretoMundo" />
+                        <action id="-16" name="Wait" sid="811887992424694" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="172979594589722" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="594671164301460" type="System">
+                            <param id="0" name="Layout">Hospital</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531613705457574">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="995330254318342" type="Porta">
+                            <param id="0" name="Object">Menina</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="954901745395123" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Hospital&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="410613395002059" type="System">
+                            <param id="0" name="Layout">Hospital</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

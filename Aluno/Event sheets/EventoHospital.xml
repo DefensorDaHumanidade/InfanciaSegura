@@ -1,0 +1,1313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoHospital</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="479131303083101">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="103433852869460" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="782565319055972" type="System">
+                    <param id="0" name="Variable">GeneroPersonagem</param>
+                    <param id="1" name="Value">&quot;Masculino&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="545318372525305" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Value">&quot;Feminino&quot;</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="435204897852034" type="System">
+                    <param id="0" name="Width">500</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="428562488476944" type="System">
+                    <param id="0" name="X">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="799069165820033">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="434969138658080" type="System">
+                    <param id="0" name="Variable">GeneroPersonagem</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Masculino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="373824993492049" type="System">
+                    <param id="0" name="Group name">&quot;Andar Menino Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="9" name="Set scale" sid="829024846276039" type="Menino">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="106155504819276" type="Menina" />
+                <action id="-3" name="Set position" sid="317448713347531" type="BrancoMundo">
+                    <param id="0" name="X">Menino.X</param>
+                    <param id="1" name="Y">Menino.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="858448289025366">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="227722215407128" type="System">
+                    <param id="0" name="Variable">GeneroPersonagem</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Feminino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="284961514113637" type="System">
+                    <param id="0" name="Group name">&quot;Andar Menina Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="429135404250731" type="Menino" />
+                <action id="9" name="Set scale" sid="330889009293385" type="Menina">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+                <action id="-3" name="Set position" sid="707947791940570" type="BrancoMundo">
+                    <param id="0" name="X">Menina.X</param>
+                    <param id="1" name="Y">Menina.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="397459199087282">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="523165564838902" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Masculino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="403738987612683" type="System">
+                    <param id="0" name="Group name">&quot;Seguir Amigo Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="182321706962984" type="Amiga" />
+                <action id="9" name="Set scale" sid="905024283833309" type="Amigo">
+                    <param id="0" name="Scale">0.07</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="137596335461236">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="505929570798231" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Feminino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="176939622109266" type="System">
+                    <param id="0" name="Group name">&quot;Seguir Amiga Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="629921801200103" type="Amigo" />
+                <action id="9" name="Set scale" sid="489052739137159" type="Amiga">
+                    <param id="0" name="Scale">0.07</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="233570247874313" title="Apresentacao Hospital">
+            <sub-events>
+                <event-block disabled="1" sid="388395666373910">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="200478135472140" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="699338856423762" type="CaixaDialogoMundo">
+                            <param id="0" name="X">Menino.X</param>
+                            <param id="1" name="Y">Menino.Y+30</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="918067014586518" type="TextoDialogoMundo">
+                            <param id="0" name="X">CaixaDialogoMundo.X-CaixaDialogoMundo.Width/2+10</param>
+                            <param id="1" name="Y">CaixaDialogoMundo.Y+10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390046541688215">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="523015074459827" type="System" />
+                        <condition id="-14" name="Compare variable" sid="467564507841258" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="375928170421718" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menino.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menino.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167147635148412">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="505313915932064" type="System" />
+                        <condition id="-14" name="Compare variable" sid="308950260039558" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="580504141106648" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menina.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menina.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="328001680977889" title="Andar Menino Hospital">
+            <sub-events>
+                <event-block sid="882381689130231">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="427651591537707" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="803517824192460" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Leste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="788346027348121">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="342411901810727" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="275268851380670" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Oeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="854700713055048">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="838725229121668" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="201007960628190" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Norte&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="189670426699326">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="968775784615254" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="158553631890112" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sul&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="551176570841682">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="600863252772656" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="141240693698349" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="886394650844781" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sudoeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="643904329354401">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="701539151750188" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="474209658552310" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="434407003158316" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sudeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="532111244570398">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="537565996009585" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="118173650808106" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="306355053696355" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Noroeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="890735703556245">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="170314332512989" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="159191198950473" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="264843393692289" type="Menino">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Nordeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="293181068961505">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="214637620031931" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="290364816572824" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="971960654941228" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="138471131300180" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="897528823423579" type="Touch">
+                            <param id="0" name="Object">BotaoSetaCima</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="576552893907446" type="Touch">
+                            <param id="0" name="Object">BotaoSetaBaixo</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="892679167764759" type="Touch">
+                            <param id="0" name="Object">BotaoSetaDireita</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="434233801233232" type="Touch">
+                            <param id="0" name="Object">BotaoSetaEsquerda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="605157348767755" type="Menino">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="632009226934878">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="799081684920764" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="901344783881291" type="Menino">
+                            <param id="0" name="Animation">Menino.Sentido</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="531603429953215" title="Andar Menina Hospital">
+            <sub-events>
+                <event-block sid="749841579222307">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="433251208012020" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="490959033248300" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Leste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="894586905259713">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="358946721278055" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="599452917454988" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Oeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="716499999438536">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="871390928839066" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="505625227826454" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Norte&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="666853367631777">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="862443653675056" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="247277571010184" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sul&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="703740650878202">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="217339638954523" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="500558738002346" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="676560982000653" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sudoeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="870732064521539">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="634156007396939" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="855609984039857" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="983230170938326" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Sudeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993019548496434">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="173765921765081" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="552273067193846" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="453346365532926" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Noroeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671739803763509">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="646173424380108" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="611565569066165" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="409613143596102" type="Menina">
+                            <param id="0" name="Instance variable">Sentido</param>
+                            <param id="1" name="Value">&quot;Nordeste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="999724461590865">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="692391973988109" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="350191019763017" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="497907228756505" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="803407428155035" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="247453058678880" type="Touch">
+                            <param id="0" name="Object">BotaoSetaCima</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="529826648319561" type="Touch">
+                            <param id="0" name="Object">BotaoSetaBaixo</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="422716636120952" type="Touch">
+                            <param id="0" name="Object">BotaoSetaDireita</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="218037779923931" type="Touch">
+                            <param id="0" name="Object">BotaoSetaEsquerda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="908915050515887" type="Menina">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342703692093420">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="369800365355422" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="994866336014499" type="Menina">
+                            <param id="0" name="Animation">Menina.Sentido</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="889612564665248" title="Seguir Amigo Hospital">
+            <sub-events>
+                <event-block sid="721539462112818">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="602693391046065" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="810309356063676" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="831366975022585" type="Amigo">
+                            <param id="0" name="X">Menina.X</param>
+                            <param id="1" name="Y">Menina.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="639201814314522">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="637092344359935" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="769131754074096" type="System">
+                            <param id="0" name="First value">abs(distance(Amigo.X, Amigo.Y, Menina.X, Menina.Y))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="893583491762913" type="Amigo">
+                            <param id="0" name="X">Amigo.X</param>
+                            <param id="1" name="Y">Amigo.Y</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="889658718822711" type="Amigo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977055386515806">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="984133880446144" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="783370250825266" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="829301179747460" type="Amigo">
+                            <param id="0" name="X">Menino.X</param>
+                            <param id="1" name="Y">Menino.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267017662930559">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="943003573988412" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="114828733691351" type="System">
+                            <param id="0" name="First value">abs(distance(Amigo.X, Amigo.Y, Menino.X, Menino.Y))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="133379628087231" type="Amigo">
+                            <param id="0" name="X">Amigo.X</param>
+                            <param id="1" name="Y">Amigo.Y</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="514652805683162" type="Amigo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="317452884764991">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="210294317305259" type="Amigo" />
+                        <condition id="-14" name="Compare variable" sid="616916174038427" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="401730907087718" type="Amigo" />
+                        <action id="4" name="Set animation" sid="749720151556800" type="Amigo">
+                            <param id="0" name="Animation">Menina.Sentido</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="289452573158319">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="471451849312461" type="Amigo" />
+                        <condition id="-14" name="Compare variable" sid="935494307025196" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="820232922643082" type="Amigo" />
+                        <action id="4" name="Set animation" sid="233745054875959" type="Amigo">
+                            <param id="0" name="Animation">Menino.Sentido</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="123171200293484">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="663776543632812" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="769449655434393" type="System">
+                            <param id="0" name="First value">Amigo.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Menino.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="119992649459531" type="Amigo">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="496505619668320" type="Menino">
+                            <param id="0" name="Layer">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="220487078781089">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="202420019704734" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="993954234454856" type="System">
+                            <param id="0" name="First value">Amigo.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Menino.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="911574191167632" type="Amigo">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="533378620660644" type="Menino">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="590999788764401">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="581287348821852" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="118431142304855" type="System">
+                            <param id="0" name="First value">Amigo.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Menina.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="713401369633868" type="Amigo">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="547299169860037" type="Menina">
+                            <param id="0" name="Layer">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="489916198177392">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="485176229181002" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="169772326194980" type="System">
+                            <param id="0" name="First value">Amigo.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Menina.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="851223526973093" type="Amigo">
+                            <param id="0" name="Layer">4</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="477850298232086" type="Menina">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="463362335505271" title="Seguir Amiga Hospital">
+            <sub-events>
+                <event-block sid="631195585004458">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="923290887153578" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="865054986423106" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="126441003611652" type="Amiga">
+                            <param id="0" name="X">Menina.X</param>
+                            <param id="1" name="Y">Menina.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803186392037621">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="179110877542982" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="777064428681351" type="System">
+                            <param id="0" name="First value">abs(distance(Amiga.X, Amiga.Y, Menina.X, Menina.Y))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="268213613485444" type="Amiga">
+                            <param id="0" name="X">Amiga.X</param>
+                            <param id="1" name="Y">Amiga.Y</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="407273074802476" type="Amiga">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="164048416388828">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="715366210281335" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="417349437567463" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="230024934007891" type="Amiga">
+                            <param id="0" name="X">Menino.X</param>
+                            <param id="1" name="Y">Menino.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="415829918696637">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="783481918018495" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="639045617982648" type="System">
+                            <param id="0" name="First value">abs(distance(Amiga.X, Amiga.Y, Menino.X, Menino.Y))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="349320965700388" type="Amiga">
+                            <param id="0" name="X">Amiga.X</param>
+                            <param id="1" name="Y">Amiga.Y</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="515201220975494" type="Amiga">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="700521014007180">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="593049772684522" type="Amiga" />
+                        <condition id="-14" name="Compare variable" sid="208161778757771" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="441144126845882" type="Amiga" />
+                        <action id="4" name="Set animation" sid="233059467472407" type="Amiga">
+                            <param id="0" name="Animation">Menina.Sentido</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="905591380173369">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="663090461134691" type="Amiga" />
+                        <condition id="-14" name="Compare variable" sid="301598013847702" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="793718930901505" type="Amiga" />
+                        <action id="4" name="Set animation" sid="823028758293858" type="Amiga">
+                            <param id="0" name="Animation">Menino.Sentido</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="865111586538141">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="608121176925375" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="615647974516692" type="System">
+                            <param id="0" name="First value">Amiga.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Menino.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="633436219456553" type="Amiga">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="370312963667743" type="Menino">
+                            <param id="0" name="Layer">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="422785207195393">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="958553131090023" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="108642473873847" type="System">
+                            <param id="0" name="First value">Amiga.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Menino.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="753134197398932" type="Amiga">
+                            <param id="0" name="Layer">4</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="728806556110081" type="Menino">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771845144129648">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="720726044310331" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="834764341715118" type="System">
+                            <param id="0" name="First value">Amiga.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Menina.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="626918343423338" type="Amiga">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="585738858717705" type="Menina">
+                            <param id="0" name="Layer">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="904202400878020">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="155438370875501" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="837578324710050" type="System">
+                            <param id="0" name="First value">Amiga.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Menina.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="104239424656988" type="Amiga">
+                            <param id="0" name="Layer">4</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="201593479969162" type="Menina">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="521939236521942" title="Cenario2">
+            <sub-events>
+                <event-block disabled="1" sid="791718391429850">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="747042551063503" type="CidadeExteriorInferior">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Menino.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="663247822719476" type="CidadeExteriorInferior">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="898018352225324" type="Menino">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="116520578746228">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="370568396360436" type="CidadeExteriorInferior">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">Menino.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="530331949724675" type="CidadeExteriorInferior">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="294787183758118" type="Menino">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="469114279320632" title="Setas Menino Hospital">
+            <sub-events>
+                <event-group description="" sid="675067265187159" title="Botao Seta Cima Menino2">
+                    <sub-events>
+                        <event-block sid="459028488324661">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="699652287221932" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaCima</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="706796433637101" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="255689291976964" type="Menino">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="291636599863206" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Norte&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="995974136862788" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Cima&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="909018653844776">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="877954284364483" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="881829738660807" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Cima&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="610137425066694" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="903196084613978" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="606569033678366" title="Botao Seta Baixo Menino2">
+                    <sub-events>
+                        <event-block sid="112528664408415">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="193053724862178" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaBaixo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="238422043923320" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="399787666217055" type="Menino">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="636561705070416" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Sul&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="766965235154991" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Baixo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="565825000778942">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="855729339217608" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="648699340946515" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Baixo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="274886754831249" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="976115816685558" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="324011963966032" title="Botao Seta Direita Menino2">
+                    <sub-events>
+                        <event-block sid="798797146628534">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="588839608296577" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaDireita</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="377749284889594" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="476338922794746" type="Menino">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="707659746618246" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Leste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="819697366558942" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Direita&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="995174737076367">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="149817533023550" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="456757870566518" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Direita&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="308982067449378" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="409437381066767" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="868940965043060" title="Botao Seta Esquerda Menino2">
+                    <sub-events>
+                        <event-block sid="511988230576307">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="642113353483031" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaEsquerda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="873721773393841" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="288973566327800" type="Menino">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="860346109089749" type="Menino">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Oeste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="126870615768106" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Esquerda&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="481415029460043">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="268266754015847" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="961223933215444" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Esquerda&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="207188866831314" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="806784730015801" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="787320365510555" title="Setas Menina Hospital">
+            <sub-events>
+                <event-group description="" sid="780765939012025" title="Botao Seta Cima Menina2">
+                    <sub-events>
+                        <event-block sid="980163788761872">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="917645088927829" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaCima</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="900157611382464" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="262289609807883" type="Menina" />
+                                <action id="-10" name="Set value" sid="739447454771672" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Norte&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="756978840574884" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Cima&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="988063161177984">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="135081335752537" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="254897404708027" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Cima&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="242970812939756" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="198380067351624" type="BotaoSetaCima">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="959401633376078" title="Botao Seta Baixo Menina2">
+                    <sub-events>
+                        <event-block sid="523074021377163">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="876596512913013" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaBaixo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="567754851885044" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="455720957443131" type="Menina" />
+                                <action id="-10" name="Set value" sid="563388434826415" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Sul&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="525822612830894" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Baixo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="834156943418520">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="596594425556864" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="985023358482181" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Baixo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="896564339571901" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="518714572613763" type="BotaoSetaBaixo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="545028169833838" title="Botao Seta Direita Menina2">
+                    <sub-events>
+                        <event-block sid="594785896246867">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="210301029821827" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaDireita</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="652209369263744" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="336219770699727" type="Menina" />
+                                <action id="-10" name="Set value" sid="866722859859909" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Leste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="908383829293492" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Direita&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="463727691886847">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="494314312959900" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="612628001653554" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Direita&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="358757784845295" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="985285607359708" type="BotaoSetaDireita">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="499723958579924" title="Botao Seta Esquerda Menina2">
+                    <sub-events>
+                        <event-block sid="326109381623288">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="631546513589043" type="Touch">
+                                    <param id="0" name="Object">BotaoSetaEsquerda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="214690412270792" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="8Direction" id="1" name="Reverse" sid="843424479544353" type="Menina" />
+                                <action id="-10" name="Set value" sid="961812217523257" type="Menina">
+                                    <param id="0" name="Instance variable">Sentido</param>
+                                    <param id="1" name="Value">&quot;Oeste&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="280809238037430" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Esquerda&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="873716444945736">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="478684633994099" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="869034070335285" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Esquerda&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="639016455291461" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="649414936910973" type="BotaoSetaEsquerda">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

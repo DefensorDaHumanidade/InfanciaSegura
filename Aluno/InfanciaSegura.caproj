@@ -1039,9 +1039,6 @@
                 <behavior-type name="8Direction" sid="107527817784463">
                     <behavior id="EightDir" />
                 </behavior-type>
-                <behavior-type name="ScrollTo" sid="577723103100681">
-                    <behavior id="scrollto" />
-                </behavior-type>
                 <behavior-type name="BoundToLayout" sid="834146735012013">
                     <behavior id="bound" />
                 </behavior-type>
@@ -1330,134 +1327,274 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="Sul" pingpong="0" repeatcount="1" repeatto="0" sid="759857689962141" speed="10">
-                    <frame duration="1" hotspotX="0.556667" hotspotY="0.463576" />
-                    <frame duration="1" hotspotX="0.519774" hotspotY="0.471311" />
-                    <frame duration="1" hotspotX="0.556667" hotspotY="0.484375" />
-                    <frame duration="1" hotspotX="0.546667" hotspotY="0.479303" />
+                    <frame duration="1" hotspotX="0.566667" hotspotY="0.463576">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.566667" hotspotY="0.458515">
+                        <collision-poly>
+                            <point x="0" y="0.888102" />
+                            <point x="1" y="0.892806" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.566667" hotspotY="0.46875">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.566667" hotspotY="0.457516">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Norte" pingpong="0" repeatcount="1" repeatto="0" sid="524933306041256" speed="10">
-                    <frame duration="1" hotspotX="0.441767" hotspotY="0.457666" />
-                    <frame duration="1" hotspotX="0.449799" hotspotY="0.403433" />
-                    <frame duration="1" hotspotX="0.441767" hotspotY="0.423841" />
-                    <frame duration="1" hotspotX="0.409639" hotspotY="0.421842" />
+                    <frame duration="1" hotspotX="0.441767" hotspotY="0.480549">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.441767" hotspotY="0.450644">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.441767" hotspotY="0.463576">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.441767" hotspotY="0.449679">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Leste" pingpong="0" repeatcount="1" repeatto="0" sid="530925454109821" speed="10">
-                    <frame duration="1" hotspotX="0.441781" hotspotY="0.449889" />
-                    <frame duration="1" hotspotX="0.421233" hotspotY="0.453303" />
-                    <frame duration="1" hotspotX="0.434932" hotspotY="0.451163" />
-                    <frame duration="1" hotspotX="0.421233" hotspotY="0.415909" />
+                    <frame duration="1" hotspotX="0.376712" hotspotY="0.467706">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.376712" hotspotY="0.453303">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.376712" hotspotY="0.488372">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.376712" hotspotY="0.477273">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Oeste" pingpong="0" repeatcount="1" repeatto="0" sid="903560652374489" speed="10">
-                    <frame duration="1" hotspotX="0.558219" hotspotY="0.449889">
+                    <frame duration="1" hotspotX="0.582192" hotspotY="0.467706">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.575342" hotspotY="0.473804">
+                    <frame duration="1" hotspotX="0.582192" hotspotY="0.47836">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.565068" hotspotY="0.451163">
+                    <frame duration="1" hotspotX="0.582192" hotspotY="0.488372">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.571918" hotspotY="0.434091">
+                    <frame duration="1" hotspotX="0.582192" hotspotY="0.477273">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Sudeste" pingpong="0" repeatcount="1" repeatto="0" sid="721911061509626" speed="10">
-                    <frame duration="1" hotspotX="0.505338" hotspotY="0.46" />
-                    <frame duration="1" hotspotX="0.533569" hotspotY="0.463415" />
-                    <frame duration="1" hotspotX="0.484099" hotspotY="0.485126" />
-                    <frame duration="1" hotspotX="0.491166" hotspotY="0.502347" />
+                    <frame duration="1" hotspotX="0.533808" hotspotY="0.466667">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.530035" hotspotY="0.465632">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.530035" hotspotY="0.480549">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.530035" hotspotY="0.492958">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Sudoeste" pingpong="0" repeatcount="1" repeatto="0" sid="350199445852921" speed="10">
-                    <frame duration="1" hotspotX="0.494662" hotspotY="0.46">
+                    <frame duration="1" hotspotX="0.498221" hotspotY="0.466667">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.466431" hotspotY="0.463415">
+                    <frame duration="1" hotspotX="0.4947" hotspotY="0.465632">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.515901" hotspotY="0.485126">
+                    <frame duration="1" hotspotX="0.4947" hotspotY="0.480549">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.508834" hotspotY="0.502347">
+                    <frame duration="1" hotspotX="0.4947" hotspotY="0.492958">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Nordeste" pingpong="0" repeatcount="1" repeatto="0" sid="114434153557352" speed="10">
-                    <frame duration="1" hotspotX="0.456" hotspotY="0.409396" />
-                    <frame duration="1" hotspotX="0.438462" hotspotY="0.411379" />
-                    <frame duration="1" hotspotX="0.436" hotspotY="0.414188" />
-                    <frame duration="1" hotspotX="0.452" hotspotY="0.408297" />
+                    <frame duration="1" hotspotX="0.4" hotspotY="0.414847">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.4" hotspotY="0.425056">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.384615" hotspotY="0.415755">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.4" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Noroeste" pingpong="0" repeatcount="1" repeatto="0" sid="803463156808603" speed="10">
-                    <frame duration="1" hotspotX="0.544" hotspotY="0.409396">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.425056">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.553846" hotspotY="0.396061">
+                    <frame duration="1" hotspotX="0.576923" hotspotY="0.415755">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.568" hotspotY="0.421053">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.434783">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.548" hotspotY="0.429864">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.429864">
                         <collision-poly>
+                            <point x="0" y="0.878587" />
+                            <point x="1" y="0.883002" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1471,9 +1608,6 @@
             <behaviors>
                 <behavior-type name="8Direction" sid="156772992342721">
                     <behavior id="EightDir" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="769748680381984">
-                    <behavior id="scrollto" />
                 </behavior-type>
                 <behavior-type name="BoundToLayout" sid="554263457201312">
                     <behavior id="bound" />
@@ -1763,134 +1897,274 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="Sul" pingpong="0" repeatcount="1" repeatto="0" sid="470147875432382" speed="10">
-                    <frame duration="1" hotspotX="0.530364" hotspotY="0.457346" />
-                    <frame duration="1" hotspotX="0.506073" hotspotY="0.473068" />
-                    <frame duration="1" hotspotX="0.502024" hotspotY="0.4637" />
-                    <frame duration="1" hotspotX="0.51417" hotspotY="0.468384" />
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.473934">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.468384">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.468384">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.468384">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Norte" pingpong="0" repeatcount="1" repeatto="0" sid="727552918656844" speed="10">
-                    <frame duration="1" hotspotX="0.489627" hotspotY="0.375887" />
-                    <frame duration="1" hotspotX="0.487603" hotspotY="0.348416" />
-                    <frame duration="1" hotspotX="0.454545" hotspotY="0.347826" />
-                    <frame duration="1" hotspotX="0.479339" hotspotY="0.334842" />
+                    <frame duration="1" hotspotX="0.539419" hotspotY="0.378251">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53719" hotspotY="0.361991">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53719" hotspotY="0.366133">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53719" hotspotY="0.361991">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Leste" pingpong="0" repeatcount="1" repeatto="0" sid="712522588489296" speed="10">
-                    <frame duration="1" hotspotX="0.561265" hotspotY="0.428571" />
-                    <frame duration="1" hotspotX="0.55336" hotspotY="0.418981" />
-                    <frame duration="1" hotspotX="0.498024" hotspotY="0.419204" />
-                    <frame duration="1" hotspotX="0.529644" hotspotY="0.427896" />
+                    <frame duration="1" hotspotX="0.592885" hotspotY="0.444965">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.592885" hotspotY="0.439815">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.592885" hotspotY="0.444965">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.592885" hotspotY="0.449173">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Oeste" pingpong="0" repeatcount="1" repeatto="0" sid="139930113560864" speed="10">
-                    <frame duration="1" hotspotX="0.438735" hotspotY="0.428571">
+                    <frame duration="1" hotspotX="0.513834" hotspotY="0.421546">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.44664" hotspotY="0.418981">
+                    <frame duration="1" hotspotX="0.513834" hotspotY="0.416667">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.501976" hotspotY="0.419204">
+                    <frame duration="1" hotspotX="0.513834" hotspotY="0.421546">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.470356" hotspotY="0.427896">
+                    <frame duration="1" hotspotX="0.513834" hotspotY="0.425532">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Sudeste" pingpong="0" repeatcount="1" repeatto="0" sid="381230229521556" speed="10">
-                    <frame duration="1" hotspotX="0.581395" hotspotY="0.469626" />
-                    <frame duration="1" hotspotX="0.503876" hotspotY="0.505774" />
-                    <frame duration="1" hotspotX="0.581395" hotspotY="0.487745" />
-                    <frame duration="1" hotspotX="0.581395" hotspotY="0.466042" />
+                    <frame duration="1" hotspotX="0.581395" hotspotY="0.443925">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.581395" hotspotY="0.438799">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.581395" hotspotY="0.465686">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.581395" hotspotY="0.444965">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Sudoeste" pingpong="0" repeatcount="1" repeatto="0" sid="979694912337194" speed="10">
-                    <frame duration="1" hotspotX="0.418605" hotspotY="0.469626">
+                    <frame duration="1" hotspotX="0.426357" hotspotY="0.46729">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.496124" hotspotY="0.505774">
+                    <frame duration="1" hotspotX="0.426357" hotspotY="0.461894">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.418605" hotspotY="0.487745">
+                    <frame duration="1" hotspotX="0.426357" hotspotY="0.490196">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.418605" hotspotY="0.466042">
+                    <frame duration="1" hotspotX="0.426357" hotspotY="0.468384">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Nordeste" pingpong="0" repeatcount="1" repeatto="0" sid="725988430600983" speed="10">
-                    <frame duration="1" hotspotX="0.454183" hotspotY="0.40281" />
-                    <frame duration="1" hotspotX="0.482072" hotspotY="0.408257" />
-                    <frame duration="1" hotspotX="0.466135" hotspotY="0.399072" />
-                    <frame duration="1" hotspotX="0.430279" hotspotY="0.377934" />
+                    <frame duration="1" hotspotX="0.438247" hotspotY="0.398126">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.438247" hotspotY="0.389908">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.438247" hotspotY="0.394432">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.438247" hotspotY="0.399061">
+                        <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Noroeste" pingpong="0" repeatcount="1" repeatto="0" sid="865161825770300" speed="10">
-                    <frame duration="1" hotspotX="0.545817" hotspotY="0.40281">
+                    <frame duration="1" hotspotX="0.557769" hotspotY="0.398126">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.517928" hotspotY="0.408257">
+                    <frame duration="1" hotspotX="0.557769" hotspotY="0.389908">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.533865" hotspotY="0.399072">
+                    <frame duration="1" hotspotX="0.557769" hotspotY="0.394432">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.569721" hotspotY="0.377934">
+                    <frame duration="1" hotspotX="0.557769" hotspotY="0.399061">
                         <collision-poly>
+                            <point x="0" y="0.850711" />
+                            <point x="1" y="0.850711" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1938,6 +2212,277 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BotaoSomMundo" sid="214536030574113">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="731823035582485">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="518963453622791" speed="5">
+                    <frame duration="1" hotspotX="0.550388" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.554688" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoPauseMundo" sid="457378640844631">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="960487081256948">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="978303844651323" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BrancoMundo" sid="787939810731390">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="206403628840358">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656860645640600" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSetaCima" sid="476829843152323">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="274701328898793">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628540326571679" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.366492" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.366492" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSetaDireita" sid="167317814752218">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="567083627215926">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904348577617184" speed="5">
+                    <frame duration="1" hotspotX="0.497925" hotspotY="0.364583" />
+                    <frame duration="1" hotspotX="0.497925" hotspotY="0.364583" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSetaBaixo" sid="816769751936907">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="323513225668913">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="843303235060830" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.366492" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.366492" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSetaEsquerda" sid="191533970961226">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="249506454998357">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="586497056774666" speed="5">
+                    <frame duration="1" hotspotX="0.497925" hotspotY="0.364583">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.497925" hotspotY="0.364583">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoProximoMundo" sid="194482902959987">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="182223205408291">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="405252942118394" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\BotaoProximoSolto.png">
+                        <collision-poly>
+                            <point x="0.1475" y="0.1475" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8525" y="0.1475" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8525" y="0.8525" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1475" y="0.8525" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501266" original-source="C:\Users\Alexandre\Desktop\BotaoProximoPressionado.png">
+                        <collision-poly>
+                            <point x="0.147208" y="0.146835" />
+                            <point x="0.5" y="0" />
+                            <point x="0.852792" y="0.146835" />
+                            <point x="1" y="0.498734" />
+                            <point x="0.852792" y="0.853165" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147208" y="0.853165" />
+                            <point x="0" y="0.498734" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Camera" sid="444579059595659">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="686718779140348">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="606476162371280" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.454545" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Delegacia" sid="164212983282494">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="526216167574961" speed="5">
+                    <frame duration="1" hotspotX="0.53484" hotspotY="0.469613" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Escola" sid="938555665182909">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="317909279671931" speed="5">
+                    <frame duration="1" hotspotX="0.482024" hotspotY="0.46347" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LanHouse" sid="962484812018261">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908798172957211" speed="5">
+                    <frame duration="1" hotspotX="0.501712" hotspotY="0.516693" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PretoMundo" sid="563144930825903">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="625220989055787">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="728414185080172" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Porta" sid="573622104010369">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Local" sid="347367096663907" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="135655811497651" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HospitalInferior" sid="582648394835660">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Alexandre\Desktop\Imagens\Kenney\Roguelike pack\Spritesheet\roguelikeSheet_magenta.png" />
+            <tiles />
+        </object-type>
+        <object-type name="HospitalMeio" sid="694298489333765">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Alexandre\Desktop\Imagens\Kenney\Roguelike pack\Spritesheet\roguelikeSheet_magenta.png" />
+            <tiles />
+        </object-type>
+        <object-type name="KitMedico" sid="677047433953951">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="335564636609765" speed="5">
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.504202" original-source="C:\Users\Alexandre\Desktop\Imagens\Kenney\kenney_genericItems_updatedCross\PNG\Colored\genericItem_color_102.png">
+                        <collision-poly>
+                            <point x="0.226891" y="0.226891" />
+                            <point x="0.495798" y="0.0336134" />
+                            <point x="0.84874" y="0.151261" />
+                            <point x="0.957983" y="0.495798" />
+                            <point x="0.915966" y="0.915966" />
+                            <point x="0.495798" y="0.983193" />
+                            <point x="0.117647" y="0.882353" />
+                            <point x="0.0504202" y="0.495798" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Estetoscopio" sid="670911658656756">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682203777501397" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\Imagens\Kenney\kenney_genericItems_updatedCross\PNG\Colored\genericItem_color_110.png">
+                        <collision-poly>
+                            <point x="0.0918367" y="0.0703125" />
+                            <point x="0.765306" y="0.179688" />
+                            <point x="0.989796" y="0.5" />
+                            <point x="0.622449" y="0.710938" />
+                            <point x="0.5" y="0.976563" />
+                            <point x="0.102041" y="0.921875" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Computador" sid="137902451103602">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555838463912652" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50505" original-source="C:\Users\Alexandre\Desktop\Imagens\Kenney\kenney_genericItems_updatedCross\PNG\Colored\genericItem_color_049.png">
+                        <collision-poly>
+                            <point x="0.908046" y="0.838384" />
+                            <point x="0.5" y="0.939394" />
+                            <point x="0.103448" y="0.818182" />
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.050505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1959,6 +2504,7 @@
         <layout>TelaEscolhaAmigo.xml</layout>
         <layout>TelaEntrarMundo.xml</layout>
         <layout>Mundo.xml</layout>
+        <layout>Hospital.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
@@ -1980,6 +2526,7 @@
         <event-sheet>EventoEscolhaAmigo.xml</event-sheet>
         <event-sheet>EventoEntrarMundo.xml</event-sheet>
         <event-sheet>EventoMundo.xml</event-sheet>
+        <event-sheet>EventoHospital.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />

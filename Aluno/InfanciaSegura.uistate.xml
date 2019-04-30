@@ -26,7 +26,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="20">TelaVerificacao</layout>
         <layout order="23">TelaEscolhaAmigo</layout>
         <layout order="26">TelaPergunta</layout>
-        <layout active="1" order="30">Mundo</layout>
+        <layout order="30">Mundo</layout>
+        <layout active="1" order="32">Hospital</layout>
         <event-sheet order="1">Global</event-sheet>
         <event-sheet order="2">EventoSimEncontrado</event-sheet>
         <event-sheet order="7">EventoVerificao</event-sheet>
@@ -42,6 +43,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="28">EventoGeneroUsuario</event-sheet>
         <event-sheet order="29">EventoEntrarMundo</event-sheet>
         <event-sheet order="31">EventoMundo</event-sheet>
+        <event-sheet order="33">EventoHospital</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -116,5 +118,22 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CaixaDialogoMundo/" />
         <folder expanded="1" path="animation-folder/PlacaMUNDO/" />
         <folder expanded="1" path="animation-folder/ColisaoMundo/" />
+        <folder expanded="1" path="animation-folder/BotaoSomMundo/" />
+        <folder expanded="1" path="animation-folder/BotaoPauseMundo/" />
+        <folder expanded="1" path="animation-folder/BrancoMundo/" />
+        <folder expanded="1" path="animation-folder/BotaoSetaCima/" />
+        <folder expanded="1" path="animation-folder/BotaoSetaDireita/" />
+        <folder expanded="1" path="animation-folder/BotaoSetaBaixo/" />
+        <folder expanded="1" path="animation-folder/BotaoSetaEsquerda/" />
+        <folder expanded="1" path="animation-folder/BotaoProximoMundo/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/Delegacia/" />
+        <folder expanded="1" path="animation-folder/Escola/" />
+        <folder expanded="1" path="animation-folder/LanHouse/" />
+        <folder expanded="1" path="animation-folder/PretoMundo/" />
+        <folder expanded="1" path="animation-folder/Porta/" />
+        <folder expanded="1" path="animation-folder/KitMedico/" />
+        <folder expanded="1" path="animation-folder/Estetoscopio/" />
+        <folder expanded="1" path="animation-folder/Computador/" />
     </folders-expanded>
 </c2uistate>

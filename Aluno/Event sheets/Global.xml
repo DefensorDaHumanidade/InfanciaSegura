@@ -312,6 +312,61 @@
                         <action id="2" name="Stop" sid="870227522402634" type="BotaoJogarMenor" />
                     </actions>
                 </event-block>
+                <event-block sid="485869245125721">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="355460949196648" type="BotaoSetaCima" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="688581001783011" type="BotaoSetaCima" />
+                        <action id="9" name="Set scale" sid="967971741719769" type="BotaoSetaCima">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="140451115049233">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="324224783528956" type="BotaoSetaBaixo" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="417163479586202" type="BotaoSetaBaixo" />
+                        <action id="9" name="Set scale" sid="548838079540498" type="BotaoSetaBaixo">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="829670144689322">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="679643940361796" type="BotaoSetaDireita" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="821340331686181" type="BotaoSetaDireita" />
+                        <action id="9" name="Set scale" sid="129818779602431" type="BotaoSetaDireita">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="264207171724625">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="714307859065474" type="BotaoSetaEsquerda" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="530115284798352" type="BotaoSetaEsquerda" />
+                        <action id="9" name="Set scale" sid="945080128528569" type="BotaoSetaEsquerda">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="518633648156883">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="633662720935838" type="BotaoProximoMundo" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="918028919696455" type="BotaoProximoMundo" />
+                        <action id="9" name="Set scale" sid="928068055951895" type="BotaoProximoMundo">
+                            <param id="0" name="Scale">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="617419319796395">
                     <conditions>
                         <condition id="-18" name="On created" sid="845421724763892" type="BotaoSom" />
@@ -372,6 +427,76 @@
                     <actions>
                         <action id="2" name="Stop" sid="409711259381553" type="BotaoPause" />
                         <action id="5" name="Set frame" sid="136102585496224" type="BotaoPause">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="517637113974778">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="352359391980744" type="BotaoSomMundo" />
+                        <condition id="-14" name="Compare variable" sid="275814594306238" type="System">
+                            <param id="0" name="Variable">Som</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Ligado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="853561608708047" type="BotaoSomMundo">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                        <action id="2" name="Stop" sid="755838257385577" type="BotaoSomMundo" />
+                        <action id="5" name="Set frame" sid="264451498071260" type="BotaoSomMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="499797950327149">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="606037375408789" type="BotaoSomMundo" />
+                        <condition id="-14" name="Compare variable" sid="376180005407614" type="System">
+                            <param id="0" name="Variable">Som</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Desligado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="565289551271643" type="BotaoSomMundo" />
+                        <action id="5" name="Set frame" sid="667987801029919" type="BotaoSomMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="123895360892307">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="942469149810831" type="BotaoPauseMundo" />
+                        <condition id="-14" name="Compare variable" sid="803628038310487" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Rodando&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="517092220709046" type="BotaoPauseMundo">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                        <action id="2" name="Stop" sid="317673203110161" type="BotaoPauseMundo" />
+                        <action id="5" name="Set frame" sid="569168780801463" type="BotaoPauseMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253755905632377">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="983110040556464" type="BotaoPauseMundo" />
+                        <condition id="-14" name="Compare variable" sid="473949600017728" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Parado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="685030477735344" type="BotaoPauseMundo" />
+                        <action id="5" name="Set frame" sid="216578681060080" type="BotaoPauseMundo">
                             <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
@@ -752,6 +877,328 @@
                         </condition>
                     </conditions>
                     <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="519095742213247" title="Botao SomMundo DESATIVAR">
+            <sub-events>
+                <event-block sid="796961696644247">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="228267044818321" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="885820939942507" type="Touch">
+                            <param id="0" name="Object">BotaoSomMundo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="605076803433845" type="BotaoSomMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="327799394015670" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;MundoComSOM&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="220087548586092">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="382109216296161" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="862661789955444" type="Touch">
+                            <param id="0" name="Object">BotaoSomMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="387375870817598" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;MundoComSOM&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="655203530919435" type="BotaoSomMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="396175628763247" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="838718716442512" type="System">
+                            <param id="0" name="Variable">Som</param>
+                            <param id="1" name="Value">&quot;Desligado&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="258693157839728" type="BotaoSomMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="347475356297247" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="601797316500450">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="526989239313317" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="373837613062656" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ComSOM&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="321403551718368" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="436351014925144" title="Botao SomMundo ATIVAR">
+            <sub-events>
+                <event-block sid="601922749498655">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="648889002151067" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="780581393187366" type="Touch">
+                            <param id="0" name="Object">BotaoSomMundo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="286072404819903" type="BotaoSomMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="668299945393498" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;MundoSemSOM&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="512378088331959">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="331993858855788" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="471719176682328" type="Touch">
+                            <param id="0" name="Object">BotaoSomMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="556680965126014" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;MundoSemSOM&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="589156903123540" type="BotaoSomMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="107208576767710" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="285545273847591" type="System">
+                            <param id="0" name="Variable">Som</param>
+                            <param id="1" name="Value">&quot;Ligado&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="385493718877758" type="BotaoSomMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="968420825446985" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="960047110830895">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="212297010099009" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="724047022310616" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;SemSOM&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="311560656898342" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="913964090567175" title="Botao PausarMundo">
+            <sub-events>
+                <event-block sid="549748924448030">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="857810953794064" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="222132563316576" type="Touch">
+                            <param id="0" name="Object">BotaoPauseMundo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="739002222363312" type="BotaoPauseMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="507704324882322" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;PausarMundo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="800858830725126">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="419000077196154" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="156780814428959" type="Touch">
+                            <param id="0" name="Object">BotaoPauseMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="535004160315000" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PausarMundo&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="174109669979237" type="BotaoPauseMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="959786610611662" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="943304913269502" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Value">&quot;Parado&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="847050310272065" type="BotaoPauseMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="110792828777474" type="System">
+                            <param id="0" name="Time scale">0.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="980311786541990">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="630631591259131" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;TelaAbertura&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="22" name="Set paused" sid="872311705744831" type="Audio">
+                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="906887352837170">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="849232667721122" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="919272852416205" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Pausar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="366624466293629" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="177052102335199" title="Botao DespausarMundo">
+            <sub-events>
+                <event-block sid="623362602541420">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="454273768030827" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="501713004455555" type="Touch">
+                            <param id="0" name="Object">BotaoPauseMundo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="556319594724518" type="BotaoPauseMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="914513231551789" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;DespausarMundo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="107049942424960">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="626902727325818" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="580876569731480" type="Touch">
+                            <param id="0" name="Object">BotaoPauseMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="716291132114314" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;DespausarMundo&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="935925570100196" type="BotaoPauseMundo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="329277724170744" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="910109638255353" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Value">&quot;Rodando&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="930533664993030" type="BotaoPauseMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="633111626969242" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="366422027671127">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="932705677900664" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;TelaAbertura&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="22" name="Set paused" sid="198085764609219" type="Audio">
+                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="996059900143850">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="904825036106966" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="759773268592237" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Despausar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="991634285075482" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
