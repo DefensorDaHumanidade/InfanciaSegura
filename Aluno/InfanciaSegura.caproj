@@ -2483,6 +2483,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Doutor" sid="406344124502292">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970020808355041" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.40625" original-source="C:\Users\Alexandre\Desktop\Imagens\doutorlicensa.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
