@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoHospitalFase1</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="473457426884586">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="128286519503014" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="546886536738911" type="System">
+                    <param id="0" name="Variable">GeneroPersonagem</param>
+                    <param id="1" name="Value">&quot;Masculino&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="907247261808644" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Value">&quot;Feminino&quot;</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="872483836103399" type="System">
+                    <param id="0" name="Width">500</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="421654281346139" type="System">
+                    <param id="0" name="X">100</param>
+                </action>
+                <action id="9" name="Set scale" sid="323885962142103" type="DoutorImagem">
+                    <param id="0" name="Scale">0.5</param>
+                </action>
+                <action id="9" name="Set scale" sid="383496953845426" type="CorpoMasculino">
+                    <param id="0" name="Scale">0.8</param>
+                </action>
+                <action id="9" name="Set scale" sid="185976690106909" type="PartesCorpo">
+                    <param id="0" name="Scale">0.13</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="575251309874380">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="775040754319874" type="System">
+                    <param id="0" name="First value">distance(PartesCorpo.X, PartesCorpo.Y, CorpoMasculino.X, CorpoMasculino.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="1" name="Drop" sid="709079060337515" type="PartesCorpo" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

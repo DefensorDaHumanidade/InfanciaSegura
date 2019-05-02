@@ -27,7 +27,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="23">TelaEscolhaAmigo</layout>
         <layout order="26">TelaPergunta</layout>
         <layout order="30">Mundo</layout>
-        <layout active="1" order="32">Hospital</layout>
+        <layout order="32">Hospital</layout>
+        <layout active="1" order="34">HospitalFase1</layout>
+        <layout order="36">TelaEntrarMundo</layout>
         <event-sheet order="1">Global</event-sheet>
         <event-sheet order="2">EventoSimEncontrado</event-sheet>
         <event-sheet order="7">EventoVerificao</event-sheet>
@@ -44,6 +46,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="29">EventoEntrarMundo</event-sheet>
         <event-sheet order="31">EventoMundo</event-sheet>
         <event-sheet order="33">EventoHospital</event-sheet>
+        <event-sheet order="35">EventoHospitalFase1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -136,5 +139,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Estetoscopio/" />
         <folder expanded="1" path="animation-folder/Computador/" />
         <folder expanded="1" path="animation-folder/Doutor/" />
+        <folder expanded="1" path="animation-folder/DoutorImagem/" />
+        <folder expanded="1" path="animation-folder/CorpoMasculino/" />
+        <folder expanded="1" path="animation-folder/PartesCorpo/" />
+        <folder expanded="1" path="animation-folder/CaixaDialogoMundo2/" />
+        <folder expanded="1" path="animation-folder/CorpoFeminino/" />
     </folders-expanded>
 </c2uistate>

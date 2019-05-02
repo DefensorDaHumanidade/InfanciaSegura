@@ -25,6 +25,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -2486,8 +2487,76 @@
         <object-type name="Doutor" sid="406344124502292">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970020808355041" speed="5">
-                    <frame duration="1" hotspotX="0.52381" hotspotY="0.40625" original-source="C:\Users\Alexandre\Desktop\Imagens\doutorlicensa.png" />
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970020808355041" speed="5">
+                    <frame duration="1" hotspotX="0.581197" hotspotY="0.402715" original-source="C:\Users\Alexandre\Desktop\Imagens\doutorlicensa.png" />
+                    <frame duration="1" hotspotX="0.486842" hotspotY="0.394191" />
+                    <frame duration="1" hotspotX="0.496063" hotspotY="0.438679" />
+                    <frame duration="1" hotspotX="0.477273" hotspotY="0.432558" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DoutorImagem" sid="314991043482229">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903227048184277" speed="5">
+                    <frame duration="1" hotspotX="0.478827" hotspotY="0.492021" />
+                    <frame duration="1" hotspotX="0.475" hotspotY="0.535897" />
+                    <frame duration="1" hotspotX="0.496711" hotspotY="0.533854" />
+                    <frame duration="1" hotspotX="0.492908" hotspotY="0.524194" />
+                    <frame duration="1" hotspotX="0.459732" hotspotY="0.526738" />
+                    <frame duration="1" hotspotX="0.47651" hotspotY="0.526992" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoHospitalFase1" sid="905855179546473">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="353719069838669">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="CorpoMasculino" sid="849359057495615">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573365344354036" speed="5">
+                    <frame duration="1" hotspotX="0.445783" hotspotY="0.320442" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PartesCorpo" sid="709909978530876">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="495578190697051">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870269241990260" speed="5">
+                    <frame duration="1" hotspotX="0.501636" hotspotY="0.379518" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextoDialogoHospitalFase1" sid="919652113998537">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CaixaDialogoMundo2" sid="958827122262414">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408110757411542" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\caixaDialogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CorpoFeminino" sid="115364324996016">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861653689005888" speed="5">
+                    <frame duration="1" hotspotX="0.500404" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2513,6 +2582,7 @@
         <layout>TelaEntrarMundo.xml</layout>
         <layout>Mundo.xml</layout>
         <layout>Hospital.xml</layout>
+        <layout>HospitalFase1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
@@ -2535,6 +2605,7 @@
         <event-sheet>EventoEntrarMundo.xml</event-sheet>
         <event-sheet>EventoMundo.xml</event-sheet>
         <event-sheet>EventoHospital.xml</event-sheet>
+        <event-sheet>EventoHospitalFase1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />

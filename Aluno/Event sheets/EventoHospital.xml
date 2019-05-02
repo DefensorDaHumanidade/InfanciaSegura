@@ -829,10 +829,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Move to layer" sid="633436219456553" type="Amiga">
+                        <action disabled="1" id="-26" name="Move to layer" sid="633436219456553" type="Amiga">
                             <param id="0" name="Layer">3</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="370312963667743" type="Menino">
+                        <action disabled="1" id="-26" name="Move to layer" sid="370312963667743" type="Menino">
                             <param id="0" name="Layer">4</param>
                         </action>
                     </actions>
@@ -851,10 +851,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Move to layer" sid="753134197398932" type="Amiga">
+                        <action disabled="1" id="-26" name="Move to layer" sid="753134197398932" type="Amiga">
                             <param id="0" name="Layer">4</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="728806556110081" type="Menino">
+                        <action disabled="1" id="-26" name="Move to layer" sid="728806556110081" type="Menino">
                             <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
@@ -873,10 +873,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Move to layer" sid="626918343423338" type="Amiga">
+                        <action disabled="1" id="-26" name="Move to layer" sid="626918343423338" type="Amiga">
                             <param id="0" name="Layer">3</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="585738858717705" type="Menina">
+                        <action disabled="1" id="-26" name="Move to layer" sid="585738858717705" type="Menina">
                             <param id="0" name="Layer">4</param>
                         </action>
                     </actions>
@@ -895,10 +895,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Move to layer" sid="104239424656988" type="Amiga">
+                        <action disabled="1" id="-26" name="Move to layer" sid="104239424656988" type="Amiga">
                             <param id="0" name="Layer">4</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="201593479969162" type="Menina">
+                        <action disabled="1" id="-26" name="Move to layer" sid="201593479969162" type="Menina">
                             <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
