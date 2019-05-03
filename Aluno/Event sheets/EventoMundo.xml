@@ -11,7 +11,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="959636680119971" type="System">
                     <param id="0" name="Variable">GeneroPersonagem</param>
-                    <param id="1" name="Value">&quot;Masculino&quot;</param>
+                    <param id="1" name="Value">&quot;Feminino&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="429964709853255" type="System">
                     <param id="0" name="Variable">Amigo</param>
@@ -1143,7 +1143,9 @@
                                 <action id="5" name="Set frame" sid="665449620442248" type="BotaoSetaCima">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="361225821469510" type="Menina" />
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="361225821469510" type="Menina">
+                                    <param id="0" name="Control">2</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="955493792404710" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Norte&quot;</param>
@@ -1187,7 +1189,9 @@
                                 <action id="5" name="Set frame" sid="755783933573344" type="BotaoSetaBaixo">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="718820158961301" type="Menina" />
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="725183012791906" type="Menina">
+                                    <param id="0" name="Control">3</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="383832762086879" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Sul&quot;</param>
@@ -1231,7 +1235,9 @@
                                 <action id="5" name="Set frame" sid="325821495813965" type="BotaoSetaDireita">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="942794221384409" type="Menina" />
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="276402858668364" type="Menina">
+                                    <param id="0" name="Control">1</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="579221715383876" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Leste&quot;</param>
@@ -1275,7 +1281,9 @@
                                 <action id="5" name="Set frame" sid="982888025878824" type="BotaoSetaEsquerda">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="297892708089392" type="Menina" />
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="235730932308626" type="Menina">
+                                    <param id="0" name="Control">0</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="523051809489754" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Oeste&quot;</param>

@@ -28,7 +28,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="26">TelaPergunta</layout>
         <layout order="30">Mundo</layout>
         <layout order="32">Hospital</layout>
-        <layout active="1" order="34">HospitalFase1</layout>
+        <layout order="34">HospitalFase1</layout>
         <layout order="36">TelaEntrarMundo</layout>
         <event-sheet order="1">Global</event-sheet>
         <event-sheet order="2">EventoSimEncontrado</event-sheet>
@@ -44,7 +44,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="27">EventoPergunta</event-sheet>
         <event-sheet order="28">EventoGeneroUsuario</event-sheet>
         <event-sheet order="29">EventoEntrarMundo</event-sheet>
-        <event-sheet order="31">EventoMundo</event-sheet>
+        <event-sheet active="1" order="31">EventoMundo</event-sheet>
         <event-sheet order="33">EventoHospital</event-sheet>
         <event-sheet order="35">EventoHospitalFase1</event-sheet>
     </open-tabs>
