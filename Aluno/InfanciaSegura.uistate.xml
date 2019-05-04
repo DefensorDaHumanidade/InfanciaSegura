@@ -144,5 +144,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/PartesCorpo/" />
         <folder expanded="1" path="animation-folder/CaixaDialogoMundo2/" />
         <folder expanded="1" path="animation-folder/CorpoFeminino/" />
+        <folder expanded="1" path="animation-folder/AmigaExpressoes/" />
+        <folder expanded="1" path="animation-folder/AmigoExpressoes/" />
+        <folder expanded="1" path="animation-folder/BotaoJogarMundo/" />
     </folders-expanded>
 </c2uistate>

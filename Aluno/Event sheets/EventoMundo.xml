@@ -11,11 +11,11 @@
             <actions>
                 <action id="-9" name="Set value" sid="959636680119971" type="System">
                     <param id="0" name="Variable">GeneroPersonagem</param>
-                    <param id="1" name="Value">&quot;Feminino&quot;</param>
+                    <param id="1" name="Value">&quot;Masculino&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="429964709853255" type="System">
                     <param id="0" name="Variable">Amigo</param>
-                    <param id="1" name="Value">&quot;Feminino&quot;</param>
+                    <param id="1" name="Value">&quot;Masculino&quot;</param>
                 </action>
                 <action id="-28" name="Set canvas size" sid="208664411364451" type="System">
                     <param id="0" name="Width">500</param>
@@ -86,6 +86,7 @@
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="466248525439648" type="Amiga" />
+                <action id="-9" name="Destroy" sid="615311788747314" type="AmigaExpressoes" />
                 <action id="9" name="Set scale" sid="176300024378699" type="Amigo">
                     <param id="0" name="Scale">0.07</param>
                 </action>
@@ -105,6 +106,7 @@
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="326613237583017" type="Amigo" />
+                <action id="-9" name="Destroy" sid="582555693599545" type="AmigoExpressoes" />
                 <action id="9" name="Set scale" sid="113102370270611" type="Amiga">
                     <param id="0" name="Scale">0.07</param>
                 </action>
@@ -112,53 +114,838 @@
         </event-block>
         <event-group description="" sid="533212394322623" title="Apresentacao Mundo">
             <sub-events>
-                <event-block disabled="1" sid="640426673205851">
+                <event-block sid="640426673205851">
                     <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="755155006157621" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="418732631398537" type="CaixaDialogoMundo">
-                            <param id="0" name="X">Menino.X</param>
-                            <param id="1" name="Y">Menino.Y+30</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="715978770925117" type="TextoDialogoMundo">
-                            <param id="0" name="X">CaixaDialogoMundo.X-CaixaDialogoMundo.Width/2+10</param>
-                            <param id="1" name="Y">CaixaDialogoMundo.Y+10</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="517507369471381">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="621928914227295" type="System" />
-                        <condition id="-14" name="Compare variable" sid="425670979813921" type="System">
-                            <param id="0" name="Variable">GeneroPersonagem</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Masculino&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="232461746420138" type="Camera">
-                            <param id="0" name="X">lerp(Self.X, Menino.X, 0.03)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Menino.Y, 0.03)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="598053797710991">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="242533124614668" type="System" />
-                        <condition id="-14" name="Compare variable" sid="475466126644590" type="System">
+                        <condition id="-4" name="Trigger once while true" sid="616608692545599" type="System" />
+                        <condition id="-14" name="Compare variable" sid="735731757863915" type="System">
                             <param id="0" name="Variable">GeneroPersonagem</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Feminino&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="321200889028687" type="Camera">
-                            <param id="0" name="X">lerp(Self.X, Menina.X, 0.03)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Menina.Y, 0.03)</param>
+                        <action id="-3" name="Set position" sid="224280701765551" type="Camera">
+                            <param id="0" name="X">Menina.X</param>
+                            <param id="1" name="Y">Menina.Y</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="177774126313695" type="Menina">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="999124080494023">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="612159988995266" type="System" />
+                        <condition id="-14" name="Compare variable" sid="130906094906620" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="757935138004392" type="Camera">
+                            <param id="0" name="X">Menino.X</param>
+                            <param id="1" name="Y">Menino.Y</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="274353337651043" type="Menino">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="230766950229526" title="Máquina de Escrever -DialogoMundo- Introducao">
+                    <sub-events>
+                        <event-block sid="397339927325586">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="438473862844751" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="715904920235957" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="320384729984818" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="948188162878071" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="757776538092704" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="513625878990409" type="AmigaExpressoes">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="374143715791840" type="AmigoExpressoes">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="964352494286337">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="728696899800958" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundo/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="231338435933992" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="298676811822341" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoMundo/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="772500374295786" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="258502801239112">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="557397856499896" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundo/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="621740613455110" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="317527496879358" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;Hospital&quot;</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Set value" sid="860250653431393" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;LAN&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="897195147616225" type="System">
+                                    <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="877247871591003" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Introducao&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="885625371045545" title="Botao ProximoMundo">
+                    <sub-events>
+                        <event-block sid="414960999732334">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="463763970823662" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="137409046752576" type="Touch">
+                                    <param id="0" name="Object">BotaoProximoMundo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="642885106297091" type="BotaoProximoMundo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="546898026315643" type="Audio">
+                                    <param id="0" name="Audio file">ApertarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="763104270929051" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Mundo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="722553401281772">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="730124981342090" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="576131741072696" type="Touch">
+                                    <param id="0" name="Object">BotaoProximoMundo</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="376833404301269" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Mundo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="910504813045284" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="680860174883564" type="BotaoProximoMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action disabled="1" id="22" name="Set paused" sid="575714736961610" type="Audio">
+                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="817011869449232" type="Audio">
+                                    <param id="0" name="Audio file">SoltarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="777507276464551" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="279466175169631">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="596095239570003" type="System">
+                                            <param id="0" name="Variable">DialogoMundo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Hospital&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="182808654829673" type="System">
+                                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Hospital&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="780549644318966" type="System">
+                                            <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="434556998635679">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="482443555630613" type="System">
+                                            <param id="0" name="Variable">DialogoMundo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Delegacia&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="142984151028006" type="System">
+                                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Delegacia&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="169827141320161" type="System">
+                                            <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="763764211607612">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="125925892594966" type="System">
+                                            <param id="0" name="Variable">DialogoMundo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Escola&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="652512798746530" type="System">
+                                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Escola&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="806494479867509" type="System">
+                                            <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="123590997754683">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="320079379426428" type="System">
+                                            <param id="0" name="Variable">DialogoMundo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;LAN&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="557174895317501" type="System">
+                                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- LAN&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="823383894554572" type="System">
+                                            <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="825069158704563">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="553094620684962" type="System">
+                                            <param id="0" name="Variable">DialogoMundo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Instrucoes&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="297357526371810" type="System">
+                                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Instrucoes&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="193004319365708" type="System">
+                                            <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                        <event-block sid="585505146636015">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="179795711415671" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="472841405349782" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Mundo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="104179544510818" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="713837361686099" type="BotaoProximoMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="699191992189512" title="Máquina de Escrever -DialogoMundo- Hospital">
+                    <sub-events>
+                        <event-block sid="527883084259733">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="505822423123051" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="271334917760418" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="241475144533567" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="953997421657772" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="881570486582865" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="776171726391302" type="AmigaExpressoes">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="142136247477073" type="AmigoExpressoes">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="230780165674954">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="547893462192617" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoHospital/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="378190546253595" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="696997927810662" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoMundoHospital/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="789208096833917" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X, 1060, 0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 400, 0.03)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="837444117144120" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="885497708800848">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="776779511056787" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoHospital/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="781309497840124" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="518548162038337" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;Delegacia&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="771807591327607" type="System">
+                                    <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="191844050434247" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Hospital&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="273493772639677" title="Máquina de Escrever -DialogoMundo- Delegacia">
+                    <sub-events>
+                        <event-block sid="256045677731316">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="106541913962135" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="238677684321007" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="415089310224202" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="855042998682445" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="933085296108151" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="340015940376788" type="AmigaExpressoes">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="846217333307839" type="AmigoExpressoes">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="348951192351392">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="208575192462567" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoDelegacia/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="436604856166935" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="464453672990700" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoMundoDelegacia/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="311122128059568" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X, 1260, 0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 400, 0.03)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="220888304406544" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="780834610273993">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="760003072917060" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoDelegacia/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="622106667116041" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="982676936532606" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;Escola&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="172426135272155" type="System">
+                                    <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="390661947801317" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Delegacia&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="852007937744422" title="Máquina de Escrever -DialogoMundo- Escola">
+                    <sub-events>
+                        <event-block sid="677892842451780">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="344348215313811" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="588827679323522" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="488280713388254" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="206685218744600" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="807190679350383" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="151991979520177" type="AmigaExpressoes">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="717769778682098" type="AmigoExpressoes">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="300963793311573">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="459023668048135" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoEscola/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="953467963259993" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="775342147945426" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoMundoEscola/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="431127651452520" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X, 1460, 0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 400, 0.03)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="668446034772471" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="255417960303137">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="840918190877697" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoEscola/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="443121265548116" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="459099868166490" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;LAN&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="511221024767333" type="System">
+                                    <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="417052305119729" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Escola&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="412588557265111" title="Máquina de Escrever -DialogoMundo- LAN">
+                    <sub-events>
+                        <event-block sid="959370432955592">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="594722538346884" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="400761989545009" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="702910411721055" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="102206445574451" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="232111677175896" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="229203642118572" type="AmigaExpressoes">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="289530886819381" type="AmigoExpressoes">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="895524066934884">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="103683051860104" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoLAN/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="855075859576615" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="428983756699063" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoMundoLAN/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="418245209126110" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X, 1660, 0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 400, 0.03)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="537872841382673" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="661633533629128">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="684519622847113" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoLAN/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="676045395456731" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="377581706722742" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;Instrucoes&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="497622473762765" type="System">
+                                    <param id="0" name="Group name">&quot;Botao ProximoMundo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="851223236096642" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- LAN&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="562051199313733" title="Máquina de Escrever -DialogoMundo- Instrucoes">
+                    <sub-events>
+                        <event-block sid="253534839170307">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="779668430583789" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="281915261926639" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="333334709292936" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="315676851698540" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="505033668522462" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="657599563760341" type="AmigaExpressoes">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="250297586591989" type="AmigoExpressoes">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="158759831777340">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="199238658978337" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoInstrucoes/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="657649465570812" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="591105523538435" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoMundoInstrucoes/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="367853272011140" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X, 355, 0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 420, 0.03)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="722846169382643" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="647526551954102">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="186199764980036" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoMundoInstrucoes/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-15" name="Set visible" sid="387840497571532" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="458829530023455" type="BotaoJogarMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="528367108899927" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;Instrucoes&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="937738004432100" type="System">
+                                    <param id="0" name="Group name">&quot;Botao JogarMundo&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="731834245869821" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo- Instrucoes&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="991340575188993" title="Botao JogarMundo">
+                    <sub-events>
+                        <event-block sid="905515115294049">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="273639080192049" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="441969270712977" type="Touch">
+                                    <param id="0" name="Object">BotaoJogarMundo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="797299626658344" type="BotaoJogarMundo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="800005363901997" type="Audio">
+                                    <param id="0" name="Audio file">ApertarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="957556138880661" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;JogarMundo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="760413633517309">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="666391715669299" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="266861981484845" type="Touch">
+                                    <param id="0" name="Object">BotaoJogarMundo</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="301234751974688" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;JogarMundo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="613800294610543" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="983258621799966" type="BotaoJogarMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action disabled="1" id="22" name="Set paused" sid="369948873514272" type="Audio">
+                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="691039011985768" type="Audio">
+                                    <param id="0" name="Audio file">SoltarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="268027982984650" type="BotaoJogarMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="648999147971677" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="415107980724967" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="843242589055304" type="AmigaExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="567911753195448" type="AmigoExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="198654971444454" type="Menina">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="185743203139158" type="Menino">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="991193647401312" type="System">
+                                    <param id="0" name="Group name">&quot;Camera Seguir Personagem&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="960758927624454" type="System">
+                                    <param id="0" name="Group name">&quot;Botao JogarMundo&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                        <event-block sid="363256340426448">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="289371152457449" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="484784767669588" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;JogarMundo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="513558240228907" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="669830815768157" type="BotaoJogarMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" inactive="1" sid="443755461823418" title="Andar Menino">
@@ -530,6 +1317,7 @@
                         <action id="5" name="Set frame" sid="329891005532262" type="Amigo">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="159494996554750" type="Amigo" />
                     </actions>
                 </event-block>
                 <event-block sid="417924616773575">
@@ -571,6 +1359,7 @@
                         <action id="5" name="Set frame" sid="676361994857467" type="Amigo">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="977347059326574" type="Amigo" />
                     </actions>
                 </event-block>
                 <event-block sid="239191244834735">
@@ -622,10 +1411,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="696219546527251" type="Amigo">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">2</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="254542246084489" type="Menino">
-                            <param id="0" name="Layer">4</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -666,10 +1455,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="936632024641278" type="Amigo">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">2</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="956371115084086" type="Menina">
-                            <param id="0" name="Layer">4</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -688,10 +1477,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="720873506293326" type="Amigo">
-                            <param id="0" name="Layer">4</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="248735389265803" type="Menina">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -738,6 +1527,7 @@
                         <action id="5" name="Set frame" sid="797632219466528" type="Amiga">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="101460261683736" type="Amiga" />
                     </actions>
                 </event-block>
                 <event-block sid="331897388718653">
@@ -779,6 +1569,7 @@
                         <action id="5" name="Set frame" sid="908592955273977" type="Amiga">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="946910605003375" type="Amiga" />
                     </actions>
                 </event-block>
                 <event-block sid="992388768680110">
@@ -830,10 +1621,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="957619984166907" type="Amiga">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">2</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="253090750276063" type="Menino">
-                            <param id="0" name="Layer">4</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -852,10 +1643,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="560457472134235" type="Amiga">
-                            <param id="0" name="Layer">4</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="474961896931275" type="Menino">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -874,10 +1665,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="672880668745925" type="Amiga">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">2</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="838799268270128" type="Menina">
-                            <param id="0" name="Layer">4</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -896,46 +1687,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="720167285494500" type="Amiga">
-                            <param id="0" name="Layer">4</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="647471198001348" type="Menina">
-                            <param id="0" name="Layer">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" disabled="1" sid="581505843207428" title="Cenario">
-            <sub-events>
-                <event-block disabled="1" sid="689289267912537">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="507278064642449" type="CidadeExteriorInferior">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">Menino.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-26" name="Move to layer" sid="620810203050016" type="CidadeExteriorInferior">
-                            <param id="0" name="Layer">3</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="798794370137408" type="Menino">
                             <param id="0" name="Layer">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="710246047217560">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="374863677562430" type="CidadeExteriorInferior">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">Menino.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-26" name="Move to layer" sid="429161088807016" type="CidadeExteriorInferior">
-                            <param id="0" name="Layer">2</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="965825269303208" type="Menino">
-                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1348,6 +2103,60 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="242867049982098">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="104890573189537" type="Porta">
+                            <param id="0" name="Object">Menino</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="908194382537460" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Delegacia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="955302445048232" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-DelegaciaInacabada&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="957966644037235">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="478838389491361" type="Porta">
+                            <param id="0" name="Object">Menino</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="304661187128442" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Escola&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="525205396505466" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-EscolaInacabada&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="727518434721022">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="118246733097520" type="Porta">
+                            <param id="0" name="Object">Menino</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="992987367500917" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;LAN&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="928419815948653" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-LANInacabada&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="531613705457574">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="995330254318342" type="Porta">
@@ -1360,10 +2169,406 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-3" name="Set position" sid="780487419639109" type="PretoMundo">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="210087500401270" type="PretoMundo" />
+                        <action id="-16" name="Wait" sid="382578565529716" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="482611583075020" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="410613395002059" type="System">
                             <param id="0" name="Layout">Hospital</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="305890003603020">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="234337176444659" type="Porta">
+                            <param id="0" name="Object">Menina</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="226654053563980" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Delegacia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="790300635969776" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-DelegaciaInacabada&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="678195376846411">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="247863636453693" type="Porta">
+                            <param id="0" name="Object">Menina</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="297135993410898" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Escola&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="314520473336824" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-EscolaInacabada&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="436889749193416">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="198786959205548" type="Porta">
+                            <param id="0" name="Object">Menina</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="602016339385571" type="Porta">
+                            <param id="0" name="Instance variable">Local</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;LAN&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="693582563998021" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-LANInacabada&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="533147944772939" title="Camera Seguir Personagem">
+            <sub-events>
+                <event-block sid="517507369471381">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="621928914227295" type="System" />
+                        <condition id="-14" name="Compare variable" sid="425670979813921" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="232461746420138" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menino.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menino.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="598053797710991">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="242533124614668" type="System" />
+                        <condition id="-14" name="Compare variable" sid="475466126644590" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="321200889028687" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menina.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menina.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="624217499436220" title="Máquina de Escrever -DialogoMundo-DelegaciaInacabada">
+            <sub-events>
+                <event-block sid="696740790164950">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="424655067984671" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="722762565712536" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="214471091369682" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="755818428868645" type="TextoDialogoMundo">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="821051379155260" type="TextoDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="441136922213918" type="CaixaDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="735545837783513" type="AmigaExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="199046982057317" type="AmigoExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="341479687018510" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="667547151590418" type="AmigoExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="655744395607876">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="504043455814364" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoDelegaciaFechada/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="956191994661912" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="751830266044440" type="TextoDialogoMundo">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoDelegaciaFechada/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="741105669178680" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="359771835382623">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="556332314795742" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoDelegaciaFechada/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="895304264177240">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="264834193723339" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="368764178507080" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="338725005131773" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="282443760977745" type="AmigaExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="309576696655638" type="AmigoExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="864766214174305" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-DelegaciaInacabada&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="939234209345820" title="Máquina de Escrever -DialogoMundo-EscolaInacabada">
+            <sub-events>
+                <event-block sid="542527172782101">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="552168987252544" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="460100833337385" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="843571107345326" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="554558702030672" type="TextoDialogoMundo">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="924472419862361" type="TextoDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="624352063396512" type="CaixaDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="811617274944780" type="AmigaExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="611102969177198" type="AmigoExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="579967190258320" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="661430961654154" type="AmigoExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363912172733245">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="886148542037526" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoEscolaFechada/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="630989965371223" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="415737680218849" type="TextoDialogoMundo">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoEscolaFechada/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="724079607713377" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="404096333570326">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="454338216360820" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoEscolaFechada/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="679684024053517">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="603841016448718" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="157619517425232" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="408165977654161" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="359791010987487" type="AmigaExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="218092497711561" type="AmigoExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="754990793817869" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-EscolaInacabada&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="819549518594112" title="Máquina de Escrever -DialogoMundo-LANInacabada">
+            <sub-events>
+                <event-block sid="184034911621364">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="845380787212695" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="624818012851809" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="622886127970642" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="508585711517091" type="TextoDialogoMundo">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="903287164104761" type="TextoDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="418708584596262" type="CaixaDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="249492539821205" type="AmigaExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="817782970312804" type="AmigoExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="395375654406930" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="540386574188659" type="AmigoExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="880855564287117">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="830654439647190" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoLANFechada/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="670488803464645" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="441304648613758" type="TextoDialogoMundo">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoLANFechada/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="907682342435810" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="196855884145317">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="684127579957207" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoLANFechada/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="151224714800803">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="276808609404416" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="124461316030895" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="404554183194825" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="130189173239970" type="AmigaExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="320700260229148" type="AmigoExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="860821217447914" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoMundo-LANInacabada&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

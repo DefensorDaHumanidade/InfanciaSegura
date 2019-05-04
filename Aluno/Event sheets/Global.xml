@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="DialogoMundo" sid="441580730180140" static="0" type="text"></variable>
         <variable constant="0" name="GeneroPersonagem" sid="946831478982019" static="0" type="text"></variable>
         <variable constant="0" name="Amigo" sid="838606600562110" static="0" type="text"></variable>
         <variable constant="0" name="Atualizar" sid="967928737155972" static="0" type="text"></variable>
@@ -312,6 +313,17 @@
                         <action id="2" name="Stop" sid="870227522402634" type="BotaoJogarMenor" />
                     </actions>
                 </event-block>
+                <event-block sid="451802917857080">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="880667554989944" type="BotaoJogarMundo" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="135650327922084" type="BotaoJogarMundo" />
+                        <action id="9" name="Set scale" sid="348037547089952" type="BotaoJogarMundo">
+                            <param id="0" name="Scale">0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="485869245125721">
                     <conditions>
                         <condition id="-18" name="On created" sid="355460949196648" type="BotaoSetaCima" />
@@ -364,6 +376,28 @@
                         <action id="2" name="Stop" sid="918028919696455" type="BotaoProximoMundo" />
                         <action id="9" name="Set scale" sid="928068055951895" type="BotaoProximoMundo">
                             <param id="0" name="Scale">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891215277066925">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="258140623261644" type="AmigaExpressoes" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="937741480557891" type="AmigaExpressoes" />
+                        <action id="9" name="Set scale" sid="468373403551174" type="AmigaExpressoes">
+                            <param id="0" name="Scale">0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="115812829387397">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="579844262935397" type="AmigoExpressoes" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="308053089787669" type="AmigoExpressoes" />
+                        <action id="9" name="Set scale" sid="350509923312931" type="AmigoExpressoes">
+                            <param id="0" name="Scale">0.3</param>
                         </action>
                     </actions>
                 </event-block>

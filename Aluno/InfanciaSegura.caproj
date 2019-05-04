@@ -2183,6 +2183,11 @@
         </object-type>
         <object-type name="CaixaDialogoMundo" sid="171837841070520">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="807076418779974">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470615193391911" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\caixaDialogo.png" />
@@ -2191,6 +2196,11 @@
         </object-type>
         <object-type name="TextoDialogoMundo" sid="147378451151484">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="613015011673492">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="PlacaMUNDO" sid="523878240353503">
             <plugin id="Sprite" />
@@ -2557,6 +2567,117 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861653689005888" speed="5">
                     <frame duration="1" hotspotX="0.500404" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmigaExpressoes" sid="307285325604533">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="250477583274931">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="763217548862133" speed="5">
+                    <frame duration="1" hotspotX="0.455172" hotspotY="0.526316">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.42069" hotspotY="0.514354">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.411576" hotspotY="0.497608">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.417445" hotspotY="0.507109">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.398089" hotspotY="0.491726">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmigoExpressoes" sid="261404017226682">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="610845800207929">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338044713143692" speed="5">
+                    <frame duration="1" hotspotX="0.462329" hotspotY="0.530266">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.400685" hotspotY="0.513317">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.587156" hotspotY="0.507317" />
+                    <frame duration="1" hotspotX="0.421384" hotspotY="0.47619">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.446602" hotspotY="0.494033">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoJogarMundo" sid="810518172552684">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="367718552017080">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="272510309350525" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoJogarSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoJogarPressionado.png" />
                 </animation>
             </animation-folder>
         </object-type>

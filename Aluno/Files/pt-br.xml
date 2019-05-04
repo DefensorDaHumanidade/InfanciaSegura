@@ -21,4 +21,13 @@
     <TextoDialogoMeninaESCOLHAAMIGO>Oi, eu sou a Ana, clique no botão MENINA se quiser me escolher para ser sua amiguinha virtual.</TextoDialogoMeninaESCOLHAAMIGO>
     <TextoDialogoMeninoESCOLHAAMIGO>Não, me escolhe, me escolhe. Clica no botão MENINO, é um botão muito mais bonito.</TextoDialogoMeninoESCOLHAAMIGO>
     <TextoDialogoApresentacao>Ebaa, gostei muito de você ter me escolhido. Será assim que você verá meu personagem no jogo. Clique no botão verde JOGAR para que eu possa lhe mostrar um mundo inteiro de alegria e diversão.</TextoDialogoApresentacao>
+    <TextoDialogoMundo>Eu lhe dou as boas-vindas a cidade Infância Segura. Aqui, você pode explorar uma enorme quantidade de locais super divertidos.</TextoDialogoMundo>
+    <TextoDialogoMundoHospital>No hospital, nós podemos nos encontrar com o doutor. Onde ele nós ensinará muito sobre nós mesmos, explicando sobre as nossas partes do corpo e coisas do tipo.</TextoDialogoMundoHospital>
+    <TextoDialogoMundoDelegacia>Lá na delegacia, trabalha o policial. Ele irá nos ensinar várias maneiras de nós defendermos, como por exemplo, ligar para o Disque 100.</TextoDialogoMundoDelegacia>
+    <TextoDialogoMundoEscola>Depois tem a escola, lugar super divertido onde a professora irá nos dizer de onde vêm os bebês. Eu acho que eles vêm da cegonha, mas eu nunca vi uma cegonha.</TextoDialogoMundoEscola>
+    <TextoDialogoMundoLAN>Por último, ainda tem a Lan House, um lugar com vários computadores conectados a internet. Lá, o dono da Lan House, irá nos ensinar sobre os perigos que existem na internet e como nos protegermos deles.</TextoDialogoMundoLAN>
+    <TextoDialogoMundoInstrucoes>Escolha por onde quiser começar. Para entrar nos locais, basta apenas se aproximar da frente da porta. Lembre-se de usar as setinhas para movimentar seu personagem.</TextoDialogoMundoInstrucoes>
+    <TextoDialogoDelegaciaFechada>Ah, infelizmente a delegacia está fechada. Toque em qualquer lugar da tela para irmos para outro lugar.</TextoDialogoDelegaciaFechada>
+    <TextoDialogoEscolaFechada>Ah, infelizmente a escola está em reforma. Toque em qualquer lugar da tela para irmos para outro lugar.</TextoDialogoEscolaFechada>
+    <TextoDialogoLANFechada>Ah, infelizmente a internte da Lan House está fora do ar. Toque em qualquer lugar da tela para irmos para outro lugar.</TextoDialogoLANFechada>
 </textos>
