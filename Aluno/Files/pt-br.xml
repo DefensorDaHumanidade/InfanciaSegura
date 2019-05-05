@@ -30,4 +30,7 @@
     <TextoDialogoDelegaciaFechada>Ah, infelizmente a delegacia está fechada. Toque em qualquer lugar da tela para irmos para outro lugar.</TextoDialogoDelegaciaFechada>
     <TextoDialogoEscolaFechada>Ah, infelizmente a escola está em reforma. Toque em qualquer lugar da tela para irmos para outro lugar.</TextoDialogoEscolaFechada>
     <TextoDialogoLANFechada>Ah, infelizmente a internte da Lan House está fora do ar. Toque em qualquer lugar da tela para irmos para outro lugar.</TextoDialogoLANFechada>
+    <TextoDialogoHospitalIntroducao>Olá doutor, o que o senhor está fazendo?</TextoDialogoHospitalIntroducao>
+    <TextoDialogoHospitalResposta>Ah, olá crianças. Eu estou apenas organizando um mural sobre as partes do corpo. Vocês gostariam de ver?</TextoDialogoHospitalResposta>
+    <TextoDialogoHospitalEscolhaFase>Olá novamente, qual das três fazes você gostaria de jogar?</TextoDialogoHospitalEscolhaFase>
 </textos>

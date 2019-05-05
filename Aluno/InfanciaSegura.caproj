@@ -2507,6 +2507,11 @@
         </object-type>
         <object-type name="DoutorImagem" sid="314991043482229">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="191499108988635">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903227048184277" speed="5">
                     <frame duration="1" hotspotX="0.478827" hotspotY="0.492021" />
@@ -2554,7 +2559,7 @@
         <object-type name="TextoDialogoHospitalFase1" sid="919652113998537">
             <plugin id="Text" />
         </object-type>
-        <object-type name="CaixaDialogoMundo2" sid="958827122262414">
+        <object-type name="CaixaDialogoHospitalFase1" sid="958827122262414">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408110757411542" speed="5">
@@ -2678,6 +2683,98 @@
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="272510309350525" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoJogarSolto.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoJogarPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FundoAmbiente" sid="144528759836025">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="581611746517661" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\preto.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoNaoMundo" sid="470238445027744">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="868764999443034">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="201106076234226">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235011530323932" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoNaoSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508065" original-source="C:\Users\Alexandre\Desktop\BotaoNaoPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSimMundo" sid="206000981286864">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="752352830606871">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="396423899592051">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938216110846736" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoSimSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508065" original-source="C:\Users\Alexandre\Desktop\BotaoSimPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PrimeiraFase" sid="362429212829671">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="694003136633247">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="352300157682831" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\PrimeiraSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\PrimeiraPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SegundaFase" sid="949389556997069">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="619460426638263">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="489211315959153" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\SegundaSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\SegundaPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TerceiraFase" sid="746710816446130">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="616692430170386">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="978767571197442" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\TerceiraSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\TerceiraPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Saida" sid="201090868951987">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596772823672103" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

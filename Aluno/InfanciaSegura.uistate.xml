@@ -10,43 +10,43 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">TelaCarregamento</layout>
-        <layout order="3">TelaInscrever</layout>
-        <layout order="4">TelaInscreverSenha</layout>
-        <layout order="5">TelaGeneroUsuario</layout>
-        <layout order="6">TelaInscreverTurma</layout>
-        <layout order="8">TelaInicial</layout>
-        <layout order="9">TelaSimEncontrado</layout>
-        <layout order="10">TelaErro</layout>
-        <layout order="11">TelaNaoEncontrado</layout>
-        <layout order="12">TelaAbertura</layout>
-        <layout order="13">TelaAcerto</layout>
-        <layout order="14">TelaGeneroPersonagem</layout>
-        <layout order="17">TelaAmigo</layout>
-        <layout order="20">TelaVerificacao</layout>
-        <layout order="23">TelaEscolhaAmigo</layout>
-        <layout order="26">TelaPergunta</layout>
-        <layout order="30">Mundo</layout>
-        <layout order="32">Hospital</layout>
-        <layout order="34">HospitalFase1</layout>
-        <layout order="36">TelaEntrarMundo</layout>
-        <event-sheet order="1">Global</event-sheet>
-        <event-sheet order="2">EventoSimEncontrado</event-sheet>
-        <event-sheet order="7">EventoVerificao</event-sheet>
-        <event-sheet order="15">EventoAbertura</event-sheet>
-        <event-sheet order="16">EventoAcerto</event-sheet>
-        <event-sheet order="18">EventoAmigo</event-sheet>
-        <event-sheet order="19">EventoGeneroPersonagem</event-sheet>
-        <event-sheet order="21">EventoInscreverTurma</event-sheet>
-        <event-sheet order="22">EventoCarregamento</event-sheet>
-        <event-sheet order="24">EventoEscolhaAmigo</event-sheet>
-        <event-sheet order="25">EventoNaoEncontrado</event-sheet>
-        <event-sheet order="27">EventoPergunta</event-sheet>
-        <event-sheet order="28">EventoGeneroUsuario</event-sheet>
-        <event-sheet order="29">EventoEntrarMundo</event-sheet>
-        <event-sheet active="1" order="31">EventoMundo</event-sheet>
-        <event-sheet order="33">EventoHospital</event-sheet>
-        <event-sheet order="35">EventoHospitalFase1</event-sheet>
+        <layout order="2">TelaInscrever</layout>
+        <layout order="3">TelaInscreverSenha</layout>
+        <layout order="4">TelaGeneroUsuario</layout>
+        <layout order="5">TelaInscreverTurma</layout>
+        <layout order="7">TelaInicial</layout>
+        <layout order="8">TelaSimEncontrado</layout>
+        <layout order="9">TelaErro</layout>
+        <layout order="10">TelaNaoEncontrado</layout>
+        <layout order="11">TelaAbertura</layout>
+        <layout order="12">TelaAcerto</layout>
+        <layout order="13">TelaGeneroPersonagem</layout>
+        <layout order="16">TelaAmigo</layout>
+        <layout order="19">TelaVerificacao</layout>
+        <layout order="22">TelaEscolhaAmigo</layout>
+        <layout order="25">TelaPergunta</layout>
+        <layout order="29">Mundo</layout>
+        <layout order="31">Hospital</layout>
+        <layout order="33">HospitalFase1</layout>
+        <layout order="35">TelaEntrarMundo</layout>
+        <layout order="36">TelaCarregamento</layout>
+        <event-sheet order="0">Global</event-sheet>
+        <event-sheet order="1">EventoSimEncontrado</event-sheet>
+        <event-sheet order="6">EventoVerificao</event-sheet>
+        <event-sheet order="14">EventoAbertura</event-sheet>
+        <event-sheet order="15">EventoAcerto</event-sheet>
+        <event-sheet order="17">EventoAmigo</event-sheet>
+        <event-sheet order="18">EventoGeneroPersonagem</event-sheet>
+        <event-sheet order="20">EventoInscreverTurma</event-sheet>
+        <event-sheet order="21">EventoCarregamento</event-sheet>
+        <event-sheet order="23">EventoEscolhaAmigo</event-sheet>
+        <event-sheet order="24">EventoNaoEncontrado</event-sheet>
+        <event-sheet order="26">EventoPergunta</event-sheet>
+        <event-sheet order="27">EventoGeneroUsuario</event-sheet>
+        <event-sheet order="28">EventoEntrarMundo</event-sheet>
+        <event-sheet active="1" order="30">EventoMundo</event-sheet>
+        <event-sheet order="32">EventoHospital</event-sheet>
+        <event-sheet order="34">EventoHospitalFase1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -142,10 +142,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DoutorImagem/" />
         <folder expanded="1" path="animation-folder/CorpoMasculino/" />
         <folder expanded="1" path="animation-folder/PartesCorpo/" />
-        <folder expanded="1" path="animation-folder/CaixaDialogoMundo2/" />
+        <folder expanded="1" path="animation-folder/CaixaDialogoHospitalFase1/" />
         <folder expanded="1" path="animation-folder/CorpoFeminino/" />
         <folder expanded="1" path="animation-folder/AmigaExpressoes/" />
         <folder expanded="1" path="animation-folder/AmigoExpressoes/" />
         <folder expanded="1" path="animation-folder/BotaoJogarMundo/" />
+        <folder expanded="1" path="animation-folder/FundoAmbiente/" />
+        <folder expanded="1" path="animation-folder/BotaoNaoMundo/" />
+        <folder expanded="1" path="animation-folder/BotaoSimMundo/" />
+        <folder expanded="1" path="animation-folder/PrimeiraFase/" />
+        <folder expanded="1" path="animation-folder/SegundaFase/" />
+        <folder expanded="1" path="animation-folder/TerceiraFase/" />
+        <folder expanded="1" path="animation-folder/Saida/" />
     </folders-expanded>
 </c2uistate>

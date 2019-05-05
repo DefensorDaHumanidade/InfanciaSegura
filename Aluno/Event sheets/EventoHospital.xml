@@ -24,6 +24,17 @@
                 <action id="-5" name="Scroll to X" sid="428562488476944" type="System">
                     <param id="0" name="X">100</param>
                 </action>
+                <action id="-9" name="Set value" sid="528566693339249" type="System">
+                    <param id="0" name="Variable">CenarioAnterior</param>
+                    <param id="1" name="Value">&quot;Hospital&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="586256097947441" type="System">
+                    <param id="0" name="Variable">IntroducaoMundo</param>
+                    <param id="1" name="Value">&quot;Introduzido&quot;</param>
+                </action>
+                <action id="-1" name="Set X" sid="513791040029364" type="SegundaFase">
+                    <param id="0" name="X">LayoutWidth/2.06</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="799069165820033">
@@ -86,6 +97,7 @@
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="182321706962984" type="Amiga" />
+                <action id="-9" name="Destroy" sid="667425730653595" type="AmigaExpressoes" />
                 <action id="9" name="Set scale" sid="905024283833309" type="Amigo">
                     <param id="0" name="Scale">0.07</param>
                 </action>
@@ -105,6 +117,7 @@
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="629921801200103" type="Amigo" />
+                <action id="-9" name="Destroy" sid="121588106243124" type="AmigoExpressoes" />
                 <action id="9" name="Set scale" sid="489052739137159" type="Amiga">
                     <param id="0" name="Scale">0.07</param>
                 </action>
@@ -112,53 +125,610 @@
         </event-block>
         <event-group description="" sid="233570247874313" title="Apresentacao Hospital">
             <sub-events>
-                <event-block disabled="1" sid="388395666373910">
+                <event-block any="1" sid="863779247344969">
                     <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="200478135472140" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="699338856423762" type="CaixaDialogoMundo">
-                            <param id="0" name="X">Menino.X</param>
-                            <param id="1" name="Y">Menino.Y+30</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="918067014586518" type="TextoDialogoMundo">
-                            <param id="0" name="X">CaixaDialogoMundo.X-CaixaDialogoMundo.Width/2+10</param>
-                            <param id="1" name="Y">CaixaDialogoMundo.Y+10</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="390046541688215">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="523015074459827" type="System" />
-                        <condition id="-14" name="Compare variable" sid="467564507841258" type="System">
-                            <param id="0" name="Variable">GeneroPersonagem</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        <condition id="-8" name="Compare two values" sid="965694062036781" type="System">
+                            <param id="0" name="First value">abs(distance(Doutor.X, Doutor.Y, Menina.X, Menina.Y))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">60</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="759802466765216" type="System">
+                            <param id="0" name="First value">abs(distance(Doutor.X, Doutor.Y, Menino.X, Menino.Y))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">60</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="375928170421718" type="Camera">
-                            <param id="0" name="X">lerp(Self.X, Menino.X, 0.03)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Menino.Y, 0.03)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="657005998923537">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="184395140411125" type="System">
+                                    <param id="0" name="Variable">Temporalizador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="633393983812058" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="549415164176703" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="206767460432692" type="System">
+                                    <param id="0" name="Variable">Temporalizador</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="378713281213160" type="System">
+                                    <param id="0" name="Group name">&quot;Relogio&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="380453234207406" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital- Introducao&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="723016813610225" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital- Introduzido&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="167147635148412">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="505313915932064" type="System" />
-                        <condition id="-14" name="Compare variable" sid="308950260039558" type="System">
-                            <param id="0" name="Variable">GeneroPersonagem</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Feminino&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="580504141106648" type="Camera">
-                            <param id="0" name="X">lerp(Self.X, Menina.X, 0.03)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Menina.Y, 0.03)</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" inactive="1" sid="909841885021160" title="Máquina de Escrever -DialogoHospital- Introducao">
+                    <sub-events>
+                        <event-block sid="391573196412446">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="298295868987403" type="System">
+                                    <param id="0" name="Variable">IntroducaoHospital</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;Zero&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="539807237175971" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="762552206183569" type="AmigaExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="964391458273512" type="AmigoExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="764971786384973" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital- Introducao&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="927435414053538">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="258009550887753" type="System" />
+                                <condition id="-14" name="Compare variable" sid="206799028403529" type="System">
+                                    <param id="0" name="Variable">IntroducaoHospital</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Zero&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="598671206061746" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="200168125508406" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="268680015600016" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="232327886197587" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="361497962539883" type="AmigaExpressoes">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="605218772774535" type="AmigoExpressoes">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="685883807019146" type="AmigaExpressoes">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="254661331674746" type="AmigoExpressoes">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="378977643788944" type="Menina">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="954723015523993" type="Menino">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="408118464807502">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="630529352052915" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalIntroducao/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="448529134992192" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="895313795042798" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalIntroducao/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="138978547957550" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="859211616976216">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="718103187621392" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalIntroducao/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="213397711534274" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="966909943940024" type="System">
+                                    <param id="0" name="Variable">DialogoMundo</param>
+                                    <param id="1" name="Value">&quot;RespostaDoutor&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="938109230450202" type="System">
+                                    <param id="0" name="Group name">&quot;Botao ProximoHospital&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="137628156964583" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital- Introducao&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="345637825278140" title="Botao ProximoHospital">
+                    <sub-events>
+                        <event-block sid="307386548140146">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="853265601202553" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="154855804056251" type="Touch">
+                                    <param id="0" name="Object">BotaoProximoMundo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="477151571156930" type="BotaoProximoMundo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="729318263277556" type="Audio">
+                                    <param id="0" name="Audio file">ApertarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="323169339674284" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Hospital&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="278747387729033">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="772369378383639" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="713964872829192" type="Touch">
+                                    <param id="0" name="Object">BotaoProximoMundo</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="402488207224064" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Hospital&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="577228216200218" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="985285367735805" type="BotaoProximoMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action disabled="1" id="22" name="Set paused" sid="632212486926993" type="Audio">
+                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="333940129925760" type="Audio">
+                                    <param id="0" name="Audio file">SoltarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="243530043176284" type="BotaoProximoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="871445196132167">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="639034332722737" type="System">
+                                            <param id="0" name="Variable">DialogoMundo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;RespostaDoutor&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="253536170878757" type="System">
+                                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital - Resposta&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="654042325536554" type="System">
+                                            <param id="0" name="Group name">&quot;Setas Menino Hospital&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="738506009410283" type="System">
+                                            <param id="0" name="Group name">&quot;Setas Menina Hospital&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="507965020074334" type="System">
+                                            <param id="0" name="Group name">&quot;Botao ProximoHospital&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                        <event-block sid="424914979444141">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="276501253810947" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="686346323144794" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Hospital&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="596285550733482" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="663818036300498" type="BotaoProximoMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="549557613054583" title="Botao Resposta Nao">
+                    <sub-events>
+                        <event-block sid="995079398765930">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="217745308673788" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="663527226167628" type="Touch">
+                                    <param id="0" name="Object">BotaoNaoMundo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="464079401034989" type="BotaoNaoMundo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="722996000332886" type="Audio">
+                                    <param id="0" name="Audio file">ApertarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="987169703786099" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;NaoHospital&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="864719714003474">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="269221433050992" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="524270601540479" type="Touch">
+                                    <param id="0" name="Object">BotaoNaoMundo</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="152323508011703" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;NaoHospital&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="229356997584376" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="561156869493305" type="BotaoNaoMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action disabled="1" id="22" name="Set paused" sid="950981546418251" type="Audio">
+                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="221937586146675" type="Audio">
+                                    <param id="0" name="Audio file">SoltarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="219750400311560" type="BotaoNaoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="176566327691774" type="BotaoSimMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="544460219588416" type="DoutorImagem">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="669977723887142" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="785147502390911" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="609418492383346" type="Menina">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="959721078740713" type="Menino">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="107039199717299" type="System">
+                                    <param id="0" name="Group name">&quot;Setas Menino Hospital&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="800127233641696" type="System">
+                                    <param id="0" name="Group name">&quot;Setas Menina Hospital&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="786851739298301" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Resposta Nao&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                        <event-block sid="643754882077243">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="585267519793652" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="539075769973419" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;NaoHospital&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="238378901958128" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="163082970550079" type="BotaoNaoMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="853642328032261" title="Botao Resposta Sim">
+                    <sub-events>
+                        <event-block sid="188523318861199">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="512379984893412" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="468577981727538" type="Touch">
+                                    <param id="0" name="Object">BotaoSimMundo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="566434493222239" type="BotaoSimMundo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="354169765084923" type="Audio">
+                                    <param id="0" name="Audio file">ApertarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="243280147081007" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;SimHospital&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="571793848168677">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="545144276215562" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="402518568889486" type="Touch">
+                                    <param id="0" name="Object">BotaoSimMundo</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="711062795137462" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;SimHospital&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="489533789214473" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="415798316696814" type="BotaoSimMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action disabled="1" id="22" name="Set paused" sid="553924743547125" type="Audio">
+                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="560836611771904" type="Audio">
+                                    <param id="0" name="Audio file">SoltarBotao</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="162995665637940" type="BotaoNaoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="291811354831689" type="BotaoSimMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="872860411067647" type="DoutorImagem">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="964823982172995" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="674498576731937" type="CaixaDialogoMundo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="376279010740660" type="Menina">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="523991317223245" type="Menino">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="424490931198934" type="System">
+                                    <param id="0" name="Group name">&quot;Setas Menino Hospital&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="715135157675034" type="System">
+                                    <param id="0" name="Group name">&quot;Setas Menina Hospital&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="455492009586385" type="System">
+                                    <param id="0" name="Layout">HospitalFase1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="689818811917697" type="System">
+                                    <param id="0" name="Variable">IntroducaoHospital</param>
+                                    <param id="1" name="Value">&quot;Introduzido&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="438300467708881" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Resposta Sim&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                        <event-block sid="483217420822768">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="386511111450612" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="500820626535373" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;SimHospital&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="595235425980555" type="System">
+                                    <param id="0" name="Variable">Botao</param>
+                                    <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="498692961649374" type="BotaoSimMundo">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="624766350245258" title="Máquina de Escrever -DialogoHospital - Resposta">
+                    <sub-events>
+                        <event-block sid="446491148957357">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="518849477729653" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="943924906539055" type="Audio">
+                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="239771867666222" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="431602220248771" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="923476329880836" type="TextoDialogoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="560854122626106" type="DoutorImagem">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="695076037445753" type="DoutorImagem">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="410127927960083" type="AmigaExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="607597252382355" type="AmigoExpressoes">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="643359296367780">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="990126732865600" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalResposta/text()&quot;))</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="906444981930941" type="System">
+                                    <param id="0" name="Interval (seconds)">0.04</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="971890205011731" type="TextoDialogoMundo">
+                                    <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalResposta/text()&quot;), letra)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="885126913592234" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="770988163281607">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="846685237579876" type="System">
+                                    <param id="0" name="First value">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalResposta/text()&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="873687019007366" type="BotaoNaoMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="938669926935437" type="BotaoNaoMundo" />
+                                <action id="-15" name="Set visible" sid="204189203522551" type="BotaoSimMundo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="876492707152254" type="BotaoSimMundo" />
+                                <action id="-12" name="Set group active" sid="402184772444625" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Resposta Nao&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="615446257601320" type="System">
+                                    <param id="0" name="Group name">&quot;Botao Resposta Sim&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="209234401686277" type="System">
+                                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital - Resposta&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" inactive="1" sid="328001680977889" title="Andar Menino Hospital">
@@ -530,6 +1100,7 @@
                         <action id="5" name="Set frame" sid="889658718822711" type="Amigo">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="408109454195225" type="Amigo" />
                     </actions>
                 </event-block>
                 <event-block sid="977055386515806">
@@ -571,6 +1142,7 @@
                         <action id="5" name="Set frame" sid="514652805683162" type="Amigo">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="414493793508301" type="Amigo" />
                     </actions>
                 </event-block>
                 <event-block sid="317452884764991">
@@ -644,10 +1216,10 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="911574191167632" type="Amigo">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">4</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="533378620660644" type="Menino">
-                            <param id="0" name="Layer">2</param>
+                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -738,6 +1310,7 @@
                         <action id="5" name="Set frame" sid="407273074802476" type="Amiga">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="345606192706863" type="Amiga" />
                     </actions>
                 </event-block>
                 <event-block sid="164048416388828">
@@ -779,6 +1352,7 @@
                         <action id="5" name="Set frame" sid="515201220975494" type="Amiga">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="276476119340670" type="Amiga" />
                     </actions>
                 </event-block>
                 <event-block sid="700521014007180">
@@ -829,11 +1403,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-26" name="Move to layer" sid="633436219456553" type="Amiga">
-                            <param id="0" name="Layer">3</param>
+                        <action id="-26" name="Move to layer" sid="633436219456553" type="Amiga">
+                            <param id="0" name="Layer">2</param>
                         </action>
-                        <action disabled="1" id="-26" name="Move to layer" sid="370312963667743" type="Menino">
-                            <param id="0" name="Layer">4</param>
+                        <action id="-26" name="Move to layer" sid="370312963667743" type="Menino">
+                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -851,11 +1425,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-26" name="Move to layer" sid="753134197398932" type="Amiga">
-                            <param id="0" name="Layer">4</param>
-                        </action>
-                        <action disabled="1" id="-26" name="Move to layer" sid="728806556110081" type="Menino">
+                        <action id="-26" name="Move to layer" sid="753134197398932" type="Amiga">
                             <param id="0" name="Layer">3</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="728806556110081" type="Menino">
+                            <param id="0" name="Layer">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -873,11 +1447,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-26" name="Move to layer" sid="626918343423338" type="Amiga">
-                            <param id="0" name="Layer">3</param>
+                        <action id="-26" name="Move to layer" sid="626918343423338" type="Amiga">
+                            <param id="0" name="Layer">2</param>
                         </action>
-                        <action disabled="1" id="-26" name="Move to layer" sid="585738858717705" type="Menina">
-                            <param id="0" name="Layer">4</param>
+                        <action id="-26" name="Move to layer" sid="585738858717705" type="Menina">
+                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -895,47 +1469,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-26" name="Move to layer" sid="104239424656988" type="Amiga">
-                            <param id="0" name="Layer">4</param>
-                        </action>
-                        <action disabled="1" id="-26" name="Move to layer" sid="201593479969162" type="Menina">
+                        <action id="-26" name="Move to layer" sid="104239424656988" type="Amiga">
                             <param id="0" name="Layer">3</param>
                         </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" disabled="1" sid="521939236521942" title="Cenario2">
-            <sub-events>
-                <event-block disabled="1" sid="791718391429850">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="747042551063503" type="CidadeExteriorInferior">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">Menino.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-26" name="Move to layer" sid="663247822719476" type="CidadeExteriorInferior">
-                            <param id="0" name="Layer">3</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="898018352225324" type="Menino">
+                        <action id="-26" name="Move to layer" sid="201593479969162" type="Menina">
                             <param id="0" name="Layer">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="116520578746228">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="370568396360436" type="CidadeExteriorInferior">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">Menino.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-26" name="Move to layer" sid="530331949724675" type="CidadeExteriorInferior">
-                            <param id="0" name="Layer">2</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="294787183758118" type="Menino">
-                            <param id="0" name="Layer">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1307,6 +1845,275 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="625792234141997" title="Camera Seguir Personagem Hospital">
+            <sub-events>
+                <event-block sid="154058895900608">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="362298988507856" type="System" />
+                        <condition id="-14" name="Compare variable" sid="122491246315623" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="514094832303291" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menino.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menino.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="332009450131176">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="239540548438360" type="System" />
+                        <condition id="-14" name="Compare variable" sid="661215015440157" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="143222378155779" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Menina.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Menina.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="294190999436029" title="Relogio">
+            <sub-events>
+                <event-block sid="482676743917877">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="530348480355589" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Masculino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="392401313281754" type="System">
+                            <param id="0" name="First value">abs(distance(Doutor.X, Doutor.Y, Menino.X, Menino.Y))</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">80</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="345327139117911">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="420119795937093" type="System">
+                                    <param id="0" name="Variable">Temporalizador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="988715013173924" type="System">
+                                    <param id="0" name="Variable">Temporalizador</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="932671140872763" type="System">
+                                    <param id="0" name="Group name">&quot;Relogio&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="198741224391865">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="525867725646252" type="System">
+                            <param id="0" name="Variable">GeneroPersonagem</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Feminino&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="348246794396733" type="System">
+                            <param id="0" name="First value">abs(distance(Doutor.X, Doutor.Y, Menina.X, Menina.Y))</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">80</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="687461901218019">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="498978201549342" type="System">
+                                    <param id="0" name="Variable">Temporalizador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="774473011868353" type="System">
+                                    <param id="0" name="Variable">Temporalizador</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="676186868526492" type="System">
+                                    <param id="0" name="Group name">&quot;Relogio&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="542273458266797" title="Máquina de Escrever -DialogoHospital- Introduzido">
+            <sub-events>
+                <event-block sid="115778766074712">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="444397869615750" type="System">
+                            <param id="0" name="Variable">IntroducaoHospital</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Zero&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="458608580024379" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital- Introduzido&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="546224252387015">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="533823103382090" type="System" />
+                        <condition id="-14" name="Compare variable" sid="594187686745797" type="System">
+                            <param id="0" name="Variable">IntroducaoHospital</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;Zero&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="774906750416725" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="527697444075621" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="333280070810747" type="TextoDialogoMundo">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="936306727426641" type="CaixaDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="696303800868922" type="TextoDialogoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="516870273414347" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="601177045585949" type="DoutorImagem">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="853958793889145" type="Menina">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="448953058140362" type="Menino">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="887439043193041">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="293723484175717" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalEscolhaFase/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="641323383834367" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="234808873924968" type="TextoDialogoMundo">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalEscolhaFase/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="286912371396195" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="847979010993909">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="643165715886698" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalEscolhaFase/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-15" name="Set visible" sid="108072340883090" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="-12" name="Set group active" sid="119862481137010" type="System">
+                            <param id="0" name="Group name">&quot;Botao ProximoHospital&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="179436085603252" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoHospital- Introduzido&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="756896353420086" title="Saida">
+            <sub-events>
+                <event-block sid="447042801145903">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="616460668061914" type="Saida">
+                            <param id="0" name="Object">Menino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-3" name="Set position" sid="575777356745522" type="PretoMundo">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y</param>
+                        </action>
+                        <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="324781951082065" type="PretoMundo" />
+                        <action disabled="1" id="-16" name="Wait" sid="556049107344219" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="526340682465855" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="994852886500976" type="System">
+                            <param id="0" name="Layout">Mundo</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="337692352953069">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="708100341508592" type="Saida">
+                            <param id="0" name="Object">Menina</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-3" name="Set position" sid="941880527375553" type="PretoMundo">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y</param>
+                        </action>
+                        <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="542728309953191" type="PretoMundo" />
+                        <action disabled="1" id="-16" name="Wait" sid="461264448027658" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="211069852247800" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="359260122420811" type="System">
+                            <param id="0" name="Layout">Mundo</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
