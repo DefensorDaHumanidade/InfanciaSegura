@@ -33,6 +33,11 @@
                 <action id="9" name="Set scale" sid="185976690106909" type="PartesCorpo">
                     <param id="0" name="Scale">0.13</param>
                 </action>
+                <action id="-3" name="Set position" sid="412960738430323" type="CorpoMasculino">
+                    <param id="0" name="X">Camera.X</param>
+                    <param id="1" name="Y">Camera.Y</param>
+                </action>
+                <action id="2" name="Stop" sid="167733255416957" type="PartesCorpo" />
             </actions>
         </event-block>
         <event-block sid="575251309874380">
@@ -47,5 +52,152 @@
                 <action behavior="DragDrop" id="1" name="Drop" sid="709079060337515" type="PartesCorpo" />
             </actions>
         </event-block>
+        <event-group description="" sid="840527804735277" title="Apresentacao Frontal">
+            <sub-events>
+                <event-block sid="796584445927348">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="369720026363321" type="Camera">
+                            <param id="0" name="Object">CorpoMasculino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="737194334699303" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Self.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Self.Y+100, 0.03)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="140482746339896" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="122660553076811">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="780838730548658" type="Camera">
+                            <param id="0" name="Object">CorpoMasculino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="971736176095575" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Posterior&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="474272859133006" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Frontal&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="708996897111593" title="Apresentacao Posterior">
+            <sub-events>
+                <event-block sid="493862447020836">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="377074758144310" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="762451645256238" type="Camera">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Costas&quot;) </param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Costas&quot;) </param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="486933598195883">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="655636752015983" type="Camera">
+                            <param id="0" name="Object">CorpoMasculino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="603863619147474" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Self.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Self.Y+100, 0.03)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="882191772563966" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="348391493789679" title="Pegar Parte do Corpo">
+            <sub-events>
+                <event-block sid="255589349241307">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="643992776650932" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="408820104748862" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="978326908230755" type="PartesCorpo">
+                            <param id="0" name="Scale">0.12</param>
+                        </action>
+                        <action id="0" name="Play" sid="763284829404196" type="Audio">
+                            <param id="0" name="Audio file">Segurar</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SegurarPeca&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="594972127220404" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Segurar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="756434873713029">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="509494182550585" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="430091262836544" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="203122609875428" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Segurar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="662450443680860" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="628638413708738" type="PartesCorpo">
+                            <param id="0" name="Scale">0.13</param>
+                        </action>
+                        <action id="0" name="Play" sid="962601678185423" type="Audio">
+                            <param id="0" name="Audio file">Soltar</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarPeca&quot;</param>
+                        </action>
+                        <action disabled="1" id="-12" name="Set group active" sid="490388544179365" type="System">
+                            <param id="0" name="Group name">&quot;Botao Fase2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="507041851542259">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="762095926616693" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="144569097069076" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Segurar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="441920326095823" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="518728332326219" type="PartesCorpo">
+                            <param id="0" name="Scale">0.13</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

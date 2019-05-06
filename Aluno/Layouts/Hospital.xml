@@ -302,72 +302,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="KitMedico" uid="227">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>820.129516602</x>
-                        <y>304.341217041</y>
-                        <z>0</z>
-                        <width>15.181152344</width>
-                        <height>15.181091309</height>
-                        <depth>0</depth>
-                        <hotspotX>0.50420171</hotspotX>
-                        <hotspotY>0.50420171</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Estetoscopio" uid="228">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>805.526123047</x>
-                        <y>311.377044678</y>
-                        <z>0</z>
-                        <width>9.642089844</width>
-                        <height>11.350830078</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.249059796</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Computador" uid="229">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>766.360290527</x>
-                        <y>308.765319824</y>
-                        <z>0</z>
-                        <width>20.353271484</width>
-                        <height>13.689575195</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.50505048</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="ColisaoMundo" uid="230">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -749,6 +683,72 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Estetoscopio" uid="228">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>805.526123047</x>
+                        <y>311.377044678</y>
+                        <z>0</z>
+                        <width>9.642089844</width>
+                        <height>11.350830078</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.249059796</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="KitMedico" uid="227">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>820.129516602</x>
+                        <y>304.341217041</y>
+                        <z>0</z>
+                        <width>15.181152344</width>
+                        <height>15.181091309</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50420171</hotspotX>
+                        <hotspotY>0.50420171</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Computador" uid="229">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>766.360290527</x>
+                        <y>308.765319824</y>
+                        <z>0</z>
+                        <width>20.353271484</width>
+                        <height>13.689575195</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50505048</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1265,7 +1265,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>1094</y>
+                        <y>1096</y>
                         <z>0</z>
                         <width>300</width>
                         <height>125</height>
@@ -1286,7 +1286,7 @@
                     <behavior-instances>
                         <behavior-instance type="Anchor">
                             <properties>
-                                <left-edge>None</left-edge>
+                                <left-edge>Window left</left-edge>
                                 <top-edge>Window bottom</top-edge>
                                 <right-edge>None</right-edge>
                                 <bottom-edge>None</bottom-edge>
@@ -1297,8 +1297,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1036</x>
-                        <y>1094</y>
+                        <x>291</x>
+                        <y>1096</y>
                         <z>0</z>
                         <width>300</width>
                         <height>125</height>
@@ -1319,6 +1319,39 @@
                     <behavior-instances>
                         <behavior-instance type="Anchor">
                             <properties>
+                                <left-edge>Window left</left-edge>
+                                <top-edge>Window bottom</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>420</x>
+                        <y>1096</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>125</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504000008</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NenhumaFase" uid="280">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Anchor">
+                            <properties>
                                 <left-edge>Window right</left-edge>
                                 <top-edge>Window bottom</top-edge>
                                 <right-edge>None</right-edge>
@@ -1330,8 +1363,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1969</x>
-                        <y>1094</y>
+                        <x>1970</x>
+                        <y>1096</y>
                         <z>0</z>
                         <width>300</width>
                         <height>125</height>

@@ -2535,7 +2535,10 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573365344354036" speed="5">
-                    <frame duration="1" hotspotX="0.445783" hotspotY="0.320442" />
+                    <frame duration="1" hotspotX="0.261044" hotspotY="0">
+                        <image-point name="Costas" x="0.745382" y="0" />
+                        <image-point name="Imagepoint 2" x="0.446586" y="0.0883978" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -2547,8 +2550,43 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870269241990260" speed="5">
+                <animation framecount="40" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870269241990260" speed="5">
                     <frame duration="1" hotspotX="0.501636" hotspotY="0.379518" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
@@ -2558,9 +2596,19 @@
         </object-type>
         <object-type name="TextoDialogoHospitalFase1" sid="919652113998537">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="481898116767515">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="CaixaDialogoHospitalFase1" sid="958827122262414">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="796266912082486">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408110757411542" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Alexandre\Desktop\caixaDialogo.png" />
@@ -2778,6 +2826,20 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="NenhumaFase" sid="685829610561555">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="348085463838849">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617553402245570" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoNenhumaSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoNenhumaPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -2854,6 +2916,8 @@
         <file name="ProfessorAbertura.ogg" />
         <file name="ApertarBotao.ogg" />
         <file name="SoltarBotao.ogg" />
+        <file name="Segurar.ogg" />
+        <file name="Soltar.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

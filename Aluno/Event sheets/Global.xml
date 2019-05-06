@@ -384,6 +384,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="729603975656532">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="515455616951381" type="NenhumaFase" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="165064267959683" type="NenhumaFase" />
+                        <action id="9" name="Set scale" sid="401773764623963" type="NenhumaFase">
+                            <param id="0" name="Scale">0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="485869245125721">
                     <conditions>
                         <condition id="-18" name="On created" sid="355460949196648" type="BotaoSetaCima" />

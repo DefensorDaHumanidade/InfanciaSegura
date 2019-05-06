@@ -44,9 +44,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="26">EventoPergunta</event-sheet>
         <event-sheet order="27">EventoGeneroUsuario</event-sheet>
         <event-sheet order="28">EventoEntrarMundo</event-sheet>
-        <event-sheet active="1" order="30">EventoMundo</event-sheet>
+        <event-sheet order="30">EventoMundo</event-sheet>
         <event-sheet order="32">EventoHospital</event-sheet>
-        <event-sheet order="34">EventoHospitalFase1</event-sheet>
+        <event-sheet active="1" order="34">EventoHospitalFase1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -154,5 +154,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/SegundaFase/" />
         <folder expanded="1" path="animation-folder/TerceiraFase/" />
         <folder expanded="1" path="animation-folder/Saida/" />
+        <folder expanded="1" path="animation-folder/NenhumaFase/" />
     </folders-expanded>
 </c2uistate>
