@@ -95,7 +95,7 @@
                         <behavior-instance type="Anchor">
                             <properties>
                                 <left-edge>Window left</left-edge>
-                                <top-edge>Window top</top-edge>
+                                <top-edge>Window bottom</top-edge>
                                 <right-edge>None</right-edge>
                                 <bottom-edge>None</bottom-edge>
                                 <initial-state>Enabled</initial-state>
@@ -128,7 +128,7 @@
                         <behavior-instance type="Anchor">
                             <properties>
                                 <left-edge>Window left</left-edge>
-                                <top-edge>Window top</top-edge>
+                                <top-edge>Window bottom</top-edge>
                                 <right-edge>None</right-edge>
                                 <bottom-edge>None</bottom-edge>
                                 <initial-state>Enabled</initial-state>

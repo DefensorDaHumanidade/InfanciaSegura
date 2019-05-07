@@ -10,43 +10,25 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">TelaInscrever</layout>
-        <layout order="3">TelaInscreverSenha</layout>
-        <layout order="4">TelaGeneroUsuario</layout>
-        <layout order="5">TelaInscreverTurma</layout>
-        <layout order="7">TelaInicial</layout>
-        <layout order="8">TelaSimEncontrado</layout>
-        <layout order="9">TelaErro</layout>
-        <layout order="10">TelaNaoEncontrado</layout>
-        <layout order="11">TelaAbertura</layout>
-        <layout order="12">TelaAcerto</layout>
-        <layout order="13">TelaGeneroPersonagem</layout>
-        <layout order="16">TelaAmigo</layout>
-        <layout order="19">TelaVerificacao</layout>
-        <layout order="22">TelaEscolhaAmigo</layout>
-        <layout order="25">TelaPergunta</layout>
-        <layout order="29">Mundo</layout>
-        <layout order="31">Hospital</layout>
-        <layout order="33">HospitalFase1</layout>
-        <layout order="35">TelaEntrarMundo</layout>
-        <layout order="36">TelaCarregamento</layout>
+        <layout order="1">TelaGeneroUsuario</layout>
+        <layout order="6">TelaInscreverTurma</layout>
+        <layout order="2">TelaInicial</layout>
+        <layout order="4">TelaSimEncontrado</layout>
+        <layout order="7">TelaCarregamento</layout>
+        <layout order="8">TelaGeneroPersonagem</layout>
+        <layout order="9">TelaAcerto</layout>
+        <layout order="10">Mundo</layout>
+        <layout order="11">TelaEscolhaAmigo</layout>
+        <layout order="13">TelaEntrarMundo</layout>
+        <layout active="1" order="15">Hospital</layout>
+        <layout order="16">HospitalFase1</layout>
         <event-sheet order="0">Global</event-sheet>
-        <event-sheet order="1">EventoSimEncontrado</event-sheet>
-        <event-sheet order="6">EventoVerificao</event-sheet>
-        <event-sheet order="14">EventoAbertura</event-sheet>
-        <event-sheet order="15">EventoAcerto</event-sheet>
-        <event-sheet order="17">EventoAmigo</event-sheet>
-        <event-sheet order="18">EventoGeneroPersonagem</event-sheet>
-        <event-sheet order="20">EventoInscreverTurma</event-sheet>
-        <event-sheet order="21">EventoCarregamento</event-sheet>
-        <event-sheet order="23">EventoEscolhaAmigo</event-sheet>
-        <event-sheet order="24">EventoNaoEncontrado</event-sheet>
-        <event-sheet order="26">EventoPergunta</event-sheet>
-        <event-sheet order="27">EventoGeneroUsuario</event-sheet>
-        <event-sheet order="28">EventoEntrarMundo</event-sheet>
-        <event-sheet order="30">EventoMundo</event-sheet>
-        <event-sheet order="32">EventoHospital</event-sheet>
-        <event-sheet active="1" order="34">EventoHospitalFase1</event-sheet>
+        <event-sheet order="3">EventoVerificao</event-sheet>
+        <event-sheet order="5">EventoInscreverTurma</event-sheet>
+        <event-sheet order="12">EventoEscolhaAmigo</event-sheet>
+        <event-sheet order="14">EventoEntrarMundo</event-sheet>
+        <event-sheet order="17">EventoHospitalFase1</event-sheet>
+        <event-sheet order="18">EventoHospital</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -155,5 +137,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TerceiraFase/" />
         <folder expanded="1" path="animation-folder/Saida/" />
         <folder expanded="1" path="animation-folder/NenhumaFase/" />
+        <folder expanded="1" path="animation-folder/MaoNPC/" />
+        <folder expanded="1" path="animation-folder/MaoAuxiliar/" />
+        <folder expanded="1" path="animation-folder/Branco2/" />
     </folders-expanded>
 </c2uistate>

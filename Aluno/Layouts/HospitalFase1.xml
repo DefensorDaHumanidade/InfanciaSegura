@@ -21,7 +21,7 @@
                 <x>1</x>
                 <y>1</y>
             </parallax>
-            <zoom-rate>1</zoom-rate>
+            <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
@@ -29,39 +29,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DoutorImagem" uid="241">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window left</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1639</x>
-                        <y>520</y>
-                        <z>0</z>
-                        <width>307</width>
-                        <height>376</height>
-                        <depth>0</depth>
-                        <hotspotX>0.478827357</hotspotX>
-                        <hotspotY>0.492021263</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="CorpoMasculino" uid="244">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -106,7 +73,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoProximoMundo" uid="282">
+                <instance type="PartesCorpo" uid="245">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -114,27 +81,38 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Anchor">
+                        <behavior-instance type="DragDrop">
                             <properties>
-                                <left-edge>Window right</left-edge>
-                                <top-edge>Window bottom</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
+                                <axes>Both</axes>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2074</x>
-                        <y>1237</y>
+                        <x>885</x>
+                        <y>573</y>
                         <z>0</z>
-                        <width>400</width>
-                        <height>400</height>
+                        <width>917</width>
+                        <height>166</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.50163579</hotspotX>
+                        <hotspotY>0.379518062</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -158,6 +136,39 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="DoutorImagem" uid="241">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>Window right</left-edge>
+                                <top-edge>Window bottom</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1909</x>
+                        <y>1026</y>
+                        <z>0</z>
+                        <width>307</width>
+                        <height>376</height>
+                        <depth>0</depth>
+                        <hotspotX>0.478827357</hotspotX>
+                        <hotspotY>0.492021263</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="CaixaDialogoHospitalFase1" uid="243">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -229,17 +240,20 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PartesCorpo" uid="245">
+                <instance type="BotaoProximoMundo" uid="282">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="DragDrop">
+                        <behavior-instance type="Anchor">
                             <properties>
-                                <axes>Both</axes>
+                                <left-edge>Window right</left-edge>
+                                <top-edge>Window bottom</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -247,14 +261,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>885</x>
-                        <y>573</y>
+                        <x>2074</x>
+                        <y>1237</y>
                         <z>0</z>
-                        <width>917</width>
-                        <height>166</height>
+                        <width>400</width>
+                        <height>400</height>
                         <depth>0</depth>
-                        <hotspotX>0.50163579</hotspotX>
-                        <hotspotY>0.379518062</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -388,7 +402,7 @@
                 <x>1</x>
                 <y>1</y>
             </parallax>
-            <zoom-rate>1</zoom-rate>
+            <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
@@ -398,7 +412,7 @@
             <instances>
                 <instance type="Camera" uid="286">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -422,6 +436,98 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.454545468</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MaoNPC" uid="281">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>562</x>
+                        <y>417</y>
+                        <z>0</z>
+                        <width>590</width>
+                        <height>720</height>
+                        <depth>0</depth>
+                        <hotspotX>0.355932206</hotspotX>
+                        <hotspotY>0.027777778</hotspotY>
+                        <angle>-0.527979374</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MaoAuxiliar" uid="287">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>10</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>100</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine2">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>10</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>90</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>953</x>
+                        <y>238</y>
+                        <z>0</z>
+                        <width>590</width>
+                        <height>720</height>
+                        <depth>0</depth>
+                        <hotspotX>0.355932206</hotspotX>
+                        <hotspotY>0.027777778</hotspotY>
+                        <angle>-0.527979374</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

@@ -303,7 +303,6 @@
                             <param id="0" name="Variable">Amigo</param>
                             <param id="1" name="Value">&quot;Masculino&quot;</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="879915756956703" type="Branco" />
                         <action id="-2" name="Go to layout" sid="481864751409224" type="System">
                             <param id="0" name="Layout">TelaEntrarMundo</param>
                         </action>
@@ -403,7 +402,6 @@
                             <param id="0" name="Variable">Amigo</param>
                             <param id="1" name="Value">&quot;Feminino&quot;</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="620140715818082" type="Branco" />
                         <action id="-2" name="Go to layout" sid="983669936450606" type="System">
                             <param id="0" name="Layout">TelaEntrarMundo</param>
                         </action>

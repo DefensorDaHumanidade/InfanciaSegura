@@ -595,6 +595,10 @@
                                 <action behavior="8Direction" id="8" name="Set enabled" sid="523991317223245" type="Menino">
                                     <param id="0" name="State">1</param>
                                 </action>
+                                <action id="-28" name="Set canvas size" sid="714380577453930" type="System">
+                                    <param id="0" name="Width">1920</param>
+                                    <param id="1" name="Height">1080</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="424490931198934" type="System">
                                     <param id="0" name="Group name">&quot;Setas Menino Hospital&quot;</param>
                                     <param id="1" name="State">1</param>

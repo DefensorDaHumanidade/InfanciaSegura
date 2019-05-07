@@ -29,6 +29,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -125,11 +126,6 @@
         </object-type>
         <object-type name="Branco" sid="668600891172529">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Fade" sid="554875462823249">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="377542370336937" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
@@ -2536,8 +2532,43 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573365344354036" speed="5">
                     <frame duration="1" hotspotX="0.261044" hotspotY="0">
-                        <image-point name="Costas" x="0.745382" y="0" />
-                        <image-point name="Imagepoint 2" x="0.446586" y="0.0883978" />
+                        <image-point name="Tras" x="0.745382" y="0" />
+                        <image-point name="Cabeca" x="0.445783" y="0.0883978" />
+                        <image-point name="Bochecha" x="0.445783" y="0.133978" />
+                        <image-point name="Orelha" x="0.445783" y="0.18232" />
+                        <image-point name="Nariz" x="0.445783" y="0.227901" />
+                        <image-point name="Pescoco" x="0.445783" y="0.270718" />
+                        <image-point name="Torax" x="0.445783" y="0.321823" />
+                        <image-point name="Umbigo" x="0.445783" y="0.448895" />
+                        <image-point name="Abdomen" x="0.44739" y="0.498619" />
+                        <image-point name="Virilha" x="0.44739" y="0.544199" />
+                        <image-point name="Penis" x="0.44739" y="0.59116" />
+                        <image-point name="Coxa" x="0.44739" y="0.631215" />
+                        <image-point name="Joelho" x="0.44739" y="0.736188" />
+                        <image-point name="Perna" x="0.44739" y="0.803867" />
+                        <image-point name="Tornozelo" x="0.44739" y="0.889503" />
+                        <image-point name="Pe" x="0.44739" y="0.937845" />
+                        <image-point name="Dedo do pe" x="0.0803213" y="0.957182" />
+                        <image-point name="Dedos" x="0.0803213" y="0.621547" />
+                        <image-point name="Mao" x="0.0803213" y="0.541436" />
+                        <image-point name="Pulso" x="0.0803213" y="0.486188" />
+                        <image-point name="Antebraco" x="0.0803213" y="0.444751" />
+                        <image-point name="Braco" x="0.0803213" y="0.361878" />
+                        <image-point name="Queixo" x="0.0803213" y="0.310773" />
+                        <image-point name="Boca" x="0.0803213" y="0.255525" />
+                        <image-point name="Dentes" x="0.0803213" y="0.209945" />
+                        <image-point name="Olhos" x="0.0803213" y="0.167127" />
+                        <image-point name="Testa" x="0.0803213" y="0.124309" />
+                        <image-point name="Ombro" x="0.59759" y="0.262431" />
+                        <image-point name="Omoplata" x="0.59759" y="0.313536" />
+                        <image-point name="Costas" x="0.59759" y="0.366022" />
+                        <image-point name="Cotovelo" x="0.59759" y="0.415746" />
+                        <image-point name="Coccix" x="0.59759" y="0.495856" />
+                        <image-point name="Nadega" x="0.59759" y="0.61326" />
+                        <image-point name="Calcanhar" x="0.59759" y="0.928177" />
+                        <image-point name="Axila" x="0.923695" y="0.332873" />
+                        <image-point name="Lombar" x="0.923695" y="0.458564" />
+                        <image-point name="Quadril" x="0.923695" y="0.501381" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -2548,12 +2579,14 @@
                 <behavior-type name="DragDrop" sid="495578190697051">
                     <behavior id="DragnDrop" />
                 </behavior-type>
+                <behavior-type name="Physics" sid="983707864736419">
+                    <behavior id="Physics" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="40" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870269241990260" speed="5">
+                <animation framecount="39" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870269241990260" speed="5">
                     <frame duration="1" hotspotX="0.501636" hotspotY="0.379518" />
-                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
@@ -2837,6 +2870,73 @@
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617553402245570" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoNenhumaSolto.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoNenhumaPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MaoNPC" sid="764717686294769">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="953773953633150">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849761511670331" speed="5">
+                    <frame duration="1" hotspotX="0.355932" hotspotY="0.0277778" original-source="C:\Users\Alexandre\Desktop\mao.png">
+                        <collision-poly>
+                            <point x="0.250847" y="0.205556" />
+                            <point x="0.5" y="0.198611" />
+                            <point x="0.732203" y="0.219444" />
+                            <point x="1" y="0.5" />
+                            <point x="0.877966" y="0.9" />
+                            <point x="0.5" y="0.911111" />
+                            <point x="0.237288" y="0.805556" />
+                            <point x="0.0305085" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MaoAuxiliar" sid="444591067837852">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="462582087217305">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="438048774239332">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="755717400103316">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804086671577681" speed="5">
+                    <frame duration="1" hotspotX="0.355932" hotspotY="0.0277778" original-source="C:\Users\Alexandre\Desktop\mao.png">
+                        <collision-poly>
+                            <point x="0.250847" y="0.205556" />
+                            <point x="0.5" y="0.198611" />
+                            <point x="0.732203" y="0.219444" />
+                            <point x="1" y="0.5" />
+                            <point x="0.877966" y="0.9" />
+                            <point x="0.5" y="0.911111" />
+                            <point x="0.237288" y="0.805556" />
+                            <point x="0.0305085" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Branco2" sid="445526070084526">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="497030817577985">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742546119830313" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
                 </animation>
             </animation-folder>
         </object-type>

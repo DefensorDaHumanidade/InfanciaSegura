@@ -24,11 +24,11 @@
                 <action disabled="1" id="4" name="Preload" sid="347645685589960" type="Audio">
                     <param id="0" name="Audio file">ProfessorAbertura</param>
                 </action>
-                <action id="-7" name="Set size" sid="375807429406835" type="Branco">
+                <action id="-7" name="Set size" sid="375807429406835" type="Branco2">
                     <param id="0" name="Width">WindowWidth*2</param>
                     <param id="1" name="Height">WindowHeight*2</param>
                 </action>
-                <action id="-3" name="Set position" sid="858045757427807" type="Branco">
+                <action id="-3" name="Set position" sid="858045757427807" type="Branco2">
                     <param id="0" name="X">WindowWidth/2</param>
                     <param id="1" name="Y">WindowHeight/2</param>
                 </action>

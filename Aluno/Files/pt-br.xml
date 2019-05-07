@@ -33,4 +33,8 @@
     <TextoDialogoHospitalIntroducao>Olá doutor, o que o senhor está fazendo?</TextoDialogoHospitalIntroducao>
     <TextoDialogoHospitalResposta>Ah, olá crianças. Eu estou apenas organizando um mural sobre as partes do corpo. Vocês gostariam de ver?</TextoDialogoHospitalResposta>
     <TextoDialogoHospitalEscolhaFase>Olá novamente, qual das três fazes você gostaria de jogar?</TextoDialogoHospitalEscolhaFase>
+    <TextoDialogoHospitalFase1>Essas suas as partes do corpo da frente, e essas são as partes do corpo de trás.</TextoDialogoHospitalFase1>
+    <TextoDialogoHospitalFase1Nomecacao>Aqui na parte da frente nós temos por exemplo: a Testa, a Boca, os Dentes...        </TextoDialogoHospitalFase1Nomecacao>
+    <TextoDialogoHospitalFase1Queda>Oh não, sem querer eu derrubei algumas peças do mural. Mas tudo bem, é só coloca-las de volta.</TextoDialogoHospitalFase1Queda>
+    <TextoDialogoHospitalFase1Colocar>Essa peçinha por exemplo, o lugar dela é aqui. Basta eu clicar nela e arrasta-la para o seu devido lugar e depois soltar.</TextoDialogoHospitalFase1Colocar>
 </textos>

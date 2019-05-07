@@ -469,9 +469,6 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
-                        <action disabled="1" id="-2" name="Go to layout" sid="127950674953316" type="System">
-                            <param id="0" name="Layout">TelaPergunta</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="230229182646155">
@@ -491,6 +488,9 @@
                                     <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-AdicionarAluno.php&quot;</param>
                                     <param id="2" name="Data">&quot;nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;turma=&quot;&amp;NomeTurma&amp;&quot;&amp;senha=&quot;&amp;SenhaSelecionada&amp;&quot;&amp;genero=&quot;&amp;GeneroUsuario</param>
                                     <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="127950674953316" type="System">
+                                    <param id="0" name="Layout">TelaAcerto</param>
                                 </action>
                             </actions>
                         </event-block>

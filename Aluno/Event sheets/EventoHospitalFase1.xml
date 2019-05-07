@@ -25,7 +25,7 @@
                     <param id="0" name="X">100</param>
                 </action>
                 <action id="9" name="Set scale" sid="323885962142103" type="DoutorImagem">
-                    <param id="0" name="Scale">0.5</param>
+                    <param id="0" name="Scale">0.4</param>
                 </action>
                 <action id="9" name="Set scale" sid="383496953845426" type="CorpoMasculino">
                     <param id="0" name="Scale">0.8</param>
@@ -63,7 +63,7 @@
                     <actions>
                         <action id="-3" name="Set position" sid="737194334699303" type="Camera">
                             <param id="0" name="X">lerp(Self.X, Self.X, 0.03)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Self.Y+100, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Self.Y+50, 0.03)</param>
                         </action>
                         <action id="-16" name="Wait" sid="140482746339896" type="System">
                             <param id="0" name="Seconds">1.0</param>
@@ -97,8 +97,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="762451645256238" type="Camera">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Costas&quot;) </param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Costas&quot;) </param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Tras&quot;) </param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Tras&quot;) </param>
                         </action>
                     </actions>
                 </event-block>
@@ -111,10 +111,23 @@
                     <actions>
                         <action id="-3" name="Set position" sid="603863619147474" type="Camera">
                             <param id="0" name="X">lerp(Self.X, Self.X, 0.03)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Self.Y+100, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Self.Y+50, 0.03)</param>
                         </action>
                         <action id="-16" name="Wait" sid="882191772563966" type="System">
                             <param id="0" name="Seconds">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="592040481530417">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="539809379757132" type="Camera">
+                            <param id="0" name="Object">CorpoMasculino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="977328399411523" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Posterior&quot;</param>
+                            <param id="1" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -194,6 +207,1301 @@
                         </action>
                         <action id="9" name="Set scale" sid="518728332326219" type="PartesCorpo">
                             <param id="0" name="Scale">0.13</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="254526165655884" title="Criar Pecas">
+            <sub-events>
+                <event-block sid="572807944803964">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="918685067652140" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-9" name="Destroy" sid="731511682857972" type="PartesCorpo" />
+                        <action disabled="1" id="-3" name="Set position" sid="629380845755736" type="Camera">
+                            <param id="0" name="X">Self.X</param>
+                            <param id="1" name="Y">Self.Y+150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="536375533826716">
+                    <conditions>
+                        <condition id="-10" name="For" sid="903359491750647" type="System">
+                            <param id="0" name="Name">&quot;indice&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="636407720508429" type="System">
+                            <param id="0" name="Object to create">PartesCorpo</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">PartesCorpo.X+10</param>
+                            <param id="3" name="Y">PartesCorpo.Y+10</param>
+                        </action>
+                        <action id="2" name="Stop" sid="717849855517582" type="PartesCorpo" />
+                        <action id="9" name="Set scale" sid="290045577214776" type="PartesCorpo">
+                            <param id="0" name="Scale">0.13</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="999758111497658" type="PartesCorpo">
+                            <param id="0" name="Frame number">loopindex</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="324255207905695" type="System">
+                            <param id="0" name="Group name">&quot;Criar Pecas&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="496288763965497" type="System">
+                            <param id="0" name="Group name">&quot;Preencher corpo&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="984819636034111" title="Preencher Corpo">
+            <sub-events>
+                <event-block sid="512145269981867">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="762456960220375" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="352279219916782" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Cabeca&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Cabeca&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="817326098763939">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="975831404187273" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="408140644239452" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Boca&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Boca&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812414908106556">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="612112107255557" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="248515566804351" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pe&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pe&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="599758467189998">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="561327773436257" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="120890547125830" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dedo do pe&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dedo do pe&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="353910245569260">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="803759099386518" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="524639957074245" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Tornozelo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Tornozelo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="594192138171499">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="262795435251867" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="590682937282187" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Queixo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Queixo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="369408412164182">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="392258429134179" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="401464651492715" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Testa&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Testa&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="386514341558101">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="475358318396616" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="682041431254754" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Olhos&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Olhos&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="920257396458099">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="627247677453442" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="707532173598925" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dentes&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dentes&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888020333979510">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="605351038094182" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="304810030288252" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Bochecha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Bochecha&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="485315571435742">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="679761974908805" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="867859696780232" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Orelha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Orelha&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="549080696124338">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="817975259852166" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="412741185238272" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Nariz&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Nariz&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="856787961191222">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="989604930102664" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="786946830936156" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pescoco&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pescoco&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="488628115972159">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="543018312086962" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="626131336658290" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Torax&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Torax&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="915590167082760">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="502659859376538" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="319697673386368" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Braco&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Braco&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="311652527988142">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="237380475923403" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="719066253015438" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Antebraco&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Antebraco&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="743317030135526">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="843306524318004" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="507237058700159" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pulso&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pulso&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="800375707389543">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="900546846975397" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="915255990766257" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dedos&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dedos&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="617102198183340">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="171623432898829" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="688602990519669" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Umbigo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Umbigo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="529426675809903">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="242187111175265" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="571100512092682" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Abdomen&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Abdomen&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="340791550297613">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="526095153988140" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="609557666926821" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Virilha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Virilha&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="861370461393435">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="769382252735938" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">21</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="781971798119280" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Coxa&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Coxa&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="790932005334347">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="601920515504965" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">22</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="321854379321191" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Joelho&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Joelho&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="277778052489511">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="353212388084360" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">23</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="884242454407860" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Perna&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Perna&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519688910745800">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="447255915539114" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">24</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="966265537076239" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Ombro&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Ombro&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="244503646919731">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="744201702125783" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="431312994635844" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Omoplata&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Omoplata&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="848457017733412">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="102041410570156" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">26</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="953898177186573" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Costas&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Costas&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="369366992086030">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="535597270360410" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">27</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="225978327512021" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Cotovelo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Cotovelo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="291972248666508">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="100793971186283" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">28</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="145314222129788" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Axila&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Axila&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="493168200281037">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="130446731254504" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">29</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="263280780152536" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Lombar&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Lombar&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="773278601411462">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="375724620178402" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="495608102953007" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Quadril&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Quadril&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="856221363922830">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="871514359265658" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">31</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="719293943538958" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Nadega&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Nadega&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="912092067720306">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="933885609004372" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="963438605194122" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Mao&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Mao&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="999853512545108">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="161087459157466" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">33</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="822640411563770" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Calcanhar&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Calcanhar&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="331754000456410">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="951885293599315" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">34</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="227930013196172" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Coccix&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Coccix&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="507603097684774">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="771879840550325" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="591386792638520" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Penis&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="673569969589048" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Corpo&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="364017378372776" title="Máquina de Escrever -DialogoFase1- Hospital">
+            <sub-events>
+                <event-block sid="455863738855127">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="543605661084193" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="515607437028281" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="830739374935279" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="622704314559296" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="452151850654742" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="824542525299066">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="766214213369118" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="642329810142248" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="612746687128777" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase1/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="894671453252087" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="666695593075329">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="113548646873125" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="687238169047624" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="748120528956930" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="324731455576608" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Hospital&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="897706988221030" title="Máquina de Escrever -DialogoFase1- Nomeacao">
+            <sub-events>
+                <event-block sid="236309143111232">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="507164903580692" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="560028727169384" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="822338151809763" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="103331970226384" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="584168922899586" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566495871990750">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="387685962711531" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1Nomecacao/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="881426299442116" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="561274402038646" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase1Nomecacao/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="159257483710879" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, CorpoMasculino.ImagePointX(0), 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, CorpoMasculino.ImagePointY(0)+150, 0.03)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="252370055755481" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="130519596571397">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="783155803709066" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">80</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="564984809127981" type="MaoNPC">
+                                    <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Testa&quot;)</param>
+                                    <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Testa&quot;)</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="265039783884295" type="MaoNPC" />
+                                <action id="-15" name="Set visible" sid="775954853279520" type="MaoNPC">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="273962050664688">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="673421458448751" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1Nomecacao/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="942564544124361" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, CorpoMasculino.ImagePointX(0), 0.04)</param>
+                            <param id="1" name="Y">lerp(Self.Y, CorpoMasculino.ImagePointY(0)+150, 0.04)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="798510535616949" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="663687945674415" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="704748759350769" type="System">
+                            <param id="0" name="Group name">&quot;Botao Cair&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="486632533962801" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Nomeacao&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="381898042645232" title="Botao Continuacao">
+            <sub-events>
+                <event-block sid="176788270780806">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="737161898268730" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="944931533369869" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="976901418932853" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="877817549132667" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="927466692337263" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="788457981768065">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="144037845609878" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="239582278728292" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="658091047023484" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="596945752334604" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="783021285092776" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="588537596174716" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="463028247655504" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="529829561095892" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="622276721309370" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Nomeacao&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="589241487070895" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Posterior&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="185720752715737" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Frontal&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="793667915012342" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="723908655167368">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="189318204498547" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="855021606744875" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="556517107681957" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="936603153966463" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="477779775567782" title="Botao Cair">
+            <sub-events>
+                <event-block sid="985477821314198">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="441496879556336" type="System">
+                            <param id="0" name="First value">MaoNPC.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">CorpoMasculino.ImagePointY(&quot;Dentes&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="272306028225009" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="415135458238554" type="MaoNPC">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Boca&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Boca&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="736250444034790">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="889690336050744" type="System">
+                            <param id="0" name="First value">MaoNPC.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">CorpoMasculino.ImagePointY(&quot;Boca&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="104526372272418" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="157425379894651" type="MaoNPC">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Testa&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Testa&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="284587834840563">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="141270242863884" type="System">
+                            <param id="0" name="First value">MaoNPC.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">CorpoMasculino.ImagePointY(&quot;Testa&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="490508651590963" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="952637688534397" type="MaoNPC">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dentes&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dentes&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="196915301585362">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="695348133885988" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="695117700940948" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="527912600753309" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="514664534703439" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="646949651476768" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Cair&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="848511926570115">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="846520302670352" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="674332303274502" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="432540598834076" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Cair&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="228342829228188" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="995205459551216" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="290482486016568" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="422440173955275" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="794024261148229" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="981889038096952" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Cair&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="281572887725791" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Posterior&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="556681037647283" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Frontal&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="243027328544572" type="System">
+                            <param id="0" name="Group name">&quot;Botao Cair&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="635631329669376">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="690797046513122" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="912530857805272" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Cair&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="948866936271367" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="501363095914661" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="141508337918594" title="Máquina de Escrever -DialogoFase1- Cair">
+            <sub-events>
+                <event-block sid="216023982125452">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="331530366631177" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="747875161534907" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="406771029448492" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="112623927182186" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="404571331192035" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="918200582282522" type="DoutorImagem">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="639028963930476" type="MaoNPC" />
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="161136070376585" type="PartesCorpo">
+                            <param id="0" name="Gravity">10</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="940852702670640" type="PartesCorpo">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="464360968063859" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="354366800163661">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="529475877696763" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1Queda/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="676541080996721" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="102417056124423" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase1Queda/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="883846198751476" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="792374457120580">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="351102005791381" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1Queda/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="425145839921410" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="105387526309964" type="System">
+                            <param id="0" name="Group name">&quot;Botao Colocar&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="810372420861391" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Cair&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="693261257516927" title="Máquina de Escrever -DialogoFase1- Colocar">
+            <sub-events>
+                <event-block sid="228825542598406">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="322986585024239" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="368758120350164" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="263879406242458" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="222278816811594" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="489665555809226" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="732491498474630" type="DoutorImagem">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="469032538433043" type="PartesCorpo">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="605393477720445" type="MaoAuxiliar">
+                            <param id="0" name="X">Camera.X-100</param>
+                            <param id="1" name="Y">Camera.Y-40</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="760121150577752" type="PartesCorpo">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y+100</param>
+                        </action>
+                        <action disabled="1" id="-26" name="Move to layer" sid="826128187240483" type="PartesCorpo">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="364096380971535">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="685843204273777" type="System" />
+                        <condition id="3" name="Compare frame" sid="475639393990525" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="145800598987534" type="PartesCorpo">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y+100</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="780404352431717" type="PartesCorpo">
+                            <param id="0" name="Layer">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="277839736758006">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="492074141957608" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1Colocar/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="757302493840202" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="677435686655296" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase1Colocar/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="671674562120648" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="645319589087527">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="158047064978160" type="System">
+                                    <param id="0" name="Variable">letra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="462031975691021" type="MaoAuxiliar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="203751496957560" type="MaoAuxiliar" />
+                                <action id="-3" name="Set position" sid="634081804466746" type="PartesCorpo">
+                                    <param id="0" name="X">MaoAuxiliar.X-20</param>
+                                    <param id="1" name="Y">MaoAuxiliar.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="790996202337980">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="730394927897922" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase1Colocar/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="209962048232089" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="322770963569331" type="PartesCorpo">
+                            <param id="0" name="X">MaoAuxiliar.X-20</param>
+                            <param id="1" name="Y">MaoAuxiliar.Y</param>
+                        </action>
+                        <action disabled="1" id="-12" name="Set group active" sid="521188587274002" type="System">
+                            <param id="0" name="Group name">&quot;Botao Cair&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action disabled="1" id="-12" name="Set group active" sid="143171276197673" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Colocar&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="958928054959808" title="Botao Colocar">
+            <sub-events>
+                <event-block sid="827470872175077">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="924153075880088" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="224257519768537" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="240562394501729" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="512750557659209" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="375558098431216" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Colocar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725533992960998">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="741240050708770" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="397261340697353" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="460281599073462" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Colocar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="272973542000251" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="168644430653746" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="272924365883242" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="460575730453215" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="321499356374554" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="665868816405805" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Colocar&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="271511285122767" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Posterior&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="994142295235848" type="System">
+                            <param id="0" name="Group name">&quot;Apresentacao Frontal&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="488415023793870" type="System">
+                            <param id="0" name="Group name">&quot;Botao Colocar&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="137750825813909">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="861367620916416" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="392961237081029" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Colocar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="150976859366482" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="284062834490073" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>
                 </event-block>
