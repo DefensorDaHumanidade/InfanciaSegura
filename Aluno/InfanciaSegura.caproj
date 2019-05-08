@@ -25,6 +25,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
@@ -57,7 +58,7 @@
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -2542,7 +2543,7 @@
                         <image-point name="Umbigo" x="0.445783" y="0.448895" />
                         <image-point name="Abdomen" x="0.44739" y="0.498619" />
                         <image-point name="Virilha" x="0.44739" y="0.544199" />
-                        <image-point name="Penis" x="0.44739" y="0.59116" />
+                        <image-point name="Penis" x="0.446586" y="0.588398" />
                         <image-point name="Coxa" x="0.44739" y="0.631215" />
                         <image-point name="Joelho" x="0.44739" y="0.736188" />
                         <image-point name="Perna" x="0.44739" y="0.803867" />
@@ -2586,10 +2587,10 @@
             <animation-folder>
                 <animation framecount="39" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870269241990260" speed="5">
                     <frame duration="1" hotspotX="0.501636" hotspotY="0.379518" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.503817" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.500545" hotspotY="0.5" />
@@ -2903,11 +2904,8 @@
                 <behavior-type name="Fade" sid="462582087217305">
                     <behavior id="Fade" />
                 </behavior-type>
-                <behavior-type name="Sine" sid="438048774239332">
-                    <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="Sine2" sid="755717400103316">
-                    <behavior id="Sin" />
+                <behavior-type name="Bullet" sid="809611229146683">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -2937,6 +2935,66 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742546119830313" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alexandre\Desktop\branco.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotaoSair" sid="958540495068912">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="648168903468870">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="358840894679781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoSairSolto.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Alexandre\Desktop\BotaoSairPressionado.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Contorno" sid="757289140651646">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="462009159350773" speed="5">
+                    <frame duration="1" hotspotX="0.748387" hotspotY="0.630435">
+                        <image-point name="Tras" x="2.93548" y="-0.369565" />
+                        <image-point name="Cabeca" x="1.73226" y="1.02174" />
+                        <image-point name="Bochecha" x="1.73226" y="1.73913" />
+                        <image-point name="Orelha" x="1.73226" y="2.5" />
+                        <image-point name="Nariz" x="1.73226" y="3.21739" />
+                        <image-point name="Pescoco" x="1.73226" y="3.8913" />
+                        <image-point name="Torax" x="1.73226" y="4.69565" />
+                        <image-point name="Umbigo" x="1.73226" y="6.69565" />
+                        <image-point name="Abdomen" x="1.73871" y="7.47826" />
+                        <image-point name="Virilha" x="1.73871" y="8.19565" />
+                        <image-point name="Penis" x="0.612903" y="0.652174" />
+                        <image-point name="Coxa" x="1.73871" y="9.56522" />
+                        <image-point name="Joelho" x="1.73871" y="11.2174" />
+                        <image-point name="Perna" x="1.73871" y="12.2826" />
+                        <image-point name="Tornozelo" x="1.73871" y="13.6304" />
+                        <image-point name="Pe" x="1.73871" y="14.3913" />
+                        <image-point name="Dedo do pe" x="0.264516" y="14.6957" />
+                        <image-point name="Dedos" x="0.264516" y="9.41304" />
+                        <image-point name="Mao" x="0.264516" y="8.15217" />
+                        <image-point name="Pulso" x="0.264516" y="7.28261" />
+                        <image-point name="Antebraco" x="0.264516" y="6.63043" />
+                        <image-point name="Braco" x="0.264516" y="5.32609" />
+                        <image-point name="Queixo" x="0.264516" y="4.52174" />
+                        <image-point name="Boca" x="0.264516" y="3.65217" />
+                        <image-point name="Dentes" x="0.264516" y="2.93478" />
+                        <image-point name="Olhos" x="0.264516" y="2.26087" />
+                        <image-point name="Testa" x="0.264516" y="1.58696" />
+                        <image-point name="Ombro" x="2.34194" y="3.76087" />
+                        <image-point name="Omoplata" x="2.34194" y="4.56522" />
+                        <image-point name="Costas" x="2.34194" y="5.3913" />
+                        <image-point name="Cotovelo" x="2.34194" y="6.17391" />
+                        <image-point name="Coccix" x="2.34194" y="7.43478" />
+                        <image-point name="Nadega" x="2.34194" y="9.28261" />
+                        <image-point name="Calcanhar" x="2.34194" y="14.2391" />
+                        <image-point name="Axila" x="3.65161" y="4.86957" />
+                        <image-point name="Lombar" x="3.65161" y="6.84783" />
+                        <image-point name="Quadril" x="3.65161" y="7.52174" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -3018,6 +3076,7 @@
         <file name="SoltarBotao.ogg" />
         <file name="Segurar.ogg" />
         <file name="Soltar.ogg" />
+        <file name="Erro.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

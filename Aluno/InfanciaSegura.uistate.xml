@@ -11,23 +11,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">TelaGeneroUsuario</layout>
-        <layout order="6">TelaInscreverTurma</layout>
         <layout order="2">TelaInicial</layout>
         <layout order="4">TelaSimEncontrado</layout>
+        <layout order="6">TelaInscreverTurma</layout>
         <layout order="7">TelaCarregamento</layout>
         <layout order="8">TelaGeneroPersonagem</layout>
         <layout order="9">TelaAcerto</layout>
         <layout order="10">Mundo</layout>
         <layout order="11">TelaEscolhaAmigo</layout>
         <layout order="13">TelaEntrarMundo</layout>
-        <layout active="1" order="15">Hospital</layout>
+        <layout order="15">Hospital</layout>
         <layout order="16">HospitalFase1</layout>
         <event-sheet order="0">Global</event-sheet>
         <event-sheet order="3">EventoVerificao</event-sheet>
         <event-sheet order="5">EventoInscreverTurma</event-sheet>
         <event-sheet order="12">EventoEscolhaAmigo</event-sheet>
         <event-sheet order="14">EventoEntrarMundo</event-sheet>
-        <event-sheet order="17">EventoHospitalFase1</event-sheet>
+        <event-sheet active="1" order="17">EventoHospitalFase1</event-sheet>
         <event-sheet order="18">EventoHospital</event-sheet>
     </open-tabs>
     <properties>
@@ -140,5 +140,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/MaoNPC/" />
         <folder expanded="1" path="animation-folder/MaoAuxiliar/" />
         <folder expanded="1" path="animation-folder/Branco2/" />
+        <folder expanded="1" path="animation-folder/BotaoSair/" />
+        <folder expanded="1" path="animation-folder/Contorno/" />
     </folders-expanded>
 </c2uistate>

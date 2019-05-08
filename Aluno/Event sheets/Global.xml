@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Global</name>
     <events>
+        <variable constant="0" name="Peca" sid="379306773113800" static="0" type="number">-1</variable>
         <variable constant="0" name="CenarioAnterior" sid="671200864177728" static="0" type="text"></variable>
         <variable constant="0" name="Temporalizador" sid="124753758687900" static="0" type="number">0</variable>
         <variable constant="0" name="Dificuldade" sid="167088359861239" static="0" type="text">Facil</variable>
@@ -447,6 +448,17 @@
                         <action id="2" name="Stop" sid="918028919696455" type="BotaoProximoMundo" />
                         <action id="9" name="Set scale" sid="928068055951895" type="BotaoProximoMundo">
                             <param id="0" name="Scale">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="476431210738223">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="896492147064431" type="BotaoSair" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="513008012037038" type="BotaoSair" />
+                        <action id="9" name="Set scale" sid="209308780631916" type="BotaoSair">
+                            <param id="0" name="Scale">0.2</param>
                         </action>
                     </actions>
                 </event-block>
