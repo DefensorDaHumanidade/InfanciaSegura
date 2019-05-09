@@ -3021,6 +3021,7 @@
         <layout>Mundo.xml</layout>
         <layout>Hospital.xml</layout>
         <layout>HospitalFase1.xml</layout>
+        <layout>HospitalFase2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
@@ -3044,6 +3045,7 @@
         <event-sheet>EventoMundo.xml</event-sheet>
         <event-sheet>EventoHospital.xml</event-sheet>
         <event-sheet>EventoHospitalFase1.xml</event-sheet>
+        <event-sheet>EventoHospitalFase2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />

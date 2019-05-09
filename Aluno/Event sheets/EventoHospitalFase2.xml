@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoHospitalFase2</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="662503120112525">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="822224536822980" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="923997695225051" type="System">
+                    <param id="0" name="Variable">GeneroPersonagem</param>
+                    <param id="1" name="Value">&quot;Masculino&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="555462731271541" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Value">&quot;Feminino&quot;</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="487163229227235" type="System">
+                    <param id="0" name="Width">500</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="171497454303220" type="System">
+                    <param id="0" name="X">100</param>
+                </action>
+                <action id="9" name="Set scale" sid="198515868206400" type="DoutorImagem">
+                    <param id="0" name="Scale">0.4</param>
+                </action>
+                <action id="9" name="Set scale" sid="275757101771771" type="CorpoMasculino">
+                    <param id="0" name="Scale">0.8</param>
+                </action>
+                <action id="9" name="Set scale" sid="171019517296114" type="PartesCorpo">
+                    <param id="0" name="Scale">0.13</param>
+                </action>
+                <action id="-3" name="Set position" sid="448065237978981" type="CorpoMasculino">
+                    <param id="0" name="X">Camera.X</param>
+                    <param id="1" name="Y">Camera.Y</param>
+                </action>
+                <action id="2" name="Stop" sid="675464931853583" type="PartesCorpo" />
+                <action disabled="1" id="-12" name="Set group active" sid="214760766793150" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Nomeacao&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="-13" name="Set time scale" sid="566502089433800" type="System">
+                    <param id="0" name="Time scale">2.0</param>
+                </action>
+                <action id="-3" name="Set position" sid="574839891430809" type="Contorno">
+                    <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Penis&quot;)</param>
+                    <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
+                </action>
+                <action id="9" name="Set scale" sid="782048479515887" type="Contorno">
+                    <param id="0" name="Scale">0.8</param>
+                </action>
+                <action id="-3" name="Set position" sid="384956913514381" type="Camera">
+                    <param id="0" name="X">CorpoMasculino.ImagePointX(0)</param>
+                    <param id="1" name="Y">CorpoMasculino.ImagePointY(0)+150</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="736395085569702" title="Criar Pecas2">
+            <sub-events>
+                <event-block sid="751038132503059">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="239173736328877" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="376166583444489" type="PartesCorpo" />
+                        <action disabled="1" id="-3" name="Set position" sid="773369136707350" type="Camera">
+                            <param id="0" name="X">Self.X</param>
+                            <param id="1" name="Y">Self.Y+150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="518389389469023">
+                    <conditions>
+                        <condition id="-10" name="For" sid="752508782480634" type="System">
+                            <param id="0" name="Name">&quot;indice&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="244518081610152" type="System">
+                            <param id="0" name="Object to create">PartesCorpo</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">PartesCorpo.X+10</param>
+                            <param id="3" name="Y">PartesCorpo.Y+10</param>
+                        </action>
+                        <action id="2" name="Stop" sid="518213726018366" type="PartesCorpo" />
+                        <action id="9" name="Set scale" sid="512739732655245" type="PartesCorpo">
+                            <param id="0" name="Scale">0.13</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="619860113848541" type="PartesCorpo">
+                            <param id="0" name="Frame number">loopindex</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="317635052186907" type="System">
+                            <param id="0" name="Group name">&quot;Criar Pecas&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="275420182975602" type="System">
+                            <param id="0" name="Group name">&quot;Preencher corpo2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="145602960766043" title="Preencher Corpo2">
+            <sub-events>
+                <event-block sid="915115237374913">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="225905347556049" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="677305783324889" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Cabeca&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Cabeca&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="426315366181788">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="864647129781923" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="410530089289948" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Boca&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Boca&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="458064075862604">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="353716917428950" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="652074761650255" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pe&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pe&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725926646922688">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="246579752467719" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="405718136978251" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dedo do pe&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dedo do pe&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="241078985081559">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="366935961788946" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="680755698534644" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Tornozelo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Tornozelo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="928987125171927">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="187654060485259" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="587937016198779" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Queixo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Queixo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="923056499821861">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="918159539520147" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="516560057506120" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Testa&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Testa&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="482388225828759">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="702975079777428" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="417095598200625" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Olhos&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Olhos&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="521665105540200">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="975484317604288" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="607188092960070" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dentes&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dentes&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="833436242289284">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="346966293519393" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="689926713270764" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Bochecha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Bochecha&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="154586392360464">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="452082513591460" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="884330207266380" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Orelha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Orelha&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="951734231896584">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="341098078556948" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="740800150860154" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Nariz&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Nariz&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948735285419531">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="510335698725700" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="219925455279913" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pescoco&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pescoco&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="683571209348618">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="425847425266437" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="616145895975354" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Torax&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Torax&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566369394456483">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="616437264606562" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="600888249895725" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Braco&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Braco&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="587350441645825">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="203733426132814" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="761157925374689" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Antebraco&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Antebraco&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234762308730538">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="356712145971877" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="524979617850536" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pulso&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pulso&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="195478811853514">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="896802080414532" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="986760143325140" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dedos&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dedos&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="111060568366648">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="520567700167107" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="219857678880041" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Umbigo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Umbigo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="670244414910098">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="991400706120214" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="104094510293591" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Abdomen&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Abdomen&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="139179755467578">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="510946315179720" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="526543562312342" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Virilha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Virilha&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="764693136964736">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="960754835381522" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">21</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="155171220499770" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Coxa&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Coxa&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="278083045391317">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="524550531102706" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">22</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="530505963138134" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Joelho&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Joelho&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="594993845448941">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="316459628021375" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">23</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="201489628684454" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Perna&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Perna&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="649911634215261">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="914935054591122" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">24</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="441244214203489" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Ombro&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Ombro&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="538826633258490">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="465894212641010" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="379990051819042" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Omoplata&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Omoplata&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="156091548204665">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="498690291006272" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">26</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="899001572286269" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Costas&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Costas&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="631602281942713">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="866633166052291" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">27</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="298096763161722" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Cotovelo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Cotovelo&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="857471181473285">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="287240907201353" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">28</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="159767920722068" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Axila&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Axila&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="607251107941335">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="122924166428592" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">29</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="313438450963122" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Lombar&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Lombar&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="255155327203759">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="705887603546134" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="302437020827316" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Quadril&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Quadril&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="426267079324735">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="932035695477701" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">31</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="745083058976945" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Nadega&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Nadega&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="995512815196441">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="590041482844437" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="246000877680209" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Mao&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Mao&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="882521555465981">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="952443323701439" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">33</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="826594298156782" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Calcanhar&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Calcanhar&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="890455253799978">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="709923103599325" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">34</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="213033421444151" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Coccix&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Coccix&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="354470241704710">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="631323676393508" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="881446939597841" type="PartesCorpo">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Penis&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="116167281847574" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Corpo&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
