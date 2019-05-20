@@ -1,0 +1,2944 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventoHospitalFase3</name>
+    <events>
+        <include>Global</include>
+        <event-block sid="203527820950647">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="280757109134418" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="635194686232025" type="System">
+                    <param id="0" name="Variable">GeneroPersonagem</param>
+                    <param id="1" name="Value">&quot;Masculino&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="217930289879641" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Value">&quot;Feminino&quot;</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="770586821191783" type="System">
+                    <param id="0" name="Width">500</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="593144949992206" type="System">
+                    <param id="0" name="X">100</param>
+                </action>
+                <action id="9" name="Set scale" sid="735551664209882" type="DoutorImagem">
+                    <param id="0" name="Scale">0.4</param>
+                </action>
+                <action id="9" name="Set scale" sid="853296632190171" type="CorpoMasculino">
+                    <param id="0" name="Scale">0.8</param>
+                </action>
+                <action id="9" name="Set scale" sid="518771050576025" type="PartesCorpo">
+                    <param id="0" name="Scale">0.13</param>
+                </action>
+                <action id="-3" name="Set position" sid="432693955832418" type="CorpoMasculino">
+                    <param id="0" name="X">Camera.X</param>
+                    <param id="1" name="Y">Camera.Y</param>
+                </action>
+                <action id="2" name="Stop" sid="180175184252516" type="PartesCorpo" />
+                <action disabled="1" id="-12" name="Set group active" sid="969312585006313" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Nomeacao&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action disabled="1" id="-13" name="Set time scale" sid="361248249404784" type="System">
+                    <param id="0" name="Time scale">2.0</param>
+                </action>
+                <action id="-3" name="Set position" sid="702081757846966" type="Contorno">
+                    <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Penis&quot;)</param>
+                    <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
+                </action>
+                <action id="9" name="Set scale" sid="420426862273528" type="Contorno">
+                    <param id="0" name="Scale">0.8</param>
+                </action>
+                <action id="-3" name="Set position" sid="299302628633478" type="Camera">
+                    <param id="0" name="X">CorpoMasculino.ImagePointX(0)</param>
+                    <param id="1" name="Y">CorpoMasculino.ImagePointY(0)+150</param>
+                </action>
+                <action id="-3" name="Set position" sid="227270147202081" type="MaoNPC">
+                    <param id="0" name="X">Camera.X</param>
+                    <param id="1" name="Y">Camera.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="289719105221605" title="Máquina de Escrever -DialogoFase3- Hospital">
+            <sub-events>
+                <event-block sid="389430674308804">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="261772184427652" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="207410833463432" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="461436732764171" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="715116202241510" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="164694402697602" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="603132001397286">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="630155851581871" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Azul/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="942010711207594" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="283986218756861" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase3Azul/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="909568805464117" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="273872812746579">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="900471851807155" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Azul/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="718238563669745" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="660061745902820" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="167408676722030" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="123927960391044" title="BotaoF">
+            <sub-events>
+                <event-block sid="362044372469395">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="472346051972219" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="669691049496037" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="139245403535830" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="281843854967412" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="107550787269125" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;F&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="300300843681896">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="470474717821080" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="441785548758951" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="491062457515201" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="150077626448920" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="475177825428483" type="BONS">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="701578882297261" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O beijo carinhoso mamãe é um toque bom.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="480490829220555" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="224203230858758" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="518328595695017" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="271340528268525" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="827267098317081" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="244157561724787" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="712332707130724" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="902580106122495">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="458183933470093" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="943708019277709" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="778274729741504" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="653096413971904" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="708704708802248" title="BotaoF2">
+            <sub-events>
+                <event-block sid="161569415019405">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="930824649852639" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="320581499321608" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="198092297124263" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="960390247454669" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="449974067362174" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;F2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="767643181220326">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="232366662809289" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="382040069507319" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="957823420546542" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="412911289023976" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="128561358886147" type="BONS">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="867490478709661" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O carinho do papai é um toque bom.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="986221911720361" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="354656298831903" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="387188759225599" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="691404495387446" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="390303437714878" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="336091204270898" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="157509414716964" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="600254846404191">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="567184347742274" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="996668663718415" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="818038511257245" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="559035880513143" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="928484805760016" title="BotaoF3">
+            <sub-events>
+                <event-block sid="859622795544614">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="905945692123117" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="178393381893323" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="648488308348844" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="819618762933702" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="879833857525670" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;F2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="370956082433096">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="630539859464877" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="892494824663698" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="628163729957284" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="730384888421953" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="614657138376859" type="BONS">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="172622852331576" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O toque do médico sob a supervisão dos pais é um toque bom.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="384369861105326" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="679796000122222" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="433456980782696" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="773300132218425" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="544878410941115" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="143361390525776" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="708074350137881" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="941080040523157">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="988891018237299" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="857806928618503" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="503891407436777" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="742759082514521" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="469255411607342" title="BotaoF4">
+            <sub-events>
+                <event-block sid="162472975899108">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="877992339125364" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="562466559268415" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="344402585271951" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="144095071715368" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="174447609551462" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;F2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="226814836928842">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="747101551734708" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="398156923498848" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="167551510750473" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="509021298128069" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="608355649854061" type="BONS">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="830333216044541" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O abraço dos seus avós é um toque bom.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="125557835443671" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="289663427055336" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="882383316505769" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="953812669840510" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="886880554764913" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="465449082698328" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="629184104917317" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="702155079206454">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="429107717880061" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="702514742477928" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="627258888425818" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="942671005677289" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="935861932694689" title="BotaoF5">
+            <sub-events>
+                <event-block sid="730126767567568">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="161661434192581" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="928937703846820" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="800987775553930" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="934984271004598" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="314703724465058" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;F2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268359162153341">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="722800406265673" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="178981031867135" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="327919547837754" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="736098794453796" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="482996223744543" type="BONS">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="0" name="Set text" sid="965640046435761" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O abraço da mamãe é um toque bom.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="377712556204749" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="948890275679159" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="789221856449730" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="630113030905796" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="945366849632222" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="226769120392934" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF6&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="728464725946838" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF5&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="514264440892042">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="172841374896609" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="373970621795422" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="951102179980693" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="610077104349569" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="999370531432903" title="BotaoF6">
+            <sub-events>
+                <event-block sid="353624920702211">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="640509839278888" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="628629180747897" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="542560874848500" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="835560442845545" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="332158150174855" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;F2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="173272082141589">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="898514128112120" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="899142307066146" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="215379324937086" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="916167749586671" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="502430633772844" type="BONS">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="114689841134665" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O banho do papai é um toque bom.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="419692765133815" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="106462312027996" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="110822449793613" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="686123429599948" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="228037425145470" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="428473228457412" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="106361544590148" type="System">
+                            <param id="0" name="Group name">&quot;BotaoF6&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="308918268100085">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="171790529817075" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="868004146743061" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;F2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="378837489282548" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="490801873444826" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="897293884582225" title="Máquina de Escrever -DialogoFase3- Hospital2">
+            <sub-events>
+                <event-block sid="134169605566098">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="667696184868484" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="531474487411829" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="857512748859579" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="638705305563513" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="404694366246623" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="984616667820650" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="526962809351033">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="619610464302216" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Vermelho/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="241380936502096" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="738361514353123" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase3Vermelho/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="661864557979257" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="593389791653511">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="679749364451918" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Vermelho/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="221204824392154" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="233868911085309" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="752569558873574" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="961000593808834" title="BotaoR">
+            <sub-events>
+                <event-block sid="370364109402177">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="446441794095649" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="941375447656072" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="289062778270255" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="215652898511339" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="602729984214147" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;R&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="404921553807612">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="770076773869560" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="146268446782534" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="736575414306430" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="375891078670037" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="491125396051871" type="RUINS">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="537609188598572" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O toque no peito é um toque ruim.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446257862012635" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="135401700276829" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="980084819721127" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="609641138354509" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="199602117469915" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="320208987812036" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="439014010504501" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="517783514474690">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="765979974126304" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="774492856781386" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="655518691749977" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="868836887221682" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="637055791009932" title="BotaoR2">
+            <sub-events>
+                <event-block sid="748351840409973">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="576273538144008" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="875099477217956" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="522616963829184" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="255005700951510" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="528613619594913" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;R2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="682812379060002">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="247416394479930" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="462568525112405" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="492313413464843" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="958503967258805" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="713640047010763" type="RUINS">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="292046068777668" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O toque no pênis, também chamado de pipi, é um toque ruim.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="820136107514999" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="824175344663975" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="512957557303136" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="588259440153430" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="862908077722642" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="218133299706650" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="562681730576708" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="296093917959642">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="416690093324100" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="171397929874950" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="576857271210802" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="997239333235688" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="933998512121599" title="BotaoR3">
+            <sub-events>
+                <event-block sid="233425182808093">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="433327060209009" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="199578835328226" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="955704297306176" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="889074937263517" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="188083199145212" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;R3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245619477727240">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="247285085460140" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="778274608539867" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="799807793509160" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="843748103365180" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="505792474482340" type="RUINS">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="380688216651557" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O toque no bumbum ou bunda, é um toque ruim.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="822514751547278" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="533909064852637" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="943076688828948" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="445826153423427" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="521504778937125" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="382095651461264" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="811101088147265" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="350256481504528">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="986805314508972" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="880266085483073" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="774093443324093" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="286581919339608" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="636255402123585" title="BotaoR4">
+            <sub-events>
+                <event-block sid="859400908129184">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="749070022345623" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="981928942656579" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="423786874726891" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="341618009821062" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="892553809348054" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;R4&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="981970697926450">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="442443195483507" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="207977495431364" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="744149122178783" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="731034805358583" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="147229366097016" type="RUINS">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="739060264380554" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O toque nos peitinhos também é um toque ruim.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="866032140763303" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="983277025579908" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="225761719242683" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="366495039042719" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="522099726701269" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="401376105222211" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="804668403329705" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="415611208615596">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="380793953080164" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="986708385211296" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="500861782778431" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="274560580879413" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="863810050359181" title="BotaoR5">
+            <sub-events>
+                <event-block sid="770965216356020">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="618868066690192" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="444656286729196" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="136233609457558" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="637632580158203" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="830633460683478" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;R5&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="224102429627141">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="485475625889474" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="813542860801561" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="339050350805225" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="105018546242539" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="988449721254769" type="RUINS">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="0" name="Set text" sid="796931668471766" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O toque na vagina, também chamada de pepeka, é um toque ruim.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="286075975992316" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="787470808035499" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="386812088458361" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="465747579503823" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="481135518833369" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="920764321751615" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR6&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="542368114856857" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR5&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="268018346808185">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="914107029466844" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="641562650925733" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="548691371431483" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="191999009615846" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="238278617038328" title="BotaoR6">
+            <sub-events>
+                <event-block sid="822819609293915">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="565710374820068" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="630466799445717" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="836006230279635" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="374231383624974" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="958480423160465" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;R6&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="149375845454140">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="467581764797695" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="531108923024031" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="500938495147851" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="127025782269817" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="588105459023398" type="RUINS">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="264825466776253" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;O toque no bumbum ou no coccix é um toque ruim.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="153315243469496" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="436772977351083" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="623016426048594" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="801303369898980" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="255644461916876" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="978397713259549" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="285796177733232" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR6&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="279209471771424">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="662765735290602" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="701817248019918" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;R6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="719745949619683" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="878935253514351" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="785840318181657" title="Máquina de Escrever -DialogoFase3- Hospital3">
+            <sub-events>
+                <event-block sid="441668712629206">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="505129150567104" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="896196833082958" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="835940821099598" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="214896948216501" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="555360098051904" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="816114690255546" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="562776824525829" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="669283462981635">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="289128905287899" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Cair/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="521217685931348" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="405790504283580" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase3Cair/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="597063494387719" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635820121288255">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="147388909351760" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Cair/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="761056452637491" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="381896777730812" type="System">
+                            <param id="0" name="Group name">&quot;CAIR&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="113126821926469" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="334607476889521" title="CAIR">
+            <sub-events>
+                <event-block sid="313990893070431">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="279313313613895" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="246797670964520" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="587635102940122" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="547434177944440" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="204933296616399">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="509116769239589" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" disabled="1" id="0" name="Shake" sid="304868069082340" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="925543552668271" type="BONS">
+                            <param id="0" name="X">lerp(Self.X, 1000, 0.005)</param>
+                            <param id="1" name="Y">lerp(Self.Y, 1000, 0.005)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="283015691173293" type="RUINS">
+                            <param id="0" name="X">lerp(Self.X, 1000, 0.005)</param>
+                            <param id="1" name="Y">lerp(Self.Y, 1000, 0.005)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="867191407571627" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="458153884937657" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="574226571503793" type="System">
+                            <param id="0" name="Group name">&quot;CAIR&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="309299877662780" title="Máquina de Escrever -DialogoFase3- Hospital4">
+            <sub-events>
+                <event-block sid="660803633727455">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="296125207963642" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="340650831300487" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="371938991738667" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="387324530096498" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="736890910744560" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="103867725392907" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="988200539836727" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121109448712032">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="462987122166004" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Montar/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="707327369667990" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="917448247659328" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase3Montar/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="633194302700064" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="238315228578421">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="971323711657425" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Montar/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="392526383682017" type="BotaoJogarMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="815416407786514" type="System">
+                            <param id="0" name="Group name">&quot;Botao Jogar3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="530096164501116" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="243426154853616" title="Botao Jogar3">
+            <sub-events>
+                <event-block sid="116984296662376">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="189318296683896" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="800089485792033" type="Touch">
+                            <param id="0" name="Object">BotaoJogarMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="277958525085988" type="BotaoJogarMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="218783763700334" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="969479521507132" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Jogar3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="426978886450230">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="893333332980438" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="124942630534561" type="Touch">
+                            <param id="0" name="Object">BotaoJogarMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="657488483903798" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="600087171758680" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="837830168600440" type="BotaoJogarMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="529565505623666" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="452668809376521" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="277979512177933" type="BotaoJogarMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="663232637462206" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="777681748361131" type="System">
+                            <param id="0" name="Group name">&quot;Joguinho&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="822386470177830" type="System">
+                            <param id="0" name="Group name">&quot;Botao Jogar3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="305584236128103">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="264278261260804" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="967471812984833" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="396678304064293" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="502498113479103" type="BotaoJogarMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="frame" sid="368329491798226" static="0" type="number">0</variable>
+        <event-group description="" inactive="1" sid="433079051489311" title="Joguinho">
+            <sub-events>
+                <event-block sid="720460612713432">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="104698518223665" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="170333137838680" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="662243648461125" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="739880817237663" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="324119531269387" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="222724577184113" type="RUINS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="964488187855571" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="368260265085055" type="DoutorImagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="811336204969266" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="192335769384586" type="BONS">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="513410669661237" type="RUINS">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="873541631919716">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="444161676270624" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="253880650263598" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="735744049100099" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="762824701831055" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="915685909469810" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="955604355033282" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="105682844283355" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="112228211104336" type="BONS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="191326586533688" type="RUINS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action disabled="1" id="5" name="Set frame" sid="108604372823160" type="BONS">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="239218260801726" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="488745543410072">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="166511823627617" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="822936723650075" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="854491422173607" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="203196803042065" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="890302814461391" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="481327102306829" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="943276570871291" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253079637647115">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="147699252485369" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="564131966576698" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="271496104743078" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="520762955929716" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-15" name="Set visible" sid="371491763840648" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="615046707950720" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="739862347228364" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="470799436294129" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="554805634308910" type="RUINS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action disabled="1" id="5" name="Set frame" sid="216358489818721" type="RUINS">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="420988493366662" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="673548065770042" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="726208414549322">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="645830421805929" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="528270449704896" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="858283511225563" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="554818918006782" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="908457009270514" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="824161263957732" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="278943024238510" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="189946946559898">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="608008651443103" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="755033788810847" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="415576679572682" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="295956862904159" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="582905012889946" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="216280608904916" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="225916856300400" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="659988724371005" type="BONS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="175589857642547" type="RUINS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="552000854208846" type="BONS">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="576020734463842" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="123980208427631">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="352936765615755" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="399584258892246" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="718949474462244" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="930463753163513" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="382314261321147" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="170400498067073" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="181904876294277" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130101704310915">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="157745035183397" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="871768960138778" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="148130901208593" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="671707719148567" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="871653860580120" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="587085005791594" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="807946396588076" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="678886774201925" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="659841061508944" type="RUINS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="660389116152482" type="RUINS">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="308994418818360" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="926233699884169" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126394275340854">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="816110001554653" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="469025028312282" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="738525047557946" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="604957258631780" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="745292552895859" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="822082469832810" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="752613099159917" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="564708805141044">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="864151160753109" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="153230429226283" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="486668957351463" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="357624753395325" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="910185461746860" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="916683071202316" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="189324565537789" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="410251391334418" type="BONS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="251877780773398" type="RUINS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="381283710621660" type="BONS">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="886686404811733" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="309357601531746">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="548459840546163" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="797381419842139" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="813471532782442" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="117961236616760" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="343555668277074" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="340813336085640" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="989028948921873" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993933723166337">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="372146060730693" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="756605640413445" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="405781133569225" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="499406985106573" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="845337730109034" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="432687430954421" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="756181562247869" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="794493736359825" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="677565547386572" type="RUINS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="499410475942896" type="RUINS">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="285130691125699" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="853845320831471" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771475910644735">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="984995970606617" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="111616405740268" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="542168523715507" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="343234658328649" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="345789230932117" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="450398245855914" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="428825906794522" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="359621888328142">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="744785306010357" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="279749700911723" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="980565664317221" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="231560646446094" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="215049403636364" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="400079613787467" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="543041200780282" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="324028591979337" type="BONS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="336262545645300" type="RUINS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="223208480793275" type="BONS">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="692554063726379" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="833275952951174">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="661848171400493" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="555463361404382" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="476919688834418" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="311418036905206" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="414605810597233" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="245578742625624" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="636677205684373" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126384513138100">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="592670901701499" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="146593465822507" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="610465465555292" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="394905540109577" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="533953187248905" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="706001825536107" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="667437041736359" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="668320182625348" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="240472773092241" type="RUINS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="815866600372016" type="RUINS">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="554989998915015" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="138565285853111" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="653881951970849">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="740406620003592" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="354340718379226" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="503627462138780" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="337928353481948" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="211408728766668" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="225648872052827" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="333552094375503" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="785212033026988">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="639899573983009" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="975300794488591" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="953070114722778" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="157307208198799" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="416880246448038" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="849751736648814" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="426750431290680" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="158991916235948" type="BONS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="351129802877048" type="RUINS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="766102712746271" type="BONS">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="922478233468533" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="670108843192054">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="487067216999735" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="941566196438240" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="313892945039392" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="522921576542588" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="284685550404886" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="941210767751473" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="785854866696482" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="443849321870130">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="305874465960033" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="767878136497892" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="726108326538455" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="322086926277570" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="994243003752478" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="440915137930492" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="981594331031750" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="399713198705615" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="326166497953020" type="RUINS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="902746572996209" type="RUINS">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="735611669060741" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="405813833201326" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="181373978122461">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="820667106731891" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="587844803572682" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="351195571006111" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="155260670698515" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="414083877874131" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="707211705563966" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="265941743192162" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="382891392912172">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="520119806789639" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="236023363565970" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="554984614341571" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="363134594520137" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="994877408294774" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="901755256975590" type="RUINS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="508655978321094" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="768717144095188" type="System">
+                            <param id="0" name="Variable">Peca</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="728373217336840" type="System">
+                            <param id="0" name="Variable">Peca</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="322153814787426" type="BONS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="160649883949638" type="RUINS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="186858358097958" type="BONS">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="921538005038173" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="714196485652155">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="658117586450950" type="BONS" />
+                        <condition id="3" name="Compare frame" sid="559659621172328" type="BONS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="823718015581759" type="System">
+                            <param id="0" name="First value">abs(distance(BONS.X, BONS.Y,LivroBOM.ImagePointX(0), LivroBOM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="272572605972481" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="186873341595950" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="782409569189630" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="738128800684992" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="215944542148787">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="787461835125726" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="572426104727716" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="941800727848264" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="722095447467399" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="585317537998958" type="BONS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="572162194202340" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="971379885335973" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="491402287816179" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="113561730971801" type="RUINS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="665684322085146" type="RUINS">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="337395899173371" type="BONS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="241689556507428" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="979189984604557">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="865145320086213" type="RUINS" />
+                        <condition id="3" name="Compare frame" sid="555712698724532" type="RUINS">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="746512586930916" type="System">
+                            <param id="0" name="First value">abs(distance(RUINS.X, RUINS.Y,LivroRUIM.ImagePointX(0), LivroRUIM.ImagePointY(0)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="317732895595660" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="420787771991223" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="137038182838761" type="RUINS">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">620</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="297187379111374" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="248952625505137">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="174710161907867" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="515802840051674" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="649169675531826" type="System">
+                            <param id="0" name="Group name">&quot;Joguinho&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="981736531317365" title="Máquina de Escrever -DialogoFase3- Hospital5">
+            <sub-events>
+                <event-block sid="432016816074682">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="175096418386133" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="297571208661840" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="933726850791655" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="348739226414897" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="995312260591931" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="638426329723240" type="BONS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="634665760940856" type="RUINS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="859867131543773" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="496415696502140">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="522524407330649" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Final/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="142880936802777" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="402665585455557" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase3Final/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="537458213252526" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="506910794019516">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="975065149327146" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase3Final/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="510234668802587" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="154228416637844" type="System">
+                            <param id="0" name="Group name">&quot;BotaoFim&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="773091984574154" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital5&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="426785872976989" title="BotaoFim">
+            <sub-events>
+                <event-block sid="754073256477843">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="866016718832611" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="918386473169711" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="147835992940411" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="692474654513887" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="496630689939328" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;BotaoFim&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="172708484108061">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="242768492634945" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="489912198741174" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="474105927815565" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BotaoFim&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="184421623503162" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="488470131278607" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="131764750287309" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="310084526381882" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="624152988417246" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="133342501855370" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="734930056343418" type="System">
+                            <param id="0" name="Layout">Hospital</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="422140161424945" type="System">
+                            <param id="0" name="Group name">&quot;BotaoR6&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="474849377152057">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="593515086663177" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="701293420499562" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BotaoFim&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="747916993103281" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="212116046755664" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

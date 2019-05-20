@@ -22,15 +22,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="13">TelaEntrarMundo</layout>
         <layout order="15">Hospital</layout>
         <layout order="16">HospitalFase1</layout>
-        <layout order="19">HospitalFase2</layout>
+        <layout active="1" order="19">HospitalFase2</layout>
+        <layout order="22">HospitalFase3</layout>
         <event-sheet order="0">Global</event-sheet>
         <event-sheet order="3">EventoVerificao</event-sheet>
         <event-sheet order="5">EventoInscreverTurma</event-sheet>
         <event-sheet order="12">EventoEscolhaAmigo</event-sheet>
         <event-sheet order="14">EventoEntrarMundo</event-sheet>
-        <event-sheet active="1" order="17">EventoHospitalFase1</event-sheet>
+        <event-sheet order="17">EventoHospitalFase2</event-sheet>
         <event-sheet order="18">EventoHospital</event-sheet>
-        <event-sheet order="20">EventoHospitalFase2</event-sheet>
+        <event-sheet order="20">EventoHospitalFase1</event-sheet>
+        <event-sheet order="21">EventoHospitalFase3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -144,5 +146,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Branco2/" />
         <folder expanded="1" path="animation-folder/BotaoSair/" />
         <folder expanded="1" path="animation-folder/Contorno/" />
+        <folder expanded="1" path="animation-folder/PartesIntimas/" />
+        <folder expanded="1" path="animation-folder/Proibido/" />
+        <folder expanded="1" path="animation-folder/LivroRUIM/" />
+        <folder expanded="1" path="animation-folder/LivroBOM/" />
+        <folder expanded="1" path="animation-folder/BONS/" />
+        <folder expanded="1" path="animation-folder/RUINS/" />
     </folders-expanded>
 </c2uistate>

@@ -56,6 +56,10 @@
                     <param id="0" name="X">CorpoMasculino.ImagePointX(0)</param>
                     <param id="1" name="Y">CorpoMasculino.ImagePointY(0)+150</param>
                 </action>
+                <action id="-3" name="Set position" sid="984141009067152" type="MaoNPC">
+                    <param id="0" name="X">Camera.X</param>
+                    <param id="1" name="Y">Camera.Y</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="736395085569702" title="Criar Pecas2">
@@ -95,7 +99,7 @@
                             <param id="0" name="Frame number">loopindex</param>
                         </action>
                         <action id="-12" name="Set group active" sid="317635052186907" type="System">
-                            <param id="0" name="Group name">&quot;Criar Pecas&quot;</param>
+                            <param id="0" name="Group name">&quot;Criar Pecas2&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="-12" name="Set group active" sid="275420182975602" type="System">
@@ -611,8 +615,1882 @@
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
                         </action>
                         <action id="-12" name="Set group active" sid="116167281847574" type="System">
-                            <param id="0" name="Group name">&quot;Preencher Corpo&quot;</param>
+                            <param id="0" name="Group name">&quot;Preencher Corpo2&quot;</param>
                             <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="363153586576118" title="Máquina de Escrever -DialogoFase2- Hospital">
+            <sub-events>
+                <event-block sid="373585953644180">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="862657434516796" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="754256339931400" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="512796306232052" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="376218775503134" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="680242891638560" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="730272470087501">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="855084579760768" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="601752726499226" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="249372087733320" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase2/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="117125394477728" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="720763824357053">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="130917921240713" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="532818246198644" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="685233094596105" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="654553842995717" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- Hospital&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="446457529204398" title="Botao Continuacao2">
+            <sub-events>
+                <event-block sid="945090502648447">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="665352335263215" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="770345615882144" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="602101016825279" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="189050419972043" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="627043971249607" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="332753497452352">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="798537187988593" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="931758109724243" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="451972498350172" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="137973944145075" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="659406738800242" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="515005718877947" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="991968252666946" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="240331155222793" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="418579881500647" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoCriancaFase2- Hospital&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="129411937425014" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="731736761031790">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="374831727310157" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="420218477621882" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="308342919392247" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="690826901275136" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="798663369086090" title="Máquina de Escrever -DialogoCriancaFase2- Hospital">
+            <sub-events>
+                <event-block sid="865646378682446">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="176067190767226" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="306043762940449" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="962994910521398" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="965203696101620" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="780659632889321" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="338793136814594" type="DoutorImagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="485582320591786" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="209603648731524">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="656601608735193" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalCriancaFase2/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="135902628862625" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="435155777376325" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalCriancaFase2/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="432102274055266" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, CorpoMasculino.ImagePointX(0), 0.01)</param>
+                            <param id="1" name="Y">lerp(Self.Y, CorpoMasculino.ImagePointY(0)+450, 0.02)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="383411421344727" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="752313801299022">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="215401985451607" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalCriancaFase2/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="970037943492016" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="145266103192615" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="530496859733540" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoCriancaFase2- Hospital&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="180384286340485" title="Botao Continuacao3">
+            <sub-events>
+                <event-block sid="295452957622972">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="796117347586540" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="220992799554822" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="714528899538404" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="963367687979296" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="853505638147504" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319960841553953">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="789437663382508" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="165448218404286" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="591665921721697" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="233442673232043" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="235828088787378" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="482110583120702" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="588738590814414" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="905002990877496" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="622022611370264" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoPartesFase2- Hospital&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="340541511785100" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="201731785219049">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="362070937172985" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="644079096673653" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="827456658845702" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="751767904559457" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="162121466932223" title="Máquina de Escrever -DialogoPartesFase2- Hospital">
+            <sub-events>
+                <event-block sid="461131841232520">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="285265758666009" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="149066543554318" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="617197337762407" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="911982879076229" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="550183303109898" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="901142409511309" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="514164626263505" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="205117649958839">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="789830704648784" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalPartesFase2/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="891119224287203" type="System">
+                            <param id="0" name="Interval (seconds)">0.02</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="748674927845214" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalPartesFase2/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="685433370681686" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="571428042801583">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="781470579107078" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalPartesFase2/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="519805122557292" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="231169249236667" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="875351569650095" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoPartesFase2- Hospital&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="819908347850882" title="Botao Continuacao4">
+            <sub-events>
+                <event-block sid="365355146148188">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="119540091523602" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="868532091624456" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="534113758857869" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="300854865480966" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="849861384407298" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao4&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="669614156243164">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="969673996786898" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="775396207769268" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="950332508718469" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="508888671794639" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="436658722348563" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="105787420903979" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="551209450549149" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="982814406576879" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="321005142273146" type="System">
+                            <param id="0" name="Group name">&quot;Mao Partes Intimas&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="346695881802622" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="741530357844590">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="539728606575509" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="721625479781104" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="785906797378831" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="616674807341267" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="618501560675973" title="Mao Partes Intimas">
+            <sub-events>
+                <event-block sid="907587864451874">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="106461514059198" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="952573623721656" type="MaoNPC">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="710762460838085" type="PartesIntimas">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="180056777658714" type="MaoNPC" />
+                        <action id="-3" name="Set position" sid="405713140424787" type="MaoNPC">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="415416081419579" type="PartesIntimas">
+                            <param id="0" name="X">MaoNPC.X</param>
+                            <param id="1" name="Y">MaoNPC.Y</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="201901661731018" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="189723138356690" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="838659421178500">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="753669225101501" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="917849294121088" type="MaoNPC">
+                            <param id="0" name="X">lerp(Self.X, 580, 0.01)</param>
+                            <param id="1" name="Y">lerp(Self.Y, 620, 0.01)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="331665455611488" type="PartesIntimas">
+                            <param id="0" name="X">MaoNPC.X</param>
+                            <param id="1" name="Y">MaoNPC.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="388135721790291" title="Máquina de Escrever -DialogoColocarFase2- Hospital2">
+            <sub-events>
+                <event-block sid="334271993217176">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="997016604146978" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="950561225156047" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="898791923966939" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="628077515488549" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="334108618631555" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="117081059052357" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="279850103197076" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="481908725386326" type="MaoNPC">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="864462893723963" type="DoutorImagem">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="874065795904904">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="114130557826690" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalCairFase2/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="264044132624831" type="System">
+                            <param id="0" name="Interval (seconds)">0.02</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="588814735420381" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalCairFase2/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="862631948754834" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566957292472209">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="730647669203508" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalCairFase2/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="677065425462402" type="BotaoJogarMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="336473927066874" type="Contorno">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="567279462916286" type="System">
+                            <param id="0" name="Group name">&quot;Botao Jogar2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="474075040571496" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoColocarFase2- Hospital2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="793384560987407">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="834054921541826" type="System">
+                    <param id="0" name="First value">MaoNPC.X</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">600</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="626312839127772" type="Camera">
+                    <param id="0" name="Magnitude">10</param>
+                    <param id="1" name="Duration">1.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="330913697976395" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoColocarFase2- Hospital2&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="843678295645044" type="System">
+                    <param id="0" name="Group name">&quot;Mao Partes Intimas&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="829774798280166" type="PartesCorpo">
+                    <param id="0" name="Gravity">10</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="136198269922474" type="Contorno">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="395025197255322" type="MaoNPC">
+                    <param id="0" name="X">700</param>
+                    <param id="1" name="Y">1111</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="591680533082138" type="Contorno">
+                    <param id="0" name="Layer">3</param>
+                </action>
+                <action id="-24" name="Move to top" sid="208379551011250" type="Contorno" />
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="671369732617243" title="Botao Jogar2">
+            <sub-events>
+                <event-block sid="641576948981864">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="899290306044416" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="993472336233270" type="Touch">
+                            <param id="0" name="Object">BotaoJogarMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="648794633314960" type="BotaoJogarMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="589533262816592" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="200222628222075" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Jogar2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="604278114941626">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="833623598045437" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="883557686584530" type="Touch">
+                            <param id="0" name="Object">BotaoJogarMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="463019445896693" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="978229542014785" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="682778810062175" type="BotaoJogarMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="172222323437392" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="718797852399571" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="683984119762519" type="BotaoJogarMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="574839029611387" type="System">
+                            <param id="0" name="Group name">&quot;Jogo2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="290702691642099" type="System">
+                            <param id="0" name="Group name">&quot;Botao Jogar2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="820415646503814">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="124537845585140" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="995180260750380" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jogar2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="333934218743516" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="389598991161312" type="BotaoJogarMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="832348028594335" title="Jogo2">
+            <sub-events>
+                <event-block sid="791333183980736">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="823695616444102" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="429788781725258" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="480774499788535" type="DoutorImagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="593217964605011" type="Contorno">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y+100</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="593376287868622" type="Contorno">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="347037290780076">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="362058544398718" type="Contorno" />
+                        <condition id="-8" name="Compare two values" sid="590368535522406" type="System">
+                            <param id="0" name="First value">abs(distance(Contorno.X, Contorno.Y,CorpoMasculino.ImagePointX(&quot;Penis&quot;), CorpoMasculino.ImagePointY(&quot;Penis&quot;)))</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="954337933129027" type="Contorno">
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Penis&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="732593541084344" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
+                        </action>
+                        <action disabled="1" id="-28" name="Set canvas size" sid="905862817893357" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action disabled="1" id="-2" name="Go to layout" sid="155877332055241" type="System">
+                            <param id="0" name="Layout">HospitalFase3</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="363271115621129" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizando&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="280135687396019">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="932188009355945" type="Contorno" />
+                        <condition id="-8" name="Compare two values" sid="939762769659419" type="System">
+                            <param id="0" name="First value">abs(distance(Contorno.X, Contorno.Y,CorpoMasculino.ImagePointX(&quot;Penis&quot;), CorpoMasculino.ImagePointY(&quot;Penis&quot;)))</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="833732856050346" type="Contorno">
+                            <param id="0" name="X">Camera.X</param>
+                            <param id="1" name="Y">Camera.Y+100</param>
+                        </action>
+                        <action id="0" name="Play" sid="841443230224608" type="Audio">
+                            <param id="0" name="Audio file">Erro</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="924128224151146" title="Máquina de Escrever -DialogoFase2- HospitalFinalizando">
+            <sub-events>
+                <event-block sid="852414457569569">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="674095821958895" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="506689420019688" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="434490275446579" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="513080285681232" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="639310416485084" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="411443439811118" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="556859637352829" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="817965020491856" type="Contorno">
+                            <param id="0" name="Layer">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="834021160775593" type="DoutorImagem">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="304919750973615" type="Proibido">
+                            <param id="0" name="Layer">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="835781043185312" type="PartesIntimas">
+                            <param id="0" name="Layer">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="237230326467476">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="773205199351665" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2Finalizando/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="601460272703156" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="281552655057987" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase2Finalizando/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="898451232830352" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="503278634892204">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="476879217690189" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2Finalizando/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="482821417264230" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="923650947902540" type="Proibido">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="997457796544008" type="Proibido" />
+                        <action id="-12" name="Set group active" sid="251499439035185" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="396621859777888" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizando&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="722206461935739" title="Botao Continuacao5">
+            <sub-events>
+                <event-block sid="831205955476554">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="132637009821161" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="141257620727540" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="591832563456976" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="797730947065045" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="379382371972412" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao5&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="183201589293804">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="166154930125685" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="501009027331596" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="354357586526392" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="698785810457345" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="163370829830862" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="305968601247091" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="819706646802254" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="254228792727928" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="479052516736329" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizado&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="395552992787085" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao5&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="316140624036734">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="497640233879729" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="318786400802862" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="251526006439567" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="387209974141372" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="141319336752592" title="Máquina de Escrever -DialogoFase2- HospitalFinalizado">
+            <sub-events>
+                <event-block sid="515496756146302">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="818173525424974" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="484273211557541" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="665594700553870" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="549039049377022" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="793383824620406" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="985745499835213" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="690179894493844" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="444155939180741" type="DoutorImagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="648613951929476">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="192220493267377" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2Finalizado/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="970986345323088" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="524277206037059" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase2Finalizado/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="806310022616416" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="311638483049920">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="367932232873062" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2Finalizado/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="495483870470256" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="739220153126339" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao6&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="482569372192282" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizado&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="499418271036665" title="Botao Continuacao6">
+            <sub-events>
+                <event-block sid="917779253564088">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="917609743480124" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="963522849819835" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="975775046133510" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="941454693535051" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="367230578859697" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao6&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="786697530155672">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="286749177004185" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="287432772284834" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="431723391416218" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="105043350399827" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="185192282606334" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="714581415026781" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="155165717882928" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="571457555399636" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="417864896658097" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoIndagacao&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="227290727132591" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao6&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="405755894716256">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="380519960602941" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="196526897163065" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="886103341074312" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="537771128310438" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="520205499174792" title="Máquina de Escrever -DialogoFase2- HospitalFinalizadoIndagacao">
+            <sub-events>
+                <event-block sid="925500685032859">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="548784086294171" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="181115521854257" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="878799406883300" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="183758419471172" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="762393088844158" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="406829080588872" type="DoutorImagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="165136277762632" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="458461563391144" type="DoutorImagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="281825291615267" type="AmigaExpressoes">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="399136142073995" type="AmigaExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859708296542541">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="750575622356811" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoIndagacao/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="680409213022724" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="269131680734942" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoIndagacao/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="525609073925622" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="582950321927913">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="819384551975075" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoIndagacao/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="767968005102553" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="497444166984901" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao7&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="512745305134828" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoIndagacao&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="339877517761078" title="Botao Continuacao7">
+            <sub-events>
+                <event-block sid="263176489137105">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="940363578805352" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="200707173286745" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="467815084360074" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="163407979634256" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="989076409006328" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao7&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479564150636457">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="597320268706966" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="892129931462542" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="659398446104526" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao7&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="165224866641104" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="231708615418456" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="679441192760056" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="113707405591076" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="206800961789320" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="744373977706044" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoResposta&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="837156631317618" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao7&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="338955841486410">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="838496479016741" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="634639508475047" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao7&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="761466302660406" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="829033363848832" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="129220088178166" title="Máquina de Escrever -DialogoFase2- HospitalFinalizadoResposta">
+            <sub-events>
+                <event-block sid="807337555649406">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="988508306075606" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="810832671236769" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="437247971289787" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="998048293487479" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="817049441176133" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="822251793847592" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="178880743739645" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="838397042822353" type="DoutorImagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="223483028765038">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="184328235262583" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoResposta/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="714100083296737" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="201075006811962" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoResposta/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="148557187841793" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="696968277986549">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="864815619072345" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoResposta/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="769816663036305" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="798893279811114" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao8&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="841247361907043" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoResposta&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="435589597354907" title="Botao Continuacao8">
+            <sub-events>
+                <event-block sid="493608133528318">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="948583656420325" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="165508908332532" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="781117433878760" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="138223901449054" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936143767346705" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao8&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="200663374984307">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="329891421353872" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="487536134691387" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="388951877538218" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao8&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="176659248705874" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="613510785766397" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="501461387690166" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="824992408613020" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="191538581789925" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="489657386269688" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPergunta&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="381926168548174" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao8&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="620954576501772">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="229076603067213" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="301621014649624" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao8&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="188427009281223" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="686013509155775" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="163851779812776" title="Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPergunta">
+            <sub-events>
+                <event-block sid="657573206940709">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="447467710123378" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="782644623409105" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="997531747927658" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="425355669575529" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="215138871004359" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="519011079427761" type="DoutorImagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="233645450106286" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="632245768497564" type="DoutorImagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="410175390981807" type="AmigaExpressoes">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="258298835800233" type="AmigaExpressoes">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="833305357529182">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="995048916306663" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoRespostaPergunta/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="459352244136053" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="597248927519197" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoRespostaPergunta/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="488479303595901" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="694846655858730">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="434892417039436" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoRespostaPergunta/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="362211617588145" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="653859520967177" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao9&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="183629126108293" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPergunta&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="519485974593202" title="Botao Continuacao9">
+            <sub-events>
+                <event-block sid="931735744720307">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="370583412597887" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="791978816170884" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="621165498457352" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="917976983188665" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="764947594831305" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao9&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="609813876167198">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="641355351168349" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="933537881831706" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="168259477656727" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao9&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="820751616192243" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="966014439851307" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="253582173785566" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="422009608709907" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="110586384376469" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="929688490171367" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPerguntaRespostaFinal&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="132918848422534" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao9&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="376974799354130">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="606191508127348" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="548936189564611" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao9&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="741269818303585" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="907617301105859" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="919281219475775" title="Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPerguntaRespostaFinal">
+            <sub-events>
+                <event-block sid="549152708394382">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="849742195223268" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="376444159187225" type="Audio">
+                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="769029276662673" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="566927069003756" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="113163790850826" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="600464778596433" type="DoutorImagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="474670753795965" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="724225128091274">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="533532086463728" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoRespostaPerguntaRespostaFinal/text()&quot;))</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="876251974961475" type="System">
+                            <param id="0" name="Interval (seconds)">0.04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="351607760966742" type="TextoDialogoHospitalFase1">
+                            <param id="0" name="Text">left(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoRespostaPerguntaRespostaFinal/text()&quot;), letra)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="705602613489082" type="System">
+                            <param id="0" name="Variable">letra</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="690996209934972">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="937337058836035" type="System">
+                            <param id="0" name="First value">letra</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">len(XML.StringValue(&quot;TextoDialogoHospitalFase2FinalizadoRespostaPerguntaRespostaFinal/text()&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="120377070367668" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="233733673886362" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao10&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="649955605103178" type="System">
+                            <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPerguntaRespostaFinal&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="844179089772189" title="Botao Continuacao10">
+            <sub-events>
+                <event-block sid="294510433546230">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="986825234137934" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="890335040211873" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="537794014395330" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="590800489338439" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="619227023543674" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Continuacao10&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="723611334776568">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="439207557183904" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="390953351858696" type="Touch">
+                            <param id="0" name="Object">BotaoProximoMundo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="891712228396225" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao10&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="901529797557996" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="705098826615770" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="946354205143826" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="221130074725363" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="807281804888834" type="BotaoProximoMundo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="662913068259574" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="576463112604060" type="System">
+                            <param id="0" name="Layout">HospitalFase3</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="456803598824909" type="System">
+                            <param id="0" name="Group name">&quot;Botao Continuacao10&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="285226025636344">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="356412000505364" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="167546410781596" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Continuacao10&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="628079588220284" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="921018120552084" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>
                 </event-block>

@@ -462,13 +462,49 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="891215277066925">
+                <event-block sid="351523603208269">
                     <conditions>
-                        <condition id="-18" name="On created" sid="258140623261644" type="AmigaExpressoes" />
+                        <condition id="-18" name="On created" sid="474400175238451" type="PartesIntimas" />
                     </conditions>
                     <actions>
-                        <action id="2" name="Stop" sid="937741480557891" type="AmigaExpressoes" />
-                        <action id="9" name="Set scale" sid="468373403551174" type="AmigaExpressoes">
+                        <action id="9" name="Set scale" sid="547248756084298" type="PartesIntimas">
+                            <param id="0" name="Scale">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="423992379313893">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="660418726190313" type="Proibido" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="903336194520459" type="Proibido">
+                            <param id="0" name="Scale">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891215277066925">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="258140623261644" type="BONS" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="937741480557891" type="BONS" />
+                    </actions>
+                </event-block>
+                <event-block sid="409719399560054">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="719094893975019" type="RUINS" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="544617016808701" type="RUINS" />
+                    </actions>
+                </event-block>
+                <event-block sid="974237048942406">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="723220024758537" type="AmigaExpressoes" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="535152460476709" type="AmigaExpressoes" />
+                        <action id="9" name="Set scale" sid="778286605039837" type="AmigaExpressoes">
                             <param id="0" name="Scale">0.3</param>
                         </action>
                     </actions>

@@ -2053,6 +2053,11 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="166804477695184" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="210026472321937">
@@ -2128,6 +2133,11 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="587655759222442" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="251097208768028">
@@ -2183,6 +2193,11 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="269011736542891" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2240,6 +2255,11 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="578953148589723" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="481396525225558">
@@ -2296,6 +2316,11 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="688633957793415" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="158080269912467">
@@ -2351,6 +2376,11 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="123282231404687" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2414,6 +2444,11 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="438651050410570" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>

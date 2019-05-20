@@ -2954,6 +2954,14 @@
         </object-type>
         <object-type name="Contorno" sid="757289140651646">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="986218971738217">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="810518677399169">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="462009159350773" speed="5">
                     <frame duration="1" hotspotX="0.748387" hotspotY="0.630435">
@@ -2998,6 +3006,99 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PartesIntimas" sid="825910146014784">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="251891571755237" speed="5">
+                    <frame duration="1" hotspotX="0.458288" hotspotY="0.575342" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Proibido" sid="626938687216104">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="374125646560604">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="863816259859051" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivroRUIM" sid="654808342884423">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="622280434634225">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760835102974114" speed="5">
+                    <frame duration="1" hotspotX="0.50059" hotspotY="0.50096" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivroBOM" sid="284800293555485">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="574495165580348">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309245414722706" speed="5">
+                    <frame duration="1" hotspotX="0.50059" hotspotY="0.50096" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BONS" sid="758687903034331">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="373616392943966">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="405075401084218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.523659" />
+                    <frame duration="1" hotspotX="0.601751" hotspotY="0.500736" />
+                    <frame duration="1" hotspotX="0.500949" hotspotY="0.501901" />
+                    <frame duration="1" hotspotX="0.535304" hotspotY="0.500686" />
+                    <frame duration="1" hotspotX="0.536207" hotspotY="0.50137" />
+                    <frame duration="1" hotspotX="0.676923" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500766" hotspotY="0.529984" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500722" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.798429" hotspotY="0.524169" />
+                    <frame duration="1" hotspotX="0.598113" hotspotY="0.604736" />
+                    <frame duration="1" hotspotX="0.503802" hotspotY="0.644028" />
+                    <frame duration="1" hotspotX="0.501253" hotspotY="0.500741" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.524845" />
+                    <frame duration="1" hotspotX="0.500654" hotspotY="0.500669" />
+                    <frame duration="1" hotspotX="0.853007" hotspotY="0.571865" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RUINS" sid="663167102641066">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="713022342516697">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="701765894366009" speed="5">
+                    <frame duration="1" hotspotX="0.500894" hotspotY="0.500647" />
+                    <frame duration="1" hotspotX="0.451485" hotspotY="0.532787" />
+                    <frame duration="1" hotspotX="0.487179" hotspotY="0.516414" />
+                    <frame duration="1" hotspotX="0.464912" hotspotY="0.516869" />
+                    <frame duration="1" hotspotX="0.542279" hotspotY="0.496689" />
+                    <frame duration="1" hotspotX="0.483471" hotspotY="0.534039" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -3022,6 +3123,7 @@
         <layout>Hospital.xml</layout>
         <layout>HospitalFase1.xml</layout>
         <layout>HospitalFase2.xml</layout>
+        <layout>HospitalFase3.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventoCarregamento.xml</event-sheet>
@@ -3046,6 +3148,7 @@
         <event-sheet>EventoHospital.xml</event-sheet>
         <event-sheet>EventoHospitalFase1.xml</event-sheet>
         <event-sheet>EventoHospitalFase2.xml</event-sheet>
+        <event-sheet>EventoHospitalFase3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="7" />
