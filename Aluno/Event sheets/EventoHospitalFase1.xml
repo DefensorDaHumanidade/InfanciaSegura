@@ -52,6 +52,10 @@
                 <action id="9" name="Set scale" sid="749917149446678" type="Contorno">
                     <param id="0" name="Scale">0.8</param>
                 </action>
+                <action id="-9" name="Set value" sid="891397894926434" type="System">
+                    <param id="0" name="Variable">IntroducaoHospital</param>
+                    <param id="1" name="Value">&quot;Introduzido&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="840527804735277" title="Apresentacao Frontal">
@@ -2013,8 +2017,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Testa&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Testa&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="246122770464703" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="246122770464703" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2097,8 +2101,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Cabeca&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Cabeca&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="469377855480775" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="291749692464948" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2158,8 +2162,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Olhos&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Olhos&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="628063263229746" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="722613723678163" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2219,8 +2223,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dentes&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dentes&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="243848090274724" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="922223842250241" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2280,8 +2284,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Bochecha&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Bochecha&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="867203330326431" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="277740686382999" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2341,8 +2345,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Boca&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Boca&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="310894929814744" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="791772395658549" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2402,8 +2406,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Orelha&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Orelha&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="128493087427502" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="746620782272408" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>

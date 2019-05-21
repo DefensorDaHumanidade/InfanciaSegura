@@ -217,6 +217,39 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="BotaoSair" uid="320">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>None</left-edge>
+                                <top-edge>Window top</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>967</x>
+                        <y>65</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>125</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504000008</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -225,8 +258,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>0</x>
-                <y>0</y>
+                <x>1</x>
+                <y>1</y>
             </parallax>
             <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
@@ -335,39 +368,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BotaoSair" uid="320">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>None</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>967</x>
-                        <y>65</y>
-                        <z>0</z>
-                        <width>300</width>
-                        <height>125</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504000008</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="BotaoJogarMundo" uid="321">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -422,8 +422,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>814</x>
-                        <y>509</y>
+                        <x>88</x>
+                        <y>119</y>
                         <z>0</z>
                         <width>267</width>
                         <height>201</height>
@@ -455,8 +455,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>957</x>
-                        <y>509</y>
+                        <x>231</x>
+                        <y>119</y>
                         <z>0</z>
                         <width>267</width>
                         <height>201</height>
@@ -485,8 +485,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>799</x>
-                        <y>493</y>
+                        <x>73</x>
+                        <y>103</y>
                         <z>0</z>
                         <width>92.218185425</width>
                         <height>77.809089661</height>
@@ -515,14 +515,47 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>941.001708984</x>
-                        <y>495.003845215</y>
+                        <x>215</x>
+                        <y>105</y>
                         <z>0</z>
                         <width>74</width>
                         <height>85</height>
                         <depth>0</depth>
                         <hotspotX>0.500894427</hotspotX>
                         <hotspotY>0.50064683</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AmigoExpressoes" uid="324">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>Window left</left-edge>
+                                <top-edge>Window bottom</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>157</x>
+                        <y>1090</y>
+                        <z>0</z>
+                        <width>292</width>
+                        <height>413</height>
+                        <depth>0</depth>
+                        <hotspotX>0.462328762</hotspotX>
+                        <hotspotY>0.530266345</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

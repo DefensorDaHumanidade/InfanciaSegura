@@ -3182,6 +3182,9 @@
         <file name="Segurar.ogg" />
         <file name="Soltar.ogg" />
         <file name="Erro.ogg" />
+        <file name="Acerto.ogg" />
+        <file name="MusicaIntro.ogg" />
+        <file name="MusicaMundo.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

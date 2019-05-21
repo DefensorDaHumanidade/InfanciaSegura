@@ -1414,8 +1414,8 @@
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Penis&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="732593541084344" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="112741302589618" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -1452,6 +1452,11 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="775617258831432" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2490,6 +2495,96 @@
                             <param id="1" name="Value">&quot;Nenhum&quot;</param>
                         </action>
                         <action id="5" name="Set frame" sid="921018120552084" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="881840476775456" title="Botao Sair2">
+            <sub-events>
+                <event-block sid="694211720291361">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="492075760013134" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="504741282409914" type="Touch">
+                            <param id="0" name="Object">BotaoSair</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="266998838581424" type="BotaoSair">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="228024527640572" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="624557932945559" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Sair&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="380093693119362">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="287169662480211" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="959182533965716" type="Touch">
+                            <param id="0" name="Object">BotaoSair</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="853576704633854" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Sair&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="793706605900031" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="297587941731520" type="BotaoSair">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="283226053796096" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="903005265511086" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="810714415207971" type="System">
+                            <param id="0" name="Group name">&quot;Botao Sair&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="406939611794429" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="328813604864609" type="System">
+                            <param id="0" name="Layout">Hospital</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="932424549006256">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="189169077035540" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="414680529906675" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Sair&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="529879094644948" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="725277534965493" type="BotaoSair">
                             <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>

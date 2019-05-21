@@ -1492,7 +1492,7 @@
                         <condition id="-1" name="Every tick" sid="509116769239589" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" disabled="1" id="0" name="Shake" sid="304868069082340" type="Camera">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="304868069082340" type="Camera">
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
@@ -1698,12 +1698,12 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="170333137838680" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-3" name="Set position" sid="662243648461125" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-15" name="Set visible" sid="739880817237663" type="BONS">
                             <param id="0" name="Visibility">1</param>
@@ -1756,8 +1756,8 @@
                         <action id="-15" name="Set visible" sid="955604355033282" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="105682844283355" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="235604114480707" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -1771,9 +1771,9 @@
                         <action disabled="1" id="5" name="Set frame" sid="108604372823160" type="BONS">
                             <param id="0" name="Frame number">5</param>
                         </action>
-                        <action id="-3" name="Set position" sid="239218260801726" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="980699283713527" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1802,9 +1802,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="481327102306829" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="984140473770305" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="943276570871291" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -1838,8 +1838,8 @@
                         <action id="-15" name="Set visible" sid="615046707950720" type="RUINS">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="739862347228364" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="592286268488283" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -1853,9 +1853,9 @@
                         <action disabled="1" id="5" name="Set frame" sid="216358489818721" type="RUINS">
                             <param id="0" name="Frame number">5</param>
                         </action>
-                        <action id="-3" name="Set position" sid="420988493366662" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="940921887524889" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-9" name="Set value" sid="673548065770042" type="System">
                             <param id="0" name="Variable">frame</param>
@@ -1888,9 +1888,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="824161263957732" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="501743949058393" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="278943024238510" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -1924,8 +1924,8 @@
                         <action id="-15" name="Set visible" sid="216280608904916" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="225916856300400" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="258794044498110" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -1939,9 +1939,9 @@
                         <action id="5" name="Set frame" sid="552000854208846" type="BONS">
                             <param id="0" name="Frame number">5</param>
                         </action>
-                        <action id="-3" name="Set position" sid="576020734463842" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="677330286850197" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1970,9 +1970,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="170400498067073" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="496806370819774" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="181904876294277" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2006,8 +2006,8 @@
                         <action id="-15" name="Set visible" sid="587085005791594" type="RUINS">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="807946396588076" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="188128274067931" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2021,9 +2021,9 @@
                         <action id="5" name="Set frame" sid="660389116152482" type="RUINS">
                             <param id="0" name="Frame number">5</param>
                         </action>
-                        <action id="-3" name="Set position" sid="308994418818360" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="331606502196700" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-9" name="Set value" sid="926233699884169" type="System">
                             <param id="0" name="Variable">frame</param>
@@ -2056,9 +2056,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="822082469832810" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="386851235640906" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="752613099159917" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2092,8 +2092,8 @@
                         <action id="-15" name="Set visible" sid="916683071202316" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="189324565537789" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="813466536189294" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2107,9 +2107,9 @@
                         <action id="5" name="Set frame" sid="381283710621660" type="BONS">
                             <param id="0" name="Frame number">4</param>
                         </action>
-                        <action id="-3" name="Set position" sid="886686404811733" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="904051310956190" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2138,9 +2138,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="340813336085640" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="246305667864614" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="989028948921873" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2174,8 +2174,8 @@
                         <action id="-15" name="Set visible" sid="432687430954421" type="RUINS">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="756181562247869" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="385377001597506" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2189,9 +2189,9 @@
                         <action id="5" name="Set frame" sid="499410475942896" type="RUINS">
                             <param id="0" name="Frame number">4</param>
                         </action>
-                        <action id="-3" name="Set position" sid="285130691125699" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="407925856237619" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-9" name="Set value" sid="853845320831471" type="System">
                             <param id="0" name="Variable">frame</param>
@@ -2224,9 +2224,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="450398245855914" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="237219412430944" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="428825906794522" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2260,8 +2260,8 @@
                         <action id="-15" name="Set visible" sid="400079613787467" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="543041200780282" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="903954556194675" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2275,9 +2275,9 @@
                         <action id="5" name="Set frame" sid="223208480793275" type="BONS">
                             <param id="0" name="Frame number">3</param>
                         </action>
-                        <action id="-3" name="Set position" sid="692554063726379" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="531223853278845" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2306,9 +2306,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="245578742625624" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="607841105337549" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="636677205684373" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2342,8 +2342,8 @@
                         <action id="-15" name="Set visible" sid="706001825536107" type="RUINS">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="667437041736359" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="337833767110085" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2357,9 +2357,9 @@
                         <action id="5" name="Set frame" sid="815866600372016" type="RUINS">
                             <param id="0" name="Frame number">3</param>
                         </action>
-                        <action id="-3" name="Set position" sid="554989998915015" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="421769853663218" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-9" name="Set value" sid="138565285853111" type="System">
                             <param id="0" name="Variable">frame</param>
@@ -2392,9 +2392,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="225648872052827" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="118688957592087" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="333552094375503" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2428,8 +2428,8 @@
                         <action id="-15" name="Set visible" sid="849751736648814" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="426750431290680" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="367089597744316" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2443,9 +2443,9 @@
                         <action id="5" name="Set frame" sid="766102712746271" type="BONS">
                             <param id="0" name="Frame number">2</param>
                         </action>
-                        <action id="-3" name="Set position" sid="922478233468533" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="468962476115451" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2474,9 +2474,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="941210767751473" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="170817445728316" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="785854866696482" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2510,8 +2510,8 @@
                         <action id="-15" name="Set visible" sid="440915137930492" type="RUINS">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="981594331031750" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="768614678779249" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2525,9 +2525,9 @@
                         <action id="5" name="Set frame" sid="902746572996209" type="RUINS">
                             <param id="0" name="Frame number">2</param>
                         </action>
-                        <action id="-3" name="Set position" sid="735611669060741" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="942573661178970" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-9" name="Set value" sid="405813833201326" type="System">
                             <param id="0" name="Variable">frame</param>
@@ -2560,9 +2560,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="707211705563966" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="792871754356703" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="265941743192162" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2596,8 +2596,8 @@
                         <action id="-15" name="Set visible" sid="901755256975590" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="508655978321094" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="421519774850708" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2619,9 +2619,9 @@
                         <action id="5" name="Set frame" sid="186858358097958" type="BONS">
                             <param id="0" name="Frame number">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="921538005038173" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="373079959594339" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2650,9 +2650,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="782409569189630" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="360717867272256" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="738128800684992" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2686,8 +2686,8 @@
                         <action id="-15" name="Set visible" sid="572162194202340" type="RUINS">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="971379885335973" type="Audio">
-                            <param id="0" name="Audio file">Erro</param>
+                        <action id="0" name="Play" sid="762957582254816" type="Audio">
+                            <param id="0" name="Audio file">Acerto</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Acerto&quot;</param>
@@ -2701,9 +2701,9 @@
                         <action id="5" name="Set frame" sid="665684322085146" type="RUINS">
                             <param id="0" name="Frame number">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="337395899173371" type="BONS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="271759118747328" type="BONS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action id="-9" name="Set value" sid="241689556507428" type="System">
                             <param id="0" name="Variable">frame</param>
@@ -2736,9 +2736,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Erro&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="137038182838761" type="RUINS">
-                            <param id="0" name="X">950</param>
-                            <param id="1" name="Y">620</param>
+                        <action id="-3" name="Set position" sid="347464344184539" type="RUINS">
+                            <param id="0" name="X">Camera.X+250</param>
+                            <param id="1" name="Y">Camera.Y+80</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="297187379111374" type="Camera">
                             <param id="0" name="Magnitude">20</param>
@@ -2934,6 +2934,96 @@
                             <param id="1" name="Value">&quot;Nenhum&quot;</param>
                         </action>
                         <action id="5" name="Set frame" sid="212116046755664" type="BotaoProximoMundo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="912081284416540" title="Botao Sair3">
+            <sub-events>
+                <event-block sid="289026063543735">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="992196336134224" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="597901188077015" type="Touch">
+                            <param id="0" name="Object">BotaoSair</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="621289773699470" type="BotaoSair">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="123832981915203" type="Audio">
+                            <param id="0" name="Audio file">ApertarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;ApertarBotao&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="643498543182519" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Sair&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="746801269634192">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="790468288952390" type="Touch" />
+                        <condition id="4" name="Is touching object" sid="331786330601584" type="Touch">
+                            <param id="0" name="Object">BotaoSair</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="843601159339799" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Sair&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="428336996671617" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="688566378334641" type="BotaoSair">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="22" name="Set paused" sid="772216079770477" type="Audio">
+                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="433995841236308" type="Audio">
+                            <param id="0" name="Audio file">SoltarBotao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="929962949954041" type="System">
+                            <param id="0" name="Group name">&quot;Botao Sair&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="692306551170682" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="479859280541270" type="System">
+                            <param id="0" name="Layout">Hospital</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arrependimento: Caso o usuário clique no botão, porém tire o dedo antes se soltar da tela, a operação é cancelada.</comment>
+                <event-block sid="858503652309407">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="820664233152021" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="689436893433391" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Sair&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="931208261613005" type="System">
+                            <param id="0" name="Variable">Botao</param>
+                            <param id="1" name="Value">&quot;Nenhum&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="244114644699771" type="BotaoSair">
                             <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>

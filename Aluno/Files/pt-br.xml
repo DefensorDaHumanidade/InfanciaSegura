@@ -33,11 +33,11 @@
     <TextoDialogoHospitalIntroducao>Olá doutor, o que o senhor está fazendo?</TextoDialogoHospitalIntroducao>
     <TextoDialogoHospitalResposta>Ah, olá crianças. Eu estou apenas organizando um mural sobre as partes do corpo. Vocês gostariam de ver?</TextoDialogoHospitalResposta>
     <TextoDialogoHospitalEscolhaFase>Olá novamente, qual das três fazes você gostaria de jogar?</TextoDialogoHospitalEscolhaFase>
-    <TextoDialogoHospitalFase1>Essas suas as partes do corpo da frente, e essas são as partes do corpo de trás.</TextoDialogoHospitalFase1>
+    <TextoDialogoHospitalFase1>Essas são as suas partes do corpo da frente, e essas são as partes do corpo de trás.</TextoDialogoHospitalFase1>
     <TextoDialogoHospitalFase1Nomecacao>Aqui na parte da frente nós temos por exemplo: a Testa, a Boca, os Dentes...        </TextoDialogoHospitalFase1Nomecacao>
     <TextoDialogoHospitalFase1Queda>Oh não, sem querer eu derrubei algumas peças do mural. Mas tudo bem, é só coloca-las de volta.</TextoDialogoHospitalFase1Queda>
     <TextoDialogoHospitalFase1Colocar>Essa peçinha por exemplo, o lugar dela é aqui. Basta eu clicar nela e arrasta-la para o seu devido lugar e depois soltar.</TextoDialogoHospitalFase1Colocar>
-    <TextoDialogoHospitalFase1Jogar>Ah não, eu tenho que ir agora se não irei me atrasar para uma cirurgia. Se você quiser me ajudar colocar as peças no mural basta clicar no botão verde JOGAR, do contrário basta clicar no botão vermelho SAIR.</TextoDialogoHospitalFase1Jogar>
+    <TextoDialogoHospitalFase1Jogar>Ah não, eu tenho que ir agora se não irei me atrasar para uma cirurgia. Se você quiser me ajudar a colocar as peças no mural basta clicar no botão verde JOGAR, do contrário basta clicar no botão vermelho SAIR.</TextoDialogoHospitalFase1Jogar>
     <TextoDialogoHospitalFase2>Olha só, vocês conseguiram, colocaram tudo no lugar correto. Meus parabéns.</TextoDialogoHospitalFase2>
     <TextoDialogoHospitalCriancaFase2>Ah, eu agradeço doutor. A propósito, o que significa esses contornos vermelhos que estão em algumas partes do corpo?</TextoDialogoHospitalCriancaFase2>
     <TextoDialogoHospitalPartesFase2>Essas são as partes íntimas, também conhecidas como partes privadas. Ah, a propósito, agora eu percebi que esqueci de por uma legenda na imagem, um momentinho...</TextoDialogoHospitalPartesFase2>
