@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -47,7 +48,7 @@
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
     <first-layout>TelaCarregamento</first-layout>
-    <use-loader-layout>0</use-loader-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">High quality</prop>
@@ -3099,6 +3100,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LocalStorage" sid="682198162783068">
+            <plugin id="LocalStorage" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -3174,6 +3178,7 @@
         <global-instance type="Browser" uid="18" />
         <global-instance type="Keyboard" uid="62" />
         <global-instance type="Mouse" uid="87" />
+        <global-instance type="LocalStorage" uid="326" />
     </global-instances>
     <sounds-folder>
         <file name="ProfessorAbertura.ogg" />
@@ -3185,6 +3190,17 @@
         <file name="Acerto.ogg" />
         <file name="MusicaIntro.ogg" />
         <file name="MusicaMundo.ogg" />
+        <file name="7.ogg" />
+        <file name="8.ogg" />
+        <file name="9.ogg" />
+        <file name="10.ogg" />
+        <file name="11.ogg" />
+        <file name="12.ogg" />
+        <file name="13.ogg" />
+        <file name="15.ogg" />
+        <file name="16.ogg" />
+        <file name="14.ogg" />
+        <file name="17.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

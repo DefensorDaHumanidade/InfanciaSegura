@@ -30,6 +30,12 @@
                     <param id="0" name="Variable">letra</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Play" sid="797442975494321" type="Audio">
+                    <param id="0" name="Audio file">MusicaIntro</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;Musica&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block disabled="1" sid="965321891986275">
@@ -120,7 +126,7 @@
                         <action id="0" name="Play" sid="649039242756686" type="Audio">
                             <param id="0" name="Audio file">ProfessorAbertura</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-20</param>
                             <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
                         </action>
                         <action id="4" name="Set font color" sid="268134058464612" type="TextoDialogoAberturaTermos">
@@ -303,7 +309,7 @@
                             <param id="0" name="Color">rgb(0, 0, 255)</param>
                         </action>
                         <action id="8" name="Open URL in new window" sid="596198003305691" type="Browser">
-                            <param id="0" name="URL">&quot;http://www.google.com&quot;</param>
+                            <param id="0" name="URL">&quot;https://infancia-segura.firebaseapp.com/termos.html&quot;</param>
                             <param id="1" name="Tag">&quot;TermosUso&quot;</param>
                         </action>
                     </actions>

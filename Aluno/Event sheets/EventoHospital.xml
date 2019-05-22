@@ -9,11 +9,11 @@
                 <condition id="-2" name="On start of layout" sid="103433852869460" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="782565319055972" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="782565319055972" type="System">
                     <param id="0" name="Variable">GeneroPersonagem</param>
                     <param id="1" name="Value">&quot;Masculino&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="545318372525305" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="545318372525305" type="System">
                     <param id="0" name="Variable">Amigo</param>
                     <param id="1" name="Value">&quot;Feminino&quot;</param>
                 </action>
@@ -34,6 +34,10 @@
                 </action>
                 <action disabled="1" id="-1" name="Set X" sid="513791040029364" type="SegundaFase">
                     <param id="0" name="X">LayoutWidth/2.06</param>
+                </action>
+                <action id="0" name="Set item" sid="995389453914554" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                    <param id="1" name="Value">&quot;Hospital&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -2155,6 +2159,10 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
+                        <action id="-28" name="Set canvas size" sid="667236093587835" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="469441977240705" type="System">
                             <param id="0" name="Layout">HospitalFase1</param>
                         </action>
@@ -2241,6 +2249,10 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
+                        <action id="-28" name="Set canvas size" sid="410941303265662" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="854517529798373" type="System">
                             <param id="0" name="Layout">HospitalFase2</param>
                         </action>
@@ -2293,7 +2305,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="998708979731224" type="System">
                             <param id="0" name="Variable">Botao</param>
-                            <param id="1" name="Value">&quot;Fase2&quot;</param>
+                            <param id="1" name="Value">&quot;Fase3&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2306,7 +2318,7 @@
                         <condition id="-14" name="Compare variable" sid="966824870040121" type="System">
                             <param id="0" name="Variable">Botao</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Fase2&quot;</param>
+                            <param id="2" name="Value">&quot;Fase3&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2327,6 +2339,10 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
+                        <action id="-28" name="Set canvas size" sid="781323113963165" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="903607220980629" type="System">
                             <param id="0" name="Layout">HospitalFase3</param>
                         </action>
@@ -2343,7 +2359,7 @@
                         <condition id="-14" name="Compare variable" sid="583663923733711" type="System">
                             <param id="0" name="Variable">Botao</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Fase2&quot;</param>
+                            <param id="2" name="Value">&quot;Fase3&quot;</param>
                         </condition>
                     </conditions>
                     <actions>

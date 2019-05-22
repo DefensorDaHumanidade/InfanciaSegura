@@ -157,10 +157,10 @@
                     </conditions>
                     <actions>
                         <action disabled="1" id="0" name="Play" sid="532946505218954" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                            <param id="0" name="Audio file">16</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;nao&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="396885316174209" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -303,6 +303,10 @@
                             <param id="0" name="Variable">Amigo</param>
                             <param id="1" name="Value">&quot;Masculino&quot;</param>
                         </action>
+                        <action id="0" name="Set item" sid="938368566650390" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Amigo&quot;</param>
+                            <param id="1" name="Value">&quot;Masculino&quot;</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="481864751409224" type="System">
                             <param id="0" name="Layout">TelaEntrarMundo</param>
                         </action>
@@ -400,6 +404,10 @@
                         </action>
                         <action id="-9" name="Set value" sid="883163681777094" type="System">
                             <param id="0" name="Variable">Amigo</param>
+                            <param id="1" name="Value">&quot;Feminino&quot;</param>
+                        </action>
+                        <action id="0" name="Set item" sid="328012546302799" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Amigo&quot;</param>
                             <param id="1" name="Value">&quot;Feminino&quot;</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="983669936450606" type="System">

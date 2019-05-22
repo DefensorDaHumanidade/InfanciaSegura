@@ -265,11 +265,11 @@
                         <condition id="-4" name="Trigger once while true" sid="114648644205509" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="390910686306876" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="390910686306876" type="Audio">
+                            <param id="0" name="Audio file">12</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;turma&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="505505987132058" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -488,6 +488,14 @@
                                     <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-AdicionarAluno.php&quot;</param>
                                     <param id="2" name="Data">&quot;nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;turma=&quot;&amp;NomeTurma&amp;&quot;&amp;senha=&quot;&amp;SenhaSelecionada&amp;&quot;&amp;genero=&quot;&amp;GeneroUsuario</param>
                                     <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                                <action id="0" name="Set item" sid="130724802564839" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Nome&quot;</param>
+                                    <param id="1" name="Value">NomeUsuario</param>
+                                </action>
+                                <action id="0" name="Set item" sid="729850064025689" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Senha&quot;</param>
+                                    <param id="1" name="Value">SenhaSelecionada</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="127950674953316" type="System">
                                     <param id="0" name="Layout">TelaAcerto</param>

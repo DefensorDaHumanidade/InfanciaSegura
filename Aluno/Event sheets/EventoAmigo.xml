@@ -40,11 +40,11 @@
                         <condition id="-4" name="Trigger once while true" sid="312738312128076" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="924879459075418" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="924879459075418" type="Audio">
+                            <param id="0" name="Audio file">15</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;pena&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="471534262152831" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -226,11 +226,11 @@
                         <condition id="-4" name="Trigger once while true" sid="441926489108649" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="478306600637940" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="478306600637940" type="Audio">
+                            <param id="0" name="Audio file">16</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;amiguinho&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="765157068466866" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -387,11 +387,11 @@
                         <condition id="-4" name="Trigger once while true" sid="136864976189991" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="847444562132237" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="847444562132237" type="Audio">
+                            <param id="0" name="Audio file">17</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;sair&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="834569973156896" type="BotaoProximo">
                             <param id="0" name="Visibility">0</param>

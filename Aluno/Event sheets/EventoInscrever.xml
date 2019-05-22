@@ -44,11 +44,11 @@
                         <condition id="-4" name="Trigger once while true" sid="884694892550496" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="208708019389232" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="208708019389232" type="Audio">
+                            <param id="0" name="Audio file">9</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;inscrever&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="732487954998845" type="System">
                             <param id="0" name="Variable">letra</param>

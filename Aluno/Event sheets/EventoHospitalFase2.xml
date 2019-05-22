@@ -9,11 +9,11 @@
                 <condition id="-2" name="On start of layout" sid="822224536822980" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="923997695225051" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="923997695225051" type="System">
                     <param id="0" name="Variable">GeneroPersonagem</param>
                     <param id="1" name="Value">&quot;Masculino&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="555462731271541" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="555462731271541" type="System">
                     <param id="0" name="Variable">Amigo</param>
                     <param id="1" name="Value">&quot;Feminino&quot;</param>
                 </action>
@@ -60,6 +60,146 @@
                     <param id="0" name="X">Camera.X</param>
                     <param id="1" name="Y">Camera.Y</param>
                 </action>
+                <action id="-12" name="Set group active" sid="826693069255908" type="System">
+                    <param id="0" name="Group name">&quot;Criar Pecas2&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="868905163229234" type="System">
+                    <param id="0" name="Group name">&quot;Preencher Corpo2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="572395707424746" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="257111828323814" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="168896394665149" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoCriancaFase2- Hospital&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="173090842213700" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="708771670119992" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoPartesFase2- Hospital&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="753750323915960" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="791611512211640" type="System">
+                    <param id="0" name="Group name">&quot;Mao Partes Intimas&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="380033609263066" type="System">
+                    <param id="0" name="Group name">&quot;Botao Jogar2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="824811380705242" type="System">
+                    <param id="0" name="Group name">&quot;Jogo2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="202135641146736" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizando&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="730263013932253" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao5&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="605348679031439" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizado&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="226279061090008" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao6&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="128682632039156" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoIndagacao&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="132616605419676" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao7&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="914005646011327" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoResposta&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="737662898999803" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao8&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="165074646275238" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPergunta&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="590556108407833" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao9&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="396265803705426" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase2- HospitalFinalizadoRespostaPerguntaRespostaFinal&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="168911666286475" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao10&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="913182363422024" type="System">
+                    <param id="0" name="Group name">&quot;Botao Sair2&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Set item" sid="149186213031615" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                    <param id="1" name="Value">&quot;Fase2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="750618654857856">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="102401455689484" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Masculino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="922585140129131" type="System">
+                    <param id="0" name="Group name">&quot;Seguir Amigo Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="757609537391349" type="Amiga" />
+                <action id="-9" name="Destroy" sid="792984369154484" type="AmigaExpressoes" />
+                <action id="9" name="Set scale" sid="650457489834015" type="Amigo">
+                    <param id="0" name="Scale">0.07</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="419811877190437">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="927119621918994" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Feminino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="756176549981311" type="System">
+                    <param id="0" name="Group name">&quot;Seguir Amiga Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="904849410665237" type="Amigo" />
+                <action id="-9" name="Destroy" sid="363368703883034" type="AmigoExpressoes" />
+                <action id="9" name="Set scale" sid="438457236211389" type="Amiga">
+                    <param id="0" name="Scale">0.07</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="736395085569702" title="Criar Pecas2">
@@ -70,6 +210,9 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="376166583444489" type="PartesCorpo" />
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="813537777969935" type="PartesCorpo">
+                            <param id="0" name="State">0</param>
+                        </action>
                         <action disabled="1" id="-3" name="Set position" sid="773369136707350" type="Camera">
                             <param id="0" name="X">Self.X</param>
                             <param id="1" name="Y">Self.Y+150</param>
@@ -645,6 +788,9 @@
                         <action id="-15" name="Set visible" sid="680242891638560" type="TextoDialogoHospitalFase1">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="678784048846074" type="PartesCorpo">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="730272470087501">
@@ -809,6 +955,9 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="485582320591786" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="626506163693405" type="AmigoExpressoes">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
@@ -979,6 +1128,9 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="514164626263505" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="682416986818983" type="AmigoExpressoes">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -1192,6 +1344,9 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="279850103197076" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="351903063935631" type="AmigoExpressoes">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="481908725386326" type="MaoNPC">
@@ -1410,6 +1565,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Request URL" sid="251934099779779" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Penis&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                         <action id="-3" name="Set position" sid="954337933129027" type="Contorno">
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Penis&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Penis&quot;)</param>
@@ -1458,6 +1617,10 @@
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Request URL" sid="243191635990472" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Penis&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1487,6 +1650,9 @@
                         </action>
                         <action id="-15" name="Set visible" sid="411443439811118" type="DoutorImagem">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="259255994970433" type="AmigoExpressoes">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="556859637352829" type="AmigaExpressoes">
                             <param id="0" name="Visibility">0</param>
@@ -1673,6 +1839,9 @@
                         <action id="-15" name="Set visible" sid="690179894493844" type="AmigaExpressoes">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="357035803260022" type="AmigoExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="7" name="Set mirrored" sid="444155939180741" type="DoutorImagem">
                             <param id="0" name="State">0</param>
                         </action>
@@ -1840,6 +2009,9 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="165136277762632" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="628075287013723" type="AmigoExpressoes">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="458461563391144" type="DoutorImagem">
@@ -2017,6 +2189,9 @@
                         <action id="-15" name="Set visible" sid="178880743739645" type="AmigaExpressoes">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="904004454429764" type="AmigoExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="7" name="Set mirrored" sid="838397042822353" type="DoutorImagem">
                             <param id="0" name="State">0</param>
                         </action>
@@ -2184,6 +2359,9 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="233645450106286" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="389287366496669" type="AmigoExpressoes">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="632245768497564" type="DoutorImagem">
@@ -2359,6 +2537,9 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="474670753795965" type="AmigaExpressoes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="562459594496210" type="AmigoExpressoes">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -2557,7 +2738,7 @@
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
                         <action id="-12" name="Set group active" sid="810714415207971" type="System">
-                            <param id="0" name="Group name">&quot;Botao Sair&quot;</param>
+                            <param id="0" name="Group name">&quot;Botao Sair2&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="-28" name="Set canvas size" sid="406939611794429" type="System">

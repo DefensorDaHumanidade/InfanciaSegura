@@ -9,13 +9,13 @@
                 <condition id="-2" name="On start of layout" sid="448998361329247" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="959636680119971" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="959636680119971" type="System">
                     <param id="0" name="Variable">GeneroPersonagem</param>
                     <param id="1" name="Value">&quot;Masculino&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="429964709853255" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="429964709853255" type="System">
                     <param id="0" name="Variable">Amigo</param>
-                    <param id="1" name="Value">&quot;Masculino&quot;</param>
+                    <param id="1" name="Value">&quot;Feminino&quot;</param>
                 </action>
                 <action id="-28" name="Set canvas size" sid="208664411364451" type="System">
                     <param id="0" name="Width">500</param>
@@ -23,6 +23,19 @@
                 </action>
                 <action id="-5" name="Scroll to X" sid="887517990860443" type="System">
                     <param id="0" name="X">100</param>
+                </action>
+                <action id="0" name="Play" sid="288525156076494" type="Audio">
+                    <param id="0" name="Audio file">MusicaMundo</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;Musiquinha&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="594708459822863" type="Audio">
+                    <param id="0" name="Tag">&quot;Musica&quot;</param>
+                </action>
+                <action id="0" name="Set item" sid="816688371715234" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                    <param id="1" name="Value">&quot;Mundo&quot;</param>
                 </action>
             </actions>
         </event-block>

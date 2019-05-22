@@ -3,20 +3,277 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EventoCarregamento</name>
     <events>
+        <variable constant="0" name="Contador" sid="608614638858065" static="0" type="number">0</variable>
+        <variable constant="0" name="VARIAVEL" sid="194253807976948" static="0" type="text"></variable>
         <include>Global</include>
         <event-block sid="914175028356902">
             <conditions>
-                <condition id="-8" name="Compare two values" sid="496636623640934" type="System">
-                    <param id="0" name="First value">NomeUsuario</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;&quot;</param>
+                <condition id="-2" name="On start of layout" sid="496636623640934" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="720649602102660" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Amigo&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="611657387214180" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Genero&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="143555069452013" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="177803843699011" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Nome&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="801367730871598" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Senha&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="142984450365749">
+            <conditions>
+                <condition id="9" name="On item exists" sid="488683483787326" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Amigo&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Wait" sid="298951031652681" type="System">
+                <action id="1" name="Get item" sid="523763158193658" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Amigo&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="324594504339980">
+            <conditions>
+                <condition id="1" name="On item get" sid="450599537039646" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Amigo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="482630076220235" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="837217478417045">
+            <conditions>
+                <condition id="9" name="On item exists" sid="865147795705754" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Genero&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="951113889050397" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Genero&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="107387557118404">
+            <conditions>
+                <condition id="1" name="On item get" sid="574443819712352" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Genero&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="321594534481664" type="System">
+                    <param id="0" name="Variable">GeneroPersonagem</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841474139114885">
+            <conditions>
+                <condition id="9" name="On item exists" sid="889045655380831" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="879788311579984" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="758661936169201">
+            <conditions>
+                <condition id="1" name="On item get" sid="456720265114407" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="952641395172448" type="System">
+                    <param id="0" name="Variable">VARIAVEL</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="508240393774707">
+            <conditions>
+                <condition id="9" name="On item exists" sid="602041562930892" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Nome&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="737603679933351" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Nome&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="413313404111826">
+            <conditions>
+                <condition id="1" name="On item get" sid="782959547459160" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Nome&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="998278329418962" type="System">
+                    <param id="0" name="Variable">NomeUsuario</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="850783381916665">
+            <conditions>
+                <condition id="9" name="On item exists" sid="804687246771584" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Senha&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="400117411033779" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Senha&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="372715813838057">
+            <conditions>
+                <condition id="1" name="On item get" sid="668664714424616" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Senha&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="357458253214342" type="System">
+                    <param id="0" name="Variable">SenhaUsuario</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="280602586302457">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="759059043247780" type="System">
+                    <param id="0" name="Variable">VARIAVEL</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Mundo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="937722943415199" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="259155925731159" type="System">
+                <action id="-2" name="Go to layout" sid="152183823313150" type="System">
+                    <param id="0" name="Layout">Mundo</param>
+                </action>
+                <action id="-10" name="Add to" sid="751318230116963" type="System">
+                    <param id="0" name="Variable">Contador</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="321653935674463">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="829231671710735" type="System">
+                    <param id="0" name="Variable">VARIAVEL</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Hospital&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="436489379382399" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="624962148432931" type="System">
+                    <param id="0" name="Layout">Hospital</param>
+                </action>
+                <action id="-10" name="Add to" sid="184310166353131" type="System">
+                    <param id="0" name="Variable">Contador</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="355431849296838">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="680708119292515" type="System">
+                    <param id="0" name="Variable">VARIAVEL</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Fase1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="480428870372340" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="806253641400475" type="System">
+                    <param id="0" name="Layout">HospitalFase1</param>
+                </action>
+                <action id="-10" name="Add to" sid="445518798304878" type="System">
+                    <param id="0" name="Variable">Contador</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="707121436754053">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="302102868037305" type="System">
+                    <param id="0" name="Variable">VARIAVEL</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Fase2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="335092922955363" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="304709837928848" type="System">
+                    <param id="0" name="Layout">HospitalFase2</param>
+                </action>
+                <action id="-10" name="Add to" sid="870064777472799" type="System">
+                    <param id="0" name="Variable">Contador</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="754207656762911">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="944138461204930" type="System">
+                    <param id="0" name="Variable">VARIAVEL</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Fase3&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="382582708737645" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="437221088303188" type="System">
+                    <param id="0" name="Layout">HospitalFase3</param>
+                </action>
+                <action id="-10" name="Add to" sid="144197738941787" type="System">
+                    <param id="0" name="Variable">Contador</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="169892550140859">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="644734185801171" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="856903556619326" type="System">
+                    <param id="0" name="Variable">Contador</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="475685861686809" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="526827266719551" type="System">
                     <param id="0" name="Layout">TelaAbertura</param>
                 </action>
             </actions>

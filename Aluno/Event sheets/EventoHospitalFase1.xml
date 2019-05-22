@@ -9,11 +9,11 @@
                 <condition id="-2" name="On start of layout" sid="128286519503014" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="546886536738911" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="546886536738911" type="System">
                     <param id="0" name="Variable">GeneroPersonagem</param>
                     <param id="1" name="Value">&quot;Masculino&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="907247261808644" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="907247261808644" type="System">
                     <param id="0" name="Variable">Amigo</param>
                     <param id="1" name="Value">&quot;Feminino&quot;</param>
                 </action>
@@ -55,6 +55,78 @@
                 <action id="-9" name="Set value" sid="891397894926434" type="System">
                     <param id="0" name="Variable">IntroducaoHospital</param>
                     <param id="1" name="Value">&quot;Introduzido&quot;</param>
+                </action>
+                <action id="-12" name="Set group active" sid="420183037206180" type="System">
+                    <param id="0" name="Group name">&quot;Apresentacao Frontal&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="414355736963594" type="System">
+                    <param id="0" name="Group name">&quot;Apresentacao Posterior&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="859135101692351" type="System">
+                    <param id="0" name="Group name">&quot;Pegar Parte do Corpo&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="657584466965698" type="System">
+                    <param id="0" name="Group name">&quot;Criar Pecas&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="257721576792284" type="System">
+                    <param id="0" name="Group name">&quot;Preencher Corpo&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="989274981915632" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="194327226263642" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Nomeacao&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="591734252757516" type="System">
+                    <param id="0" name="Group name">&quot;Botao Continuacao&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="260711768785659" type="System">
+                    <param id="0" name="Group name">&quot;Botao Cair&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="277087552845433" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Cair&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="352904788865070" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Colocar&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="865622276892103" type="System">
+                    <param id="0" name="Group name">&quot;Botao Colocar&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="176941026521942" type="System">
+                    <param id="0" name="Group name">&quot;Botao Sair&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="583184871533993" type="System">
+                    <param id="0" name="Group name">&quot;Botao Jogar&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="900907227149274" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- JOGAR&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="656097162016262" type="System">
+                    <param id="0" name="Group name">&quot;Botao Verde Jogar&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="903328253869129" type="System">
+                    <param id="0" name="Group name">&quot;Jogo&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Set item" sid="736095073902992" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                    <param id="1" name="Value">&quot;Fase1&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -230,6 +302,9 @@
                             <param id="0" name="X">Self.X</param>
                             <param id="1" name="Y">Self.Y+150</param>
                         </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="139489450706669" type="PartesCorpo">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="536375533826716">
@@ -291,8 +366,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="408140644239452" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Boca&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Boca&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Olhos&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Olhos&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -305,8 +380,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="248515566804351" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pe&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pe&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dentes&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dentes&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -319,8 +394,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="120890547125830" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dedo do pe&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dedo do pe&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Bochecha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Bochecha&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -333,8 +408,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="524639957074245" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Tornozelo&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Tornozelo&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Boca&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Boca&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -347,8 +422,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="590682937282187" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Queixo&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Queixo&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Orelha&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Orelha&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -375,8 +450,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="682041431254754" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Olhos&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Olhos&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Nariz&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Nariz&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -389,8 +464,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="707532173598925" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dentes&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dentes&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Queixo&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Queixo&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -403,8 +478,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="304810030288252" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Bochecha&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Bochecha&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pescoco&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pescoco&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -417,8 +492,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="867859696780232" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Orelha&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Orelha&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Pe&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Pe&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -431,8 +506,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="412741185238272" type="PartesCorpo">
-                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Nariz&quot;)</param>
-                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Nariz&quot;)</param>
+                            <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Dedo do pe&quot;)</param>
+                            <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Dedo do pe&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -994,6 +1069,9 @@
                         </action>
                         <action id="5" name="Set frame" sid="783021285092776" type="BotaoProximoMundo">
                             <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="197709927499060" type="PartesCorpo">
+                            <param id="0" name="State">1</param>
                         </action>
                         <action disabled="1" id="22" name="Set paused" sid="588537596174716" type="Audio">
                             <param id="0" name="Tag">&quot;Ola&quot;</param>
@@ -1985,6 +2063,7 @@
         </event-group>
         <event-group description="" inactive="1" sid="113500972154746" title="Jogo">
             <sub-events>
+                <variable constant="0" name="erro" sid="410573455157360" static="0" type="number">20</variable>
                 <event-block sid="137643979408357">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="358611069055054" type="System" />
@@ -2009,7 +2088,7 @@
                         <condition id="-8" name="Compare two values" sid="618282087170570" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Testa&quot;), CorpoMasculino.ImagePointY(&quot;Testa&quot;)))</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2031,6 +2110,10 @@
                             <param id="0" name="Variable">Peca</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="0" name="Request URL" sid="137098027217486" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Testa&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="824338357344747">
@@ -2043,7 +2126,7 @@
                         <condition id="-8" name="Compare two values" sid="913982185129770" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Testa&quot;), CorpoMasculino.ImagePointY(&quot;Testa&quot;)))</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2061,6 +2144,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="158437389053271" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Testa&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=-10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2093,7 +2180,7 @@
                         <condition id="-8" name="Compare two values" sid="933716407825976" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Cabeca&quot;), CorpoMasculino.ImagePointY(&quot;Cabeca&quot;)))</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2111,6 +2198,10 @@
                             <param id="0" name="Variable">Peca</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Request URL" sid="476311985419236" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Cabeca&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="458567765723341">
@@ -2123,7 +2214,7 @@
                         <condition id="-8" name="Compare two values" sid="146393890013609" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Cabeca&quot;), CorpoMasculino.ImagePointY(&quot;Cabeca&quot;)))</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2142,6 +2233,10 @@
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Request URL" sid="853143863006046" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Cabeca&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=-10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="251097208768028">
@@ -2154,7 +2249,7 @@
                         <condition id="-8" name="Compare two values" sid="685982420637666" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Olhos&quot;), CorpoMasculino.ImagePointY(&quot;Olhos&quot;)))</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2172,6 +2267,10 @@
                             <param id="0" name="Variable">Peca</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Request URL" sid="293235027667197" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Olhos&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="898546556472634">
@@ -2184,7 +2283,7 @@
                         <condition id="-8" name="Compare two values" sid="609587347366190" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Olhos&quot;), CorpoMasculino.ImagePointY(&quot;Olhos&quot;)))</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2203,6 +2302,10 @@
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Request URL" sid="339591629364207" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Olhos&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="340062149304864">
@@ -2215,7 +2318,7 @@
                         <condition id="-8" name="Compare two values" sid="642164019130433" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Dentes&quot;), CorpoMasculino.ImagePointY(&quot;Dentes&quot;)))</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2233,6 +2336,10 @@
                             <param id="0" name="Variable">Peca</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Request URL" sid="774255592104223" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Dentes&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="149544795770231">
@@ -2245,7 +2352,7 @@
                         <condition id="-8" name="Compare two values" sid="149186166365432" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Dentes&quot;), CorpoMasculino.ImagePointY(&quot;Dentes&quot;)))</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2264,6 +2371,10 @@
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Request URL" sid="767428100233338" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Dentes&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="481396525225558">
@@ -2276,7 +2387,7 @@
                         <condition id="-8" name="Compare two values" sid="695326980608432" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Bochecha&quot;), CorpoMasculino.ImagePointY(&quot;Bochecha&quot;)))</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2294,6 +2405,10 @@
                             <param id="0" name="Variable">Peca</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Request URL" sid="589565324051520" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Bochecha&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="467312902827049">
@@ -2306,7 +2421,7 @@
                         <condition id="-8" name="Compare two values" sid="621082192213213" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Bochecha&quot;), CorpoMasculino.ImagePointY(&quot;Bochecha&quot;)))</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2325,6 +2440,10 @@
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Request URL" sid="216029595963199" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Bochecha&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="158080269912467">
@@ -2337,7 +2456,7 @@
                         <condition id="-8" name="Compare two values" sid="944323237725689" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Boca&quot;), CorpoMasculino.ImagePointY(&quot;Boca&quot;)))</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2355,6 +2474,10 @@
                             <param id="0" name="Variable">Peca</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Request URL" sid="153995663521253" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Boca&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="778245247891214">
@@ -2367,7 +2490,7 @@
                         <condition id="-8" name="Compare two values" sid="331140809915501" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Boca&quot;), CorpoMasculino.ImagePointY(&quot;Boca&quot;)))</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2386,6 +2509,10 @@
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Request URL" sid="453585484727623" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Boca&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="980174149669233">
@@ -2398,10 +2525,14 @@
                         <condition id="-8" name="Compare two values" sid="756596081960008" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Orelha&quot;), CorpoMasculino.ImagePointY(&quot;Orelha&quot;)))</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Request URL" sid="166121373966502" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acertou%20Orelha&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                         <action id="-3" name="Set position" sid="118852510718135" type="PartesCorpo">
                             <param id="0" name="X">CorpoMasculino.ImagePointX(&quot;Orelha&quot;)</param>
                             <param id="1" name="Y">CorpoMasculino.ImagePointY(&quot;Orelha&quot;)</param>
@@ -2435,7 +2566,7 @@
                         <condition id="-8" name="Compare two values" sid="717920558042457" type="System">
                             <param id="0" name="First value">abs(distance(PartesCorpo.X, PartesCorpo.Y,CorpoMasculino.ImagePointX(&quot;Orelha&quot;), CorpoMasculino.ImagePointY(&quot;Orelha&quot;)))</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Second value">erro</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2453,6 +2584,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="633541255325784" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Orelha&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>

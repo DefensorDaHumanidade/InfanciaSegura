@@ -9,11 +9,11 @@
                 <condition id="-2" name="On start of layout" sid="280757109134418" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="635194686232025" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="635194686232025" type="System">
                     <param id="0" name="Variable">GeneroPersonagem</param>
                     <param id="1" name="Value">&quot;Masculino&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="217930289879641" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="217930289879641" type="System">
                     <param id="0" name="Variable">Amigo</param>
                     <param id="1" name="Value">&quot;Feminino&quot;</param>
                 </action>
@@ -60,6 +60,138 @@
                     <param id="0" name="X">Camera.X</param>
                     <param id="1" name="Y">Camera.Y</param>
                 </action>
+                <action id="-12" name="Set group active" sid="889254775110740" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="670425135467628" type="System">
+                    <param id="0" name="Group name">&quot;BotaoF&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="284870320221620" type="System">
+                    <param id="0" name="Group name">&quot;BotaoF2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="254456576354010" type="System">
+                    <param id="0" name="Group name">&quot;BotaoF3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="390904100579736" type="System">
+                    <param id="0" name="Group name">&quot;BotaoF4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="242001033732077" type="System">
+                    <param id="0" name="Group name">&quot;BotaoF5&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="352897547169368" type="System">
+                    <param id="0" name="Group name">&quot;BotaoF6&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="987087136826321" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="915366919674734" type="System">
+                    <param id="0" name="Group name">&quot;BotaoR&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="726965474370515" type="System">
+                    <param id="0" name="Group name">&quot;BotaoR2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="695348891811762" type="System">
+                    <param id="0" name="Group name">&quot;BotaoR3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="954682426223526" type="System">
+                    <param id="0" name="Group name">&quot;BotaoR4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="160889202478023" type="System">
+                    <param id="0" name="Group name">&quot;BotaoR5&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="733998529685846" type="System">
+                    <param id="0" name="Group name">&quot;BotaoR6&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="853455385173213" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="661616014400874" type="System">
+                    <param id="0" name="Group name">&quot;CAIR&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="456074144374067" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="288905569184201" type="System">
+                    <param id="0" name="Group name">&quot;Botao Jogar3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="283979471786925" type="System">
+                    <param id="0" name="Group name">&quot;Joguinho&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="482053954641555" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase3- Hospital5&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="556245542876100" type="System">
+                    <param id="0" name="Group name">&quot;BotaoFim&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="808883513165308" type="System">
+                    <param id="0" name="Group name">&quot;Botao Sair3&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Set item" sid="186011052951583" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Local&quot;</param>
+                    <param id="1" name="Value">&quot;Fase3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="360082542371662">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="127299427175531" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Masculino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="438770992842751" type="System">
+                    <param id="0" name="Group name">&quot;Seguir Amigo Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="640455700678869" type="Amiga" />
+                <action id="-9" name="Destroy" sid="789929896677073" type="AmigaExpressoes" />
+                <action id="9" name="Set scale" sid="544276418825752" type="Amigo">
+                    <param id="0" name="Scale">0.07</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="552517120900874">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="480970559971017" type="System">
+                    <param id="0" name="Variable">Amigo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Feminino&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="834211308363720" type="System">
+                    <param id="0" name="Group name">&quot;Seguir Amiga Hospital&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="182330627077078" type="Amigo" />
+                <action id="-9" name="Destroy" sid="965725576521433" type="AmigoExpressoes" />
+                <action id="9" name="Set scale" sid="211328437227717" type="Amiga">
+                    <param id="0" name="Scale">0.07</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="289719105221605" title="Máquina de Escrever -DialogoFase3- Hospital">
@@ -84,6 +216,12 @@
                         </action>
                         <action id="-15" name="Set visible" sid="164694402697602" type="TextoDialogoHospitalFase1">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="276375291948131" type="BONS">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="962503176822007" type="RUINS">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1549,6 +1687,12 @@
                         <action disabled="1" id="-15" name="Set visible" sid="988200539836727" type="RUINS">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="644530271993448" type="BONS">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="415793564065112" type="RUINS">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="121109448712032">
@@ -1775,6 +1919,10 @@
                             <param id="0" name="X">Camera.X+250</param>
                             <param id="1" name="Y">Camera.Y+80</param>
                         </action>
+                        <action id="0" name="Request URL" sid="910687854390914" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%banho&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="488745543410072">
@@ -1810,6 +1958,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="845011978378633" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%banho&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1861,6 +2013,10 @@
                             <param id="0" name="Variable">frame</param>
                             <param id="1" name="Value">6</param>
                         </action>
+                        <action id="0" name="Request URL" sid="963615141000468" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%bundinha&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="726208414549322">
@@ -1896,6 +2052,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="323827652480632" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%bundinha&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1943,6 +2103,10 @@
                             <param id="0" name="X">Camera.X+250</param>
                             <param id="1" name="Y">Camera.Y+80</param>
                         </action>
+                        <action id="0" name="Request URL" sid="449792804240525" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%Mae&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="123980208427631">
@@ -1978,6 +2142,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="425213674172547" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%Mae&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2029,6 +2197,10 @@
                             <param id="0" name="Variable">frame</param>
                             <param id="1" name="Value">5</param>
                         </action>
+                        <action id="0" name="Request URL" sid="912603120353674" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%Vagina&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="126394275340854">
@@ -2064,6 +2236,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="228315979866432" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%Vagina&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2111,6 +2287,10 @@
                             <param id="0" name="X">Camera.X+250</param>
                             <param id="1" name="Y">Camera.Y+80</param>
                         </action>
+                        <action id="0" name="Request URL" sid="220516306841261" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20Avos&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="309357601531746">
@@ -2146,6 +2326,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="493007261232952" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Avos&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2197,6 +2381,10 @@
                             <param id="0" name="Variable">frame</param>
                             <param id="1" name="Value">4</param>
                         </action>
+                        <action id="0" name="Request URL" sid="919977586257871" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20ToqueSeios&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="771475910644735">
@@ -2232,6 +2420,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="166548527754594" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20ToqueSeios&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2279,6 +2471,10 @@
                             <param id="0" name="X">Camera.X+250</param>
                             <param id="1" name="Y">Camera.Y+80</param>
                         </action>
+                        <action id="0" name="Request URL" sid="246597969906187" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20ToqueMedico&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="833275952951174">
@@ -2314,6 +2510,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="828701277228560" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20ToqueMedico&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2365,6 +2565,10 @@
                             <param id="0" name="Variable">frame</param>
                             <param id="1" name="Value">3</param>
                         </action>
+                        <action id="0" name="Request URL" sid="746213473534435" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20ToqueBumBum&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="653881951970849">
@@ -2400,6 +2604,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="400996666992527" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20ToqueBumBum&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2447,6 +2655,10 @@
                             <param id="0" name="X">Camera.X+250</param>
                             <param id="1" name="Y">Camera.Y+80</param>
                         </action>
+                        <action id="0" name="Request URL" sid="913562629644722" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20CarinhoPai&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="670108843192054">
@@ -2482,6 +2694,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="550237987552953" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20CarinhoPai&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2533,6 +2749,10 @@
                             <param id="0" name="Variable">frame</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action id="0" name="Request URL" sid="262178099320819" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20ToquePenis&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="181373978122461">
@@ -2568,6 +2788,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="361948265680088" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20ToquePenis&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2623,6 +2847,10 @@
                             <param id="0" name="X">Camera.X+250</param>
                             <param id="1" name="Y">Camera.Y+80</param>
                         </action>
+                        <action id="0" name="Request URL" sid="205309155769685" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20BeijoMae&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="714196485652155">
@@ -2658,6 +2886,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="638707659660801" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20BeijoMae&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2709,6 +2941,10 @@
                             <param id="0" name="Variable">frame</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Request URL" sid="415843358805178" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Acerto%20Peito&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Acerto&amp;ponto=10&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="979189984604557">
@@ -2744,6 +2980,10 @@
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="768953371651296" type="AJAX">
+                            <param id="0" name="Tag">&quot;Ponto&quot;</param>
+                            <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Peito&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2996,7 +3236,7 @@
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
                         <action id="-12" name="Set group active" sid="929962949954041" type="System">
-                            <param id="0" name="Group name">&quot;Botao Sair&quot;</param>
+                            <param id="0" name="Group name">&quot;Botao Sair3&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="-28" name="Set canvas size" sid="692306551170682" type="System">
