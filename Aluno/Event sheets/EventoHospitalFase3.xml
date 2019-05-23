@@ -201,11 +201,11 @@
                         <condition id="-4" name="Trigger once while true" sid="261772184427652" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="207410833463432" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="207410833463432" type="Audio">
+                            <param id="0" name="Audio file">49</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;bons&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="461436732764171" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -308,6 +308,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="142110499061447" type="Audio">
+                            <param id="0" name="Audio file">beijo</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;beijo&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="150077626448920" type="BONS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -315,7 +321,7 @@
                             <param id="0" name="Frame number">0</param>
                         </action>
                         <action id="0" name="Set text" sid="701578882297261" type="TextoDialogoHospitalFase1">
-                            <param id="0" name="Text">&quot;O beijo carinhoso mamãe é um toque bom.&quot;</param>
+                            <param id="0" name="Text">&quot;O beijo carinhoso da mamãe é um toque bom.&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="480490829220555" type="System">
                             <param id="0" name="Variable">Botao</param>
@@ -324,8 +330,8 @@
                         <action id="5" name="Set frame" sid="224203230858758" type="BotaoProximoMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="518328595695017" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="518328595695017" type="Audio">
+                            <param id="0" name="Tag">&quot;bons&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="271340528268525" type="Audio">
@@ -407,6 +413,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="613697433706575" type="Audio">
+                            <param id="0" name="Audio file">carinho</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;carinho&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="412911289023976" type="BONS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -506,6 +518,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="742330623297860" type="Audio">
+                            <param id="0" name="Audio file">medico</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;medico&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="730384888421953" type="BONS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -605,6 +623,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="180416256261945" type="Audio">
+                            <param id="0" name="Audio file">avos</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;avos&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="509021298128069" type="BONS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -704,6 +728,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="577367983717048" type="Audio">
+                            <param id="0" name="Audio file">mamae</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;mamae&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="736098794453796" type="BONS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -803,6 +833,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="246803321978363" type="Audio">
+                            <param id="0" name="Audio file">banho</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;banho&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="916167749586671" type="BONS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -871,11 +907,15 @@
                         <condition id="-4" name="Trigger once while true" sid="667696184868484" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="531474487411829" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="22" name="Set paused" sid="776315285742284" type="Audio">
+                            <param id="0" name="Tag">&quot;banho&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="531474487411829" type="Audio">
+                            <param id="0" name="Audio file">48</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;ruins&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="857512748859579" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -975,6 +1015,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="777497314595500" type="Audio">
+                            <param id="0" name="Audio file">peito</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;peito&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="375891078670037" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -991,8 +1037,8 @@
                         <action id="5" name="Set frame" sid="135401700276829" type="BotaoProximoMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="980084819721127" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="980084819721127" type="Audio">
+                            <param id="0" name="Tag">&quot;ruins&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="609641138354509" type="Audio">
@@ -1074,6 +1120,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="117801682265429" type="Audio">
+                            <param id="0" name="Audio file">penis</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;penis&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="958503967258805" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1173,6 +1225,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="143251739690898" type="Audio">
+                            <param id="0" name="Audio file">bunda</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bunda&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="843748103365180" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1272,6 +1330,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="126926772017101" type="Audio">
+                            <param id="0" name="Audio file">peitinhos</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;peitinhos&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="731034805358583" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1371,6 +1435,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="831847639698340" type="Audio">
+                            <param id="0" name="Audio file">vagina</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;vagina&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="105018546242539" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1378,7 +1448,7 @@
                             <param id="0" name="Frame number">4</param>
                         </action>
                         <action id="0" name="Set text" sid="796931668471766" type="TextoDialogoHospitalFase1">
-                            <param id="0" name="Text">&quot;O toque na vagina, também chamada de pepeka, é um toque ruim.&quot;</param>
+                            <param id="0" name="Text">&quot;O toque na vulva ou vagina, é um toque ruim.&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="286075975992316" type="System">
                             <param id="0" name="Variable">Botao</param>
@@ -1470,6 +1540,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="678659616186964" type="Audio">
+                            <param id="0" name="Audio file">coccix</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;coccix&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="127025782269817" type="RUINS">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1538,11 +1614,15 @@
                         <condition id="-4" name="Trigger once while true" sid="505129150567104" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="896196833082958" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="22" name="Set paused" sid="692362011805406" type="Audio">
+                            <param id="0" name="Tag">&quot;coccix&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="896196833082958" type="Audio">
+                            <param id="0" name="Audio file">50</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;chao&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="835940821099598" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -1665,11 +1745,11 @@
                         <condition id="-4" name="Trigger once while true" sid="296125207963642" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="340650831300487" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="340650831300487" type="Audio">
+                            <param id="0" name="Audio file">51</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;foimaus&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="371938991738667" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -1785,8 +1865,8 @@
                         <action id="5" name="Set frame" sid="837830168600440" type="BotaoJogarMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="529565505623666" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="529565505623666" type="Audio">
+                            <param id="0" name="Tag">&quot;foimaus&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="452668809376521" type="Audio">
@@ -3015,11 +3095,11 @@
                         <condition id="-4" name="Trigger once while true" sid="175096418386133" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="297571208661840" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="297571208661840" type="Audio">
+                            <param id="0" name="Audio file">52</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;congratulacoes&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="933726850791655" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -3132,8 +3212,8 @@
                         <action id="5" name="Set frame" sid="488470131278607" type="BotaoProximoMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="131764750287309" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="131764750287309" type="Audio">
+                            <param id="0" name="Tag">&quot;congratulacoes&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="310084526381882" type="Audio">

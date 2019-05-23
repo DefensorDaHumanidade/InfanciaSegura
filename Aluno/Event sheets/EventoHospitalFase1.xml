@@ -860,11 +860,11 @@
                         <condition id="-4" name="Trigger once while true" sid="543605661084193" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="515607437028281" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="515607437028281" type="Audio">
+                            <param id="0" name="Audio file">33</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;frente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="830739374935279" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -930,11 +930,11 @@
                         <condition id="-4" name="Trigger once while true" sid="507164903580692" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="560028727169384" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="560028727169384" type="Audio">
+                            <param id="0" name="Audio file">34</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;nomes&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="822338151809763" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -1073,8 +1073,8 @@
                         <action behavior="DragDrop" id="0" name="Set enabled" sid="197709927499060" type="PartesCorpo">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="588537596174716" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="588537596174716" type="Audio">
+                            <param id="0" name="Tag">&quot;frente&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="463028247655504" type="Audio">
@@ -1225,8 +1225,8 @@
                         <action id="5" name="Set frame" sid="995205459551216" type="BotaoProximoMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="290482486016568" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="290482486016568" type="Audio">
+                            <param id="0" name="Tag">&quot;nomes&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="422440173955275" type="Audio">
@@ -1285,11 +1285,11 @@
                         <condition id="-4" name="Trigger once while true" sid="331530366631177" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="747875161534907" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="747875161534907" type="Audio">
+                            <param id="0" name="Audio file">35</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;cair&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="406771029448492" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -1370,11 +1370,11 @@
                         <condition id="-4" name="Trigger once while true" sid="322986585024239" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="368758120350164" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="368758120350164" type="Audio">
+                            <param id="0" name="Audio file">36</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;colocar&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="263879406242458" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -1618,8 +1618,8 @@
                         <action id="5" name="Set frame" sid="168644430653746" type="BotaoProximoMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="272924365883242" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="272924365883242" type="Audio">
+                            <param id="0" name="Tag">&quot;cair&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="460575730453215" type="Audio">
@@ -1814,8 +1814,8 @@
                         <action id="5" name="Set frame" sid="589559159951828" type="BotaoProximoMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="478067569070277" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="478067569070277" type="Audio">
+                            <param id="0" name="Tag">&quot;colocar&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="780373151676156" type="Audio">
@@ -1899,11 +1899,11 @@
                             <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoFase1- Colocar&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="108850535624220" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="108850535624220" type="Audio">
+                            <param id="0" name="Audio file">37</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;ir&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="194368715766404" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -2010,8 +2010,8 @@
                         <action id="5" name="Set frame" sid="676854543084139" type="BotaoJogarMundo">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="139513630982838" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="139513630982838" type="Audio">
+                            <param id="0" name="Tag">&quot;ir&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="221240014025078" type="Audio">
@@ -2588,6 +2588,307 @@
                         <action id="0" name="Request URL" sid="633541255325784" type="AJAX">
                             <param id="0" name="Tag">&quot;Ponto&quot;</param>
                             <param id="1" name="URL">&quot;https://infanciasegura.000webhostapp.com/InfanciaSegura-DesempenhoAluno.php?nome=&quot;&amp;NomeUsuario&amp;&quot;&amp;senha=&quot;&amp;SenhaUsuario&amp;&quot;&amp;descricao=Erro%20Orelha&amp;local=&quot;&amp;LayoutName&amp;&quot;&amp;tipo=Erro&amp;ponto=10&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="786157037606279">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="452582258760771" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="823060340929197" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="265451659167248" type="Audio">
+                            <param id="0" name="Audio file">orelha</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;orelha&quot;</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="784684104764345" type="Audio">
+                            <param id="0" name="Tag">&quot;testa&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="697057229933916" type="Audio">
+                            <param id="0" name="Tag">&quot;boca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="345698636668112" type="Audio">
+                            <param id="0" name="Tag">&quot;bochecha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="785786468259276" type="Audio">
+                            <param id="0" name="Tag">&quot;dentes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="708478840611460" type="Audio">
+                            <param id="0" name="Tag">&quot;olhos&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="889330183957183" type="Audio">
+                            <param id="0" name="Tag">&quot;cabeca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="498420402655753">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="852113316789189" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="544334841509210" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="582361086033199" type="Audio">
+                            <param id="0" name="Audio file">boca</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;boca&quot;</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="409608673870305" type="Audio">
+                            <param id="0" name="Tag">&quot;orelha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="834230978980909" type="Audio">
+                            <param id="0" name="Tag">&quot;testa&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="704115008355704" type="Audio">
+                            <param id="0" name="Tag">&quot;bochecha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="627297087474374" type="Audio">
+                            <param id="0" name="Tag">&quot;dentes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="788716549996019" type="Audio">
+                            <param id="0" name="Tag">&quot;olhos&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="916140757156777" type="Audio">
+                            <param id="0" name="Tag">&quot;cabeca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225980148630639">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="210470723524012" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="121778472294240" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="298274160412671" type="Audio">
+                            <param id="0" name="Audio file">bochecha</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;bochecha&quot;</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="846448483834319" type="Audio">
+                            <param id="0" name="Tag">&quot;orelha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="972256876725709" type="Audio">
+                            <param id="0" name="Tag">&quot;boca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="748807156091266" type="Audio">
+                            <param id="0" name="Tag">&quot;testa&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="314039087790120" type="Audio">
+                            <param id="0" name="Tag">&quot;dentes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="215139145896722" type="Audio">
+                            <param id="0" name="Tag">&quot;olhos&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="249469007518269" type="Audio">
+                            <param id="0" name="Tag">&quot;cabeca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614259496913516">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="563254387148422" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="715294756470364" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="977142413541280" type="Audio">
+                            <param id="0" name="Audio file">dentes</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;dentes&quot;</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="595681410939824" type="Audio">
+                            <param id="0" name="Tag">&quot;orelha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="127281329692668" type="Audio">
+                            <param id="0" name="Tag">&quot;boca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="322747262581467" type="Audio">
+                            <param id="0" name="Tag">&quot;bochecha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="648845140944564" type="Audio">
+                            <param id="0" name="Tag">&quot;testa&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="952711236270501" type="Audio">
+                            <param id="0" name="Tag">&quot;olhos&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="183861575631797" type="Audio">
+                            <param id="0" name="Tag">&quot;cabeca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="358557817338650">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="882052076392618" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="714828695532719" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="111908141929733" type="Audio">
+                            <param id="0" name="Audio file">olhos</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;olhos&quot;</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="913116105243933" type="Audio">
+                            <param id="0" name="Tag">&quot;orelha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="231479326710657" type="Audio">
+                            <param id="0" name="Tag">&quot;boca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="644218868319471" type="Audio">
+                            <param id="0" name="Tag">&quot;bochecha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="107829425446157" type="Audio">
+                            <param id="0" name="Tag">&quot;dentes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="221207084631324" type="Audio">
+                            <param id="0" name="Tag">&quot;testa&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="834803342295915" type="Audio">
+                            <param id="0" name="Tag">&quot;cabeca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="410019618154852">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="782849734765050" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="218713275817795" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="406381578573104" type="Audio">
+                            <param id="0" name="Audio file">cabeca</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;cabeca&quot;</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="271044902402150" type="Audio">
+                            <param id="0" name="Tag">&quot;orelha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="337528980862139" type="Audio">
+                            <param id="0" name="Tag">&quot;boca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="653056537661762" type="Audio">
+                            <param id="0" name="Tag">&quot;bochecha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="459149508853914" type="Audio">
+                            <param id="0" name="Tag">&quot;dentes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="541159422313549" type="Audio">
+                            <param id="0" name="Tag">&quot;olhos&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="223642658342649" type="Audio">
+                            <param id="0" name="Tag">&quot;testa&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="864382090207147">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="415393770167950" type="Touch">
+                            <param id="0" name="Object">PartesCorpo</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="311743571615536" type="PartesCorpo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="832890559657579" type="Audio">
+                            <param id="0" name="Audio file">testa</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;testa&quot;</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="328424844914618" type="Audio">
+                            <param id="0" name="Tag">&quot;orelha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="253875857269860" type="Audio">
+                            <param id="0" name="Tag">&quot;boca&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="316949531506904" type="Audio">
+                            <param id="0" name="Tag">&quot;bochecha&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="767336744314565" type="Audio">
+                            <param id="0" name="Tag">&quot;dentes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="996594657007232" type="Audio">
+                            <param id="0" name="Tag">&quot;olhos&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="323999959806207" type="Audio">
+                            <param id="0" name="Tag">&quot;cabeca&quot;</param>
+                            <param id="1" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>

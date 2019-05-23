@@ -175,8 +175,8 @@
                         <action id="5" name="Set frame" sid="597622841666846" type="BotaoVoltar">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="134054180310936" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="134054180310936" type="Audio">
+                            <param id="0" name="Tag">&quot;genero&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="909769213307465" type="Audio">
@@ -265,8 +265,8 @@
                             <param id="0" name="Variable">GeneroUsuario</param>
                             <param id="1" name="Value">&quot;Menino&quot;</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="363074734749664" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="363074734749664" type="Audio">
+                            <param id="0" name="Tag">&quot;genero&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="491262059800226" type="Audio">
@@ -355,8 +355,8 @@
                             <param id="0" name="Variable">GeneroUsuario</param>
                             <param id="1" name="Value">&quot;Menina&quot;</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="145593999385475" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="145593999385475" type="Audio">
+                            <param id="0" name="Tag">&quot;genero&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="911894778800522" type="Audio">

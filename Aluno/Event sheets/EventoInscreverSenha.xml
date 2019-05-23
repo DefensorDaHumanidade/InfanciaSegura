@@ -45,6 +45,10 @@
                 <action id="-16" name="Set opacity" sid="599606134493668" type="Senha">
                     <param id="0" name="Opacity">0</param>
                 </action>
+                <action id="-12" name="Set group active" sid="143699505547210" type="System">
+                    <param id="0" name="Group name">&quot;Botao Selecionar INSCREVERSENHA&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="742212752900176" title="Máquina de Escrever -DialogoEncontrado- INSCREVERSENHA">
@@ -168,8 +172,8 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="976159148616037" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="976159148616037" type="Audio">
+                            <param id="0" name="Tag">&quot;senha&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="261028863226196" type="System">
@@ -254,8 +258,8 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="900710974891692" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="900710974891692" type="Audio">
+                            <param id="0" name="Tag">&quot;senha&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="383341203867041" type="System">

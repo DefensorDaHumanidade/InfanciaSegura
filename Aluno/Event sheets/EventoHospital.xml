@@ -215,11 +215,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="0" name="Play" sid="598671206061746" type="Audio">
-                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                <action id="0" name="Play" sid="598671206061746" type="Audio">
+                                    <param id="0" name="Audio file">30</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                    <param id="1" name="Tag (optional)">&quot;oladoutor&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="200168125508406" type="System">
                                     <param id="0" name="Variable">letra</param>
@@ -345,8 +345,8 @@
                                 <action id="5" name="Set frame" sid="985285367735805" type="BotaoProximoMundo">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action disabled="1" id="22" name="Set paused" sid="632212486926993" type="Audio">
-                                    <param id="0" name="Tag">&quot;Ola&quot;</param>
+                                <action id="22" name="Set paused" sid="632212486926993" type="Audio">
+                                    <param id="0" name="Tag">&quot;oladoutor&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
                                 <action id="0" name="Play" sid="333940129925760" type="Audio">
@@ -653,11 +653,11 @@
                                 <condition id="-4" name="Trigger once while true" sid="518849477729653" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="0" name="Play" sid="943924906539055" type="Audio">
-                                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                                <action id="0" name="Play" sid="943924906539055" type="Audio">
+                                    <param id="0" name="Audio file">31</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                                    <param id="1" name="Tag (optional)">&quot;olacriancas&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="239771867666222" type="System">
                                     <param id="0" name="Variable">letra</param>
@@ -1510,7 +1510,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="995974136862788" type="System">
                                     <param id="0" name="Variable">Botao</param>
-                                    <param id="1" name="Value">&quot;Cima&quot;</param>
+                                    <param id="1" name="Value">&quot;ACima&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1520,7 +1520,7 @@
                                 <condition id="-14" name="Compare variable" sid="881829738660807" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Cima&quot;</param>
+                                    <param id="2" name="Value">&quot;ACima&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1556,7 +1556,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="766965235154991" type="System">
                                     <param id="0" name="Variable">Botao</param>
-                                    <param id="1" name="Value">&quot;Baixo&quot;</param>
+                                    <param id="1" name="Value">&quot;ABaixo&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1612,7 +1612,7 @@
                                 <condition id="-14" name="Compare variable" sid="456757870566518" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Direita&quot;</param>
+                                    <param id="2" name="Value">&quot;ADireita&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1648,7 +1648,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="126870615768106" type="System">
                                     <param id="0" name="Variable">Botao</param>
-                                    <param id="1" name="Value">&quot;Esquerda&quot;</param>
+                                    <param id="1" name="Value">&quot;AEsquerda&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1658,7 +1658,7 @@
                                 <condition id="-14" name="Compare variable" sid="961223933215444" type="System">
                                     <param id="0" name="Variable">Botao</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Esquerda&quot;</param>
+                                    <param id="2" name="Value">&quot;AEsquerda&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1689,7 +1689,9 @@
                                 <action id="5" name="Set frame" sid="900157611382464" type="BotaoSetaCima">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="262289609807883" type="Menina" />
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="262289609807883" type="Menina">
+                                    <param id="0" name="Control">2</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="739447454771672" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Norte&quot;</param>
@@ -1733,7 +1735,9 @@
                                 <action id="5" name="Set frame" sid="567754851885044" type="BotaoSetaBaixo">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="455720957443131" type="Menina" />
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="945151905963368" type="Menina">
+                                    <param id="0" name="Control">3</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="563388434826415" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Sul&quot;</param>
@@ -1777,7 +1781,9 @@
                                 <action id="5" name="Set frame" sid="652209369263744" type="BotaoSetaDireita">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="336219770699727" type="Menina" />
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="384652297972740" type="Menina">
+                                    <param id="0" name="Control">1</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="866722859859909" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Leste&quot;</param>
@@ -1821,10 +1827,12 @@
                                 <action id="5" name="Set frame" sid="214690412270792" type="BotaoSetaEsquerda">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action behavior="8Direction" id="1" name="Reverse" sid="843424479544353" type="Menina" />
                                 <action id="-10" name="Set value" sid="961812217523257" type="Menina">
                                     <param id="0" name="Instance variable">Sentido</param>
                                     <param id="1" name="Value">&quot;Oeste&quot;</param>
+                                </action>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="469214476337834" type="Menina">
+                                    <param id="0" name="Control">0</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="280809238037430" type="System">
                                     <param id="0" name="Variable">Botao</param>
@@ -1994,11 +2002,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="774906750416725" type="Audio">
-                            <param id="0" name="Audio file">ProfessorAbertura</param>
+                        <action id="0" name="Play" sid="774906750416725" type="Audio">
+                            <param id="0" name="Audio file">32</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Ola&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;Olanovamente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="527697444075621" type="System">
                             <param id="0" name="Variable">letra</param>
@@ -2525,6 +2533,10 @@
                         <action disabled="1" id="-16" name="Wait" sid="556049107344219" type="System">
                             <param id="0" name="Seconds">2.0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="567581837563197" type="System">
+                            <param id="0" name="Variable">Som</param>
+                            <param id="1" name="Value">&quot;Ligado&quot;</param>
+                        </action>
                         <action id="-28" name="Set canvas size" sid="526340682465855" type="System">
                             <param id="0" name="Width">1920</param>
                             <param id="1" name="Height">1080</param>
@@ -2548,6 +2560,10 @@
                         <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="542728309953191" type="PretoMundo" />
                         <action disabled="1" id="-16" name="Wait" sid="461264448027658" type="System">
                             <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="508969843199143" type="System">
+                            <param id="0" name="Variable">Som</param>
+                            <param id="1" name="Value">&quot;Ligado&quot;</param>
                         </action>
                         <action id="-28" name="Set canvas size" sid="211069852247800" type="System">
                             <param id="0" name="Width">1920</param>

@@ -10,38 +10,29 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="6">TelaCarregamento</layout>
-        <layout order="10">Hospital</layout>
-        <layout order="11">HospitalFase2</layout>
-        <layout order="12">Mundo</layout>
-        <layout order="13">HospitalFase3</layout>
-        <layout order="14">HospitalFase1</layout>
-        <layout order="17">TelaAbertura</layout>
-        <layout order="18">TelaVerificacao</layout>
-        <layout order="20">TelaPergunta</layout>
-        <layout order="22">TelaInscrever</layout>
-        <layout order="25">TelaAcerto</layout>
-        <layout order="28">TelaEscolhaAmigo</layout>
-        <layout order="29">TelaAmigo</layout>
-        <layout order="31">TelaGeneroPersonagem</layout>
-        <event-sheet order="0">EventoMundo</event-sheet>
-        <event-sheet order="1">EventoHospital</event-sheet>
-        <event-sheet order="2">EventoHospitalFase1</event-sheet>
-        <event-sheet order="3">EventoHospitalFase2</event-sheet>
-        <event-sheet order="4">EventoHospitalFase3</event-sheet>
-        <event-sheet order="5">EventoEscolhaAmigo</event-sheet>
-        <event-sheet active="1" order="7">EventoCarregamento</event-sheet>
-        <event-sheet order="8">EventoGeneroPersonagem</event-sheet>
-        <event-sheet order="9">Global</event-sheet>
-        <event-sheet order="15">EventoGeneroUsuario</event-sheet>
-        <event-sheet order="16">EventoInscreverTurma</event-sheet>
-        <event-sheet order="19">EventoVerificao</event-sheet>
-        <event-sheet order="21">EventoPergunta</event-sheet>
-        <event-sheet order="23">EventoInscrever</event-sheet>
-        <event-sheet order="24">EventoInscreverSenha</event-sheet>
-        <event-sheet order="26">EventoAcerto</event-sheet>
-        <event-sheet order="27">EventoAbertura</event-sheet>
-        <event-sheet order="30">EventoAmigo</event-sheet>
+        <layout order="0">TelaCarregamento</layout>
+        <layout order="3">TelaInicial</layout>
+        <layout order="4">TelaInscrever</layout>
+        <layout order="7">TelaInscreverSenha</layout>
+        <layout order="9">TelaInscreverTurma</layout>
+        <layout order="11">TelaAbertura</layout>
+        <layout order="12">TelaGeneroUsuario</layout>
+        <layout order="15">TelaVerificacao</layout>
+        <layout order="17">Hospital</layout>
+        <layout order="19">Mundo</layout>
+        <event-sheet order="1">EventoCarregamento</event-sheet>
+        <event-sheet order="2">Global</event-sheet>
+        <event-sheet order="5">EventoPergunta</event-sheet>
+        <event-sheet order="6">EventoInscrever</event-sheet>
+        <event-sheet order="8">EventoInscreverSenha</event-sheet>
+        <event-sheet order="10">EventoInscreverTurma</event-sheet>
+        <event-sheet order="13">EventoGeneroUsuario</event-sheet>
+        <event-sheet order="14">EventoAbertura</event-sheet>
+        <event-sheet order="16">EventoVerificao</event-sheet>
+        <event-sheet active="1" order="18">EventoHospital</event-sheet>
+        <event-sheet order="20">EventoMundo</event-sheet>
+        <event-sheet order="21">EventoGeneroPersonagem</event-sheet>
+        <event-sheet order="22">EventoEntrarMundo</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

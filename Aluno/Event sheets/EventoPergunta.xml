@@ -17,6 +17,18 @@
                     <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-12" name="Set group active" sid="675697090848995" type="System">
+                    <param id="0" name="Group name">&quot;Máquina de Escrever -DialogoPergunta- PERGUNTA&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="242599080933257" type="System">
+                    <param id="0" name="Group name">&quot;Botao Nao PERGUNTA&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="115797145820658" type="System">
+                    <param id="0" name="Group name">&quot;Botao Sim PERGUNTA&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="745697351686311">
@@ -183,8 +195,8 @@
                         <action id="5" name="Set frame" sid="122728198768513" type="BotaoNao">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="232982809359365" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="232982809359365" type="Audio">
+                            <param id="0" name="Tag">&quot;pergunta&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="175241292789011" type="Audio">
@@ -269,8 +281,8 @@
                         <action id="5" name="Set frame" sid="777038202027236" type="BotaoSim">
                             <param id="0" name="Frame number">0</param>
                         </action>
-                        <action disabled="1" id="22" name="Set paused" sid="920456070871676" type="Audio">
-                            <param id="0" name="Tag">&quot;Ola&quot;</param>
+                        <action id="22" name="Set paused" sid="920456070871676" type="Audio">
+                            <param id="0" name="Tag">&quot;pergunta&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="0" name="Play" sid="141704806656707" type="Audio">
@@ -279,7 +291,7 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SoltarBotao&quot;</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="902648856206714" type="System">
+                        <action disabled="1" id="-2" name="Go to layout" sid="902648856206714" type="System">
                             <param id="0" name="Layout">TelaInicial</param>
                         </action>
                         <action id="-12" name="Set group active" sid="607438442077403" type="System">

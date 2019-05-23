@@ -17,6 +17,18 @@
                     <param id="0" name="Group name">&quot;AtualizarIdioma&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="6" name="Stop" sid="543282076020030" type="Audio">
+                    <param id="0" name="Tag">&quot;Musica&quot;</param>
+                </action>
+                <action id="4" name="Preload" sid="503040926987307" type="Audio">
+                    <param id="0" name="Audio file">ProfessorAbertura</param>
+                </action>
+                <action id="0" name="Play" sid="614000829988368" type="Audio">
+                    <param id="0" name="Audio file">MusicaIntro</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;Musica&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="167735075138278">
