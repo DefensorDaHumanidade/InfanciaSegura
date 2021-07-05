@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Abertura.wav-7cbf1674dc9d0344a09191cd5c5dc05f.sample"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Musiscas/Abertura.wav"
+dest_files=[ "res://.import/Abertura.wav-7cbf1674dc9d0344a09191cd5c5dc05f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

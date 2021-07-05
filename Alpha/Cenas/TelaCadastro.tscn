@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/Personagens/Menino/Menino-4.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/FonteJokerman.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elementos/Visuais/Fontes/ComicSansMS/comic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Cenas/BotaoHorizontal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Elementos/Visuais/Icones/Rotulo.svg" type="Texture" id=7]
+[ext_resource path="res://Codigos/CampoTexto.gd" type="Script" id=8]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 459, 141 )
+margin_left = 10.0
+margin_right = 6.22905
+margin_top = 6.22905
+margin_bottom = 6.40791
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 5 )
+
+[node name="TelaCadastro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.686275, 0.854902, 1, 1 )
+
+[node name="Personagem" parent="." instance=ExtResource( 1 )]
+margin_top = -950.0
+margin_right = 536.0
+texture = ExtResource( 3 )
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Margem" parent="CaixaDialogo" index="1"]
+margin_top = 2.0
+margin_bottom = 2.0
+
+[node name="Campo" parent="CaixaDialogo/Margem/Elementos" index="1"]
+margin_right = 1880.0
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
+margin_right = 1681.0
+text = "Texto Cadastro."
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+visible = false
+
+[node name="Texto" parent="." instance=ExtResource( 4 )]
+anchor_right = 1.0
+margin_bottom = 300.0
+text = "Infância Segura"
+align = 1
+valign = 1
+
+[node name="Conteiner" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -472.0
+margin_top = -230.375
+margin_right = 472.0
+margin_bottom = 230.375
+size_flags_vertical = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista" type="HBoxContainer" parent="Conteiner"]
+margin_top = 153.0
+margin_right = 944.0
+margin_bottom = 307.0
+rect_min_size = Vector2( 930, 154 )
+custom_constants/separation = 25
+
+[node name="CampoTexto" type="LineEdit" parent="Conteiner/Lista"]
+modulate = Color( 0.588235, 1, 1, 1 )
+margin_right = 460.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 460, 0 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0.784314, 0.784314, 1, 1 )
+custom_colors/font_color = Color( 0, 0, 0.352941, 1 )
+max_length = 10
+placeholder_text = "RotuloCadastro"
+caret_blink = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jogar" parent="Conteiner/Lista" instance=ExtResource( 6 )]
+margin_left = 485.0
+margin_right = 944.0
+margin_bottom = 154.0
+ProximaCena = "res://Cenas/TelaPrincipal.tscn"
+TrocarCena = true
+
+[node name="Texto" parent="Conteiner/Lista/Jogar/ConteinerHorizontal" index="1"]
+margin_right = 442.0
+text = "BotaoJogar"
+
+[connection signal="focus_exited" from="Conteiner/Lista/CampoTexto" to="Conteiner/Lista/CampoTexto" method="_on_CampoTexto_TextoFinal"]
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]
+[editable path="Conteiner/Lista/Jogar"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://Elementos/Linguisticos/language.pt_BR.translation", "res://Elementos/Linguisticos/language.es_ES.translation", "res://Elementos/Linguisticos/language.en_GB.translation" ]
+
+source_file="res://Elementos/Linguisticos/language.csv"
+dest_files=[ "res://Elementos/Linguisticos/language.pt_BR.translation", "res://Elementos/Linguisticos/language.es_ES.translation", "res://Elementos/Linguisticos/language.en_GB.translation" ]
+
+[params]
+
+compress=true
+delimiter=1

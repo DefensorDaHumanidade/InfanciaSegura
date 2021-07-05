@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Arquivo.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+Cena = "res://Cenas/TelaPrincipal.tscn"
+Identificador = "dfsfsd"
+Musica = 0
+Voz = 0
+Audio = 0

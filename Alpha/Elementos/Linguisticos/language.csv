@@ -1,0 +1,22 @@
+﻿id;pt_BR;es_ES;en_GB
+Carregando;Carregando...;Cargando...;Loading...
+Destravar;Toque para iniciar.;Toque para empezar.;Touth to start.
+Horizontal;HONR-exempoçs poidüdusidd sfadfuhs dfijsd;ZON;TAL
+TelaCadastro_1;Olá, se você quiser brincar comigo, basta clicar no botão verde [color=green] jogar [/color].;;
+BotaoJogar;JOGAR;EMPEZAR;PLAY
+RotuloCadastro;Digite...;;
+BotaoVoz;Voz;Voz;Voice
+BotaoHospital;Hospital;Hospital;Hospital
+BotaoEscola;Escola;Escuela;School
+BotaoDelegacia;Delegacia;Delegacia;Police
+BotaoInternet;Internet;Internet;Internet
+BotaoFase_1;Fase 1;Fase 1;Level 1
+BotaoFase_2;Fase 2;Fase 2;Level 2
+BotaoFase_3;Fase 3;Fase 3;Level 3
+TelaSecundariaEscola_1;Olá, seja bem-vindo a escola. Selecione uma fase para jogar ou volte para o menu principal. ;;
+BotaoVoltar;Voltar;Voltar;Back
+BotaoMenu;Menu;Menu;Menu
+TelaHospital_1;Bem vindo ao Hospital;;
+ConfigurarAjustes;Ajustes Gerais;;
+ConfigurarFases;Seleção de Fases;;
+ConfigurarJogador;Jogador;;
