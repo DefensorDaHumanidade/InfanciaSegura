@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Elementos/Visuais/Deslizante/Barra.svg" type="Texture" id=1]
+[ext_resource path="res://Elementos/Visuais/Deslizante/Botao.svg" type="Texture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 890, 18 )
+
+[node name="ControleDeslizanteHorizontal" type="HSlider"]
+margin_right = 16.0
+margin_bottom = 16.0
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

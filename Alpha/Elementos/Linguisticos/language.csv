@@ -20,3 +20,8 @@ TelaHospital_1;Bem vindo ao Hospital;;
 ConfigurarAjustes;Ajustes Gerais;;
 ConfigurarFases;Seleção de Fases;;
 ConfigurarJogador;Jogador;;
+ConfigurarSobre;Sobre;Sobre;About
+AjusteSom;Som;;
+AjusteMusica;Musica;;
+AjusteVoz;Voz;;
+AjusteTexto;Texto;;

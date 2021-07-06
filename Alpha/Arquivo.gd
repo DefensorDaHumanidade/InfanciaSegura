@@ -7,9 +7,15 @@ extends Resource
 
 export (String) var Cena
 export (String) var Identificador
+export (String) var Idioma
 export (int, 0, 20) var Musica
 export (int, 0, 20) var Voz
 export (int, 0, 20) var Audio
+export (int, 39, 70) var Texto
+
+
+
+export var Testa: int
 
 
 # Called when the node enters the scene tree for the first time.
