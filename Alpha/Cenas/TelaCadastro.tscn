@@ -105,6 +105,7 @@ margin_left = 485.0
 margin_right = 944.0
 margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaPrincipal.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Abertura.wav"
 TrocarCena = true
 
 [node name="Texto" parent="Conteiner/Lista/Jogar/ConteinerHorizontal" index="1"]

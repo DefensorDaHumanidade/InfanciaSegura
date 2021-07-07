@@ -8,7 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").visible = false
+#	get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").visible = false
 	pass # Replace with function body.
 
 

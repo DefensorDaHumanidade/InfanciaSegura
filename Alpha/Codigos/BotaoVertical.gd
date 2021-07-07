@@ -6,6 +6,7 @@ extends TextureButton
 # var b = "text"
 
 export (String) var ProximaCena
+export (String) var TocarMusica
 export (bool) var TrocarCena = false
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +25,8 @@ func _ready():
 func _on_BotaoVertical_Selecionado():
 #	if not controle_auxiliar:
 	print("Botao ", name, " pressionado!")
+	if name != "BotaoEsquerda":
+		$Som.play()
 	$ConteinerVertical.modulate = Color(0.5, 0.5, 0.5, 1)
 	$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y + 15
 	pass # Replace with function body.
@@ -42,6 +45,8 @@ func _on_BotaoVertical_Comando():
 	if TrocarCena:
 		if get_tree().change_scene(ProximaCena) == OK:
 			Configuracoes.salvar.Cena = ProximaCena
+			Configuracoes.salvar.NomeMusica = TocarMusica
+			Configuracoes.gerenciarMusicas()
 			if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 				print("Cena salva: ", ProximaCena)
 		else:
@@ -53,10 +58,12 @@ func _on_BotaoVertical_Modo(estado_botao):
 	print("Estado do botao ", name, ": ", estado_botao)
 	if estado_botao:
 		print("Botao ", name, " pressionado!")
+		get_parent().get_node("Campo/Margem/Texto/Voz").play()
 #		$ConteinerVertical.modulate = Color(0.5, 0.5, 0.5, 1)
 #		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y + 15
 	else:
 		print("Botao ", name, " solto!")
+		get_parent().get_node("Campo/Margem/Texto/Voz").stop()
 #		$ConteinerVertical.modulate = Color(1, 1, 1, 1)
 #		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y - 15
 	pass # Replace with function body.

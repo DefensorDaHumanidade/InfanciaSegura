@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Elementos/Visuais/Icones/Som.svg" type="Texture" id=1]
 [ext_resource path="res://Elementos/Visuais/Fontes/ComicSansMS/comic.ttf" type="DynamicFontData" id=2]
@@ -10,6 +10,12 @@
 [ext_resource path="res://Elementos/Visuais/Icones/Voz.svg" type="Texture" id=8]
 [ext_resource path="res://Elementos/Visuais/Icones/Texto.svg" type="Texture" id=9]
 [ext_resource path="res://Codigos/AjusteTexto.gd" type="Script" id=10]
+[ext_resource path="res://Codigos/AjusteVoz.gd" type="Script" id=11]
+[ext_resource path="res://Codigos/AjusteSom.gd" type="Script" id=12]
+[ext_resource path="res://Codigos/AjusteMusica.gd" type="Script" id=13]
+[ext_resource path="res://Cenas/BotaoHorizontal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Elementos/Visuais/Icones/Rotulo.svg" type="Texture" id=15]
+[ext_resource path="res://Codigos/CampoTexto.gd" type="Script" id=16]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 30.0
@@ -44,9 +50,29 @@ extra_spacing_bottom = 40
 extra_spacing_space = 10
 font_data = ExtResource( 2 )
 
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 459, 141 )
+margin_left = 10.0
+margin_right = 6.22905
+margin_top = 6.22905
+margin_bottom = 6.40791
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
+font_data = ExtResource( 2 )
+
 [node name="TelaAjustes" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpacidadeFundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.54902 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,6 +106,7 @@ __meta__ = {
 }
 
 [node name="ConfigurarAjustes" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
@@ -98,7 +125,7 @@ __meta__ = {
 
 [node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarAjustes/Margem"]
 margin_right = 1596.0
-margin_bottom = 720.0
+margin_bottom = 797.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -137,6 +164,9 @@ margin_right = 1463.0
 margin_bottom = 150.0
 size_flags_horizontal = 2
 size_flags_vertical = 1
+min_value = -40.0
+max_value = 10.0
+script = ExtResource( 12 )
 
 [node name="Mais" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Som" instance=ExtResource( 5 )]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -180,6 +210,9 @@ margin_right = 1547.0
 margin_bottom = 163.0
 size_flags_horizontal = 2
 size_flags_vertical = 1
+min_value = -40.0
+max_value = 10.0
+script = ExtResource( 13 )
 
 [node name="Mais" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Musica" instance=ExtResource( 5 )]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -224,6 +257,9 @@ margin_right = 1445.0
 margin_bottom = 150.0
 size_flags_horizontal = 2
 size_flags_vertical = 1
+min_value = -40.0
+max_value = 10.0
+script = ExtResource( 11 )
 
 [node name="Mais" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Voz" instance=ExtResource( 5 )]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -282,6 +318,40 @@ margin_right = 1576.0
 margin_bottom = 124.0
 text = "+"
 
+[node name="Idioma" type="HBoxContainer" parent="TabContainer/ConfigurarAjustes/Margem/Lista"]
+margin_left = 89.0
+margin_top = 643.0
+margin_right = 1506.0
+margin_bottom = 797.0
+size_flags_horizontal = 4
+custom_constants/separation = 20
+
+[node name="BotaoBrasil" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma" instance=ExtResource( 14 )]
+margin_right = 459.0
+margin_bottom = 154.0
+
+[node name="Texto" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoBrasil/ConteinerHorizontal" index="1"]
+margin_right = 438.0
+text = "BotaoBrasil"
+
+[node name="BotaoEspanha" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma" instance=ExtResource( 14 )]
+margin_left = 479.0
+margin_right = 938.0
+margin_bottom = 154.0
+
+[node name="Texto" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoEspanha/ConteinerHorizontal" index="1"]
+margin_right = 504.0
+text = "BotaoEspanha"
+
+[node name="BotaoInglaterra" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma" instance=ExtResource( 14 )]
+margin_left = 958.0
+margin_right = 1417.0
+margin_bottom = 154.0
+
+[node name="Texto" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoInglaterra/ConteinerHorizontal" index="1"]
+margin_right = 571.0
+text = "BotaoInglaterra"
+
 [node name="ConfigurarFases" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
@@ -289,12 +359,88 @@ anchor_bottom = 1.0
 margin_left = 70.0
 margin_top = 175.0
 
+[node name="Margem" type="MarginContainer" parent="TabContainer/ConfigurarFases"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 10.0
+margin_right = -350.0
+margin_bottom = -175.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ConfigurarJogador" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
 margin_top = 175.0
+
+[node name="Margem" type="MarginContainer" parent="TabContainer/ConfigurarJogador"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 10.0
+margin_right = -350.0
+margin_bottom = -175.0
+custom_constants/margin_top = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarJogador/Margem"]
+margin_left = 125.0
+margin_top = 20.0
+margin_right = 1175.0
+margin_bottom = 720.0
+size_flags_horizontal = 4
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DadosJogador" type="HBoxContainer" parent="TabContainer/ConfigurarJogador/Margem/Lista"]
+margin_right = 1050.0
+margin_bottom = 97.0
+size_flags_horizontal = 4
+custom_constants/separation = 20
+
+[node name="Texto" parent="TabContainer/ConfigurarJogador/Margem/Lista/DadosJogador" instance=ExtResource( 5 )]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 6.0
+margin_right = 570.0
+margin_bottom = 91.0
+text = "AjusteIdentificacao"
+
+[node name="CampoTexto" type="LineEdit" parent="TabContainer/ConfigurarJogador/Margem/Lista/DadosJogador"]
+modulate = Color( 0.588235, 1, 1, 1 )
+margin_left = 590.0
+margin_right = 1050.0
+margin_bottom = 97.637
+rect_min_size = Vector2( 460, 0 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0.784314, 0.784314, 1, 1 )
+custom_colors/font_color = Color( 0, 0, 0.352941, 1 )
+max_length = 10
+placeholder_text = "RotuloCadastro"
+caret_blink = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoSair" parent="TabContainer/ConfigurarJogador/Margem/Lista" instance=ExtResource( 14 )]
+margin_left = 295.0
+margin_top = 147.0
+margin_right = 754.0
+margin_bottom = 301.0
+size_flags_horizontal = 4
+
+[node name="Texto" parent="TabContainer/ConfigurarJogador/Margem/Lista/BotaoSair/ConteinerHorizontal" index="1"]
+margin_right = 397.0
+text = "BotaoSair"
 
 [node name="ConfigurarSobre" type="Tabs" parent="TabContainer"]
 visible = false
@@ -302,6 +448,58 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
 margin_top = 175.0
+
+[node name="Margem" type="MarginContainer" parent="TabContainer/ConfigurarSobre"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 10.0
+margin_right = -350.0
+margin_bottom = -175.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarSobre/Margem"]
+margin_right = 1300.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="TabContainer/ConfigurarSobre/Margem/Lista" instance=ExtResource( 5 )]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 1300.0
+margin_bottom = 85.0
+text = "Descricao"
+autowrap = true
+
+[node name="LinhaVazia" parent="TabContainer/ConfigurarSobre/Margem/Lista" instance=ExtResource( 5 )]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 89.0
+margin_right = 1300.0
+margin_bottom = 174.0
+text = ""
+autowrap = true
+
+[node name="Som" type="HBoxContainer" parent="TabContainer/ConfigurarSobre/Margem/Lista"]
+margin_top = 178.0
+margin_right = 1300.0
+margin_bottom = 263.0
+custom_constants/separation = 20
+
+[node name="Profissao" parent="TabContainer/ConfigurarSobre/Margem/Lista/Som" instance=ExtResource( 5 )]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 467.0
+margin_bottom = 85.0
+text = "ProfissaoArtista"
+
+[node name="Nome" parent="TabContainer/ConfigurarSobre/Margem/Lista/Som" instance=ExtResource( 5 )]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 487.0
+margin_right = 862.0
+margin_bottom = 85.0
+text = "Renan Torres"
 
 [node name="CantoSuperiorEsquerdo" type="CenterContainer" parent="."]
 margin_left = 20.0
@@ -312,6 +510,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BotaoQuadrado" parent="CantoSuperiorEsquerdo" instance=ExtResource( 4 )]
+[node name="BotaoFecharConfiguracoes" parent="CantoSuperiorEsquerdo" instance=ExtResource( 4 )]
 
+[connection signal="value_changed" from="TabContainer/ConfigurarAjustes/Margem/Lista/Som/ControleDeslizanteHorizontal" to="TabContainer/ConfigurarAjustes/Margem/Lista/Som/ControleDeslizanteHorizontal" method="_on_ControleDeslizanteHorizontal_trocarValor"]
+[connection signal="value_changed" from="TabContainer/ConfigurarAjustes/Margem/Lista/Musica/ControleDeslizanteHorizontal" to="TabContainer/ConfigurarAjustes/Margem/Lista/Musica/ControleDeslizanteHorizontal" method="_on_ControleDeslizanteHorizontal_trocarValor"]
+[connection signal="value_changed" from="TabContainer/ConfigurarAjustes/Margem/Lista/Voz/ControleDeslizanteHorizontal" to="TabContainer/ConfigurarAjustes/Margem/Lista/Voz/ControleDeslizanteHorizontal" method="_on_ControleDeslizanteHorizontal_trocarValor"]
 [connection signal="value_changed" from="TabContainer/ConfigurarAjustes/Margem/Lista/Texto/ControleDeslizanteHorizontal" to="TabContainer/ConfigurarAjustes/Margem/Lista/Texto/ControleDeslizanteHorizontal" method="_on_ControleDeslizanteHorizontal_trocarValor"]
+[connection signal="focus_exited" from="TabContainer/ConfigurarJogador/Margem/Lista/DadosJogador/CampoTexto" to="TabContainer/ConfigurarJogador/Margem/Lista/DadosJogador/CampoTexto" method="_on_CampoTexto_TextoFinal"]
+
+[editable path="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoBrasil"]
+[editable path="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoEspanha"]
+[editable path="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoInglaterra"]
+[editable path="TabContainer/ConfigurarJogador/Margem/Lista/BotaoSair"]

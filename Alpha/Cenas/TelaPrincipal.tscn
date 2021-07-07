@@ -30,6 +30,7 @@ text = "Texto Principal."
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
 ProximaCena = "res://Cenas/TelaCadastro.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Abertura.wav"
 TrocarCena = true
 
 [node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
@@ -74,6 +75,7 @@ custom_constants/separation = 50
 margin_right = 459.0
 margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaHospital.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Hospital.wav"
 TrocarCena = true
 
 [node name="Texto" parent="Conteiner/Vertical/LinhaSuperior/Hospital/ConteinerHorizontal" index="1"]
@@ -85,6 +87,7 @@ margin_left = 509.0
 margin_right = 968.0
 margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaEscola.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Escola.wav"
 TrocarCena = true
 
 [node name="Texto" parent="Conteiner/Vertical/LinhaSuperior/Escola/ConteinerHorizontal" index="1"]
@@ -101,6 +104,7 @@ custom_constants/separation = 50
 margin_right = 459.0
 margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaDelegacia.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
 TrocarCena = true
 
 [node name="Texto" parent="Conteiner/Vertical/LinhaInferior/Delegacia/ConteinerHorizontal" index="1"]
@@ -112,6 +116,7 @@ margin_left = 509.0
 margin_right = 968.0
 margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaInternet.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Redes.wav"
 TrocarCena = true
 
 [node name="Texto" parent="Conteiner/Vertical/LinhaInferior/Internet/ConteinerHorizontal" index="1"]

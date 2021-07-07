@@ -4,11 +4,11 @@
 
 [resource]
 script = ExtResource( 1 )
-Cena = "res://Cenas/TelaPrincipal.tscn"
-Identificador = "dfsfsd"
+Cena = "res://Cenas/TelaEscola.tscn"
+Identificador = "asd"
 Idioma = ""
-Musica = 0
-Voz = 0
-Audio = 0
-Texto = 0
-Testa = 40
+NomeMusica = "res://Elementos/Sonoros/Musiscas/Escola.wav"
+Musica = -39
+Voz = -40
+Audio = 3
+Texto = 61

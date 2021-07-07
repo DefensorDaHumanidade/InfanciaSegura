@@ -19,5 +19,6 @@ __meta__ = {
 
 [node name="Voz" type="AudioStreamPlayer" parent="."]
 autoplay = true
+bus = "CanalVoz"
 
 [connection signal="finished" from="Voz" to="." method="_on_Voz_Finalizado"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Inglaterra.svg-265b1ea5479fb9707362f4f4a06126b0.stex"
+path="res://.import/X.png-03ea03e25e08f0c6819fbc736ef30d0a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Elementos/Visuais/Bandeiras/Inglaterra.svg"
-dest_files=[ "res://.import/Inglaterra.svg-265b1ea5479fb9707362f4f4a06126b0.stex" ]
+source_file="res://Elementos/Visuais/Icones/X.png"
+dest_files=[ "res://.import/X.png-03ea03e25e08f0c6819fbc736ef30d0a.stex" ]
 
 [params]
 
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
-svg/scale=0.15
+svg/scale=1.0
