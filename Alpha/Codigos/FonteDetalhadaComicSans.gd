@@ -43,14 +43,17 @@ func alterarTamanhoFonte():
 #	size = Configuracoes.salvar.Texto
 	pass
 
+var letra = 10 #taxa que o texto aparece ao jogador
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if percent_visible < 1.0:
-		percent_visible += delta*0.3
+	print("a")
+	if visible_characters < get_text().length():
+		visible_characters = letra
+		letra += 20*delta
 	else:
 		set_process(false)
-		print("Fim da impressao do texto!")
+		print("Fim da impressao do texto!", get_text().length())
 	pass
 
 func _on_Voz_Finalizado():

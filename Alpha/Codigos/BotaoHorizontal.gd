@@ -90,6 +90,7 @@ func _on_BotaoHorizontal_Comando():
 			print("Saindo, muito obrigado por jogar!")
 		get_tree().quit()
 	if TrocarCena:
+		get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
 		if get_tree().change_scene(ProximaCena) == OK:
 			Configuracoes.salvar.Cena = ProximaCena
 			Configuracoes.salvar.NomeMusica = TocarMusica

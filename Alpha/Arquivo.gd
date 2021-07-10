@@ -17,6 +17,7 @@ export var Musica : int
 export var Voz : int
 export var Audio : int
 export var Texto : int
+export var EscolaFase1 : Array
 
 
 # Called when the node enters the scene tree for the first time.

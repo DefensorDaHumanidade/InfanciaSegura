@@ -106,7 +106,6 @@ __meta__ = {
 }
 
 [node name="ConfigurarAjustes" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
@@ -363,14 +362,88 @@ margin_top = 175.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
-margin_top = 10.0
+margin_top = 50.0
 margin_right = -350.0
 margin_bottom = -175.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarFases/Margem"]
+margin_left = 181.0
+margin_right = 1119.0
+margin_bottom = 680.0
+size_flags_horizontal = 4
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotoesSuperior" type="HBoxContainer" parent="TabContainer/ConfigurarFases/Margem/Lista"]
+margin_right = 938.0
+margin_bottom = 154.0
+size_flags_horizontal = 4
+custom_constants/separation = 20
+
+[node name="BotaoHospital" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesSuperior" instance=ExtResource( 14 )]
+margin_right = 459.0
+margin_bottom = 154.0
+size_flags_horizontal = 4
+ProximaCena = "res://Cenas/TelaHospital.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Hospital.wav"
+TrocarCena = true
+
+[node name="Texto" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesSuperior/BotaoHospital/ConteinerHorizontal" index="1"]
+margin_right = 509.0
+text = "BotaoHospital"
+
+[node name="BotaoEscola" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesSuperior" instance=ExtResource( 14 )]
+margin_left = 479.0
+margin_right = 938.0
+margin_bottom = 154.0
+size_flags_horizontal = 4
+ProximaCena = "res://Cenas/TelaEscola.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Escola.wav"
+TrocarCena = true
+
+[node name="Texto" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesSuperior/BotaoEscola/ConteinerHorizontal" index="1"]
+margin_right = 454.0
+text = "BotaoEscola"
+
+[node name="BotoesInferiores" type="HBoxContainer" parent="TabContainer/ConfigurarFases/Margem/Lista"]
+margin_top = 204.0
+margin_right = 938.0
+margin_bottom = 358.0
+size_flags_horizontal = 4
+custom_constants/separation = 20
+
+[node name="BotaoDelegacia" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesInferiores" instance=ExtResource( 14 )]
+margin_right = 459.0
+margin_bottom = 154.0
+size_flags_horizontal = 4
+ProximaCena = "res://Cenas/TelaDelegacia.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
+TrocarCena = true
+
+[node name="Texto" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesInferiores/BotaoDelegacia/ConteinerHorizontal" index="1"]
+margin_right = 545.0
+text = "BotaoDelegacia"
+
+[node name="BotaoInternet" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesInferiores" instance=ExtResource( 14 )]
+margin_left = 479.0
+margin_right = 938.0
+margin_bottom = 154.0
+size_flags_horizontal = 4
+ProximaCena = "res://Cenas/TelaInternet.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Redes.wav"
+TrocarCena = true
+
+[node name="Texto" parent="TabContainer/ConfigurarFases/Margem/Lista/BotoesInferiores/BotaoInternet/ConteinerHorizontal" index="1"]
+margin_right = 524.0
+text = "BotaoInternet"
+
 [node name="ConfigurarJogador" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
@@ -521,4 +594,8 @@ __meta__ = {
 [editable path="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoBrasil"]
 [editable path="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoEspanha"]
 [editable path="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoInglaterra"]
+[editable path="TabContainer/ConfigurarFases/Margem/Lista/BotoesSuperior/BotaoHospital"]
+[editable path="TabContainer/ConfigurarFases/Margem/Lista/BotoesSuperior/BotaoEscola"]
+[editable path="TabContainer/ConfigurarFases/Margem/Lista/BotoesInferiores/BotaoDelegacia"]
+[editable path="TabContainer/ConfigurarFases/Margem/Lista/BotoesInferiores/BotaoInternet"]
 [editable path="TabContainer/ConfigurarJogador/Margem/Lista/BotaoSair"]

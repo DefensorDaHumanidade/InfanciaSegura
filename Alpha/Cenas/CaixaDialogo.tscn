@@ -95,11 +95,14 @@ margin_bottom = 290.0
 
 [node name="Icone" parent="Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
 margin_top = 51.0
+margin_right = 309.0
 margin_bottom = 149.0
 
 [node name="Texto" parent="Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
 margin_top = 153.0
+margin_right = 309.0
 margin_bottom = 238.0
+text = "BotaoMenu"
 
 [editable path="Margem/Elementos/BotaoEsquerda"]
 [editable path="Margem/Elementos/BotaoDireita"]
