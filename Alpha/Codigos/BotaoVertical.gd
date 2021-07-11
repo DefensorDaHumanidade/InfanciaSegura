@@ -60,18 +60,28 @@ func _on_BotaoVertical_Comando():
 				print("Cena salva: ", ProximaCena)
 		else:
 			print("Cena nao encontrada")
+	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaEscolaFase1":
+		if get_tree().current_scene.indicePergunta < get_tree().current_scene.PerguntasFase1.size()-1:
+			get_tree().current_scene.indicePergunta += 1
+			get_tree().current_scene.atualizarPergunta()
+		else:
+			print("Acabaram as perguntas")
+			ProximaCena = "res://Cenas/TelaEscola.tscn"
+			if get_tree().change_scene("res://Cenas/TelaEscola.tscn") == OK:
+				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+					print("Cena salva: ", ProximaCena)
 	pass # Replace with function body.
 
 
 func _on_BotaoVertical_Modo(estado_botao):
 	print("Estado do botao ", name, ": ", estado_botao)
 	if estado_botao:
-		print("Botao ", name, " pressionado!")
+#		print("Botao ", name, " pressionado!")
 		get_parent().get_node("Campo/Margem/Texto/Voz").play()
 #		$ConteinerVertical.modulate = Color(0.5, 0.5, 0.5, 1)
 #		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y + 15
 	else:
-		print("Botao ", name, " solto!")
+#		print("Botao ", name, " solto!")
 		get_parent().get_node("Campo/Margem/Texto/Voz").stop()
 #		$ConteinerVertical.modulate = Color(1, 1, 1, 1)
 #		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y - 15

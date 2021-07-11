@@ -33,13 +33,6 @@ text = "Texto Apresentacao."
 ProximaCena = "res://Cenas/TelaPrincipal.tscn"
 TrocarCena = true
 
-[node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
-margin_right = 309.0
-
-[node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
-margin_right = 309.0
-text = "BotaoMenu"
-
 [node name="Texto" parent="." instance=ExtResource( 3 )]
 self_modulate = Color( 0.2, 0.372549, 0.737255, 1 )
 anchor_right = 1.0
@@ -90,6 +83,8 @@ text = "BotaoFase_2"
 margin_top = 348.0
 margin_right = 459.0
 margin_bottom = 502.0
+ProximaCena = "res://Cenas/TelaHospitalFase3.tscn"
+TrocarCena = true
 
 [node name="Texto" parent="Fases/Fase3/ConteinerHorizontal" index="1"]
 margin_right = 482.0

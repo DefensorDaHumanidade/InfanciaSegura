@@ -28,7 +28,7 @@ AjusteTexto;Texto;;
 BotaoBrasil;Português;Portuguesa;Portuguese
 BotaoEspanha;Espanhol;Spañol;Spanish
 BotaoInglaterra;Inglês;Inglese;English
-Descricao;Esse jogo deve ser utilizado apenas em caratér experimental. A aplicação desde jogo em outros casos é estritamente proibida. Projeto de Mestrado de Alexandre Mendonça Fava.;;
+Descricao;Esse jogo deve ser utilizado apenas em caratér experimental. A aplicação desde jogo em outros casos é estritamente proibida. Projeto de Mestrado de Alexandre Mendonça Fava. ;;
 ProfissaoArtista;Artista:;;
 AjusteIdentificacao;Identificação;;
 BotaoSair;Sair;;
@@ -63,3 +63,5 @@ EscolaFase1_RespostaErrada_07;Não, você errou 7;;
 EscolaFase1_RespostaErrada_08;Não, você errou 8;;
 EscolaFase1_RespostaErrada_09;Não, você errou 9;;
 EscolaFase1_RespostaErrada_10;Não, você errou 10;;
+ToquesBons;Toques Bons;Bueno;Right
+ToquesRuins;Toques Ruins;Malo;Left

@@ -5,6 +5,8 @@ extends RichTextLabel
 # var a = 2
 # var b = "text"
 
+export (int) var taxaExposicao
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,19 +45,21 @@ func alterarTamanhoFonte():
 #	size = Configuracoes.salvar.Texto
 	pass
 
-var letra = 10 #taxa que o texto aparece ao jogador
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print("a")
 	if visible_characters < get_text().length():
-		visible_characters = letra
-		letra += 20*delta
+		visible_characters = taxaExposicao
+		taxaExposicao += 20*delta
 	else:
 		set_process(false)
-		print("Fim da impressao do texto!", get_text().length())
+		print("Fim da impressao do texto! Total de caracteres imprimidos: ", get_text().length())
 	pass
 
 func _on_Voz_Finalizado():
 	get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = false
 	pass # Replace with function body.
+
+
+
+
