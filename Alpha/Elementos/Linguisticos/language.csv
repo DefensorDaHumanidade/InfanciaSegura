@@ -65,3 +65,16 @@ EscolaFase1_RespostaErrada_09;Não, você errou 9;;
 EscolaFase1_RespostaErrada_10;Não, você errou 10;;
 ToquesBons;Toques Bons;Bueno;Right
 ToquesRuins;Toques Ruins;Malo;Left
+HospitalFase3_ToqueBom_01;Bom 1;;
+HospitalFase3_ToqueBom_02;Bom 2;;
+HospitalFase3_ToqueBom_03;Bom 3;;
+HospitalFase3_ToqueBom_04;Bom 4;;
+HospitalFase3_ToqueBom_05;Bom 5;;
+HospitalFase3_ToqueRuim_01;Ruim 1;;
+HospitalFase3_ToqueRuim_02;Ruim 2;;
+HospitalFase3_ToqueRuim_03;Ruim 3;;
+HospitalFase3_ToqueRuim_04;Ruim 4;;
+HospitalFase3_ToqueRuim_05;Ruim 5;;
+ParteMao;Mão;;
+PartePe;Pé;;
+ParteBoca;Boca;;

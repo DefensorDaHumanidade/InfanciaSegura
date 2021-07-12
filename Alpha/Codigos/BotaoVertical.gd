@@ -66,10 +66,10 @@ func _on_BotaoVertical_Comando():
 			get_tree().current_scene.atualizarPergunta()
 		else:
 			print("Acabaram as perguntas")
-			ProximaCena = "res://Cenas/TelaEscola.tscn"
+			Configuracoes.salvar.Cena = "res://Cenas/TelaEscola.tscn"
 			if get_tree().change_scene("res://Cenas/TelaEscola.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
-					print("Cena salva: ", ProximaCena)
+					print("Cena salva: ", Configuracoes.salvar.Cena)
 	pass # Replace with function body.
 
 

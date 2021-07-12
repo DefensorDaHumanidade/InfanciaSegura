@@ -60,6 +60,7 @@ tracks/0/keys = {
 [node name="TelaEscolaFase1" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false

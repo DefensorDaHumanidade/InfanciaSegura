@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Elementos/Visuais/Icones/Rotulo.svg" type="Texture" id=1]
+[ext_resource path="res://Cenas/FonteComicSans.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 224, 64 )
+
+[node name="PecaMural" type="Node2D"]
+
+[node name="Toque" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Contorno" type="ReferenceRect" parent="Toque"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+rect_pivot_offset = Vector2( 250, 250 )
+mouse_filter = 2
+border_color = Color( 0, 0, 0.392157, 1 )
+border_width = 10.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area" type="Area2D" parent="Toque"]
+
+[node name="Contato" type="CollisionShape2D" parent="Toque/Area"]
+shape = SubResource( 1 )
+
+[node name="Texto" parent="Toque" instance=ExtResource( 2 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteCorpo"
+align = 1
+valign = 1

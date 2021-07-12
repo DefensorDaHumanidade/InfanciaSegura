@@ -106,6 +106,7 @@ __meta__ = {
 }
 
 [node name="ConfigurarAjustes" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
@@ -516,63 +517,71 @@ margin_right = 397.0
 text = "BotaoSair"
 
 [node name="ConfigurarSobre" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
 margin_top = 175.0
 
-[node name="Margem" type="MarginContainer" parent="TabContainer/ConfigurarSobre"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="ControleDeslizante" type="ScrollContainer" parent="TabContainer/ConfigurarSobre"]
 margin_left = 200.0
 margin_top = 10.0
-margin_right = -350.0
-margin_bottom = -175.0
+margin_right = 1600.0
+margin_bottom = 730.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarSobre/Margem"]
-margin_right = 1300.0
-margin_bottom = 720.0
+[node name="Margem" type="MarginContainer" parent="TabContainer/ConfigurarSobre/ControleDeslizante"]
+margin_right = 1400.0
+margin_bottom = 263.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Texto" parent="TabContainer/ConfigurarSobre/Margem/Lista" instance=ExtResource( 5 )]
+[node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarSobre/ControleDeslizante/Margem"]
+margin_right = 1400.0
+margin_bottom = 263.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="TabContainer/ConfigurarSobre/ControleDeslizante/Margem/Lista" instance=ExtResource( 5 )]
 self_modulate = Color( 0, 0, 0, 1 )
-margin_right = 1300.0
+margin_right = 1400.0
 margin_bottom = 85.0
 text = "Descricao"
 autowrap = true
 
-[node name="LinhaVazia" parent="TabContainer/ConfigurarSobre/Margem/Lista" instance=ExtResource( 5 )]
+[node name="LinhaVazia" parent="TabContainer/ConfigurarSobre/ControleDeslizante/Margem/Lista" instance=ExtResource( 5 )]
 self_modulate = Color( 0, 0, 0, 1 )
 margin_top = 89.0
-margin_right = 1300.0
+margin_right = 1400.0
 margin_bottom = 174.0
 text = ""
 autowrap = true
 
-[node name="Som" type="HBoxContainer" parent="TabContainer/ConfigurarSobre/Margem/Lista"]
+[node name="Som" type="HBoxContainer" parent="TabContainer/ConfigurarSobre/ControleDeslizante/Margem/Lista"]
 margin_top = 178.0
-margin_right = 1300.0
+margin_right = 1400.0
 margin_bottom = 263.0
 custom_constants/separation = 20
 
-[node name="Profissao" parent="TabContainer/ConfigurarSobre/Margem/Lista/Som" instance=ExtResource( 5 )]
+[node name="Profissao" parent="TabContainer/ConfigurarSobre/ControleDeslizante/Margem/Lista/Som" instance=ExtResource( 5 )]
 self_modulate = Color( 0, 0, 0, 1 )
 margin_right = 467.0
 margin_bottom = 85.0
 text = "ProfissaoArtista"
 
-[node name="Nome" parent="TabContainer/ConfigurarSobre/Margem/Lista/Som" instance=ExtResource( 5 )]
+[node name="Nome" parent="TabContainer/ConfigurarSobre/ControleDeslizante/Margem/Lista/Som" instance=ExtResource( 5 )]
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 487.0
 margin_right = 862.0
 margin_bottom = 85.0
 text = "Renan Torres"
+
+[node name="Deslizante" type="VScrollBar" parent="TabContainer/ConfigurarSobre/ControleDeslizante/Margem"]
+margin_right = 12.0
+margin_bottom = 263.0
 
 [node name="CantoSuperiorEsquerdo" type="CenterContainer" parent="."]
 margin_left = 20.0

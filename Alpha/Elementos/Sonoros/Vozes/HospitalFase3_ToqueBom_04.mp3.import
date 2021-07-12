@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HospitalFase3_ToqueBom_04.mp3-8ec55b3ed40f2eb48e09a38b73bee6ae.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/HospitalFase3_ToqueBom_04.mp3"
+dest_files=[ "res://.import/HospitalFase3_ToqueBom_04.mp3-8ec55b3ed40f2eb48e09a38b73bee6ae.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
