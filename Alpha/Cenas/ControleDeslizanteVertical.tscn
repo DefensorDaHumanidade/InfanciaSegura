@@ -7,10 +7,10 @@
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 33, 543 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 draw_center = false
 
 [node name="ControleDeslizanteVertical" type="VSlider"]
@@ -19,8 +19,8 @@ margin_bottom = 16.0
 custom_icons/grabber_highlight = ExtResource( 1 )
 custom_icons/grabber = ExtResource( 1 )
 custom_styles/slider = SubResource( 1 )
-custom_styles/grabber_area_highlight = SubResource( 3 )
-custom_styles/grabber_area = SubResource( 2 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

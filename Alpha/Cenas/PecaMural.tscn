@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Elementos/Visuais/Icones/Rotulo.svg" type="Texture" id=1]
 [ext_resource path="res://Cenas/FonteComicSans.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Sonoros/Cliques/Peca.wav" type="AudioStream" id=3]
+[ext_resource path="res://Codigos/PecaMural.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 224, 64 )
 
 [node name="PecaMural" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Toque" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -43,3 +46,9 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "ParteCorpo"
 align = 1
 valign = 1
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="area_entered" from="Toque/Area" to="." method="_on_Area_ParteEntrou"]
+[connection signal="area_exited" from="Toque/Area" to="." method="_on_Area_ParteSaiu"]

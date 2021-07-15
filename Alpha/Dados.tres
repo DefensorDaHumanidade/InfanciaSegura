@@ -4,12 +4,12 @@
 
 [resource]
 script = ExtResource( 1 )
-Cena = "res://Cenas/TelaHospitalFase1.tscn"
+Cena = "res://Cenas/TelaDelegaciaFase3.tscn"
 Identificador = "Carla"
 Idioma = ""
-NomeMusica = "res://Elementos/Sonoros/Musiscas/Hospital.wav"
-Musica = -17
-Voz = -15
-Audio = 1
+NomeMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
+Musica = -18
+Voz = -31
+Audio = -3
 Texto = 61
 EscolaFase1 = [  ]

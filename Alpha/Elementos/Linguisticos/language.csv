@@ -28,7 +28,7 @@ AjusteTexto;Texto;;
 BotaoBrasil;Português;Portuguesa;Portuguese
 BotaoEspanha;Espanhol;Spañol;Spanish
 BotaoInglaterra;Inglês;Inglese;English
-Descricao;Esse jogo deve ser utilizado apenas em caratér experimental. A aplicação desde jogo em outros casos é estritamente proibida. Projeto de Mestrado de Alexandre Mendonça Fava. ;;
+Descricao;[fill]Esse jogo deve ser utilizado apenas em caratér experimental. A aplicação desde jogo em outros casos é estritamente proibida. Projeto de Mestrado de Alexandre Mendonça Fava.Esse jogo deve ser utilizado apenas em caratér experimental. A aplicação desde jogo em outros casos é estritamente proibida. Projeto de Mestrado de Alexandre Mendonça Fava.Esse jogo deve ser utilizado apenas em caratér experimental. A aplicação desde jogo em outros casos é estritamente proibida. Projeto de Mestrado de Alexandre Mendonça Fava.[/fill];;
 ProfissaoArtista;Artista:;;
 AjusteIdentificacao;Identificação;;
 BotaoSair;Sair;;
@@ -78,3 +78,5 @@ HospitalFase3_ToqueRuim_05;Ruim 5;;
 ParteMao;Mão;;
 PartePe;Pé;;
 ParteBoca;Boca;;
+BotaoTras;Trás;;
+BotaoFrente;Face;;

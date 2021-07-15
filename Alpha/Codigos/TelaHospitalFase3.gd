@@ -115,9 +115,9 @@ func _on_Area_SelecionarImagem(viewport, event, shape_idx):
 					$Camera/Animar.play("Tremer")
 		else:
 			arrastar = true
+			$Meio/Centro/Toque.scale = Vector2(0.9, 0.9)
 		print(arrastar)
 	if event is InputEventMouseMotion and arrastar:
-		$Meio/Centro/Toque.scale = Vector2(0.9, 0.9)
 		$Meio/Centro/Toque.global_position = event.position
 	
 	

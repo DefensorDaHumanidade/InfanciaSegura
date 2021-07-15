@@ -16,28 +16,32 @@ func _ready():
 #	get_node(".").set("custom_fonts:size", 20)
 #	get_node(".").set("custom_fonts/normal_font/settings/size", 60)
 #	set("custom_fonts/normal_font/settings/size", 160)
-	if get_tree().get_current_scene().get_name() == "TelaCadastro":
+	if get_tree().get_current_scene().get_name() == "TelaCadastro" and name != "Descricao":
 		bbcode_text = tr("TelaCadastro_1")
 		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste1.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
-	if get_tree().get_current_scene().get_name() == "TelaPrincipal":
+	if get_tree().get_current_scene().get_name() == "TelaPrincipal" and name != "Descricao":
 		bbcode_text = tr("TelaCadastro_1")
 		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste2.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
-	if get_tree().get_current_scene().get_name() == "TelaSecundaria":
+	if get_tree().get_current_scene().get_name() == "TelaSecundaria" and name != "Descricao":
 		bbcode_text = tr("TelaSecundariaEscola_1")
 		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste3.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
-	if get_tree().get_current_scene().get_name() == "TelaHospital":
+	if get_tree().get_current_scene().get_name() == "TelaHospital" and name != "Descricao":
 		bbcode_text = tr("TelaHospital_1")
 		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste3.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
 		pass
 	percent_visible = 0.0
+	if text == "Descricao":
+		bbcode_text = tr("Descricao")
+		percent_visible = 1.0
+		visible_characters = get_text().length()
 	pass # Replace with function body.
 
 func alterarTamanhoFonte():

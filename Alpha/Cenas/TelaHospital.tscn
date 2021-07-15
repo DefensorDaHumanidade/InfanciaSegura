@@ -75,6 +75,7 @@ text = "BotaoFase_1"
 margin_top = 174.0
 margin_right = 459.0
 margin_bottom = 328.0
+ProximaCena = "res://Cenas/TelaHospitalFase2.tscn"
 TocarMusica = "res://Elementos/Sonoros/Musiscas/Hospital.wav"
 TrocarCena = true
 

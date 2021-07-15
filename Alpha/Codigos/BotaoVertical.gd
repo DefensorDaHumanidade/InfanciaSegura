@@ -23,6 +23,10 @@ func _ready():
 		$ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/SetaHorizontal.svg")
 		$ConteinerVertical/Icone.modulate = Color(0, 0.9, 0.9, 1)
 		$ConteinerVertical/Icone.flip_h = true
+	if $ConteinerVertical/Texto.text == "BotaoTras":
+		$ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/Frente.svg")
+	if $ConteinerVertical/Texto.text == "BotaoFrente":
+		$ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/Tras.svg")
 	pass # Replace with function body.
 
 
@@ -75,16 +79,43 @@ func _on_BotaoVertical_Comando():
 
 func _on_BotaoVertical_Modo(estado_botao):
 	print("Estado do botao ", name, ": ", estado_botao)
-	if estado_botao:
-#		print("Botao ", name, " pressionado!")
-		get_parent().get_node("Campo/Margem/Texto/Voz").play()
-#		$ConteinerVertical.modulate = Color(0.5, 0.5, 0.5, 1)
-#		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y + 15
-	else:
-#		print("Botao ", name, " solto!")
-		get_parent().get_node("Campo/Margem/Texto/Voz").stop()
-#		$ConteinerVertical.modulate = Color(1, 1, 1, 1)
-#		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y - 15
+	if name == "BotaoEsquerda":
+		if estado_botao:
+	#		print("Botao ", name, " pressionado!")
+			get_parent().get_node("Campo/Margem/Texto/Voz").play()
+	#		$ConteinerVertical.modulate = Color(0.5, 0.5, 0.5, 1)
+	#		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y + 15
+		else:
+	#		print("Botao ", name, " solto!")
+			get_parent().get_node("Campo/Margem/Texto/Voz").stop()
+	#		$ConteinerVertical.modulate = Color(1, 1, 1, 1)
+	#		$ConteinerVertical.rect_position.y = $ConteinerVertical.rect_position.y - 15
+	if name == "BotaoDireita":
+		if estado_botao:
+			if get_tree().current_scene.name == "TelaHospitalFase1":
+				get_node("/root/TelaHospitalFase1/Centro/Cena").visible = false
+				get_node("/root/TelaHospitalFase1/Centro/Tras").visible = true
+				$ConteinerVertical/Texto.text = "BotaoFrente"
+				$ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/Tras.svg")
+	#			$ConteinerVertical/Texto.get("custom_fonts/font").size = 50
+			if get_tree().current_scene.name == "TelaHospitalFase2":
+				get_node("/root/TelaHospitalFase2/Centro/Cena").visible = false
+				get_node("/root/TelaHospitalFase2/Centro/Tras").visible = true
+				$ConteinerVertical/Texto.text = "BotaoFrente"
+				$ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/Tras.svg")
+
+		else:
+			if get_tree().current_scene.name == "TelaHospitalFase1":
+				get_node("/root/TelaHospitalFase1/Centro/Cena").visible = true
+				get_node("/root/TelaHospitalFase1/Centro/Tras").visible = false
+				$ConteinerVertical/Texto.text = "BotaoTras"
+				$ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/Frente.svg")
+	#			$ConteinerVertical/Texto.get("custom_fonts/font").size = 60
+			if get_tree().current_scene.name == "TelaHospitalFase2":
+				get_node("/root/TelaHospitalFase2/Centro/Cena").visible = true
+				get_node("/root/TelaHospitalFase2/Centro/Tras").visible = false
+				$ConteinerVertical/Texto.text = "BotaoFrente"
+				$ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/Tras.svg")
 	pass # Replace with function body.
 
 

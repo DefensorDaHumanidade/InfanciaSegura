@@ -1,0 +1,133 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Cenas/ControleDeslizanteVertical.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Cidade.jpeg" type="Texture" id=3]
+[ext_resource path="res://Codigos/TelaDelegaciaFase3.gd" type="Script" id=4]
+[ext_resource path="res://Elementos/Visuais/Icones/Circulo.svg" type="Texture" id=5]
+[ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+draw_center = false
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color( 1, 0.607843, 0.607843, 1 )
+border_blend = true
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[node name="TelaDelegaciaFase3" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 0.607843, 0.607843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cidade" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1400.0
+margin_top = -880.0
+margin_right = 1400.0
+margin_bottom = 880.0
+rect_pivot_offset = Vector2( 1400, 580 )
+texture = ExtResource( 3 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Cidade"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 50.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Borda" type="Panel" parent="Cidade"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Elemento_01" type="TextureRect" parent="Cidade"]
+self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
+margin_left = 1552.0
+margin_top = 572.0
+margin_right = 1648.0
+margin_bottom = 668.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Elemento_02" type="TextureRect" parent="Cidade"]
+self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
+margin_left = 1048.0
+margin_top = 532.0
+margin_right = 1144.0
+margin_bottom = 628.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
+text = "Texto Apresentacao."
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+ProximaCena = "res://Cenas/TelaPrincipal.tscn"
+TrocarCena = true
+
+[node name="ControleDeslizanteVertical" parent="." instance=ExtResource( 1 )]
+anchor_left = 1.0
+anchor_top = 0.18
+anchor_right = 1.0
+anchor_bottom = 0.6
+margin_left = -210.0
+margin_right = 0.0
+margin_bottom = 0.0
+min_value = 0.4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="AudioAcerto" parent="." instance=ExtResource( 6 )]
+
+[connection signal="gui_input" from="Cidade" to="." method="_on_Cidade_deslocarCidade"]
+[connection signal="gui_input" from="Cidade/Elemento_01" to="." method="_on_Elemento_01_achou"]
+[connection signal="gui_input" from="Cidade/Elemento_02" to="." method="_on_Elemento_02_achou"]
+[connection signal="value_changed" from="ControleDeslizanteVertical" to="." method="_on_ControleDeslizanteVertical_Zoom"]
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]

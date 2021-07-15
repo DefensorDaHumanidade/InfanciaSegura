@@ -1,0 +1,283 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase2/QuebraCabeca_01.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/Fontes/ComicSansMS/comic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Codigos/TelaDelegaciaFase2.gd" type="Script" id=4]
+[ext_resource path="res://Cenas/QuebraCabecaPeca.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 240
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+draw_center = false
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 186, 94 )
+
+[node name="TelaDelegaciaFase2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 0.607843, 0.607843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+mouse_filter = 2
+
+[node name="Fundo" parent="CaixaDialogo" index="0"]
+mouse_filter = 2
+
+[node name="Margem" parent="CaixaDialogo" index="1"]
+mouse_filter = 2
+
+[node name="Elementos" parent="CaixaDialogo/Margem" index="0"]
+mouse_filter = 2
+
+[node name="BotaoEsquerda" parent="CaixaDialogo/Margem/Elementos" index="0"]
+visible = false
+
+[node name="Campo" parent="CaixaDialogo/Margem/Elementos" index="1"]
+margin_left = 0.0
+margin_right = 1880.0
+
+[node name="Margem" parent="CaixaDialogo/Margem/Elementos/Campo" index="0"]
+margin_left = 4.0
+margin_top = -2.0
+margin_right = 4.0
+margin_bottom = -2.0
+mouse_filter = 2
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
+visible = false
+margin_right = 1860.0
+mouse_filter = 2
+text = "Texto Apresentacao."
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+visible = false
+ProximaCena = "res://Cenas/TelaPrincipal.tscn"
+TrocarCena = true
+
+[node name="AreaTrabalho" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.7
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Centro" type="CenterContainer" parent="AreaTrabalho"]
+margin_left = 960.0
+margin_top = 378.0
+margin_right = 960.0
+margin_bottom = 378.0
+mouse_filter = 2
+
+[node name="Imagem" type="Sprite" parent="AreaTrabalho/Centro"]
+self_modulate = Color( 1, 1, 1, 0.196078 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="Fundo" type="ColorRect" parent="AreaTrabalho/Centro/Imagem"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1882.0
+margin_top = -1322.0
+margin_right = -1882.0
+margin_bottom = -1322.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PecaBase_01" type="Sprite" parent="AreaTrabalho/Centro/Imagem/Fundo"]
+visible = false
+texture = ExtResource( 1 )
+hframes = 4
+vframes = 4
+
+[node name="Fundo" type="ColorRect" parent="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01"]
+modulate = Color( 1, 1, 1, 0.470588 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Numeracao" type="Label" parent="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 10.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Borda" type="Panel" parent="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+mouse_filter = 2
+custom_styles/panel = SubResource( 2 )
+
+[node name="Area" type="Area2D" parent="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01"]
+
+[node name="Contato" type="CollisionShape2D" parent="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01/Area"]
+shape = SubResource( 3 )
+
+[node name="Contorno" type="ReferenceRect" parent="AreaTrabalho/Centro/Imagem/Fundo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+border_color = Color( 0, 0, 0.470588, 1 )
+border_width = 20.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParteInferior" type="CenterContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -250.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Peca_01" type="Sprite" parent="ParteInferior"]
+visible = false
+position = Vector2( 990, 90 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+hframes = 4
+vframes = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fundo" type="ColorRect" parent="ParteInferior/Peca_01"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.470588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Numeracao" type="Label" parent="ParteInferior/Peca_01"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ParteInferior/Peca_01"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 10.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Borda" type="Panel" parent="ParteInferior/Peca_01"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -330.5
+margin_right = -470.5
+margin_bottom = -330.5
+mouse_filter = 2
+custom_styles/panel = SubResource( 2 )
+
+[node name="Area" type="Area2D" parent="ParteInferior/Peca_01"]
+
+[node name="Contato" type="CollisionShape2D" parent="ParteInferior/Peca_01/Area"]
+shape = SubResource( 3 )
+
+[node name="QuebraCabecaPeca" parent="ParteInferior" instance=ExtResource( 5 )]
+
+[node name="AudioAcerto" parent="." instance=ExtResource( 6 )]
+
+[node name="AudioErro" parent="." instance=ExtResource( 7 )]
+
+[connection signal="area_entered" from="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01/Area" to="." method="_on_Area_entrou"]
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]
