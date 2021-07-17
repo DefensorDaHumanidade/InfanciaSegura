@@ -33,13 +33,6 @@ text = "Texto Apresentacao."
 ProximaCena = "res://Cenas/TelaPrincipal.tscn"
 TrocarCena = true
 
-[node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
-margin_right = 309.0
-
-[node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
-margin_right = 309.0
-text = "BotaoMenu"
-
 [node name="Texto" parent="." instance=ExtResource( 5 )]
 self_modulate = Color( 0.00784314, 0.333333, 0, 1 )
 anchor_right = 1.0
@@ -68,6 +61,9 @@ __meta__ = {
 ] instance=ExtResource( 4 )]
 margin_right = 459.0
 margin_bottom = 154.0
+ProximaCena = "res://Cenas/TelaInternetFase1.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Redes.wav"
+TrocarCena = true
 
 [node name="Texto" parent="Fases/Fase1/ConteinerHorizontal" index="1"]
 margin_right = 472.0
@@ -79,6 +75,9 @@ text = "BotaoFase_1"
 margin_top = 174.0
 margin_right = 459.0
 margin_bottom = 328.0
+ProximaCena = "res://Cenas/TelaInternetFase2.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Redes.wav"
+TrocarCena = true
 
 [node name="Texto" parent="Fases/Fase2/ConteinerHorizontal" index="1"]
 margin_right = 482.0
@@ -90,6 +89,9 @@ text = "BotaoFase_2"
 margin_top = 348.0
 margin_right = 459.0
 margin_bottom = 502.0
+ProximaCena = "res://Cenas/TelaInternetFase3.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Redes.wav"
+TrocarCena = true
 
 [node name="Texto" parent="Fases/Fase3/ConteinerHorizontal" index="1"]
 margin_right = 482.0

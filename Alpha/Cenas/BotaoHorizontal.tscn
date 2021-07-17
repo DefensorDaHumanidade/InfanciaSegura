@@ -50,3 +50,4 @@ stream = ExtResource( 6 )
 [connection signal="button_down" from="." to="." method="_on_BotaoHorizontal_Selecionado"]
 [connection signal="button_up" from="." to="." method="_on_BotaoHorizontal_Solto"]
 [connection signal="pressed" from="." to="." method="_on_BotaoHorizontal_Comando"]
+[connection signal="toggled" from="." to="." method="_on_BotaoHorizontal_estado"]

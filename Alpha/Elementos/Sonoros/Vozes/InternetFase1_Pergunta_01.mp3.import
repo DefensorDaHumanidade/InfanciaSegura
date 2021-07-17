@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/InternetFase1_Pergunta_01.mp3-719402c70c37794dcc40fe694d95923f.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/InternetFase1_Pergunta_01.mp3"
+dest_files=[ "res://.import/InternetFase1_Pergunta_01.mp3-719402c70c37794dcc40fe694d95923f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -74,6 +74,45 @@ func _on_BotaoVertical_Comando():
 			if get_tree().change_scene("res://Cenas/TelaEscola.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 					print("Cena salva: ", Configuracoes.salvar.Cena)
+	
+	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaInternetFase2":
+		if get_tree().current_scene.indicePerguntar < get_tree().current_scene.PedidosFase2.size()-1:
+			get_tree().current_scene.indicePerguntar += 1
+#			get_tree().current_scene.get_node("Tela/Coluna/ListaBotoes/BotaoAceitar").modulate = Color(1, 1, 1, 1)
+#			get_tree().current_scene.get_node("Tela/Coluna/ListaBotoes/BotaoAceitar").pressed = false
+#			get_tree().current_scene.get_node("Tela/Coluna/ListaBotoes/BotaoAceitar").disabled = false
+#
+#			get_tree().current_scene.get_node("Tela/Coluna/ListaBotoes/BotaoRecusar").modulate = Color(1, 1, 1, 1)
+#			get_tree().current_scene.get_node("Tela/Coluna/ListaBotoes/BotaoRecusar").pressed = false
+#			get_tree().current_scene.get_node("Tela/Coluna/ListaBotoes/BotaoRecusar").disabled = false
+
+			get_tree().current_scene.proximaPergunta()
+		else:
+			print("Acabaram as perguntas")
+			Configuracoes.salvar.Cena = "res://Cenas/TelaInternet.tscn"
+			if get_tree().change_scene("res://Cenas/TelaInternet.tscn") == OK:
+				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+					print("Cena salva: ", Configuracoes.salvar.Cena)
+	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaInternetFase3":
+		if get_tree().current_scene.indicePerguntar < get_tree().current_scene.PedidosFase3.size()-1:
+			get_tree().current_scene.indicePerguntar += 1
+			get_tree().current_scene.proximaPergunta()
+		else:
+			print("Acabaram as perguntas")
+			Configuracoes.salvar.Cena = "res://Cenas/TelaInternet.tscn"
+			if get_tree().change_scene("res://Cenas/TelaInternet.tscn") == OK:
+				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+					print("Cena salva: ", Configuracoes.salvar.Cena)
+	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaInternetFase1":
+		if get_tree().current_scene.indicePergunta < get_tree().current_scene.elementosCertos.size():
+#			get_tree().current_scene.indicePerguntar += 1
+			get_tree().current_scene.carregarColunas()
+		else:
+			print("Acabaram as perguntas")
+			Configuracoes.salvar.Cena = "res://Cenas/TelaInternet.tscn"
+			if get_tree().change_scene("res://Cenas/TelaInternet.tscn") == OK:
+				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+					print("Cena salva: ", Configuracoes.salvar.Cena)
 	pass # Replace with function body.
 
 

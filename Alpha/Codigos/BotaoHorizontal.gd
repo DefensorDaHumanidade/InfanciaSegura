@@ -21,7 +21,7 @@ func _ready():
 
 
 func atualizandoIcones():
-	if name != "Hospital" and name != "Escola" and name != "Delegacia" and name != "Internet" and name != "BotaoBrasil" and name != "BotaoEspanha" and name != "BotaoInglaterra" and name != "BotaoSair": 
+	if name != "Hospital" and name != "Escola" and name != "Delegacia" and name != "Internet" and name != "BotaoBrasil" and name != "BotaoEspanha" and name != "BotaoInglaterra" and name != "BotaoSair" and name != "BotaoAceitar" and name != "BotaoRecusar": 
 		$ConteinerHorizontal/Icone.visible = false
 		$ConteinerHorizontal.alignment = BoxContainer.ALIGN_CENTER
 	if name == "Hospital":
@@ -50,6 +50,13 @@ func atualizandoIcones():
 	if name == "BotaoSair":
 		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Sair.svg")
 		self_modulate = Color(0, 0.9, 0.9, 1)
+	if name == "BotaoAceitar":
+		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Mao.svg")
+		self_modulate = Color(0, 0.9, 0, 1)
+	if name == "BotaoRecusar":
+		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Mao.svg")
+		$ConteinerHorizontal/Icone.flip_v = true
+		self_modulate = Color(1, 0.3, 0.3, 1)
 	get_tree().call_group("BotoesEscola", "trocarCor", Color(1, 1, 0, 1))
 	get_tree().call_group("BotoesDelegacia", "trocarCor", Color(1, 0.3, 0.3, 1))
 	get_tree().call_group("BotoesInternet", "trocarCor", Color(0, 0.9, 0, 1))
@@ -101,7 +108,41 @@ func _on_BotaoHorizontal_Comando():
 			print("Cena nao encontrada")
 #	if name == "Escola":
 #		get_tree().change_scene("res://Cenas/TelaSecundaria.tscn")
+	
+
 	pass # Replace with function body.
 
 
 
+
+
+func _on_BotaoHorizontal_estado(estado):
+#	print("MUHAHAHHAHAHAHAHHAHAHAHHAHAHAHHAHA ",name)
+	var condicao = true
+	if name == "BotaoRecusar":
+		condicao = false
+#	if name == "BotaoAceitar":
+#		print("okkkkkk")
+	if get_tree().current_scene.name == "TelaInternetFase2":
+		if get_tree().current_scene.verificarResposta() == condicao:
+			print("Acertou")
+			get_tree().current_scene.acertouResposta()
+		else:
+			print("Errou")
+			modulate = Color(0.3, 0.3, 0.3, 1)
+			toggle_mode = false
+			pressed = false
+			disabled = true
+			get_tree().current_scene.errouResposta()
+	if get_tree().current_scene.name == "TelaInternetFase3":
+		if get_tree().current_scene.verificarResposta() == condicao:
+			print("Acertou")
+			get_tree().current_scene.acertouResposta()
+		else:
+			print("Errou")
+			modulate = Color(0.3, 0.3, 0.3, 1)
+			toggle_mode = false
+			pressed = false
+			disabled = true
+			get_tree().current_scene.errouResposta()
+	pass # Replace with function body.
