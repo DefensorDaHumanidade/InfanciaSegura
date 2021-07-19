@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/EscolaFase2_Pergunta_04.mp3-f916c72ff7e3b41ce4ac8ceaeb4cb069.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/EscolaFase2_Pergunta_04.mp3"
+dest_files=[ "res://.import/EscolaFase2_Pergunta_04.mp3-f916c72ff7e3b41ce4ac8ceaeb4cb069.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
