@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/InternetFase2_RespostaCerta_03.mp3-8275ae714eeb9a0fdc1c3c23ee021398.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/InternetFase2_RespostaCerta_03.mp3"
+dest_files=[ "res://.import/InternetFase2_RespostaCerta_03.mp3-8275ae714eeb9a0fdc1c3c23ee021398.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

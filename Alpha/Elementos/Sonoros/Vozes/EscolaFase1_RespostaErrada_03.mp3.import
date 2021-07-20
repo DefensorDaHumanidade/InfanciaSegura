@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/EscolaFase1_RespostaErrada_03.mp3-d37ee7097ce0d39d0c56c690c61acebd.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/EscolaFase1_RespostaErrada_03.mp3"
+dest_files=[ "res://.import/EscolaFase1_RespostaErrada_03.mp3-d37ee7097ce0d39d0c56c690c61acebd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

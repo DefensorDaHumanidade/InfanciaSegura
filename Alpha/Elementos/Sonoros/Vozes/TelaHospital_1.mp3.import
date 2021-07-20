@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaHospital_1.mp3-5480dd43bd31a82ce12d8e3b113214d5.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaHospital_1.mp3"
+dest_files=[ "res://.import/TelaHospital_1.mp3-5480dd43bd31a82ce12d8e3b113214d5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

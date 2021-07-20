@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/InternetFase1_RespostaErrada_04.mp3-06081b5b5a03d00c304f3560e89d8fcc.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/InternetFase1_RespostaErrada_04.mp3"
+dest_files=[ "res://.import/InternetFase1_RespostaErrada_04.mp3-06081b5b5a03d00c304f3560e89d8fcc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

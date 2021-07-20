@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaCadastro_3.mp3-e4361e8d3d2b470226c13d5a1ad4a34f.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaCadastro_3.mp3"
+dest_files=[ "res://.import/TelaCadastro_3.mp3-e4361e8d3d2b470226c13d5a1ad4a34f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

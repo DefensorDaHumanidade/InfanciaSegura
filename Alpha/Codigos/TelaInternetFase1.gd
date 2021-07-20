@@ -111,8 +111,8 @@ func acertouPessoa():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/InternetFase1_RespostaCerta_0"+ str(elementosCertos[indicePergunta-1]) + ".mp3"))
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/InternetFase1_RespostaCerta_0"+ str(elementosCertos[indicePergunta-1]) + ".mp3"))
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
 	$Tela/Centro/Panel/Lista/Texto.text = "Senha ("+str(indicePergunta)+" de 5)"
@@ -123,7 +123,7 @@ func errouPessoa():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/InternetFase1_RespostaCerta_0"+ str(elementosCertos[indicePergunta-1]) + ".mp3"))
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/InternetFase1_RespostaErrada_0"+ str(elementosCertos[indicePergunta-1]) + ".mp3"))
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	pass

@@ -7,14 +7,14 @@
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=9]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=2]
 length = 0.3
 step = 0.05
 tracks/0/type = "value"
@@ -107,7 +107,7 @@ valign = 1
 margin_top = 172.0
 margin_right = 1098.0
 margin_bottom = 176.0
-custom_styles/separator = SubResource( 2 )
+custom_styles/separator = SubResource( 1 )
 
 [node name="MargemSuperior" type="MarginContainer" parent="Tela/Centro/Panel/Lista"]
 margin_top = 180.0
@@ -157,7 +157,7 @@ anchor_mode = 0
 current = true
 
 [node name="Animar" type="AnimationPlayer" parent="Camera"]
-anims/Tremer = SubResource( 1 )
+anims/Tremer = SubResource( 2 )
 
 [editable path="CaixaDialogo"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]

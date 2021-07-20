@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaInternet_1.mp3-ddbdcbdd58dff6c09fc580cd768f3f53.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaInternet_1.mp3"
+dest_files=[ "res://.import/TelaInternet_1.mp3-ddbdcbdd58dff6c09fc580cd768f3f53.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

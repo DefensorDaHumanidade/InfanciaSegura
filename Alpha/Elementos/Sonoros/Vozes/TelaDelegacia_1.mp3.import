@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaDelegacia_1.mp3-e60081a0a38dd9a16738e79859425219.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaDelegacia_1.mp3"
+dest_files=[ "res://.import/TelaDelegacia_1.mp3-e60081a0a38dd9a16738e79859425219.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

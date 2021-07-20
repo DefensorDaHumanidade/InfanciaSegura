@@ -83,24 +83,25 @@ texture = ExtResource( 1 )
 
 [node name="Coluna" type="VBoxContainer" parent="Tela"]
 margin_left = 481.0
-margin_top = 66.0
+margin_top = 49.0
 margin_right = 1439.0
-margin_bottom = 684.0
+margin_bottom = 700.0
 
 [node name="ListaInformacoes" type="HBoxContainer" parent="Tela/Coluna"]
 margin_right = 958.0
-margin_bottom = 460.0
+margin_bottom = 493.0
 
 [node name="Imagem" type="TextureRect" parent="Tela/Coluna/ListaInformacoes"]
-margin_right = 460.0
-margin_bottom = 460.0
+margin_right = 439.0
+margin_bottom = 493.0
+rect_min_size = Vector2( 439, 493 )
 texture = ExtResource( 3 )
 stretch_mode = 6
 
 [node name="Separador" type="VSeparator" parent="Tela/Coluna/ListaInformacoes"]
-margin_left = 464.0
-margin_right = 494.0
-margin_bottom = 460.0
+margin_left = 443.0
+margin_right = 473.0
+margin_bottom = 493.0
 custom_styles/separator = SubResource( 1 )
 custom_constants/separation = 30
 
@@ -115,21 +116,22 @@ bbcode_text = "InternetFase2_Pergunta_01"
 text = "InternetFase2_Pergunta_01"
 
 [node name="Texto" type="Label" parent="Tela/Coluna/ListaInformacoes"]
-margin_left = 498.0
+margin_left = 477.0
 margin_right = 958.0
-margin_bottom = 460.0
+margin_bottom = 493.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/line_spacing = 10
-text = "InternetFase2_Pergunta_01"
+text = "InternetFase3_Pergunta_01"
 autowrap = true
+clip_text = true
 
 [node name="ListaBotoes" type="HBoxContainer" parent="Tela/Coluna"]
-margin_top = 464.0
+margin_top = 497.0
 margin_right = 958.0
-margin_bottom = 618.0
+margin_bottom = 651.0
 custom_constants/separation = 40
 
 [node name="BotaoAceitar" parent="Tela/Coluna/ListaBotoes" instance=ExtResource( 4 )]
@@ -138,8 +140,8 @@ margin_bottom = 154.0
 toggle_mode = true
 
 [node name="Texto" parent="Tela/Coluna/ListaBotoes/BotaoAceitar/ConteinerHorizontal" index="1"]
-margin_right = 491.0
-text = "BotaoAceitar"
+margin_right = 570.0
+text = "BotaoResponder"
 
 [node name="BotaoRecusar" parent="Tela/Coluna/ListaBotoes" instance=ExtResource( 4 )]
 margin_left = 499.0
@@ -148,8 +150,8 @@ margin_bottom = 154.0
 toggle_mode = true
 
 [node name="Texto" parent="Tela/Coluna/ListaBotoes/BotaoRecusar/ConteinerHorizontal" index="1"]
-margin_right = 500.0
-text = "BotaoRecusar"
+margin_right = 495.0
+text = "BotaoIgnorar"
 
 [node name="AudioAcerto" parent="." instance=ExtResource( 8 )]
 

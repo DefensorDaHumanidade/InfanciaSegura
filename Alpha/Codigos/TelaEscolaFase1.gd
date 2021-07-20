@@ -96,7 +96,7 @@ func _on_Certo_Estado():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste1.mp3")
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load("res://Elementos/Sonoros/Vozes/EscolaFase1_RespostaCerta_" + str(PerguntasFase1[indicePergunta][21],PerguntasFase1[indicePergunta][22]) + ".mp3")
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	habitlitarBotao()
@@ -122,7 +122,7 @@ func _on_Errado_Estado():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste1.mp3")
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load("res://Elementos/Sonoros/Vozes/EscolaFase1_RespostaErrada_" + str(PerguntasFase1[indicePergunta][21],PerguntasFase1[indicePergunta][22]) + ".mp3")
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	

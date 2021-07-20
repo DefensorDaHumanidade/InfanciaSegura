@@ -73,14 +73,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 20
 custom_constants/margin_top = 10
-custom_constants/margin_left = 20
+custom_constants/margin_left = 15
 custom_constants/margin_bottom = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Texto" parent="Margem/Elementos/Campo/Margem" instance=ExtResource( 3 )]
-margin_left = 20.0
+margin_left = 15.0
 margin_top = 10.0
 margin_right = 1502.0
 margin_bottom = 285.0

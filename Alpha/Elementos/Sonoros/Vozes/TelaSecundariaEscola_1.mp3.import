@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaSecundariaEscola_1.mp3-a9232c58b8dd0ade6352ab70bada0190.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaSecundariaEscola_1.mp3"
+dest_files=[ "res://.import/TelaSecundariaEscola_1.mp3-a9232c58b8dd0ade6352ab70bada0190.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

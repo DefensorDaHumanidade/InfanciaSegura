@@ -76,7 +76,9 @@ text = "BotaoFase_1"
 margin_top = 174.0
 margin_right = 459.0
 margin_bottom = 328.0
+ProximaCena = "res://Cenas/TelaEscolaFase2.tscn"
 TocarMusica = "res://Elementos/Sonoros/Musiscas/Escola.wav"
+TrocarCena = true
 
 [node name="Texto" parent="Fases/Fase2/ConteinerHorizontal" index="1"]
 margin_right = 482.0
@@ -88,7 +90,9 @@ text = "BotaoFase_2"
 margin_top = 348.0
 margin_right = 459.0
 margin_bottom = 502.0
+ProximaCena = "res://Cenas/TelaEscolaFase3.tscn"
 TocarMusica = "res://Elementos/Sonoros/Musiscas/Escola.wav"
+TrocarCena = true
 
 [node name="Texto" parent="Fases/Fase3/ConteinerHorizontal" index="1"]
 margin_right = 482.0

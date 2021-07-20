@@ -104,8 +104,18 @@ func _on_BotaoHorizontal_Comando():
 			Configuracoes.gerenciarMusicas()
 			if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 				print("Cena salva: ", ProximaCena)
-		else:
-			print("Cena nao encontrada")
+	else:
+		print("Cena nao encontrada")
+		if get_tree().get_current_scene().get_name() == "TelaCadastro":
+			get_tree().get_current_scene().get_node("Personagem").texture = load("res://Elementos/Visuais/Personagens/Menino/Menino-10.svg")
+			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").bbcode_text = tr("TelaCadastro_2")
+			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").percent_visible = 0
+			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").taxaExposicao = 0
+			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").set_process(true)
+			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz").stream = load(str("res://Elementos/Sonoros/Vozes/TelaCadastro_2.mp3"))
+			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz").play()
+			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/BotaoEsquerda").pressed = true
+			pass
 #	if name == "Escola":
 #		get_tree().change_scene("res://Cenas/TelaSecundaria.tscn")
 	

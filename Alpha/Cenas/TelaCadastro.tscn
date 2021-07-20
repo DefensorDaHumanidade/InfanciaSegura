@@ -31,7 +31,7 @@ __meta__ = {
 [node name="Fundo" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.686275, 0.854902, 1, 1 )
+color = Color( 0.760784, 0.972549, 1, 1 )
 
 [node name="Personagem" parent="." instance=ExtResource( 1 )]
 margin_top = -950.0

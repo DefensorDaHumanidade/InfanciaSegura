@@ -18,22 +18,34 @@ func _ready():
 #	set("custom_fonts/normal_font/settings/size", 160)
 	if get_tree().get_current_scene().get_name() == "TelaCadastro" and name != "Descricao":
 		bbcode_text = tr("TelaCadastro_1")
-		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste1.mp3")
+		$Voz.stream = load("res://Elementos/Sonoros/Vozes/TelaCadastro_1.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
 	if get_tree().get_current_scene().get_name() == "TelaPrincipal" and name != "Descricao":
-		bbcode_text = tr("TelaCadastro_1")
-		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste2.mp3")
+		bbcode_text = tr("TelaCadastro_3")
+		$Voz.stream = load("res://Elementos/Sonoros/Vozes/TelaCadastro_3.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
-	if get_tree().get_current_scene().get_name() == "TelaSecundaria" and name != "Descricao":
+	if get_tree().get_current_scene().get_name() == "TelaEscola" and name != "Descricao":
 		bbcode_text = tr("TelaSecundariaEscola_1")
-		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste3.mp3")
+		$Voz.stream = load("res://Elementos/Sonoros/Vozes/TelaSecundariaEscola_1.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
 	if get_tree().get_current_scene().get_name() == "TelaHospital" and name != "Descricao":
 		bbcode_text = tr("TelaHospital_1")
-		$Voz.stream = load("res://Elementos/Sonoros/Vozes/Teste3.mp3")
+		$Voz.stream = load("res://Elementos/Sonoros/Vozes/TelaHospital_1.mp3")
+		$Voz.play()
+		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
+		pass
+	if get_tree().get_current_scene().get_name() == "TelaDelegacia" and name != "Descricao":
+		bbcode_text = tr("TelaDelegacia_1")
+		$Voz.stream = load("res://Elementos/Sonoros/Vozes/TelaDelegacia_1.mp3")
+		$Voz.play()
+		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
+		pass
+	if get_tree().get_current_scene().get_name() == "TelaInternet" and name != "Descricao":
+		bbcode_text = tr("TelaInternet_1")
+		$Voz.stream = load("res://Elementos/Sonoros/Vozes/TelaInternet_1.mp3")
 		$Voz.play()
 		get_parent().get_parent().get_parent().get_node("BotaoEsquerda").pressed = true
 		pass

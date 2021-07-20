@@ -92,9 +92,9 @@ func errouResposta():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/" + PedidosFase2[indicePerguntar][0] + ".mp3"))
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
-#	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/InternetFase2_RespostaErrada_" + PedidosFase2[indicePerguntar][0][23], PedidosFase2[indicePerguntar][0][24] + ".mp3"))
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
+	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	$AudioErro.play()
 	$Camera/Animar.play("Tremer")
 	pass
@@ -104,9 +104,9 @@ func acertouResposta():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/" + PedidosFase2[indicePerguntar][0] + ".mp3"))
-#	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
-#	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/InternetFase2_RespostaCerta_" + PedidosFase2[indicePerguntar][0][23], PedidosFase2[indicePerguntar][0][24] + ".mp3"))
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
+	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	$AudioAcerto.play()
 	$Tela/Coluna/ListaBotoes/BotaoAceitar.modulate = Color(0.3, 0.3, 0.3, 1)
 	$Tela/Coluna/ListaBotoes/BotaoRecusar.modulate = Color(0.3, 0.3, 0.3, 1)

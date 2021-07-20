@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/EscolaFase3_RespostaCerta_02.mp3-dbaceef56b577a8d0772087d4025a108.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/EscolaFase3_RespostaCerta_02.mp3"
+dest_files=[ "res://.import/EscolaFase3_RespostaCerta_02.mp3-dbaceef56b577a8d0772087d4025a108.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
