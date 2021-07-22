@@ -4,12 +4,12 @@
 
 [resource]
 script = ExtResource( 1 )
-Cena = "res://Cenas/TelaInternet.tscn"
-Identificador = "alexandre"
+Cena = ""
+Identificador = ""
 Idioma = ""
-NomeMusica = "res://Elementos/Sonoros/Musiscas/Redes.wav"
-Musica = -40
-Voz = -40
-Audio = -10
-Texto = 41
+NomeMusica = ""
+Musica = -35
+Voz = -28
+Audio = 0
+Texto = 60
 EscolaFase1 = [  ]
