@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HospitalFase1_Parte11.mp3-0f2d5fab9a44c44519c887fb0d7eeb4a.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/HospitalFase1_Parte11.mp3"
+dest_files=[ "res://.import/HospitalFase1_Parte11.mp3-0f2d5fab9a44c44519c887fb0d7eeb4a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

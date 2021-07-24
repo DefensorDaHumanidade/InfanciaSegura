@@ -1,0 +1,1787 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Elementos/Visuais/HospitalFase1/MeninoFrente.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/ControleDeslizanteVertical.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Codigos/TelaHospitalFase1Generico.gd" type="Script" id=4]
+[ext_resource path="res://Elementos/Visuais/Icones/Rotulo.svg" type="Texture" id=5]
+[ext_resource path="res://Cenas/FonteComicSans.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Cenas/PecaMural.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Elementos/Visuais/HospitalFase1/MeninoCostas.png" type="Texture" id=10]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 184, 24 )
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=4]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=5]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=6]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=7]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=8]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=9]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=10]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=11]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=12]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=13]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=14]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=15]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=16]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Gradient" id=17]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
+
+[sub_resource type="Animation" id=18]
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 22, 0 ), Vector2( -19, 0 ), Vector2( 17, 0 ), Vector2( -23, 0 ), Vector2( 21, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="TelaHospitalFase1Generico" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoTermer" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1000.0
+margin_top = -540.0
+margin_right = 1000.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 1000, 540 )
+mouse_filter = 2
+color = Color( 0.572549, 0.941176, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.572549, 0.941176, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Centro" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -40.0
+margin_right = 20.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cena" type="Node2D" parent="Centro"]
+
+[node name="CorpoHumano" type="Sprite" parent="Centro/Cena"]
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 1 )
+
+[node name="Parte1" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, 151 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte1"]
+position = Vector2( 176.617, 112 )
+scale = Vector2( 0.840426, 1 )
+points = PoolVector2Array( 64, -120, 232, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte1" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteMao"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte1"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte1/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte1"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte2" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, 988 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte2"]
+position = Vector2( 173.306, 112 )
+scale = Vector2( 0.833191, 1 )
+points = PoolVector2Array( 64, -120, 391.702, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 3 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte2" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PartePe"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte2"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte2/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte2"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte3" type="Sprite" parent="Centro/Cena"]
+position = Vector2( 570, 118 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte3"]
+position = Vector2( -419.869, 112 )
+scale = Vector2( 0.834171, 1 )
+points = PoolVector2Array( 232, -120, -146, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 4 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte3" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PartePenis"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte3"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte3/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte3"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte4" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, -366 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte4"]
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 277.307, -120, 348, -242 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 5 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte4" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteOmbro"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte4"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte4/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte4"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte5" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -676, -904 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte5"]
+position = Vector2( 107.375, 112 )
+scale = Vector2( 1.9375, 1 )
+points = PoolVector2Array( 64, -120, 301.742, -120, 301.742, -50 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 6 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte5" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteTesta"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte5"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte5/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte5"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte6" type="Sprite" parent="Centro/Cena"]
+position = Vector2( 570, -625 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte6"]
+position = Vector2( -429.598, 112 )
+scale = Vector2( 0.874372, 1 )
+points = PoolVector2Array( 232, -120, -146, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 7 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte6" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteBoca"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte6"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte6/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte6"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte7" type="Sprite" parent="Centro/Cena"]
+position = Vector2( 570, -858 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte7"]
+position = Vector2( -422.883, 112 )
+scale = Vector2( 0.846626, 1 )
+points = PoolVector2Array( 232, -120, 94.9552, -120, -74.5508, 2 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 8 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte7" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteOlho"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte7"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte7/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte7"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte8" type="Sprite" parent="Centro/Cena"]
+position = Vector2( 570, -302 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte8"]
+position = Vector2( -393.19, 112 )
+scale = Vector2( 0.723926, 1 )
+points = PoolVector2Array( 232, -120, -74, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 9 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte8" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteMamilo"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte8"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte8/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte8"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte9" type="Sprite" parent="Centro/Cena"]
+position = Vector2( 570, -44 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte9"]
+position = Vector2( -415.892, 112 )
+scale = Vector2( 0.817734, 1 )
+points = PoolVector2Array( 232, -120, -154, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 10 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte9" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteUmbigo"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte9"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte9/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte9"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte10" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, 373 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte10"]
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 412, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 11 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte10" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteCoxa"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte10"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte10/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte10"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte11" type="Sprite" parent="Centro/Cena"]
+position = Vector2( 570, 494 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte11"]
+position = Vector2( -370.466, 112 )
+scale = Vector2( 0.613497, 1 )
+points = PoolVector2Array( 232, -120, -74, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 12 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte11"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte11" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteJoelho"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte11"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte11/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte11"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte12" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, -12 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte12"]
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 287.169, -120, 516, -228 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 13 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte12"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte12" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteAbdomen"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte12"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte12/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte12"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte13" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, -185 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte13"]
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 277.429, -120, 524, -295 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 14 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte13"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte13" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteTorax"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte13"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte13/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte13"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte14" type="Sprite" parent="Centro/Cena"]
+position = Vector2( 570, -463 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte14"]
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 230, -120, -98, -120, -98, -225 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 15 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte14"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte14" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteQueixo"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte14"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte14/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte14"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte15" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, -544 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte15"]
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 267.793, -120, 508, -256 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 16 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte15"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte15" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteNariz"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte15"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte15/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte15"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte16" type="Sprite" parent="Centro/Cena"]
+position = Vector2( -680, -725 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Cena/Parte16"]
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 268, -120, 372, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 17 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Cena/Parte16"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Cena/Parte16" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteOrelha"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Cena/Parte16"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Cena/Parte16/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Cena/Parte16"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tras" type="Node2D" parent="Centro"]
+visible = false
+
+[node name="CorpoHumano" type="Sprite" parent="Centro/Tras"]
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 10 )
+
+[node name="Parte17" type="Sprite" parent="Centro/Tras"]
+position = Vector2( -680, 993 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte17"]
+position = Vector2( 174.397, 112 )
+scale = Vector2( 0.812991, 1 )
+points = PoolVector2Array( 64, -120, 439.702, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 3 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte17"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte17" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteCalcanhar"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte17"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte17/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte17"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte18" type="Sprite" parent="Centro/Tras"]
+position = Vector2( 570, 351 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte18"]
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 232, -120, -115, -120, -115, -335 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 4 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte18"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte18" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteAnus"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte18"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte18/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte18"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte19" type="Sprite" parent="Centro/Tras"]
+position = Vector2( 570, -853 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte19"]
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 232, -120, -106, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 7 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte19"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte19" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteCabelo"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte19"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte19/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte19"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte20" type="Sprite" parent="Centro/Tras"]
+position = Vector2( 570, -128 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte20"]
+position = Vector2( -494.147, 112 )
+scale = Vector2( 1.1411, 1 )
+points = PoolVector2Array( 232, -120, -74, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 9 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte20"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte20" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteCostas"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte20"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte20/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte20"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte21" type="Sprite" parent="Centro/Tras"]
+position = Vector2( 570, 123 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte21"]
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 232, -120, -58, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 10 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte21"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte21" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteNadega"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte21"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte21/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte21"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte22" type="Sprite" parent="Centro/Tras"]
+position = Vector2( -680, 468 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Poligono" type="Polygon2D" parent="Centro/Tras/Parte22"]
+position = Vector2( 41, 274 )
+scale = Vector2( 47.9999, 46.5 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 3.83334, -6.15054, 3.83334, -6.15054, 11.0625, -11.3118, 10.3959, 4 )
+vertex_colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.392157, 0, 0, 0, 0.392157 )
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte22"]
+visible = false
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 412, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 11 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte22"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte22" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PartePerna"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte22"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte22/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte22"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte23" type="Sprite" parent="Centro/Tras"]
+position = Vector2( 570, 725 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte23"]
+position = Vector2( -412.259, 112 )
+scale = Vector2( 0.802721, 1 )
+points = PoolVector2Array( 232, -120, -42, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 12 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte23"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte23" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PartePanturrilha"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte23"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte23/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte23"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte24" type="Sprite" parent="Centro/Tras"]
+position = Vector2( -680, 4 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte24"]
+position = Vector2( 150.733, 112 )
+scale = Vector2( 1.31977, 1 )
+points = PoolVector2Array( 64, -120, 388, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 13 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte24"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte24" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteCoccix"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte24"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte24/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte24"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte25" type="Sprite" parent="Centro/Tras"]
+position = Vector2( -680, -208 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte25"]
+visible = false
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 356, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 14 )
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte25"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte25" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteBraco"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte25"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte25/Area"]
+shape = SubResource( 2 )
+
+[node name="Poligono" type="Polygon2D" parent="Centro/Tras/Parte25"]
+position = Vector2( 86.2436, 274 )
+scale = Vector2( 36.9797, 46.5 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 3.83334, -6.15054, 3.83334, -6.15054, 10.3234, -9.50538, 7.72739, -0.731182 )
+vertex_colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.392157, 0, 0, 0, 0.392157 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte25"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte26" type="Sprite" parent="Centro/Tras"]
+position = Vector2( 570, -302 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte26"]
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 230, -120, -10, -120, -10, -202 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 15 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte26"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte26" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteAxila"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte26"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte26/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte26"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte27" type="Sprite" parent="Centro/Tras"]
+position = Vector2( -680, -389 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte27"]
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 428, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 16 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte27"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte27" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteOmoplata"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte27"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte27/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte27"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte28" type="Sprite" parent="Centro/Tras"]
+position = Vector2( -680, -560 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Linha" type="Line2D" parent="Centro/Tras/Parte28"]
+position = Vector2( 170.059, 112 )
+scale = Vector2( 0.961864, 1 )
+points = PoolVector2Array( 64, -120, 516, -120 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 17 )
+joint_mode = 2
+end_cap_mode = 2
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte28"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 8.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Tras/Parte28" instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.5
+margin_top = -70.5
+margin_right = -229.5
+margin_bottom = -70.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParteNuca"
+align = 1
+valign = 1
+
+[node name="Area" type="Area2D" parent="Centro/Tras/Parte28"]
+
+[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte28/Area"]
+shape = SubResource( 2 )
+
+[node name="Auxiliar" type="Label" parent="Centro/Tras/Parte28"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+mouse_filter = 2
+
+[node name="Fundo" parent="CaixaDialogo" index="0"]
+mouse_filter = 2
+
+[node name="Margem" parent="CaixaDialogo" index="1"]
+mouse_filter = 2
+
+[node name="Elementos" parent="CaixaDialogo/Margem" index="0"]
+mouse_filter = 2
+
+[node name="ConteinerVertical" parent="CaixaDialogo/Margem/Elementos/BotaoEsquerda" index="0"]
+mouse_filter = 2
+
+[node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoEsquerda/ConteinerVertical" index="0"]
+mouse_filter = 2
+
+[node name="Margem" parent="CaixaDialogo/Margem/Elementos/Campo" index="0"]
+mouse_filter = 2
+
+[node name="PecaMural" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0" instance=ExtResource( 9 )]
+position = Vector2( 740, 150 )
+
+[node name="Contorno" parent="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque" index="0"]
+mouse_filter = 1
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="1"]
+mouse_filter = 2
+text = ""
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+toggle_mode = true
+
+[node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
+margin_right = 291.0
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
+margin_right = 291.0
+text = "BotaoTras"
+
+[node name="AudioAcerto" parent="." instance=ExtResource( 7 )]
+
+[node name="AudioErro" parent="." instance=ExtResource( 8 )]
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Animar" type="AnimationPlayer" parent="Camera"]
+anims/Tremer = SubResource( 18 )
+
+[node name="ControleDeslizanteVertical" parent="." instance=ExtResource( 3 )]
+self_modulate = Color( 0.27451, 0.788235, 0.988235, 1 )
+anchor_left = 0.9
+anchor_top = 0.16
+anchor_right = 1.0
+anchor_bottom = 0.645
+margin_right = 0.0
+max_value = 1500.0
+step = 10.0
+
+[connection signal="gui_input" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Contorno" to="." method="_on_Contorno_arrastarParte"]
+[connection signal="area_entered" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Area" to="." method="_on_Area_entrou"]
+[connection signal="area_exited" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Area" to="." method="_on_Area_saiu"]
+[connection signal="value_changed" from="ControleDeslizanteVertical" to="." method="_on_ControleDeslizanteVertical_trocar"]
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]
