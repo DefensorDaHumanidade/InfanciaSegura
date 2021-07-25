@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Cenas/Corda.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+
+[node name="TelaDelegaciaFase1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 0.607843, 0.607843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
+text = "Texto Apresentacao."
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+ProximaCena = "res://Cenas/TelaPrincipal.tscn"
+TrocarCena = true
+
+[node name="Corda" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 104 )
+ropeLength = 90.0
+constrain = 10.0
+endPin = false
+
+[node name="Corda2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 408, 104 )
+ropeLength = 90.0
+constrain = 10.0
+endPin = false
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]
