@@ -15,19 +15,21 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Area_ParteEntrou(area):
-#	print(area.get_parent().get_node("Texto").text)
-#	print(get_node("/root/TelaHospitalFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto").text)
-	if area.get_parent().get_node("Texto").text == get_node("/root/TelaHospitalFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto").text:
-		get_node("/root/TelaHospitalFase1/").estado = true
-	else:
-		get_node("/root/TelaHospitalFase1/").estado = false
-#	if area.get_parent().get_node("Texto").text == 
-	
-	pass # Replace with function body.
-
-
-func _on_Area_ParteSaiu(area):
-	get_node("/root/TelaHospitalFase1/").estado = null
-	pass # Replace with function body.
+#
+#func _on_Area_ParteEntrou(area):
+##	print(area.get_parent().get_node("Texto").text)
+##	print(get_node("/root/TelaHospitalFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto").text)
+#	if area.get_parent().get_node("Texto").text == get_node("/root/TelaHospitalFase1Generico/CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto").text:
+#		get_node("/root/TelaHospitalFase1Generico/").estado = true
+#		get_node("/root/TelaHospitalFase1Generico/").nomePeca = area.get_parent().get_node("Texto").text
+#	else:
+#		get_node("/root/TelaHospitalFase1Generico/").estado = false
+#		get_node("/root/TelaHospitalFase1Generico/").nomePeca = area.get_parent().get_node("Texto").text
+##	if area.get_parent().get_node("Texto").text == 
+#
+#	pass # Replace with function body.
+#
+#
+#func _on_Area_ParteSaiu(area):
+#	get_node("/root/TelaHospitalFase1Generico/").estado = null
+#	pass # Replace with function body.

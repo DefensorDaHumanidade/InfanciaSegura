@@ -30,6 +30,7 @@ func atualizandoIcones():
 func _on_BotaoQuadrado_Selecionado():
 	print("Botao ", name, " pressionado!")
 	$Som.play()
+#	if not self.toggle_mode:
 	$Icone.modulate = Color(0.5, 0.5, 0.5, 1)
 	$Icone.rect_position.y = $Icone.rect_position.y + 15
 	pass # Replace with function body.
@@ -37,6 +38,7 @@ func _on_BotaoQuadrado_Selecionado():
 
 func _on_BotaoQuadrado_Solto():
 	print("Botao ", name, " solto!")
+#	if not self.toggle_mode:
 	$Icone.modulate = Color(1, 1, 1, 1)
 	$Icone.rect_position.y = $Icone.rect_position.y - 15
 	pass # Replace with function body.
@@ -56,9 +58,13 @@ func _on_BotaoQuadrado_Modo(estado_botao):
 		print("Tela de Ajustes: ", estado_botao)
 		if estado_botao:
 			get_node("/root/").add_child(load("res://Cenas/TelaAjustes.tscn").instance())
+			$Icone.modulate = Color(0.5, 0.5, 0.5, 1)
+			$Icone.rect_position.y = $Icone.rect_position.y + 15
 	#		get_parent().get_parent().get_parent().add_child(instacedScene)
 		else:
 			if get_node("/root/TelaAjustes"): #ESSA LINHA ESTA ERRADA E NAO CORRIGE O PROBLEMA 
 				get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
 				get_node("/root/TelaAjustes").queue_free()
+				$Icone.modulate = Color(1, 1, 1, 1)
+				$Icone.rect_position.y = $Icone.rect_position.y - 15
 	pass # Replace with function body.

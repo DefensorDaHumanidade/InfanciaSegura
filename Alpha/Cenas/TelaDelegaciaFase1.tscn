@@ -1,12 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Cenas/Corda.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Icone100.png" type="Texture" id=3]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/IconeMulheres.png" type="Texture" id=4]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/IconeSamu.png" type="Texture" id=5]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/IconeBombeiros.png" type="Texture" id=6]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/IconeSUS.png" type="Texture" id=7]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/IconeHumanos.png" type="Texture" id=8]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/IconeMilitar.png" type="Texture" id=9]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque192.png" type="Texture" id=10]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque190.png" type="Texture" id=11]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque100.png" type="Texture" id=12]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque180.png" type="Texture" id=13]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque193.png" type="Texture" id=14]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque136.png" type="Texture" id=15]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/APP.png" type="Texture" id=16]
+[ext_resource path="res://Codigos/TelaDelegaciaFase1.gd" type="Script" id=17]
+[ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 72, 64 )
 
 [node name="TelaDelegaciaFase1" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+script = ExtResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,23 +40,304 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="FundoTextura" type="Sprite" parent="."]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+self_modulate = Color( 1, 0.607843, 0.607843, 1 )
+position = Vector2( -1024, -1024 )
+texture = ExtResource( 18 )
+centered = false
+
 [node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
 
+[node name="Campo" parent="CaixaDialogo/Margem/Elementos" index="1"]
+margin_right = 1880.0
+
 [node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
-text = "Texto Apresentacao."
+margin_right = 1681.0
+bbcode_text = "DelegaciaFase1_Inicio"
+text = "DelegaciaFase1_Inicio"
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+visible = false
 ProximaCena = "res://Cenas/TelaPrincipal.tscn"
 TrocarCena = true
 
-[node name="Corda" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96, 104 )
+[node name="ColunaNumeros" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -133.0
+margin_bottom = 133.0
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = -10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo1" type="TextureRect" parent="ColunaNumeros"]
+margin_right = 264.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo1"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo1/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo2" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 254.0
+margin_right = 518.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo2"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo2/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo3" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 508.0
+margin_right = 772.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo3"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo3/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo4" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 762.0
+margin_right = 1026.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo4"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo4/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo5" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 1016.0
+margin_right = 1280.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo5"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo5/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo6" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 1270.0
+margin_right = 1534.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo6"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo6/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo7" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 1524.0
+margin_right = 1788.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo7"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo7/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="ColunaLogos" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 266.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = -10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo1" type="TextureRect" parent="ColunaLogos"]
+margin_right = 264.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo1" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.552941, 0.0745098, 1 )
+position = Vector2( 140, 230 )
+z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false
 
-[node name="Corda2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 408, 104 )
+[node name="Logo2" type="TextureRect" parent="ColunaLogos"]
+margin_left = 254.0
+margin_right = 518.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo2" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.215686, 0.215686, 1 )
+position = Vector2( 140, 230 )
+z_index = 1
+ropeLength = 90.0
+constrain = 10.0
+endPin = false
+
+[node name="Logo3" type="TextureRect" parent="ColunaLogos"]
+margin_left = 508.0
+margin_right = 772.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo3" instance=ExtResource( 1 )]
+modulate = Color( 0.129412, 0.666667, 0, 1 )
+position = Vector2( 140, 230 )
+z_index = 1
+ropeLength = 90.0
+constrain = 10.0
+endPin = false
+
+[node name="Logo4" type="TextureRect" parent="ColunaLogos"]
+margin_left = 762.0
+margin_right = 1026.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo4" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.929412, 0.168627, 1 )
+position = Vector2( 140, 230 )
+z_index = 1
+ropeLength = 90.0
+constrain = 10.0
+endPin = false
+
+[node name="Logo5" type="TextureRect" parent="ColunaLogos"]
+margin_left = 1016.0
+margin_right = 1280.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo5" instance=ExtResource( 1 )]
+modulate = Color( 0.917647, 0.180392, 1, 1 )
+position = Vector2( 140, 230 )
+z_index = 1
+ropeLength = 90.0
+constrain = 10.0
+endPin = false
+
+[node name="Logo6" type="TextureRect" parent="ColunaLogos"]
+margin_left = 1270.0
+margin_right = 1534.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo6" instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0, 0.929412, 1 )
+position = Vector2( 140, 230 )
+z_index = 1
+ropeLength = 90.0
+constrain = 10.0
+endPin = false
+
+[node name="Logo7" type="TextureRect" parent="ColunaLogos"]
+margin_left = 1524.0
+margin_right = 1788.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo7" instance=ExtResource( 1 )]
+position = Vector2( 140, 230 )
+z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false

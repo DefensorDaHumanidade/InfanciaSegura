@@ -7,6 +7,8 @@ extends CanvasLayer
 
 export (Resource) var salvar
 
+var animacaoPrincipal = 0.0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -67,3 +69,11 @@ func gerenciarMusicas():
 			$Musica.stream = load(salvar.NomeMusica)
 			$Musica.play()
 	pass
+
+
+func _on_BancoDados_requisicao(result, response_code, headers, body):
+	if result == HTTPRequest.RESULT_SUCCESS:
+		print(body.get_string_from_utf8())
+	else:
+		print("Não foi possível se comunicar com o banco de dados!")
+	pass # Replace with function body.

@@ -28,3 +28,7 @@ toggle_mode = true
 [node name="Musica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 bus = "CanalMusica"
+
+[node name="BancoDados" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="BancoDados" to="." method="_on_BancoDados_requisicao"]

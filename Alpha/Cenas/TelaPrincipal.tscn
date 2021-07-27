@@ -1,10 +1,29 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/FonteJokerman.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/BotaoHorizontal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Elementos/Visuais/Personagens/Menino/Menino-8.svg" type="Texture" id=5]
+[ext_resource path="res://Elementos/Visuais/Fundo/Infantil.jpg" type="Texture" id=6]
+[ext_resource path="res://Codigos/Animar.gd" type="Script" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fundo"
+length = 30.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("FundoTextura:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 30 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1110, -840 ) ]
+}
 
 [node name="TelaPrincipal" type="Control"]
 anchor_right = 1.0
@@ -20,6 +39,17 @@ color = Color( 0.760784, 0.972549, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="FundoTextura" type="Sprite" parent="."]
+self_modulate = Color( 0.760784, 0.972549, 1, 1 )
+position = Vector2( -1110, -840 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Animar" type="AnimationPlayer" parent="."]
+autoplay = "Fundo"
+anims/Fundo = SubResource( 1 )
+script = ExtResource( 7 )
 
 [node name="Personagem" parent="." instance=ExtResource( 2 )]
 margin_top = -1128.0
@@ -128,6 +158,9 @@ TrocarCena = true
 [node name="Texto" parent="Conteiner/Vertical/LinhaInferior/Internet/ConteinerHorizontal" index="1"]
 margin_right = 524.0
 text = "BotaoInternet"
+
+[connection signal="animation_started" from="Animar" to="Animar" method="_on_Animar_animation_comecou"]
+[connection signal="tree_exiting" from="Animar" to="Animar" method="_on_Animar_tree_saindo"]
 
 [editable path="CaixaDialogo"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]

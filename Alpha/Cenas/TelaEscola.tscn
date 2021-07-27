@@ -1,10 +1,28 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/FonteCurlzMT.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/BotaoHorizontal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Elementos/Visuais/Personagens/Professora/Professora-2.svg" type="Texture" id=5]
+[ext_resource path="res://Elementos/Visuais/Fundo/Escola.jpg" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fundo"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("FundoTextura:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -888, -888 ) ]
+}
 
 [node name="TelaEscola" type="Control"]
 anchor_right = 1.0
@@ -17,6 +35,21 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 0.984314, 0.607843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoTextura" type="TextureRect" parent="."]
+self_modulate = Color( 1, 0.984314, 0.607843, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -890.0
+margin_top = -890.0
+margin_right = -890.0
+margin_bottom = -890.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,6 +130,10 @@ TrocarCena = true
 [node name="Texto" parent="Fases/Fase3/ConteinerHorizontal" index="1"]
 margin_right = 482.0
 text = "BotaoFase_3"
+
+[node name="Animar" type="AnimationPlayer" parent="."]
+autoplay = "Fundo"
+anims/Fundo = SubResource( 1 )
 
 [editable path="CaixaDialogo"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]

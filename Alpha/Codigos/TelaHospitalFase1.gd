@@ -5,19 +5,41 @@ extends Control
 # var a = 2
 # var b = "text"
 
-var Partes			= [	"Parte1", 
-						"Parte2",
-						"Parte3",
-						"Parte4",
-						"Parte5",
-						"Parte6",
-						"Parte7",
-						"Parte8",
-						"Parte9",
-						"Parte10", ]
+var Partes			= [	"Cena/Parte1", 
+						"Cena/Parte2",
+						"Cena/Parte3",
+						"Cena/Parte4",
+						"Cena/Parte5",
+						"Cena/Parte6",
+						"Cena/Parte7",
+						"Cena/Parte8",
+						"Cena/Parte9",
+						"Cena/Parte10",
+						"Cena/Parte11",
+						"Cena/Parte12",
+						"Cena/Parte13",
+						"Cena/Parte14",
+						"Cena/Parte15",
+						"Cena/Parte16",
+						"Tras/Parte1",
+						"Tras/Parte2",
+						"Tras/Parte3",
+						"Tras/Parte4",
+						"Tras/Parte5",
+						"Tras/Parte6",
+						"Tras/Parte7",
+						"Tras/Parte8",
+						"Tras/Parte9",
+						"Tras/Parte10",
+						"Tras/Parte11",
+						"Tras/Parte12" ]
 
 var arrastar = false
 var estado = null
+
+var nomePeca
+
+var tempo
 
 
 export (int) var indicePartes
@@ -30,7 +52,7 @@ func _ready():
 	Partes.shuffle()
 	print(Partes)
 	for indice in range(0, Partes.size()/2):
-		get_node("Centro/Cena").get_node(Partes[indice]).get_node("Texto").visible = false
+		get_node("Centro").get_node(Partes[indice]).get_node("Texto").visible = false
 #	$Centro/Cena/Parte1/Texto.visible = false
 	atualizarParte()
 #	$CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/Icones/Frente.svg")
@@ -41,7 +63,7 @@ func atualizarParte():
 #	$CentroNascimento/PecaMural.position = $CentroNascimento.rect_pivot_offset
 #	print($PecaMural.position)
 #	$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text = str(Partes[indicePartes])
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text = get_node("Centro/Cena").get_node(Partes[indicePartes]).get_node("Texto").text
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text = get_node("Centro").get_node(Partes[indicePartes]).get_node("Texto").text
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.scale = Vector2(1, 1)
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.position = Vector2(740, 150)
 	
@@ -76,8 +98,9 @@ func _on_Area_arrastarParte(viewport, event, shape_idx):
 			else:
 				if estado:
 					$AudioAcerto.play()
-					get_node("Centro/Cena").get_node(Partes[indicePartes]).get_node("Texto").visible = true
+					get_node("Centro").get_node(Partes[indicePartes]).get_node("Texto").visible = true
 					indicePartes += 1
+#					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(1)+"&veredito="+"1"+"&TI="+str(tempo)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+"colocado no"+nomePeca)
 					if indicePartes < Partes.size()/2:
 						atualizarParte()
 					else:
@@ -93,8 +116,11 @@ func _on_Area_arrastarParte(viewport, event, shape_idx):
 				else:
 					$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.scale = Vector2(1, 1)
 					$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.position =Vector2(740, 150)
+					
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
+#					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(1)+"&veredito="+"0"+"&TI="+str(tempo)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+"colocado no"+nomePeca)
+
 		else:
 			arrastar = true
 			$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Audio.play()

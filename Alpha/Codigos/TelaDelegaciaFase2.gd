@@ -48,17 +48,31 @@ func _ready():
 			peca.frame = auxilicar
 			peca.get_node("Numeracao").text = str(auxilicar)
 #			peca.position = Vector2(100,100)*auxilicar
-			peca.position = Vector2(aleatorio.randi_range(150, 1900), aleatorio.randi_range(10, 180))
+			peca.position = Vector2(aleatorio.randi_range(150, 1800), aleatorio.randi_range(10, 140))
 			get_node("ParteInferior").add_child(peca)
 			auxilicar += 1
 	$ParteInferior/QuebraCabecaPeca.queue_free()
+
+
 	
+#	for i  in range(0,2):
+#		for j in range(0,2):
+#			var peca = $ParteInferior/QuebraCabecaFragmento.duplicate()
+#			peca.get_node("Fragamento").frame = auxilicar
+#			peca.get_node("YSort").z_index = auxilicar
+#			peca.get_node("Numeracao").text = str(auxilicar)
+#			get_node("ParteInferior").add_child(peca)
+#			auxilicar += 1
+#
+	
+	verificaSobreposicao()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+#	print("oi")
+	pass
 
 
 func verificaSobreposicao():

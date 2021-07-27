@@ -20,6 +20,8 @@ var moeda = false
 
 export (int) var indicePergunta 
 
+var tempo
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,6 +33,8 @@ func _ready():
 	atualizarPergunta()
 	print("Ordem das perguntas: ", PerguntasFase1)
 	
+	
+	
 	pass # Replace with function body.
 
 
@@ -41,6 +45,10 @@ func _ready():
 
 
 func atualizarPergunta():
+	$CaixaDialogo/MaoAuxilicar.visible = false
+	$Camera/Animar.stop()
+	tempo = OS.get_unix_time()
+	print("Tempooo: ", tempo)
 	$Transicao/Animar.play("Inicio")
 	print("Pergunta atual [", indicePergunta, "]: ", PerguntasFase1[indicePergunta][21],PerguntasFase1[indicePergunta][22])
 	$Certo.texture_normal = load("res://Elementos/Visuais/EscolaFase1/Pergunta_" + str(PerguntasFase1[indicePergunta][21],PerguntasFase1[indicePergunta][22]) + "-Certo.png")
@@ -100,6 +108,8 @@ func _on_Certo_Estado():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	habitlitarBotao()
+	
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PerguntasFase1[indicePergunta][21])+int(PerguntasFase1[indicePergunta][22])+28)+"&veredito="+"1"+"&TI="+str(tempo)+"&TF="+"0"+"&resposta="+"imagem certa")
 #	get_tree().reload_current_scene()
 #	if estado_botao:
 #		$Certo/Contorno.editor_only = false
@@ -108,6 +118,7 @@ func _on_Certo_Estado():
 #		$Errado.pressed = false
 #	else: 
 #		$Certo/Contorno.editor_only = true
+	$Camera/Animar.play("Auxiliar")
 	pass # Replace with function body.
 
 
@@ -126,6 +137,8 @@ func _on_Errado_Estado():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PerguntasFase1[indicePergunta][21])+int(PerguntasFase1[indicePergunta][22])+28)+"&veredito="+"0"+"&TI="+str(tempo)+"&TF="+"0"+"&resposta="+"imagem errada")
+
 #	if estado_botao:
 #		$Errado/Contorno.editor_only = false
 #		$Certo/Contorno.editor_only = true

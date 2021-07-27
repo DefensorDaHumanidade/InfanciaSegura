@@ -9,6 +9,7 @@ export (String) var Cena
 export (String) var Identificador
 export (String) var Idioma
 export (String) var NomeMusica
+export (String) var Genero
 #export (int, 0, 20) var Musica
 #export (int, 0, 20) var Voz
 #export (int, 0, 20) var Audio

@@ -9,7 +9,7 @@
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Cenas/PecaMural.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Elementos/Visuais/HospitalFase1/MeninoCostas.jpg" type="Texture" id=10]
+[ext_resource path="res://Elementos/Visuais/HospitalFase1/MeninoCostas.png" type="Texture" id=10]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.392157 )
@@ -128,7 +128,7 @@ __meta__ = {
 [node name="Cena" type="Node2D" parent="Centro"]
 
 [node name="CorpoHumano" type="Sprite" parent="Centro/Cena"]
-scale = Vector2( 2.4, 2.4 )
+scale = Vector2( 1.4, 1.4 )
 texture = ExtResource( 1 )
 
 [node name="Parte1" type="Sprite" parent="Centro/Cena"]
@@ -873,22 +873,21 @@ shape = SubResource( 2 )
 visible = false
 
 [node name="CorpoHumano" type="Sprite" parent="Centro/Tras"]
-scale = Vector2( 2.4, 2.4 )
+scale = Vector2( 1.4, 1.4 )
 texture = ExtResource( 10 )
 
 [node name="Parte1" type="Sprite" parent="Centro/Tras"]
-visible = false
-position = Vector2( -680, 312 )
+position = Vector2( -680, 968 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte1"]
-position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 232, -120 )
+position = Vector2( 164.298, 112 )
+points = PoolVector2Array( 64, -120, 439.702, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 1 )
+gradient = SubResource( 3 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte1"]
@@ -914,7 +913,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteMao"
+text = "ParteCalcanhar"
 align = 1
 valign = 1
 
@@ -924,17 +923,17 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte2" type="Sprite" parent="Centro/Tras"]
-position = Vector2( -680, 968 )
+position = Vector2( 570, 351 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte2"]
-position = Vector2( 164.298, 112 )
-points = PoolVector2Array( 64, -120, 439.702, -120 )
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 232, -120, -115, -120, -115, -335 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 3 )
+gradient = SubResource( 4 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte2"]
@@ -945,7 +944,6 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
-border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -960,7 +958,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteCalcanhar"
+text = "ParteAnus"
 align = 1
 valign = 1
 
@@ -970,7 +968,7 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte3" type="Sprite" parent="Centro/Tras"]
-position = Vector2( 570, 351 )
+position = Vector2( 570, -480 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -978,9 +976,9 @@ __meta__ = {
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte3"]
 position = Vector2( -460, 112 )
-points = PoolVector2Array( 232, -120, -115, -120, -115, -335 )
+points = PoolVector2Array( 232, -120, -106, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 4 )
+gradient = SubResource( 7 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte3"]
@@ -991,6 +989,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -1005,7 +1004,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteAnus"
+text = "ParteDorso"
 align = 1
 valign = 1
 
@@ -1015,18 +1014,17 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte4" type="Sprite" parent="Centro/Tras"]
-visible = false
-position = Vector2( -680, -280 )
+position = Vector2( 570, -128 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte4"]
-position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 300, -120 )
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 232, -120, -74, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 5 )
+gradient = SubResource( 9 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte4"]
@@ -1052,7 +1050,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteOmbro"
+text = "ParteCostas"
 align = 1
 valign = 1
 
@@ -1062,18 +1060,17 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte5" type="Sprite" parent="Centro/Tras"]
-visible = false
-position = Vector2( -680, -910 )
+position = Vector2( 570, 123 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte5"]
-position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 300, -120 )
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 232, -120, -58, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 6 )
+gradient = SubResource( 10 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte5"]
@@ -1084,7 +1081,6 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
-border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -1099,7 +1095,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteCabeca"
+text = "ParteNadega"
 align = 1
 valign = 1
 
@@ -1109,17 +1105,26 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte6" type="Sprite" parent="Centro/Tras"]
-position = Vector2( 570, -480 )
+position = Vector2( -680, 468 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Poligono" type="Polygon2D" parent="Centro/Tras/Parte6"]
+position = Vector2( 41, 274 )
+scale = Vector2( 47.9999, 46.5 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 3.83334, -6.15054, 3.83334, -6.15054, 12, -12, 12, 4 )
+vertex_colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.392157, 0, 0, 0, 0.392157 )
+
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte6"]
-position = Vector2( -460, 112 )
-points = PoolVector2Array( 232, -120, -106, -120 )
+visible = false
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 412, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 7 )
+gradient = SubResource( 11 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte6"]
@@ -1145,7 +1150,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteDorso"
+text = "PartePerna"
 align = 1
 valign = 1
 
@@ -1155,8 +1160,7 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte7" type="Sprite" parent="Centro/Tras"]
-visible = false
-position = Vector2( 570, -660 )
+position = Vector2( 570, 616 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -1164,9 +1168,9 @@ __meta__ = {
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte7"]
 position = Vector2( -460, 112 )
-points = PoolVector2Array( 232, -120, -74, -120 )
+points = PoolVector2Array( 232, -120, -42, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 8 )
+gradient = SubResource( 12 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte7"]
@@ -1192,7 +1196,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteOlho"
+text = "PartePanturrilha"
 align = 1
 valign = 1
 
@@ -1202,17 +1206,18 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte8" type="Sprite" parent="Centro/Tras"]
-position = Vector2( 570, -128 )
+position = Vector2( -680, 143 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte8"]
-position = Vector2( -460, 112 )
-points = PoolVector2Array( 232, -120, -74, -120 )
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 388, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 9 )
+gradient = SubResource( 13 )
+joint_mode = 2
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte8"]
@@ -1238,7 +1243,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteCostas"
+text = "ParteQuadril"
 align = 1
 valign = 1
 
@@ -1248,17 +1253,18 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte9" type="Sprite" parent="Centro/Tras"]
-position = Vector2( 570, 123 )
+position = Vector2( -680, -208 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte9"]
-position = Vector2( -460, 112 )
-points = PoolVector2Array( 232, -120, -58, -120 )
+visible = false
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 356, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 10 )
+gradient = SubResource( 14 )
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte9"]
@@ -1269,6 +1275,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -1283,7 +1290,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteNadega"
+text = "ParteBraco"
 align = 1
 valign = 1
 
@@ -1292,24 +1299,27 @@ valign = 1
 [node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte9/Area"]
 shape = SubResource( 2 )
 
-[node name="Parte10" type="Sprite" parent="Centro/Tras"]
-position = Vector2( -680, 468 )
-texture = ExtResource( 5 )
-
-[node name="Poligono" type="Polygon2D" parent="Centro/Tras/Parte10"]
-position = Vector2( 41, 274 )
-scale = Vector2( 47.9999, 46.5 )
+[node name="Poligono" type="Polygon2D" parent="Centro/Tras/Parte9"]
+position = Vector2( 86.2436, 274 )
+scale = Vector2( 36.9797, 46.5 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
-polygon = PoolVector2Array( 3.83334, -6.15054, 3.83334, -6.15054, 12, -12, 12, 4 )
+polygon = PoolVector2Array( 3.83334, -6.15054, 3.83334, -6.15054, 12.4868, -9.33333, 10.9724, -0.387096 )
 vertex_colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.392157, 0, 0, 0, 0.392157 )
 
+[node name="Parte10" type="Sprite" parent="Centro/Tras"]
+position = Vector2( 570, -302 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte10"]
-visible = false
-position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 412, -120 )
+position = Vector2( -460, 112 )
+points = PoolVector2Array( 230, -120, -10, -120, -10, -202 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 11 )
+gradient = SubResource( 15 )
+joint_mode = 2
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte10"]
@@ -1335,7 +1345,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "PartePerna"
+text = "ParteAxila"
 align = 1
 valign = 1
 
@@ -1345,17 +1355,18 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte11" type="Sprite" parent="Centro/Tras"]
-position = Vector2( 570, 616 )
+position = Vector2( -680, -389 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte11"]
-position = Vector2( -460, 112 )
-points = PoolVector2Array( 232, -120, -42, -120 )
+position = Vector2( 168, 112 )
+points = PoolVector2Array( 64, -120, 428, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 12 )
+gradient = SubResource( 16 )
+joint_mode = 2
 end_cap_mode = 2
 
 [node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte11"]
@@ -1381,7 +1392,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "PartePanturrilha"
+text = "ParteOmoplata"
 align = 1
 valign = 1
 
@@ -1391,7 +1402,7 @@ valign = 1
 shape = SubResource( 2 )
 
 [node name="Parte12" type="Sprite" parent="Centro/Tras"]
-position = Vector2( -680, 143 )
+position = Vector2( -680, -560 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -1399,9 +1410,9 @@ __meta__ = {
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte12"]
 position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 388, -120 )
+points = PoolVector2Array( 64, -120, 516, -120 )
 default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 13 )
+gradient = SubResource( 17 )
 joint_mode = 2
 end_cap_mode = 2
 
@@ -1428,209 +1439,13 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteQuadril"
+text = "ParteNuca"
 align = 1
 valign = 1
 
 [node name="Area" type="Area2D" parent="Centro/Tras/Parte12"]
 
 [node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte12/Area"]
-shape = SubResource( 2 )
-
-[node name="Parte13" type="Sprite" parent="Centro/Tras"]
-position = Vector2( -680, -208 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Linha" type="Line2D" parent="Centro/Tras/Parte13"]
-visible = false
-position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 356, -120 )
-default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 14 )
-end_cap_mode = 2
-
-[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte13"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-mouse_filter = 2
-border_color = Color( 0, 0, 0, 1 )
-border_width = 8.0
-editor_only = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Texto" parent="Centro/Tras/Parte13" instance=ExtResource( 6 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteBraco"
-align = 1
-valign = 1
-
-[node name="Area" type="Area2D" parent="Centro/Tras/Parte13"]
-
-[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte13/Area"]
-shape = SubResource( 2 )
-
-[node name="Poligono" type="Polygon2D" parent="Centro/Tras/Parte13"]
-position = Vector2( 86.2436, 274 )
-scale = Vector2( 36.9797, 46.5 )
-color = Color( 0, 0, 0, 1 )
-antialiased = true
-polygon = PoolVector2Array( 3.83334, -6.15054, 3.83334, -6.15054, 12.4868, -9.33333, 10.9724, -0.387096 )
-vertex_colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.392157, 0, 0, 0, 0.392157 )
-
-[node name="Parte14" type="Sprite" parent="Centro/Tras"]
-position = Vector2( 570, -302 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Linha" type="Line2D" parent="Centro/Tras/Parte14"]
-position = Vector2( -460, 112 )
-points = PoolVector2Array( 230, -120, -10, -120, -10, -202 )
-default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 15 )
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte14"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-mouse_filter = 2
-border_color = Color( 0, 0, 0, 1 )
-border_width = 8.0
-editor_only = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Texto" parent="Centro/Tras/Parte14" instance=ExtResource( 6 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteAxila"
-align = 1
-valign = 1
-
-[node name="Area" type="Area2D" parent="Centro/Tras/Parte14"]
-
-[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte14/Area"]
-shape = SubResource( 2 )
-
-[node name="Parte15" type="Sprite" parent="Centro/Tras"]
-position = Vector2( -680, -389 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Linha" type="Line2D" parent="Centro/Tras/Parte15"]
-position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 428, -120 )
-default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 16 )
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte15"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-mouse_filter = 2
-border_color = Color( 0, 0, 0, 1 )
-border_width = 8.0
-editor_only = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Texto" parent="Centro/Tras/Parte15" instance=ExtResource( 6 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteOmoplata"
-align = 1
-valign = 1
-
-[node name="Area" type="Area2D" parent="Centro/Tras/Parte15"]
-
-[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte15/Area"]
-shape = SubResource( 2 )
-
-[node name="Parte16" type="Sprite" parent="Centro/Tras"]
-position = Vector2( -680, -560 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Linha" type="Line2D" parent="Centro/Tras/Parte16"]
-position = Vector2( 168, 112 )
-points = PoolVector2Array( 64, -120, 516, -120 )
-default_color = Color( 0, 0, 0, 1 )
-gradient = SubResource( 17 )
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Contorno" type="ReferenceRect" parent="Centro/Tras/Parte16"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-mouse_filter = 2
-border_color = Color( 0, 0, 0, 1 )
-border_width = 8.0
-editor_only = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Texto" parent="Centro/Tras/Parte16" instance=ExtResource( 6 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -229.5
-margin_top = -70.5
-margin_right = -229.5
-margin_bottom = -70.5
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ParteNuca"
-align = 1
-valign = 1
-
-[node name="Area" type="Area2D" parent="Centro/Tras/Parte16"]
-
-[node name="Contato" type="CollisionShape2D" parent="Centro/Tras/Parte16/Area"]
 shape = SubResource( 2 )
 
 [node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Elementos/Visuais/DelegaciaFase2/QuebraCabeca_01.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Cenas/QuebraCabecaPeca.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 240
@@ -40,6 +41,13 @@ color = Color( 1, 0.607843, 0.607843, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="FundoTextura" type="Sprite" parent="."]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+self_modulate = Color( 1, 0.607843, 0.607843, 1 )
+position = Vector2( -1024, -1024 )
+texture = ExtResource( 8 )
+centered = false
 
 [node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
 mouse_filter = 2
@@ -132,6 +140,7 @@ __meta__ = {
 }
 
 [node name="Numeracao" type="Label" parent="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -470.5
@@ -194,6 +203,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -250.0
+margin_bottom = -80.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false

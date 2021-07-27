@@ -1,6 +1,10 @@
 extends Node2D
 
 var arrastar = false
+var acerto = false
+
+var pino : String
+
 
 
 export (float) var ropeLength = 30
@@ -17,11 +21,13 @@ var posPrev: PoolVector2Array
 var pointCount: int
 
 func _ready()->void:
-	pointCount = get_pointCount(ropeLength)
+	constrain = 15
+	pointCount = get_pointCount(150)
+	dampening = 0.8
 	resize_arrays()
 	init_position()
-	get_node("Linha/Inicio").rect_global_position = pos[pos.size()-1] - Vector2(80, 40)
-	get_node("Linha/Fim").rect_global_position = pos[0] - Vector2(80, 40)
+	get_node("Linha/Inicio").rect_global_position = pos[pos.size()-1] - Vector2(0, 0)
+	get_node("Linha/Fim").rect_global_position = pos[0] - Vector2(60, 40)
 
 func get_pointCount(distance: float)->int:
 	return int(ceil(distance / constrain))
@@ -32,9 +38,9 @@ func resize_arrays():
 
 func init_position()->void:
 	for i in range(pointCount):
-		pos[i] = position + Vector2(constrain *i, 0)
-		posPrev[i] = position + Vector2(constrain *i, 0)
-	position = Vector2.ZERO
+		pos[i] = global_position + Vector2(constrain *i, 0)
+		posPrev[i] = global_position + Vector2(constrain *i, 0)
+	global_position = Vector2.ZERO
 	
 
 func _unhandled_input(event:InputEvent)->void:
@@ -51,12 +57,33 @@ func _unhandled_input(event:InputEvent)->void:
 	pass
 
 func _process(delta)->void:
+	
+	if not arrastar:
+		$Linha/Inicio.rect_position = pos[pos.size()-1] - Vector2(80, 40)
+		if acerto:
+			self.endPin = true
+			line2D.get_child(0).mouse_filter = 2 
+			$Acerto.play()
+			acerto = false
+			print("Pino: ", pino)
+			get_node("/root/TelaDelegaciaFase1").contador += 1
+			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").bbcode_text = tr("DelegaciaFase1_"+pino)
+			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").percent_visible = 0
+			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").taxaExposicao = 0
+			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").set_process(true)
+			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz").stream = load(str("res://Elementos/Sonoros/Vozes/DelegaciaFase1_"+pino+".mp3"))
+			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz").play()
+			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/BotaoEsquerda").pressed = true
+#			print("Fim da fase: ", get_node("/root/TelaDelegaciaFase1").contador)
+			if get_node("/root/TelaDelegaciaFase1").contador > 6:
+				print("Fim da fase")
+				get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/BotaoDireita").visible = true
+	else:
+		set_last(get_global_mouse_position())
+	
 	update_points(delta)
 	update_constrain()
 	
-	if not arrastar:
-		$Linha/Inicio.rect_global_position = pos[pos.size()-1] - Vector2(80, 40)
-		pass
 
 #	get_node("Linha/Fim").rect_global_position = pos[0] - Vector2(80, 40)
 	#update_constrain()	#Repeat to get tighter rope
@@ -71,9 +98,20 @@ func set_start(p:Vector2)->void:
 	posPrev[0] = p
 
 func set_last(p:Vector2)->void:
-	pos[pointCount-1] = p
-	posPrev[pointCount-1] = p
+	pos[pointCount-1] = $Linha/Inicio.rect_position + Vector2(80, 40)
+	posPrev[pointCount-1] = $Linha/Inicio.rect_position + Vector2(80, 40)
+#	$Linha/Inicio.rect_global_position = posPrev[pointCount-1] = p + Vector2(300, 0)
 	
+func distancias()->void:
+	if sqrt((pos[0].x-pos[pos.size()-1].x)*(pos[0].x-pos[pos.size()-1].x)+(pos[0].y-pos[pos.size()-1].y)*(pos[0].y-pos[pos.size()-1].y) ) < 90:
+#		print("AQUI:", sqrt((pos[0].x-pos[pos.size()-1].x)*(pos[0].x-pos[pos.size()-1].x)+(pos[0].y-pos[pos.size()-1].y)*(pos[0].y-pos[pos.size()-1].y) ))
+		pass
+	else: 
+#		print( sqrt((pos[0].x-pos[pos.size()-1].x)*(pos[0].x-pos[pos.size()-1].x)+(pos[0].y-pos[pos.size()-1].y)*(pos[0].y-pos[pos.size()-1].y) ))
+		pointCount = get_pointCount(int(sqrt((pos[0].x-pos[pos.size()-1].x)*(pos[0].x-pos[pos.size()-1].x)+(pos[0].y-pos[pos.size()-1].y)*(pos[0].y-pos[pos.size()-1].y) ))/2)
+		resize_arrays()
+	pass
+
 
 func update_points(delta)->void:
 	for i in range (pointCount):
@@ -119,5 +157,31 @@ func _on_Inicio_arrastarInicio(event):
 			arrastar = true
 	if event is InputEventMouseMotion and arrastar:
 		$Linha/Inicio.rect_global_position = event.global_position - Vector2(80, 40)
-		set_last(get_global_mouse_position())
+		distancias()
+#		set_last(get_global_mouse_position())
+		pass
+	pass # Replace with function body.
+
+
+func _on_Area_entrou(area):
+#	print("AHHHHHHHHHHHHHHHHHHHHHH: ", area.get_parent().name)
+#	print("AHHHHHHHHHHHHHHHHHHHHHH: ", self.get_parent().name)
+	if area.get_parent().name == self.get_parent().name:
+#		self.endPin = true
+		acerto = true
+		pino = area.get_parent().name
+#		area.get_node("Colidir").queue_free()
+#		area.monitoring = false
+#		area.monitorable = false
+#		self.set_deferred("monitoring", false) 
+#		self.set_deferred("monitorable", false) 
+	else:
+#		self.endPin = false
+		acerto = false
+	pass # Replace with function body.
+
+
+func _on_Area_area_saiu(area):
+	acerto = false
+#	self.endPin = false
 	pass # Replace with function body.

@@ -547,10 +547,11 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Descricao"
 
 [node name="Texto" parent="TabContainer/ConfigurarSobre/Margem/Lista" instance=ExtResource( 5 )]
+visible = false
 self_modulate = Color( 0, 0, 0, 1 )
-margin_top = 93.0
+margin_top = 604.0
 margin_right = 1400.0
-margin_bottom = 178.0
+margin_bottom = 689.0
 text = "Descricao"
 autowrap = true
 
