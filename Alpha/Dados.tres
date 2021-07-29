@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource( 1 )
-Cena = "res://Cenas/TelaCadastro.tscn"
+Cena = "res://Cenas/TelaDelegaciaFase3.tscn"
 Identificador = "fs"
 Idioma = ""
-NomeMusica = "res://Elementos/Sonoros/Musiscas/Abertura.wav"
+NomeMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
 Genero = "Menina"
 Musica = -40
 Voz = -40

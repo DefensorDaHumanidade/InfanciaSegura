@@ -1,25 +1,4775 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Cenas/ControleDeslizanteVertical.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Cidade.jpeg" type="Texture" id=3]
+[ext_resource path="res://Codigos/CameraMapa.gd" type="Script" id=3]
 [ext_resource path="res://Codigos/TelaDelegaciaFase3.gd" type="Script" id=4]
 [ext_resource path="res://Elementos/Visuais/Icones/Circulo.svg" type="Texture" id=5]
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=7]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Mapa versão 1.0.png" type="Texture" id=8]
+[ext_resource path="res://Elementos/Visuais/Icones/Frente.svg" type="Texture" id=9]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Arvore1.png" type="Texture" id=10]
+[ext_resource path="res://Codigos/ArvorePequena.gd" type="Script" id=11]
+[ext_resource path="res://Elementos/Sonoros/Notificacoes/Arvore.wav" type="AudioStream" id=12]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Folha.png" type="Texture" id=13]
+[ext_resource path="res://Codigos/Selecionaveis.gd" type="Script" id=14]
+[ext_resource path="res://Elementos/Visuais/Icones/Mao.svg" type="Texture" id=15]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+uniform float velocidade = 3f;
+uniform float amplitude = 2f;
+
+void vertex(){
+	VERTEX.x += amplitude * sin((1f-UV.y)*velocidade * TIME);
+}"
+
+[sub_resource type="ShaderMaterial" id=25]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=7]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=26]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=8]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=27]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=9]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=28]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=10]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=29]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=11]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=30]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=12]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=31]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=13]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=32]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=14]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=33]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=15]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=34]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=16]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="StyleBoxFlat" id=1]
 draw_center = false
-border_width_left = 50
-border_width_top = 50
-border_width_right = 50
-border_width_bottom = 50
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
 border_color = Color( 1, 0.607843, 0.607843, 1 )
 border_blend = true
 expand_margin_left = 10.0
 expand_margin_right = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=4]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=5]
+resource_local_to_scene = true
+shader = SubResource( 2 )
+shader_param/velocidade = 3.0
+shader_param/amplitude = 2.0
+
+[sub_resource type="Animation" id=6]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Folhas"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Folha1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -124.313, -127.637 ), Vector2( -91.7734, 193.561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Folha1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Folha1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Folha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.8633, 90.1133 ), Vector2( 125.148, 190.227 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Folha2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Folha2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Folha3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Folha3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Folha3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -52.5547, 27.5391 ), Vector2( -176.859, 196.063 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Folha4:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Folha4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Folha4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55.8984, -63.4023 ), Vector2( -132.652, 194.391 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Folha5:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Folha5:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Folha5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.17578, -22.5195 ), Vector2( -50.0586, 200.234 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Folha6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Folha6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Folha6:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65.0664, -115.125 ), Vector2( 190.207, 199.398 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath(".:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.29, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+}
 
 [node name="TelaDelegaciaFase3" type="Control"]
 anchor_right = 1.0
@@ -34,31 +4784,755 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 1, 0.607843, 0.607843, 1 )
+color = Color( 0.298039, 0.65098, 0.141176, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="FundoTextura" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
 self_modulate = Color( 1, 0.607843, 0.607843, 1 )
 position = Vector2( -1024, -1024 )
 texture = ExtResource( 7 )
 centered = false
 
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 0
+
+[node name="Mundo" type="Sprite" parent="ViewportContainer/Viewport"]
+position = Vector2( 0, -100 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="Objeto1" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+texture = ExtResource( 9 )
+
+[node name="ArvorePequena1" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 25 )
+position = Vector2( 1299.73, 1498.93 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena1"]
+anims/Folhas = SubResource( 7 )
+
+[node name="ArvorePequena2" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 26 )
+position = Vector2( 687.028, 1172.93 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena2"]
+anims/Folhas = SubResource( 8 )
+
+[node name="ArvorePequena3" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 27 )
+position = Vector2( 823.709, 1740.86 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena3"]
+anims/Folhas = SubResource( 9 )
+
+[node name="ArvorePequena4" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 28 )
+position = Vector2( 215.756, 1318.93 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena4"]
+anims/Folhas = SubResource( 10 )
+
+[node name="ArvorePequena5" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 29 )
+position = Vector2( -230.607, 1787.54 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena5"]
+anims/Folhas = SubResource( 11 )
+
+[node name="ArvorePequena6" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 30 )
+position = Vector2( -602.482, 1299.89 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena6"]
+anims/Folhas = SubResource( 12 )
+
+[node name="ArvorePequena7" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 31 )
+position = Vector2( -1036.95, 1689.44 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena7"]
+anims/Folhas = SubResource( 13 )
+
+[node name="ArvorePequena8" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 32 )
+position = Vector2( -1295.12, 1227.73 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena8"]
+anims/Folhas = SubResource( 14 )
+
+[node name="ArvorePequena9" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 33 )
+position = Vector2( 1946.96, 1411.09 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena9"]
+anims/Folhas = SubResource( 15 )
+
+[node name="ArvorePequena10" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
+material = SubResource( 34 )
+position = Vector2( 1700.36, 1860.1 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
+anims/Folhas = SubResource( 16 )
+
+[node name="CameraMapa" type="Camera2D" parent="ViewportContainer/Viewport"]
+current = true
+limit_smoothed = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource( 3 )
+
 [node name="Cidade" type="TextureRect" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -1400.0
-margin_top = -880.0
-margin_right = 1400.0
-margin_bottom = 880.0
-rect_pivot_offset = Vector2( 1400, 580 )
-texture = ExtResource( 3 )
+margin_left = -3544.0
+margin_top = -2236.0
+margin_right = 4136.0
+margin_bottom = 2084.0
+rect_pivot_offset = Vector2( 3840, 2160 )
+texture = ExtResource( 8 )
 stretch_mode = 4
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -75,6 +5549,7 @@ __meta__ = {
 }
 
 [node name="Borda" type="Panel" parent="Cidade"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -124,17 +5599,816 @@ anchor_bottom = 0.6
 margin_left = -210.0
 margin_right = 0.0
 margin_bottom = 0.0
-min_value = 0.4
+min_value = 0.3
 max_value = 1.0
 step = 0.01
 value = 1.0
 
 [node name="AudioAcerto" parent="." instance=ExtResource( 6 )]
 
+[node name="Mundo" type="Sprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="ArvorePequena1" type="Sprite" parent="Mundo"]
+material = SubResource( 3 )
+position = Vector2( 1299.73, 1498.93 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena1"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena1"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena1"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena1"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena1"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena1"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena1"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena1"]
+anims/Folhas = SubResource( 4 )
+
+[node name="ArvorePequena2" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( 687.028, 1172.93 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena2"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena2"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena2"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena2"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena2"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena2"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena2"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena2"]
+anims/Folhas = SubResource( 6 )
+
+[node name="ArvorePequena3" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( 823.709, 1740.86 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena3"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena3"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena3"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena3"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena3"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena3"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena3"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena3"]
+anims/Folhas = SubResource( 17 )
+
+[node name="ArvorePequena4" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( 215.756, 1318.93 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena4"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena4"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena4"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena4"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena4"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena4"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena4"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena4"]
+anims/Folhas = SubResource( 18 )
+
+[node name="ArvorePequena5" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( -230.607, 1787.54 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena5"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena5"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena5"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena5"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena5"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena5"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena5"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena5"]
+anims/Folhas = SubResource( 19 )
+
+[node name="ArvorePequena6" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( -602.482, 1299.89 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena6"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena6"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena6"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena6"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena6"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena6"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena6"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena6"]
+anims/Folhas = SubResource( 20 )
+
+[node name="ArvorePequena7" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( -1036.95, 1689.44 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena7"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena7"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena7"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena7"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena7"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena7"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena7"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena7"]
+anims/Folhas = SubResource( 21 )
+
+[node name="ArvorePequena8" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( -1295.12, 1227.73 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena8"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena8"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena8"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena8"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena8"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena8"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena8"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena8"]
+anims/Folhas = SubResource( 22 )
+
+[node name="ArvorePequena9" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( 1946.96, 1411.09 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena9"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena9"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena9"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena9"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena9"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena9"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena9"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena9"]
+anims/Folhas = SubResource( 23 )
+
+[node name="ArvorePequena10" type="Sprite" parent="Mundo"]
+material = SubResource( 5 )
+position = Vector2( 1700.36, 1860.1 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Mundo/ArvorePequena10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -220.5
+margin_right = -225.0
+margin_bottom = -220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Som" type="AudioStreamPlayer" parent="Mundo/ArvorePequena10"]
+stream = ExtResource( 12 )
+
+[node name="Folha1" type="Sprite" parent="Mundo/ArvorePequena10"]
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -124.313, -127.637 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha2" type="Sprite" parent="Mundo/ArvorePequena10"]
+visible = false
+position = Vector2( 20.8633, 90.1133 )
+rotation = -3.11192
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha3" type="Sprite" parent="Mundo/ArvorePequena10"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( -52.5547, 27.5391 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha4" type="Sprite" parent="Mundo/ArvorePequena10"]
+visible = false
+position = Vector2( -55.8984, -63.4023 )
+rotation = -3.2306
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha5" type="Sprite" parent="Mundo/ArvorePequena10"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 9.17578, -22.5195 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Folha6" type="Sprite" parent="Mundo/ArvorePequena10"]
+visible = false
+self_modulate = Color( 0.54902, 0.54902, 0.54902, 1 )
+position = Vector2( 65.0664, -115.125 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="Animar" type="AnimationPlayer" parent="Mundo/ArvorePequena10"]
+anims/Folhas = SubResource( 24 )
+
+[node name="Selecionaveis" type="Node2D" parent="Mundo"]
+script = ExtResource( 14 )
+
+[node name="Meliante" type="TextureRect" parent="Mundo/Selecionaveis"]
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Acerto" type="TextureRect" parent="Mundo/Selecionaveis/Meliante"]
+self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
+margin_left = -48.0
+margin_top = -48.0
+margin_right = 48.0
+margin_bottom = 48.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Meliante1" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 2098.95, -1177.31 )
+scale = Vector2( 1, 1 )
+
+[node name="Meliante2" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 2360.58, -868.121 )
+scale = Vector2( 1, 1 )
+
+[node name="Meliante3" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 969.204, -844.337 )
+scale = Vector2( 1, 1 )
+
+[node name="Meliante4" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 112.975, -1641.11 )
+scale = Vector2( 1, 1 )
+
+[node name="Meliante5" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 1587.59, -606.496 )
+scale = Vector2( 1, 1 )
+
+[node name="Malfeitora" type="TextureRect" parent="Mundo/Selecionaveis"]
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Acerto" type="TextureRect" parent="Mundo/Selecionaveis/Malfeitora"]
+visible = false
+self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
+margin_left = -48.0
+margin_top = -48.0
+margin_right = 48.0
+margin_bottom = 48.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Malfeitora1" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 1492.46, 826.499 )
+scale = Vector2( 1, 1 )
+
+[node name="Malfeitora2" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 2390.31, 309.193 )
+scale = Vector2( 1, 1 )
+
+[node name="Malfeitora3" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 3169.24, 778.93 )
+scale = Vector2( 1, 1 )
+
+[node name="Malfeitora4" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 2170.3, 1040.56 )
+scale = Vector2( 1, 1 )
+
+[node name="Malfeitora5" type="Position2D" parent="Mundo/Selecionaveis"]
+position = Vector2( 1789.76, 648.117 )
+scale = Vector2( 1, 1 )
+
+[node name="AudioAcerto" parent="Mundo/Selecionaveis" instance=ExtResource( 6 )]
+
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena1/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena1" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena2/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena2" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena3/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena3" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena4/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena4" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena5/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena5" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena6/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena6" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena7/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena7" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena8/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena8" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena9/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena9" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena10/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena10" method="_on_Contorno_torcarArvore"]
 [connection signal="gui_input" from="Cidade" to="." method="_on_Cidade_deslocarCidade"]
 [connection signal="gui_input" from="Cidade/Elemento_01" to="." method="_on_Elemento_01_achou"]
 [connection signal="gui_input" from="Cidade/Elemento_02" to="." method="_on_Elemento_02_achou"]
 [connection signal="value_changed" from="ControleDeslizanteVertical" to="." method="_on_ControleDeslizanteVertical_Zoom"]
+[connection signal="gui_input" from="Mundo/ArvorePequena1/Contorno" to="Mundo/ArvorePequena1" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena2/Contorno" to="Mundo/ArvorePequena2" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena3/Contorno" to="Mundo/ArvorePequena3" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena4/Contorno" to="Mundo/ArvorePequena4" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena5/Contorno" to="Mundo/ArvorePequena5" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena6/Contorno" to="Mundo/ArvorePequena6" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena7/Contorno" to="Mundo/ArvorePequena7" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena8/Contorno" to="Mundo/ArvorePequena8" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena9/Contorno" to="Mundo/ArvorePequena9" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/ArvorePequena10/Contorno" to="Mundo/ArvorePequena10" method="_on_Contorno_torcarArvore"]
+[connection signal="gui_input" from="Mundo/Selecionaveis/Meliante" to="Mundo/Selecionaveis" method="_on_Meliante_gui_input"]
+[connection signal="gui_input" from="Mundo/Selecionaveis/Malfeitora" to="Mundo/Selecionaveis" method="_on_Malfeitora_gui_input"]
 
 [editable path="CaixaDialogo"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]

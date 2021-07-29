@@ -23,21 +23,29 @@ func _ready():
 func _on_ControleDeslizanteVertical_Zoom(valor):
 #	$Cidade.rect_position.y = -valor
 	$Cidade.rect_scale = Vector2(valor, valor)
+#	$ViewportContainer/Viewport/Camera2D.set_offset($ViewportContainer/Viewport/Camera2D.get_offset() - event.relative*_current_zoom_level)
+	$ViewportContainer/Viewport/CameraMapa.zoom = Vector2(valor, valor)
 	pass # Replace with function body.
 
 
 func _on_Cidade_deslocarCidade(event):
+#	if event is InputEventScreenTouch:
+#		print($Cidade.rect_pivot_offset, event.position)
+#		$Cidade.rect_pivot_offset = event.position.normalized()
+		
 	if event is InputEventScreenTouch:
+		$Cidade.rect_pivot_offset = event.position
 		if arrastar:
 			arrastar = false
 		else:
-			posicaoInicial = event.position*$Cidade.rect_scale.x
+#			posicaoInicial = event.position
 			arrastar = true
 	if event is InputEventMouseMotion and arrastar:
-#		$Cidade.rect_global_position = event.global_position
-#		$Cidade.rect_pivot_offset = event.global_position
-		$Cidade.rect_position = event.global_position*$Cidade.rect_scale.x - posicaoInicial
-#		print(event.position, $Cidade.rect_position)
+		$Cidade.rect_global_position = event.global_position.normalized() - $Cidade.rect_pivot_offset.normalized()
+		print($Cidade.rect_pivot_offset, $Cidade.rect_global_position)
+
+
+	
 	pass # Replace with function body.
 
 

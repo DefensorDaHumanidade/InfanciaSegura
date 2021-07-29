@@ -8,7 +8,7 @@
 [ext_resource path="res://Elementos/Visuais/Fundo/Fundo.jpg" type="Texture" id=6]
 [ext_resource path="res://Elementos/Visuais/Fundo/Nuvem.png" type="Texture" id=7]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Fundo"
 length = 30.0
 loop = true
@@ -109,8 +109,7 @@ tracks/7/keys = {
 "values": [ Vector2( -21, -9 ), Vector2( -21, -40 ), Vector2( -21, 50 ), Vector2( -21, -9 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "Padrao"
+[sub_resource type="Animation" id=2]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -397,7 +396,7 @@ offset = Vector2( -1970, -1210 )
 
 [node name="AnimarFundo" type="AnimationPlayer" parent="OutroFundo"]
 autoplay = "Fundo"
-anims/Fundo = SubResource( 2 )
+anims/Fundo = SubResource( 1 )
 
 [node name="TextoTitulo" parent="." instance=ExtResource( 1 )]
 anchor_top = 0.5
@@ -429,7 +428,7 @@ texture = ExtResource( 5 )
 offset = Vector2( 0, -200 )
 
 [node name="Animar" type="AnimationPlayer" parent="."]
-anims/Padrao = SubResource( 1 )
+anims/Padrao = SubResource( 2 )
 
 [node name="Esquerda" type="CenterContainer" parent="."]
 anchor_top = 0.5
