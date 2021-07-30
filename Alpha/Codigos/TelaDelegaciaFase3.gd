@@ -8,16 +8,32 @@ extends Control
 var arrastar = false
 var posicaoInicial = Vector2.ZERO
 
+var procurados = [1, 2, 3, 4, 5]
+var contador = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Cidade/Elemento_01.modulate = Color(1, 1, 1, 0)
 	$Cidade/Elemento_02.modulate = Color(1, 1, 1, 0)
+	
+	
+
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func procurado():
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.bbcode_text = tr("DelegaciaFase3_Pessoa"+str(1))
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/DelegaciaFase3_Pessoa"+str(1)+".mp3"))
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
+	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+	pass
 
 
 func _on_ControleDeslizanteVertical_Zoom(valor):
