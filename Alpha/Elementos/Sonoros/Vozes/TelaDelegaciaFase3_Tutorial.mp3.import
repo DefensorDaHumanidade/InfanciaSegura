@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaDelegaciaFase3_Tutorial.mp3-edcfac4f5d8e321b7626d1eee468a58a.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaDelegaciaFase3_Tutorial.mp3"
+dest_files=[ "res://.import/TelaDelegaciaFase3_Tutorial.mp3-edcfac4f5d8e321b7626d1eee468a58a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

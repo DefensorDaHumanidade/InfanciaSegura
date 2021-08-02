@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaEscolaFase2_Encerramento.mp3-bfbbc508ea133c369f2b21db4cd3a2fc.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaEscolaFase2_Encerramento.mp3"
+dest_files=[ "res://.import/TelaEscolaFase2_Encerramento.mp3-bfbbc508ea133c369f2b21db4cd3a2fc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

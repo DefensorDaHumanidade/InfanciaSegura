@@ -1,0 +1,209 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/Personagens/Policial/Policial-2.svg" type="Texture" id=3]
+[ext_resource path="res://Elementos/Visuais/Icones/Circulo.svg" type="Texture" id=4]
+[ext_resource path="res://Cenas/FonteAgencyFB.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=6]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Mapa versão 1.0.png" type="Texture" id=7]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Morena.png" type="Texture" id=8]
+[ext_resource path="res://Elementos/Visuais/Icones/MaoAuxiliar.svg" type="Texture" id=21]
+[ext_resource path="res://Codigos/TempoTutorialEscola1.gd" type="Script" id=22]
+
+[sub_resource type="StyleBoxFlat" id=2]
+draw_center = false
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
+border_color = Color( 1, 0.607843, 0.607843, 1 )
+border_blend = true
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Animation" id=1]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MaoAuxilicar:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1640, 1352 ), Vector2( 1700, 456 ), Vector2( 1700, 456 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MaoAuxilicar:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 3.3, 3.6, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 30.0, 30.0, 0.0, 30.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MaoAuxilicar:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5, 6, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cidade/Morena1/Elemento_02:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4, 4.2, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true ]
+}
+
+[node name="TelaDelegaciaTutorialFase3" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 0.607843, 0.607843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoTextura" type="Sprite" parent="."]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+self_modulate = Color( 1, 0.607843, 0.607843, 1 )
+position = Vector2( -1024, -1024 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Cidade" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -3544.0
+margin_top = -2236.0
+margin_right = 4136.0
+margin_bottom = 2084.0
+rect_pivot_offset = Vector2( 3840, 2160 )
+texture = ExtResource( 7 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Cidade"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
+border_width = 50.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Borda" type="Panel" parent="Cidade"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena1" type="TextureRect" parent="Cidade"]
+margin_left = 4216.0
+margin_top = 1968.0
+margin_right = 4324.0
+margin_bottom = 2216.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Elemento_02" type="TextureRect" parent="Cidade/Morena1"]
+visible = false
+self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
+margin_top = -10.0
+margin_right = 96.0
+margin_bottom = 86.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Personagem" parent="." instance=ExtResource( 1 )]
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
+text = "Texto Apresentacao."
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+ProximaCena = "res://Cenas/TelaDelegaciaFase3.tscn"
+TrocarCena = true
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
+text = "BotaoIr"
+
+[node name="MaoAuxilicar" type="Sprite" parent="."]
+position = Vector2( 1640, 1352 )
+rotation = 0.523599
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 21 )
+offset = Vector2( 0, -200 )
+
+[node name="Texto" parent="." instance=ExtResource( 5 )]
+self_modulate = Color( 1, 0.0705882, 0.243137, 1 )
+anchor_right = 1.0
+margin_right = 0.0
+margin_bottom = 181.0
+text = "Tutorial"
+align = 1
+valign = 1
+
+[node name="Animar" type="AnimationPlayer" parent="."]
+autoplay = "Tutorial"
+anims/Tutorial = SubResource( 1 )
+
+[node name="TempoTutorialEscola1" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+autostart = true
+script = ExtResource( 22 )
+
+[connection signal="timeout" from="TempoTutorialEscola1" to="TempoTutorialEscola1" method="_on_TempoTutorialEscola1_timeout"]
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]

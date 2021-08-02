@@ -1,0 +1,219 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elementos/Visuais/Personagens/Professora/Professora-9.png" type="Texture" id=4]
+[ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elementos/Visuais/Fundo/Escola.jpg" type="Texture" id=6]
+[ext_resource path="res://Elementos/Visuais/Icones/Erro.png" type="Texture" id=7]
+[ext_resource path="res://Elementos/Visuais/EscolaFase1/Pergunta_01-Certo.png" type="Texture" id=8]
+[ext_resource path="res://Elementos/Visuais/EscolaFase1/Pergunta_01-Errado.png" type="Texture" id=9]
+[ext_resource path="res://Elementos/Visuais/Icones/Acerto.png" type="Texture" id=10]
+[ext_resource path="res://Elementos/Visuais/Fontes/CurlzMT/CURLZ___.TTF" type="DynamicFontData" id=11]
+[ext_resource path="res://Cenas/FonteCurlzMT.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Elementos/Visuais/Icones/MaoAuxiliar.svg" type="Texture" id=13]
+[ext_resource path="res://Codigos/TempoTutorialEscola1.gd" type="Script" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Tutorial"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Centro/MaoAuxilicar:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2.4, 4.1, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 580, 1178 ), Vector2( 868, 474 ), Vector2( 868, 474 ), Vector2( 244, 474 ), Vector2( 244, 474 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Centro/MaoAuxilicar:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.7, 2, 2.4, 4.2, 4.7, 5.1, 5.5, 5.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 30.0, 0.0, 30.0, 0.0, 0.0, 30.0, 0.0, 30.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Centro/MaoAuxilicar:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6, 7, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="TelaEscolaTutorialFase1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 1000, 540 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoTextura" type="TextureRect" parent="."]
+self_modulate = Color( 1, 0.984314, 0.607843, 0.705882 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personagem" parent="." instance=ExtResource( 1 )]
+texture = ExtResource( 4 )
+stretch_mode = 5
+flip_h = true
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
+text = "Texto Apresentacao."
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+ProximaCena = "res://Cenas/TelaEscolaFase1.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Escola.wav"
+TrocarCena = true
+
+[node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
+margin_right = 223.0
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
+margin_right = 223.0
+text = "BotaoIr"
+
+[node name="Texto" parent="." instance=ExtResource( 12 )]
+self_modulate = Color( 1, 0.239216, 0.239216, 1 )
+anchor_right = 1.0
+margin_right = 0.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 1 )
+text = "Tutorial"
+align = 1
+valign = 1
+
+[node name="Centro" type="CenterContainer" parent="."]
+anchor_left = 0.8
+anchor_top = 0.4
+anchor_right = 0.8
+anchor_bottom = 0.4
+margin_left = -1004.0
+margin_top = -250.0
+margin_bottom = 250.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coluna" type="HBoxContainer" parent="Centro"]
+margin_right = 1100.0
+margin_bottom = 500.0
+custom_constants/separation = 100
+
+[node name="Certo" type="TextureButton" parent="Centro/Coluna"]
+margin_right = 500.0
+margin_bottom = 500.0
+rect_pivot_offset = Vector2( 250, 250 )
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Coluna/Certo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+border_color = Color( 0, 0, 0.392157, 1 )
+border_width = 10.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Acerto" type="Sprite" parent="Centro/Coluna/Certo"]
+visible = false
+self_modulate = Color( 0, 1, 0.0392157, 1 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="AudioAcerto" parent="Centro/Coluna/Certo" instance=ExtResource( 3 )]
+
+[node name="Errado" type="TextureButton" parent="Centro/Coluna"]
+margin_left = 600.0
+margin_right = 1100.0
+margin_bottom = 500.0
+rect_pivot_offset = Vector2( 250, 250 )
+texture_normal = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Centro/Coluna/Errado"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+border_color = Color( 0, 0, 0.392157, 1 )
+border_width = 10.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Erro" type="Sprite" parent="Centro/Coluna/Errado"]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="AudioErro" parent="Centro/Coluna/Errado" instance=ExtResource( 5 )]
+
+[node name="MaoAuxilicar" type="Sprite" parent="Centro"]
+position = Vector2( 580, 1178 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, -200 )
+
+[node name="Animar" type="AnimationPlayer" parent="."]
+autoplay = "Tutorial"
+anims/Tutorial = SubResource( 2 )
+
+[node name="TempoTutorialEscola1" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+autostart = true
+script = ExtResource( 14 )
+
+[connection signal="timeout" from="TempoTutorialEscola1" to="TempoTutorialEscola1" method="_on_TempoTutorialEscola1_timeout"]
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]

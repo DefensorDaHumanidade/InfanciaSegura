@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaHospitalFase3_Tutorial.mp3-df54cea6c48963b23b1aa48750a96fc0.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaHospitalFase3_Tutorial.mp3"
+dest_files=[ "res://.import/TelaHospitalFase3_Tutorial.mp3-df54cea6c48963b23b1aa48750a96fc0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

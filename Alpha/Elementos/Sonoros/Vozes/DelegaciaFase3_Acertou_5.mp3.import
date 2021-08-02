@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DelegaciaFase3_Acertou_5.mp3-dd317e7ac8fcf6f744a34fc8938fe86e.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/DelegaciaFase3_Acertou_5.mp3"
+dest_files=[ "res://.import/DelegaciaFase3_Acertou_5.mp3-dd317e7ac8fcf6f744a34fc8938fe86e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

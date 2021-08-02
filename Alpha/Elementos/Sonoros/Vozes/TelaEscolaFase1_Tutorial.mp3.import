@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaEscolaFase1_Tutorial.mp3-f3722c68b0740b368ef5e7851bb74044.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaEscolaFase1_Tutorial.mp3"
+dest_files=[ "res://.import/TelaEscolaFase1_Tutorial.mp3-f3722c68b0740b368ef5e7851bb74044.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

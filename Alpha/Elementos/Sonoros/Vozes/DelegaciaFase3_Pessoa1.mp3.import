@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DelegaciaFase3_Pessoa1.mp3-08b27d5f69ecf79f8f583f082b52333e.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/DelegaciaFase3_Pessoa1.mp3"
+dest_files=[ "res://.import/DelegaciaFase3_Pessoa1.mp3-08b27d5f69ecf79f8f583f082b52333e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

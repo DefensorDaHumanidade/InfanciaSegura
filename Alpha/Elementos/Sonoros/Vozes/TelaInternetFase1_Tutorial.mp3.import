@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaInternetFase1_Tutorial.mp3-c32c61524748c252e87b284e7e3156bd.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaInternetFase1_Tutorial.mp3"
+dest_files=[ "res://.import/TelaInternetFase1_Tutorial.mp3-c32c61524748c252e87b284e7e3156bd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

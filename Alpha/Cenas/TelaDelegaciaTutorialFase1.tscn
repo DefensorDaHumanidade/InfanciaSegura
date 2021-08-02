@@ -1,0 +1,384 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/Personagens/Policial/Policial-2.svg" type="Texture" id=3]
+[ext_resource path="res://Cenas/FonteAgencyFB.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=6]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Icone100.png" type="Texture" id=7]
+[ext_resource path="res://Cenas/Corda.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque100.png" type="Texture" id=11]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/APP.png" type="Texture" id=12]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque192.png" type="Texture" id=13]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/IconeBombeiros.png" type="Texture" id=14]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque190.png" type="Texture" id=16]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque180.png" type="Texture" id=17]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque136.png" type="Texture" id=19]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase1/Disque193.png" type="Texture" id=20]
+[ext_resource path="res://Elementos/Visuais/Icones/MaoAuxiliar.svg" type="Texture" id=21]
+[ext_resource path="res://Codigos/TempoTutorialEscola1.gd" type="Script" id=22]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 72, 64 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 48.6621
+
+[sub_resource type="Animation" id=3]
+resource_name = "Tutorial"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColunaLogos/Logo2/MaoAuxilicar:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 144, 1304 ), Vector2( 152, 472 ), Vector2( 152, 472 ), Vector2( 149.714, 709.714 ), Vector2( 149.714, 709.714 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColunaLogos/Logo2/MaoAuxilicar:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 3, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 30.0, 30.0, 0.0, 0.0, 30.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColunaLogos/Logo2/MaoAuxilicar:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6, 7, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColunaLogos/Logo2/Corda/Linha/Fim:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -44, 66 ), Vector2( -44, 66 ), Vector2( -44, 274 ), Vector2( -44, 274 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ColunaLogos/Logo2/Corda/Linha:points")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3, 3.3, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 20, 2, 28, 98 ), PoolVector2Array( 20, 2, 28, 98 ), PoolVector2Array( 20, 2, 36, 290 ), PoolVector2Array( 20, 2, 36, 290 ) ]
+}
+
+[node name="TelaDelegaciaTutorialFase1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 0.607843, 0.607843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoTextura" type="Sprite" parent="."]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+self_modulate = Color( 1, 0.607843, 0.607843, 1 )
+position = Vector2( -1024, -1024 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Personagem" parent="." instance=ExtResource( 1 )]
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
+text = "Texto Apresentacao."
+
+[node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+ProximaCena = "res://Cenas/TelaDelegaciaFase1.tscn"
+TrocarCena = true
+
+[node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
+margin_right = 223.0
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
+margin_right = 223.0
+text = "BotaoIr"
+
+[node name="Texto" parent="." instance=ExtResource( 5 )]
+self_modulate = Color( 1, 0.0705882, 0.243137, 1 )
+anchor_right = 1.0
+margin_right = 0.0
+margin_bottom = 181.0
+text = "Tutorial"
+align = 1
+valign = 1
+
+[node name="ColunaNumeros" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -133.0
+margin_right = 760.0
+margin_bottom = 133.0
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = -10
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo1" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 1202.0
+margin_right = 1466.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo1"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo1/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo2" type="TextureRect" parent="ColunaNumeros"]
+margin_left = 1456.0
+margin_right = 1720.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo2"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo2/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo3" type="TextureRect" parent="ColunaNumeros"]
+visible = false
+margin_left = 508.0
+margin_right = 772.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo3"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo3/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo4" type="TextureRect" parent="ColunaNumeros"]
+visible = false
+margin_left = 508.0
+margin_right = 772.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo4"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo4/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo5" type="TextureRect" parent="ColunaNumeros"]
+visible = false
+margin_left = 1016.0
+margin_right = 1280.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo5"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo5/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo6" type="TextureRect" parent="ColunaNumeros"]
+visible = false
+margin_left = 1270.0
+margin_right = 1534.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 19 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo6"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo6/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="Logo7" type="TextureRect" parent="ColunaNumeros"]
+visible = false
+margin_left = 1524.0
+margin_right = 1788.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+rect_clip_content = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
+
+[node name="Area" type="Area2D" parent="ColunaNumeros/Logo7"]
+
+[node name="Colidir" type="CollisionShape2D" parent="ColunaNumeros/Logo7/Area"]
+position = Vector2( 128, 153 )
+shape = SubResource( 1 )
+
+[node name="ColunaLogos" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_right = -240.0
+margin_bottom = 266.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = -10
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo1" type="TextureRect" parent="ColunaLogos"]
+margin_left = 1162.0
+margin_right = 1426.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo1" instance=ExtResource( 9 )]
+modulate = Color( 1, 0.552941, 0.0745098, 1 )
+position = Vector2( 140, 230 )
+script = null
+
+[node name="Linha" parent="ColunaLogos/Logo1/Corda" index="0"]
+points = PoolVector2Array( 18, 2, 42, 314 )
+
+[node name="Fim" parent="ColunaLogos/Logo1/Corda/Linha" index="0"]
+margin_left = -22.0
+margin_top = 282.0
+margin_right = 76.0
+margin_bottom = 374.0
+
+[node name="Colisao" parent="ColunaLogos/Logo1/Corda/Linha/Inicio/Area" index="0"]
+shape = SubResource( 2 )
+
+[node name="Logo2" type="TextureRect" parent="ColunaLogos"]
+margin_left = 1416.0
+margin_right = 1680.0
+margin_bottom = 266.1
+rect_min_size = Vector2( 264, 266.1 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 5
+
+[node name="Corda" parent="ColunaLogos/Logo2" instance=ExtResource( 9 )]
+modulate = Color( 1, 0.215686, 0.215686, 1 )
+position = Vector2( 140, 230 )
+script = null
+
+[node name="Linha" parent="ColunaLogos/Logo2/Corda" index="0"]
+points = PoolVector2Array( 20, 2, 36, 290 )
+
+[node name="Fim" parent="ColunaLogos/Logo2/Corda/Linha" index="0"]
+margin_left = -44.0
+margin_top = 274.0
+margin_right = 54.0
+margin_bottom = 366.0
+
+[node name="Colisao" parent="ColunaLogos/Logo2/Corda/Linha/Inicio/Area" index="0"]
+shape = SubResource( 2 )
+
+[node name="MaoAuxilicar" type="Sprite" parent="ColunaLogos/Logo2"]
+position = Vector2( 144, 1304 )
+rotation = 0.523599
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 21 )
+offset = Vector2( 0, -200 )
+
+[node name="Animar" type="AnimationPlayer" parent="."]
+autoplay = "Tutorial"
+anims/Tutorial = SubResource( 3 )
+
+[node name="TempoTutorialEscola1" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+autostart = true
+script = ExtResource( 22 )
+
+[connection signal="timeout" from="TempoTutorialEscola1" to="TempoTutorialEscola1" method="_on_TempoTutorialEscola1_timeout"]
+
+[editable path="CaixaDialogo"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
+[editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]
+[editable path="ColunaLogos/Logo1/Corda"]
+[editable path="ColunaLogos/Logo2/Corda"]
