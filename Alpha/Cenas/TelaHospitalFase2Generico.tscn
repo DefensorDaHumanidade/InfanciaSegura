@@ -3,7 +3,7 @@
 [ext_resource path="res://Elementos/Visuais/HospitalFase1/MeninoFrente.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/ControleDeslizanteVertical.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Codigos/TelaHospitalFase1Generico.gd" type="Script" id=4]
+[ext_resource path="res://Codigos/TelaHospitalFase2Generico.gd" type="Script" id=4]
 [ext_resource path="res://Elementos/Visuais/Icones/Rotulo.svg" type="Texture" id=5]
 [ext_resource path="res://Cenas/FonteComicSans.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=7]
@@ -280,6 +280,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -446,6 +447,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -1121,6 +1123,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -1286,6 +1289,7 @@ margin_top = -70.5
 margin_right = -229.5
 margin_bottom = -70.5
 mouse_filter = 2
+border_color = Color( 0, 0, 0, 1 )
 border_width = 8.0
 editor_only = false
 __meta__ = {
@@ -1754,6 +1758,10 @@ position = Vector2( 740, 150 )
 
 [node name="Contorno" parent="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque" index="0"]
 mouse_filter = 1
+border_color = Color( 1, 0, 0, 1 )
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque" index="2"]
+visible = false
 
 [node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="1"]
 mouse_filter = 2
@@ -1791,8 +1799,8 @@ max_value = 1500.0
 step = 10.0
 
 [connection signal="gui_input" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Contorno" to="." method="_on_Contorno_arrastarParte"]
-[connection signal="area_entered" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Area" to="." method="_on_Area_entrou"]
-[connection signal="area_exited" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Area" to="." method="_on_Area_saiu"]
+[connection signal="area_entered" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Area" to="." method="_on_Area_ParteEntrou"]
+[connection signal="area_exited" from="CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Area" to="." method="_on_Area_contornoSaiu"]
 [connection signal="value_changed" from="ControleDeslizanteVertical" to="." method="_on_ControleDeslizanteVertical_trocar"]
 
 [editable path="CaixaDialogo"]

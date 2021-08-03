@@ -8,16 +8,18 @@ extends Control
 var arrastar = false
 var posicaoInicial = Vector2.ZERO
 
-var procurados = [1, 2, 3, 4, 5]
-var contador = 1
+export var procurados = [1, 2, 3, 4, 5]
+var nomes = ["Meliante", "Malfeitora", "Policial", "Bandida", "Bomzinho"]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Cidade/Elemento_01.modulate = Color(1, 1, 1, 0)
 	$Cidade/Elemento_02.modulate = Color(1, 1, 1, 0)
-	
-	
-
+	randomize()
+	procurados.shuffle()
+	procurado(0)
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
 	pass # Replace with function body.
 
 
@@ -25,14 +27,22 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func procurado():
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.bbcode_text = tr("DelegaciaFase3_Pessoa"+str(1))
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/DelegaciaFase3_Pessoa"+str(1)+".mp3"))
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
-	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+func procurado(contador):
+	if contador < 5:
+		$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.bbcode_text = tr("DelegaciaFase3_Pessoa"+str(procurados[contador]))
+		$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.percent_visible = 0
+		$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.taxaExposicao = 0
+		$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
+		$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/DelegaciaFase3_Pessoa"+str(procurados[contador])+".mp3"))
+		$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
+		$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+		
+		$CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical/Icone.texture = load("res://Elementos/Visuais/DelegaciaFase3/"+str(nomes[procurados[contador]-1])+".png")
+		$CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical/Icone.modulate = Color(1,1,1,1)
+		print("Procurado: ", procurados[contador])
+	else:
+		yield(get_tree().create_timer(1.5), "timeout") 
+		get_tree().change_scene("res://Cenas/TelaDelegaciaEncerramentoFase3.tscn")
 	pass
 
 

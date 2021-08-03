@@ -125,7 +125,7 @@ __meta__ = {
 
 [node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarAjustes/Margem"]
 margin_right = 1596.0
-margin_bottom = 797.0
+margin_bottom = 720.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -270,6 +270,7 @@ margin_bottom = 117.0
 text = "+"
 
 [node name="Texto" type="HBoxContainer" parent="TabContainer/ConfigurarAjustes/Margem/Lista"]
+visible = false
 margin_left = 20.0
 margin_top = 475.0
 margin_right = 1596.0
@@ -320,15 +321,16 @@ text = "+"
 
 [node name="Idioma" type="HBoxContainer" parent="TabContainer/ConfigurarAjustes/Margem/Lista"]
 margin_left = 89.0
-margin_top = 643.0
+margin_top = 475.0
 margin_right = 1506.0
-margin_bottom = 797.0
+margin_bottom = 629.0
 size_flags_horizontal = 4
 custom_constants/separation = 20
 
 [node name="BotaoBrasil" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma" instance=ExtResource( 14 )]
 margin_right = 459.0
 margin_bottom = 154.0
+toggle_mode = true
 
 [node name="Texto" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoBrasil/ConteinerHorizontal" index="1"]
 margin_right = 438.0
@@ -338,6 +340,7 @@ text = "BotaoBrasil"
 margin_left = 479.0
 margin_right = 938.0
 margin_bottom = 154.0
+toggle_mode = true
 
 [node name="Texto" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoEspanha/ConteinerHorizontal" index="1"]
 margin_right = 504.0
@@ -347,6 +350,7 @@ text = "BotaoEspanha"
 margin_left = 958.0
 margin_right = 1417.0
 margin_bottom = 154.0
+toggle_mode = true
 
 [node name="Texto" parent="TabContainer/ConfigurarAjustes/Margem/Lista/Idioma/BotaoInglaterra/ConteinerHorizontal" index="1"]
 margin_right = 571.0
@@ -534,7 +538,7 @@ __meta__ = {
 
 [node name="Lista" type="VBoxContainer" parent="TabContainer/ConfigurarSobre/Margem"]
 margin_right = 1400.0
-margin_bottom = 778.0
+margin_bottom = 743.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -564,6 +568,7 @@ text = ""
 autowrap = true
 
 [node name="Agradecimentos" type="HBoxContainer" parent="TabContainer/ConfigurarSobre/Margem/Lista"]
+visible = false
 margin_top = 693.0
 margin_right = 1400.0
 margin_bottom = 778.0

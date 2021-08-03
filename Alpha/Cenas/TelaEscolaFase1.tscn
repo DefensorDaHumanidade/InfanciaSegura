@@ -48,7 +48,7 @@ resource_name = "Auxiliar"
 length = 10.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("../CaixaDialogo/MaoAuxilicar:visible")
+tracks/0/path = NodePath("../CaixaDialogo/Margem/Elementos/BotaoDireita/MaoAuxilicar:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -60,7 +60,7 @@ tracks/0/keys = {
 "values": [ false, true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../CaixaDialogo/MaoAuxilicar:position")
+tracks/1/path = NodePath("../CaixaDialogo/Margem/Elementos/BotaoDireita/MaoAuxilicar:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -69,10 +69,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 6.1, 8, 10 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1800, 800 ), Vector2( 1800, 800 ), Vector2( 1800, 276 ), Vector2( 1800, 276 ) ]
+"values": [ Vector2( 100, 800 ), Vector2( 100, 800 ), Vector2( 100, 276 ), Vector2( 100, 276 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../CaixaDialogo/MaoAuxilicar:scale")
+tracks/2/path = NodePath("../CaixaDialogo/Margem/Elementos/BotaoDireita/MaoAuxilicar:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -84,7 +84,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0.6, 0.6 ), Vector2( 0.6, 0.6 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../CaixaDialogo/MaoAuxilicar:rotation_degrees")
+tracks/3/path = NodePath("../CaixaDialogo/Margem/Elementos/BotaoDireita/MaoAuxilicar:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -244,8 +244,9 @@ margin_right = 223.0
 margin_right = 223.0
 text = "BotaoIr"
 
-[node name="MaoAuxilicar" type="Sprite" parent="CaixaDialogo"]
-position = Vector2( 1800, 303.579 )
+[node name="MaoAuxilicar" type="Sprite" parent="CaixaDialogo/Margem/Elementos/BotaoDireita" index="2"]
+visible = false
+position = Vector2( 100, 800 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 9 )
 offset = Vector2( 0, -200 )

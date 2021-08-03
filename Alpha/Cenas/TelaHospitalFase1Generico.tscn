@@ -1566,7 +1566,7 @@ __meta__ = {
 
 [node name="Linha" type="Line2D" parent="Centro/Tras/Parte26"]
 position = Vector2( -460, 112 )
-points = PoolVector2Array( 230, -120, -10, -120, -10, -202 )
+points = PoolVector2Array( 230, -120, 54, -120, 54, -202 )
 default_color = Color( 0, 0, 0, 1 )
 gradient = SubResource( 15 )
 joint_mode = 2

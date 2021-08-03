@@ -29,6 +29,9 @@ func _ready():
 	Toques.shuffle()
 	atualizarImagem()
 	print("Ordem dos toques: ", Toques)
+	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.HospitalErro3 = 0
 	pass # Replace with function body.
 
 
@@ -103,16 +106,18 @@ func _on_Area_SelecionarImagem(viewport, event, shape_idx):
 						get_node("Meio/Centro/Toque").queue_free()
 						yield(get_tree().create_timer(1.0), "timeout")
 						print("Acabaram as perguntas")
-						Configuracoes.salvar.Cena = "res://Cenas/TelaHospital.tscn"
-						if get_tree().change_scene("res://Cenas/TelaHospital.tscn") == OK:
+						Configuracoes.salvar.Cena = "res://Cenas/TelaHospitalEncerramentoFase3.tscn"
+						if get_tree().change_scene("res://Cenas/TelaHospitalEncerramentoFase3.tscn") == OK:
 							if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 								print("Cena salva!")
-						get_tree().change_scene("res://Cenas/TelaHospital.tscn")
+						else:
+							get_tree().change_scene("res://Cenas/TelaHospital.tscn")
 				else:
 					$Meio/Centro/Toque.scale = Vector2(1, 1)
 					$Meio/Centro/Toque.position = Vector2(0, 0)
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
+					Configuracoes.salvar.HospitalErro3 += 1
 		else:
 			arrastar = true
 			$Meio/Centro/Toque.scale = Vector2(0.9, 0.9)

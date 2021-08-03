@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Cenas/ControleDeslizanteVertical.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
@@ -8,13 +8,24 @@
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=7]
 [ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Mapa versão 1.0.png" type="Texture" id=8]
-[ext_resource path="res://Elementos/Visuais/Icones/Frente.svg" type="Texture" id=9]
 [ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Arvore1.png" type="Texture" id=10]
 [ext_resource path="res://Codigos/ArvorePequena.gd" type="Script" id=11]
 [ext_resource path="res://Elementos/Sonoros/Notificacoes/Arvore.wav" type="AudioStream" id=12]
 [ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Folha.png" type="Texture" id=13]
 [ext_resource path="res://Codigos/Selecionaveis.gd" type="Script" id=14]
-[ext_resource path="res://Elementos/Visuais/Icones/Mao.svg" type="Texture" id=15]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Malfeitora.png" type="Texture" id=16]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Policial.png" type="Texture" id=17]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Pessoa1.png" type="Texture" id=18]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Homem1.png" type="Texture" id=19]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Menina1.png" type="Texture" id=20]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Rosa1.png" type="Texture" id=21]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Loira1.png" type="Texture" id=22]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Morena.png" type="Texture" id=23]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Empresario1.png" type="Texture" id=24]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Cidade sem os personagens.png" type="Texture" id=25]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Bandida.png" type="Texture" id=26]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Meliante.png" type="Texture" id=27]
+[ext_resource path="res://Elementos/Visuais/DelegaciaFase3/Bomzinho.png" type="Texture" id=28]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -4800,7 +4811,7 @@ render_target_update_mode = 3
 [node name="Mundo" type="Sprite" parent="ViewportContainer/Viewport"]
 position = Vector2( 0, -100 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 8 )
+texture = ExtResource( 25 )
 
 [node name="ArvorePequena1" type="Sprite" parent="ViewportContainer/Viewport/Mundo"]
 material = SubResource( 2 )
@@ -5482,11 +5493,639 @@ texture = ExtResource( 13 )
 [node name="Animar" type="AnimationPlayer" parent="ViewportContainer/Viewport/Mundo/ArvorePequena10"]
 anims/Folhas = SubResource( 21 )
 
+[node name="Pessoa" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
+
+[node name="Pessoa1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_left = 853.516
+margin_top = 727.123
+margin_right = 1011.52
+margin_bottom = 974.123
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_left = 2837.77
+margin_top = -328.499
+margin_right = 2995.77
+margin_bottom = -81.4985
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_left = -725.949
+margin_top = -590.42
+margin_right = -567.949
+margin_bottom = -343.42
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_left = -1880.78
+margin_top = -848.372
+margin_right = -1722.78
+margin_bottom = -601.372
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa6" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_left = -2940.37
+margin_top = 159.627
+margin_right = -2782.37
+margin_bottom = 406.627
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa7" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_left = -868.815
+margin_top = 794.588
+margin_right = -710.815
+margin_bottom = 1041.59
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa8" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Pessoa"]
+margin_left = 1222.59
+margin_top = 389.8
+margin_right = 1380.59
+margin_bottom = 636.8
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
+
+[node name="Homem1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = -408.756
+margin_top = 142.866
+margin_right = -261.756
+margin_bottom = 381.866
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = 1231.24
+margin_top = -89.6339
+margin_right = 1378.24
+margin_bottom = 149.366
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = 1466.24
+margin_top = 695.366
+margin_right = 1613.24
+margin_bottom = 934.366
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = 2476.25
+margin_top = -332.134
+margin_right = 2623.25
+margin_bottom = -93.1335
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = 208.745
+margin_top = 767.866
+margin_right = 355.745
+margin_bottom = 1006.87
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem6" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = -1718.12
+margin_top = 180.967
+margin_right = -1571.12
+margin_bottom = 419.967
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem7" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = -1494.74
+margin_top = -499.062
+margin_right = -1347.74
+margin_bottom = -260.062
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem8" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Homem"]
+margin_left = -2934.35
+margin_top = -812.518
+margin_right = -2787.35
+margin_bottom = -573.518
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
+
+[node name="Menina1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = -214.445
+margin_top = -146.085
+margin_right = -154.445
+margin_bottom = 96.9151
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = -926.978
+margin_top = 73.6367
+margin_right = -866.978
+margin_bottom = 316.637
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = -1128.79
+margin_top = -615.898
+margin_right = -1068.79
+margin_bottom = -372.898
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = -2230.37
+margin_top = 325.906
+margin_right = -2170.37
+margin_bottom = 568.906
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = -2932.52
+margin_top = -216.473
+margin_right = -2872.52
+margin_bottom = 26.5275
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina6" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = 1965.71
+margin_top = 119.886
+margin_right = 2025.71
+margin_bottom = 362.886
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina7" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = 1864.8
+margin_top = -384.652
+margin_right = 1924.8
+margin_bottom = -141.652
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina8" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Menina"]
+margin_left = -350.964
+margin_top = 809.421
+margin_right = -290.964
+margin_bottom = 1052.42
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
+
+[node name="Rosa1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = -554.495
+margin_top = -383.666
+margin_right = -466.495
+margin_bottom = -153.666
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = -804.495
+margin_top = -876.166
+margin_right = -716.495
+margin_bottom = -646.166
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = -1904.49
+margin_top = 211.334
+margin_right = -1816.49
+margin_bottom = 441.334
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = 1850.5
+margin_top = 118.834
+margin_right = 1938.5
+margin_bottom = 348.834
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = 2583.01
+margin_top = 446.334
+margin_right = 2671.01
+margin_bottom = 676.334
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa6" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = 678.006
+margin_top = 133.834
+margin_right = 766.006
+margin_bottom = 363.834
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa7" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = -1374.92
+margin_top = 775.668
+margin_right = -1286.92
+margin_bottom = 1005.67
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa8" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Rosa"]
+margin_left = 380.686
+margin_top = 686.0
+margin_right = 468.686
+margin_bottom = 916.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
+
+[node name="Loira1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = -450.428
+margin_top = -42.1399
+margin_right = -366.428
+margin_bottom = 205.86
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = -967.928
+margin_top = -762.14
+margin_right = -883.928
+margin_bottom = -514.14
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = -1810.43
+margin_top = 435.36
+margin_right = -1726.43
+margin_bottom = 683.36
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = -3110.43
+margin_top = -74.6401
+margin_right = -3026.43
+margin_bottom = 173.36
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = 1279.57
+margin_top = 682.86
+margin_right = 1363.57
+margin_bottom = 930.86
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira6" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = 2922.07
+margin_top = 257.86
+margin_right = 3006.07
+margin_bottom = 505.86
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira7" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = 3219.57
+margin_top = -564.64
+margin_right = 3303.57
+margin_bottom = -316.64
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira8" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Loira"]
+margin_left = 1644.57
+margin_top = -192.14
+margin_right = 1728.57
+margin_bottom = 55.8599
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
+
+[node name="Morena1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = -280.0
+margin_top = 32.5
+margin_right = -172.0
+margin_bottom = 280.5
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = 309.272
+margin_top = -381.076
+margin_right = 417.272
+margin_bottom = -133.076
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = 656.246
+margin_top = 691.63
+margin_right = 764.246
+margin_bottom = 939.63
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = -1324.95
+margin_top = 18.8711
+margin_right = -1216.95
+margin_bottom = 266.871
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = -1687.82
+margin_top = 609.522
+margin_right = -1579.82
+margin_bottom = 857.522
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena6" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = -1703.71
+margin_top = -709.51
+margin_right = -1595.71
+margin_bottom = -461.51
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena7" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = -1189.87
+margin_top = -1045.89
+margin_right = -1081.87
+margin_bottom = -797.89
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena8" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Morena"]
+margin_left = 2542.09
+margin_top = 164.547
+margin_right = 2650.09
+margin_bottom = 412.547
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
+
+[node name="Empresario1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = 317.454
+margin_top = -15.9195
+margin_right = 663.454
+margin_bottom = 296.08
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = -1073.51
+margin_top = -113.148
+margin_right = -727.507
+margin_bottom = 198.852
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = -603.77
+margin_top = 882.813
+margin_right = -257.77
+margin_bottom = 1194.81
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = 1768.7
+margin_top = 844.164
+margin_right = 2114.7
+margin_bottom = 1156.16
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = 3332.5
+margin_top = 644.971
+margin_right = 3678.5
+margin_bottom = 956.971
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario6" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = 2066.0
+margin_top = -273.691
+margin_right = 2412.0
+margin_bottom = 38.3086
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario7" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = -2631.37
+margin_top = 222.803
+margin_right = -2285.37
+margin_bottom = 534.803
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario8" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Empresario"]
+margin_left = -1638.38
+margin_top = -570.993
+margin_right = -1292.38
+margin_bottom = -258.993
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Selecionaveis" type="Node2D" parent="ViewportContainer/Viewport/Mundo"]
 script = ExtResource( 14 )
 
 [node name="Pessoa1" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-texture = ExtResource( 9 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5506,22 +6145,22 @@ __meta__ = {
 }
 
 [node name="Meliante1" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 2098.95, -1177.31 )
+position = Vector2( 2015.24, -1502.53 )
 
 [node name="Meliante2" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 2360.58, -868.121 )
+position = Vector2( 2368.91, -1320 )
 
 [node name="Meliante3" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 969.204, -844.337 )
+position = Vector2( 1075.9, -1214.67 )
 
 [node name="Meliante4" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 112.975, -1641.11 )
+position = Vector2( -109.352, -2034.8 )
 
 [node name="Meliante5" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1587.59, -606.496 )
+position = Vector2( 1560.71, -1188.24 )
 
 [node name="Pessoa2" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5540,24 +6179,24 @@ __meta__ = {
 }
 
 [node name="Malfeitora1" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1492.46, 826.499 )
+position = Vector2( 1614.23, 688.094 )
 
 [node name="Malfeitora2" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
 position = Vector2( 2390.31, 309.193 )
 
 [node name="Malfeitora3" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 3169.24, 778.93 )
+position = Vector2( 3164.13, 698.851 )
 
 [node name="Malfeitora4" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 2170.3, 1040.56 )
+position = Vector2( 2170.3, 975.56 )
 
 [node name="Malfeitora5" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1789.76, 648.117 )
+position = Vector2( 1804.78, 499.701 )
 
 [node name="Pessoa3" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
 margin_right = 96.0
 margin_bottom = 96.0
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5576,29 +6215,24 @@ __meta__ = {
 }
 
 [node name="Policial1" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1435.82, 34.3022 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1435.62, -248.51 )
 
 [node name="Policial2" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 898.419, 87.3353 )
-scale = Vector2( 1, 1 )
+position = Vector2( 823.92, -294.721 )
 
 [node name="Policial3" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1061.05, 179.259 )
-scale = Vector2( 1, 1 )
+position = Vector2( 961.418, -36.4874 )
 
 [node name="Policial4" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1167.12, -47.0151 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1076.88, -245.082 )
 
 [node name="Policial5" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1697.45, -82.3704 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1669.04, -435.656 )
 
 [node name="Pessoa4" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
 margin_right = 96.0
 margin_bottom = 96.0
-texture = ExtResource( 15 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5606,40 +6240,34 @@ __meta__ = {
 [node name="Acerto" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Selecionaveis/Pessoa4"]
 visible = false
 self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
-margin_left = -48.0
-margin_top = -48.0
-margin_right = 48.0
-margin_bottom = 48.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 96.0
+margin_bottom = 96.0
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 30, 30 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Bandido1" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -737.55, -952.37 )
-scale = Vector2( 1, 1 )
+position = Vector2( -954.462, -1125.9 )
 
 [node name="Bandido2" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -2872.55, -562.371 )
-scale = Vector2( 1, 1 )
+position = Vector2( -2872.55, -1763.73 )
 
 [node name="Bandido3" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -297.55, 1022.63 )
-scale = Vector2( 1, 1 )
+position = Vector2( -127.358, 882.472 )
 
 [node name="Bandido4" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1237.45, 972.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1506.07, 944.303 )
 
 [node name="Bandido5" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -2302.55, 507.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( -2052.27, 447.561 )
 
 [node name="Pessoa5" type="TextureRect" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
 margin_right = 96.0
 margin_bottom = 96.0
-texture = ExtResource( 15 )
+texture = ExtResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5658,24 +6286,19 @@ __meta__ = {
 }
 
 [node name="Bomzinho1" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 392.45, 142.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( 563.315, 172.062 )
 
 [node name="Bomzinho2" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -897.55, 167.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( -750.718, -62.8567 )
 
 [node name="Bomzinho3" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -1522.55, -222.371 )
-scale = Vector2( 1, 1 )
+position = Vector2( -1459.15, 128.024 )
 
 [node name="Bomzinho4" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -1347.55, 917.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( -1043.87, 807.278 )
 
 [node name="Bomzinho5" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( -2787.55, -122.371 )
-scale = Vector2( 1, 1 )
+position = Vector2( -3376.79, -185.541 )
 
 [node name="AudioAcerto" parent="ViewportContainer/Viewport/Mundo/Selecionaveis" instance=ExtResource( 6 )]
 
@@ -5756,6 +6379,8 @@ __meta__ = {
 text = "Texto Apresentacao."
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
+self_modulate = Color( 1, 1, 1, 1 )
+rect_min_size = Vector2( 175, 290 )
 disabled = true
 ProximaCena = "res://Cenas/TelaPrincipal.tscn"
 
@@ -5763,6 +6388,7 @@ ProximaCena = "res://Cenas/TelaPrincipal.tscn"
 margin_top = 96.0
 margin_right = 175.0
 margin_bottom = 194.0
+rect_min_size = Vector2( 175, 98 )
 
 [node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
 visible = false
@@ -6471,12 +7097,13 @@ anims/Folhas = SubResource( 34 )
 script = ExtResource( 14 )
 
 [node name="Pessoa1" type="TextureRect" parent="Mundo/Selecionaveis"]
-texture = ExtResource( 9 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Acerto" type="TextureRect" parent="Mundo/Selecionaveis/Pessoa1"]
+visible = false
 self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
 margin_left = -48.0
 margin_top = -48.0
@@ -6490,22 +7117,22 @@ __meta__ = {
 }
 
 [node name="Meliante1" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 2098.95, -1177.31 )
+position = Vector2( 2015.24, -1502.53 )
 
 [node name="Meliante2" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 2360.58, -868.121 )
+position = Vector2( 2368.91, -1320 )
 
 [node name="Meliante3" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 969.204, -844.337 )
+position = Vector2( 1075.9, -1214.67 )
 
 [node name="Meliante4" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 112.975, -1641.11 )
+position = Vector2( -109.352, -2034.8 )
 
 [node name="Meliante5" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1587.59, -606.496 )
+position = Vector2( 1560.71, -1188.24 )
 
 [node name="Pessoa2" type="TextureRect" parent="Mundo/Selecionaveis"]
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -6524,24 +7151,24 @@ __meta__ = {
 }
 
 [node name="Malfeitora1" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1492.46, 826.499 )
+position = Vector2( 1614.23, 688.094 )
 
 [node name="Malfeitora2" type="Position2D" parent="Mundo/Selecionaveis"]
 position = Vector2( 2390.31, 309.193 )
 
 [node name="Malfeitora3" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 3169.24, 778.93 )
+position = Vector2( 3164.13, 698.851 )
 
 [node name="Malfeitora4" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 2170.3, 1040.56 )
+position = Vector2( 2170.3, 975.56 )
 
 [node name="Malfeitora5" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1789.76, 648.117 )
+position = Vector2( 1804.78, 499.701 )
 
 [node name="Pessoa3" type="TextureRect" parent="Mundo/Selecionaveis"]
 margin_right = 96.0
 margin_bottom = 96.0
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -6560,29 +7187,24 @@ __meta__ = {
 }
 
 [node name="Policial1" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1435.82, 34.3022 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1435.62, -248.51 )
 
 [node name="Policial2" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 898.419, 87.3353 )
-scale = Vector2( 1, 1 )
+position = Vector2( 823.92, -294.721 )
 
 [node name="Policial3" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1061.05, 179.259 )
-scale = Vector2( 1, 1 )
+position = Vector2( 961.418, -36.4874 )
 
 [node name="Policial4" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1167.12, -47.0151 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1076.88, -245.082 )
 
 [node name="Policial5" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1697.45, -82.3704 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1669.04, -435.656 )
 
 [node name="Pessoa4" type="TextureRect" parent="Mundo/Selecionaveis"]
 margin_right = 96.0
 margin_bottom = 96.0
-texture = ExtResource( 15 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -6590,40 +7212,34 @@ __meta__ = {
 [node name="Acerto" type="TextureRect" parent="Mundo/Selecionaveis/Pessoa4"]
 visible = false
 self_modulate = Color( 0.141176, 0.996078, 0.27451, 1 )
-margin_left = -48.0
-margin_top = -48.0
-margin_right = 48.0
-margin_bottom = 48.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 96.0
+margin_bottom = 96.0
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 30, 30 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Bandido1" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -737.55, -952.37 )
-scale = Vector2( 1, 1 )
+position = Vector2( -954.462, -1125.9 )
 
 [node name="Bandido2" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -2872.55, -562.371 )
-scale = Vector2( 1, 1 )
+position = Vector2( -2872.55, -1763.73 )
 
 [node name="Bandido3" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -297.55, 1022.63 )
-scale = Vector2( 1, 1 )
+position = Vector2( -127.358, 882.472 )
 
 [node name="Bandido4" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 1237.45, 972.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1506.07, 944.303 )
 
 [node name="Bandido5" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -2302.55, 507.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( -2052.27, 447.561 )
 
 [node name="Pessoa5" type="TextureRect" parent="Mundo/Selecionaveis"]
 margin_right = 96.0
 margin_bottom = 96.0
-texture = ExtResource( 15 )
+texture = ExtResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -6642,26 +7258,649 @@ __meta__ = {
 }
 
 [node name="Bomzinho1" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( 392.45, 142.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( 563.315, 172.062 )
 
 [node name="Bomzinho2" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -897.55, 167.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( -750.718, -62.8567 )
 
 [node name="Bomzinho3" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -1522.55, -222.371 )
-scale = Vector2( 1, 1 )
+position = Vector2( -1459.15, 128.024 )
 
 [node name="Bomzinho4" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -1347.55, 917.629 )
-scale = Vector2( 1, 1 )
+position = Vector2( -1043.87, 807.278 )
 
 [node name="Bomzinho5" type="Position2D" parent="Mundo/Selecionaveis"]
-position = Vector2( -2787.55, -122.371 )
-scale = Vector2( 1, 1 )
+position = Vector2( -3376.79, -185.541 )
 
 [node name="AudioAcerto" parent="Mundo/Selecionaveis" instance=ExtResource( 6 )]
+
+[node name="Pessoa" type="Node2D" parent="Mundo"]
+
+[node name="Pessoa1" type="TextureRect" parent="Mundo/Pessoa"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa2" type="TextureRect" parent="Mundo/Pessoa"]
+margin_left = 853.516
+margin_top = 727.123
+margin_right = 1011.52
+margin_bottom = 974.123
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa3" type="TextureRect" parent="Mundo/Pessoa"]
+margin_left = 2837.77
+margin_top = -328.499
+margin_right = 2995.77
+margin_bottom = -81.4985
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa4" type="TextureRect" parent="Mundo/Pessoa"]
+margin_left = -725.949
+margin_top = -590.42
+margin_right = -567.949
+margin_bottom = -343.42
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa5" type="TextureRect" parent="Mundo/Pessoa"]
+margin_left = -1880.78
+margin_top = -848.372
+margin_right = -1722.78
+margin_bottom = -601.372
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa6" type="TextureRect" parent="Mundo/Pessoa"]
+margin_left = -2940.37
+margin_top = 159.627
+margin_right = -2782.37
+margin_bottom = 406.627
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa7" type="TextureRect" parent="Mundo/Pessoa"]
+margin_left = -868.815
+margin_top = 794.588
+margin_right = -710.815
+margin_bottom = 1041.59
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pessoa8" type="TextureRect" parent="Mundo/Pessoa"]
+margin_left = 1222.59
+margin_top = 389.8
+margin_right = 1380.59
+margin_bottom = 636.8
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem" type="Node2D" parent="Mundo"]
+
+[node name="Homem1" type="TextureRect" parent="Mundo/Homem"]
+margin_left = -408.756
+margin_top = 142.866
+margin_right = -261.756
+margin_bottom = 381.866
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem2" type="TextureRect" parent="Mundo/Homem"]
+margin_left = 1231.24
+margin_top = -89.6339
+margin_right = 1378.24
+margin_bottom = 149.366
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem3" type="TextureRect" parent="Mundo/Homem"]
+margin_left = 978.524
+margin_top = 1115.81
+margin_right = 1125.52
+margin_bottom = 1354.81
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem4" type="TextureRect" parent="Mundo/Homem"]
+margin_left = 2476.25
+margin_top = -332.134
+margin_right = 2623.25
+margin_bottom = -93.1335
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem5" type="TextureRect" parent="Mundo/Homem"]
+margin_left = 208.745
+margin_top = 767.866
+margin_right = 355.745
+margin_bottom = 1006.87
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem6" type="TextureRect" parent="Mundo/Homem"]
+margin_left = -1718.12
+margin_top = 180.967
+margin_right = -1571.12
+margin_bottom = 419.967
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem7" type="TextureRect" parent="Mundo/Homem"]
+margin_left = -1494.74
+margin_top = -499.062
+margin_right = -1347.74
+margin_bottom = -260.062
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Homem8" type="TextureRect" parent="Mundo/Homem"]
+margin_left = -2934.35
+margin_top = -812.518
+margin_right = -2787.35
+margin_bottom = -573.518
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina" type="Node2D" parent="Mundo"]
+
+[node name="Menina1" type="TextureRect" parent="Mundo/Menina"]
+margin_left = -214.445
+margin_top = -146.085
+margin_right = -154.445
+margin_bottom = 96.9151
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina2" type="TextureRect" parent="Mundo/Menina"]
+margin_left = -926.978
+margin_top = 73.6367
+margin_right = -866.978
+margin_bottom = 316.637
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina3" type="TextureRect" parent="Mundo/Menina"]
+margin_left = -1128.79
+margin_top = -615.898
+margin_right = -1068.79
+margin_bottom = -372.898
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina4" type="TextureRect" parent="Mundo/Menina"]
+margin_left = -2230.37
+margin_top = 325.906
+margin_right = -2170.37
+margin_bottom = 568.906
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina5" type="TextureRect" parent="Mundo/Menina"]
+margin_left = -2932.52
+margin_top = -216.473
+margin_right = -2872.52
+margin_bottom = 26.5275
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina6" type="TextureRect" parent="Mundo/Menina"]
+margin_left = 1965.71
+margin_top = 119.886
+margin_right = 2025.71
+margin_bottom = 362.886
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina7" type="TextureRect" parent="Mundo/Menina"]
+margin_left = 1864.8
+margin_top = -384.652
+margin_right = 1924.8
+margin_bottom = -141.652
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menina8" type="TextureRect" parent="Mundo/Menina"]
+margin_left = -350.964
+margin_top = 809.421
+margin_right = -290.964
+margin_bottom = 1052.42
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa" type="Node2D" parent="Mundo"]
+
+[node name="Rosa1" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = -554.495
+margin_top = -383.666
+margin_right = -466.495
+margin_bottom = -153.666
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa2" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = -804.495
+margin_top = -876.166
+margin_right = -716.495
+margin_bottom = -646.166
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa3" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = -1904.49
+margin_top = 211.334
+margin_right = -1816.49
+margin_bottom = 441.334
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa4" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = 1850.5
+margin_top = 118.834
+margin_right = 1938.5
+margin_bottom = 348.834
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa5" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = 2583.01
+margin_top = 446.334
+margin_right = 2671.01
+margin_bottom = 676.334
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa6" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = 678.006
+margin_top = 133.834
+margin_right = 766.006
+margin_bottom = 363.834
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa7" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = -1374.92
+margin_top = 775.668
+margin_right = -1286.92
+margin_bottom = 1005.67
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rosa8" type="TextureRect" parent="Mundo/Rosa"]
+margin_left = 380.686
+margin_top = 686.0
+margin_right = 468.686
+margin_bottom = 916.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira" type="Node2D" parent="Mundo"]
+
+[node name="Loira1" type="TextureRect" parent="Mundo/Loira"]
+margin_left = -450.428
+margin_top = -42.1399
+margin_right = -366.428
+margin_bottom = 205.86
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira2" type="TextureRect" parent="Mundo/Loira"]
+margin_left = -967.928
+margin_top = -762.14
+margin_right = -883.928
+margin_bottom = -514.14
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira3" type="TextureRect" parent="Mundo/Loira"]
+margin_left = -1810.43
+margin_top = 435.36
+margin_right = -1726.43
+margin_bottom = 683.36
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira4" type="TextureRect" parent="Mundo/Loira"]
+margin_left = -3110.43
+margin_top = -74.6401
+margin_right = -3026.43
+margin_bottom = 173.36
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira5" type="TextureRect" parent="Mundo/Loira"]
+margin_left = 1279.57
+margin_top = 682.86
+margin_right = 1363.57
+margin_bottom = 930.86
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira6" type="TextureRect" parent="Mundo/Loira"]
+margin_left = 2922.07
+margin_top = 257.86
+margin_right = 3006.07
+margin_bottom = 505.86
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira7" type="TextureRect" parent="Mundo/Loira"]
+margin_left = 3219.57
+margin_top = -564.64
+margin_right = 3303.57
+margin_bottom = -316.64
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loira8" type="TextureRect" parent="Mundo/Loira"]
+margin_left = 1644.57
+margin_top = -192.14
+margin_right = 1728.57
+margin_bottom = 55.8599
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena" type="Node2D" parent="Mundo"]
+
+[node name="Morena1" type="TextureRect" parent="Mundo/Morena"]
+margin_left = -280.0
+margin_top = 32.5
+margin_right = -172.0
+margin_bottom = 280.5
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena2" type="TextureRect" parent="Mundo/Morena"]
+margin_left = 309.272
+margin_top = -381.076
+margin_right = 417.272
+margin_bottom = -133.076
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena3" type="TextureRect" parent="Mundo/Morena"]
+margin_left = 656.246
+margin_top = 691.63
+margin_right = 764.246
+margin_bottom = 939.63
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena4" type="TextureRect" parent="Mundo/Morena"]
+margin_left = -1324.95
+margin_top = 18.8711
+margin_right = -1216.95
+margin_bottom = 266.871
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena5" type="TextureRect" parent="Mundo/Morena"]
+margin_left = -1687.82
+margin_top = 609.522
+margin_right = -1579.82
+margin_bottom = 857.522
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena6" type="TextureRect" parent="Mundo/Morena"]
+margin_left = -1703.71
+margin_top = -709.51
+margin_right = -1595.71
+margin_bottom = -461.51
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena7" type="TextureRect" parent="Mundo/Morena"]
+margin_left = -1189.87
+margin_top = -1045.89
+margin_right = -1081.87
+margin_bottom = -797.89
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Morena8" type="TextureRect" parent="Mundo/Morena"]
+margin_left = 2542.09
+margin_top = 164.547
+margin_right = 2650.09
+margin_bottom = 412.547
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario" type="Node2D" parent="Mundo"]
+
+[node name="Empresario1" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = 317.454
+margin_top = -15.9195
+margin_right = 663.454
+margin_bottom = 296.08
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario2" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = -1073.51
+margin_top = -113.148
+margin_right = -727.507
+margin_bottom = 198.852
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario3" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = -603.77
+margin_top = 882.813
+margin_right = -257.77
+margin_bottom = 1194.81
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario4" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = 1768.7
+margin_top = 844.164
+margin_right = 2114.7
+margin_bottom = 1156.16
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario5" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = 3332.5
+margin_top = 644.971
+margin_right = 3678.5
+margin_bottom = 956.971
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario6" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = 2066.0
+margin_top = -273.691
+margin_right = 2412.0
+margin_bottom = 38.3086
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario7" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = -2631.37
+margin_top = 222.803
+margin_right = -2285.37
+margin_bottom = 534.803
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empresario8" type="TextureRect" parent="Mundo/Empresario"]
+margin_left = -1638.38
+margin_top = -570.993
+margin_right = -1292.38
+margin_bottom = -258.993
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena1/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena1" method="_on_Contorno_torcarArvore"]
 [connection signal="gui_input" from="ViewportContainer/Viewport/Mundo/ArvorePequena2/Contorno" to="ViewportContainer/Viewport/Mundo/ArvorePequena2" method="_on_Contorno_torcarArvore"]

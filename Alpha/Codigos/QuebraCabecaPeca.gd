@@ -115,9 +115,9 @@ func _on_Contorno_arrastar(event):
 #					$Peca_01/Fundo.color = Color(0,0,0,0)
 					self.queue_free()
 					if get_node("/root/TelaDelegaciaFase2").contador > 15:
-						get_node("/root/TelaDelegaciaFase2/AudioAcerto").play()
+#						get_node("/root/TelaDelegaciaFase2/AudioAcerto").play()
 #						yield(get_tree().create_timer(2), "timeout")
-						get_tree().change_scene("res://Cenas/TelaDelegacia.tscn")
+						get_tree().change_scene("res://Cenas/TelaDelegaciaEncerramentoFase2.tscn")
 					
 		else:
 			arrastar = true

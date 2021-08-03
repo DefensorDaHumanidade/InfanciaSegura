@@ -70,8 +70,8 @@ func _on_BotaoVertical_Comando():
 			get_tree().current_scene.atualizarPergunta()
 		else:
 			print("Acabaram as perguntas")
-			Configuracoes.salvar.Cena = "res://Cenas/TelaEscola.tscn"
-			if get_tree().change_scene("res://Cenas/TelaEscola.tscn") == OK:
+			Configuracoes.salvar.Cena = "res://Cenas/TelaEscolaEncerramentoFase1.tscn"
+			if get_tree().change_scene("res://Cenas/TelaEscolaEncerramentoFase1.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 					print("Cena salva: ", Configuracoes.salvar.Cena)
 	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaEscolaFase2":
@@ -80,8 +80,8 @@ func _on_BotaoVertical_Comando():
 			get_tree().current_scene.atualizarPergunta()
 		else:
 			print("Acabaram as perguntas")
-			Configuracoes.salvar.Cena = "res://Cenas/TelaEscola.tscn"
-			if get_tree().change_scene("res://Cenas/TelaEscola.tscn") == OK:
+			Configuracoes.salvar.Cena = "res://Cenas/TelaEscolaEncerramentoFase2.tscn"
+			if get_tree().change_scene("res://Cenas/TelaEscolaEncerramentoFase2.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 					print("Cena salva: ", Configuracoes.salvar.Cena)
 	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaEscolaFase3":
@@ -90,8 +90,8 @@ func _on_BotaoVertical_Comando():
 			get_tree().current_scene.atualizarPergunta()
 		else:
 			print("Acabaram as perguntas")
-			Configuracoes.salvar.Cena = "res://Cenas/TelaEscola.tscn"
-			if get_tree().change_scene("res://Cenas/TelaEscola.tscn") == OK:
+			Configuracoes.salvar.Cena = "res://Cenas/TelaEscolaEncerramentoFase3.tscn"
+			if get_tree().change_scene("res://Cenas/TelaEscolaEncerramentoFase3.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 					print("Cena salva: ", Configuracoes.salvar.Cena)
 
@@ -110,8 +110,8 @@ func _on_BotaoVertical_Comando():
 			get_tree().current_scene.proximaPergunta()
 		else:
 			print("Acabaram as perguntas")
-			Configuracoes.salvar.Cena = "res://Cenas/TelaInternet.tscn"
-			if get_tree().change_scene("res://Cenas/TelaInternet.tscn") == OK:
+			Configuracoes.salvar.Cena = "res://Cenas/TelaInternetEncerramentoFase2.tscn"
+			if get_tree().change_scene("res://Cenas/TelaInternetEncerramentoFase2.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 					print("Cena salva: ", Configuracoes.salvar.Cena)
 	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaInternetFase3":
@@ -120,8 +120,8 @@ func _on_BotaoVertical_Comando():
 			get_tree().current_scene.proximaPergunta()
 		else:
 			print("Acabaram as perguntas")
-			Configuracoes.salvar.Cena = "res://Cenas/TelaInternet.tscn"
-			if get_tree().change_scene("res://Cenas/TelaInternet.tscn") == OK:
+			Configuracoes.salvar.Cena = "res://Cenas/TelaInternetEncerramentoFase3.tscn"
+			if get_tree().change_scene("res://Cenas/TelaInternetEncerramentoFase3.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 					print("Cena salva: ", Configuracoes.salvar.Cena)
 	if name == "BotaoDireita" and get_tree().current_scene.name == "TelaInternetFase1":
@@ -130,8 +130,8 @@ func _on_BotaoVertical_Comando():
 			get_tree().current_scene.carregarColunas()
 		else:
 			print("Acabaram as perguntas")
-			Configuracoes.salvar.Cena = "res://Cenas/TelaInternet.tscn"
-			if get_tree().change_scene("res://Cenas/TelaInternet.tscn") == OK:
+			Configuracoes.salvar.Cena = "res://Cenas/TelaInternetEncerramentoFase1.tscn"
+			if get_tree().change_scene("res://Cenas/TelaInternetEncerramentoFase1.tscn") == OK:
 				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 					print("Cena salva: ", Configuracoes.salvar.Cena)
 	pass # Replace with function body.

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaInternetFase1_Encerramento.mp3-5a36839223ef4044ff803c08afa38776.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaInternetFase1_Encerramento.mp3"
+dest_files=[ "res://.import/TelaInternetFase1_Encerramento.mp3-5a36839223ef4044ff803c08afa38776.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

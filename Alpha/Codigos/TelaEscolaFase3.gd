@@ -30,6 +30,9 @@ func _ready():
 	PerguntasFase3.shuffle()
 	atualizarPergunta()
 	print("Ordem das perguntas: ", PerguntasFase3)
+	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.EscolaErro3 = 0
 	pass # Replace with function body.
 
 
@@ -37,8 +40,8 @@ func _ready():
 func atualizarPergunta():
 	$Transicao/Animar.play("Inicio")
 	print("Pergunta atual [", indicePergunta, "]: ", PerguntasFase3[indicePergunta][21],PerguntasFase3[indicePergunta][22])
-	$Certo.texture_normal = load("res://Elementos/Visuais/EscolaFase1/Pergunta_" + str(PerguntasFase3[indicePergunta][21],PerguntasFase3[indicePergunta][22]) + "-Certo.png")
-	$Errado.texture_normal = load("res://Elementos/Visuais/EscolaFase1/Pergunta_" + str(PerguntasFase3[indicePergunta][21],PerguntasFase3[indicePergunta][22]) + "-Errado.png")
+	$Certo.texture_normal = load("res://Elementos/Visuais/EscolaFase3/Pergunta_" + str(PerguntasFase3[indicePergunta][21],PerguntasFase3[indicePergunta][22]) + "-Certo.png")
+	$Errado.texture_normal = load("res://Elementos/Visuais/EscolaFase3/Pergunta_" + str(PerguntasFase3[indicePergunta][21],PerguntasFase3[indicePergunta][22]) + "-Errado.png")
 	$CaixaDialogo/Margem/Elementos/BotaoDireita.disabled = true
 	$CaixaDialogo/Margem/Elementos/BotaoDireita.modulate = Color(1, 1, 1, 0.5)
 	$Certo/Acerto.visible = false
@@ -118,6 +121,8 @@ func _on_Errado_Estado_3():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
+	
+	Configuracoes.salvar.EscolaErro3 += 1
 #	if estado_botao:
 #		$Errado/Contorno.editor_only = false
 #		$Certo/Contorno.editor_only = true

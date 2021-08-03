@@ -33,7 +33,8 @@ func _ready():
 	atualizarPergunta()
 	print("Ordem das perguntas: ", PerguntasFase1)
 	
-	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.EscolaErro1 = 0
 	
 	pass # Replace with function body.
 
@@ -45,7 +46,7 @@ func _ready():
 
 
 func atualizarPergunta():
-	$CaixaDialogo/MaoAuxilicar.visible = false
+	$CaixaDialogo/Margem/Elementos/BotaoDireita/MaoAuxilicar.visible = false
 	$Camera/Animar.stop()
 	tempo = OS.get_unix_time()
 	print("Tempooo: ", tempo)
@@ -138,7 +139,8 @@ func _on_Errado_Estado():
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
 	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PerguntasFase1[indicePergunta][21])+int(PerguntasFase1[indicePergunta][22])+28)+"&veredito="+"0"+"&TI="+str(tempo)+"&TF="+"0"+"&resposta="+"imagem errada")
-
+	
+	Configuracoes.salvar.EscolaErro1 += 1
 #	if estado_botao:
 #		$Errado/Contorno.editor_only = false
 #		$Certo/Contorno.editor_only = true

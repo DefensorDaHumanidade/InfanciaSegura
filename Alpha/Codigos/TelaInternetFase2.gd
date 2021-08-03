@@ -30,7 +30,8 @@ func _ready():
 	print(PedidosFase2)
 	proximaPergunta()
 	
-	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.InternetErro2 = 0
 #	$Tela/Coluna/ListaInformacoes/Texto.set("custom_fonts/normal_font/settings/font_data", "res://Elementos/Visuais/Fontes/AgencyFB/AGENCYB.TTF")
 #	$Tela/Coluna/ListaInformacoes/Texto.set("custom_fonts/normal_font/settings/size", 160)
 #	$Tela/Coluna/ListaInformacoes/Texto.visible_characters = $Tela/Coluna/ListaInformacoes/Texto.get_text().length()
@@ -97,6 +98,7 @@ func errouResposta():
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	$AudioErro.play()
 	$Camera/Animar.play("Tremer")
+	Configuracoes.salvar.InternetErro2 += 1
 	pass
 	
 func acertouResposta():

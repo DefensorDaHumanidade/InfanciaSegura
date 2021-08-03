@@ -6,12 +6,22 @@ extends TextureButton
 # var b = "text"
 
 export (String) var ProximaCena
+export (String) var Tutorial
 export (String) var TocarMusica
 export (bool) var TrocarCena = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	atualizandoIcones()
+	if TranslationServer.get_locale() == "pt_BR" or TranslationServer.get_locale() == "pt":
+		if name == "BotaoBrasil":
+			self.pressed = true
+	if TranslationServer.get_locale() == "es_ES":
+		if name == "BotaoEspanha":
+			self.pressed = true
+	if TranslationServer.get_locale() == "en_GB":
+		if name == "BotaoInglaterra":
+			self.pressed = true
 	pass # Replace with function body.
 
 
@@ -24,6 +34,22 @@ func atualizandoIcones():
 	if name != "Hospital" and name != "Escola" and name != "Delegacia" and name != "Internet" and name != "BotaoBrasil" and name != "BotaoEspanha" and name != "BotaoInglaterra" and name != "BotaoSair" and name != "BotaoAceitar" and name != "BotaoRecusar": 
 		$ConteinerHorizontal/Icone.visible = false
 		$ConteinerHorizontal.alignment = BoxContainer.ALIGN_CENTER
+	if name == "BotaoHospital":
+		$ConteinerHorizontal/Icone.visible = true
+		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Maleta.svg")
+		self_modulate = Color(0.0, 0.8, 1, 1)
+	if name == "BotaoEscola":
+		$ConteinerHorizontal/Icone.visible = true
+		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Livro.png")
+		self_modulate = Color(1, 1, 0, 1)
+	if name == "BotaoInternet":
+		$ConteinerHorizontal/Icone.visible = true
+		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Arroba.svg")
+		self_modulate = Color(0, 0.9, 0, 1)
+	if name == "BotaoDelegacia":
+		$ConteinerHorizontal/Icone.visible = true
+		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Sirene.svg")
+		self_modulate = Color(1, 0.3, 0.3, 1)
 	if name == "Hospital":
 		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Maleta.svg")
 		self_modulate = Color(0.0, 0.8, 1, 1)
@@ -38,6 +64,10 @@ func atualizandoIcones():
 		self_modulate = Color(0, 0.9, 0, 1)
 	if name == "Jogar":
 		self_modulate = Color(0, 0.8, 0.2, 1)
+	if name == "Menino":
+		self_modulate = Color(0, 0.9, 0.9, 1)
+	if name == "Menina":
+		self_modulate = Color(0, 0.9, 0.9, 1)
 	if name == "BotaoBrasil":
 		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Bandeiras/Brasil.svg")
 		self_modulate = Color(0, 0.9, 0.9, 1)
@@ -45,7 +75,7 @@ func atualizandoIcones():
 		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Bandeiras/Espanha.svg")
 		self_modulate = Color(0, 0.9, 0.9, 1)
 	if name == "BotaoInglaterra":
-		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Bandeiras/Inglaterra.svg")
+		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Bandeiras/Inglaterra.png")
 		self_modulate = Color(0, 0.9, 0.9, 1)
 	if name == "BotaoSair":
 		$ConteinerHorizontal/Icone.texture = load("res://Elementos/Visuais/Icones/Sair.svg")
@@ -73,6 +103,10 @@ func _on_BotaoHorizontal_Selecionado():
 	$Som.play()
 	$ConteinerHorizontal.modulate = Color(0.5, 0.5, 0.5, 1)
 	$ConteinerHorizontal.rect_position.y = $ConteinerHorizontal.rect_position.y + 15
+	if name == "Menino":
+		Configuracoes.salvar.Genero = "Menino"
+	if name == "Menina":
+		Configuracoes.salvar.Genero = "Menina"
 	pass # Replace with function body.
 
 
@@ -85,26 +119,42 @@ func _on_BotaoHorizontal_Solto():
 
 func _on_BotaoHorizontal_Comando():
 	print("Realizando acao do botao: ", name)
-	if name == "BotaoBrasil":
-		TranslationServer.set_locale("pt_BR")
-	if name == "BotaoEspanha":
-		TranslationServer.set_locale("es_ES")
-	if name == "BotaoInglaterra":
-		TranslationServer.set_locale("en_GB")
 	if name == "BotaoSair":
+		Configuracoes.salvar.Cena = ""
+		Configuracoes.salvar.Musica = ""
 		Configuracoes.salvar.Identificador = ""
 		if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 			print("Saindo, muito obrigado por jogar!")
-		get_tree().quit()
-	if TrocarCena:
+		get_tree().change_scene("res://Cenas/TelaCarregamento.tscn")
 		get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
-		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarJogadores.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&tela="+ProximaCena)
-		if get_tree().change_scene(ProximaCena) == OK:
-			Configuracoes.salvar.Cena = ProximaCena
-			Configuracoes.salvar.NomeMusica = TocarMusica
-			Configuracoes.gerenciarMusicas()
-			if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
-				print("Cena salva: ", ProximaCena)
+#		get_tree().quit()
+	if TrocarCena:
+		if get_parent().get_node_or_null("Tutorial") != null:
+			if not get_parent().get_node("Tutorial").pressed:
+				if get_tree().change_scene(Tutorial) == OK:
+					Configuracoes.salvar.Cena = Tutorial
+					Configuracoes.salvar.NomeMusica = TocarMusica
+					Configuracoes.gerenciarMusicas()
+					if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+						print("Cena salva: ", Tutorial)
+			else:
+				get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
+				Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarJogadores.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&tela="+ProximaCena)
+				if get_tree().change_scene(ProximaCena) == OK:
+					Configuracoes.salvar.Cena = ProximaCena
+					Configuracoes.salvar.NomeMusica = TocarMusica
+					Configuracoes.gerenciarMusicas()
+					if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+						print("Cena salva: ", ProximaCena)
+		else:
+			get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
+			Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarJogadores.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&tela="+ProximaCena)
+			if get_tree().change_scene(ProximaCena) == OK:
+				Configuracoes.salvar.Cena = ProximaCena
+				Configuracoes.salvar.NomeMusica = TocarMusica
+				Configuracoes.gerenciarMusicas()
+				if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+					print("Cena salva: ", ProximaCena)
 	else:
 		print("Cena nao encontrada")
 		if get_tree().get_current_scene().get_name() == "TelaCadastro":
@@ -128,6 +178,22 @@ func _on_BotaoHorizontal_Comando():
 
 
 func _on_BotaoHorizontal_estado(estado):
+	if self.pressed:
+		if name == "BotaoBrasil":
+			TranslationServer.set_locale("pt_BR")
+#			get_parent().get_node("BotaoBrasil").pressed = true
+			get_parent().get_node("BotaoEspanha").pressed = false
+			get_parent().get_node("BotaoInglaterra").pressed = false
+		if name == "BotaoEspanha":
+			TranslationServer.set_locale("es_ES")
+			get_parent().get_node("BotaoBrasil").pressed = false
+#			get_parent().get_node("BotaoEspanha").pressed = true
+			get_parent().get_node("BotaoInglaterra").pressed = false
+		if name == "BotaoInglaterra":
+			TranslationServer.set_locale("en_GB")
+#			get_parent().get_node("BotaoInglaterra").pressed = true
+			get_parent().get_node("BotaoEspanha").pressed = false
+			get_parent().get_node("BotaoBrasil").pressed = false
 #	print("MUHAHAHHAHAHAHAHHAHAHAHHAHAHAHHAHA ",name)
 	var condicao = true
 	if name == "BotaoRecusar":

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaHospitalFase2_Encerramento.mp3-37a6ccec50e24e4ab557b0bdf580ac0a.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaHospitalFase2_Encerramento.mp3"
+dest_files=[ "res://.import/TelaHospitalFase2_Encerramento.mp3-37a6ccec50e24e4ab557b0bdf580ac0a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

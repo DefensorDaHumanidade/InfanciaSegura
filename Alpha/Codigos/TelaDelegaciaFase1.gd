@@ -37,6 +37,7 @@ func _ready():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/DelegaciaFase1_Inicio.mp3"))
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
 	pass # Replace with function body.
 
 

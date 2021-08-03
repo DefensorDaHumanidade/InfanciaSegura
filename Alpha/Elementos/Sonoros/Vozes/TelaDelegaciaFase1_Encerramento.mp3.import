@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TelaDelegaciaFase1_Encerramento.mp3-77d977a69441e16749a867dea523e5d3.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/TelaDelegaciaFase1_Encerramento.mp3"
+dest_files=[ "res://.import/TelaDelegaciaFase1_Encerramento.mp3-77d977a69441e16749a867dea523e5d3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

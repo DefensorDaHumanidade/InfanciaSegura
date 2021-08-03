@@ -78,7 +78,7 @@ margin_bottom = 375.0
 mouse_filter = 2
 
 [node name="Panel" type="Sprite" parent="Tela/Centro"]
-self_modulate = Color( 0.588235, 1, 0.921569, 1 )
+self_modulate = Color( 0.901961, 1, 0.635294, 1 )
 texture = ExtResource( 3 )
 
 [node name="Lista" type="VBoxContainer" parent="Tela/Centro/Panel"]
@@ -285,9 +285,6 @@ text = "TextoRecorde"
 scroll_active = false
 
 [node name="CaixaDialogo" parent="." instance=ExtResource( 2 )]
-
-[node name="Fundo" parent="CaixaDialogo" index="0"]
-self_modulate = Color( 0.588235, 1, 0.921569, 1 )
 
 [node name="Texto" parent="CaixaDialogo/Margem/Elementos/Campo/Margem" index="0"]
 text = "Texto Apresentacao."

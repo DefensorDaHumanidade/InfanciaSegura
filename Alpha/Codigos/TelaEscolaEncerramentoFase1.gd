@@ -11,7 +11,7 @@ func _ready():
 	if name == "TelaEscolaEncerramentoFase1":
 		Configuracoes.salvar.EscolaTempo1 = OS.get_unix_time() - Configuracoes.salvar.TempoAuxiliar
 		
-		if Configuracoes.salvar.EscolaTempo1 < Configuracoes.salvar.EscolaMenorTempo1 or Configuracoes.salvar.EscolaMenorTempo1 == 0: 
+		if Configuracoes.salvar.EscolaTempo1 < Configuracoes.salvar.EscolaMenorTempo1 or Configuracoes.salvar.EscolaMenorTempo1 <= 0: 
 			Configuracoes.salvar.EscolaMenorTempo1 = Configuracoes.salvar.EscolaTempo1
 			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Recorde.visible = true
 		else:
@@ -27,6 +27,48 @@ func _ready():
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorErro1)
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.EscolaTempo1, " s")
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorTempo1, " s")
+	
+	if name == "TelaEscolaEncerramentoFase2":
+		Configuracoes.salvar.EscolaTempo2 = OS.get_unix_time() - Configuracoes.salvar.TempoAuxiliar
+		
+		if Configuracoes.salvar.EscolaTempo2 < Configuracoes.salvar.EscolaMenorTempo2 or Configuracoes.salvar.EscolaMenorTempo2 <= 0: 
+			Configuracoes.salvar.EscolaMenorTempo2 = Configuracoes.salvar.EscolaTempo2
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Recorde.visible = true
+		else:
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Recorde.visible = false
+		
+		if Configuracoes.salvar.EscolaErro2 < Configuracoes.salvar.EscolaMenorErro2 or Configuracoes.salvar.EscolaErro2 == 999:
+			Configuracoes.salvar.EscolaMenorErro2 = Configuracoes.salvar.EscolaErro2
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/Recorde.visible = true
+		else:
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/Recorde.visible = false
+		
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/Coluna/Valor.text = str(Configuracoes.salvar.EscolaErro2)
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorErro2)
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.EscolaTempo2, " s")
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorTempo2, " s")
+	
+	if name == "TelaEscolaEncerramentoFase3":
+		Configuracoes.salvar.EscolaTempo3 = OS.get_unix_time() - Configuracoes.salvar.TempoAuxiliar
+		
+		if Configuracoes.salvar.EscolaTempo3 < Configuracoes.salvar.EscolaMenorTempo3 or Configuracoes.salvar.EscolaMenorTempo3 <= 0: 
+			Configuracoes.salvar.EscolaMenorTempo3 = Configuracoes.salvar.EscolaTempo3
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Recorde.visible = true
+		else:
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Recorde.visible = false
+		
+		if Configuracoes.salvar.EscolaErro3 < Configuracoes.salvar.EscolaMenorErro3 or Configuracoes.salvar.EscolaErro3 == 999:
+			Configuracoes.salvar.EscolaMenorErro3 = Configuracoes.salvar.EscolaErro3
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/Recorde.visible = true
+		else:
+			$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/Recorde.visible = false
+		
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/Coluna/Valor.text = str(Configuracoes.salvar.EscolaErro3)
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorErro3)
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.EscolaTempo3, " s")
+		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorTempo3, " s")
+	if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
+		print("Dados salvos!")
 	pass # Replace with function body.
 
 

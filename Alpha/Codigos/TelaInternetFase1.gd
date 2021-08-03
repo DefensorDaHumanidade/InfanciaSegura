@@ -36,7 +36,8 @@ func _ready():
 #	carregarColunas()
 #	yield(get_tree().create_timer(4.5), "timeout")
 #	carregarColunas()
-	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.InternetErro1 = 0
 	pass # Replace with function body.
 
 
@@ -126,4 +127,5 @@ func errouPessoa():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/InternetFase1_RespostaErrada_0"+ str(elementosCertos[indicePergunta-1]) + ".mp3"))
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+	Configuracoes.salvar.InternetErro1 += 1
 	pass

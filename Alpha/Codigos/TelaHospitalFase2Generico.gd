@@ -22,6 +22,9 @@ func _ready():
 		$Centro/Cena/CorpoHumano.flip_h = true
 		$Centro/Cena/CorpoHumano.position = Vector2(30, 0)
 		$Centro/Cena/Parte3/Texto.text = "ParteVulva"
+	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.HospitalErro2 = 0
 	pass # Replace with function body.
 
 
@@ -48,20 +51,22 @@ func _on_Contorno_arrastarParte(event):
 						$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.scale = Vector2(1, 1)
 						$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.position = Vector2(740, 150)
 					else:
-						$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.text = "cabooooooo"
+						$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.text = "Fim"
 						$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.queue_free()
 						yield(get_tree().create_timer(1.0), "timeout")
 						print("Acabaram as perguntas")
-						Configuracoes.salvar.Cena = "res://Cenas/TelaHospital.tscn"
-						if get_tree().change_scene("res://Cenas/TelaHospital.tscn") == OK:
+						Configuracoes.salvar.Cena = "res://Cenas/TelaHospitalEncerramentoFase2.tscn"
+						if get_tree().change_scene("res://Cenas/TelaHospitalEncerramentoFase2.tscn") == OK:
 							if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 								print("Cena salva!")
-						get_tree().change_scene("res://Cenas/TelaHospital.tscn")
+						else:
+							get_tree().change_scene("res://Cenas/TelaHospital.tscn")
 				else:
 					$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.scale  = Vector2(1, 1)
 					$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.position  = Vector2(740, 150)
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
+					Configuracoes.salvar.HospitalErro2 += 1
 		else:
 			arrastar = true
 			$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Audio.play()
@@ -111,6 +116,7 @@ func _on_Area_ParteEntrou(area):
 		area.get_parent().get_parent().visible and area.get_parent().get_node("Contorno").border_color == Color(0, 0, 0, 1):
 			print("Parte Privada: ", area.get_parent().get_node("Texto").text)
 			if area.get_parent().get_node("Texto").text == "ParteVulva" or \
+			area.get_parent().get_node("Texto").text == "PartePenis" or \
 			area.get_parent().get_node("Texto").text == "ParteBoca":
 				ultimaParte = str("Cena/"+area.get_parent().name)
 				estado = true

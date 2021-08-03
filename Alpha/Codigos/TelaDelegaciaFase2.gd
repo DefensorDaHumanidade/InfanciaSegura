@@ -66,6 +66,7 @@ func _ready():
 #
 	
 	verificaSobreposicao()
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
 	pass # Replace with function body.
 
 

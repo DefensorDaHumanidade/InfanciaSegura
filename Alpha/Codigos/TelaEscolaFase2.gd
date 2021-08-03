@@ -29,6 +29,10 @@ func _ready():
 	PerguntasFase2.shuffle()
 	atualizarPergunta()
 	print("Ordem das perguntas: ", PerguntasFase2)
+	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.EscolaErro2 = 0
+	
 	pass # Replace with function body.
 
 
@@ -116,6 +120,8 @@ func _on_Errado_Estado_2():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
+	
+	Configuracoes.salvar.EscolaErro2 += 1
 #	if estado_botao:
 #		$Errado/Contorno.editor_only = false
 #		$Certo/Contorno.editor_only = true

@@ -11,7 +11,7 @@
 [ext_resource path="res://Elementos/Visuais/Fundo/Infantil.jpg" type="Texture" id=9]
 [ext_resource path="res://Codigos/Animar.gd" type="Script" id=10]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "Fundo"
 length = 30.0
 loop = true
@@ -28,7 +28,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( -1110, -840 ) ]
 }
 
-[sub_resource type="StyleBoxTexture" id=1]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 459, 141 )
 margin_left = 10.0
@@ -36,7 +36,7 @@ margin_right = 6.22905
 margin_top = 6.22905
 margin_bottom = 6.40791
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 60
 font_data = ExtResource( 5 )
 
@@ -60,7 +60,7 @@ centered = false
 
 [node name="Animar" type="AnimationPlayer" parent="."]
 autoplay = "Fundo"
-anims/Fundo = SubResource( 3 )
+anims/Fundo = SubResource( 1 )
 script = ExtResource( 10 )
 
 [node name="Personagem" parent="." instance=ExtResource( 1 )]
@@ -117,8 +117,8 @@ modulate = Color( 0.588235, 1, 1, 1 )
 margin_right = 460.0
 margin_bottom = 154.0
 rect_min_size = Vector2( 460, 0 )
-custom_styles/normal = SubResource( 1 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0.784314, 0.784314, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0.352941, 1 )
@@ -134,7 +134,7 @@ __meta__ = {
 margin_left = 485.0
 margin_right = 944.0
 margin_bottom = 154.0
-ProximaCena = "res://Cenas/TelaPrincipal.tscn"
+ProximaCena = "res://Cenas/TelaGenero.tscn"
 TocarMusica = "res://Elementos/Sonoros/Musiscas/Abertura.wav"
 TrocarCena = true
 

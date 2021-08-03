@@ -40,9 +40,12 @@ func _ready():
 		else:
 			get_node("Centro/Tras/").get_node("Parte"+str(Partes[indice])).get_node("Texto").visible = false
 			get_node("Centro/Tras/").get_node("Parte"+str(Partes[indice])).get_node("Auxiliar").text = "1"
-			
-	
+
+
 	atualizarParte()
+	
+	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
+	Configuracoes.salvar.HospitalErro1 = 0
 	pass # Replace with function body.
 
 
@@ -105,17 +108,19 @@ func _on_Contorno_arrastarParte(event):
 						$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.queue_free()
 						yield(get_tree().create_timer(1.0), "timeout")
 						print("Acabaram as perguntas")
-						Configuracoes.salvar.Cena = "res://Cenas/TelaHospital.tscn"
-						if get_tree().change_scene("res://Cenas/TelaHospital.tscn") == OK:
+						Configuracoes.salvar.Cena = "res://Cenas/TelaHospitalEncerramentoFase1.tscn"
+						if get_tree().change_scene("res://Cenas/TelaHospitalEncerramentoFase1.tscn") == OK:
 							if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 								print("Cena salva!")
-						get_tree().change_scene("res://Cenas/TelaHospital.tscn")
+						else:
+							get_tree().change_scene("res://Cenas/TelaHospital.tscn")
 				else:
 					$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.scale = Vector2(1, 1)
 					$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.position =Vector2(740, 150)
 					
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
+					Configuracoes.salvar.HospitalErro1 += 1
 		else:
 			arrastar = true
 			$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Audio.play()
@@ -131,7 +136,10 @@ func _on_Area_entrou(area):
 		if get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto").text == area.get_parent().get_node("Texto").text:
 			estado = true
 		else:
-			estado = false
+			if area.get_parent().get_node("Texto").visible == false:
+				estado = false
+			else:
+				estado = null
 	pass # Replace with function body.
 
 

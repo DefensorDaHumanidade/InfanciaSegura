@@ -59,8 +59,11 @@ text = "DelegaciaFase1_Inicio"
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
 visible = false
-ProximaCena = "res://Cenas/TelaPrincipal.tscn"
+ProximaCena = "res://Cenas/TelaDelegaciaEncerramentoFase1.tscn"
 TrocarCena = true
+
+[node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
+text = "BotaoIr"
 
 [node name="ColunaNumeros" type="HBoxContainer" parent="."]
 anchor_top = 0.5
@@ -224,7 +227,6 @@ stretch_mode = 5
 [node name="Corda" parent="ColunaLogos/Logo1" instance=ExtResource( 1 )]
 modulate = Color( 1, 0.552941, 0.0745098, 1 )
 position = Vector2( 140, 230 )
-z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false
@@ -243,7 +245,6 @@ stretch_mode = 5
 [node name="Corda" parent="ColunaLogos/Logo2" instance=ExtResource( 1 )]
 modulate = Color( 1, 0.215686, 0.215686, 1 )
 position = Vector2( 140, 230 )
-z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false
@@ -262,7 +263,6 @@ stretch_mode = 5
 [node name="Corda" parent="ColunaLogos/Logo3" instance=ExtResource( 1 )]
 modulate = Color( 0.129412, 0.666667, 0, 1 )
 position = Vector2( 140, 230 )
-z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false
@@ -281,7 +281,6 @@ stretch_mode = 5
 [node name="Corda" parent="ColunaLogos/Logo4" instance=ExtResource( 1 )]
 modulate = Color( 1, 0.929412, 0.168627, 1 )
 position = Vector2( 140, 230 )
-z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false
@@ -300,7 +299,6 @@ stretch_mode = 5
 [node name="Corda" parent="ColunaLogos/Logo5" instance=ExtResource( 1 )]
 modulate = Color( 0.917647, 0.180392, 1, 1 )
 position = Vector2( 140, 230 )
-z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false
@@ -319,7 +317,6 @@ stretch_mode = 5
 [node name="Corda" parent="ColunaLogos/Logo6" instance=ExtResource( 1 )]
 modulate = Color( 0.117647, 0, 0.929412, 1 )
 position = Vector2( 140, 230 )
-z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false
@@ -337,7 +334,6 @@ stretch_mode = 5
 
 [node name="Corda" parent="ColunaLogos/Logo7" instance=ExtResource( 1 )]
 position = Vector2( 140, 230 )
-z_index = 1
 ropeLength = 90.0
 constrain = 10.0
 endPin = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Cenas/BotaoHorizontal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/FonteAgencyFB.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/Tutorial.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fundo"
@@ -70,6 +71,62 @@ text = "Delegacia"
 align = 1
 valign = 1
 
+[node name="Fases2" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.4
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -229.5
+margin_top = -235.0
+margin_right = 229.5
+margin_bottom = 235.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fase1" parent="Fases2" groups=[
+"BotoesDelegacia",
+] instance=ExtResource( 4 )]
+margin_right = 459.0
+margin_bottom = 154.0
+ProximaCena = "res://Cenas/TelaDelegaciaFase1.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
+TrocarCena = true
+
+[node name="Texto" parent="Fases2/Fase1/ConteinerHorizontal" index="1"]
+margin_right = 472.0
+text = "BotaoFase_1"
+
+[node name="Fase2" parent="Fases2" groups=[
+"BotoesDelegacia",
+] instance=ExtResource( 4 )]
+margin_top = 174.0
+margin_right = 459.0
+margin_bottom = 328.0
+ProximaCena = "res://Cenas/TelaDelegaciaFase2.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
+TrocarCena = true
+
+[node name="Texto" parent="Fases2/Fase2/ConteinerHorizontal" index="1"]
+margin_right = 482.0
+text = "BotaoFase_2"
+
+[node name="Fase3" parent="Fases2" groups=[
+"BotoesDelegacia",
+] instance=ExtResource( 4 )]
+margin_top = 348.0
+margin_right = 459.0
+margin_bottom = 502.0
+ProximaCena = "res://Cenas/TelaDelegaciaFase3.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
+TrocarCena = true
+
+[node name="Texto" parent="Fases2/Fase3/ConteinerHorizontal" index="1"]
+margin_right = 482.0
+text = "BotaoFase_3"
+
 [node name="Fases" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.4
@@ -84,50 +141,83 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Fase1" parent="Fases" groups=[
+[node name="Coluna1" type="HBoxContainer" parent="Fases"]
+margin_right = 623.0
+margin_bottom = 154.0
+
+[node name="Fase1" parent="Fases/Coluna1" groups=[
 "BotoesDelegacia",
 ] instance=ExtResource( 4 )]
 margin_right = 459.0
 margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaDelegaciaFase1.tscn"
+Tutorial = "res://Cenas/TelaDelegaciaTutorialFase1.tscn"
 TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
 TrocarCena = true
 
-[node name="Texto" parent="Fases/Fase1/ConteinerHorizontal" index="1"]
+[node name="Texto" parent="Fases/Coluna1/Fase1/ConteinerHorizontal" index="1"]
 margin_right = 472.0
 text = "BotaoFase_1"
 
-[node name="Fase2" parent="Fases" groups=[
+[node name="Tutorial" parent="Fases/Coluna1" instance=ExtResource( 7 )]
+self_modulate = Color( 1, 0.301961, 0.443137, 1 )
+margin_left = 463.0
+margin_right = 623.0
+
+[node name="Coluna2" type="HBoxContainer" parent="Fases"]
+margin_top = 174.0
+margin_right = 623.0
+margin_bottom = 328.0
+
+[node name="Fase2" parent="Fases/Coluna2" groups=[
 "BotoesDelegacia",
 ] instance=ExtResource( 4 )]
-margin_top = 174.0
 margin_right = 459.0
-margin_bottom = 328.0
+margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaDelegaciaFase2.tscn"
+Tutorial = "res://Cenas/TelaDelegaciaTutorialFase2.tscn"
 TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
 TrocarCena = true
 
-[node name="Texto" parent="Fases/Fase2/ConteinerHorizontal" index="1"]
+[node name="Texto" parent="Fases/Coluna2/Fase2/ConteinerHorizontal" index="1"]
 margin_right = 482.0
 text = "BotaoFase_2"
 
-[node name="Fase3" parent="Fases" groups=[
+[node name="Tutorial" parent="Fases/Coluna2" instance=ExtResource( 7 )]
+self_modulate = Color( 1, 0.301961, 0.443137, 1 )
+margin_left = 463.0
+margin_right = 623.0
+
+[node name="Coluna3" type="HBoxContainer" parent="Fases"]
+margin_top = 348.0
+margin_right = 623.0
+margin_bottom = 502.0
+
+[node name="Fase3" parent="Fases/Coluna3" groups=[
 "BotoesDelegacia",
 ] instance=ExtResource( 4 )]
-margin_top = 348.0
 margin_right = 459.0
-margin_bottom = 502.0
+margin_bottom = 154.0
 ProximaCena = "res://Cenas/TelaDelegaciaFase3.tscn"
+Tutorial = "res://Cenas/TelaDelegaciaTutorialFase3.tscn"
 TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
 TrocarCena = true
 
-[node name="Texto" parent="Fases/Fase3/ConteinerHorizontal" index="1"]
+[node name="Texto" parent="Fases/Coluna3/Fase3/ConteinerHorizontal" index="1"]
 margin_right = 482.0
 text = "BotaoFase_3"
+
+[node name="Tutorial" parent="Fases/Coluna3" instance=ExtResource( 7 )]
+self_modulate = Color( 1, 0.301961, 0.443137, 1 )
+margin_left = 463.0
+margin_right = 623.0
 
 [editable path="CaixaDialogo"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]
-[editable path="Fases/Fase1"]
-[editable path="Fases/Fase2"]
-[editable path="Fases/Fase3"]
+[editable path="Fases2/Fase1"]
+[editable path="Fases2/Fase2"]
+[editable path="Fases2/Fase3"]
+[editable path="Fases/Coluna1/Fase1"]
+[editable path="Fases/Coluna2/Fase2"]
+[editable path="Fases/Coluna3/Fase3"]
