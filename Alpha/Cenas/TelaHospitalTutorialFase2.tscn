@@ -1931,7 +1931,7 @@ texture = ExtResource( 13 )
 offset = Vector2( 0, -200 )
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
-ProximaCena = "res://Cenas/TelaHospitalFase1Generico.tscn"
+ProximaCena = "res://Cenas/TelaHospitalFase2Generico.tscn"
 TrocarCena = true
 
 [node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]

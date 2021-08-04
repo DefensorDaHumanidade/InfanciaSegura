@@ -39,8 +39,8 @@ func _ready():
 func atualizarPergunta():
 	$Transicao/Animar.play("Inicio")
 	print("Pergunta atual [", indicePergunta, "]: ", PerguntasFase2[indicePergunta][21],PerguntasFase2[indicePergunta][22])
-	$Certo.texture_normal = load("res://Elementos/Visuais/EscolaFase1/Pergunta_" + str(PerguntasFase2[indicePergunta][21],PerguntasFase2[indicePergunta][22]) + "-Certo.png")
-	$Errado.texture_normal = load("res://Elementos/Visuais/EscolaFase1/Pergunta_" + str(PerguntasFase2[indicePergunta][21],PerguntasFase2[indicePergunta][22]) + "-Errado.png")
+	$Certo.texture_normal = load("res://Elementos/Visuais/EscolaFase2/Pergunta_" + str(PerguntasFase2[indicePergunta][21],PerguntasFase2[indicePergunta][22]) + "-Certo.png")
+	$Errado.texture_normal = load("res://Elementos/Visuais/EscolaFase2/Pergunta_" + str(PerguntasFase2[indicePergunta][21],PerguntasFase2[indicePergunta][22]) + "-Errado.png")
 	$CaixaDialogo/Margem/Elementos/BotaoDireita.disabled = true
 	$CaixaDialogo/Margem/Elementos/BotaoDireita.modulate = Color(1, 1, 1, 0.5)
 	$Certo/Acerto.visible = false

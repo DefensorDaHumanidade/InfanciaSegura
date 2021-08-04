@@ -102,7 +102,7 @@ func _on_Area_SelecionarImagem(viewport, event, shape_idx):
 					if indiceToque < Toques.size():
 						atualizarImagem()
 					else:
-						$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.text = "cabooooooo"
+						$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.text = ""
 						get_node("Meio/Centro/Toque").queue_free()
 						yield(get_tree().create_timer(1.0), "timeout")
 						print("Acabaram as perguntas")

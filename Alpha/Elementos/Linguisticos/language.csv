@@ -1,323 +1,323 @@
 ﻿id;pt_BR;es_ES;en_GB
 Carregando;Carregando...;Cargando...;Loading...
-Destravar;Toque para iniciar.;Toque para empezar.;Touth to start.
-Horizontal;HorizontalPadrão;ZON;TAL
-TelaCadastro_1;[fill]Olá, para jogar esse incrível jogo, você só precisar digitar o código que você recebeu e depois clicar no botão [color=green]JOGAR[/color].[/fill];;
-BotaoJogar;JOGAR;EMPEZAR;PLAY
-RotuloCadastro;Digite...;;
+Destravar;Toque para iniciar.;Toca para empezar.;Touch to start.
+Horizontal;Horizontal;Horizontal;Horizontal
+TelaCadastro_1;[fill]Olá, para jogar esse incrível jogo, você só precisa digitar o código que você recebeu e depois clicar no botão [color=green]JOGAR[/color].[/fill];[fill]Hola, para jugar este increíble juego, solo necesita ingresar el código que recibió y luego haga clic en el botón [color=green] para reproducir [/color]. [/fill];[fill]Hello, to play this incredible game, you just need to enter the code you received and then click the [Color = Green] button to play [/color]. [/fill]
+BotaoJogar;JOGAR;JUGAR;PLAY
+RotuloCadastro;Digite...;Escribelo...;Type it...
 BotaoVoz;Voz;Voz;Voice
 BotaoHospital;Hospital;Hospital;Hospital
 BotaoEscola;Escola;Escuela;School
-BotaoDelegacia;Delegacia;Delegacia;Police
+BotaoDelegacia;Delegacia;Recinto;Precinct
 BotaoInternet;Internet;Internet;Internet
-BotaoFase_1;Nível 1;Nivele 1;Level 1
-BotaoFase_2;Nível 2;Nivele 2;Level 2
-BotaoFase_3;Nível 3;Nivele 3;Level 3
-TelaSecundariaEscola_1;[fill]Olá, eu sou a professora. Aqui na escola eu vou lhe ensinar um pouco sobre seus direitos e deveres.[/fill];;
-BotaoVoltar;Voltar;Voltar;Back
-BotaoMenu;Menu;Menu;Menu
-TelaHospital_1;[fill]Olá, eu sou o doutor. Aqui no hospital eu vou lhe ensinar um pouco sobre o corpo humano e tipos de toques.[/fill];;
-ConfigurarAjustes;Ajustes Gerais;;
-ConfigurarFases;Seleção de Fases;;
-ConfigurarJogador;Jogador;;
-ConfigurarSobre;Sobre;Sobre;About
-AjusteSom;Som;;
-AjusteMusica;Musica;;
-AjusteVoz;Voz;;
-AjusteTexto;Texto;;
-BotaoBrasil;Português;Portuguesa;Portuguese
-BotaoEspanha;Espanhol;Spañol;Spanish
-BotaoInglaterra;Inglês;Inglese;English
-Descricao;[fill][color=red]CUIDADO: Versão Incompleta do jogo.[/color]\nProjeto de Mestrado da Universidade do Estado de Santa Catarina.\nPesquisadora Responsável: Carla Diacui Medeiros Berkenbrock.\nEsse Jogo Sério é uma pesquisa de mestrado do estudante Alexandre Mendonça Fava sob orientação da professora Carla Diacui e coorientação do professor Adilson Valhdick. A submissão deste jogo só é permitida para fins de pesquisa científica. Não há termos de uso ou política de privacidade aqui. Todos os documentos, dados e informações relativas a essa pesquisa só dizem a Escola Municipal Pauline Parucker do município de Joinville/SC os quais já encontram-se devidamente acordados com todos os envolvidos nesse projeto de pesquisa.[/fill];;
-ProfissaoArtista;Artista:;;
-AjusteIdentificacao;Identificação;;
-BotaoSair;Sair;;
-BotaoIr;Ir;;
-EscolaFase1_Pergunta_01;[fill]Toda criança tem o direito de ser feliz. Selecione a imagem que a criança está feliz.[/fill];;
-EscolaFase1_Pergunta_02;[fill]Toda criança tem direito à educação. Seleciona a imagem que a criança está na escola.[/fill];;
-EscolaFase1_Pergunta_03;[fill]Toda criança tem direito a saúde e vacinação para não ficar doente. Seleciona a imagem da criança recebendo remédio.[/fill];;
-EscolaFase1_Pergunta_04;[fill]Toda criança tem direito a segurança. Selecione a criança sendo protegida pelo policial.[/fill];;
-EscolaFase1_Pergunta_05;[fill]Toda criança tem o direito de decidir quem pode tocar no seu corpo. Selecione a imagem da criança dizem [color=red]NÃO[/color] para alguém tentando tocá-la.[/fill];;
-EscolaFase1_Pergunta_06;[fill]Toda criança tem o dever de ajudar nas pequenas tarefas de casa. Selecione a imagem da criança ajudam nas tarefas de casa.[/fill];;
-EscolaFase1_Pergunta_07;[fill]Nenhuma criança deve trabalhar ou ser forçada a fazer coisas de adulto. Selecione a imagem da criança que está brincando.[/fill];;
-EscolaFase1_Pergunta_08;[fill]Nenhuma criança deve guardar segredo de coisas ruins que aconteceram. Selecione a imagem da criança conversando com um policial.[/fill];;
-EscolaFase1_Pergunta_09;[fill]Toda criança tem dinheiro a uma boa alimentação. Selecione a imagem da criança comendo.[/fill];;
-EscolaFase1_Pergunta_10;[fill]Nenhuma criança deve usar drogas. Seleciona a imagem da criança dizendo [color=red]NÃO[/color] para alguém que está oferecendo drogas.[/fill];;
-EscolaFase1_RespostaCerta_01;[fill]Isso mesmo, caso alguém esteja lhe deixando triste você deve contar sobre isso para um adulto que você confie e goste.[/fill];;
-EscolaFase1_RespostaCerta_02;[fill]Correto, toda criança tem o direito de ir à escola.[/fill];;
-EscolaFase1_RespostaCerta_03;[fill]Muito bem. Todas as crianças devem ser vacinadas e tratadas adequadamente.[/fill];;
-EscolaFase1_RespostaCerta_04;[fill]Exato. Caso uma criança esteja em perigo, adultos legais protegerão a criança.[/fill];;
-EscolaFase1_RespostaCerta_05;[fill]Isso mesmo, caso alguém lhe toque sem sua permissão você deve gritar [color=red]NÃO[/color] e se afastar dessa pessoa. Após isso, lembre-se de contar sobre isso para um adulto.[/fill];;
-EscolaFase1_RespostaCerta_06;[fill]Perfeito. Uma boa criança sempre ajuda a arrumar e limpar a casa.[/fill];;
-EscolaFase1_RespostaCerta_07;[fill]Correto, nenhuma criança deve trabalhar.[/fill];;
-EscolaFase1_RespostaCerta_08;[fill]Isso aí, se alguma coisa ruim acontecer. Você deve sempre contar para um adulto em que você confie.[/fill];;
-EscolaFase1_RespostaCerta_09;[fill]Perfeito. Toda criança tem direito a uma boa alimentação. Lembre-se de comer sempre frutos e verduras.[/fill];;
-EscolaFase1_RespostaCerta_10;[fill]Isso aí, não é legal usar drogas, elas não fazem bem e deixam as pessoas doentes.[/fill];;
-EscolaFase1_RespostaErrada_01;[fill]Não, essa criança não está feliz. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_02;[fill]Não, essa criança não está na escola. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_03;[fill]Não, essa criança está doente porque não foi vacinada. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_04;[fill]Não, essa imagem não é a correta. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_05;[fill]Não, essa criança não está fazendo nada. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_06;[fill]Não, essa criança não está ajudando nas tarefas de casa. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_07;[fill]Não, essa criança está vestindo roupas de adulto e isso não é certo. Nenhuma criança deve fazer coisas de adulto.[/fill];;
-EscolaFase1_RespostaErrada_08;[fill]Não, essa criança não está contanto sobre o aconteceu para alguém, ela está só pensando, e isso é triste. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_09;[fill]Não, essa criança está com fome. Tente selecionar a outra imagem.[/fill];;
-EscolaFase1_RespostaErrada_10;[fill]Não, essa criança não está recusando a droga. Tente selecionar a outra imagem.[/fill];;
-ToquesBons;Toques Bons;Bueno;Right
-ToquesRuins;Toques Ruins;Malo;Left
-HospitalFase3_ToqueBom_01;[fill]O médico examinando seu corpo para seu bem, é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueBom_02;[fill]Uma parente seu lhe dando banho e limpando seu corpo é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueBom_03;[fill]O abraço de pessoas felizes contigo é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueBom_04;[fill]Um beijo carinho é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueBom_05;[fill]Um tapinha nas costas é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueRuim_01;[fill]Um abraço muito longo desconfortável é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueRuim_02;[fill]Um toque confuso de alguém que você goste, é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueRuim_03;[fill]Um toque embaixo das suas roupas sem sua permissão é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueRuim_04;[fill]Um toque por cima das suas roupas, mas nas suas partes íntimas, é um toque bom ou um toque ruim?[/fill];;
-HospitalFase3_ToqueRuim_05;[fill]Uma pessoa que faz você tocar nas partes íntimas dela, é um toque bom ou um toque ruim?[/fill];;
-TelaEscolaFase1_Tutorial;Aqui na escola vou lhe ensinar sobre seus direitos e deveres. Você terá que escolher uma de duas imagens. ;;
-TelaEscolaFase2_Tutorial;Aqui eu vou lhe apresentar situações. Você terá que escolher entre duas situações, uma perigosa e outra não.;;
-TelaEscolaFase3_Tutorial;Aqui eu vou lhe apresentar pessoas. Você vai aprender aqui em quem pode confiar e em quem não pode confiar.;;
-TelaHospitalFase1_Tutorial;Aprenda o nome das partes do jogo nesse corpo. Arraste as partes para suas posições.;;
-TelaHospitalFase2_Tutorial;Aprenda sobre as partes privadas do corpo. Arraste as partes para suas posições.;;
-TelaHospitalFase3_Tutorial;Aprenda sobre os tipos de toques. Coloque os toques ruins no livro vermelho e os toques bons no livro azul.;;
-TelaInternetFase2_TutorialFrase;Filho antes de brincar você deve estudar!;;
-InternetFase2_Dados_01;Nome: Estranho\nCargo: Trabalhador\nNasc.: 28/02/1973\nLocal: Joinville\nAmigos: 0;;
-InternetFase2_Dados_02;Nome: Zequinha\nCargo: Aluno\nNasc.: 13/06/1553\nLocal: Joinville\nAmigos: 0;;
-InternetFase2_Dados_03;Nome: Aninha\nCargo: Aluna\nNasc.: 08/11/2012\nLocal: Paris\nAmigos: 0;;
-InternetFase2_Dados_04;Nome: Paulinho\nCargo: ------\nNasc.: ------\nLocal: ------\nAmigos: ------;;
-InternetFase2_Dados_05;Nome: Papai\nCargo: Trabalhador\nNasc.: 13/06/2011\nLocal: Joinville\nAmigos: 0;;
-InternetFase2_Dados_06;Nome: Alexandre\nCargo: Médico\nNasc.: 19/04/1993\nLocal: Joinville\nAmigos: 10;;
-InternetFase2_Dados_07;Nome: Adilson\nCargo: Delegado\nNasc.: 13/06/1987\nLocal: Joinville\nAmigos: 7;;
-InternetFase2_Dados_08;Nome: Carla\nCargo: Professora\nNasc.: 03/09/1984\nLocal: Joinville\nAmigos: 8;;
-InternetFase2_Dados_09;Nome: Mamãe\nCargo: Trabalhador\nNasc.: 14/08/2010\nLocal: Joinville\nAmigos: 8;;
-InternetFase2_Dados_10;Nome: Papai\nCargo: Trabalhador\nNasc.: 13/06/2011\nLocal: Joinville\nAmigos: 8;;
-InternetFase2_Pergunta_01;"[fill]Eu devo aceitar como amigo alguém chamado ""Estranho""?[/fill]";;
-InternetFase2_Pergunta_02;"[fill]Hm, eu tenho um amigo chamado ""Zequinha"", mas o Zequinha que eu conheço não nasceu em 1553. Eu devo aceitar ele como amigo aqui?[/fill]";;
-InternetFase2_Pergunta_03;"[fill]Eu conheço a ""Aninha"", porém a Aninha que eu conheço não mora em Paris, mas sim em Joinville. Eu devo aceitar ela como amiga aqui?[/fill]";;
-InternetFase2_Pergunta_04;"[fill]O ""Paulinho"" é um dos meus melhores amigos. Mas eu não consigo ver os outros dados. Eu devo aceitar ele como amigo aqui?[/fill]";;
-InternetFase2_Pergunta_05;[fill]Meu pai está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];;
-InternetFase2_Pergunta_06;[fill]O médico está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];;
-InternetFase2_Pergunta_07;[fill]O delegado está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];;
-InternetFase2_Pergunta_08;[fill]Minha professora está me pedindo para ser minha amiga aqui na internet. Eu devo aceitar?[/fill];;
-InternetFase2_Pergunta_09;[fill]Minha mãe está me pedindo para ser minha amiga aqui na internet. Eu devo aceitar?[/fill];;
-InternetFase2_Pergunta_10;[fill]Meu pai está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];;
-InternetFase2_RespostaCerta_01;[fill]Exato. Você deve adicionar apenas conhecidos, como amigos na internet.[/fill];;
-InternetFase2_RespostaCerta_02;[fill]Isso aí, algumas pessoas podem fingir ser nossos amigos para conseguir nossa amizade na internet. Por isso é importante conferir os dados.[/fill];;
-InternetFase2_RespostaCerta_03;[fill]Isso mesmo, se você não conhece ninguém fora de Joinville, então você não deve adicionar essa pessoa. [/fill];;
-InternetFase2_RespostaCerta_04;[fill]Correto. Se você não é capaz de confirmar se alguém é seu amigo de verdade ou alguém fingindo, é melhor você não aceitar a amizade.[/fill];;
-InternetFase2_RespostaCerta_05;[fill]Isso aí. Não é errado adicionar nossos parentes como amigos. Porém esse era um perfil falso, alguém fingindo ser meu pai, por isso tinha zero amigos. [/fill];;
-InternetFase2_RespostaCerta_06;[fill]Perfeito. Está tudo certo em adicionar pessoas que a gente conhece.[/fill];;
-InternetFase2_RespostaCerta_07;[fill]Certo. Está tudo certo em adicionar pessoas que a gente conhece.[/fill];;
-InternetFase2_RespostaCerta_08;[fill]Exatamente. Está tudo certo em adicionar pessoas que a gente conhece./fill];;
-InternetFase2_RespostaCerta_09;[fill]Sim, não a problemas é adicionar nossa mãe como amiga na internet.[/fill];;
-InternetFase2_RespostaCerta_10;[fill]Sim, não a problemas é adicionar nosso pai como amigo na internet.[/fill];;
-InternetFase2_RespostaErrada_01;[fill]Não, você nunca deve adicionar estranhos como amigos na internet.[/fill];;
-InternetFase2_RespostaErrada_02;[fill]Não, você não deve adicionar pessoas com informações preenchidas de forma errada na internet. Podem ser perfis falsos.[/fill];;
-InternetFase2_RespostaErrada_03;[fill]Não, você não deve adicionar pessoas de locais que você não conhece.[/fill];;
-InternetFase2_RespostaErrada_04;[fill]Não, você não deve aceitar como amigos, pessoas sem foto ou dados.[/fill];;
-InternetFase2_RespostaErrada_05;[fill]Não, esse era um perfil falso. Temos que ficar sempre atentos a quantidade de amigos em comum.[/fill];;
-InternetFase2_RespostaErrada_06;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas eu quero ser amigo do médico.[/fill];;
-InternetFase2_RespostaErrada_07;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas eu quero ser amigo do delegado.[/fill];;
-InternetFase2_RespostaErrada_08;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas eu quero ser amigo da professora.[/fill];;
-InternetFase2_RespostaErrada_09;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas é sempre importante aceitar sua mãe como amiga no mundo real e virtual.[/fill];;
-InternetFase2_RespostaErrada_10;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas é sempre importante aceitar seu pai como amigo no mundo real e virtual.[/fill];;
-InternetFase3_Dados_01;Mensagem:\nOlá, manda umas fotos suas. Vou lhe enviar muitos presentes em troca.;;
-InternetFase3_Dados_02;Mensagem:\nEi, você é um bobão, idiota e feio.;;
-InternetFase3_Dados_03;Mensagem:\nComo vai? Me diz onde você mora para eu deixar dinheiro aí na caixa de correio da sua casa.;;
-InternetFase3_Dados_04;Mensagem:\nVamos combinar de nós encontramos no parque, o que você acha?;;
-InternetFase3_Dados_05;Mensagem:\nEi, entra nesse site aqui, você vai gostar: www.siteruim.com;;
-InternetFase3_Dados_06;Mensagem:\nNão esqueça de fazer o dever de casa!;;
-InternetFase3_Dados_07;Mensagem:\nAviso. Se algo de ruim estiver acontecendo contigo basta fazer um denúncia em: www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos;;
-InternetFase3_Dados_08;Mensagem:\nPrecisamos marcar uma consulta sua no hospital. Podemos nos reunir amanhã depois da escola?;;
-InternetFase3_Dados_09;Mensagem:\nQuero que você arrume sua cama!;;
-InternetFase3_Dados_10;Mensagem:\nQuero que você limpe o seu quarto!;;
-InternetFase3_Pergunta_01;[fill]Um estranho está pedindo fotos em troca de presentes. Devemos responder ou ignorar essa mensagem?[/fill];;
-InternetFase3_Pergunta_02;[fill]Um anônimo está dispersando ofensas na internet. Devemos responder ou ignorar essa mensagem?[/fill];;
-InternetFase3_Pergunta_03;[fill]Um estranho está perguntando sobre o endereço de casa. Devemos responder ou ignorar essa mensagem?[/fill];;
-InternetFase3_Pergunta_04;[fill]Um estranho está marcando um encontrando, devemos ir ou ignorar o convite?[/fill];;
-InternetFase3_Pergunta_05;[fill]Um estranho está compartilhando um site desconhecido. Devemos responder e acessar o site ou ignorar?[/fill];;
-InternetFase3_Pergunta_06;[fill]A professora está lembrando de fazer o devermos de casa. Devemos responder ou ignorar essa mensagem?[/fill];;
-InternetFase3_Pergunta_07;[fill]O delegado está enviando um site do governo para realizar denúncias. Devemos responder ou ignorar essa mensagem?[/fill];;
-InternetFase3_Pergunta_08;[fill]O médico está querendo marcar uma consulta. Devemos marcar de encontrar com o médico ou ignorá-lo?[/fill];;
-InternetFase3_Pergunta_09;[fill]A minha mamãe está me pedindo para eu arrumar minha cama. Devemos responder ou ignorar essa mensagem?[/fill];;
-InternetFase3_Pergunta_10;[fill]O papai está me pedindo para eu arrumar meu quarto. Devemos responder ou ignorar essa mensagem?[/fill];;
-InternetFase3_RespostaCerta_01;[fill]Isso mesmo. Sempre que um estranho lhe pedir fotos suas, você tem que ignorar a mensagem e contar sobre isso para um adulto em que confie.[/fill];;
-InternetFase3_RespostaCerta_02;[fill]Isso aí. Sempre que você sofrer bullying de alguém, você deve ignorar a mensagem e contar para um adulto de sua confiança.[/fill];;
-InternetFase3_RespostaCerta_03;[fill]Correto. Nunca devemos informar sobre o local onde moramos para estranhos, isso pode ser perigoso.[/fill];;
-InternetFase3_RespostaCerta_04;[fill]Certo. Você nunca deve se encontrar sozinho com pessoas estranhas.[/fill];;
-InternetFase3_RespostaCerta_05;[fill]Exatamente. Você só deve acessar os sites e redes sociais que os seus pais deixarem. Veja principalmente sites educativos e de desenhos.[/fill];;
-InternetFase3_RespostaCerta_06;[fill]Perfeito. Devemos fazer o dever de casa e não ignorá-lo.[/fill];;
-InternetFase3_RespostaCerta_07;[fill]Isso aí. É sempre importante estar atento aos canais de denúncia do governo e nunca ignorá-los. [/fill];;
-InternetFase3_RespostaCerta_08;[fill]Correto. Não há nada de errado em você de encontrar pessoas legais e conhecidas desde que seus responsáveis estejam sabendo.[/fill];;
-InternetFase3_RespostaCerta_09;[fill]Exato. Você deve sempre responder as mensagens que sua mãe envia e nunca ignorá-las.[/fill];;
-InternetFase3_RespostaCerta_10;[fill]Exato. Você deve sempre responder as mensagens que seu pai envia e nunca ignorá-las.[/fill];;
-InternetFase3_RespostaErrada_01;[fill]Não, você nunca deve enviar imagens suas para pessoas desconhecidas.[/fill];;
-InternetFase3_RespostaErrada_02;[fill]Não, você deve ignorar mensagens assim.[/fill];;
-InternetFase3_RespostaErrada_03;[fill]Não, informar sobre seu endereço para um desconhecido na internet pode ser muito perigoso. Ele pode ser um ladrão. [/fill];;
-InternetFase3_RespostaErrada_04;[fill]Não, você nunca deve se encontrar com pessoas desconhecidas sem a supervisão de seus responsáveis. [/fill];;
-InternetFase3_RespostaErrada_05;[fill]Não, você jamais deve acessar sites desconhecidos, você pode pegar um vírus de computador.[/fill];;
-InternetFase3_RespostaErrada_06;[fill]Não, você não ignorar suas obrigações. [/fill];;
-InternetFase3_RespostaErrada_07;[fill]Não, por mais que você não possa precisar da mensagem agora, esse tipo de mensagem é sempre importante responder e encaminhar para mais pessoas.[/fill];;
-InternetFase3_RespostaErrada_08;[fill]Não, você não ignorar suas obrigações. [/fill];;
-InternetFase3_RespostaErrada_09;[fill]Não, você não ignorar suas obrigações. [/fill];;
-InternetFase3_RespostaErrada_10;[fill]Não, você não ignorar suas obrigações. [/fill];;
-InternetFase1_Pergunta_01;[fill]Eu sei que uma pessoa em que posso confiar é o meu pai. Ele é bem parecido comigo, mas ele usa uma gravata azul. Clique no meu pai.[/fill];;
-InternetFase1_Pergunta_02;[fill]Eu sei que a minha mãe é uma pessoa que me ama muito e que sempre posso confiar nela. Ela é bem parecida comigo mas usa um laçinho rosa. Clique na minha mãe.[/fill];;
-InternetFase1_Pergunta_03;[fill]Eu posso conficar com certeza é no meu médico, ele usa um óculos redondo e é uma pessoa super inteligente e legal. Clique no médico.[/fill];;
-InternetFase1_Pergunta_04;[fill]Uma pessoa de confiança para mim é minha professora, ela me ensinou tudo que eu sei. Ela está sempre vestida de rosa. Clique na professora.[/fill];;
-InternetFase1_Pergunta_05;[fill]Eu sei que posso sempre contar com o delegado da delegacia, ele prende criminosos. Ele usa um terno cinza. Clique no delegado.[/fill];;
-InternetFase1_RespostaCerta_01;[fill]Esse é o meu papai. Eu sei que ele vai me proteger contra qualquer um que queira me machucar.[/fill];;
-InternetFase1_RespostaCerta_02;[fill]Sim, essa é minha mamãe. Se algo ruim acontecer comigo, eu sei que ela vai me ajudar.[/fill];;
-InternetFase1_RespostaCerta_03;[fill]Esse é o médico. Ele é uma pessoa super-inteligente. Se eu tiver qualquer problema, sei que posso contar para ele e ele achará uma solução.[/fill];;
-InternetFase1_RespostaCerta_04;[fill]A minha professora é muito esperta e legal. Ela me ajuda a resolver qualquer tipo de problema.[/fill];;
-InternetFase1_RespostaCerta_05;[fill]O delegado está na delegacia para nos proteger. Se alguém for mau comigo eu sei que posso contar para ele e ele resolverá tudo.[/fill];;
-InternetFase1_RespostaErrada_01;[fill]Ei, esse não se parece com meu pai.[/fill];;
-InternetFase1_RespostaErrada_02;[fill]Ei, minha mãe não é assim.[/fill];;
-InternetFase1_RespostaErrada_03;[fill]Ei, essa pessoa não usa óculos redondos.[/fill];;
-InternetFase1_RespostaErrada_04;[fill]Ei, essa não é minha professora, ela sua um vestido rosa.[/fill];;
-InternetFase1_RespostaErrada_05;[fill]Ei, esse não é o delegado.[/fill];;
-EscolaFase2_Pergunta_01;[fill]É mais seguro uma criança brincar fora de casa de dia ou de noite?[/fill];;
-EscolaFase2_Pergunta_02;[fill]É mais seguro uma criança brincar sozinha ou com os amigos?[/fill];;
-EscolaFase2_Pergunta_03;[fill]Para quem uma criança perdida deve pedir ajuda, aos funcionários de um local ou qualquer outra pessoa?[/fill];;
-EscolaFase2_Pergunta_04;[fill]É seguro uma criança abrir a porta para um estranho?[/fill];;
-EscolaFase2_Pergunta_05;[fill]É mais seguro uma criança voltar da escola sozinha ou acompanhada?[/fill];;
-EscolaFase2_Pergunta_06;[fill]É mais seguro uma criança atravessar a rua olhando para os dois lados ou sem olhar?[/fill];;
-EscolaFase2_Pergunta_07;[fill]É mais seguro uma criança conversar na internet com amigos ou com estranhos?[/fill];;
-EscolaFase2_Pergunta_08;[fill]É mais seguro uma criança voltar para casa pelo caminho de sempre ou é mais seguro pegar um atalho?[/fill];;
-EscolaFase2_Pergunta_09;[fill]É mais seguro uma criança brincar em um lugar perigoso ou um lugar tranquilo?[/fill];;
-EscolaFase2_Pergunta_10;[fill]É mais seguro uma criança brincar na internet com amigos ou com estranhos?[/fill];;
-EscolaFase2_RespostaCerta_01;[fill]Isso mesmo. É sempre melhor brincar a luz do dia.[/fill];;
-EscolaFase2_RespostaCerta_02;[fill]Correto. É sempre melhor ficar com os amigos, de preferência sob a supervisão de um adulto de confiança.[/fill];;
-EscolaFase2_RespostaCerta_03;[fill]Perfeito. Uma criança sempre deve pedir ajuda aos funcionários.[/fill];;
-EscolaFase2_RespostaCerta_04;[fill]Exato. Você nunca deve abrir a porta para desconhecidos.[/fill];;
-EscolaFase2_RespostaCerta_05;[fill]Isso aí. Uma criança sempre que possível deve estar acompanhada.[/fill];;
-EscolaFase2_RespostaCerta_06;[fill]Correto. Uma criança atenta e experta sempre olha para os dois lados antes de atravessar a rua.[/fill];;
-EscolaFase2_RespostaCerta_07;[fill]Isso mesmo, uma criança só deve conversar com pessoas conhecidas na internet.[/fill];;
-EscolaFase2_RespostaCerta_08;[fill]Exatamente. É sempre melhor andar por caminhos já conhecidos. É melhor deixar para explorar outros caminhos com um adulto de confiança.[/fill];;
-EscolaFase2_RespostaCerta_09;[fill]Isso aí. Sempre prefira brincar em quadras, parques e locais tranquilos.[/fill];;
-EscolaFase2_RespostaCerta_10;[fill]Isso aí. Brincar com os amigos, além de ser mais seguro é bem mais divertido.[/fill];;
-EscolaFase2_RespostaErrada_01;[fill]Não, brincar na rua de noite é muito perigoso. É melhor brincar dentro de casa de noite, ou na rua apenas de dia.[/fill];;
-EscolaFase2_RespostaErrada_02;[fill]Não, brincar sozinho e sem nenhum adulto de confiança por perto é sempre muito perigoso.[/fill];;
-EscolaFase2_RespostaErrada_03;[fill]Não, uma criança não deve pedir ajuda para qualquer um, pois nunca se sabe se a pessoa é uma boa ou uma má pessoa.[/fill];;
-EscolaFase2_RespostaErrada_04;[fill]Não, abrir a porta para desconhecidos é sempre muito perigoso.[/fill];;
-EscolaFase2_RespostaErrada_05;[fill]Não, uma criança andando sozinha é sempre muito perigoso.[/fill];;
-EscolaFase2_RespostaErrada_06;[fill]Não, atravessar a rua sem olhar é muito perigoso.[/fill];;
-EscolaFase2_RespostaErrada_07;[fill]Não, conversar com estranhos na internet pode ser muito perigoso.[/fill];;
-EscolaFase2_RespostaErrada_08;[fill]Não, pegar por um atalho pode ser muito perigoso.[/fill];;
-EscolaFase2_RespostaErrada_09;[fill]Não, brincar em locais que não foram feitos para brincar é sempre muito perigoso.[/fill];;
-EscolaFase2_RespostaErrada_10;[fill]Não, brincar com estranhos na internet pode ser bem perigoso.[/fill];;
-EscolaFase3_Pergunta_01;[fill]A maioria das pessoas são estranhas e a maioria dos estranhos é legal?[/fill];;
-EscolaFase3_Pergunta_02;[fill]Estranhos se parecem malvados?[/fill];;
-EscolaFase3_Pergunta_03;[fill]Algumas pessoas podem olhar embaixo da sua roupa, outras pessoas não podem olhar em baixo da sua roupa. Quando que alguém pode olhar embaixo da sua roupa?[/fill];;
-EscolaFase3_Pergunta_04;[fill]Quando alguém faz algo que você não gosta, você deve ficar em silêncio e obedecer, ou dizer  [color=red]NÃO[color] e se afastar daquela pessoa?[/fill];;
-EscolaFase3_Pergunta_05;[fill]Se alguém faz algo que você não gosta, a culpa é sua que deixou isso acontecer ou da pessoa malvada?[/fill];;
-EscolaFase3_Pergunta_06;[fill]Você sempre deve obedecer o que os adultos mandam fazer?[/fill];;
-EscolaFase3_Pergunta_07;[fill]Você deve aceitar doces ou caronas de estranhos?[/fill];;
-EscolaFase3_Pergunta_08;[fill]Caso um estranho esteja te levando contra sua vontade, o que você deve fazer?[/fill];;
-EscolaFase3_Pergunta_09;[fill]Você deve aceitar ajudar qualquer adulto?[/fill];;
-EscolaFase3_Pergunta_10;[fill]Se alguma coisa ruim acontecer, para quais pessoas você pode contar?[/fill];;
-EscolaFase3_RespostaCerta_01;[fill]Isso mesmo. Existem mais pessoas estranhas (pessoas que você não conhece) legais, do que pessoas que você não conhece que não são legais.[/fill];;
-EscolaFase3_RespostaCerta_02;[fill]Exatamente. Pessoas malvadas não precisam ter aparência de malvados para serem maus.[/fill];;
-EscolaFase3_RespostaCerta_03;[fill]Isso aí, as pessoas só podem olhar e tocar em certas partes do seu corpo só com a sua permissão ou ser for para o seu bem.[/fill];;
-EscolaFase3_RespostaCerta_04;[fill]Correto. Você sempre deve se afastar das pessoas que fazem coisas que você não gosta.[/fill];;
-EscolaFase3_RespostaCerta_05;[fill]Isso mesmo, a culpa nunca é sua.[/fill];;
-EscolaFase3_RespostaCerta_06;[fill]Isso mesmo. Se for alguma coisa boa, como limpar ou arrumar a casa ou fazer a tarefa da escola é importante obedecer.[/fill];;
-EscolaFase3_RespostaCerta_07;[fill]Correto, você deve recusar qualquer coisa que um estranho lhe oferecer.[/fill];;
-EscolaFase3_RespostaCerta_08;[fill]Isso aí. Você sempre deve gritar e pedir por ajuda.[/fill];;
-EscolaFase3_RespostaCerta_09;[fill]Exato. Não devemos ajudar pessoas estranhas, pois não sabemos se elas não estão mentido para nos levar para um lugar perigoso para fazer coisas ruins.[/fill];;
-EscolaFase3_RespostaCerta_10;[fill]Exatamente. Se qualquer coisa de ruim acontecer, você sempre pode contar sobre isso para seus parentes, sua professora, seu médico ou outro adulto que confie.[/fill];;
-EscolaFase3_RespostaErrada_01;[fill]Não, existe muito mais estranhos legais.[/fill];;
-EscolaFase3_RespostaErrada_02;[fill]Não, as vezes uma pessoa que parece boa por fora, é uma má pessoa por dentro. Por isso é difícil saber quem é malvado de quem é bom.[/fill];;
-EscolaFase3_RespostaErrada_03;[fill]Não, se não for para o seu bem, ninguém pode olhar ou torcar embaixo da sua roupa.[/fill];;
-EscolaFase3_RespostaErrada_04;[fill]Não, você não deve ficar em silêncio e obedecer a pessoa.[/fill];;
-EscolaFase3_RespostaErrada_05;[fill]Não, a culpa nunca é sua.[/fill];;
-EscolaFase3_RespostaErrada_06;[fill]Não, você nunca deve fazer coisas de adulto que te deixem triste.[/fill];;
-EscolaFase3_RespostaErrada_07;[fill]Não, você nunca deve aceitar nada de um estranho.[/fill];;
-EscolaFase3_RespostaErrada_08;[fill]Não, você não deve ficar em silêncio caso um estranho esteja te levando para um lugar desconhecido.[/fill];;
-EscolaFase3_RespostaErrada_09;[fill]Não, às vezes um adulto pedindo ajudam pode ser uma armadilha para te levar para um lugar perigoso.[/fill];;
-EscolaFase3_RespostaErrada_10;[fill]Não, você tem que contar sobre coisas ruins que aconteceram para adultos de sua confiança, são apenas eles que podem fazer algo a respeito.[/fill];;
-TelaCadastro_2;[fill]Eu ainda não sei seu código de identificação. Lembre-se de informar seu código na caixinha e só depois disso clicar no botão [color=green]JOGAR[/color].[/fill];;
-TelaCadastro_3;[fill]Para começar a brincar basta selecionar uma destas quatro fases.[/fill];;
-TelaDelegacia_1;[fill]Olá, eu sou o delegado. Aqui na delegacia eu vou lhe ensinar um pouco sobre formas de você se proteger.[/fill];;
-TelaInternet_1;[fill]Olá, eu sou o GODOT. Eu vou lhe ensinar a utilizar de forma segura a rede mundial de computadores, conhecida pelos humanos como INTERNET.[/fill];;
-BotaoResponder;Responder;;
-BotaoIgnorar;Ignorar;;
-ParteMao;Mão;;
-PartePe;Pé;;
-ParteBoca;Boca;;
-BotaoTras;Trás;;
-BotaoFrente;Face;;
-BotaoAceitar;Aceitar;;
-BotaoRecusar;Recusar;;
-ParteTesta;Testa;;
-ParteOrelha;Orelha;;
-ParteNariz;Nariz;;
-ParteQueixo;Queixo;;
-ParteMamilo;Mamilo;;
-ParteUmbigo;Umbigo;;
-ParteJoelho;Joelho;;
-ParteCoxa;Coxa;;
-ParteAbdomen;Abdômen;;
-ParteOlho;Olho;;
-ParteNuca;Nuca;;
-ParteOmoplata;Omoplata;;
-ParteCabelo;Cabelo;;
-ParteBraco;Braço;;
-ParteAxila;Axila;;
-ParteCostas;Costas;;
-ParteNadega;Nádega;;
-ParteCoccix;Cóccix;;
-PartePerna;Perna;;
-ParteAnus;Ânus;;
-PartePanturrilha;Panturrilha;;
-ParteCalcanhar;Calcanhar;;
-ParteOmbro;Ombro;;
-ParteTorax;Tórax;;
-PartePenis;Pênis;;
-ParteVulva;Vulva;;
-DelegaciaFase1_Inicio;Vamos começar! Escolha um pino e tente colocar ele na sua devida posição.;;
-DelegaciaFase1_Logo1;Isso mesmo. Esse é o Disque 100. Se alguém está te machucando você sempre pode ligar para o Disque 100. ;;
-DelegaciaFase1_Logo2;Isso aí. Se acontecer qualquer acidente você sempre pode ligar para os bombeiros.;;
-DelegaciaFase1_Logo3;Correto. No aplicativo dos Direitos Humanos pode denunciar qualquer tipo de problema.;;
-DelegaciaFase1_Logo4;Isso mesmo. Se algo de ruim acabou de acontecere e você precisar de ajuda urgênte, você pode ligar para a polícia militar.;;
-DelegaciaFase1_Logo5;Perfeito. Se você ver uma mulher sofrendo qualquer forma de violência, você sempre pode ligar para o número 180.;;
-DelegaciaFase1_Logo6;Isso aí. Se você qualquer dúvida sobre campanha de vacinação, ou qualquer coisa ligada a saúde você pode ligar para o SUS.;;
-DelegaciaFase1_Logo7;Correto. Sempre que alguém estiver correndo perigo de vida, você pode ligar para o SAMU. ;;
-DelegaciaFase3_Inicio;Me ajude a encontrar certas pessoas pela cidade. Você acha que consegue?;;
-DelegaciaFase3_Pessoa1;Você conegue encontrar essa pessoa na nossa cidade? Dizem que essa pessoa mora perto de uma casa abandonada. ;;
-DelegaciaFase3_Pessoa2;Veja se consegue achar essa mulher pela cidade. Dizem que ela costuma fazer várias compras em um feirinha. ;;
-DelegaciaFase3_Pessoa3;Vamos com uma fácil. Você consegue achar o policial? Ele trabalha na delegacia. ;;
-DelegaciaFase3_Pessoa4;Essa pessoa embora não pareça é um bandido, que faz mal para crianças. Você acha que consegue achar ele pela cidade?;;
-DelegaciaFase3_Pessoa5;Você consegue achar esse rapaz tomando um sorvete?;;
-DelegaciaFase3_Acertou_1;Muito bem, lembresse de ficar longue de lugares perigosos, como casas ou predios abandonados. Podem ter bandidos por lá. ;;
-DelegaciaFase3_Acertou_2;Isso aí. Tome muito cuidado, embora ela não parece uma pessoa malvada, ela é uma criminosa. Por isso não devemos julgar as pessoas pela aparência delas. ;;
-DelegaciaFase3_Acertou_3;Perfeito. Sempre que você precisar de ajuda você pode ir até a delegacia e pedir para um policial lhe ajudar. ;;
-DelegaciaFase3_Acertou_4;Achou, isso mesmo. Ele não parece, mas é uma pessoa má, por isso é importante você sempre ter cuidado com pessoas que você não conhece, os estranhos. ;;
-DelegaciaFase3_Acertou_5;Isso mesmo. Você encontrou o menino do sorvete, parabéns.;;
-TelaInternetFase1_Tutorial;Eu perdi a senha do computador, mas eu sei que são as pessoas que eu confio, você só precisa clicar nas pessoas.;;
-TelaInternetFase2_Tutorial;Aqui você aprenderá quem devemos adicionar como amigo na internet. Basta clicar em aceitar ou recusar.;;
-TelaInternetFase3_Tutorial;Aqui você aprenderá a interagir com as pessoas na internet. Basta clicar em responder ou ignorar.;;
-TelaDelegaciaFase1_Tutorial;Nesse jogo, vou precisar que você conecte os pinos. Basta clicar e arrastar para suas opções.;;
-TelaDelegaciaFase2_Tutorial;Aqui, vou precisar que você remonte esse mural. Basta clicar e arrastar para suas opções.;;
-TelaDelegaciaFase3_Tutorial;Nesse jogo, você terá que encontrar certos indíviudos em uma cidade. Você acha que consegue?;;
-TelaCadastro_2;Muito bem. Mas eu ainda não sei você é menino ou menina. Você poderia me dizer, clicando em um dos botões?;;
-BotaoMenino;Menino;;
-BotaoMenina;Menina;;
-TextoErros;Erros;;
-TextoTempo;Tempo;;
-TextoAtual;Atual: ;;
-TextoMenor;Menor: ;;
-TelaEscolaFase1_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaEscolaFase2_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaEscolaFase3_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TextoRecorde;[rainbow freq=0.2 sat=10 val=20]Novo Recorde[/rainbow];;
-TelaHospitalFase1_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaHospitalFase2_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaHospitalFase3_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaInternetFase1_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaInternetFase2_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaInternetFase3_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaDelegaciaFase1_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaDelegaciaFase2_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
-TelaDelegaciaFase3_Encerramento;Parabéns, você concluiu esse nível. Mas você acredita que consegue fazer melhor?;;
+BotaoFase_1;Nível 1;Nivel 1;Level 1
+BotaoFase_2;Nível 2;Nivel 2;Level 2
+BotaoFase_3;Nível 3;Nivel 3;Level 3
+TelaSecundariaEscola_1;[fill]Olá, eu sou a professora. Aqui na escola eu vou lhe ensinar um pouco sobre seus direitos e deveres.[/fill];[fill]Hola, soy el maestro. Aquí en la escuela le enseñaré un poco sobre sus derechos y deberes. [/fill];[fill]Hello, I am the teacher. Here at school I will teach you a little about your rights and duties. [/fill]
+BotaoVoltar;Voltar;Regresar;Return
+BotaoMenu;Menu;Menú;Menu
+TelaHospital_1;[fill]Olá, eu sou o doutor. Aqui no hospital eu vou lhe ensinar um pouco sobre o corpo humano e tipos de toques.[/fill];[fill]Hola, soy el doctor. Aquí en el hospital te enseñaré un poco sobre el cuerpo humano y los tipos de tonos de llamada. [/fill];[fill]Hello, I am the doctor. Here at the hospital I will teach you a little about the human body and types of ringtones. [/fill]
+ConfigurarAjustes;Ajustes Gerais;Ajustes generales;General adjustments
+ConfigurarFases;Seleção de Fases;Selección de fase;Phase selection
+ConfigurarJogador;Jogador;Jugador;Player
+ConfigurarSobre;Sobre;Acerca de;About
+AjusteSom;Som;Sonido;Sound
+AjusteMusica;Música;Canción;Song
+AjusteVoz;Voz;Voz;Voice
+AjusteTexto;Texto;Texto;Text
+BotaoBrasil;Português;portugués;Portuguese
+BotaoEspanha;Espanhol;Español;Spanish
+BotaoInglaterra;Inglês;inglés;English
+Descricao;[fill][color=red]CUIDADO: Versão de testes do jogo.[/color]\nProjeto de Mestrado da Universidade do Estado de Santa Catarina.\n\nPesquisadora Responsável: Carla Diacui Medeiros Berkenbrock.\n\nEsse Jogo Sério é uma pesquisa de mestrado do estudante Alexandre Mendonça Fava sob orientação da professora Carla Diacui e coorientação do professor Adilson Valhdick. A submissão deste jogo só é permitida para fins de pesquisa científica. Não há ‘termos de uso’ ou ‘política de privacidade’. Todos os documentos, dados e informações relacionadas a essa pesquisa só dizem respeito a Escola Municipal Pauline Parucker do município de Joinville/SC. Toda a documentação formal encontra-se devidamente acordada com os envolvidos nesse projeto de pesquisa.\n\n CAAE: 43602921.2.0000.0118.\n\n Atribuições:\n Renan Torres\n Laia Orisa da Silva Oliveira \n Colorfuel Studio[/fill];[Relleno] [color=red] PRECAUCIÓN: Versión juego de prueba [/color] \ nProjeto de Maestría en la Universidad del Estado de Santa Catarina \ n \ nPesquisadora como: ... Carla Diacui Medeiros Berkenbrock \ n \ nEste es Serious Game una tesis de maestría del estudiante Alexandre Mendonça Fava bajo la dirección del profesor Carla Diacui y co-dirección del profesor Adilson Valhdick. Se permite que la presentación de este juego sólo para fines de investigación. Existen unas 'condiciones de uso' o 'política de privacidad'. Todos los documentos, datos e información relacionada con esta investigación sólo se refieren a la Escuela Municipal de Pauline Parucker el municipio de Joinville / SC. La documentación formal está debidamente de acuerdo con los involucrados en este proyecto de investigación \ n \ n CAAE: .. 43602921.2.0000.0118 \ n \ n Asignación: \ n Renan Torres \ n Laia Orisa da Silva Oliveira \ ncolorfuel Estudio [/ relleno];[fill][color = red] CAUTION: Play trial version [/color]\ nProjeto of Master of the University of the State of Santa Catarina \ n \ nPesquisadora as:... Carla Diacui Medeiros Berkenbrock \ n \ nThis Serious Game is a master thesis of Alexandre Mendonça Fava student under the guidance of Professor Carla Diacui and co-supervision of Professor Adilson Valhdick. The submission of this game is allowed only for research purposes. There 'terms of use' or 'privacy policy'. All documents, data and information related to this research only concern the Municipal School Pauline Parucker the municipality of Joinville / SC. The formal documentation is duly agreed with those involved in this research project \ n \ n CAAE:.. 43602921.2.0000.0118 \ n \ n Assignment: \ n Renan Torres \ n Laia Orisa da Silva Oliveira \ n Colorfuel Studio [/fill]
+ProfissaoArtista;Artista:;Artista:;Artist:
+AjusteIdentificacao;Identificação;Identificación;Identification
+BotaoSair;Sair;Salir;Go out
+BotaoIr;Ir;Vamos;Go
+EscolaFase1_Pergunta_01;[fill]Toda criança tem o direito de ser feliz. Selecione a imagem que a criança está feliz.[/fill];[fill]Cada niño tiene derecho a ser feliz. Seleccione la imagen que el niño esté feliz. [/fill];[fill]Every child has the right to be happy. Select the image that the child is happy. [/fill]
+EscolaFase1_Pergunta_02;[fill]Toda criança tem direito à educação. Selecione a imagem que a criança está na escola.[/fill];[fill]Cada niño tiene derecho a la educación. Seleccione la imagen que el niño está en la escuela. [/fill];[fill]Every child has the right to education. Select the image that the child is at school. [/fill]
+EscolaFase1_Pergunta_03;[fill]Toda criança tem direito a saúde e vacinação para não ficar doente. Selecione a imagem da criança recebendo remédio.[/fill];[fill]Cada niño tiene derecho a la salud y la vacunación de no enfermarse. Seleccione la imagen de la imagen de la imagen del niño. [/fill];[fill]Every child has the right to health and vaccination not to get sick. Select the child's image receiving medicine. [/fill]
+EscolaFase1_Pergunta_04;[fill]Toda criança tem direito a segurança. Selecione a criança sendo protegida pelo policial.[/fill];[fill]Cada niño tiene derecho a la seguridad. Seleccione al niño que está protegido por el oficial de policía. [/fill];[fill]Every child has the right to safety. Select the child being protected by the police officer. [/fill]
+EscolaFase1_Pergunta_05;[fill]Toda criança tem o direito de decidir quem pode tocar no seu corpo. Selecione a imagem da criança dizem [color=red]NÃO[/color] para alguém tentando tocá-la.[/fill];[fill]Cada niño tiene derecho a decidir quién puede tocar su cuerpo. Seleccione la imagen del niño Diga [Color=rojo] No [/color] para alguien que intenta tocarlo. [/fill];[fill]Every child has the right to decide who can touch his body. Select the child's image say [Color = Red] no [/color]for someone trying to touch it. [/fill]
+EscolaFase1_Pergunta_06;[fill]Toda criança tem o dever de ajudar nas pequenas tarefas de casa. Selecione a imagem da criança ajudando nas tarefas de casa.[/fill];[fill]Cada niño tiene un deber de ayudar en las pequeñas tareas de hogar. Seleccione la imagen del niño que busca en la tarea. [/fill];[fill]Every child has a duty to help in the small tasks of home. Select the child's image helping in homework. [/fill]
+EscolaFase1_Pergunta_07;[fill]Nenhuma criança deve trabalhar ou ser forçada a fazer coisas de adulto. Selecione a imagem da criança que está brincando.[/fill];[fill]Ningún niño debe trabajar o ser forzado a hacer cosas adultas. Seleccione la imagen del niño que esté bromeando. [/fill];[fill]No child should work or be forced to do adult things. Select the child's image that is joking. [/fill]
+EscolaFase1_Pergunta_08;[fill]Nenhuma criança deve guardar segredo de coisas ruins que aconteceram. Selecione a imagem da criança conversando com um policial.[/fill];[fill]Ningún niño debe mantener el secreto de las cosas malas que sucedió. Seleccione la imagen del niño conversación con un oficial de policía. [/fill];[fill]No child should keep the secret of bad things that happened. Select the child's image chatting with a police officer. [/fill]
+EscolaFase1_Pergunta_09;[fill]Toda criança tem direito a uma boa alimentação. Selecione a imagem da criança comendo.[/fill];[fill]Cada niño tiene derecho a una buena dieta. Seleccione la imagen del niño que come. [/fill];[fill]Every child has a right to good diet. Select the image of the child eating. [/fill]
+EscolaFase1_Pergunta_10;[fill]Nenhuma criança deve usar drogas. Selecione a imagem da criança dizendo [color=red]NÃO[/color] para alguém que está oferecendo drogas.[/fill];[fill]Ningún niño debe usar drogas. Seleccione la imagen del niño que dice [Color=Red] No [/color] para alguien que está ofreciendo medicamentos. [/fill];[fill]No child should use drugs. Select the child's image saying [Color = Red] No [/color]for someone who is offering drugs. [/fill]
+EscolaFase1_RespostaCerta_01;[fill]Isso mesmo, caso alguém esteja lhe deixando triste você deve contar sobre isso para um adulto que você confie e goste.[/fill];[fill]Eso es correcto, si alguien te está conduciendo triste, debe hablar de ello para un adulto con el que confíes y como. [/fill];[fill]That's right, if someone is driving you sad you should tell about it for an adult you trust and like. [/fill]
+EscolaFase1_RespostaCerta_02;[fill]Correto, toda criança tem o direito de ir à escola.[/fill];[fill]Correcto, cada niño tiene derecho a ir a la escuela. [/fill];[fill]correct, every child has the right to go to school. [/fill]
+EscolaFase1_RespostaCerta_03;[fill]Muito bem. Todas as crianças devem ser vacinadas e tratadas adequadamente.[/fill];[fill]Muy bien. Todos los niños deben ser vacunados y tratados adecuadamente. [/fill];[fill]very well. All children should be vaccinated and treated properly. [/fill]
+EscolaFase1_RespostaCerta_04;[fill]Exato. Caso uma criança esteja em perigo, adultos legais protegerão a criança.[/fill];[fill]exactamente. Si un niño está en peligro, los adultos legales protegerán al niño. [/fill];[fill]Exactly. If a child is in danger, legal adults will protect the child. [/fill]
+EscolaFase1_RespostaCerta_05;[fill]Certo, caso alguém lhe toque sem sua permissão você deve gritar [color=red]NÃO[/color] e se afastar dessa pessoa. Após isso, conte sobre o que aconteceu para um adulto.[/fill];[fill]Derecha, si alguien lo toca sin su permiso, debe gritar [color=rojo] no [/color] y escapar de esa persona. Después de eso, cuenta lo que sucedió para un adulto. [/fill];[fill]right, if someone touches you without your permission you should scream [color = red] not [/color]and get away from that person. After that, tell about what happened for an adult. [/fill]
+EscolaFase1_RespostaCerta_06;[fill]Perfeito. Uma boa criança sempre ajuda a arrumar e limpar a casa.[/fill];[fill]perfecto. Un buen niño siempre ayuda a limpiar y limpiar la casa. [/fill];[fill]Perfect. A good child always helps to clean and clean the house. [/fill]
+EscolaFase1_RespostaCerta_07;[fill]Correto, nenhuma criança deve trabalhar.[/fill];[fill]correcto, ningún niño debe funcionar. [/fill];[fill]correct, no child should work. [/fill]
+EscolaFase1_RespostaCerta_08;[fill]Isso aí, se alguma coisa ruim acontecer. Você deve sempre contar para um adulto em que você confie.[/fill];[Rellena] Eso está ahí, si algo malo sucede. Siempre debe decirle a un adulto en el que confíes. [/fill];[fill]That's there if anything bad happens. You should always tell an adult in which you trust. [/fill]
+EscolaFase1_RespostaCerta_09;[fill]Perfeito. Toda criança tem direito a uma boa alimentação. Lembre-se de comer sempre frutos e verduras.[/fill];[fill]perfecto. Cada niño tiene una buena dieta. Recuerda siempre comer frutas y verduras. [/fill];[fill]Perfect. Every child has a good diet. Remember to always eat fruits and vegetables. [/fill]
+EscolaFase1_RespostaCerta_10;[fill]Isso aí, não é legal usar drogas, elas não fazem bem e deixam as pessoas doentes.[/fill];[fill]Eso es, no es genial usar drogas, no lo hacen bien y deja a las personas enfermas. [/fill];[fill]That's it, it's not cool to use drugs, they do not do well and leave people sick. [/fill]
+EscolaFase1_RespostaErrada_01;[fill]Não, essa criança não está feliz. Tente selecionar a outra imagem.[/fill];[fill]No, este niño no es feliz. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is not happy. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_02;[fill]Não, essa criança não está na escola. Tente selecionar a outra imagem.[/fill];[fill]No, este niño no está en la escuela. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is not at school. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_03;[fill]Não, essa criança está doente porque não foi vacinada. Tente selecionar a outra imagem.[/fill];[fill]No, este niño está enfermo porque no estaba vacunado. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is sick because it was not vaccinated. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_04;[fill]Não, essa imagem não é a correta. Tente selecionar a outra imagem.[/fill];[fill]No, esta imagen no es la correcta. Intenta seleccionar la otra imagen. [/fill];[fill]No, this image is not the correct. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_05;[fill]Não, essa criança não está fazendo nada. Tente selecionar a outra imagem.[/fill];[fill]No, este niño no está haciendo nada. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is not doing anything. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_06;[fill]Não, essa criança não está ajudando nas tarefas de casa. Tente selecionar a outra imagem.[/fill];[fill]No, este niño no está ayudando en la tarea. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is not helping in homework. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_07;[fill]Não, essa criança está vestindo roupas de adulto e isso não é certo. Nenhuma criança deve fazer coisas de adulto.[/fill];[fill]No, este niño lleva ropa para adultos y esto no está bien. Ningún niño debe hacer cosas adultas. [/fill];[fill]No, this child is wearing adult clothing and this is not right. No child should do adult things. [/fill]
+EscolaFase1_RespostaErrada_08;[fill]Não, essa criança não está contando sobre o que aconteceu para alguém, ela está só pensando, e isso é triste. Tente selecionar a outra imagem.[/fill];[fill]No, este niño no está contando con lo que le sucedió a alguien, ella está pensando, y eso es triste. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is not counting on what happened to someone, she's just thinking, and that's sad. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_09;[fill]Não, essa criança está com fome. Tente selecionar a outra imagem.[/fill];[fill]No, este niño tiene hambre. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is hungry. Try to select the other image. [/fill]
+EscolaFase1_RespostaErrada_10;[fill]Não, essa criança não está recusando a droga. Tente selecionar a outra imagem.[/fill];[fill]No, este niño no se niega a la droga. Intenta seleccionar la otra imagen. [/fill];[fill]No, this child is not refusing the drug. Try to select the other image. [/fill]
+ToquesBons;Toques Bons;Buenos Toques;Good Touches
+ToquesRuins;Toques Ruins;Malos Toques;Bad Touches
+HospitalFase3_ToqueBom_01;[fill]O médico examinando seu corpo para seu bem, é um toque bom ou um toque ruim?[/fill];[fill]El médico que examina su cuerpo para su bien, es un buen toque o un mal toque? [/fill];[fill]The doctor examining your body for your good, is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueBom_02;[fill]Um parente seu lhe dando banho e limpando seu corpo é um toque bom ou um toque ruim?[/fill];[fill]¿Un familiar de su baño y limpieza de su cuerpo es un buen toque o un mal contacto? [/fill];[fill]A relative of your bathing and cleaning your body is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueBom_03;[fill]O abraço de pessoas felizes contigo é um toque bom ou um toque ruim?[/fill];[fill]El abrazo de personas felices contigo es un buen toque o un mal toque? [/fill];[fill]The embrace of happy people with you is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueBom_04;[fill]Um beijo carinhoso é um toque bom ou um toque ruim?[/fill];[fill]¡Un beso cariñoso es un buen toque o un mal toque? [/fill];[fill]A affectionate kiss is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueBom_05;[fill]Um tapinha nas costas é um toque bom ou um toque ruim?[/fill];[fill]Un paciente en la parte posterior es un buen toque o un mal toque? [/fill];[fill]A patient in the back Is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueRuim_01;[fill]Um abraço muito longo desconfortável é um toque bom ou um toque ruim?[/fill];[fill]Un abrazo muy largo incómodo es un buen toque o un mal toque? [/fill];[fill]A very long embrace uncomfortable is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueRuim_02;[fill]Um toque confuso de alguém que você goste, é um toque bom ou um toque ruim?[/fill];[fill]Un toque confuso de alguien que te gusta, es un buen toque o un mal toque? [/fill];[fill]A confusing touch of someone you like, is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueRuim_03;[fill]Um toque embaixo das suas roupas sem sua permissão é um toque bom ou um toque ruim?[/fill];[fill]Un toque debajo de su ropa sin su permiso es un buen toque o un mal toque? [/fill];[fill]A touch Under your clothes without your permission is a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueRuim_04;[fill]Um toque por cima das suas roupas, mas nas suas partes íntimas, é um toque bom ou um toque ruim?[/fill];[Rellena] Un toque sobre tu ropa, pero en tus partes íntimas, ¿es un buen toque o un mal contacto? [/fill];[fill]A touch over your clothes, but in your intimate parts, is it a good touch or a bad touch? [/fill]
+HospitalFase3_ToqueRuim_05;[fill]Uma pessoa que faz você tocar nas partes íntimas dela, é um toque bom ou um toque ruim?[/fill];[fill]Una persona que te hace tocar sus partes íntimas, ¿es un buen toque o un mal toque? [/fill];[fill]A person who makes you touch her intimate parts, is it a good touch or a bad touch? [/fill]
+TelaEscolaFase1_Tutorial;[fill]Aqui na escola vou lhe ensinar sobre seus direitos e deveres. Você terá que escolher uma de duas imagens.[/fill];[fill]Aquí en la escuela le enseñaré sobre sus derechos y deberes. Tendrás que elegir una de las dos imágenes. [/fill];[fill]Here at school I will teach you about your rights and duties. You will have to choose one of two images. [/fill]
+TelaEscolaFase2_Tutorial;[fill]Aqui eu vou lhe apresentar situações. Você terá que escolher entre duas situações, uma perigosa e outra não.[/fill];[fill]Aquí le presentaré situaciones. Tendrá que elegir entre dos situaciones, una no peligrosa y otra no. [/fill];[fill]Here I will present you situations. You will have to choose between two situations, a dangerous and other no. [/fill]
+TelaEscolaFase3_Tutorial;[fill]Aqui eu vou lhe apresentar pessoas. Você vai aprender aqui em quem pode confiar e em quem não pode confiar.[/fill];[fill]Aquí te presentaré a la gente. Aprenderá aquí en quien pueda confiar y en quién no puede confiar. [/fill];[fill]Here I'll introduce you to people. You will learn here in whom you can trust and who can not trust. [/fill]
+TelaHospitalFase1_Tutorial;[fill]Aprenda o nome das partes do corpo nesse jogo. Arraste as partes para suas posições.[/fill];[fill]Aprende el nombre de las partes del cuerpo en este juego. Arrastre las piezas para sus posiciones. [/fill];[fill]Learn the name of the parts of the body in this game. Drag the parts for your positions. [/fill]
+TelaHospitalFase2_Tutorial;[fill]Aprenda sobre as partes privadas do corpo. Arraste as partes para suas posições.[/fill];[fill]Aprender sobre las fiestas privadas del cuerpo. Arrastre las piezas para sus posiciones. [/fill];[fill]Learn about the private parties of the body. Drag the parts for your positions. [/fill]
+TelaHospitalFase3_Tutorial;[fill]Aprenda sobre os tipos de toques. Coloque os [color=red]toques ruins[/color] no livro vermelho e os [color=blue]toques bons[/color] no livro azul.[/fill];[fill]Aprende sobre los tipos de toques. Coloque los anillos [color=rojo] [/color] en el libro rojo y el [color=azul] buen toque [/color] en el libro azul. [/fill];[fill]Learn about the types of touches. Place the [color = red] rings [/color]in the red book and the [color = blue] good touches [/color]in the blue book. [/fill]
+TelaInternetFase2_TutorialFrase;Filho antes de brincar você deve estudar!;¡Hijo antes de jugar, deberías estudiar!;Son before playing you should study!
+InternetFase2_Dados_01;Nome: Estranho\nCargo: Trabalhador\nNasc.: 28/02/1973\nLocal: Joinville\nAmigos: 0;Nombre: Strange \ Ncing: Trabajador \ NNSC: 28/02/1973 \ NLOCAL: Joinville \ Namigos: 0;Name: Odd \ nCargo: Worker \ nNasc .: 02/28/1973 \ nLocal Joinville \ nAmigos: 0
+InternetFase2_Dados_02;Nome: Zequinha\nCargo: Aluno\nNasc.: 13/06/1553\nLocal: Joinville\nAmigos: 0;Nombre: Zequinha \ NnCage: Student \ NNSC: 13/06/1553 \ NLOCAL: Joinville \ Namigos: 0;Name: Zequinha \ Nncage: Student \ Nnsc: 13/06/1553 \ NLocal: Joinville \ Namigos: 0
+InternetFase2_Dados_03;Nome: Aninha\nCargo: Aluna\nNasc.: 08/11/2012\nLocal: Paris\nAmigos: 0;Nombre: Aninha \ NNCight: Aluna \ NNSC.: 08/11/2012 \ NLOCAL: PARIS \ NAMIGOS: 0;Name: Aninha \ Nncight: Aluna \ Nnsc.: 08/11/2012 \ NLocal: Paris \ Namigos: 0
+InternetFase2_Dados_04;Nome: Paulinho\nCargo: ------\nNasc.: ------\nLocal: ------\nAmigos: ------;Nombre: Paulinho \ Ncargo: ------ \ NNS.: ------ \ nlocal: ------ \ namigos: ------;Name: Paulinho \ Ncargo: ------ \ nns.: ------ \ NLocal: ------ \ Namigos: ------
+InternetFase2_Dados_05;Nome: Papai\nCargo: Trabalhador\nNasc.: 13/06/2011\nLocal: Joinville\nAmigos: 0;Nombre: DAD \ NCARGO: Trabajador \ NNSC: 13/06/2011 \ NLOCAL: Joinville \ Namigos: 0;Name: Dad \ Ncargo: Worker \ Nnsc: 13/06/2011 \ NLocal: Joinville \ Namigos: 0
+InternetFase2_Dados_06;Nome: Alexandre\nCargo: Médico\nNasc.: 19/04/1993\nLocal: Joinville\nAmigos: 10;Nombre: Alexandre \ NCARGO: MEDICAL \ NNSC: 19/04/1993 \ NLOCAL: Joinville \ Namigos: 10;Name: Alexandre \ Ncargo: Medical \ Nnsc: 19/04/1993 \ NLocal: Joinville \ Namigos: 10
+InternetFase2_Dados_07;Nome: Adilson\nCargo: Delegado\nNasc.: 13/06/1987\nLocal: Joinville\nAmigos: 7;Nombre: Adilson \ NCARGO: Delegado \ NNSC: 13/06/1987 \ NLOCAL: Joinville \ Namigos: 7;Name: ADILSON \ NCARGO: Delegate \ Nnsc: 13/06/1987 \ NLocal: Joinville \ Namigos: 7
+InternetFase2_Dados_08;Nome: Carla\nCargo: Professora\nNasc.: 03/09/1984\nLocal: Joinville\nAmigos: 8;Nombre: Carla \ NNCight: Profesor \ NNSC: 03/09/1984 \ NLOCAL: Joinville \ Namigos: 8;Name: Carla \ Nncight: Professor \ Nnsc: 03/09/1984 \ NLocal: Joinville \ Namigos: 8
+InternetFase2_Dados_09;Nome: Mamãe\nCargo: Trabalhador\nNasc.: 14/08/2010\nLocal: Joinville\nAmigos: 8;Nombre: MOM \ NCARGO: Trabajador \ NNSC: 14/08/2010 \ NLOCAL: Joinville \ Namigos: 8;Name: Mom \ Ncargo: Worker \ Nnsc: 14/08/2010 \ NLocal: Joinville \ Namigos: 8
+InternetFase2_Dados_10;Nome: Papai\nCargo: Trabalhador\nNasc.: 13/06/2011\nLocal: Joinville\nAmigos: 8;Nombre: DAD \ NCARGO: Obrero \ NNSC: 13/06/2011 \ NLOCAL: Joinville \ Namigos: 8;Name: Dad \ Ncargo: Worker \ Nnsc: 13/06/2011 \ NLocal: Joinville \ Namigos: 8
+InternetFase2_Pergunta_01;"[fill]Eu devo aceitar como amigo alguém chamado ""Estranho""?[/fill]";"[fill]Debería aceptar como amigo alguien llamado ""extraño""? [/fill]";"[fill]I should accept as a friend someone called ""strange""? [/fill]"
+InternetFase2_Pergunta_02;"[fill]Hm, eu tenho um amigo chamado ""Zequinha"", mas o Zequinha que eu conheço não nasceu em 1553. Eu devo aceitar ele como amigo aqui?[/fill]";"[fill]HM, tengo un amigo llamado ""Zequinha"", pero la pequeña Zequinha que conozco no nació en 1553. ¿Debo aceptarlo como amigo aquí? [/fill]";"[fill]HM, I have a friend called ""Zequinha"", but the little zequinha I know was not born in 1553. Should I accept him as a friend here? [/fill]"
+InternetFase2_Pergunta_03;"[fill]Eu conheço a ""Aninha"", porém a Aninha que eu conheço não mora em Paris, mas sim em Joinville. Eu devo aceitar ela como amiga aqui?[/fill]";"[fill]Sé el ""Aninha"", pero la Aninha que conozco no vive en París, sino en Joinville. ¿Debo aceptarla como un amigo aquí? [/fill]";"[fill]I know the ""Aninha"", but the Aninha that I know does not live in Paris, but in Joinville. Should I accept her as a friend here? [/fill]"
+InternetFase2_Pergunta_04;"[fill]O ""Paulinho"" é um dos meus melhores amigos. Mas eu não consigo ver os outros dados. Eu devo aceitar ele como amigo aqui?[/fill]";"[Rellena] El ""Paulinho"" es uno de mis mejores amigos. Pero no puedo ver los otros datos. ¿Debo aceptarlo como amigo aquí? [/fill]";"[fill]The ""Paulinho"" is one of my best friends. But I can not see the other data. Should I accept him as a friend here? [/fill]"
+InternetFase2_Pergunta_05;[fill]Meu pai está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];[fill]Mi padre me está pidiendo que sea mi amigo aquí en Internet. ¿Debo aceptar? [/fill];[fill]My father is asking me to be my friend here on the internet. Should I accept? [/fill]
+InternetFase2_Pergunta_06;[fill]O médico está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];[fill]El médico me está pidiendo que sea mi amigo aquí en Internet. ¿Debo aceptar? [/fill];[fill]The doctor is asking me to be my friend here on the internet. Should I accept? [/fill]
+InternetFase2_Pergunta_07;[fill]O delegado está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];[fill]El delegado me está pidiendo que sea mi amigo aquí en Internet. ¿Debo aceptar? [/fill];[fill]The delegate is asking me to be my friend here on the internet. Should I accept? [/fill]
+InternetFase2_Pergunta_08;[fill]Minha professora está me pedindo para ser minha amiga aqui na internet. Eu devo aceitar?[/fill];[fill]Mi profesor me está pidiendo que sea mi amigo aquí en Internet. ¿Debo aceptar? [/fill];[fill]My teacher is asking me to be my friend here on the internet. Should I accept? [/fill]
+InternetFase2_Pergunta_09;[fill]Minha mãe está me pedindo para ser minha amiga aqui na internet. Eu devo aceitar?[/fill];[fill]Mi madre me está pidiendo que sea mi amigo aquí en Internet. ¿Debo aceptar? [/fill];[fill]My mother is asking me to be my friend here on the internet. Should I accept? [/fill]
+InternetFase2_Pergunta_10;[fill]Meu pai está me pedindo para ser meu amigo aqui na internet. Eu devo aceitar?[/fill];[fill]Mi padre me está pidiendo que sea mi amigo aquí en Internet. ¿Debo aceptar? [/fill];[fill]My father is asking me to be my friend here on the internet. Should I accept? [/fill]
+InternetFase2_RespostaCerta_01;[fill]Exato. Você deve adicionar apenas conhecidos, como amigos na internet.[/fill];[fill]exactamente. Debe agregar solo conocido, como amigos en Internet. [/fill];[fill]Exactly. You should add only known, as friends on the Internet. [/fill]
+InternetFase2_RespostaCerta_02;[fill]Isso aí, algumas pessoas podem fingir ser nossos amigos para conseguir nossa amizade na internet. Por isso é importante conferir os dados.[/fill];[fill]que allí, algunas personas pueden pretender ser nuestros amigos para obtener nuestra amistad en Internet. Por lo tanto, es importante revisar los datos. [/fill];[fill]That there, some people can pretend to be our friends to get our friendship on the internet. Therefore it is important to check the data. [/fill]
+InternetFase2_RespostaCerta_03;[fill]Isso mesmo, se você não conhece ninguém fora de Joinville, então você não deve adicionar essa pessoa. [/fill];[fill]Eso es correcto, si no conoce a nadie fuera de Joinville, entonces no debe agregar a esa persona. [/ llenar];[fill]That's right, if you do not know anyone outside Joinville, then you should not add that person. [/fill]
+InternetFase2_RespostaCerta_04;[fill]Correto. Se você não é capaz de confirmar se alguém é seu amigo de verdade ou alguém fingindo, é melhor você não aceitar a amizade.[/fill];[fill]correcto. Si no puede confirmar que alguien es su verdadero amigo o alguien que finge, es mejor que no aceptes la amistad. [/fill];[fill]correct. If you are not able to confirm that someone is your real friend or someone pretending, you better not accept friendship. [/fill]
+InternetFase2_RespostaCerta_05;[fill]Isso aí. Não é errado adicionar nossos parentes como amigos. Porém, esse era um perfil falso, alguém fingindo ser meu pai, por isso tinha zero amigos. [/fill];[fill]eso está ahí. No está mal agregar a nuestros familiares como amigos. Pero este era un perfil falso, alguien fingiendo ser mi padre, por lo que tenía cero amigos. [/ llenar];[fill]That's there. It is not wrong to add our relatives as friends. But this was a false profile, someone pretending to be my father, so he had zero friends. [/fill]
+InternetFase2_RespostaCerta_06;[fill]Perfeito. Está tudo certo em adicionar pessoas conhecidas.[/fill];[fill]perfecto. Está bien agregando gente conocida. [/fill];[fill]Perfect. It's all right at adding well-known people. [/fill]
+InternetFase2_RespostaCerta_07;[fill]Certo. Está tudo certo em adicionar pessoas que você conhece.[/fill];[fill]Derecha. Está bien agregando gente que conoce. [/fill];[fill]right. It's all right at adding people you know. [/fill]
+InternetFase2_RespostaCerta_08;[fill]Exatamente. Está tudo certo em adicionar pessoas conhecidas./fill];[fill]exactamente. Está bien agregando gente conocida ./fill];[fill]Exactly. It's all right in adding well-known people./fill]
+InternetFase2_RespostaCerta_09;[fill]Sim, não há problemas em adicionar nossa mãe como amiga na internet.[/fill];[fill]Sí, no hay problemas para agregar a nuestra madre como amigo en Internet. [/fill];[fill]Yes, there are no problems in adding our mother as a friend on the Internet. [/fill]
+InternetFase2_RespostaCerta_10;[fill]Sim, não há problemas em adicionar nosso pai como amigo na internet.[/fill];[fill]Sí, ningún problema Agregue a nuestro Padre como amigo en Internet. [/fill];[fill]Yes, no problems add our father as friend on the internet. [/fill]
+InternetFase2_RespostaErrada_01;[fill]Não, só deve adicionar amigos conhecidos seus na internet.[/fill];[fill]No, solo debe agregar amigos conocidos a los suyos en Internet. [/fill];[fill]No, you should only add known friends yours on the Internet. [/fill]
+InternetFase2_RespostaErrada_02;[fill]Não, você precisa tomar cuidado com pessoas com informações preenchidas de forma errada na internet. Podem ser perfis falsos.[/fill];[fill]No, debe cuidar a las personas con información llena de Internet. Los perfiles falsos pueden ser. [/fill];[fill]No, you need to take care of people with informationfilled in the Internet. False profiles can be. [/fill]
+InternetFase2_RespostaErrada_03;[fill]Não, você só deve adicionar pessoas de locais que você conhece.[/fill];[fill]No, solo debe agregar personas de lugares que conoce. [/fill];[fill]No, you should only add people from places you know. [/fill]
+InternetFase2_RespostaErrada_04;[fill]Não, você só deve aceitar como amigos, pessoas com foto ou dados preenchidos corretamente.[/fill];[fill]No, solo debe aceptar como amigos, personas con fotos o datos llenas correctamente. [/fill];[fill]No, you should only accept as friends, people with photo or datafilled correctly. [/fill]
+InternetFase2_RespostaErrada_05;[fill]Não, esse era um perfil falso. Você precisa sempre atento a quantidade de amigos em comum.[/fill];[fill]No, este fue un perfil falso. Siempre necesitas atentar la cantidad de amigos en común. [/fill];[fill]No, this was a false profile. You always need to attentive the amount of friends in common. [/fill]
+InternetFase2_RespostaErrada_06;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas eu quero ser amigo do médico.[/fill];[fill]Usted es libre de aceptar y rechazar a quién quiere o no como amigo en Internet. Pero quiero ser amigo de un médico. [/fill];[fill]You are free to accept and refuse who you want or not as friend on the internet. But I want to be a doctor's friend. [/fill]
+InternetFase2_RespostaErrada_07;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas eu quero ser amigo do delegado.[/fill];[fill]Usted es libre de aceptar y rechazar a quién quiere o no como amigo en Internet. Pero quiero ser amigo del delegado. [/fill];[fill]You are free to accept and refuse who you want or not as friend on the internet. But I want to be friend of the delegate. [/fill]
+InternetFase2_RespostaErrada_08;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas eu quero ser amigo da professora.[/fill];[fill]Usted es libre de aceptar y rechazar a quién quiere o no como amigo en Internet. Pero quiero ser amigo del profesor. [/fill];[fill]You are free to accept and refuse who you want or not as friend on the internet. But I want to be a friend of the teacher. [/fill]
+InternetFase2_RespostaErrada_09;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas é sempre importante aceitar sua mãe como amiga no mundo real e virtual.[/fill];[fill]Usted es libre de aceptar y rechazar a quién quiere o no como amigo en Internet. Pero siempre es importante aceptar a su madre como un amigo en el mundo real y virtual. [/fill];[fill]You are free to accept and refuse who you want or not as friend on the internet. But it is always important to accept your mother as a friend in the real and virtual world. [/fill]
+InternetFase2_RespostaErrada_10;[fill]Você é livre para aceitar e recusar quem você queira ou não como amigo na internet. Mas é sempre importante aceitar seu pai como amigo no mundo real e virtual.[/fill];[fill]Usted es libre de aceptar y rechazar a quién quiere o no como amigo en Internet. Pero siempre es importante aceptar a su padre como amigo en el mundo real y virtual. [/fill];[fill]You are free to accept and refuse who you want or not as friend on the internet. But it is always important to accept your father as a friend in the real world and virtual. [/fill]
+InternetFase3_Dados_01;Mensagem:\nOlá, manda umas fotos suas. Vou lhe enviar muitos presentes em troca.;Mensaje: \ Nolá, envíe algunas fotos de usted. Te enviaré muchos regalos a cambio.;Message: \ Nolá, send some photos of you. I'll send you many gifts in exchange.
+InternetFase3_Dados_02;Mensagem:\nEi, você é um bobão, idiota e feio.;Mensaje: \ Nei, eres un tonto, idiota y feo.;Message: \ Nei, you're a fool, idiot and ugly.
+InternetFase3_Dados_03;Mensagem:\nComo vai? Me diz onde você mora para eu deixar dinheiro aí na caixa de correio da sua casa.;Mensaje: \ Ncomo va? Dígame dónde vive para que deje dinero allí en su buzón de correo.;Message: \ NCOMO Going? Tell me where you live for me to leave money there in your home mailbox.
+InternetFase3_Dados_04;Mensagem:\nVamos combinar de nós encontramos no parque, o que você acha?;Mensaje: \ Nvamos Combine de nosotros que encontramos en el parque, ¿qué piensas?;Message: \ NVamos Combine from us we find in the park, what do you think?
+InternetFase3_Dados_05;Mensagem:\nEi, entra nesse site aqui, você vai gostar: www.siteruim.com;Mensaje: \ NEI, ingrese este sitio aquí, le gustará: www.siteruim.com;Message: \ Nei, enter this site here, you will like: www.siteruim.com
+InternetFase3_Dados_06;Mensagem:\nNão esqueça de fazer o dever de casa!;Mensaje: \ ¡No olvides hacer la tarea!;Message: \ do not forget to do homework!
+InternetFase3_Dados_07;Mensagem:\nAviso. Se algo de ruim estiver acontecendo contigo basta fazer uma denúncia em: www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos;Mensaje: \ NVISO. Si está sucediendo algo malo con usted, simplemente haga una queja en: www.gov.br/en-r/servicios/denunciacia-volacao-diros-humanos;Message: \ NVISO. If something bad is happening with you just make a complaint at: www.gov.br/en-r/servicos/denunciacia-volacao-diros-humanos
+InternetFase3_Dados_08;Mensagem:\nPrecisamos marcar uma consulta sua no hospital. Podemos nos reunir amanhã depois da escola?;Mensaje: \ Npecise para hacer una consulta a su hospital. ¿Podemos reunirnos mañana después de la escuela?;Message: \ nPecise to make a query your hospital. Can we get together tomorrow after school?
+InternetFase3_Dados_09;Mensagem:\nQuero que você arrume sua cama!;Mensaje: \ NQUERO ¡Tienes tu cama!;Message: \ Nquero you get your bed!
+InternetFase3_Dados_10;Mensagem:\nQuero que você limpe o seu quarto!;Mensaje: \ NQUERO ¡Limpie su habitación!;Message: \ Nquero you wipe your room!
+InternetFase3_Pergunta_01;[fill]Um estranho está pedindo fotos em troca de presentes. Devemos responder ou ignorar essa mensagem?[/fill];[fill]Un extraño está pidiendo fotos a cambio de regalos. ¿Debemos responder o ignorar este mensaje? [/fill];[fill]A stranger is asking for photos in exchange for gifts. Should we respond or ignore this message? [/fill]
+InternetFase3_Pergunta_02;[fill]Um anônimo está dispersando ofensas na internet. Devemos responder ou ignorar essa mensagem?[/fill];[fill]Un anónimo está dispersando delitos en Internet. ¿Debemos responder o ignorar este mensaje? [/fill];[fill]An anonymous is dispersing offenses on the Internet. Should we respond or ignore this message? [/fill]
+InternetFase3_Pergunta_03;[fill]Um estranho está perguntando sobre o endereço de casa. Devemos responder ou ignorar essa mensagem?[/fill];[fill]Un extraño está preguntando por la dirección de la casa. ¿Debemos responder o ignorar este mensaje? [/fill];[fill]A stranger is asking about the home address. Should we respond or ignore this message? [/fill]
+InternetFase3_Pergunta_04;[fill]Um estranho está marcando um encontro, devemos ir ou ignorar o convite?[/fill];[fill]Un extraño está marcando una reunión, ¿deberíamos ir o ignorar la invitación? [/fill];[fill]A stranger is marking a meeting, should we go or ignore the invitation? [/fill]
+InternetFase3_Pergunta_05;[fill]Um estranho está compartilhando um site desconhecido. Devemos responder e acessar o site ou ignorar?[/fill];[fill]Un extraño está compartiendo un sitio desconocido. ¿Debemos responder y acceder al sitio o ignorar? [/fill];[fill]A stranger is sharing an unknown site. Should we respond and access the site or ignore? [/fill]
+InternetFase3_Pergunta_06;[fill]A professora está lembrando de fazer o dever de casa. Devemos responder ou ignorar essa mensagem?[/fill];[fill]El profesor está recordando hacer la tarea. ¿Debemos responder o ignorar este mensaje? [/fill];[fill]The teacher is remembering doing homework. Should we respond or ignore this message? [/fill]
+InternetFase3_Pergunta_07;[fill]O delegado está enviando um site do governo para realizar denúncias. Devemos responder ou ignorar essa mensagem?[/fill];[fill]El delegado está enviando un sitio gubernamental para acompañar a las quejas. ¿Debemos responder o ignorar este mensaje? [/fill];[fill]The delegate is sending a government site to accompany complaints. Should we respond or ignore this message? [/fill]
+InternetFase3_Pergunta_08;[fill]O médico está querendo marcar uma consulta. Devemos marcar de encontrar com o médico ou ignorá-lo?[/fill];[fill]El médico quiere hacer una cita. ¿Debemos marcar para conocer al médico o ignorarlo? [/fill];[fill]The doctor wants to make an appointment. Should we mark to meet the doctor or ignore it? [/fill]
+InternetFase3_Pergunta_09;[fill]A minha mamãe está me pedindo para eu arrumar minha cama. Devemos responder ou ignorar essa mensagem?[/fill];[Rellena] Mi madre me está pidiendo que me empacara mi cama. ¿Debemos responder o ignorar este mensaje? [/fill];[fill]My mother is asking me for me to pack my bed. Should we respond or ignore this message? [/fill]
+InternetFase3_Pergunta_10;[fill]O papai está me pedindo para eu arrumar meu quarto. Devemos responder ou ignorar essa mensagem?[/fill];[fill]Daddy me está pidiendo que me empacara mi habitación. ¿Debemos responder o ignorar este mensaje? [/fill];[fill]Daddy is asking me for me to pack my room. Should we respond or ignore this message? [/fill]
+InternetFase3_RespostaCerta_01;[fill]Isso mesmo. Sempre que um estranho lhe pedir fotos suas, você tem que ignorar a mensagem e contar sobre isso para um adulto em que confie.[/fill];[fill]eso es correcto. Cada vez que un extraño le pregunta tus fotos, tiene que ignorar el mensaje y contarlo para un adulto en el que confía. [/fill];[fill]That's right. Whenever a stranger asks you your photos, you have to ignore the message and tell about it for an adult in which you trust. [/fill]
+InternetFase3_RespostaCerta_02;[fill]Isso aí. Sempre que você sofrer bullying de alguém, você deve ignorar a mensagem e contar para um adulto de sua confiança.[/fill];[fill]eso está ahí. Cada vez que alguien sufre acoso, debe ignorar el mensaje y decirle a un adulto de su confianza. [/ Fill];[fill]That's there. Whenever you suffer someone bullying, you should ignore the message and tell an adult of your trust. [/fill]
+InternetFase3_RespostaCerta_03;[fill]Correto. Nunca devemos informar sobre o local onde moramos para estranhos, isso pode ser perigoso.[/fill];[fill]correcto. Nunca debemos hablar sobre el lugar donde vivimos para extraños, esto puede ser peligroso. [/fill];[fill]correct. We should never tell about the place where we live for strangers, this can be dangerous. [/fill]
+InternetFase3_RespostaCerta_04;[fill]Certo. Você nunca deve se encontrar sozinho com pessoas estranhas.[/fill];[fill]Derecha. Nunca debes conocerte con gente extraña. [/fill];[fill]right. You should never meet yourself with strange people. [/fill]
+InternetFase3_RespostaCerta_05;[fill]Exatamente. Você só deve acessar os sites e redes sociais que os seus pais deixarem. Veja principalmente sites educativos e de desenhos.[/fill];[fill]exactamente. Solo debe acceder a los sitios sociales y redes que sus padres se vayan. Ver principalmente sitios educativos y de dibujos. [/fill];[fill]Exactly. You should only access the social sites and networks that your parents leave. See mainly educational and drawings sites. [/fill]
+InternetFase3_RespostaCerta_06;[fill]Perfeito. Devemos fazer o dever de casa e não ignorá-lo.[/fill];[fill]perfecto. Debemos hacer la tarea y no lo ignoramos. [/fill];[fill]Perfect. We must do homework and do not ignore it. [/fill]
+InternetFase3_RespostaCerta_07;[fill]Isso aí. É sempre importante estar atento aos canais de denúncia do governo e nunca ignorá-los. [/fill];[fill]eso está ahí. Siempre es importante estar atento a los canales de quejas del gobierno y nunca los ignore. [/ llenar];[fill]That's there. It is always important to be attentive to the government's complaint channels and never ignore them. [/fill]
+InternetFase3_RespostaCerta_08;[fill]Correto. Não há nada de errado em você se encontrar com pessoas legais e conhecidas desde que seus responsáveis estejam sabendo.[/fill];[fill]correcto. No hay nada de malo en que se encuentre con personas legales y conocidas, ya que sus tutores están sabiendo. [/fill];[fill]correct. There is nothing wrong with you meet legal and well-known people since your guardians are knowing. [/fill]
+InternetFase3_RespostaCerta_09;[fill]Exato. Você deve sempre responder as mensagens que sua mãe envia e nunca ignorá-las.[/fill];[fill]exactamente. Siempre debe responder a los mensajes que envíe su madre y nunca los ignore. [/fill];[fill]Exactly. You should always answer the messages your mother sends and never ignore them. [/fill]
+InternetFase3_RespostaCerta_10;[fill]Exato. Você deve sempre responder as mensagens que seu pai envia e nunca ignorá-las.[/fill];[fill]exactamente. Siempre debe responder a los mensajes que envíe su padre y nunca los ignore. [/fill];[fill]Exactly. You should always answer the messages your father sends and never ignore them. [/fill]
+InternetFase3_RespostaErrada_01;[fill]Não, você nunca deve enviar imagens suas para pessoas desconhecidas.[/fill];[fill]No, nunca debe enviar sus imágenes para personas desconocidas. [/fill];[fill]No, you should never send your images for unknown people. [/fill]
+InternetFase3_RespostaErrada_02;[fill]Não, você deve ignorar mensagens assim.[/fill];[fill]No, debe ignorar dichos mensajes. [/fill];[fill]No, you must ignore such messages. [/fill]
+InternetFase3_RespostaErrada_03;[fill]Não, informar sobre seu endereço para um desconhecido na internet pode ser muito perigoso. Ele pode ser um ladrão. [/fill];[fill]No, informar su dirección para un desconocido en Internet puede ser muy peligroso. Puede ser un ladrón. [/ llenar];[fill]No, informing your address for an unknown on the Internet can be very dangerous. It can be a thief. [/fill]
+InternetFase3_RespostaErrada_04;[fill]Não, você nunca deve se encontrar com pessoas desconhecidas sem a supervisão de seus responsáveis. [/fill];[fill]No, nunca debe conocer gente desconocida sin la supervisión de sus guardianes. [/ llenar];[fill]No, you should never meet unknown people without the supervision of your guardians. [/fill]
+InternetFase3_RespostaErrada_05;[fill]Não, você jamais deve acessar sites desconhecidos, você pode pegar um vírus de computador.[/fill];[fill]No, nunca debe acceder a sitios desconocidos, puede obtener un virus de la computadora. [/fill];[fill]No, you should never access unknown sites, you can get a computer virus. [/fill]
+InternetFase3_RespostaErrada_06;[fill]Não, você não ignorar suas obrigações. [/fill];[fill]No, no ignoras tus obligaciones. [/ llenar];[fill]No, you do not ignore your obligations. [/fill]
+InternetFase3_RespostaErrada_07;[fill]Não, por mais que você não possa precisar da mensagem agora, esse tipo de mensagem é sempre importante responder e encaminhar para mais pessoas.[/fill];[fill]No, no importa cuánto no pueda necesitar el mensaje ahora, este tipo de mensaje siempre es importante responder y reenviar a más personas. [/fill];[fill]No, no matter how much you can not need the message now, this type of message is always important to respond and forward to more people. [/fill]
+InternetFase3_RespostaErrada_08;[fill]Não, você não deve ignorar suas obrigações. [/fill];[fill]No, no debe ignorar sus obligaciones. [/ llenar];[fill]No, you should not ignore your obligations. [/fill]
+InternetFase3_RespostaErrada_09;[fill]Não, você não deve ignorar suas obrigações. [/fill];[fill]No, no debe ignorar sus obligaciones. [/ llenar];[fill]No, you should not ignore your obligations. [/fill]
+InternetFase3_RespostaErrada_10;[fill]Não, você não deve ignorar suas obrigações. [/fill];[fill]No, no debe ignorar sus obligaciones. [/ llenar];[fill]No, you should not ignore your obligations. [/fill]
+InternetFase1_Pergunta_01;[fill]Eu sei que uma pessoa em quem posso confiar é o meu pai. Ele é bem parecido comigo, mas ele usa uma gravata azul. Clique no meu pai.[/fill];[fill]Sé que una persona con la que puedo confiar es mi padre. Él es bastante parecido a mí, pero lleva una corbata azul. Haga clic en mi padre. [/fill];[fill]I know a person I can trust is my father. He's pretty much like me, but he wears a blue tie. Click on my father. [/fill]
+InternetFase1_Pergunta_02;[fill]Eu sei que a minha mãe é uma pessoa que me ama muito e que sempre posso confiar nela. Ela é bem parecida comigo mas usa um laçinho rosa. Clique na minha mãe.[/fill];[fill]Sé que mi madre es una persona que me ama mucho y que siempre puedo confiar en ella. Ella es muy similar a mí, pero lleva un encaje rosa. Haga clic en mi madre. [/fill];[fill]I know that my mother is a person who loves me very much and that I can always trust her. She is very similar to me but wears a pink lace. Click on my mother. [/fill]
+InternetFase1_Pergunta_03;[fill]Eu posso confiar com certeza é no meu médico, ele usa um óculos redondo e é uma pessoa super inteligente e legal. Clique no médico.[/fill];[fill]Puedo confiar. Ciertamente está en mi médico, usa gafas redondas y es una persona súper inteligente y fresca. Haga clic en el médico. [/fill];[fill]I can trust certainly is on my doctor, he wears a round glasses and is a super intelligent and cool person. Click on the doctor. [/fill]
+InternetFase1_Pergunta_04;[fill]Uma pessoa de confiança para mim é minha professora, ela me ensinou tudo que eu sei. Ela está sempre vestida de rosa. Clique na professora.[/fill];[fill]Una persona confiable para mí es mi maestro, ella me enseñó todo lo que conozco. Ella siempre está vestida decolor rosa. Haga clic en el profesor. [/fill];[fill]A reliable person for me is my teacher, she taught me everything I know. She is always dressed in pink. Click on the teacher. [/fill]
+InternetFase1_Pergunta_05;[fill]Eu sei que posso sempre contar com o delegado da delegacia, ele prende criminosos. Ele usa um terno cinza. Clique no delegado.[/fill];[fill]Sé que siempre puedo contar con el delegado de la estación de policía, sostiene criminales. Lleva un traje gris. Haga clic en el delegado. [/fill];[fill]I know I can always count on the delegate of the police station, he holds criminals. He wears a gray suit. Click the delegate. [/fill]
+InternetFase1_RespostaCerta_01;[fill]Esse é o meu papai. Eu sei que ele vai me proteger contra qualquer um que queira me machucar.[/fill];[Rellena] Este es mi papá. Sé que me va a proteger contra cualquier persona que quiera lastimarme. [/fill];[fill]This is my daddy. I know he's going to protect me against anyone who wants to hurt me. [/fill]
+InternetFase1_RespostaCerta_02;[fill]Sim, essa é minha mamãe. Se algo ruim acontecer comigo, eu sei que ela vai me ajudar.[/fill];[Rellena] Sí, esta es mi mamá. Si me pasa algo malo, sé que me ayudará. [/fill];[fill]Yes, this is my mom. If something bad happens to me, I know she'll help me. [/fill]
+InternetFase1_RespostaCerta_03;[fill]Esse é o médico. Ele é uma pessoa super-inteligente. Se eu tiver qualquer problema, sei que posso contar para ele e ele achará uma solução.[/fill];[fill]Este es el médico. Él es una persona súper inteligente. Si tengo algún problema, sé que puedo decirle y él encontrará una solución. [/fill];[fill]This is the doctor. He is a super-intelligent person. If I have any problems, I know I can tell him and he will find a solution. [/fill]
+InternetFase1_RespostaCerta_04;[fill]A minha professora é muito esperta e legal. Ela me ajuda a resolver qualquer tipo de problema.[/fill];[fill]Mi profesor es muy inteligente y fresco. Me ayuda a resolver cualquier tipo de problema. [/fill];[fill]My teacher is very smart and cool. It helps me solve any kind of problem. [/fill]
+InternetFase1_RespostaCerta_05;[fill]O delegado está na delegacia para nos proteger. Se alguém for mau comigo eu sei que posso contar para ele e ele resolverá tudo.[/fill];[fill]El delegado está en la estación de policía para protegernos. Si alguien es malo conmigo, sé que puedo decirle y él lo resolverá todo. [/fill];[fill]The delegate is at the police station to protect us. If someone is bad with me I know I can tell him and he will solve everything. [/fill]
+InternetFase1_RespostaErrada_01;[fill]Erro, esse não se parece com meu pai.[/fill];[fill]Error, esto no se parece a mi padre. [/fill];[fill]Error, this does not look like my father. [/fill]
+InternetFase1_RespostaErrada_02;[fill]Erro, minha mãe não é assim.[/fill];[fill] error, mi madre no es así. [/ Fill];[fill]Error, my mother is not like that. [/fill]
+InternetFase1_RespostaErrada_03;[fill]Erro, essa pessoa não usa óculos redondos.[/fill];Error [Rellenar], esta persona no usa vasos redondos. [/fill];[fill]Error, this person does not wear round glasses. [/fill]
+InternetFase1_RespostaErrada_04;[fill]Erro, essa não é minha professora, ela usa um vestido rosa.[/fill];Error [llenar], este no es mi maestro, usa un vestido rosa. [/fill];[fill]Error, this is not my teacher, she wears a pink dress. [/fill]
+InternetFase1_RespostaErrada_05;[fill]Erro, esse não é o delegado.[/fill];[fill]Error, este no es el delegado. [/fill];[fill]Error, this is not the delegate. [/fill]
+EscolaFase2_Pergunta_01;[fill]É mais seguro uma criança brincar fora de casa de dia ou de noite?[/fill];[fill]¿Es más seguro un niño jugando fuera del día o la noche? [/fill];[fill]Is it safer a child playing out of day or night? [/fill]
+EscolaFase2_Pergunta_02;[fill]É mais seguro uma criança brincar sozinha ou com os amigos?[/fill];[fill]¿Es seguro un niño jugando solo o con amigos? [/fill];[fill]Is it safer a child playing alone or with friends? [/fill]
+EscolaFase2_Pergunta_03;[fill]Para quem uma criança perdida deve pedir ajuda, aos funcionários de um local ou qualquer outra pessoa?[/fill];[fill]¿Para quién un niño perdido debe pedir ayuda, empleados de una ubicación o cualquier otra persona? [/fill];[fill]For whom a lost child should ask for help, employees from a location or any other person? [/fill]
+EscolaFase2_Pergunta_04;[fill]É seguro uma criança abrir a porta de casa para um estranho entrar?[/fill];[fill]¿Es seguro para que un niño abra la puerta de la casa a un extraño? [/fill];[fill]Is it safe for a child to open the house door for a stranger in? [/fill]
+EscolaFase2_Pergunta_05;[fill]É mais seguro uma criança voltar da escola sozinha ou acompanhada?[/fill];[fill]¿Es más seguro que un niño de regreso de la escuela solo o acompañado? [/fill];[fill]Is it more secure a child back from school alone or accompanied? [/fill]
+EscolaFase2_Pergunta_06;[fill]É mais seguro uma criança atravessar a rua olhando para os dois lados ou sem olhar?[/fill];[fill]¿Es más seguro un niño que cruza la calle buscando a ambos lados o sin mirar? [/fill];[fill]Is it safer a child crossing the street looking for both sides or without looking? [/fill]
+EscolaFase2_Pergunta_07;[fill]É mais seguro uma criança conversar na internet com amigos ou com estranhos?[/fill];[fill]¿Es más seguro un niño chat en Internet con amigos o con extraños? [/fill];[fill]Is it safer a child chat on the internet with friends or with strangers? [/fill]
+EscolaFase2_Pergunta_08;[fill]É mais seguro uma criança voltar para casa pelo caminho de sempre ou é mais seguro pegar um atalho?[/fill];[fill]¿Es más seguro que un niño regrese a casa por el camino habitual o es más seguro obtener un acceso directo? [/fill];[fill]Is it more secure a child to return home by the usual path or is it safer to get a shortcut? [/fill]
+EscolaFase2_Pergunta_09;[fill]É mais seguro uma criança brincar em um lugar perigoso ou um lugar tranquilo?[/fill];[fill]¿Es un niño de niño en un lugar peligroso o en un lugar tranquilo? [/fill];[fill]Is a child play in a dangerous place or a quiet place? [/fill]
+EscolaFase2_Pergunta_10;[fill]É mais seguro uma criança brincar na internet com amigos ou com estranhos?[/fill];[fill]¿Es más seguro que un niño juega en Internet con amigos o con extraños? [/fill];[fill]Is it safer a child play on the internet with friends or with strangers? [/fill]
+EscolaFase2_RespostaCerta_01;[fill]Isso mesmo. É sempre melhor brincar a luz do dia.[/fill];[fill]eso es correcto. Siempre es mejor jugar luz del día. [/fill];[fill]That's right. It is always best to play daylight. [/fill]
+EscolaFase2_RespostaCerta_02;[fill]Correto. É sempre melhor brincar com os amigos, de preferência sob a supervisão de um adulto de confiança.[/fill];[fill]correcto. Siempre es mejor jugar con amigos, preferiblemente bajo la supervisión de un adulto confiable. [/fill];[fill]correct. It is always better to play with friends, preferably under the supervision of a trustworthy adult. [/fill]
+EscolaFase2_RespostaCerta_03;[fill]Perfeito. Uma criança sempre deve pedir ajuda aos funcionários.[/fill];[fill]perfecto. Un niño siempre debe preguntar a los empleados. [/fill];[fill]Perfect. A child should always ask employees. [/fill]
+EscolaFase2_RespostaCerta_04;[fill]Exato. Você nunca deve abrir a porta para desconhecidos.[/fill];[fill]exactamente. Nunca debes abrir la puerta para extraños. [/fill];[fill]Exactly. You should never open the door for strangers. [/fill]
+EscolaFase2_RespostaCerta_05;[fill]Isso aí. Uma criança sempre que possível deve estar acompanhada.[/fill];[fill]eso está ahí. Un niño siempre que sea posible debe ser acompañado. [/fill];[fill]That's there. A child whenever possible must be accompanied. [/fill]
+EscolaFase2_RespostaCerta_06;[fill]Correto. Uma criança atenta e experta sempre olha para os dois lados antes de atravessar a rua.[/fill];[fill]correcto. Un niño atento y experto siempre mira a ambos lados antes de cruzar la calle. [/fill];[fill]correct. An attentive and expert child always looks at both sides before crossing the street. [/fill]
+EscolaFase2_RespostaCerta_07;[fill]Isso mesmo, uma criança só deve conversar com pessoas conhecidas na internet.[/fill];[fill]Eso es correcto, un niño solo debe hablar con personas conocidas en Internet. [/fill];[fill]That's right, a child should only talk to people known on the internet. [/fill]
+EscolaFase2_RespostaCerta_08;[fill]Exatamente. É sempre melhor andar por caminhos já conhecidos. É melhor deixar para explorar outros caminhos com um adulto de confiança.[/fill];[fill]exactamente. Siempre es mejor caminar por caminos ya conocidos. Es mejor salir para explorar otros caminos con un adulto confiable. [/fill];[fill]Exactly. It is always better to walk by paths already known. It is best to leave to explore other paths with a trustworthy adult. [/fill]
+EscolaFase2_RespostaCerta_09;[fill]Isso aí. Sempre prefira brincar em quadras, parques e locais tranquilos.[/fill];[fill]eso está ahí. Siempre prefiera jugar en los tribunales, parques y ubicaciones tranquilas. [/fill];[fill]That's there. Always prefer to play in courts, parks and quiet locations. [/fill]
+EscolaFase2_RespostaCerta_10;[fill]Isso aí. Brincar com os amigos, além de ser mais seguro é bem mais divertido.[/fill];[fill]eso está ahí. Jugar con amigos, además de ser más seguro es mucho más divertido. [/fill];[fill]That's there. Playing with friends, besides being safer is much more fun. [/fill]
+EscolaFase2_RespostaErrada_01;[fill]Não, brincar na rua de noite é muito perigoso. É melhor brincar dentro de casa de noite, ou na rua apenas de dia.[/fill];[fill]No, jugar en la calle nocturna es muy peligrosa. Es mejor jugar dentro de la casa por la noche, o en la calle solo por día. [/fill];[fill]No, playing on the night street is very dangerous. It's better to play inside the house at night, or on the street just by day. [/fill]
+EscolaFase2_RespostaErrada_02;[fill]Não, brincar sozinho e sem nenhum adulto de confiança por perto é sempre muito perigoso.[/fill];[fill]No, jugar solo y sin ningún adulto confiable es siempre muy peligroso. [/fill];[fill]No, playing alone and without any trustworthy adults is always very dangerous. [/fill]
+EscolaFase2_RespostaErrada_03;[fill]Não, uma criança não deve pedir ajuda para qualquer um, pois nunca se sabe se a pessoa é uma boa ou uma má pessoa.[/fill];[fill]No, un niño no debe pedir ayuda para nadie, porque nunca se sabe si la persona es una persona buena o mala. [/fill];[fill]No, a child should not ask for help for anyone, because it never knows if the person is a good or a bad person. [/fill]
+EscolaFase2_RespostaErrada_04;[fill]Não, abrir a porta para desconhecidos é sempre muito perigoso.[/fill];[fill]No, Abra la puerta para extraños siempre es muy peligrosa. [/fill];[fill]No, open the door for strangers is always very dangerous. [/fill]
+EscolaFase2_RespostaErrada_05;[fill]Não, uma criança andando sozinha é sempre muito perigoso.[/fill];[fill]No, un niño que camina solo es siempre muy peligroso. [/fill];[fill]No, a child walking alone is always very dangerous. [/fill]
+EscolaFase2_RespostaErrada_06;[fill]Não, atravessar a rua sem olhar é muito perigoso.[/fill];[fill]No, cruzar la calle sin mirar es muy peligroso. [/fill];[fill]No, crossing the street without looking is very dangerous. [/fill]
+EscolaFase2_RespostaErrada_07;[fill]Não, conversar com estranhos na internet pode ser muito perigoso.[/fill];[fill]No, hablar con extraños en Internet puede ser muy peligroso. [/fill];[fill]No, talk to strangers on the internet can be very dangerous. [/fill]
+EscolaFase2_RespostaErrada_08;[fill]Não, pegar um atalho pode ser muito perigoso.[/fill];[fill]No, recoger un atajo puede ser muy peligroso. [/fill];[fill]No, pick up a shortcut can be very dangerous. [/fill]
+EscolaFase2_RespostaErrada_09;[fill]Não, brincar em locais que não foram feitos para brincar é sempre muito perigoso.[/fill];[fill]No, jugar en lugares que no se han hecho para jugar es siempre muy peligroso. [/fill];[fill]No, play in places that have not been made to play is always very dangerous. [/fill]
+EscolaFase2_RespostaErrada_10;[fill]Não, brincar com estranhos na internet pode ser bem perigoso.[/fill];[fill]No, jugar con extraños en Internet puede ser muy peligroso. [/fill];[fill]No, play with strangers on the internet can be very dangerous. [/fill]
+EscolaFase3_Pergunta_01;[fill]A maioria das pessoas são estranhas e a maioria dos estranhos é legal?[/fill];[fill]La mayoría de las personas son extrañas y la mayoría de los extraños son geniales? [/fill];[fill]Most people are strange and most strangers are cool? [/fill]
+EscolaFase3_Pergunta_02;[fill]Estranhos se parecem malvados?[/fill];[fill]¡Los extraños se ven malvados? [/fill];[fill]Strangers look evil? [/fill]
+EscolaFase3_Pergunta_03;[fill]Algumas pessoas podem olhar embaixo da sua roupa, outras pessoas não podem olhar em baixo da sua roupa. Quando que alguém pode olhar embaixo da sua roupa?[/fill];[fill]Algunas personas pueden mirar bajo su ropa, otras personas no pueden mirar bajo su ropa. ¿Cuándo puede alguien mirar debajo de su ropa? [/fill];[fill]Some people can look under their clothes, other people can not look under their clothes. When can anyone look under their clothes? [/fill]
+EscolaFase3_Pergunta_04;[fill]Quando alguém faz algo que você não gosta, você deve ficar em silêncio e obedecer, ou dizer  [color=red]NÃO[/color] e se afastar daquela pessoa?[/fill];[Llenar] Cuando alguien hace algo que no le gusta, debe guardar silencio y obedecer, o decir [color=rojo] no [/color] y escápate de esa persona? [/fill];[fill]When someone does something you do not like, you should be silent and obey, or say [color = red] no [/color]and get away from that person? [/fill]
+EscolaFase3_Pergunta_05;[fill]Se alguém faz algo que você não gosta, a culpa é sua que deixou isso acontecer ou da pessoa malvada?[/fill];[fill]Si alguien hace algo que no le gusta, ¿es tu culpa que dejes que esto sucediera o la persona malvada? [/fill];[fill]If someone does something you do not like, is it your fault that you let this happen or the evil person? [/fill]
+EscolaFase3_Pergunta_06;[fill]Você sempre deve obedecer o que os adultos mandam fazer?[/fill];[fill]¿Siempre obedeces lo que hacen los adultos? [/fill];[fill]Do you always obey what adults do they do? [/fill]
+EscolaFase3_Pergunta_07;[fill]Você deve aceitar doces ou caronas de estranhos?[/fill];[fill]¿Debería aceptar dulces o extraños? [/fill];[fill]Should you accept sweets or strangers? [/fill]
+EscolaFase3_Pergunta_08;[fill]Caso um estranho esteja te levando contra sua vontade, o que você deve fazer?[/fill];[fill]Si un extraño te está llevando contra tu voluntad, ¿qué debes hacer? [/fill];[fill]If a stranger is taking you against your will, what should you do? [/fill]
+EscolaFase3_Pergunta_09;[fill]Você deve aceitar ajudar qualquer adulto?[/fill];[fill]¿Debería aceptar ayuda a cualquier adulto? [/fill];[fill]Should You Accept Help Any Adult? [/fill]
+EscolaFase3_Pergunta_10;[fill]Se alguma coisa ruim acontecer, para quais pessoas você pode contar?[/fill];[fill]Si algo malo sucede, ¿para qué gente puede decir? [/fill];[fill]If anything bad happens, for which people can you tell? [/fill]
+EscolaFase3_RespostaCerta_01;[fill]Isso mesmo. Existem mais pessoas estranhas (pessoas que você não conhece) legais, do que pessoas que você não conhece que não são legais.[/fill];[fill]eso es correcto. Hay personas más extrañas (personas que no conoce) legal, que las personas que no conoce, no son legales. [/fill];[fill]That's right. There are more strange people (people you do not know) legal, than people you do not know are not legal. [/fill]
+EscolaFase3_RespostaCerta_02;[fill]Exatamente. Pessoas malvadas não precisam ter aparência de malvados para serem maus.[/fill];[fill]exactamente. Los malvados no tienen que mirar por el mal para ser malo. [/fill];[fill]Exactly. Wicked people do not have to look out of evil to be bad. [/fill]
+EscolaFase3_RespostaCerta_03;[fill]Isso aí, as pessoas só podem olhar e tocar em certas partes do seu corpo só com a sua permissão ou se for para o seu bem, como um médico fazendo exames em você.[/fill];[fill]que allí, las personas solo pueden mirar y tocar ciertas partes de su cuerpo con su permiso o si es para su bien, como médico que realiza exámenes en usted. [/fill];[fill]That there, people can only look and touch certain parts of your body just with your permission or if it is for your good, as a doctor doing exams in you. [/fill]
+EscolaFase3_RespostaCerta_04;[fill]Correto. Você sempre deve se afastar das pessoas que fazem coisas que você não gosta.[/fill];[fill]correcto. Siempre debe alejarse de las personas que hacen las cosas que no le gustan. [/fill];[fill]correct. You should always get away from people who do things you do not like. [/fill]
+EscolaFase3_RespostaCerta_05;[fill]Isso mesmo, a culpa nunca é sua.[/fill];[fill]Eso es correcto, la culpa nunca es la tuya. [/fill];[fill]That's right, guilt is never yours. [/fill]
+EscolaFase3_RespostaCerta_06;[fill]Isso mesmo. Se for alguma coisa que você não goste e te deixe triste, você deve dizer [color=red]NÃO[/color] e contar sobre isso para um adulto de sua confiança.[/fill];[fill]eso es correcto. Si es algo que no le gusta y te dejo triste, debe decir [color=rojo] no [/color] y contarlo por un adulto de su confianza. [/fill];[fill]That's right. If it's something you do not like and leave you sad, you should say [color = red] not [/color]and tell about it for an adult of your trust. [/fill]
+EscolaFase3_RespostaCerta_07;[fill]Correto, você deve recusar qualquer coisa que um estranho lhe oferecer.[/fill];[fill]Correcto, debe rechazar cualquier cosa que un extraño le ofrezca. [/fill];[fill]correct, you must refuse anything a stranger offer you. [/fill]
+EscolaFase3_RespostaCerta_08;[fill]Isso aí. Você sempre deve gritar e pedir por ajuda.[/fill];[fill]eso está ahí. Siempre debe gritar y pedir ayuda. [/fill];[fill]That's there. You should always scream and ask for help. [/fill]
+EscolaFase3_RespostaCerta_09;[fill]Exato. Não devemos ajudar pessoas estranhas, pois não sabemos se elas não estão mentido para nos levar para um lugar perigoso para fazer coisas ruins.[/fill];[fill]exactamente. No debemos ayudar a las personas extrañas, porque no sabemos si no se les suene que nos llevan a un lugar peligroso para hacer cosas malas. [/fill];[fill]Exactly. We should not help strange people, for we do not know if they are not lied to take us to a dangerous place to do bad things. [/fill]
+EscolaFase3_RespostaCerta_10;[fill]Exatamente. Se qualquer coisa de ruim acontecer, você sempre pode contar sobre isso para seus parentes, sua professora, seu médico ou outro adulto que confie.[/fill];[fill]exactamente. Si ocurre algo malo, siempre puede contarlo por sus familiares, su maestro, su médico u otro de confianza para adultos. [/fill];[fill]Exactly. If anything bad happens, you can always tell about it for your relatives, your teacher, your doctor or other adult trusting. [/fill]
+EscolaFase3_RespostaErrada_01;[fill]Não, existe muito mais estranhos legais.[/fill];[fill]No, hay mucho más extraño legal. [/fill];[fill]No, there are much more strange legal. [/fill]
+EscolaFase3_RespostaErrada_02;[fill]Não, às vezes uma pessoa que parece boa por fora, é uma má pessoa por dentro. Por isso é difícil saber quem é malvado de quem é bom.[/fill];[fill]No, a veces una persona que se ve bien en el exterior, es una mala persona dentro. Por eso es difícil saber quién es el mal de quién es bueno. [/fill];[fill]No, sometimes a person who looks good on the outside, it's a bad person inside. That is why it is difficult to know who is evil of who is good. [/fill]
+EscolaFase3_RespostaErrada_03;[fill]Não, se não for para o seu bem, ninguém pode olhar ou tocar embaixo da sua roupa.[/fill];[fill]No, si no es para su bien, nadie puede mirar o jugar debajo de su ropa. [/fill];[fill]No, if not for your good, no one can look or play under your clothes. [/fill]
+EscolaFase3_RespostaErrada_04;[fill]Não, você não deve ficar em silêncio e obedecer a pessoa.[/fill];[fill]No, no debes guardar silencio y obedecer a la persona. [/fill];[fill]No, you should not be silent and obey the person. [/fill]
+EscolaFase3_RespostaErrada_05;[fill]Não, a culpa nunca é sua.[/fill];[fill]No, nunca es tu culpa. [/fill];[fill]No, it's never your fault. [/fill]
+EscolaFase3_RespostaErrada_06;[fill]Não, você nunca deve fazer coisas que te deixem triste.[/fill];[fill]No, nunca debes hacer cosas que te ponen triste. [/fill];[fill]No, you should never do things that make you sad. [/fill]
+EscolaFase3_RespostaErrada_07;[fill]Não, você nunca deve aceitar nada de um estranho.[/fill];[fill]No, nunca debe aceptar nada de un extraño. [/fill];[fill]No, you should never accept anything from a stranger. [/fill]
+EscolaFase3_RespostaErrada_08;[fill]Não, você não deve ficar em silêncio caso um estranho esteja te levando para um lugar desconhecido.[/fill];[fill]No, no debe guardar silencio si un extraño le está llevando a un lugar desconocido. [/fill];[fill]No, you should not be silent if a stranger is leading you to an unknown place. [/fill]
+EscolaFase3_RespostaErrada_09;[fill]Não, às vezes um adulto pedindo ajuda pode ser uma armadilha, para te levar para um lugar perigoso.[/fill];[fill]No, a veces un adulto pidiendo ayuda puede ser una trampa, para llevarlo a un lugar peligroso. [/fill];[fill]No, sometimes an adult asking for help can be a trap, to take you to a dangerous place. [/fill]
+EscolaFase3_RespostaErrada_10;[fill]Não, você tem que contar sobre coisas ruins que aconteceram para adultos de sua confiança, são apenas eles que podem fazer algo a respeito.[/fill];[fill]No, tienes que contar con cosas malas que sucedieron para adultos de su confianza, son solo ellos los que pueden hacer algo. [/fill];[fill]No, you have to count on bad things that happened for adults of your confidence, it's just them who can do something about. [/fill]
+TelaCadastro_2;[fill]Eu ainda não sei seu código de identificação. Lembre-se de informar seu código na caixinha e só depois disso clicar no botão [color=green]JOGAR[/color].[/fill];[fill]Todavía no conozco su código de identificación. Recuerde informar su código en el cuadro y solo después de eso, haga clic en el botón [Color=Green] para reproducir [/color]. [/fill];[fill]I still do not know your identification code. Remember to inform your code in the box and only after that clicks the [Color = Green] button to play [/ color]. [/fill]
+TelaCadastro_3;[fill]Para começar a brincar basta selecionar uma destas quatro fases.[/fill];[fill]Para comenzar a jugar, simplemente seleccione una de estas cuatro fases. [/fill];[fill]To start playing just select one of these four phases. [/fill]
+TelaDelegacia_1;[fill]Olá, eu sou o delegado. Aqui na delegacia eu vou lhe ensinar um pouco sobre formas de você se proteger.[/fill];[fill]Hola, soy el delegado. Aquí en la estación de policía le enseñaré un poco sobre las formas en que te proteges. [/fill];[fill]Hello, I'm the delegate. Here at the police station I'll teach you a little about ways you protect yourself. [/fill]
+TelaInternet_1;[fill]Olá, eu sou o GODOT. Eu vou lhe ensinar a utilizar de forma segura a rede mundial de computadores, conhecida pelos humanos como INTERNET.[/fill];[Rellena] Hola, soy el piadoso. Le enseñaré a usar la red global de computadoras globales, conocida por los humanos como Internet. [/fill];[fill]Hello, I'm the godot. I will teach you to safely use the global computers network, known by humans as the Internet. [/fill]
+BotaoResponder;Responder;Respuesta;Reply
+BotaoIgnorar;Ignorar;Ignorar;Ignore
+ParteMao;Mão;Mano;Hand
+PartePe;Pé;Pie;Foot
+ParteBoca;Boca;Boca;Mouth
+BotaoTras;Trás;Atrás;Back
+BotaoFrente;Face;Rostro;Face
+BotaoAceitar;Aceitar;Aceptar;To accept
+BotaoRecusar;Recusar;Negar;Refuse
+ParteTesta;Testa;Frente;Forehead
+ParteOrelha;Orelha;Oído;Ear
+ParteNariz;Nariz;Nariz;Nose
+ParteQueixo;Queixo;Mentón;Chin
+ParteMamilo;Mamilo;Pezón;Nipple
+ParteUmbigo;Umbigo;Ombligo;Belly button
+ParteJoelho;Joelho;Rodilla;Knee
+ParteCoxa;Coxa;Hermético;Thigh
+ParteAbdomen;Abdômen;Abdomen;Abdomen
+ParteOlho;Olho;Ojo;Eye
+ParteNuca;Nuca;Nuca;Nape
+ParteOmoplata;Omoplata;Omóplato;Shoulder blade
+ParteCabelo;Cabelo;Cabello;Hair
+ParteBraco;Braço;Brazo;Arm
+ParteAxila;Axila;Axila;Armpit
+ParteCostas;Costas;Atrás;Back
+ParteNadega;Nádega;Nalga;Buttock
+ParteCoccix;Cóccix;Cóccix;Coccyx
+PartePerna;Perna;Pierna;Leg
+ParteAnus;Ânus;Ano;Anus
+PartePanturrilha;Panturrilha;Ternero;Calf
+ParteCalcanhar;Calcanhar;Hasta el talón;To heel
+ParteOmbro;Ombro;Hombro;Shoulder
+ParteTorax;Tórax;Cofre;Chest
+PartePenis;Pênis;Pene;Penis
+ParteVulva;Vulva;Vulva;Vulva
+DelegaciaFase1_Inicio;[fill]Vamos começar! Escolha um pino e tente colocar ele na sua devida posição.[/fill];[fill]¡Vamos a empezar! Elija un PIN e intente ponerlo en su posición correcta. [/fill];[fill]Let's get started! Choose a pin and try to put it in your proper position. [/fill]
+DelegaciaFase1_Logo1;[fill]Isso mesmo. Esse é o Disque 100. Se alguém está te machucando você sempre pode ligar para o Disque 100. [/fill];[fill]eso es correcto. Este es el marcado 100. Si alguien le está lastimando, siempre puede llamar a Marcar 100. [/fill];[fill]That's right. This is Dial 100. If someone is hurting you you can always call Dial 100. [/fill]
+DelegaciaFase1_Logo2;[fill]Isso aí. Se acontecer qualquer acidente você sempre pode ligar para os bombeiros.[/fill];[fill]eso está ahí. Si ocurre algún accidente, siempre puede llamar a bomberos. [/fill];[fill]That's there. If any accident happen you can always call firefighters. [/fill]
+DelegaciaFase1_Logo3;[fill]Correto. No aplicativo dos Direitos Humanos você pode denunciar qualquer tipo de problema.[/fill];[fill]correcto. En la solicitud de derechos humanos, puede informar cualquier tipo de problema. [/fill];[fill]correct. In the human rights application you can report any type of problem. [/fill]
+DelegaciaFase1_Logo4;[fill]Isso mesmo. Se algo de ruim acabou de acontecer e você precisar de ajuda urgente, você pode ligar para a polícia militar.[/fill];[fill]eso es correcto. Si algo malo acaba de suceder y necesita ayuda urgente, puede llamar a la policía militar. [/fill];[fill]That's right. If something bad has just happened and you need urgent help, you can call the Military Police. [/fill]
+DelegaciaFase1_Logo5;[fill]Perfeito. Se você ver uma mulher sofrendo qualquer forma de violência, você sempre pode ligar para o número 180.[/fill];[fill]perfecto. Si ves a una mujer que sufre alguna forma de violencia, siempre puede llamar al número 180. [/fill];[fill]Perfect. If you see a woman suffering any form of violence, you can always call the number 180. [/fill]
+DelegaciaFase1_Logo6;[fill]Isso aí. Se você tiver qualquer dúvida sobre a campanha de vacinação, ou qualquer assunto ligado a saúde, você pode ligar para o SUS.[/fill];[fill]eso está ahí. Si tiene alguna pregunta sobre la campaña de vacunación, o cualquier tema conectado a la salud, puede llamar a sus. [/fill];[fill]That's there. If you have any questions about the vaccination campaign, or any subject connected to health, you can call SUS. [/fill]
+DelegaciaFase1_Logo7;[fill]Correto. Sempre que alguém estiver correndo perigo de vida, você pode ligar para o SAMU.[/fill];[fill]correcto. Cada vez que alguien está funcionando peligro de la vida, puede llamar a Samu. [/fill];[fill]correct. Whenever someone is running danger of life, you can call Samu. [/fill]
+DelegaciaFase3_Inicio;[fill]Me ajude a encontrar certas pessoas pela cidade. Você acha que consegue?[/fill];[fill]Ayúdame a encontrar ciertas personas alrededor de la ciudad. ¿Crees que puedes? [/fill];[fill]Help me find certain people around the city. Do you think you can? [/fill]
+DelegaciaFase3_Pessoa1;[fill]Você consegue encontrar essa pessoa na nossa cidade? Dizem que essa pessoa mora perto de uma casa abandonada.[/fill];[fill]¿Puedes encontrar a esta persona en nuestra ciudad? Dicen que esta persona vive cerca de una casa abandonada. [/fill];[fill]Can you find this person in our city? They say that this person lives near an abandoned house. [/fill]
+DelegaciaFase3_Pessoa2;[fill]Veja se consegue achar essa mulher pela cidade. Dizem que ela costuma fazer várias compras em uma feirinha.[/fill];[fill]Vea si puedes encontrar a esta mujer para la ciudad. Dicen que generalmente hace varias compras en una feria. [/fill];[fill]See if you can find this woman for the city. They say she usually does several shopping in a fair. [/fill]
+DelegaciaFase3_Pessoa3;[fill]Vamos com uma fácil. Você consegue achar o policial? Ele trabalha na delegacia.[/fill];[fill]Vamos a ir con un fácil. ¿Puedes encontrar al policía? Trabaja en la estación de policía. [/fill];[fill]Let's go with an easy. Can you find the policeman? He works at the police station. [/fill]
+DelegaciaFase3_Pessoa4;[fill]Essa pessoa embora não pareça é um bandido, que faz mal para crianças. Você acha que consegue achar ele pela cidade?[/fill];[Rellena] esta persona aunque no se parece a un matón, lo que hace mal para los niños. ¿Crees que puedes encontrarlo para la ciudad? [/fill];[fill]This person although it does not look like a thug, which makes bad for children. Do you think you can find him for the city? [/fill]
+DelegaciaFase3_Pessoa5;[fill]Você consegue achar esse rapaz tomando um sorvete?[/fill];[fill]¿Puedes encontrar a este tipo tener un helado? [/fill];[fill]Can you find this guy by having an ice cream? [/fill]
+DelegaciaFase3_Acertou_1;[fill]Muito bem, lembresse de ficar longe de lugares perigosos, como casas ou prédios abandonados. Podem haver bandidos por lá.[/fill];[fill]Muy bien, recuerde mantenerse alejados de lugares peligrosos, como casas o edificios abandonados. Puede haber bandidos allí. [/fill];[fill]very well, remember to stay away from dangerous places such as houses or abandoned buildings. There may be bandits there. [/fill]
+DelegaciaFase3_Acertou_2;[fill]Isso aí. Tome muito cuidado, embora ela não parece uma pessoa malvada, ela é uma criminosa. Por isso não devemos julgar as pessoas pela aparência delas.[/fill];[fill]eso está ahí. Tenga mucho cuidado, aunque no se parece a una persona enfermeda, ella es un criminal. Es por eso que no debemos juzgar a las personas por su apariencia. [/fill];[fill]That's there. Be very careful, although it does not look like a malved person, she is a criminal. That's why we should not judge people by their appearance. [/fill]
+DelegaciaFase3_Acertou_3;[fill]Perfeito. Sempre que você precisar de ajuda você pode ir até a delegacia e pedir para um policial lhe ajudar.[/fill];[fill]perfecto. Cada vez que necesite ayuda, puede ir a la estación de policía y pedirle a un oficial de policía que lo ayude. [/fill];[fill]Perfect. Whenever you need help you can go to the police station and ask for a police officer to help you. [/fill]
+DelegaciaFase3_Acertou_4;[fill]Achou, isso mesmo. Ele não parece, mas é uma pessoa má, por isso é importante você sempre ter cuidado com pessoas que você não conhece, os estranhos.[/fill];[fill]lo encontró bien. No se ve, pero es una mala persona, por lo que es importante que siempre tenga cuidado con las personas que no conoce, extraños. [/fill];[fill]found it right. It does not look, but it's a bad person, so it's important you always be careful about people you do not know, strangers. [/fill]
+DelegaciaFase3_Acertou_5;[fill]Isso mesmo. Você encontrou o menino do sorvete, parabéns.[/fill];[fill]eso es correcto. Encontraste al chico de helado, felicitaciones. [/fill];[fill]That's right. You found the ice cream boy, congratulations. [/fill]
+TelaInternetFase1_Tutorial;[fill]Eu perdi a senha do computador, mas eu sei que são as pessoas que eu confio, você só precisa clicar nas pessoas.[/fill];[fill]Perdí la contraseña de la computadora, pero sé que es la gente con la que confío, solo necesita hacer clic en las personas. [/fill];[fill]I lost the computer password, but I know it's the people I trust, you just need to click on people. [/fill]
+TelaInternetFase2_Tutorial;[fill]Aqui você aprenderá quem devemos adicionar como amigo na internet. Basta clicar em [color=green]ACEITAR[/color] ou [color=red]RECUSAR[/color].[/fill];[fill]Aquí aprenderás quiénes deberíamos agregar como amigo en Internet. Simplemente haga clic en [Color=Green] Aceptar [/color] o [Color=rojo] Rechace [/color]. [/fill];[fill]Here you will learn who we should add as friend on the Internet. Just click [Color = Green] Accept [/color]or [Color = Red] refuse [/ color]. [/fill]
+TelaInternetFase3_Tutorial;[fill]Aqui você aprenderá a interagir com as pessoas na internet. Basta clicar em [color=green]RESPONDER[/color] ou [color=red]IGNORAR[/color].[/fill];[fill]Aquí aprenderá a interactuar con las personas en Internet. Simplemente haga clic en [Color=Green] Respuesta [/color] o [Color=RED] Ignorar [/color]. [/fill];[fill]Here you will learn to interact with people on the Internet. Just click [Color = Green] Reply [/color]or [Color = Red] Ignore [/ color]. [/fill]
+TelaDelegaciaFase1_Tutorial;[fill]Nesse jogo, vou precisar que você conecte os pinos. Basta clicar e arrastá-los para suas posições.[/fill];[fill]En este juego, necesitaré que conectes los pasadores. Simplemente haga clic y arrástrelo para sus posiciones. [/fill];[fill]In this game, I will need you to connect the pins. Just click and drag them for your positions. [/fill]
+TelaDelegaciaFase2_Tutorial;[fill]Aqui, vou precisar que você remonte esse mural. Basta clicar e arrastar as peças para suas posições.[/fill];[fill]Aquí, necesitaré que vuelvas a ensamblar este mural. Simplemente haga clic y arrastre las piezas para sus posiciones. [/fill];[fill]Here, I'll need you to reassemble this mural. Just click and drag the parts for your positions. [/fill]
+TelaDelegaciaFase3_Tutorial;[fill]Nesse jogo, você terá que encontrar certos indivíduos em uma cidade. Você acha que consegue?[/fill];[fill]En este juego, tendrás que encontrar ciertos individuos en una ciudad. ¿Crees que puedes? [/fill];[fill]In this game, you will have to find certain individuals in a city. Do you think you can? [/fill]
+TelaCadastro_2;[fill]Muito bem. Mas eu ainda não sei se você é menino ou menina. Você poderia me dizer? Basta clicar em um dos botões.[/fill];[fill]Muy bien. Pero todavía no sé si eres un niño o una niña. ¿Me podría decir? Simplemente haga clic en uno de los botones. [/fill];[fill]very well. But I still do not know if you're a boy or girl. Could you tell me? Just click on one of the buttons. [/fill]
+BotaoMenino;Menino;Chico;Boy
+BotaoMenina;Menina;Niña;Girl
+TextoErros;Erros;Errores;Errors
+TextoTempo;Tempo;Tiempo;Time
+TextoAtual;Atual: ;Actual:;Current:
+TextoMenor;Menor: ;Menor:;Smaller:
+TelaEscolaFase1_Encerramento;[fill]Parabéns, você aprendeu sobre seus direitos e deveres. Mas você acha que consegue fazer melhor?[/fill];[fill]Felicidades, ha aprendido sobre sus derechos y deberes. Pero, ¿crees que puedes hacerlo mejor? [/fill];[fill]Congratulations, you have learned about your rights and duties. But do you think you can do better? [/fill]
+TelaEscolaFase2_Encerramento;[fill]Parabéns, você aprendeu sobre situações perigosas e seguras. Veja seu desempenho. Você acredita que consegue fazer melhor?[/fill];[fill]Felicidades, ha aprendido sobre situaciones peligrosas y seguras. Vea su rendimiento. ¿Crees que puedes hacerlo mejor? [/fill];[fill]Congratulations, you have learned about dangerous and secure situations. See your performance. Do you believe you can do better? [/fill]
+TelaEscolaFase3_Encerramento;[fill]Parabéns, você aprendeu as pessoas que pode e quem não pode confiar. Gostaria de jogar de novo e fazer um desempenho melhor?[/fill];[fill]Felicidades, aprendiste personas que pueden y con quién no pueden confiar. ¿Te gustaría volver a jugar y realizar mejor? [/fill];[fill]Congratulations, you learned people who can and who can not trust. Would you like to play again and perform better? [/fill]
+TextoRecorde;[rainbow freq=0.2 sat=10 val=20]Novo Recorde[/rainbow];[Arco iris Freq = 0.2 SAT = 10 VAL = 20] Nuevo registro [/ Rainbow];[Rainbow Freq = 0.2 SAT = 10 val = 20] New record [/ rainbow]
+TelaHospitalFase1_Encerramento;[fill]Parabéns, você aprendeu o nome de algumas partes do corpo. Mas você acredita que consegue fazer melhor?[/fill];[fill]Felicidades, aprendiste el nombre de algunas partes del cuerpo. Pero, ¿crees que puedes hacerlo mejor? [/fill];[fill]Congratulations, you learned the name of some parts of the body. But do you believe you can do better? [/fill]
+TelaHospitalFase2_Encerramento;[fill]Parabéns, você aprendeu sobre as partes privadas, também conhecidas como partes íntimas. Mas você acha que consegue melhorar seu resultado final?[/fill];[fill]Felicidades, usted ha aprendido sobre las partes privadas, también conocidas como partes íntimas. ¿Pero crees que puedes mejorar tu resultado final? [/fill];[fill]Congratulations, you have learned about the private parties, also known as intimate parts. But do you think you can improve your final result? [/fill]
+TelaHospitalFase3_Encerramento;[fill]Parabéns, você aprendeu sobre os toques bom e ruins. Porém, você acha que consegue jogar de novo e fazer um desempenho melhor?[/fill];[fill]Felicidades, has aprendido sobre los buenos y malos toques. Sin embargo, ¿crees que puedes jugar de nuevo y realizar mejor? [/fill];[fill]Congratulations, you have learned about the good and bad touches. However, do you think you can play again and perform better? [/fill]
+TelaInternetFase1_Encerramento;[fill]Congratulações. Você aprendeu sobre as minhas pessoas de confiança. Cada pessoa deve ter cinco pessoas de confiança, você sabe quais são as suas?[/fill];[fill]Felicitaciones. Has aprendido sobre mis personas confiables. Cada persona debe tener cinco personas confiables, ¿sabe lo que tuyos son? [/fill];[fill]Congratulations. You have learned about my trustworthy people. Each person must have five people reliable, do you know what yours are? [/fill]
+TelaInternetFase2_Encerramento;[fill]Congratulações. Você aprendeu a como adicionar amigos na internet. Veja seu desempenho. Você acredita que consegue fazer melhor?[/fill];[fill]Felicitaciones. Has aprendido cómo agregar amigos en internet. Vea su rendimiento. ¿Crees que puedes hacerlo mejor? [/fill];[fill]Congratulations. You have learned how to add friends on the Internet. See your performance. Do you believe you can do better? [/fill]
+TelaInternetFase3_Encerramento;[fill]Congratulações. Você aprendeu a como conversar com as pessoas na internet. Mas você acha que consegue melhorar seu resultado?[/fill];[fill]Felicitaciones. Aprendiste cómo hablar con la gente en internet. ¿Pero crees que puedes mejorar tu resultado? [/fill];[fill]Congratulations. You learned how to talk to people on the internet. But do you think you can improve your result? [/fill]
+TelaDelegaciaFase1_Encerramento;[fill]Parabéns, você aprendeu sobre os telefones de emergência. Mas você acredita que consegue melhorar seu desempenho?[/fill];[fill]Felicidades, aprendiste sobre los teléfonos de emergencia. ¿Pero crees que puedes mejorar tu rendimiento? [/fill];[fill]Congratulations, you learned about emergency phones. But do you believe you can improve your performance? [/fill]
+TelaDelegaciaFase2_Encerramento;[fill]Parabéns, você concluiu esse nível. Mas você acredita que consegue melhorar seu desempenho?[/fill];[fill]Felicidades, has completado este nivel. ¿Pero crees que puedes mejorar tu rendimiento? [/fill];[fill]Congratulations, you have completed this level. But do you believe you can improve your performance? [/fill]
+TelaDelegaciaFase3_Encerramento;[fill]Parabéns, você aprendeu a reconhecer pessoas perigosas. Mas você acredita que consegue melhorar seu desempenho?[/fill];[fill]Felicidades, aprendiste a reconocer a las personas peligrosas. ¿Pero crees que puedes mejorar tu rendimiento? [/fill];[fill]Congratulations, you learned to recognize dangerous people. But do you believe you can improve your performance? [/fill]

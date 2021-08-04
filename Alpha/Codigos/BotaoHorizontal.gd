@@ -128,6 +128,8 @@ func _on_BotaoHorizontal_Comando():
 		get_tree().change_scene("res://Cenas/TelaCarregamento.tscn")
 		get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
 #		get_tree().quit()
+	if (get_tree().get_current_scene().get_name() == "TelaCadastro" or  get_tree().get_current_scene().get_name() == "TelaGenero") and (name == "BotaoHospital" or name=="BotaoEscola" or name=="BotaoDelegacia" or name=="BotaoInternet"):
+		return
 	if TrocarCena:
 		if get_parent().get_node_or_null("Tutorial") != null:
 			if not get_parent().get_node("Tutorial").pressed:
@@ -157,7 +159,7 @@ func _on_BotaoHorizontal_Comando():
 					print("Cena salva: ", ProximaCena)
 	else:
 		print("Cena nao encontrada")
-		if get_tree().get_current_scene().get_name() == "TelaCadastro":
+		if get_tree().get_current_scene().get_name() == "TelaCadastro" and name == "BotaoJogar":
 			get_tree().get_current_scene().get_node("Personagem").texture = load("res://Elementos/Visuais/Personagens/Menino/Menino-10.svg")
 			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").bbcode_text = tr("TelaCadastro_2")
 			get_tree().get_current_scene().get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").percent_visible = 0

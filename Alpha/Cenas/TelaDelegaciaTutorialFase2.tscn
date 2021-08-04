@@ -250,7 +250,11 @@ text = "Texto Apresentacao."
 ProximaCena = "res://Cenas/TelaDelegaciaFase2.tscn"
 TrocarCena = true
 
+[node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]
+margin_right = 223.0
+
 [node name="Texto" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="1"]
+margin_right = 223.0
 text = "BotaoIr"
 
 [node name="Texto" parent="." instance=ExtResource( 5 )]
