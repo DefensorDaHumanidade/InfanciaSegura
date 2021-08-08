@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteAnus.mp3-c3cdb02f9e8283954675172f195cd14e.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteAnus.mp3"
+dest_files=[ "res://.import/ParteAnus.mp3-c3cdb02f9e8283954675172f195cd14e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

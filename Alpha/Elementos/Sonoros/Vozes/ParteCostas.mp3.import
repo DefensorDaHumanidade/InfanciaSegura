@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteCostas.mp3-e5f56a22a9181543bd5e3fd819216dff.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteCostas.mp3"
+dest_files=[ "res://.import/ParteCostas.mp3-e5f56a22a9181543bd5e3fd819216dff.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

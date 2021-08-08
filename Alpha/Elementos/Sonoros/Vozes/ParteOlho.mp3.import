@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteOlho.mp3-d133c07590493a65cf1c90a7e0437cc3.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteOlho.mp3"
+dest_files=[ "res://.import/ParteOlho.mp3-d133c07590493a65cf1c90a7e0437cc3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

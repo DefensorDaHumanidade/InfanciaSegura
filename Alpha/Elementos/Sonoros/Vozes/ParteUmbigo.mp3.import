@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteUmbigo.mp3-f6afdbe5b285f6d32f5358d96653e054.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteUmbigo.mp3"
+dest_files=[ "res://.import/ParteUmbigo.mp3-f6afdbe5b285f6d32f5358d96653e054.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

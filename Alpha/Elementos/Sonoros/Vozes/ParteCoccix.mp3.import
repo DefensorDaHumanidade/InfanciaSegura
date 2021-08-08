@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteCoccix.mp3-e5e2c06d96564b37b85ebb9bc5147c5d.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteCoccix.mp3"
+dest_files=[ "res://.import/ParteCoccix.mp3-e5e2c06d96564b37b85ebb9bc5147c5d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

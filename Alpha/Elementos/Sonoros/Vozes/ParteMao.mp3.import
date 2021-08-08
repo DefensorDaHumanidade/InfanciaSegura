@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteMao.mp3-c6e424a74ddec1593298e47d7325b4ca.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteMao.mp3"
+dest_files=[ "res://.import/ParteMao.mp3-c6e424a74ddec1593298e47d7325b4ca.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

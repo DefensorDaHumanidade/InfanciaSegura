@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteAbdomen.mp3-4bc56be9f24088639b84124c96f70ec2.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteAbdomen.mp3"
+dest_files=[ "res://.import/ParteAbdomen.mp3-4bc56be9f24088639b84124c96f70ec2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

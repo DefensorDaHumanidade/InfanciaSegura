@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteBoca.mp3-9d0684e2a554735cf317347ae0fca9e8.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteBoca.mp3"
+dest_files=[ "res://.import/ParteBoca.mp3-9d0684e2a554735cf317347ae0fca9e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

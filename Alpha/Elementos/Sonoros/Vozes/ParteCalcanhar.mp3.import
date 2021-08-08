@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteCalcanhar.mp3-8bbd39df16e7fec390ad34544a8aea45.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteCalcanhar.mp3"
+dest_files=[ "res://.import/ParteCalcanhar.mp3-8bbd39df16e7fec390ad34544a8aea45.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

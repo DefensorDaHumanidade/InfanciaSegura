@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteQueixo.mp3-6c2d424627ff76623ddf5a9224963065.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteQueixo.mp3"
+dest_files=[ "res://.import/ParteQueixo.mp3-6c2d424627ff76623ddf5a9224963065.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

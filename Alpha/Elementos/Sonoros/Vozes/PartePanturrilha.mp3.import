@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PartePanturrilha.mp3-eba60ef033581974c3de97a29fa56818.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/PartePanturrilha.mp3"
+dest_files=[ "res://.import/PartePanturrilha.mp3-eba60ef033581974c3de97a29fa56818.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

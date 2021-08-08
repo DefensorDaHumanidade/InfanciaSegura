@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteNariz.mp3-8dd2641762f0b21ffe76a31358e0a83d.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteNariz.mp3"
+dest_files=[ "res://.import/ParteNariz.mp3-8dd2641762f0b21ffe76a31358e0a83d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

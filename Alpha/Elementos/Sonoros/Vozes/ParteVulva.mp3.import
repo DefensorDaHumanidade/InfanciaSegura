@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteVulva.mp3-cad0426aaf7ef2edfc43162b3a900f25.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteVulva.mp3"
+dest_files=[ "res://.import/ParteVulva.mp3-cad0426aaf7ef2edfc43162b3a900f25.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

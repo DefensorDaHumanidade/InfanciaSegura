@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PartePenis.mp3-fd6abf47c254c3cf37b83c7656120962.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/PartePenis.mp3"
+dest_files=[ "res://.import/PartePenis.mp3-fd6abf47c254c3cf37b83c7656120962.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

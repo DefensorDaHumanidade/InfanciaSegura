@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteNuca.mp3-5269895cd850338e8cb14fdb55b13669.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteNuca.mp3"
+dest_files=[ "res://.import/ParteNuca.mp3-5269895cd850338e8cb14fdb55b13669.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

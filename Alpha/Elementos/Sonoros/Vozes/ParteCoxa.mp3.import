@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteCoxa.mp3-997bbef3899028c4a7bdae08f3883906.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteCoxa.mp3"
+dest_files=[ "res://.import/ParteCoxa.mp3-997bbef3899028c4a7bdae08f3883906.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

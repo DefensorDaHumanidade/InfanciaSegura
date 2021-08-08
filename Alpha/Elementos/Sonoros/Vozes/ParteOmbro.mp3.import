@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteOmbro.mp3-3099e0fff773d7a4a3778c131cbbd8a9.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteOmbro.mp3"
+dest_files=[ "res://.import/ParteOmbro.mp3-3099e0fff773d7a4a3778c131cbbd8a9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

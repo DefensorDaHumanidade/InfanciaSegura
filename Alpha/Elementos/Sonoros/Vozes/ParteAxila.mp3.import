@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteAxila.mp3-525f780e0167dbd1bfe7ec2c3b2d5500.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteAxila.mp3"
+dest_files=[ "res://.import/ParteAxila.mp3-525f780e0167dbd1bfe7ec2c3b2d5500.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ParteCabelo.mp3-d818a66d508218d3a9632760ae52896c.mp3str"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Vozes/ParteCabelo.mp3"
+dest_files=[ "res://.import/ParteCabelo.mp3-d818a66d508218d3a9632760ae52896c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
