@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Elementos/Visuais/DelegaciaFase2/QuebraCabeca_01.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Elementos/Visuais/Fundo/Delegacia2.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/Painel.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 240
@@ -286,8 +287,29 @@ shape = SubResource( 3 )
 
 [node name="AudioErro" parent="." instance=ExtResource( 7 )]
 
+[node name="Painel" parent="." instance=ExtResource( 9 )]
+self_modulate = Color( 1, 0.537255, 0.537255, 1 )
+
+[node name="Pontuacao" parent="Painel/Colunas" index="0"]
+visible = false
+
+[node name="Separador" parent="Painel/Colunas" index="1"]
+visible = false
+margin_left = 0.0
+margin_right = 15.0
+
+[node name="Tempo" parent="Painel/Colunas" index="2"]
+margin_left = 0.0
+
+[node name="Texto" parent="Painel/Colunas/Tempo" index="0"]
+margin_right = 459.0
+
+[node name="Numero" parent="Painel/Colunas/Tempo" index="1"]
+margin_right = 459.0
+
 [connection signal="area_entered" from="AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01/Area" to="." method="_on_Area_entrou"]
 
 [editable path="CaixaDialogo"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoEsquerda"]
 [editable path="CaixaDialogo/Margem/Elementos/BotaoDireita"]
+[editable path="Painel"]

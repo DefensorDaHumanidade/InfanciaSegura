@@ -32,6 +32,9 @@ func _ready():
 	
 	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
 	Configuracoes.salvar.HospitalErro3 = 0
+	
+	$Painel/Colunas/Pontuacao/Texto.text = "Figura"
+	$Painel/Colunas/Pontuacao/Numero.text = str(indiceToque+1)+"/"+str(10)
 	pass # Replace with function body.
 
 
@@ -50,6 +53,8 @@ func atualizarImagem():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/HospitalFase3_Toque" + Toques[indiceToque] + ".mp3"))
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+	
+	$Painel/Colunas/Pontuacao/Numero.text = str(indiceToque+1)+"/"+str(10)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

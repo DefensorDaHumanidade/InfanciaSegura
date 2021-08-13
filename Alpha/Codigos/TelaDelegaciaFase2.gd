@@ -17,10 +17,21 @@ var auxilicar = 0
 
 var contador = 0
 
+var textura = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	var aleatorio = RandomNumberGenerator.new()
 	aleatorio.randomize()
+	
+	textura = aleatorio.randi_range(1, 2)
+	
+	$AreaTrabalho/Centro/Imagem.texture = load("res://Elementos/Visuais/DelegaciaFase2/QuebraCabeca_0"+str(textura)+".png")
+	$AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.texture = load("res://Elementos/Visuais/DelegaciaFase2/QuebraCabeca_0"+str(textura)+".png")
+	$ParteInferior/QuebraCabecaPeca.texture = load("res://Elementos/Visuais/DelegaciaFase2/QuebraCabeca_0"+str(textura)+".png")
+	
+	
 	$AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.position = $AreaTrabalho/Centro/Imagem/Fundo.rect_position + Vector2($AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.texture.get_width()*$AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.scale.x/$AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.hframes*(2.5+posicaoX), $AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.texture.get_height()*$AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.scale.y/$AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.hframes*(2.5+posicaoY))
 #	print($Peca_01.texture.get_width()*$Peca_01.scale.x, "=====", $Peca_01.texture.get_height()*$Peca_01.scale.x)
 	$AreaTrabalho/Centro/Imagem/Fundo/PecaBase_01.frame = 0

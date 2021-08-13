@@ -10,8 +10,9 @@ extends Control
 func _ready():
 #	get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").visible = false
 	$Animar.play("Padrao")
+
 	
-	
+
 	if Configuracoes.salvar.Cena == "res://Cenas/TelaCarregamento.tscn":
 		Configuracoes.get_node("CantoSuperiorDireito/BotaoConfiguracoes").visible = false
 	if Configuracoes.salvar.Cena == "":

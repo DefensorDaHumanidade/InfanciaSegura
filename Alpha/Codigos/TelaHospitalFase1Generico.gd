@@ -68,7 +68,7 @@ func atualizarParte():
 		$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.position = Vector2(740, 150)
 
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(false)
-	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/HospitalFase1_Parte" + str(Partes[indicePartes]) + ".mp3"))
+	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/" + $CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text + ".mp3"))
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	pass
@@ -104,7 +104,7 @@ func _on_Contorno_arrastarParte(event):
 					if indicePartes < Partes.size()/2:
 						atualizarParte()
 					else:
-						$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.text = "cabooooooo"
+						$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.text = ""
 						$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.queue_free()
 						yield(get_tree().create_timer(1.0), "timeout")
 						print("Acabaram as perguntas")

@@ -33,6 +33,10 @@ func _ready():
 	
 	Configuracoes.salvar.TempoAuxiliar = OS.get_unix_time()
 	Configuracoes.salvar.EscolaErro3 = 0
+	
+	$Painel/Colunas/Pontuacao/Texto.text = "Pergunta"
+	$Painel/Colunas/Pontuacao/Numero.text = str(indicePergunta+1)+"/"+str(10)
+	
 	pass # Replace with function body.
 
 
@@ -69,6 +73,8 @@ func atualizarPergunta():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.stream = load(str("res://Elementos/Sonoros/Vozes/" + PerguntasFase3[indicePergunta] + ".mp3"))
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
+	
+	$Painel/Colunas/Pontuacao/Numero.text = str(indicePergunta+1)+"/"+str(10)
 	pass
 
 

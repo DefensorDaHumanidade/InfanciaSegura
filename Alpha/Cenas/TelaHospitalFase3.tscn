@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Elementos/Visuais/HospitalFase3/LivroVermelho.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/CaixaDialogo.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Cenas/AudioAcerto.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Cenas/AudioErro.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Elementos/Visuais/Fundo/Hospital.png" type="Texture" id=9]
+[ext_resource path="res://Cenas/Painel.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 169.28, 250 )
@@ -234,6 +235,9 @@ current = true
 
 [node name="Animar" type="AnimationPlayer" parent="Camera"]
 anims/Tremer = SubResource( 3 )
+
+[node name="Painel" parent="." instance=ExtResource( 10 )]
+self_modulate = Color( 0.588235, 0.788235, 1, 1 )
 
 [connection signal="area_entered" from="LadoEsquerdo/Centro/Livro/Area" to="." method="_on_ToqueBom_entrou"]
 [connection signal="area_exited" from="LadoEsquerdo/Centro/Livro/Area" to="." method="_on_ToqueBom_saiu"]

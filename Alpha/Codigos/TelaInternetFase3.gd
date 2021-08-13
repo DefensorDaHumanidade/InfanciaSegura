@@ -37,6 +37,9 @@ func _ready():
 #	$Tela/Coluna/ListaInformacoes/Texto.set("custom_fonts/normal_font/settings/size", 160)
 #	$Tela/Coluna/ListaInformacoes/Texto.visible_characters = $Tela/Coluna/ListaInformacoes/Texto.get_text().length()
 #	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto.set_process(true)
+	
+	$Painel/Colunas/Pontuacao/Texto.text = "Pergunta"
+	$Painel/Colunas/Pontuacao/Numero.text = str(indicePerguntar+1)+"/"+str(10)
 	pass # Replace with function body.
 
 
@@ -74,6 +77,8 @@ func proximaPergunta():
 	$Tela/Coluna/ListaBotoes/BotaoRecusar.disabled = false
 	$Tela/Coluna/ListaBotoes/BotaoRecusar.toggle_mode = true
 	$Tela/Coluna/ListaBotoes/BotaoAceitar.toggle_mode = true
+	
+	$Painel/Colunas/Pontuacao/Numero.text = str(indicePerguntar+1)+"/"+str(10)
 	pass
 
 
