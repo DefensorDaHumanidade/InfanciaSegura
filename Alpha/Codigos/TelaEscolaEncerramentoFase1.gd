@@ -27,6 +27,7 @@ func _ready():
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorErro1)
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.EscolaTempo1, " s")
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorTempo1, " s")
+		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(125)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.EscolaTempo1)+ " | erros= "+str(Configuracoes.salvar.EscolaErro1))
 	
 	if name == "TelaEscolaEncerramentoFase2":
 		Configuracoes.salvar.EscolaTempo2 = OS.get_unix_time() - Configuracoes.salvar.TempoAuxiliar
@@ -47,6 +48,7 @@ func _ready():
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorErro2)
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.EscolaTempo2, " s")
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorTempo2, " s")
+		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(126)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.EscolaTempo2)+ " | erros= "+str(Configuracoes.salvar.EscolaErro2))
 	
 	if name == "TelaEscolaEncerramentoFase3":
 		Configuracoes.salvar.EscolaTempo3 = OS.get_unix_time() - Configuracoes.salvar.TempoAuxiliar
@@ -67,8 +69,12 @@ func _ready():
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorErro3)
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.EscolaTempo3, " s")
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.EscolaMenorTempo3, " s")
+		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(127)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.EscolaTempo3)+ " | erros= "+str(Configuracoes.salvar.EscolaErro3))
 	if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 		print("Dados salvos!")
+		
+	
+	
 	pass # Replace with function body.
 
 

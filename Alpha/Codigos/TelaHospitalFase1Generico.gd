@@ -95,12 +95,12 @@ func _on_Contorno_arrastarParte(event):
 			else:
 				if estado:
 					$AudioAcerto.play()
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Partes[indicePartes])+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+" colocado no "+nomePeca)
 					if Partes[indicePartes] < 17: 
 						get_node("Centro/Cena").get_node("Parte"+str(Partes[indicePartes])).get_node("Texto").visible = true
 					else:
 						get_node("Centro/Tras").get_node("Parte"+str(Partes[indicePartes])).get_node("Texto").visible = true
 					indicePartes += 1
-#					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(1)+"&veredito="+"1"+"&TI="+str(tempo)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+"colocado no"+nomePeca)
 					if indicePartes < Partes.size()/2:
 						atualizarParte()
 					else:
@@ -121,6 +121,7 @@ func _on_Contorno_arrastarParte(event):
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
 					Configuracoes.salvar.HospitalErro1 += 1
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Partes[indicePartes])+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+" colocado no "+nomePeca)
 		else:
 			arrastar = true
 			$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Audio.play()
@@ -132,6 +133,7 @@ func _on_Contorno_arrastarParte(event):
 
 func _on_Area_entrou(area):
 	if area.get_parent().get_parent().visible: 
+		nomePeca = area.get_parent().get_node("Texto").text
 		print("Entrou: ", area.get_parent().get_node("Texto").text)
 		if get_node("CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto").text == area.get_parent().get_node("Texto").text:
 			estado = true

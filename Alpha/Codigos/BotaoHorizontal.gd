@@ -141,7 +141,8 @@ func _on_BotaoHorizontal_Comando():
 						print("Cena salva: ", Tutorial)
 			else:
 				get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
-				Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarJogadores.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&tela="+ProximaCena)
+				if get_tree().current_scene.name == "TelaGenero":
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarJogadores.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&tela="+ProximaCena)
 				if get_tree().change_scene(ProximaCena) == OK:
 					Configuracoes.salvar.Cena = ProximaCena
 					Configuracoes.salvar.NomeMusica = TocarMusica
@@ -150,7 +151,8 @@ func _on_BotaoHorizontal_Comando():
 						print("Cena salva: ", ProximaCena)
 		else:
 			get_node("/root/Configuracoes/CantoSuperiorDireito/BotaoConfiguracoes").pressed = false
-			Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarJogadores.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&tela="+ProximaCena)
+			if get_tree().current_scene.name == "TelaGenero":
+				Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarJogadores.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&tela="+ProximaCena)
 			if get_tree().change_scene(ProximaCena) == OK:
 				Configuracoes.salvar.Cena = ProximaCena
 				Configuracoes.salvar.NomeMusica = TocarMusica

@@ -15,6 +15,18 @@ var Toques			= [	"Bom_01",
 						"Ruim_04",
 						"Bom_05",
 						"Ruim_05", ]
+						
+
+var Auxiliar			= [	"Bom_01", 
+						"Ruim_01",
+						"Bom_02",
+						"Ruim_02",
+						"Bom_03",
+						"Ruim_03",
+						"Bom_04",
+						"Ruim_04",
+						"Bom_05",
+						"Ruim_05", ]
 
 var arrastar = false
 var estado = null
@@ -55,6 +67,7 @@ func atualizarImagem():
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
 	$Painel/Colunas/Pontuacao/Numero.text = str(indiceToque+1)+"/"+str(10)
+	
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -93,6 +106,10 @@ func _on_Toque_pressionado():
 	pass
 
 
+
+#var result = Configuracoes.get_node("BancoDados").request(Configuracoes.get_node("BancoDados").METHOD_POST, "https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", headers, query_string)
+#header("Content-Length:". Filesize($cache_file));
+
 func _on_Area_SelecionarImagem(viewport, event, shape_idx):
 	if event is InputEventScreenTouch:
 		if arrastar:
@@ -103,6 +120,13 @@ func _on_Area_SelecionarImagem(viewport, event, shape_idx):
 			else:
 				if estado:
 					$AudioAcerto.play()
+#					var fields = {"jogador" : "Configuracoes.salvar.Identificador", "pergunta" : "str(Auxiliar.find(Toques[indiceToque])+115)", "veredito" : "1", "TI" : "0", "TF" : "0", "resposta" : "imagem certaa"}
+#					var query_string = query_string_from_dict(fields)
+#					var headers = ["Content-Type: application/x-www-form-urlencoded", "Content-Length: 100"]
+#					Configuracoes.get_node("BancoDados").request(HTTPClient.METHOD_POST, "https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", headers, fields)
+
+
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Auxiliar.find(Toques[indiceToque])+115)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"imagem certa")
 					indiceToque += 1
 					if indiceToque < Toques.size():
 						atualizarImagem()
@@ -122,6 +146,7 @@ func _on_Area_SelecionarImagem(viewport, event, shape_idx):
 					$Meio/Centro/Toque.position = Vector2(0, 0)
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Auxiliar.find(Toques[indiceToque])+115)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"imagem errada")
 					Configuracoes.salvar.HospitalErro3 += 1
 		else:
 			arrastar = true

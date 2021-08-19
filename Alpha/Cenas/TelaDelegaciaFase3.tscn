@@ -6215,10 +6215,10 @@ __meta__ = {
 }
 
 [node name="Policial1" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 1435.62, -248.51 )
+position = Vector2( 1435.62, -220.51 )
 
 [node name="Policial2" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
-position = Vector2( 823.92, -294.721 )
+position = Vector2( 823.92, 0 )
 
 [node name="Policial3" type="Position2D" parent="ViewportContainer/Viewport/Mundo/Selecionaveis"]
 position = Vector2( 961.418, -36.4874 )

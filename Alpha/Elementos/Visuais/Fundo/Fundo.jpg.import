@@ -14,8 +14,8 @@ dest_files=[ "res://.import/Fundo.jpg-8a4fb6758a04e4e908d6d33381a25c17.stex" ]
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

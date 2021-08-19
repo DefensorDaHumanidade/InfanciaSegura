@@ -117,6 +117,9 @@ func acertouPessoa():
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
 	$Tela/Centro/Panel/Lista/Texto.text = "Senha ("+str(indicePergunta)+" de 5)"
+	
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(58+elementosCertos[indicePergunta-1])+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"pessoa certa")
+
 	pass
 	
 func errouPessoa():
@@ -128,4 +131,6 @@ func errouPessoa():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	Configuracoes.salvar.InternetErro1 += 1
+	
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(58+elementosCertos[indicePergunta-1])+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"pessoa errada")
 	pass

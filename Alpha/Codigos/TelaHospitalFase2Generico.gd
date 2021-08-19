@@ -44,7 +44,9 @@ func _on_Contorno_arrastarParte(event):
 			else:
 				if estado:
 					$AudioAcerto.play()
-					print("huhuehuhuhuhuhuhu  ", ultimaParte)
+#					print("huhuehuhuhuhuhuhu  ", ultimaParte)
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(114)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"acertou "+get_node("Centro/").get_node(ultimaParte).get_node("Texto").text)
+
 					get_node("Centro/").get_node(ultimaParte).get_node("Contorno").border_color = Color(1, 0, 0, 1)
 					quantiadePartesPrivadads += 1
 					if quantiadePartesPrivadads < 4:
@@ -66,6 +68,7 @@ func _on_Contorno_arrastarParte(event):
 					$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural.position  = Vector2(740, 150)
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(114)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"errou "+get_node("Centro/").get_node(ultimaParte).get_node("Texto").text)
 					Configuracoes.salvar.HospitalErro2 += 1
 		else:
 			arrastar = true
@@ -125,6 +128,7 @@ func _on_Area_ParteEntrou(area):
 				estado = true
 		else:
 			print("Parte Pública: ", area.get_parent().get_node("Texto").text)
+			ultimaParte = str(area.get_parent().get_parent().name+"/"+area.get_parent().name)
 			estado = false
 	pass # Replace with function body.
 

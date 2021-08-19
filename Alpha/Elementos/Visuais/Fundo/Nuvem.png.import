@@ -14,8 +14,8 @@ dest_files=[ "res://.import/Nuvem.png-514e861cf3316f2e0eb038e425e6c5fa.stex" ]
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=1
+compress/lossy_quality=0.5
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
