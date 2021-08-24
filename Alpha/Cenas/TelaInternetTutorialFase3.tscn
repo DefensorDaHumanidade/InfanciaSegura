@@ -190,6 +190,7 @@ text = "Texto Apresentacao."
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
 ProximaCena = "res://Cenas/TelaInternetFase3.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Redes.wav"
 TrocarCena = true
 
 [node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]

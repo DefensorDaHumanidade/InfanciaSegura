@@ -26,7 +26,7 @@ func _ready():
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.InternetMenorErro1)
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.InternetTempo1, " s")
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.InternetMenorTempo1, " s")
-		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(131)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.InternetTempo1)+ " | erros= "+str(Configuracoes.salvar.InternetErro1))
+		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(131)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.InternetTempo1)+ " | erros= "+str(Configuracoes.salvar.InternetErro1))
 
 		
 		
@@ -49,7 +49,7 @@ func _ready():
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.InternetMenorErro2)
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.InternetTempo2, " s")
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.InternetMenorTempo2, " s")
-		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(132)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.InternetTempo2)+ " | erros= "+str(Configuracoes.salvar.InternetErro2))
+		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(132)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.InternetTempo2)+ " | erros= "+str(Configuracoes.salvar.InternetErro2))
 		
 		
 	if name == "TelaInternetEncerramentoFase3":
@@ -71,7 +71,7 @@ func _ready():
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaErro/ColunaMenor/Valor.text = str(Configuracoes.salvar.InternetMenorErro3)
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/Coluna/Valor.text = str(Configuracoes.salvar.InternetTempo3, " s")
 		$Tela/Centro/Panel/Lista/MargemSuperior/Coluna/ListaTempo/ColunaMenor/Valor.text = str(Configuracoes.salvar.InternetMenorTempo3, " s")
-		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(133)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.InternetTempo3)+ " | erros= "+str(Configuracoes.salvar.InternetErro3))
+		Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(133)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"tempo= "+str(Configuracoes.salvar.InternetTempo3)+ " | erros= "+str(Configuracoes.salvar.InternetErro3))
 	
 	if ResourceSaver.save("res://Dados.tres", Configuracoes.salvar) == OK:
 		print("Dados salvos!")

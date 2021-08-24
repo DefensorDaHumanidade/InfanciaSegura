@@ -125,7 +125,7 @@ func acertouResposta():
 	$Tela/Coluna/ListaBotoes/BotaoAceitar.disabled = true
 	$Tela/Coluna/ListaBotoes/BotaoRecusar.disabled = true
 	
-	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PedidosFase2[indicePerguntar][0][23])+int(PedidosFase2[indicePerguntar][0][24])+93)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"respota certa")
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PedidosFase2[indicePerguntar][0][23])+int(PedidosFase2[indicePerguntar][0][24])+93)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"respota certa")
 		
 	habitlitarBotaoProximo()
 	pass

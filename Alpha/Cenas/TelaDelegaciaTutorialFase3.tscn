@@ -171,6 +171,7 @@ text = "Texto Apresentacao."
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
 ProximaCena = "res://Cenas/TelaDelegaciaFase3.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Delegacia.wav"
 TrocarCena = true
 
 [node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]

@@ -105,7 +105,7 @@ func errouResposta():
 	$AudioErro.play()
 	$Camera/Animar.play("Tremer")
 	
-	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PedidosFase3[indicePerguntar][0][23])+int(PedidosFase3[indicePerguntar][0][24])+103)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"respota errada")
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PedidosFase3[indicePerguntar][0][23])+int(PedidosFase3[indicePerguntar][0][24])+103)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"respota errada")
 
 	
 	Configuracoes.salvar.InternetErro3 += 1
@@ -127,7 +127,7 @@ func acertouResposta():
 	$Tela/Coluna/ListaBotoes/BotaoAceitar.disabled = true
 	$Tela/Coluna/ListaBotoes/BotaoRecusar.disabled = true
 	
-	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PedidosFase3[indicePerguntar][0][23])+int(PedidosFase3[indicePerguntar][0][24])+103)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"respota acertou")
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PedidosFase3[indicePerguntar][0][23])+int(PedidosFase3[indicePerguntar][0][24])+103)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"respota acertou")
 
 	habitlitarBotaoProximo()
 	pass

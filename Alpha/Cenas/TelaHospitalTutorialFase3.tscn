@@ -252,6 +252,7 @@ text = "Texto Apresentacao."
 
 [node name="BotaoDireita" parent="CaixaDialogo/Margem/Elementos" index="2"]
 ProximaCena = "res://Cenas/TelaHospitalFase3.tscn"
+TocarMusica = "res://Elementos/Sonoros/Musiscas/Hospital.wav"
 TrocarCena = true
 
 [node name="Icone" parent="CaixaDialogo/Margem/Elementos/BotaoDireita/ConteinerVertical" index="0"]

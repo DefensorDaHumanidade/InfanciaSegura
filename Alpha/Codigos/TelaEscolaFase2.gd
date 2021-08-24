@@ -101,7 +101,7 @@ func _on_Certo_Estado_2():
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	habitlitarBotao()
 	
-	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PerguntasFase2[indicePergunta][21])+int(PerguntasFase2[indicePergunta][22])+38)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"imagem certa")
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PerguntasFase2[indicePergunta][21])+int(PerguntasFase2[indicePergunta][22])+38)+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"imagem certa")
 #	get_tree().reload_current_scene()
 #	if estado_botao:
 #		$Certo/Contorno.editor_only = false
@@ -128,7 +128,7 @@ func _on_Errado_Estado_2():
 	$CaixaDialogo/Margem/Elementos/Campo/Margem/Texto/Voz.play()
 	$CaixaDialogo/Margem/Elementos/BotaoEsquerda.pressed = true
 	
-	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PerguntasFase2[indicePergunta][21])+int(PerguntasFase2[indicePergunta][22])+38)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"imagem errada")
+	Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(10*int(PerguntasFase2[indicePergunta][21])+int(PerguntasFase2[indicePergunta][22])+38)+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+"imagem errada")
 	Configuracoes.salvar.EscolaErro2 += 1
 #	if estado_botao:
 #		$Errado/Contorno.editor_only = false

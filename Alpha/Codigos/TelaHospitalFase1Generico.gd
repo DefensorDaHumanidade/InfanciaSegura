@@ -95,7 +95,7 @@ func _on_Contorno_arrastarParte(event):
 			else:
 				if estado:
 					$AudioAcerto.play()
-					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Partes[indicePartes])+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+" colocado no "+nomePeca)
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Partes[indicePartes])+"&veredito="+"1"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+" colocado no "+nomePeca)
 					if Partes[indicePartes] < 17: 
 						get_node("Centro/Cena").get_node("Parte"+str(Partes[indicePartes])).get_node("Texto").visible = true
 					else:
@@ -121,7 +121,7 @@ func _on_Contorno_arrastarParte(event):
 					$AudioErro.play()
 					$Camera/Animar.play("Tremer")
 					Configuracoes.salvar.HospitalErro1 += 1
-					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Partes[indicePartes])+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+" colocado no "+nomePeca)
+					Configuracoes.get_node("BancoDados").request("https://infanciasegura.000webhostapp.com/ArmazenarRespostas.php", ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Configuracoes.salvar.Identificador+"&pergunta="+str(Partes[indicePartes])+"&veredito="+"0"+"&TI="+str(0)+"&TF="+"0"+"&resposta="+$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Toque/Texto.text+" colocado no "+nomePeca)
 		else:
 			arrastar = true
 			$CaixaDialogo/Margem/Elementos/Campo/Margem/PecaMural/Audio.play()

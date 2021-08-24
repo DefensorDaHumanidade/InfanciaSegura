@@ -2,12 +2,13 @@ extends Node2D
 
 var arrastar = false
 var acerto = false
+var entrou = false
 
 var pino : String
 
 
 
-export (float) var ropeLength = 30
+export (float) var ropeLength = 300
 export (float) var constrain = 1	# distance between points
 export (Vector2) var gravity = Vector2(0,9.8)
 export (float) var dampening = 0.9
@@ -64,8 +65,11 @@ func _process(delta)->void:
 			self.endPin = true
 			line2D.get_child(0).mouse_filter = 2 
 			$Acerto.play()
-			acerto = false
+			get_node("/root/TelaDelegaciaFase1/Animar").play("Acerto")
+#			acerto = false
 			print("Pino: ", pino)
+			print("Pino: ", get_node("Linha/Inicio/Area"))
+			get_node("Linha/Inicio/Area").queue_free()
 			get_node("/root/TelaDelegaciaFase1").contador += 1
 			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").bbcode_text = tr("DelegaciaFase1_"+pino)
 			get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/Campo/Margem/Texto").percent_visible = 0
@@ -78,9 +82,16 @@ func _process(delta)->void:
 			if get_node("/root/TelaDelegaciaFase1").contador > 6:
 				print("Fim da fase")
 				get_node("/root/TelaDelegaciaFase1/CaixaDialogo/Margem/Elementos/BotaoDireita").visible = true
+		else:
+			if entrou:
+#				print("Erro")
+				$Erro.play()
+				get_node("/root/TelaDelegaciaFase1/Animar").play("Erro")
+				ropeLength = 300
+				
+			
 	else:
 		set_last(get_global_mouse_position())
-	
 	update_points(delta)
 	update_constrain()
 	
@@ -108,7 +119,7 @@ func distancias()->void:
 		pass
 	else: 
 #		print( sqrt((pos[0].x-pos[pos.size()-1].x)*(pos[0].x-pos[pos.size()-1].x)+(pos[0].y-pos[pos.size()-1].y)*(pos[0].y-pos[pos.size()-1].y) ))
-		pointCount = get_pointCount(int(sqrt((pos[0].x-pos[pos.size()-1].x)*(pos[0].x-pos[pos.size()-1].x)+(pos[0].y-pos[pos.size()-1].y)*(pos[0].y-pos[pos.size()-1].y) ))/2)
+		pointCount = get_pointCount(int(0.9*sqrt((pos[0].x-pos[pos.size()-1].x)*(pos[0].x-pos[pos.size()-1].x)+(pos[0].y-pos[pos.size()-1].y)*(pos[0].y-pos[pos.size()-1].y) ))/2)
 		resize_arrays()
 	pass
 
@@ -157,13 +168,17 @@ func _on_Inicio_arrastarInicio(event):
 			arrastar = true
 	if event is InputEventMouseMotion and arrastar:
 		$Linha/Inicio.rect_global_position = event.global_position - Vector2(80, 40)
-		distancias()
+		ropeLength = 300
 #		set_last(get_global_mouse_position())
 		pass
 	pass # Replace with function body.
 
 
 func _on_Area_entrou(area):
+	if area.get_parent().name == "Inicio":
+		entrou = false
+		return
+	entrou = true
 #	print("AHHHHHHHHHHHHHHHHHHHHHH: ", area.get_parent().name)
 #	print("AHHHHHHHHHHHHHHHHHHHHHH: ", self.get_parent().name)
 	if area.get_parent().name == self.get_parent().name:
@@ -182,6 +197,7 @@ func _on_Area_entrou(area):
 
 
 func _on_Area_area_saiu(area):
+	entrou = false
 	acerto = false
 #	self.endPin = false
 	pass # Replace with function body.
