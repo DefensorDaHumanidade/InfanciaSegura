@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Elementos/Visuais/Icones/Painel.png" type="Texture" id=1]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Cenas/Fontes/FonteComicSansMS.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Codigos/Objetos/Painel.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[node name="Painel" type="TextureRect"]
+self_modulate = Color( 0.588235, 1, 0.921569, 1 )
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 222.0
+margin_bottom = 112.0
+texture = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Elementos" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pontuacao" type="VBoxContainer" parent="Elementos"]
+margin_right = 114.0
+margin_bottom = 102.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.35
+alignment = 1
+
+[node name="Texto" parent="Elementos/Pontuacao" instance=ExtResource( 3 )]
+margin_top = 12.0
+margin_right = 114.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pergunta"
+align = 1
+
+[node name="Numero" parent="Elementos/Pontuacao" instance=ExtResource( 3 )]
+margin_top = 53.0
+margin_right = 114.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 1
+
+[node name="Separador" type="VSeparator" parent="Elementos"]
+margin_left = 118.0
+margin_right = 122.0
+margin_bottom = 102.0
+custom_styles/separator = SubResource( 2 )
+
+[node name="Tempo" type="VBoxContainer" parent="Elementos"]
+margin_left = 126.0
+margin_right = 212.0
+margin_bottom = 102.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Texto" parent="Elementos/Tempo" instance=ExtResource( 3 )]
+margin_top = 12.0
+margin_right = 86.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tempo"
+align = 1
+
+[node name="Numero" parent="Elementos/Tempo" instance=ExtResource( 3 )]
+margin_top = 53.0
+margin_right = 86.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 1
+
+[node name="Relogio" type="Timer" parent="."]
+autostart = true
+
+[connection signal="gui_input" from="." to="." method="_TocarPainel"]
+[connection signal="timeout" from="Relogio" to="." method="_UmSegundo"]

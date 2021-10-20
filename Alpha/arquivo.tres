@@ -1,0 +1,755 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Codigos/Eternos/Dados.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+Cena = "res://Cenas/Telas/TelaPrincipal.tscn"
+Identificador = "Lauraa132"
+Idioma = "pt_BR"
+Musica = "Escola.wav"
+Genero = "Menina"
+volumeSom = -40.0
+volumeMusica = -2.0
+volumeVoz = -40.0
+Fase = {
+"DelegaciaFase1": {
+"ErrosAtual": 0,
+"ErrosMenor": 0,
+"RecordeErro": false,
+"RecordeTempo": false,
+"TempoAtual": 34,
+"TempoMenor": 30
+},
+"EscolaFase1": {
+"ErrosAtual": 3,
+"ErrosMenor": 3,
+"RecordeErro": null,
+"RecordeTempo": null,
+"TempoAtual": 16,
+"TempoMenor": 16
+},
+"HospitalFase1": {
+"ErrosAtual": 5,
+"ErrosMenor": 5,
+"RecordeErro": null,
+"RecordeTempo": null,
+"TempoAtual": 72,
+"TempoMenor": 72
+},
+"HospitalFase2": {
+"ErrosAtual": 1,
+"ErrosMenor": 0,
+"RecordeErro": false,
+"RecordeTempo": false,
+"TempoAtual": 12,
+"TempoMenor": 10
+},
+"HospitalFase3": {
+"ErrosAtual": 7,
+"ErrosMenor": 4,
+"RecordeErro": false,
+"RecordeTempo": true,
+"TempoAtual": 27,
+"TempoMenor": 27
+}
+}
+Tutorial = {
+"DelegaciaFase1": false,
+"DelegaciaFase2": false,
+"DelegaciaFase3": false,
+"EscolaFase1": false,
+"EscolaFase2": false,
+"EscolaFase3": false,
+"HospitalFase1": false,
+"HospitalFase2": false,
+"HospitalFase3": false,
+"InternetFase1": false,
+"InternetFase2": false,
+"InternetFase3": false
+}
+Arquivo = {
+2: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_06",
+"Resposta": "Acertou",
+"TF": 0,
+"TI": 0,
+"Veredito": "1"
+},
+3: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Errou",
+"TF": 0,
+"TI": 0,
+"Veredito": "0"
+},
+4: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Acertou",
+"TF": 0,
+"TI": 0,
+"Veredito": "1"
+},
+5: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_09",
+"Resposta": "Errou",
+"TF": 0,
+"TI": 0,
+"Veredito": "0"
+},
+6: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_09",
+"Resposta": "Acertou",
+"TF": 0,
+"TI": 0,
+"Veredito": "1"
+},
+7: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_09",
+"Resposta": "Errou",
+"TF": 0,
+"TI": 0,
+"Veredito": "0"
+},
+8: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_09",
+"Resposta": "Acertou",
+"TF": 0,
+"TI": 0,
+"Veredito": "1"
+},
+9: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_08",
+"Resposta": "Errou",
+"TF": 1634688679,
+"TI": 0,
+"Veredito": "0"
+},
+10: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_08",
+"Resposta": "Errou",
+"TF": 1634689286,
+"TI": 0,
+"Veredito": "0"
+},
+11: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_08",
+"Resposta": "Acertou",
+"TF": 1634689288,
+"TI": 0,
+"Veredito": "1"
+},
+12: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Errou",
+"TF": 1634689544,
+"TI": 0,
+"Veredito": "0"
+},
+13: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Acertou",
+"TF": 1634689545,
+"TI": 0,
+"Veredito": "1"
+},
+14: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_04",
+"Resposta": "Errou",
+"TF": 1634689548,
+"TI": 0,
+"Veredito": "0"
+},
+15: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_04",
+"Resposta": "Acertou",
+"TF": 1634689549,
+"TI": 0,
+"Veredito": "1"
+},
+16: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_08",
+"Resposta": "Acertou",
+"TF": 1634689818,
+"TI": 0,
+"Veredito": "1"
+},
+17: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_03",
+"Resposta": "Acertou",
+"TF": 1634689821,
+"TI": 0,
+"Veredito": "1"
+},
+18: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_09",
+"Resposta": "Acertou",
+"TF": 1634689941,
+"TI": 0,
+"Veredito": "1"
+},
+19: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_02",
+"Resposta": "Errou",
+"TF": 1634690023,
+"TI": 0,
+"Veredito": "0"
+},
+20: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Acertou",
+"TF": 1634690051,
+"TI": 0,
+"Veredito": "1"
+},
+21: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_02",
+"Resposta": "Acertou",
+"TF": 1634690136,
+"TI": 0,
+"Veredito": "1"
+},
+22: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_06",
+"Resposta": "Acertou",
+"TF": 1634690753,
+"TI": 0,
+"Veredito": "1"
+},
+23: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase1_Pergunta_02",
+"Resposta": "43",
+"TF": 1634690770,
+"TI": 0,
+"Veredito": "0"
+},
+24: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase1_Pergunta_02",
+"Resposta": "02",
+"TF": 1634690772,
+"TI": 0,
+"Veredito": "1"
+},
+25: {
+"Jogador": "Lauraa132",
+"Pergunta": "ParteBoca",
+"Resposta": "Errou: ParteTesta",
+"TF": 1634691816,
+"TI": 0,
+"Veredito": "0"
+},
+26: {
+"Jogador": "Lauraa132",
+"Pergunta": "ParteBoca",
+"Resposta": "Errou: ParteNariz",
+"TF": 1634691824,
+"TI": 0,
+"Veredito": "0"
+},
+27: {
+"Jogador": "Lauraa132",
+"Pergunta": "ParteBoca",
+"Resposta": "Acertou: ParteBoca",
+"TF": 1634691827,
+"TI": 0,
+"Veredito": "1"
+},
+28: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Errou: ParteNariz",
+"TF": 1634691916,
+"TI": 0,
+"Veredito": "0"
+},
+29: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Errou: ParteOrelha",
+"TF": 1634691918,
+"TI": 0,
+"Veredito": "0"
+},
+30: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteBoca",
+"TF": 1634691920,
+"TI": 0,
+"Veredito": "1"
+},
+31: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Errou",
+"TF": 1634691931,
+"TI": 0,
+"Veredito": "0"
+},
+32: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Acertou",
+"TF": 1634691932,
+"TI": 0,
+"Veredito": "1"
+},
+33: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase2_Pergunta_02",
+"Resposta": "Errou",
+"TF": 1634691938,
+"TI": 0,
+"Veredito": "0"
+},
+34: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase2_Pergunta_02",
+"Resposta": "Acertou",
+"TF": 1634691939,
+"TI": 0,
+"Veredito": "1"
+},
+35: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase3_Pergunta_03",
+"Resposta": "Errou",
+"TF": 1634691944,
+"TI": 0,
+"Veredito": "0"
+},
+36: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase3_Pergunta_03",
+"Resposta": "Acertou",
+"TF": 1634691946,
+"TI": 0,
+"Veredito": "1"
+},
+37: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase1_Pergunta_02",
+"Resposta": "28",
+"TF": 1634691956,
+"TI": 0,
+"Veredito": "0"
+},
+38: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase1_Pergunta_02",
+"Resposta": "02",
+"TF": 1634691958,
+"TI": 0,
+"Veredito": "1"
+},
+39: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase2_Pergunta_04",
+"Resposta": "Errou",
+"TF": 1634691965,
+"TI": 0,
+"Veredito": "0"
+},
+40: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase2_Pergunta_04",
+"Resposta": "Acertou",
+"TF": 1634691966,
+"TI": 0,
+"Veredito": "1"
+},
+41: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase3_Pergunta_08",
+"Resposta": "Errou",
+"TF": 1634691976,
+"TI": 0,
+"Veredito": "0"
+},
+42: {
+"Jogador": "Lauraa132",
+"Pergunta": "InternetFase3_Pergunta_08",
+"Resposta": "Acertou",
+"TF": 1634691978,
+"TI": 0,
+"Veredito": "1"
+},
+43: {
+"Jogador": "Lauraa132",
+"Pergunta": "5",
+"Resposta": "4",
+"TF": 1634691985,
+"TI": 0,
+"Veredito": "0"
+},
+44: {
+"Jogador": "Lauraa132",
+"Pergunta": "5",
+"Resposta": "3",
+"TF": 1634691987,
+"TI": 0,
+"Veredito": "0"
+},
+45: {
+"Jogador": "Lauraa132",
+"Pergunta": "5",
+"Resposta": "5",
+"TF": 1634691990,
+"TI": 0,
+"Veredito": "1"
+},
+46: {
+"Jogador": "Lauraa132",
+"Pergunta": "5",
+"Resposta": "4",
+"TF": 1634693040,
+"TI": "1634693035",
+"Veredito": "0"
+},
+47: {
+"Jogador": "Lauraa132",
+"Pergunta": "5",
+"Resposta": "5",
+"TF": 1634693041,
+"TI": "1634693035",
+"Veredito": "1"
+},
+48: {
+"Jogador": "Lauraa132",
+"Pergunta": "4",
+"Resposta": "4",
+"TF": 1634693049,
+"TI": "1634693041",
+"Veredito": "1"
+},
+49: {
+"Jogador": "Lauraa132",
+"Pergunta": "2",
+"Resposta": "2",
+"TF": 1634693052,
+"TI": "1634693049",
+"Veredito": "1"
+},
+50: {
+"Jogador": "Lauraa132",
+"Pergunta": "6",
+"Resposta": "6",
+"TF": 1634693055,
+"TI": "1634693052",
+"Veredito": "1"
+},
+51: {
+"Jogador": "Lauraa132",
+"Pergunta": "7",
+"Resposta": "7",
+"TF": 1634693060,
+"TI": "1634693055",
+"Veredito": "1"
+},
+52: {
+"Jogador": "Lauraa132",
+"Pergunta": "3",
+"Resposta": "3",
+"TF": 1634693061,
+"TI": "1634693060",
+"Veredito": "1"
+},
+53: {
+"Jogador": "Lauraa132",
+"Pergunta": "1",
+"Resposta": "1",
+"TF": 1634693063,
+"TI": "1634693061",
+"Veredito": "1"
+},
+54: {
+"Jogador": "Lauraa132",
+"Pergunta": "7",
+"Resposta": "3",
+"TF": 1634693205,
+"TI": "1634693204",
+"Veredito": "0"
+},
+55: {
+"Jogador": "Lauraa132",
+"Pergunta": "3",
+"Resposta": "3",
+"TF": 1634694614,
+"TI": "1634694610",
+"Veredito": "1"
+},
+56: {
+"Jogador": "Lauraa132",
+"Pergunta": "2",
+"Resposta": "2",
+"TF": 1634694616,
+"TI": "1634694614",
+"Veredito": "1"
+},
+57: {
+"Jogador": "Lauraa132",
+"Pergunta": "6",
+"Resposta": "4",
+"TF": 1634694619,
+"TI": "1634694616",
+"Veredito": "0"
+},
+58: {
+"Jogador": "Lauraa132",
+"Pergunta": "4",
+"Resposta": "4",
+"TF": 1634694620,
+"TI": "1634694616",
+"Veredito": "1"
+},
+59: {
+"Jogador": "Lauraa132",
+"Pergunta": "6",
+"Resposta": "6",
+"TF": 1634694622,
+"TI": "1634694620",
+"Veredito": "1"
+},
+60: {
+"Jogador": "Lauraa132",
+"Pergunta": "1",
+"Resposta": "1",
+"TF": 1634694625,
+"TI": "1634694622",
+"Veredito": "1"
+},
+61: {
+"Jogador": "Lauraa132",
+"Pergunta": "7",
+"Resposta": "7",
+"TF": 1634694626,
+"TI": "1634694625",
+"Veredito": "1"
+},
+62: {
+"Jogador": "Lauraa132",
+"Pergunta": "5",
+"Resposta": "5",
+"TF": 1634694633,
+"TI": "1634694626",
+"Veredito": "1"
+},
+63: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteBoca",
+"TF": 1634694714,
+"TI": "1634694713",
+"Veredito": "1"
+},
+64: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteMamilo",
+"TF": 1634694716,
+"TI": "1634694714",
+"Veredito": "1"
+},
+65: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteVulva",
+"TF": 1634694718,
+"TI": "1634694716",
+"Veredito": "1"
+},
+66: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteNadega",
+"TF": 1634694720,
+"TI": "1634694718",
+"Veredito": "1"
+},
+67: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteAnus",
+"TF": 1634694722,
+"TI": "1634694720",
+"Veredito": "1"
+},
+68: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteBoca",
+"TF": 1634694754,
+"TI": "1634694753",
+"Veredito": "1"
+},
+69: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteMamilo",
+"TF": 1634694757,
+"TI": "1634694754",
+"Veredito": "1"
+},
+70: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteVulva",
+"TF": 1634694758,
+"TI": "1634694757",
+"Veredito": "1"
+},
+71: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Errou: ParteCoccix",
+"TF": 1634694761,
+"TI": "1634694758",
+"Veredito": "0"
+},
+72: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteNadega",
+"TF": 1634694762,
+"TI": "1634694758",
+"Veredito": "1"
+},
+73: {
+"Jogador": "Lauraa132",
+"Pergunta": "PartePrivada",
+"Resposta": "Acertou: ParteAnus",
+"TF": 1634694763,
+"TI": "1634694762",
+"Veredito": "1"
+},
+74: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_07",
+"Resposta": "Acertou",
+"TF": 1634694954,
+"TI": "1634694953",
+"Veredito": "1"
+},
+75: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_01",
+"Resposta": "Errou",
+"TF": 1634694956,
+"TI": "1634694955",
+"Veredito": "0"
+},
+76: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_01",
+"Resposta": "Acertou",
+"TF": 1634694957,
+"TI": "1634694955",
+"Veredito": "1"
+},
+77: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_09",
+"Resposta": "Acertou",
+"TF": 1634694958,
+"TI": "1634694957",
+"Veredito": "1"
+},
+78: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_04",
+"Resposta": "Acertou",
+"TF": 1634694959,
+"TI": "1634694959",
+"Veredito": "1"
+},
+79: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_03",
+"Resposta": "Acertou",
+"TF": 1634694961,
+"TI": "1634694960",
+"Veredito": "1"
+},
+80: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_10",
+"Resposta": "Acertou",
+"TF": 1634694962,
+"TI": "1634694961",
+"Veredito": "1"
+},
+81: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_05",
+"Resposta": "Acertou",
+"TF": 1634694964,
+"TI": "1634694963",
+"Veredito": "1"
+},
+82: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_02",
+"Resposta": "Acertou",
+"TF": 1634694965,
+"TI": "1634694964",
+"Veredito": "1"
+},
+83: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_06",
+"Resposta": "Errou",
+"TF": 1634694966,
+"TI": "1634694965",
+"Veredito": "0"
+},
+84: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_06",
+"Resposta": "Acertou",
+"TF": 1634694967,
+"TI": "1634694965",
+"Veredito": "1"
+},
+85: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_08",
+"Resposta": "Errou",
+"TF": 1634694968,
+"TI": "1634694967",
+"Veredito": "0"
+},
+86: {
+"Jogador": "Lauraa132",
+"Pergunta": "EscolaFase1_Pergunta_08",
+"Resposta": "Acertou",
+"TF": 1634694968,
+"TI": "1634694967",
+"Veredito": "1"
+},
+"0": {
+"Conteudo": "Perdido"
+}
+}

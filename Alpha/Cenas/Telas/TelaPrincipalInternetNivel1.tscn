@@ -1,0 +1,212 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Elementos/Textuais/Arial/arial.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Codigos/Cenas/TelaPrincipalInternetNivel1.gd" type="Script" id=2]
+[ext_resource path="res://Elementos/Visuais/Fundo/Inte.jpg" type="Texture" id=3]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Elementos/Visuais/Icones/PainelGeral.png" type="Texture" id=7]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Cenas/Objetos/Painel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Cenas/Fontes/FonteArial.tscn" type="PackedScene" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 88
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "TransicaoEntrada"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "TransicaoSaida"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=8]
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 22, 0 ), Vector2( -19, 0 ), Vector2( 17, 0 ), Vector2( -23, 0 ), Vector2( 21, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="TelaInternetFase1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.454902, 0.792157, 0.560784, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Centro" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -210.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Painel" type="TextureRect" parent="Centro"]
+self_modulate = Color( 0.745098, 0.992157, 0.498039, 1 )
+margin_left = 278.0
+margin_top = 20.0
+margin_right = 1002.0
+margin_bottom = 489.0
+rect_pivot_offset = Vector2( 362, 234 )
+texture = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="Lista" type="VBoxContainer" parent="Centro/Painel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Painel/Lista" instance=ExtResource( 11 )]
+margin_right = 704.0
+margin_bottom = 99.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0.470588 )
+text = "Senha (0 de 5)"
+align = 1
+
+[node name="Separador" type="HSeparator" parent="Centro/Painel/Lista"]
+margin_top = 103.0
+margin_right = 704.0
+margin_bottom = 103.0
+custom_styles/separator = SubResource( 2 )
+custom_constants/separation = 0
+
+[node name="Cima" type="HBoxContainer" parent="Centro/Painel/Lista"]
+margin_top = 107.0
+margin_right = 704.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Baixo" type="HBoxContainer" parent="Centro/Painel/Lista"]
+margin_top = 280.0
+margin_right = 704.0
+margin_bottom = 449.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Transicao" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.51978
+margin_right = 2.51978
+mouse_filter = 2
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animar" type="AnimationPlayer" parent="Transicao"]
+anims/TransicaoEntrada = SubResource( 3 )
+anims/TransicaoSaida = SubResource( 4 )
+
+[node name="Dialogo" parent="." instance=ExtResource( 9 )]
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 5 )
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+custom_fonts/normal_font = SubResource( 6 )
+CarregarTexto = "TelaInternet_1"
+
+[node name="Icone" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="0"]
+margin_right = 125.0
+flip_h = false
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_right = 125.0
+custom_fonts/font = SubResource( 7 )
+text = "BotaoIr"
+
+[node name="Painel" parent="." instance=ExtResource( 10 )]
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Animar" type="AnimationPlayer" parent="Camera"]
+anims/TemerCamera = SubResource( 8 )
+
+[connection signal="pressed" from="Dialogo/Margem/Vertical/BotaoComando" to="." method="_BotaoProximaPergunta"]
+
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]

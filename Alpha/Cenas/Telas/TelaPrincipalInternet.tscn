@@ -1,0 +1,229 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Cenas/Objetos/BotaoHorizontal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/Personagens/Robo/Robo-1.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Objetos/BotaoLigaDesliga.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Elementos/Visuais/Icones/Maleta.png" type="Texture" id=8]
+[ext_resource path="res://Elementos/Visuais/Fundo/Inte.jpg" type="Texture" id=10]
+[ext_resource path="res://Elementos/Textuais/LucidaConsole/lucon.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Cenas/Fontes/FonteLucidaConsole.tscn" type="PackedScene" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 120
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=6]
+length = 40.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fundo:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -620, -430 ) ]
+}
+
+[node name="TelaPrincipalInternet" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.607843, 1, 0.713726, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personagem" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -625.0
+margin_right = 772.0
+margin_bottom = 458.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" parent="." instance=ExtResource( 13 )]
+anchor_top = 0.01
+anchor_right = 1.0
+anchor_bottom = 0.01
+margin_right = 0.0
+margin_bottom = 121.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.00784314, 0.333333, 0, 1 )
+text = "Redes Sociais"
+align = 1
+
+[node name="Fases" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -153.0
+margin_top = -200.5
+margin_right = 153.0
+margin_bottom = 128.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coluna1" type="HBoxContainer" parent="Fases"]
+margin_right = 492.0
+margin_bottom = 113.0
+
+[node name="InternetFase1" parent="Fases/Coluna1" instance=ExtResource( 1 )]
+self_modulate = Color( 0, 0.898039, 0, 1 )
+margin_right = 306.0
+margin_bottom = 113.0
+TrocarTela = "TelaPrincipalInternetNivel1"
+TrocaAlternativa = "TelaPrincipalInternetNivel1Tutorial"
+
+[node name="Icone" parent="Fases/Coluna1/InternetFase1/Horizontal" index="0"]
+visible = false
+margin_left = 0.0
+margin_right = 90.0
+texture = ExtResource( 8 )
+
+[node name="Texto" parent="Fases/Coluna1/InternetFase1/Horizontal" index="1"]
+margin_left = 53.0
+margin_top = 32.0
+margin_right = 253.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoFase_1"
+
+[node name="BotaoLigaDesliga" parent="Fases/Coluna1" instance=ExtResource( 4 )]
+margin_left = 310.0
+margin_right = 492.0
+
+[node name="Coluna2" type="HBoxContainer" parent="Fases"]
+margin_top = 117.0
+margin_right = 492.0
+margin_bottom = 230.0
+
+[node name="InternetFase2" parent="Fases/Coluna2" instance=ExtResource( 1 )]
+self_modulate = Color( 0, 0.898039, 0, 1 )
+margin_right = 306.0
+margin_bottom = 113.0
+TrocarTela = "TelaPrincipalInternetNivel2-3"
+TrocaAlternativa = "TelaPrincipalInternetNivel2-3Tutorial"
+
+[node name="Icone" parent="Fases/Coluna2/InternetFase2/Horizontal" index="0"]
+visible = false
+margin_left = 0.0
+margin_right = 90.0
+texture = ExtResource( 8 )
+
+[node name="Texto" parent="Fases/Coluna2/InternetFase2/Horizontal" index="1"]
+margin_left = 50.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoFase_2"
+
+[node name="BotaoLigaDesliga" parent="Fases/Coluna2" instance=ExtResource( 4 )]
+margin_left = 310.0
+margin_right = 492.0
+
+[node name="Coluna3" type="HBoxContainer" parent="Fases"]
+margin_top = 234.0
+margin_right = 492.0
+margin_bottom = 347.0
+
+[node name="InternetFase3" parent="Fases/Coluna3" instance=ExtResource( 1 )]
+self_modulate = Color( 0, 0.898039, 0, 1 )
+margin_right = 306.0
+margin_bottom = 113.0
+TrocarTela = "TelaPrincipalInternetNivel2-3"
+TrocaAlternativa = "TelaPrincipalInternetNivel2-3Tutorial"
+
+[node name="Icone" parent="Fases/Coluna3/InternetFase3/Horizontal" index="0"]
+visible = false
+margin_left = 0.0
+margin_right = 90.0
+texture = ExtResource( 8 )
+
+[node name="Texto" parent="Fases/Coluna3/InternetFase3/Horizontal" index="1"]
+margin_left = 50.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoFase_3"
+
+[node name="BotaoLigaDesliga" parent="Fases/Coluna3" instance=ExtResource( 4 )]
+margin_left = 310.0
+margin_right = 492.0
+
+[node name="Dialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 3 )
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+custom_fonts/normal_font = SubResource( 4 )
+CarregarTexto = "TelaInternet_1"
+CarregarVoz = "TelaInternet_1"
+
+[node name="BotaoComando" parent="Dialogo/Margem/Vertical" index="2"]
+TrocarTela = "TelaPrincipal"
+TrocarMusica = "Abertura.wav"
+
+[node name="Icone" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="0"]
+margin_right = 188.0
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_right = 188.0
+custom_fonts/font = SubResource( 5 )
+text = "BotaoVoltar"
+
+[node name="AnimarElementos" type="AnimationPlayer" parent="."]
+autoplay = "Padrao"
+anims/Padrao = SubResource( 6 )
+
+[editable path="Fases/Coluna1/InternetFase1"]
+[editable path="Fases/Coluna2/InternetFase2"]
+[editable path="Fases/Coluna3/InternetFase3"]
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]

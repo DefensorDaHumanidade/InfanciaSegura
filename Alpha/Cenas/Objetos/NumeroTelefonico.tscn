@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41.423, 31.347 )
+
+[node name="NumeroTelefonico" type="TextureRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 150, 150 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="Contato" type="CollisionShape2D" parent="Area"]
+position = Vector2( 75, 100 )
+shape = SubResource( 1 )

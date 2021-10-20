@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Clicar.wav-d7d39c163e568357c544d699a9ecd20a.sample"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Clicar/Clicar.wav"
+dest_files=[ "res://.import/Clicar.wav-d7d39c163e568357c544d699a9ecd20a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

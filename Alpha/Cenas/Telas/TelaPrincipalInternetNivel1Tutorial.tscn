@@ -1,0 +1,347 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Elementos/Textuais/Arial/arial.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Cenas/Objetos/Pessoa.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/Fundo/Inte.jpg" type="Texture" id=3]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Elementos/Visuais/Personagens/Robo/Robo-1.png" type="Texture" id=5]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-18.png" type="Texture" id=6]
+[ext_resource path="res://Elementos/Visuais/Icones/PainelGeral.png" type="Texture" id=7]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-15.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Cenas/Objetos/Painel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Cenas/Fontes/FonteArial.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-25.png" type="Texture" id=12]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-20.png" type="Texture" id=13]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-23.png" type="Texture" id=14]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-17.png" type="Texture" id=15]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-04.png" type="Texture" id=16]
+[ext_resource path="res://Elementos/Fases/Internet/InternetFase1/Pessoa-12.png" type="Texture" id=17]
+[ext_resource path="res://Elementos/Visuais/Mao/MaoAuxilicar.png" type="Texture" id=18]
+[ext_resource path="res://Codigos/Cenas/TelaPrincipalInternetNivel1Tutorial.gd" type="Script" id=19]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 88
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "TransicaoEntrada"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "TransicaoSaida"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=8]
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 22, 0 ), Vector2( -19, 0 ), Vector2( 17, 0 ), Vector2( -23, 0 ), Vector2( 21, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Tutorial"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Centro/Painel/Lista/Baixo/Imagem4/Mao:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2, 2.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 30.0, 30.0, 0.0, 30.0, 0.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Centro/Painel/Lista/Baixo/Imagem4/Mao:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Centro/Painel/Lista/Baixo/Imagem4/Mao:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2.5, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="TelaInternetFase1Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.454902, 0.792157, 0.560784, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Centro" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -210.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Painel" type="TextureRect" parent="Centro"]
+self_modulate = Color( 0.745098, 0.992157, 0.498039, 1 )
+margin_left = 278.0
+margin_top = 20.0
+margin_right = 1002.0
+margin_bottom = 489.0
+rect_pivot_offset = Vector2( 362, 234 )
+texture = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="Lista" type="VBoxContainer" parent="Centro/Painel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Centro/Painel/Lista" instance=ExtResource( 11 )]
+margin_right = 704.0
+margin_bottom = 99.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0.470588 )
+text = "Tutorial"
+align = 1
+
+[node name="Separador" type="HSeparator" parent="Centro/Painel/Lista"]
+margin_top = 103.0
+margin_right = 704.0
+margin_bottom = 103.0
+custom_styles/separator = SubResource( 2 )
+custom_constants/separation = 0
+
+[node name="Cima" type="HBoxContainer" parent="Centro/Painel/Lista"]
+margin_top = 107.0
+margin_right = 704.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Imagem1" parent="Centro/Painel/Lista/Cima" instance=ExtResource( 2 )]
+margin_right = 173.0
+margin_bottom = 169.0
+texture = ExtResource( 17 )
+
+[node name="Imagem2" parent="Centro/Painel/Lista/Cima" instance=ExtResource( 2 )]
+margin_left = 177.0
+margin_right = 350.0
+margin_bottom = 169.0
+texture = ExtResource( 8 )
+
+[node name="Imagem3" parent="Centro/Painel/Lista/Cima" instance=ExtResource( 2 )]
+margin_left = 354.0
+margin_right = 527.0
+margin_bottom = 169.0
+texture = ExtResource( 15 )
+
+[node name="Imagem4" parent="Centro/Painel/Lista/Cima" instance=ExtResource( 2 )]
+margin_left = 531.0
+margin_right = 704.0
+margin_bottom = 169.0
+texture = ExtResource( 6 )
+
+[node name="Baixo" type="HBoxContainer" parent="Centro/Painel/Lista"]
+margin_top = 280.0
+margin_right = 704.0
+margin_bottom = 449.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Imagem1" parent="Centro/Painel/Lista/Baixo" instance=ExtResource( 2 )]
+margin_right = 173.0
+margin_bottom = 169.0
+texture = ExtResource( 13 )
+
+[node name="Imagem2" parent="Centro/Painel/Lista/Baixo" instance=ExtResource( 2 )]
+margin_left = 177.0
+margin_right = 350.0
+margin_bottom = 169.0
+texture = ExtResource( 14 )
+
+[node name="Imagem3" parent="Centro/Painel/Lista/Baixo" instance=ExtResource( 2 )]
+margin_left = 354.0
+margin_right = 527.0
+margin_bottom = 169.0
+texture = ExtResource( 12 )
+
+[node name="Imagem4" parent="Centro/Painel/Lista/Baixo" instance=ExtResource( 2 )]
+margin_left = 531.0
+margin_right = 704.0
+margin_bottom = 169.0
+texture = ExtResource( 16 )
+
+[node name="Mao" type="TextureRect" parent="Centro/Painel/Lista/Baixo/Imagem4"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -131.5
+margin_top = -124.5
+margin_right = 124.5
+margin_bottom = 131.506
+rect_rotation = 30.0
+rect_pivot_offset = Vector2( 128, 240 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transicao" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.51978
+margin_right = 2.51978
+mouse_filter = 2
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animar" type="AnimationPlayer" parent="Transicao"]
+anims/TransicaoEntrada = SubResource( 3 )
+anims/TransicaoSaida = SubResource( 4 )
+
+[node name="Personagem" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -625.0
+margin_right = 772.0
+margin_bottom = 458.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogo" parent="." instance=ExtResource( 9 )]
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 5 )
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+custom_fonts/normal_font = SubResource( 6 )
+CarregarTexto = "TelaInternetFase1_Tutorial"
+CarregarVoz = "TelaInternetFase1_Tutorial"
+
+[node name="Icone" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="0"]
+margin_right = 125.0
+flip_h = false
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_right = 125.0
+custom_fonts/font = SubResource( 7 )
+text = "BotaoIr"
+
+[node name="Painel" parent="." instance=ExtResource( 10 )]
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Animar" type="AnimationPlayer" parent="Camera"]
+anims/TemerCamera = SubResource( 8 )
+
+[node name="AnimarTutorial" type="AnimationPlayer" parent="."]
+autoplay = "Tutorial"
+anims/Tutorial = SubResource( 9 )
+
+[connection signal="pressed" from="Dialogo/Margem/Vertical/BotaoComando" to="." method="_BotaoProximaPergunta"]
+
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]

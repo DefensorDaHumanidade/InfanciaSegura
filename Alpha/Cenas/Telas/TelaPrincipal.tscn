@@ -1,0 +1,251 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Elementos/Visuais/Fundo/Infa.jpg" type="Texture" id=1]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Visuais/Personagens/Menino/Menino-4.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Fontes/FonteJokerman.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elementos/Textuais/Jokerman/JOKERMAN.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://Cenas/Objetos/BotaoHorizontal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Elementos/Visuais/Icones/Livro.png" type="Texture" id=8]
+[ext_resource path="res://Elementos/Visuais/Icones/Maleta.png" type="Texture" id=9]
+[ext_resource path="res://Elementos/Visuais/Icones/Arroba.png" type="Texture" id=10]
+[ext_resource path="res://Elementos/Visuais/Icones/Sirene.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 100
+outline_size = 15
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=6]
+length = 40.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fundo:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -713, -360 ) ]
+}
+
+[node name="TelaPrincipal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.760784, 0.972549, 1, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personagem" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -610.0
+margin_right = 556.0
+margin_bottom = 110.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" parent="." instance=ExtResource( 4 )]
+anchor_right = 1.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.784314, 0.784314, 1 )
+text = "Infância Segura"
+align = 1
+
+[node name="Centro" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+use_top_left = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vertical" type="VBoxContainer" parent="Centro"]
+margin_left = -311.0
+margin_top = -108.0
+margin_right = 311.0
+margin_bottom = 108.0
+custom_constants/separation = 10
+
+[node name="HorizontalSuperior" type="HBoxContainer" parent="Centro/Vertical"]
+margin_right = 622.0
+margin_bottom = 103.0
+custom_constants/separation = 10
+alignment = 1
+
+[node name="Hospital" parent="Centro/Vertical/HorizontalSuperior" instance=ExtResource( 6 )]
+self_modulate = Color( 0, 0.8, 1, 1 )
+margin_right = 306.0
+margin_bottom = 103.0
+TrocarTela = "TelaPrincipalHospital"
+TrocarMusica = "Hospital.wav"
+
+[node name="Horizontal" parent="Centro/Vertical/HorizontalSuperior/Hospital" index="0"]
+alignment = 0
+
+[node name="Icone" parent="Centro/Vertical/HorizontalSuperior/Hospital/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 90.0
+texture = ExtResource( 9 )
+
+[node name="Texto" parent="Centro/Vertical/HorizontalSuperior/Hospital/Horizontal" index="1"]
+margin_left = 110.0
+margin_right = 331.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoHospital"
+
+[node name="Escola" parent="Centro/Vertical/HorizontalSuperior" instance=ExtResource( 6 )]
+self_modulate = Color( 1, 1, 0, 1 )
+margin_left = 316.0
+margin_right = 622.0
+margin_bottom = 103.0
+TrocarTela = "TelaPrincipalEscola"
+TrocarMusica = "Escola.wav"
+
+[node name="Horizontal" parent="Centro/Vertical/HorizontalSuperior/Escola" index="0"]
+alignment = 0
+
+[node name="Icone" parent="Centro/Vertical/HorizontalSuperior/Escola/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 122.0
+texture = ExtResource( 8 )
+stretch_mode = 6
+
+[node name="Texto" parent="Centro/Vertical/HorizontalSuperior/Escola/Horizontal" index="1"]
+margin_left = 142.0
+margin_right = 331.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoEscola"
+
+[node name="HorizontalInferior" type="HBoxContainer" parent="Centro/Vertical"]
+margin_top = 113.0
+margin_right = 622.0
+margin_bottom = 216.0
+custom_constants/separation = 10
+alignment = 1
+
+[node name="Delegacia" parent="Centro/Vertical/HorizontalInferior" instance=ExtResource( 6 )]
+self_modulate = Color( 1, 0.298039, 0.298039, 1 )
+margin_right = 306.0
+margin_bottom = 103.0
+TrocarTela = "TelaPrincipalDelegacia"
+TrocarMusica = "Delegacia.wav"
+
+[node name="Horizontal" parent="Centro/Vertical/HorizontalInferior/Delegacia" index="0"]
+alignment = 0
+
+[node name="Icone" parent="Centro/Vertical/HorizontalInferior/Delegacia/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 91.0
+texture = ExtResource( 11 )
+
+[node name="Texto" parent="Centro/Vertical/HorizontalInferior/Delegacia/Horizontal" index="1"]
+margin_left = 111.0
+margin_right = 352.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoDelegacia"
+
+[node name="Rede" parent="Centro/Vertical/HorizontalInferior" instance=ExtResource( 6 )]
+self_modulate = Color( 0, 0.898039, 0, 1 )
+margin_left = 316.0
+margin_right = 622.0
+margin_bottom = 103.0
+TrocarTela = "TelaPrincipalInternet"
+TrocarMusica = "Redes.wav"
+
+[node name="Horizontal" parent="Centro/Vertical/HorizontalInferior/Rede" index="0"]
+margin_left = 18.0
+custom_constants/separation = 36
+alignment = 0
+
+[node name="Icone" parent="Centro/Vertical/HorizontalInferior/Rede/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 87.0
+texture = ExtResource( 10 )
+
+[node name="Texto" parent="Centro/Vertical/HorizontalInferior/Rede/Horizontal" index="1"]
+margin_left = 123.0
+margin_right = 354.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoInternet"
+
+[node name="Dialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 3 )
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+custom_fonts/normal_font = SubResource( 4 )
+CarregarTexto = "TelaCadastro_3"
+CarregarVoz = "TelaCadastro_3"
+
+[node name="BotaoComando" parent="Dialogo/Margem/Vertical" index="2"]
+TrocarTela = "TelaCadastro"
+
+[node name="Icone" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="0"]
+margin_right = 188.0
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_right = 188.0
+custom_fonts/font = SubResource( 5 )
+text = "BotaoVoltar"
+
+[node name="AnimarElementos" type="AnimationPlayer" parent="."]
+autoplay = "Padrao"
+anims/Padrao = SubResource( 6 )
+
+[editable path="Centro/Vertical/HorizontalSuperior/Hospital"]
+[editable path="Centro/Vertical/HorizontalSuperior/Escola"]
+[editable path="Centro/Vertical/HorizontalInferior/Delegacia"]
+[editable path="Centro/Vertical/HorizontalInferior/Rede"]
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]

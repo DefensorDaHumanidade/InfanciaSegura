@@ -1,0 +1,968 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Elementos/Visuais/Icones/Menu.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Fontes/FonteComicSansMS.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Objetos/BotaoQuadrado.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elementos/Visuais/Icones/X.png" type="Texture" id=5]
+[ext_resource path="res://Elementos/Visuais/Icones/Som.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/Objetos/ControleDeslizante.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Elementos/Visuais/Icones/Voz.png" type="Texture" id=8]
+[ext_resource path="res://Elementos/Visuais/Icones/Nota.png" type="Texture" id=9]
+[ext_resource path="res://Cenas/Objetos/BotaoHorizontal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Elementos/Visuais/Bandeiras/Inglaterra.png" type="Texture" id=11]
+[ext_resource path="res://Elementos/Visuais/Bandeiras/Espanha.png" type="Texture" id=12]
+[ext_resource path="res://Elementos/Visuais/Bandeiras/Brasil.png" type="Texture" id=13]
+[ext_resource path="res://Codigos/Texto/ComicSans.gd" type="Script" id=14]
+[ext_resource path="res://Elementos/Visuais/Icones/Maleta.png" type="Texture" id=15]
+[ext_resource path="res://Elementos/Visuais/Icones/Arroba.png" type="Texture" id=16]
+[ext_resource path="res://Elementos/Visuais/Icones/Livro.png" type="Texture" id=17]
+[ext_resource path="res://Elementos/Visuais/Icones/Sirene.png" type="Texture" id=18]
+[ext_resource path="res://Elementos/Visuais/Icones/Sair.png" type="Texture" id=19]
+[ext_resource path="res://Elementos/Visuais/Icones/Documento.png" type="Texture" id=20]
+[ext_resource path="res://Codigos/Cenas/TelaConfiguracoes.gd" type="Script" id=21]
+[ext_resource path="res://Codigos/Recursos/grupoIdioma.tres" type="ButtonGroup" id=26]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment() {
+//	COLOR.rgb = textureLod(SCREEN_TEXTURE, SCREEN_UV, 5.0).rgb; //MINHA TENTATIVA DE DEIXAR O FUNDO BORRADO
+	
+	vec4 ColetantoTela = texture(SCREEN_TEXTURE, SCREEN_UV);
+	float ExtraindoCor = (ColetantoTela.r + ColetantoTela.g + ColetantoTela.b)/5f;
+	COLOR = vec4(ExtraindoCor, ExtraindoCor, ExtraindoCor, 1f);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 34.0
+content_margin_right = 20.0
+content_margin_top = 35.0
+content_margin_bottom = 35.0
+bg_color = Color( 0.211765, 0.658824, 0.631373, 1 )
+border_width_left = 2
+border_width_top = 5
+border_width_right = 3
+border_color = Color( 0, 0, 0, 1 )
+shadow_color = Color( 0, 0, 0, 0.588235 )
+shadow_size = 1
+shadow_offset = Vector2( 0, 10 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 34.0
+content_margin_right = 20.0
+content_margin_top = 35.0
+content_margin_bottom = 35.0
+bg_color = Color( 0.262745, 0.909804, 0.858824, 1 )
+border_width_left = 2
+border_width_top = 5
+border_width_right = 3
+border_color = Color( 0.0156863, 0.113725, 0.105882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1036, 548 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 0.505882, 0.960784, 0.854902, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 38
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+resource_local_to_scene = true
+bg_color = Color( 0.580392, 0.94902, 0.941176, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=10]
+resource_local_to_scene = true
+bg_color = Color( 0.211765, 0.658824, 0.631373, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=11]
+resource_local_to_scene = true
+bg_color = Color( 0.211765, 0.658824, 0.631373, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=12]
+resource_local_to_scene = true
+bg_color = Color( 0.580392, 0.94902, 0.941176, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=13]
+resource_local_to_scene = true
+bg_color = Color( 0.211765, 0.658824, 0.631373, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=14]
+resource_local_to_scene = true
+bg_color = Color( 0.211765, 0.658824, 0.631373, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=15]
+resource_local_to_scene = true
+bg_color = Color( 0.580392, 0.94902, 0.941176, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=16]
+resource_local_to_scene = true
+bg_color = Color( 0.211765, 0.658824, 0.631373, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=17]
+resource_local_to_scene = true
+bg_color = Color( 0.211765, 0.658824, 0.631373, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=18]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=19]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=20]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=21]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=22]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=23]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=24]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+content_margin_left = 20.0
+bg_color = Color( 0.588235, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=25]
+content_margin_left = 20.0
+bg_color = Color( 0.588235, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=26]
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=27]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=28]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 38
+font_data = ExtResource( 1 )
+
+[node name="Configuracoes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camada" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Fundo" type="ColorRect" parent="Camada"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="BarraFundo" type="ColorRect" parent="Menu"]
+anchor_right = 1.0
+margin_bottom = 126.0
+color = Color( 0.505882, 0.960784, 0.854902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="Menu/BarraFundo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0, 0, 0, 1 )
+border_width = 5.0
+editor_only = false
+
+[node name="Botao" parent="Menu" instance=ExtResource( 4 )]
+self_modulate = Color( 1, 0.298039, 0.298039, 1 )
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 94.0
+margin_bottom = 103.0
+action_mode = 1
+
+[node name="Icone" parent="Menu/Botao" index="0"]
+self_modulate = Color( 0.745098, 0, 0, 1 )
+texture = ExtResource( 5 )
+
+[node name="Tabelas" type="TabContainer" parent="Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 114.0
+margin_right = -114.0
+margin_bottom = -150.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/tab_fg = SubResource( 3 )
+custom_styles/tab_disabled = SubResource( 4 )
+custom_styles/tab_bg = SubResource( 5 )
+custom_styles/panel = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color_bg = Color( 0, 0, 0, 0.588235 )
+custom_colors/font_color_fg = Color( 0, 0, 0, 1 )
+all_tabs_in_front = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfigurarAjustes" type="Tabs" parent="Menu/Tabelas"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 154.0
+margin_right = -30.0
+margin_bottom = -30.0
+
+[node name="Margem" type="MarginContainer" parent="Menu/Tabelas/ConfigurarAjustes"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista" type="VBoxContainer" parent="Menu/Tabelas/ConfigurarAjustes/Margem"]
+margin_right = 1000.0
+margin_bottom = 400.0
+size_flags_horizontal = 2
+
+[node name="Som" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista"]
+margin_left = 52.0
+margin_right = 1000.0
+margin_bottom = 95.0
+size_flags_horizontal = 8
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som" instance=ExtResource( 3 )]
+margin_top = 20.0
+margin_right = 197.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "AjusteSom"
+
+[node name="Separador_1" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 201.0
+margin_right = 231.0
+margin_bottom = 95.0
+custom_constants/separation = 30
+
+[node name="Icone" type="TextureRect" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som"]
+margin_left = 235.0
+margin_right = 320.0
+margin_bottom = 95.0
+texture = ExtResource( 6 )
+
+[node name="Separador_2" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 324.0
+margin_right = 354.0
+margin_bottom = 95.0
+custom_constants/separation = 30
+
+[node name="Menos" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som" instance=ExtResource( 3 )]
+margin_left = 358.0
+margin_top = 20.0
+margin_right = 374.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+
+[node name="Separador_3" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 378.0
+margin_right = 398.0
+margin_bottom = 95.0
+custom_constants/separation = 20
+
+[node name="ControleDeslizante" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som" instance=ExtResource( 7 )]
+margin_left = 402.0
+margin_right = 902.0
+custom_styles/slider = SubResource( 9 )
+custom_styles/grabber_area_highlight = SubResource( 10 )
+custom_styles/grabber_area = SubResource( 11 )
+min_value = -40.0
+max_value = 20.0
+value = 20.0
+
+[node name="Separador_4" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 906.0
+margin_right = 926.0
+margin_bottom = 95.0
+custom_constants/separation = 20
+
+[node name="Mais" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som" instance=ExtResource( 3 )]
+margin_left = 930.0
+margin_top = 20.0
+margin_right = 948.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+"
+
+[node name="Musica" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista"]
+margin_top = 99.0
+margin_right = 1000.0
+margin_bottom = 194.0
+size_flags_horizontal = 8
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica" instance=ExtResource( 3 )]
+margin_top = 20.0
+margin_right = 244.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "AjusteMusica"
+
+[node name="Separador_1" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 248.0
+margin_right = 278.0
+margin_bottom = 95.0
+custom_constants/separation = 30
+
+[node name="Icone" type="TextureRect" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica"]
+margin_left = 282.0
+margin_right = 372.0
+margin_bottom = 95.0
+texture = ExtResource( 9 )
+
+[node name="Separador_2" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 376.0
+margin_right = 406.0
+margin_bottom = 95.0
+custom_constants/separation = 30
+
+[node name="Menos" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica" instance=ExtResource( 3 )]
+margin_left = 410.0
+margin_top = 20.0
+margin_right = 426.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+
+[node name="Separador_3" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 430.0
+margin_right = 450.0
+margin_bottom = 95.0
+custom_constants/separation = 20
+
+[node name="ControleDeslizante" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica" instance=ExtResource( 7 )]
+margin_left = 454.0
+margin_right = 954.0
+custom_styles/slider = SubResource( 12 )
+custom_styles/grabber_area_highlight = SubResource( 13 )
+custom_styles/grabber_area = SubResource( 14 )
+min_value = -40.0
+max_value = 20.0
+value = 20.0
+
+[node name="Separador_4" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 958.0
+margin_right = 978.0
+margin_bottom = 95.0
+custom_constants/separation = 20
+
+[node name="Mais" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica" instance=ExtResource( 3 )]
+margin_left = 982.0
+margin_top = 20.0
+margin_right = 1000.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+"
+
+[node name="Voz" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista"]
+margin_left = 61.0
+margin_top = 198.0
+margin_right = 1000.0
+margin_bottom = 293.0
+size_flags_horizontal = 8
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz" instance=ExtResource( 3 )]
+margin_top = 20.0
+margin_right = 186.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "AjusteVoz"
+
+[node name="Separador_1" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 190.0
+margin_right = 220.0
+margin_bottom = 95.0
+custom_constants/separation = 30
+
+[node name="Icone" type="TextureRect" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz"]
+margin_left = 224.0
+margin_right = 311.0
+margin_bottom = 95.0
+texture = ExtResource( 8 )
+
+[node name="Separador_2" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 315.0
+margin_right = 345.0
+margin_bottom = 95.0
+custom_constants/separation = 30
+
+[node name="Menos" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz" instance=ExtResource( 3 )]
+margin_left = 349.0
+margin_top = 20.0
+margin_right = 365.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+
+[node name="Separador_3" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 369.0
+margin_right = 389.0
+margin_bottom = 95.0
+custom_constants/separation = 20
+
+[node name="ControleDeslizante" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz" instance=ExtResource( 7 )]
+margin_left = 393.0
+margin_right = 893.0
+custom_styles/slider = SubResource( 15 )
+custom_styles/grabber_area_highlight = SubResource( 16 )
+custom_styles/grabber_area = SubResource( 17 )
+min_value = -40.0
+max_value = 20.0
+value = 20.0
+
+[node name="Separador_4" type="VSeparator" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 897.0
+margin_right = 917.0
+margin_bottom = 95.0
+custom_constants/separation = 20
+
+[node name="Mais" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz" instance=ExtResource( 3 )]
+margin_left = 921.0
+margin_top = 20.0
+margin_right = 939.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+"
+
+[node name="Idioma" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista"]
+margin_left = 37.0
+margin_top = 297.0
+margin_right = 963.0
+margin_bottom = 400.0
+size_flags_horizontal = 4
+
+[node name="pt_BR" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma" instance=ExtResource( 10 )]
+self_modulate = Color( 0.505882, 0.960784, 0.854902, 1 )
+margin_right = 306.0
+margin_bottom = 103.0
+toggle_mode = true
+pressed = true
+action_mode = 0
+group = ExtResource( 26 )
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/pt_BR/Horizontal" index="0"]
+margin_left = 6.0
+margin_right = 99.0
+texture = ExtResource( 13 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/pt_BR/Horizontal" index="1"]
+margin_left = 119.0
+margin_right = 299.0
+custom_fonts/font = SubResource( 18 )
+text = "BotaoBrasil"
+
+[node name="es_ES" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma" instance=ExtResource( 10 )]
+self_modulate = Color( 0.505882, 0.960784, 0.854902, 1 )
+margin_left = 310.0
+margin_right = 616.0
+margin_bottom = 103.0
+toggle_mode = true
+action_mode = 0
+group = ExtResource( 26 )
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/es_ES/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 93.0
+texture = ExtResource( 12 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/es_ES/Horizontal" index="1"]
+margin_left = 113.0
+margin_right = 331.0
+custom_fonts/font = SubResource( 19 )
+text = "BotaoEspanha"
+
+[node name="en_GB" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma" instance=ExtResource( 10 )]
+self_modulate = Color( 0.505882, 0.960784, 0.854902, 1 )
+margin_left = 620.0
+margin_right = 926.0
+margin_bottom = 103.0
+toggle_mode = true
+action_mode = 0
+group = ExtResource( 26 )
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/en_GB/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 93.0
+texture = ExtResource( 11 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/en_GB/Horizontal" index="1"]
+margin_left = 113.0
+margin_right = 368.0
+custom_fonts/font = SubResource( 20 )
+text = "BotaoInglaterra"
+
+[node name="ConfigurarFases" type="Tabs" parent="Menu/Tabelas"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 154.0
+margin_right = -30.0
+margin_bottom = -30.0
+
+[node name="Margem" type="MarginContainer" parent="Menu/Tabelas/ConfigurarFases"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista" type="VBoxContainer" parent="Menu/Tabelas/ConfigurarFases/Margem"]
+margin_left = 165.0
+margin_right = 827.0
+margin_bottom = 256.0
+size_flags_horizontal = 4
+size_flags_vertical = 2
+custom_constants/separation = 50
+
+[node name="Cima" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista"]
+margin_right = 662.0
+margin_bottom = 103.0
+custom_constants/separation = 50
+
+[node name="BotaoHospital" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima" instance=ExtResource( 10 )]
+self_modulate = Color( 0, 0.8, 1, 1 )
+margin_right = 306.0
+margin_bottom = 103.0
+size_flags_horizontal = 4
+TrocarTela = "TelaPrincipalHospital"
+TrocarMusica = "Hospital.wav"
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoHospital/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 90.0
+texture = ExtResource( 15 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoHospital/Horizontal" index="1"]
+margin_left = 110.0
+margin_right = 331.0
+custom_fonts/font = SubResource( 21 )
+text = "BotaoHospital"
+
+[node name="BotaoEscola" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima" instance=ExtResource( 10 )]
+self_modulate = Color( 1, 1, 0, 1 )
+margin_left = 356.0
+margin_right = 662.0
+margin_bottom = 103.0
+size_flags_horizontal = 4
+TrocarTela = "TelaPrincipalEscola"
+TrocarMusica = "Escola.wav"
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoEscola/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 122.0
+texture = ExtResource( 17 )
+stretch_mode = 6
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoEscola/Horizontal" index="1"]
+margin_left = 142.0
+margin_right = 331.0
+custom_fonts/font = SubResource( 22 )
+text = "BotaoEscola"
+
+[node name="Baixo" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista"]
+margin_top = 153.0
+margin_right = 662.0
+margin_bottom = 256.0
+custom_constants/separation = 50
+
+[node name="BotaoDelegacia" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo" instance=ExtResource( 10 )]
+self_modulate = Color( 1, 0.298039, 0.298039, 1 )
+margin_right = 306.0
+margin_bottom = 103.0
+size_flags_horizontal = 4
+TrocarTela = "TelaPrincipalDelegacia"
+TrocarMusica = "Delegacia.wav"
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoDelegacia/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 91.0
+texture = ExtResource( 18 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoDelegacia/Horizontal" index="1"]
+margin_left = 111.0
+margin_right = 352.0
+custom_fonts/font = SubResource( 23 )
+text = "BotaoDelegacia"
+
+[node name="BotaoRede" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo" instance=ExtResource( 10 )]
+self_modulate = Color( 0, 0.898039, 0, 1 )
+margin_left = 356.0
+margin_right = 662.0
+margin_bottom = 103.0
+size_flags_horizontal = 4
+TrocarTela = "TelaPrincipalInternet"
+TrocarMusica = "Redes.wav"
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoRede/Horizontal" index="0"]
+margin_left = 0.0
+margin_right = 87.0
+texture = ExtResource( 16 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoRede/Horizontal" index="1"]
+margin_left = 107.0
+margin_right = 338.0
+custom_fonts/font = SubResource( 24 )
+text = "BotaoInternet"
+
+[node name="ConfigurarJogador" type="Tabs" parent="Menu/Tabelas"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 154.0
+margin_right = -30.0
+margin_bottom = -30.0
+
+[node name="Margem" type="MarginContainer" parent="Menu/Tabelas/ConfigurarJogador"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista" type="VBoxContainer" parent="Menu/Tabelas/ConfigurarJogador/Margem"]
+margin_right = 992.0
+margin_bottom = 386.0
+
+[node name="Cima" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista"]
+margin_left = 143.0
+margin_right = 849.0
+margin_bottom = 103.0
+size_flags_horizontal = 4
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Cima" instance=ExtResource( 3 )]
+margin_top = 24.0
+margin_right = 362.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "AjusteIdentificacao"
+
+[node name="VSeparator" type="VSeparator" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Cima"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 366.0
+margin_right = 396.0
+margin_bottom = 103.0
+custom_constants/separation = 30
+
+[node name="CampoTexto" type="LineEdit" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Cima"]
+margin_left = 400.0
+margin_right = 706.0
+margin_bottom = 103.0
+rect_min_size = Vector2( 306, 103 )
+custom_styles/read_only = SubResource( 30 )
+custom_styles/normal = SubResource( 25 )
+custom_fonts/font = SubResource( 26 )
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0.352941, 1 )
+custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+max_length = 10
+editable = false
+placeholder_text = "RotuloCadastro"
+
+[node name="HSeparator" type="HSeparator" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 107.0
+margin_right = 992.0
+margin_bottom = 137.0
+custom_constants/separation = 30
+
+[node name="Baixo" type="HBoxContainer" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista"]
+margin_left = 171.0
+margin_top = 141.0
+margin_right = 821.0
+margin_bottom = 244.0
+size_flags_horizontal = 4
+
+[node name="BotaoApagar" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo" instance=ExtResource( 10 )]
+self_modulate = Color( 0.588235, 1, 0.921569, 1 )
+margin_right = 306.0
+margin_bottom = 103.0
+
+[node name="Horizontal" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoApagar" index="0"]
+custom_constants/separation = -10
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoApagar/Horizontal" index="0"]
+margin_left = 12.0
+margin_right = 103.0
+texture = ExtResource( 20 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoApagar/Horizontal" index="1"]
+margin_left = 93.0
+margin_right = 294.0
+custom_fonts/font = SubResource( 27 )
+text = "BotaoApagar"
+
+[node name="VSeparator" type="VSeparator" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 310.0
+margin_right = 340.0
+margin_bottom = 103.0
+custom_constants/separation = 30
+
+[node name="BotaoSair" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo" instance=ExtResource( 10 )]
+self_modulate = Color( 0.588235, 1, 0.921569, 1 )
+margin_left = 344.0
+margin_right = 650.0
+margin_bottom = 103.0
+
+[node name="Icone" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoSair/Horizontal" index="0"]
+margin_left = 20.0
+margin_right = 109.0
+texture = ExtResource( 19 )
+
+[node name="Texto" parent="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoSair/Horizontal" index="1"]
+margin_left = 129.0
+margin_right = 286.0
+custom_fonts/font = SubResource( 28 )
+text = "BotaoSair"
+
+[node name="ConfigurarSobre" type="Tabs" parent="Menu/Tabelas"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 154.0
+margin_right = -30.0
+margin_bottom = -30.0
+
+[node name="Margem" type="MarginContainer" parent="Menu/Tabelas/ConfigurarSobre"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista" type="VBoxContainer" parent="Menu/Tabelas/ConfigurarSobre/Margem"]
+margin_right = 992.0
+margin_bottom = 400.0
+
+[node name="Descricao" type="RichTextLabel" parent="Menu/Tabelas/ConfigurarSobre/Margem/Lista"]
+margin_right = 992.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 400 )
+custom_fonts/normal_font = SubResource( 29 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Descricao"
+text = "Descricao"
+script = ExtResource( 14 )
+CarregarTexto = "Descricao"
+
+[connection signal="pressed" from="Menu/Botao" to="." method="_acaoSair"]
+[connection signal="value_changed" from="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Som/ControleDeslizante" to="." method="_volumeSom"]
+[connection signal="value_changed" from="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Musica/ControleDeslizante" to="." method="_volumeMusica"]
+[connection signal="value_changed" from="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Voz/ControleDeslizante" to="." method="_volumeVoz"]
+[connection signal="pressed" from="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoHospital" to="." method="_selecionarFase"]
+[connection signal="pressed" from="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoEscola" to="." method="_selecionarFase"]
+[connection signal="pressed" from="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoDelegacia" to="." method="_selecionarFase"]
+[connection signal="pressed" from="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoRede" to="." method="_selecionarFase"]
+[connection signal="button_down" from="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoApagar" to="." method="_BotaoApagar"]
+[connection signal="pressed" from="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoSair" to="." method="_botaoSair"]
+
+[editable path="Menu/Botao"]
+[editable path="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/pt_BR"]
+[editable path="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/es_ES"]
+[editable path="Menu/Tabelas/ConfigurarAjustes/Margem/Lista/Idioma/en_GB"]
+[editable path="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoHospital"]
+[editable path="Menu/Tabelas/ConfigurarFases/Margem/Lista/Cima/BotaoEscola"]
+[editable path="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoDelegacia"]
+[editable path="Menu/Tabelas/ConfigurarFases/Margem/Lista/Baixo/BotaoRede"]
+[editable path="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoApagar"]
+[editable path="Menu/Tabelas/ConfigurarJogador/Margem/Lista/Baixo/BotaoSair"]

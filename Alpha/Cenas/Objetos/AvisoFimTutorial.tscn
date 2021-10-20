@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Cenas/Fontes/FonteComicSansMS.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Cenas/Objetos/BotaoHorizontal.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+void fragment() {
+//	COLOR.rgb = textureLod(SCREEN_TEXTURE, SCREEN_UV, 5.0).rgb; //MINHA TENTATIVA DE DEIXAR O FUNDO BORRADO
+	
+	vec4 ColetantoTela = texture(SCREEN_TEXTURE, SCREEN_UV);
+	float ExtraindoCor = (ColetantoTela.r + ColetantoTela.g + ColetantoTela.b)/5f;
+	COLOR = vec4(ExtraindoCor, ExtraindoCor, ExtraindoCor, 1f);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 2 )
+
+[node name="AvisoFimTutorial" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camada" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Fundo" type="ColorRect" parent="Camada"]
+material = SubResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CamadaSuperior" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="Fundo" type="ColorRect" parent="CamadaSuperior"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -225.0
+margin_top = -125.0
+margin_right = 225.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 300, 150 )
+rect_pivot_offset = Vector2( 225, 125 )
+color = Color( 0.560784, 0.960784, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="CamadaSuperior/Fundo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0, 0, 0.392157, 1 )
+border_width = 5.0
+editor_only = false
+
+[node name="Linha" type="VBoxContainer" parent="CamadaSuperior/Fundo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="CamadaSuperior/Fundo/Linha" instance=ExtResource( 1 )]
+margin_right = 450.0
+margin_bottom = 46.0
+size_flags_horizontal = 5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ParabensTutorial"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Botao" parent="CamadaSuperior/Fundo/Linha" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0.8, 0.2, 1 )
+margin_left = 72.0
+margin_top = 56.0
+margin_right = 378.0
+margin_bottom = 159.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Icone" parent="CamadaSuperior/Fundo/Linha/Botao/Horizontal" index="0"]
+visible = false
+
+[node name="Texto" parent="CamadaSuperior/Fundo/Linha/Botao/Horizontal" index="1"]
+margin_left = 62.0
+margin_right = 244.0
+custom_fonts/font = SubResource( 2 )
+text = "BotaoJogar"
+
+[editable path="CamadaSuperior/Fundo/Linha/Botao"]

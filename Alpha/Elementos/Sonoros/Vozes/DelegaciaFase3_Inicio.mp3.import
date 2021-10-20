@@ -11,5 +11,5 @@ dest_files=[ "res://.import/DelegaciaFase3_Inicio.mp3-e2877d2fa6d520954045392c89
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

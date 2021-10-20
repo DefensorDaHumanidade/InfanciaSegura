@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Escola.wav-2e05210a7e01d2e5978d8c468f72f5dd.sample"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Musica/Escola.wav"
+dest_files=[ "res://.import/Escola.wav-2e05210a7e01d2e5978d8c468f72f5dd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=1

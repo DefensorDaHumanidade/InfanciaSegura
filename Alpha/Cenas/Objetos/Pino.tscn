@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Elementos/Visuais/Icones/Pino.png" type="Texture" id=1]
+[ext_resource path="res://Codigos/Objetos/Pino.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 29.0603
+
+[node name="Pino" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Linha" type="Line2D" parent="."]
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="Corda" type="DampedSpringJoint2D" parent="."]
+visible = false
+node_a = NodePath("../Inicio")
+node_b = NodePath("../Fim")
+length = 40.0
+rest_length = 10.0
+
+[node name="Inicio" type="StaticBody2D" parent="."]
+position = Vector2( 0, -20 )
+
+[node name="Icone" type="TextureRect" parent="Inicio"]
+margin_left = -70.0
+margin_top = -30.0
+margin_right = 28.0
+margin_bottom = 62.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contato" type="CollisionShape2D" parent="Inicio"]
+shape = SubResource( 1 )
+
+[node name="Fim" type="RigidBody2D" parent="."]
+position = Vector2( 0, 80 )
+linear_damp = 5.0
+
+[node name="Icone" type="TextureRect" parent="Fim"]
+margin_left = -70.0
+margin_top = -30.0
+margin_right = 28.0
+margin_bottom = 62.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contato" type="CollisionShape2D" parent="Fim"]
+shape = SubResource( 1 )
+
+[node name="Area" type="Area2D" parent="Fim"]
+
+[node name="Contato" type="CollisionShape2D" parent="Fim/Area"]
+shape = SubResource( 1 )
+
+[connection signal="gui_input" from="Fim/Icone" to="." method="_arrastarPino"]
+[connection signal="area_entered" from="Fim/Area" to="." method="_AreaEntrou"]
+[connection signal="area_exited" from="Fim/Area" to="." method="_AreaSaiu"]

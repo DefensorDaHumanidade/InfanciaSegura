@@ -1,0 +1,688 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Elementos/Fases/Hospital/CorpoHumano/MeninoFrente.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elementos/Fases/Hospital/CorpoHumano/MeninoCostas.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Objetos/CorpoHumanoPeca.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Elementos/Visuais/Fundo/Hosp.jpg" type="Texture" id=6]
+[ext_resource path="res://Cenas/Objetos/Painel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Cenas/Objetos/ControleDeslizante.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Codigos/Cenas/TelaPrincipalHospitalNivel1.gd" type="Script" id=9]
+[ext_resource path="res://Elementos/Visuais/Icones/Desinverter.png" type="Texture" id=10]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0.470588 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=5]
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 22, 0 ), Vector2( -19, 0 ), Vector2( 17, 0 ), Vector2( -23, 0 ), Vector2( 21, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=6]
+resource_local_to_scene = true
+bg_color = Color( 0.580392, 0.94902, 0.941176, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+resource_local_to_scene = true
+bg_color = Color( 0.580392, 0.94902, 0.941176, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=8]
+resource_local_to_scene = true
+bg_color = Color( 0.580392, 0.94902, 0.941176, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[node name="TelaHospitalFase1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+QuantidadeElementosAprender = 10
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.447059, 0.737255, 0.784314, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 143.0
+texture = ExtResource( 6 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mural" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+input_pass_on_modal_close_click = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ElementosFrente" type="Control" parent="Mural"]
+margin_left = 640.0
+margin_top = 832.0
+margin_right = 640.0
+margin_bottom = 832.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorpoHumanoFrente" type="TextureRect" parent="Mural/ElementosFrente"]
+margin_left = -276.0
+margin_top = -832.0
+margin_right = 276.0
+margin_bottom = 833.0
+texture = ExtResource( 1 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Partes" type="Control" parent="Mural/ElementosFrente"]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorpoHumanoPecaTesta" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -712.886
+margin_right = -300.006
+margin_bottom = -632.886
+Nome = "ParteTesta"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaTesta"]
+points = PoolVector2Array( 250, 38, 545, 38, 545, 130 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaOrelha" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -618.886
+margin_right = -300.006
+margin_bottom = -538.886
+Nome = "ParteOrelha"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaOrelha"]
+points = PoolVector2Array( 250, 38, 425, 38, 425, 95 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaNariz" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -521.886
+margin_right = -300.006
+margin_bottom = -441.886
+Nome = "ParteNariz"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaNariz"]
+points = PoolVector2Array( 250, 38, 545, 38, 545, 30 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaOmbro" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -421.886
+margin_right = -300.006
+margin_bottom = -341.886
+Nome = "ParteOmbro"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaOmbro"]
+points = PoolVector2Array( 250, 38, 440, 38, 440, 72 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaTorax" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -325.886
+margin_right = -300.006
+margin_bottom = -245.886
+Nome = "ParteTorax"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaTorax"]
+points = PoolVector2Array( 250, 38, 440, 38, 546, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaAbdomen" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -179.886
+margin_right = -300.006
+margin_bottom = -99.8856
+Nome = "ParteAbdomen"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaAbdomen"]
+points = PoolVector2Array( 250, 38, 440, 38, 546, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaMao" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -53.8856
+margin_right = -300.006
+margin_bottom = 26.1144
+Nome = "ParteMao"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaMao"]
+points = PoolVector2Array( 250, 38, 335, 38, 335, 98 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaCoxa" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = 201.114
+margin_right = -300.006
+margin_bottom = 281.114
+Nome = "ParteCoxa"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaCoxa"]
+points = PoolVector2Array( 250, 38, 335, 38, 468, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaPe" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = 634.114
+margin_right = -300.006
+margin_bottom = 714.114
+Nome = "PartePe"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaPe"]
+points = PoolVector2Array( 250, 38, 335, 38, 420, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaOlho" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -568.14
+margin_right = 520.063
+margin_bottom = -488.14
+Nome = "ParteOlho"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaOlho"]
+position = Vector2( -373.702, 0 )
+points = PoolVector2Array( 372.139, 37.8898, 178, 38, 165, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaBoca" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -471.14
+margin_right = 520.063
+margin_bottom = -391.14
+PartePrivada = true
+Nome = "ParteBoca"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaBoca"]
+position = Vector2( -399.702, 0 )
+points = PoolVector2Array( 398, 38, 120, 38, 120, 30 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaQueixo" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -375.14
+margin_right = 520.063
+margin_bottom = -295.14
+Nome = "ParteQueixo"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaQueixo"]
+position = Vector2( -398.702, 0 )
+points = PoolVector2Array( 396, 38, 120, 38, 120, -30 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaMamilo" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -261.14
+margin_right = 520.063
+margin_bottom = -181.14
+PartePrivada = true
+Nome = "ParteMamilo"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaMamilo"]
+position = Vector2( -250.702, 0 )
+points = PoolVector2Array( 250, 38, 190, 38, 72, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaUmbigo" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -127.14
+margin_right = 520.063
+margin_bottom = -47.1398
+Nome = "ParteUmbigo"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaUmbigo"]
+position = Vector2( -396.702, 0 )
+points = PoolVector2Array( 394, 38, 138, 38, 138, 100 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaPrivada" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = 41.8602
+margin_right = 520.063
+margin_bottom = 121.86
+PartePrivada = true
+Nome = ""
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaPrivada"]
+position = Vector2( -251.702, 0 )
+points = PoolVector2Array( 250, 38, 170, 38, -5, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaJoelho" parent="Mural/ElementosFrente/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = 296.86
+margin_right = 520.063
+margin_bottom = 376.86
+Nome = "ParteJoelho"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosFrente/Partes/CorpoHumanoPecaJoelho"]
+position = Vector2( -251.702, 0 )
+points = PoolVector2Array( 250, 38, 210, 38, 91, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="ElementosCostas" type="Control" parent="Mural"]
+visible = false
+margin_left = 640.0
+margin_top = 832.0
+margin_right = 640.0
+margin_bottom = 832.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorpoHumanoCostas" type="TextureRect" parent="Mural/ElementosCostas"]
+margin_left = -287.0
+margin_top = -832.0
+margin_right = 286.0
+margin_bottom = 833.0
+texture = ExtResource( 3 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Partes" type="Control" parent="Mural/ElementosCostas"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CorpoHumanoPecaNuca" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -424.886
+margin_right = -300.006
+margin_bottom = -344.886
+Nome = "ParteNuca"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaNuca"]
+points = PoolVector2Array( 250, 38, 560, 38, 560, 28 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaBraco" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = -179.886
+margin_right = -300.006
+margin_bottom = -99.8856
+Nome = "ParteBraco"
+
+[node name="Linha" type="Polygon2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaBraco"]
+position = Vector2( 0, -1.33484 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 249.471, 36.3528, 398.553, -111.199, 316.895, 204.021 )
+vertex_colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 )
+
+[node name="CorpoHumanoPecaPerna" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = 201.114
+margin_right = -300.006
+margin_bottom = 281.114
+Nome = "PartePerna"
+
+[node name="Linha" type="Polygon2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaPerna"]
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 249.467, 36.9928, 458.467, -48.0072, 429.538, 470.929 )
+vertex_colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 )
+
+[node name="CorpoHumanoPecaCalcanhar" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = -550.006
+margin_top = 674.114
+margin_right = -300.006
+margin_bottom = 754.114
+Nome = "ParteCalcanhar"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaCalcanhar"]
+points = PoolVector2Array( 250, 38, 335, 38, 445, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaCabelo" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -641.14
+margin_right = 520.063
+margin_bottom = -561.14
+Nome = "ParteCabelo"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaCabelo"]
+position = Vector2( -373.702, 0 )
+points = PoolVector2Array( 372, 38, 178, 38, 110, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaOmoplata" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -262.14
+margin_right = 520.063
+margin_bottom = -182.14
+Nome = "ParteOmoplata"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaOmoplata"]
+position = Vector2( -399.702, 0 )
+points = PoolVector2Array( 398, 38, 234, 38, 200, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaAxila" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -377.14
+margin_right = 520.063
+margin_bottom = -297.14
+Nome = "ParteAxila"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaAxila"]
+position = Vector2( -398.702, 0 )
+points = PoolVector2Array( 396, 38, 264, 38, 264, 98 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaCostas" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -157.14
+margin_right = 520.063
+margin_bottom = -77.1398
+Nome = "ParteCostas"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaCostas"]
+position = Vector2( -250.702, 0 )
+points = PoolVector2Array( 250, 38, 190, 38, 0, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaCoccix" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = -59.1398
+margin_right = 520.063
+margin_bottom = 20.8602
+Nome = "ParteCoccix"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaCoccix"]
+position = Vector2( -250.702, 0 )
+points = PoolVector2Array( 250, 38, 190, 38, 0, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaAnus" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = 145.86
+margin_right = 520.063
+margin_bottom = 225.86
+PartePrivada = true
+Nome = "ParteAnus"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaAnus"]
+position = Vector2( -396.702, 0 )
+points = PoolVector2Array( 394, 38, 138, 38, 138, -8 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaNadega" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = 37.8602
+margin_right = 520.063
+margin_bottom = 117.86
+PartePrivada = true
+Nome = "ParteNadega"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaNadega"]
+position = Vector2( -251.702, 0 )
+points = PoolVector2Array( 250, 38, 170, 38, 22.4, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="CorpoHumanoPecaPanturrilha" parent="Mural/ElementosCostas/Partes" instance=ExtResource( 4 )]
+margin_left = 270.063
+margin_top = 473.86
+margin_right = 520.063
+margin_bottom = 553.86
+Nome = "PartePanturrilha"
+
+[node name="Linha" type="Line2D" parent="Mural/ElementosCostas/Partes/CorpoHumanoPecaPanturrilha"]
+position = Vector2( -251.702, 0 )
+points = PoolVector2Array( 250, 38, 210, 38, 91, 38 )
+default_color = Color( 0, 0, 0, 1 )
+gradient = SubResource( 1 )
+joint_mode = 1
+end_cap_mode = 2
+round_precision = 2
+
+[node name="Dialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 2 )
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+custom_fonts/normal_font = SubResource( 3 )
+CarregarTexto = " "
+
+[node name="BotaoComando" parent="Dialogo/Margem/Vertical" index="2"]
+toggle_mode = true
+
+[node name="Icone" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="0"]
+self_modulate = Color( 1, 1, 1, 1 )
+margin_top = 34.0
+margin_right = 163.0
+margin_bottom = 104.0
+texture = ExtResource( 10 )
+flip_h = false
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_top = 109.0
+margin_right = 163.0
+margin_bottom = 157.0
+custom_fonts/font = SubResource( 4 )
+text = "BotaoTras"
+
+[node name="ZonaNascimento" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 640, 105 )
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Animar" type="AnimationPlayer" parent="Camera"]
+anims/TemerCamera = SubResource( 5 )
+
+[node name="Painel" parent="." instance=ExtResource( 7 )]
+
+[node name="ControleDeslizante" parent="." instance=ExtResource( 8 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = -220.0
+margin_right = 340.0
+margin_bottom = -125.0
+rect_min_size = Vector2( 350, 95 )
+rect_rotation = 90.0
+custom_styles/slider = SubResource( 6 )
+custom_styles/grabber_area_highlight = SubResource( 7 )
+custom_styles/grabber_area = SubResource( 8 )
+min_value = -120.0
+max_value = 0.0
+step = 0.1
+value = 0.0
+
+[connection signal="toggled" from="Dialogo/Margem/Vertical/BotaoComando" to="." method="_viraDesvira"]
+[connection signal="value_changed" from="ControleDeslizante" to="." method="_deslizarTela"]
+
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]
+[editable path="ControleDeslizante"]

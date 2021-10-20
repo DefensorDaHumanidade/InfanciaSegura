@@ -1,0 +1,467 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Elementos/Visuais/Fundo/Dele.jpg" type="Texture" id=2]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Objetos/QuebraCabeca.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/Objetos/Painel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elementos/Visuais/Mao/MaoAuxilicar.png" type="Texture" id=6]
+[ext_resource path="res://Elementos/Textuais/AgencyFB/AGENCYB.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://Cenas/Fontes/FonteAgencyFB.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 70
+outline_size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 26
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=6]
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ZonaMontagem/Mao:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ZonaMontagem/Mao:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ZonaMontagem/Mao:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.3, 4.2, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 30.0, 30.0, 0.0, 0.0, 30.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ZonaMontagem/Mao:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.5, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -540, 250 ), Vector2( -540, 250 ), Vector2( -320, 100 ), Vector2( -320, 100 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ZonaMontagem/QuebraCabecaTransparente:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.705882 ), Color( 1, 1, 1, 0.705882 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ZonaMontagem/QuebraCabecaTransparente:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.5, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -444.835, 303.408 ), Vector2( -444.835, 303.408 ), Vector2( -245, 116 ), Vector2( -245, 116 ) ]
+}
+
+[node name="TelaDelegaciaFase2Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.784314, 0.478431, 0.478431, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogo" parent="." instance=ExtResource( 3 )]
+
+[node name="Vertical" parent="Dialogo/Margem" index="0"]
+margin_bottom = 200.0
+
+[node name="BotaoVoz" parent="Dialogo/Margem/Vertical" index="0"]
+visible = false
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 1 )
+
+[node name="Caixa" parent="Dialogo/Margem/Vertical" index="1"]
+margin_left = 0.0
+margin_right = 1260.0
+margin_bottom = 190.0
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+margin_right = 1255.0
+margin_bottom = 185.0
+custom_fonts/normal_font = SubResource( 2 )
+CarregarTexto = "TelaDelegaciaFase2_Tutorial"
+CarregarVoz = "TelaDelegaciaFase2_Tutorial"
+
+[node name="BotaoComando" parent="Dialogo/Margem/Vertical" index="2"]
+visible = false
+TrocarTela = "TelaPrincipal"
+TrocarMusica = "Abertura.wav"
+
+[node name="Icone" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="0"]
+margin_right = 188.0
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_right = 188.0
+custom_fonts/font = SubResource( 3 )
+text = "BotaoVoltar"
+
+[node name="ZonaMontagem" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = -340.0
+margin_bottom = -340.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuebraCabeca1" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -245, -3 )
+hframes = 4
+vframes = 4
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca1" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca1" index="1"]
+visible = false
+
+[node name="QuebraCabeca2" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -76, -3 )
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca2" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca2" index="1"]
+visible = false
+
+[node name="QuebraCabeca3" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 93, -3 )
+hframes = 4
+vframes = 4
+frame = 2
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca3" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca3" index="1"]
+visible = false
+
+[node name="QuebraCabeca4" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 262, -3 )
+hframes = 4
+vframes = 4
+frame = 3
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca4" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca4" index="1"]
+visible = false
+
+[node name="QuebraCabeca5" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -76, 116 )
+hframes = 4
+vframes = 4
+frame = 5
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca5" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca5" index="1"]
+visible = false
+
+[node name="QuebraCabeca6" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 93, 116 )
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca6" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca6" index="1"]
+visible = false
+
+[node name="QuebraCabeca7" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 262, 116 )
+hframes = 4
+vframes = 4
+frame = 7
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca7" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca7" index="1"]
+visible = false
+
+[node name="QuebraCabeca8" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -245, 235 )
+hframes = 4
+vframes = 4
+frame = 8
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca8" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca8" index="1"]
+visible = false
+
+[node name="QuebraCabeca9" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -76, 235 )
+hframes = 4
+vframes = 4
+frame = 9
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca9" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca9" index="1"]
+visible = false
+
+[node name="QuebraCabeca10" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 93, 235 )
+hframes = 4
+vframes = 4
+frame = 10
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca10" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca10" index="1"]
+visible = false
+
+[node name="QuebraCabeca11" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 262, 235 )
+hframes = 4
+vframes = 4
+frame = 11
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca11" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca11" index="1"]
+visible = false
+
+[node name="QuebraCabeca12" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -245, 352 )
+hframes = 4
+vframes = 4
+frame = 12
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca12" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca12" index="1"]
+visible = false
+
+[node name="QuebraCabeca13" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -76, 352 )
+hframes = 4
+vframes = 4
+frame = 13
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca13" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca13" index="1"]
+visible = false
+
+[node name="QuebraCabeca14" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 93, 352 )
+hframes = 4
+vframes = 4
+frame = 14
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca14" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca14" index="1"]
+visible = false
+
+[node name="QuebraCabeca15" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( 262, 352 )
+hframes = 4
+vframes = 4
+frame = 15
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca15" index="0"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca15" index="1"]
+visible = false
+
+[node name="QuebraCabeca16" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -245, 116 )
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="Transparencia" parent="ZonaMontagem/QuebraCabeca16" index="0"]
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="Contorno" parent="ZonaMontagem/QuebraCabeca16" index="1"]
+visible = false
+
+[node name="QuebraCabeca" parent="ZonaMontagem" instance=ExtResource( 4 )]
+position = Vector2( -444.835, 303.408 )
+frame = 4
+
+[node name="QuebraCabecaTransparente" parent="ZonaMontagem" instance=ExtResource( 4 )]
+self_modulate = Color( 1, 1, 1, 0.705882 )
+position = Vector2( -444.835, 303.408 )
+frame = 4
+
+[node name="Mao" type="TextureRect" parent="ZonaMontagem"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -138.554
+margin_top = 99.4617
+margin_right = 117.446
+margin_bottom = 355.468
+rect_rotation = 30.0
+rect_pivot_offset = Vector2( 128, 240 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ZonaNascimento" type="Control" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 90.0
+margin_top = -210.0
+margin_right = -90.0
+margin_bottom = -50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="." instance=ExtResource( 8 )]
+anchor_right = 1.0
+margin_right = 0.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 0.0705882, 0.243137, 1 )
+text = "Tutorial"
+align = 1
+
+[node name="Painel" parent="." instance=ExtResource( 5 )]
+
+[node name="Pontuacao" parent="Painel/Elementos" index="0"]
+visible = false
+
+[node name="Texto" parent="Painel/Elementos/Pontuacao" index="0"]
+custom_fonts/font = SubResource( 5 )
+
+[node name="Numero" parent="Painel/Elementos/Pontuacao" index="1"]
+custom_fonts/font = SubResource( 5 )
+
+[node name="Separador" parent="Painel/Elementos" index="1"]
+visible = false
+margin_left = 0.0
+margin_right = 4.0
+
+[node name="Tempo" parent="Painel/Elementos" index="2"]
+margin_left = 0.0
+
+[node name="Texto" parent="Painel/Elementos/Tempo" index="0"]
+margin_right = 212.0
+custom_fonts/font = SubResource( 5 )
+
+[node name="Numero" parent="Painel/Elementos/Tempo" index="1"]
+margin_right = 212.0
+custom_fonts/font = SubResource( 5 )
+
+[node name="AnimarTutorial" type="AnimationPlayer" parent="."]
+autoplay = "Tutorial"
+anims/Tutorial = SubResource( 6 )
+
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]
+[editable path="ZonaMontagem/QuebraCabeca1"]
+[editable path="ZonaMontagem/QuebraCabeca2"]
+[editable path="ZonaMontagem/QuebraCabeca3"]
+[editable path="ZonaMontagem/QuebraCabeca4"]
+[editable path="ZonaMontagem/QuebraCabeca5"]
+[editable path="ZonaMontagem/QuebraCabeca6"]
+[editable path="ZonaMontagem/QuebraCabeca7"]
+[editable path="ZonaMontagem/QuebraCabeca8"]
+[editable path="ZonaMontagem/QuebraCabeca9"]
+[editable path="ZonaMontagem/QuebraCabeca10"]
+[editable path="ZonaMontagem/QuebraCabeca11"]
+[editable path="ZonaMontagem/QuebraCabeca12"]
+[editable path="ZonaMontagem/QuebraCabeca13"]
+[editable path="ZonaMontagem/QuebraCabeca14"]
+[editable path="ZonaMontagem/QuebraCabeca15"]
+[editable path="ZonaMontagem/QuebraCabeca16"]
+[editable path="Painel"]

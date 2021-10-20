@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Elementos/Sonoros/Notificar/Acerto-1.wav" type="AudioStream" id=1]
+[ext_resource path="res://Codigos/Objetos/PopulacaoCidade.gd" type="Script" id=2]
+
+[node name="PopulacaoCidade" type="TextureRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 20, 40 )
+mouse_filter = 0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contorno" type="ReferenceRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0, 1, 0, 1 )
+border_width = 5.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[connection signal="gui_input" from="." to="." method="_selecionarPessoa"]

@@ -1,0 +1,241 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Elementos/Visuais/Fundo/Dele.jpg" type="Texture" id=2]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Codigos/Cenas/TelaPrincipalDelegaciaNivel1.gd" type="Script" id=4]
+[ext_resource path="res://Cenas/Objetos/Painel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elementos/Visuais/Icones/Erro.png" type="Texture" id=6]
+[ext_resource path="res://Elementos/Visuais/Icones/Acerto.png" type="Texture" id=7]
+[ext_resource path="res://Elementos/Sonoros/Notificar/Erro-2.wav" type="AudioStream" id=8]
+[ext_resource path="res://Elementos/Sonoros/Notificar/Acerto-1.wav" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 26
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=5]
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 22, 0 ), Vector2( -19, 0 ), Vector2( 17, 0 ), Vector2( -23, 0 ), Vector2( 21, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Resposta"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.01, 0.29, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0.705882, 0, 0 ), Color( 0, 0.705882, 0, 1 ), Color( 0, 0.705882, 0, 1 ), Color( 0, 0.705882, 0, 1 ), Color( 0, 0.705882, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Resposta"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.1, 0.13, 0.15, 0.21, 0.26, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, false ]
+}
+
+[node name="TelaDelegaciaFase1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.784314, 0.478431, 0.478431, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogo" parent="." instance=ExtResource( 3 )]
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 1 )
+
+[node name="Caixa" parent="Dialogo/Margem/Vertical" index="1"]
+margin_right = 1260.0
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+margin_right = 1134.0
+custom_fonts/normal_font = SubResource( 2 )
+CarregarTexto = " "
+
+[node name="BotaoComando" parent="Dialogo/Margem/Vertical" index="2"]
+visible = false
+
+[node name="Icone" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="0"]
+margin_right = 188.0
+flip_h = false
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_right = 188.0
+custom_fonts/font = SubResource( 3 )
+text = "BotaoIr"
+
+[node name="Linha" type="VBoxContainer" parent="."]
+anchor_left = 0.1
+anchor_top = 0.16
+anchor_right = 0.9
+anchor_bottom = 0.4
+margin_left = -145.0
+margin_right = 145.0
+margin_bottom = 210.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColunaSuperior" type="HBoxContainer" parent="Linha"]
+margin_left = 657.0
+margin_right = 657.0
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="ColunaInferior" type="HBoxContainer" parent="Linha"]
+show_behind_parent = true
+margin_left = 657.0
+margin_top = 382.0
+margin_right = 657.0
+margin_bottom = 382.0
+mouse_filter = 2
+size_flags_horizontal = 6
+size_flags_vertical = 10
+
+[node name="Painel" parent="." instance=ExtResource( 5 )]
+
+[node name="Pontuacao" parent="Painel/Elementos" index="0"]
+visible = false
+
+[node name="Texto" parent="Painel/Elementos/Pontuacao" index="0"]
+custom_fonts/font = SubResource( 4 )
+
+[node name="Numero" parent="Painel/Elementos/Pontuacao" index="1"]
+custom_fonts/font = SubResource( 4 )
+
+[node name="Separador" parent="Painel/Elementos" index="1"]
+visible = false
+margin_left = 0.0
+margin_right = 4.0
+
+[node name="Tempo" parent="Painel/Elementos" index="2"]
+margin_left = 0.0
+
+[node name="Texto" parent="Painel/Elementos/Tempo" index="0"]
+margin_right = 212.0
+custom_fonts/font = SubResource( 4 )
+
+[node name="Numero" parent="Painel/Elementos/Tempo" index="1"]
+margin_right = 212.0
+custom_fonts/font = SubResource( 4 )
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Animar" type="AnimationPlayer" parent="Camera"]
+anims/TemerCamera = SubResource( 5 )
+
+[node name="ImagemAcerto" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color( 0, 0.705882, 0, 0 )
+anchor_right = 1.0
+margin_bottom = 500.0
+texture = ExtResource( 7 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="AudioStreamPlayer" parent="ImagemAcerto"]
+stream = ExtResource( 9 )
+
+[node name="Animar" type="AnimationPlayer" parent="ImagemAcerto"]
+anims/Resposta = SubResource( 6 )
+
+[node name="ImagemErro" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color( 1, 0, 0, 1 )
+anchor_right = 1.0
+margin_bottom = 500.0
+texture = ExtResource( 6 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="AudioStreamPlayer" parent="ImagemErro"]
+stream = ExtResource( 8 )
+
+[node name="Animar" type="AnimationPlayer" parent="ImagemErro"]
+anims/Resposta = SubResource( 7 )
+
+[connection signal="pressed" from="Dialogo/Margem/Vertical/BotaoComando" to="." method="_terminarNivel"]
+
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]
+[editable path="Painel"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Codigos/Texto/FonteMelhoradaComicSansMS.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+font_data = ExtResource( 1 )
+
+[node name="Texto" type="RichTextLabel"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Imprimir" type="Timer" parent="."]
+wait_time = 0.04
+autostart = true
+
+[node name="Voz" type="AudioStreamPlayer" parent="."]
+bus = "CanalVoz"
+
+[connection signal="timeout" from="Imprimir" to="." method="_Imprimir"]
+[connection signal="finished" from="Voz" to="." method="_vozFinalizada"]

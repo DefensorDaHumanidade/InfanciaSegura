@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Arvore.wav-870cdf88ed40c52ae007b69a979ad61c.sample"
+
+[deps]
+
+source_file="res://Elementos/Sonoros/Notificar/Arvore.wav"
+dest_files=[ "res://.import/Arvore.wav-870cdf88ed40c52ae007b69a979ad61c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

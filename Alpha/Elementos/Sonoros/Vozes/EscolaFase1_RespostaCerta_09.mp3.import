@@ -11,5 +11,5 @@ dest_files=[ "res://.import/EscolaFase1_RespostaCerta_09.mp3-ec8ac2d0da49554cad5
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

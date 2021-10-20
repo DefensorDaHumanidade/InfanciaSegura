@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Cenas/Objetos/BotaoVertical.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Elementos/Visuais/Icones/Dialogo.png" type="Texture" id=2]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Cenas/Fontes/FonteMelhoradaComicSansMS.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elementos/Visuais/Icones/Voz.png" type="Texture" id=5]
+[ext_resource path="res://Elementos/Visuais/Icones/Seta.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 3 )
+
+[node name="Dialogo" type="ReferenceRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -210.0
+border_color = Color( 0, 0, 0.313726, 1 )
+border_width = 5.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.588235, 1, 0.921569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margem" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vertical" type="HBoxContainer" parent="Margem"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1270.0
+margin_bottom = 202.0
+
+[node name="BotaoVoz" parent="Margem/Vertical" instance=ExtResource( 1 )]
+self_modulate = Color( 0.588235, 1, 0.921569, 1 )
+margin_right = 117.0
+margin_bottom = 192.0
+toggle_mode = true
+
+[node name="Icone" parent="Margem/Vertical/BotaoVoz/Vertical" index="0"]
+margin_top = 26.0
+margin_right = 148.0
+margin_bottom = 112.0
+texture = ExtResource( 5 )
+
+[node name="Texto" parent="Margem/Vertical/BotaoVoz/Vertical" index="1"]
+margin_top = 117.0
+margin_right = 148.0
+margin_bottom = 165.0
+custom_fonts/font = SubResource( 1 )
+text = "BotaoVoz"
+
+[node name="Caixa" type="NinePatchRect" parent="Margem/Vertical"]
+margin_left = 121.0
+margin_right = 1139.0
+margin_bottom = 192.0
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="Margem" type="MarginContainer" parent="Margem/Vertical/Caixa"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" parent="Margem/Vertical/Caixa/Margem" instance=ExtResource( 4 )]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 1013.0
+margin_bottom = 187.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa."
+
+[node name="BotaoComando" parent="Margem/Vertical" instance=ExtResource( 1 )]
+self_modulate = Color( 0.588235, 1, 0.921569, 1 )
+margin_left = 1143.0
+margin_right = 1260.0
+margin_bottom = 192.0
+
+[node name="Icone" parent="Margem/Vertical/BotaoComando/Vertical" index="0"]
+self_modulate = Color( 0, 0.898039, 0.898039, 1 )
+margin_top = 39.0
+margin_right = 175.0
+margin_bottom = 99.0
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Texto" parent="Margem/Vertical/BotaoComando/Vertical" index="1"]
+margin_top = 104.0
+margin_right = 175.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 3 )
+text = "BotaoMenu"
+
+[connection signal="toggled" from="Margem/Vertical/BotaoVoz" to="Margem/Vertical/BotaoVoz" method="_ouvirVoz"]
+
+[editable path="Margem/Vertical/BotaoVoz"]
+[editable path="Margem/Vertical/BotaoComando"]

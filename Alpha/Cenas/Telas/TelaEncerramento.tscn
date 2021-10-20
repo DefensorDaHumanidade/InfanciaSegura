@@ -1,0 +1,328 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Elementos/Sonoros/Notificar/Tutorial.wav" type="AudioStream" id=1]
+[ext_resource path="res://Cenas/Objetos/CaixaDialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Codigos/Cenas/TelaEncerramento.gd" type="Script" id=3]
+[ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Elementos/Visuais/Icones/PainelGeral.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/Fontes/FonteComicSansMS.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Cenas/Fontes/FonteMelhoradaComicSansMS.tscn" type="PackedScene" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+resource_local_to_scene = true
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+resource_local_to_scene = true
+size = 34
+font_data = ExtResource( 5 )
+
+[node name="TelaEncerramento" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+self_modulate = Color( 0.760784, 0.972549, 1, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personagem" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -620.0
+margin_right = 601.0
+margin_bottom = 100.0
+rect_scale = Vector2( 0.6, 0.6 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Centro" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -222.0
+margin_top = -333.5
+margin_right = 502.0
+margin_bottom = 135.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PainelGeral" type="TextureRect" parent="Centro"]
+self_modulate = Color( 0.901961, 1, 0.635294, 1 )
+margin_right = 724.0
+margin_bottom = 469.0
+texture = ExtResource( 6 )
+stretch_mode = 6
+
+[node name="Lista" type="VBoxContainer" parent="Centro/PainelGeral"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separador" type="HSeparator" parent="Centro/PainelGeral/Lista"]
+margin_right = 724.0
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 0
+
+[node name="Coluna" type="HBoxContainer" parent="Centro/PainelGeral/Lista"]
+margin_top = 4.0
+margin_right = 724.0
+margin_bottom = 469.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MargemEsquerda" type="VSeparator" parent="Centro/PainelGeral/Lista/Coluna"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 20.0
+margin_bottom = 465.0
+custom_styles/separator = SubResource( 2 )
+custom_constants/separation = 20
+
+[node name="Erro" type="VBoxContainer" parent="Centro/PainelGeral/Lista/Coluna"]
+margin_left = 24.0
+margin_right = 360.0
+margin_bottom = 465.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Texto" parent="Centro/PainelGeral/Lista/Coluna/Erro" instance=ExtResource( 8 )]
+margin_right = 336.0
+margin_bottom = 54.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TextoErros"
+align = 1
+
+[node name="Separador" type="HSeparator" parent="Centro/PainelGeral/Lista/Coluna/Erro"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 58.0
+margin_right = 336.0
+margin_bottom = 83.0
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 25
+
+[node name="Atual" type="HBoxContainer" parent="Centro/PainelGeral/Lista/Coluna/Erro"]
+margin_top = 87.0
+margin_right = 336.0
+margin_bottom = 141.0
+size_flags_vertical = 4
+
+[node name="Texto" parent="Centro/PainelGeral/Lista/Coluna/Erro/Atual" instance=ExtResource( 8 )]
+margin_right = 202.0
+margin_bottom = 54.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TextoAtual"
+
+[node name="Valor" parent="Centro/PainelGeral/Lista/Coluna/Erro/Atual" instance=ExtResource( 8 )]
+margin_left = 206.0
+margin_right = 229.0
+margin_bottom = 54.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="Menor" type="HBoxContainer" parent="Centro/PainelGeral/Lista/Coluna/Erro"]
+margin_top = 145.0
+margin_right = 336.0
+margin_bottom = 199.0
+size_flags_vertical = 4
+
+[node name="Menor" parent="Centro/PainelGeral/Lista/Coluna/Erro/Menor" instance=ExtResource( 8 )]
+margin_right = 220.0
+margin_bottom = 54.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TextoMenor"
+
+[node name="Valor" parent="Centro/PainelGeral/Lista/Coluna/Erro/Menor" instance=ExtResource( 8 )]
+margin_left = 224.0
+margin_right = 247.0
+margin_bottom = 54.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="Recorde" parent="Centro/PainelGeral/Lista/Coluna/Erro" instance=ExtResource( 10 )]
+margin_top = 203.0
+margin_right = 336.0
+margin_bottom = 263.0
+rect_min_size = Vector2( 336, 60 )
+size_flags_horizontal = 4
+custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "TextoRecorde"
+text = "TextoRecorde"
+scroll_active = false
+CarregarTexto = "TextoRecorde"
+
+[node name="Separador" type="VSeparator" parent="Centro/PainelGeral/Lista/Coluna"]
+margin_left = 364.0
+margin_right = 384.0
+margin_bottom = 465.0
+custom_styles/separator = SubResource( 2 )
+custom_constants/separation = 20
+
+[node name="Tempo" type="VBoxContainer" parent="Centro/PainelGeral/Lista/Coluna"]
+margin_left = 388.0
+margin_right = 724.0
+margin_bottom = 465.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Texto" parent="Centro/PainelGeral/Lista/Coluna/Tempo" instance=ExtResource( 8 )]
+margin_right = 336.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TextoTempo"
+align = 1
+
+[node name="Separador" type="HSeparator" parent="Centro/PainelGeral/Lista/Coluna/Tempo"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 58.0
+margin_right = 336.0
+margin_bottom = 83.0
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 25
+
+[node name="Atual" type="HBoxContainer" parent="Centro/PainelGeral/Lista/Coluna/Tempo"]
+margin_top = 87.0
+margin_right = 336.0
+margin_bottom = 141.0
+
+[node name="Texto" parent="Centro/PainelGeral/Lista/Coluna/Tempo/Atual" instance=ExtResource( 8 )]
+margin_right = 202.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TextoAtual"
+
+[node name="Valor" parent="Centro/PainelGeral/Lista/Coluna/Tempo/Atual" instance=ExtResource( 8 )]
+margin_left = 206.0
+margin_right = 229.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="Menor" type="HBoxContainer" parent="Centro/PainelGeral/Lista/Coluna/Tempo"]
+margin_top = 145.0
+margin_right = 336.0
+margin_bottom = 199.0
+
+[node name="Menor" parent="Centro/PainelGeral/Lista/Coluna/Tempo/Menor" instance=ExtResource( 8 )]
+margin_right = 220.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TextoMenor"
+
+[node name="Valor" parent="Centro/PainelGeral/Lista/Coluna/Tempo/Menor" instance=ExtResource( 8 )]
+margin_left = 224.0
+margin_right = 247.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="Recorde" parent="Centro/PainelGeral/Lista/Coluna/Tempo" instance=ExtResource( 10 )]
+margin_top = 203.0
+margin_right = 336.0
+margin_bottom = 263.0
+rect_min_size = Vector2( 336, 60 )
+custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "TextoRecorde"
+text = "TextoRecorde"
+CarregarTexto = "TextoRecorde"
+
+[node name="Dialogo" parent="." instance=ExtResource( 2 )]
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoVoz/Vertical" index="1"]
+custom_fonts/font = SubResource( 6 )
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/Caixa/Margem" index="0"]
+custom_fonts/normal_font = SubResource( 7 )
+
+[node name="BotaoComando" parent="Dialogo/Margem/Vertical" index="2"]
+TrocarTela = "TelaPrincipal"
+
+[node name="Texto" parent="Dialogo/Margem/Vertical/BotaoComando/Vertical" index="1"]
+custom_fonts/font = SubResource( 8 )
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+pitch_scale = 0.7
+autoplay = true
+
+[editable path="Dialogo"]
+[editable path="Dialogo/Margem/Vertical/BotaoVoz"]
+[editable path="Dialogo/Margem/Vertical/BotaoComando"]
