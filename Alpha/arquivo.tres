@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource( 1 )
 Cena = "res://Cenas/Telas/TelaPrincipal.tscn"
-Identificador = "Lauraa132"
+Identificador = ""
 Idioma = "pt_BR"
 Musica = "Escola.wav"
 Genero = "Menina"
