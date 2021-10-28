@@ -4,7 +4,7 @@
 [ext_resource path="res://Elementos/Textuais/ComicSansMS/comic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Cenas/Objetos/BotaoHorizontal.tscn" type="PackedScene" id=3]
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
 void fragment() {
@@ -16,15 +16,15 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id=4]
-shader = SubResource( 3 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 resource_local_to_scene = true
 size = 32
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 resource_local_to_scene = true
 size = 34
 font_data = ExtResource( 2 )
@@ -46,7 +46,7 @@ __meta__ = {
 layer = 5
 
 [node name="Fundo" type="ColorRect" parent="Camada"]
-material = SubResource( 4 )
+material = SubResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -93,7 +93,7 @@ __meta__ = {
 margin_right = 450.0
 margin_bottom = 46.0
 size_flags_horizontal = 5
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "ParabensTutorial"
 align = 1
@@ -115,7 +115,7 @@ visible = false
 [node name="Texto" parent="CamadaSuperior/Fundo/Linha/Botao/Horizontal" index="1"]
 margin_left = 62.0
 margin_right = 244.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "BotaoJogar"
 
 [editable path="CamadaSuperior/Fundo/Linha/Botao"]

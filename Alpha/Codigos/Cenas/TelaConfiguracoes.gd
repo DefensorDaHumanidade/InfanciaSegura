@@ -55,6 +55,8 @@ func _selecionarFase():
 
 func _botaoSair():
 	print("Saindo do Jogo")
+	if OS.get_name() == "HTML5":
+		JavaScript.eval("window.close()")
 	get_tree().quit()
 	pass
 
@@ -68,5 +70,7 @@ func _BotaoApagar():
 			return
 	print("Operacao Concluida: Dados Apagados!")
 	Carregar.zerarDados()
+	if OS.get_name() == "HTML5":
+		JavaScript.eval("window.close()")
 	get_tree().quit()
 	pass

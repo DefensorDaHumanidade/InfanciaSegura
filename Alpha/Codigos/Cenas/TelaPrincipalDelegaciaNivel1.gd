@@ -4,8 +4,8 @@ const CenaIcone = preload("res://Cenas/Objetos/IconeTelefonico.tscn")
 const CenaNumero = preload("res://Cenas/Objetos/NumeroTelefonico.tscn")
 
 var FatorAleatorio = RandomNumberGenerator.new()
-var ElementosNumeros = []
-var ElementosIcones = []
+var ElementosNumeros = ["DisqueLogo1", "DisqueLogo2", "DisqueLogo3", "DisqueLogo4", "DisqueLogo5", "DisqueLogo6", "DisqueLogo7"]
+var ElementosIcones = ["IconeLogo1", "IconeLogo2", "IconeLogo3", "IconeLogo4", "IconeLogo5", "IconeLogo6", "IconeLogo7"]
 var Indice = 0
 var tempoInicial
 var tempoFinal
@@ -20,7 +20,10 @@ func _ready():
 		tempoInicial = OS.get_unix_time()
 		Timestamp = OS.get_unix_time()
 		FatorAleatorio.randomize()
-		buscarArquivosPasta("res://Elementos/Fases/Delegacia/DelegaciaFase1/")
+#		buscarArquivosPasta("res://Elementos/Fases/Delegacia/DelegaciaFase1/")
+		for i in range(0,ElementosIcones.size()):
+			gerarNumero("Linha/ColunaInferior", ElementosNumeros[i])
+			gerarIcone("Linha/ColunaSuperior", ElementosIcones[i])
 		embaralharPosicoes("Linha/ColunaSuperior")
 		embaralharPosicoes("Linha/ColunaInferior")
 		CarregarElementos(Carregar.FaseAtual+"_Inicio")

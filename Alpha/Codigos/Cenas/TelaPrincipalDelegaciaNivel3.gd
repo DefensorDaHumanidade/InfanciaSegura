@@ -8,7 +8,9 @@ var Indice = 0
 var tempoInicial
 var tempoFinal
 
+var posicaoCidade = Vector2.ZERO
 var posicaoClique = Vector2.ZERO
+var limites = Vector2.ZERO
 var arrastar = false
 
 func _ready():
@@ -66,6 +68,8 @@ func preencherPopulacao():
 			get_node("Cidade/Populacao/Pessoa"+str(procurado)+"/Local"+str(repetir)).add_child(Pessoa)
 	pass
 
+
+
 func _arrastarCidade(evento):
 	if evento is InputEventScreenTouch:
 		if arrastar:
@@ -73,17 +77,9 @@ func _arrastarCidade(evento):
 		else:
 			arrastar = true
 			posicaoClique = evento.position
+			posicaoCidade = get_node("Cidade").rect_position
 	if evento is InputEventMouseMotion and arrastar:
-		if evento.global_position.x < 200:
-			return
-		if evento.global_position.x > 1100:
-			return
-		if evento.global_position.y < 200:
-			return
-		if evento.global_position.y > 400:
-			return 
-		get_node("Cidade").rect_pivot_offset = posicaoClique
-		get_node("Cidade").set_global_position(evento.global_position-get_node("Cidade").rect_pivot_offset)
+		get_node("Cidade").set_global_position(posicaoCidade+evento.position-posicaoClique)
 	pass
 
 func _escalaCidade(valor):

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cenas/Objetos/BotaoQuadrado.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Codigos/Eternos/Carregar.gd" type="Script" id=2]
+[ext_resource path="res://Elementos/Visuais/Icones/Engrenagem.png" type="Texture" id=3]
+[ext_resource path="res://Elementos/Sonoros/Musica/Abertura.wav" type="AudioStream" id=4]
+
+[node name="TelaSuperior" type="CanvasLayer"]
+layer = 5
+script = ExtResource( 2 )
+
+[node name="Botao" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.588235, 1, 0.921569, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -104.318
+margin_top = 10.3181
+margin_right = -10.3179
+margin_bottom = 113.318
+toggle_mode = true
+
+[node name="Icone" parent="Botao" index="0"]
+self_modulate = Color( 0, 0.898039, 0.898039, 1 )
+texture = ExtResource( 3 )
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+autoplay = true
+bus = "CanalMusica"
+
+[node name="BancoDados" type="HTTPRequest" parent="."]
+
+[connection signal="toggled" from="Botao" to="." method="_acao"]
+[connection signal="request_completed" from="BancoDados" to="." method="_BancoDados"]
+
+[editable path="Botao"]

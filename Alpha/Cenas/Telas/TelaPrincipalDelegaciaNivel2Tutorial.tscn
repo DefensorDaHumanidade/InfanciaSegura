@@ -366,12 +366,16 @@ color = Color( 1, 1, 1, 0.705882 )
 [node name="Contorno" parent="ZonaMontagem/QuebraCabeca16" index="1"]
 visible = false
 
-[node name="QuebraCabeca" parent="ZonaMontagem" instance=ExtResource( 4 )]
+[node name="QuebraCabecaTransparente" parent="ZonaMontagem" instance=ExtResource( 4 )]
+self_modulate = Color( 1, 1, 1, 0.705882 )
 position = Vector2( -444.835, 303.408 )
 frame = 4
 
-[node name="QuebraCabecaTransparente" parent="ZonaMontagem" instance=ExtResource( 4 )]
-self_modulate = Color( 1, 1, 1, 0.705882 )
+[node name="Area" parent="ZonaMontagem/QuebraCabecaTransparente" index="3"]
+monitoring = false
+monitorable = false
+
+[node name="QuebraCabeca" parent="ZonaMontagem" instance=ExtResource( 4 )]
 position = Vector2( -444.835, 303.408 )
 frame = 4
 
@@ -388,6 +392,7 @@ margin_right = 117.446
 margin_bottom = 355.468
 rect_rotation = 30.0
 rect_pivot_offset = Vector2( 128, 240 )
+mouse_filter = 2
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -464,4 +469,5 @@ anims/Tutorial = SubResource( 6 )
 [editable path="ZonaMontagem/QuebraCabeca14"]
 [editable path="ZonaMontagem/QuebraCabeca15"]
 [editable path="ZonaMontagem/QuebraCabeca16"]
+[editable path="ZonaMontagem/QuebraCabecaTransparente"]
 [editable path="Painel"]

@@ -2,7 +2,7 @@ extends Node
 
 export var dadosLimite = 500
 export var tempoLimite = 10000
-export (String) var local = "res://arquivo.tres"
+export (String) var local = "user://arquivo.tres"
 export (String) var sitio = "https://infanciasegura.000webhostapp.com/"
 export (Resource) var Dados
 
@@ -120,9 +120,9 @@ func atualizarPontuacao(Nivel: String, TempoAtual: int, PontosAtual: int):
 	pass
 
 func atualizarResposta(IndicePergunta: String, AcertoErrro: String, TempoInicial: String, Descricao: String):
-	if Carregar.Dados.Arquivo.size()+1 > dadosLimite:
-		Carregar.Dados.Arquivo.clear()
-		Carregar.Dados.Arquivo["0"] = {"Conteudo": "Perdido"}
+#	if Carregar.Dados.Arquivo.size()+1 > dadosLimite:
+#		Carregar.Dados.Arquivo.clear()
+#		Carregar.Dados.Arquivo["0"] = {"Conteudo": "Perdido"}
 	Carregar.Dados.Arquivo[Carregar.Dados.Arquivo.size()+1] = {"Jogador": Dados.Identificador, "Pergunta": IndicePergunta, "Veredito": AcertoErrro, "TI": TempoInicial, "TF": OS.get_unix_time(), "Resposta": Descricao}
 	salvarDados(Carregar.Dados)
 	pass
@@ -147,11 +147,16 @@ func comunicarBancoJogador(PHP: String):
 
 func comunicarBancoRespostas(PHP: String, IndicePergunta: String, AcertoErro: String, TempoInicial: String, Descricao: String):
 	atualizarResposta(IndicePergunta, AcertoErro, TempoInicial, Descricao)
-#	get_node("BancoDados").request(sitio+PHP, ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Dados.Identificador+"&pergunta="+IndicePergunta+"&veredito="+AcertoErro+"&TI="+TempoInicial+"&TF="+str(0)+"&resposta="+Descricao)
+	get_node("BancoDados").request(sitio+PHP, ["Content-Type: application/x-www-form-urlencoded"], false, HTTPClient.METHOD_POST,"jogador="+Dados.Identificador+"&pergunta="+IndicePergunta+"&veredito="+AcertoErro+"&TI="+TempoInicial+"&TF="+str(0)+"&resposta="+Descricao)
 
 func _BancoDados(resultado, _codigo, _cabecalho, corpo):
-	if resultado == HTTPRequest.RESULT_SUCCESS:
-		printraw(corpo.get_string_from_utf8())
-	else:
-		print("Não foi possível se comunicar com o banco de dados!")
+	match resultado:
+		HTTPRequest.RESULT_SUCCESS:
+			printraw(corpo.get_string_from_utf8())
+		HTTPRequest.RESULT_NO_RESPONSE:
+			print("Não foi possível se comunicar com o banco de dados!")
+		HTTPRequest.RESULT_NO_RESPONSE:
+			print("Não foi possível se comunicar com o banco de dados!")
+		_:
+			print("Não foi possível se comunicar com o banco de dados!")
 	pass

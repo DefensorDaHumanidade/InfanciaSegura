@@ -2,7 +2,7 @@ extends Control
 
 var arrastar = false
 var FatorAleatorio = RandomNumberGenerator.new()
-var Elementos = []
+var Elementos = ["Bom_01", "Bom_02", "Bom_03", "Bom_04", "Bom_05", "Ruim_01", "Ruim_02", "Ruim_03", "Ruim_04", "Ruim_05"]
 var Indice = 0
 var ErrosCometidos = 0
 var tempoInicial
@@ -18,7 +18,7 @@ func _ready():
 		
 		tempoInicial = OS.get_unix_time()
 		FatorAleatorio.randomize()
-		buscarArquivosPasta("res://Elementos/Fases/Hospital/HospitalFase3/")
+#		buscarArquivosPasta("res://Elementos/Fases/Hospital/HospitalFase3/")
 		Elementos.shuffle()
 		Atualizar()
 	pass

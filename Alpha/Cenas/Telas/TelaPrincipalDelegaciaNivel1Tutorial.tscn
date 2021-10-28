@@ -326,11 +326,18 @@ disabled = true
 
 [node name="Fim" parent="Linha/ColunaSuperior/IconeTelefonico7/PinoTransparente" index="3"]
 position = Vector2( 0, 55 )
-input_pickable = true
 mode = 1
+
+[node name="Icone" parent="Linha/ColunaSuperior/IconeTelefonico7/PinoTransparente/Fim" index="0"]
+mouse_filter = 2
 
 [node name="Contato" parent="Linha/ColunaSuperior/IconeTelefonico7/PinoTransparente/Fim" index="1"]
 disabled = true
+
+[node name="Area" parent="Linha/ColunaSuperior/IconeTelefonico7/PinoTransparente/Fim" index="2"]
+input_pickable = false
+monitoring = false
+monitorable = false
 
 [node name="Contato" parent="Linha/ColunaSuperior/IconeTelefonico7/PinoTransparente/Fim/Area" index="0"]
 disabled = true
@@ -495,6 +502,6 @@ anims/Tutorial = SubResource( 9 )
 [editable path="Linha/ColunaSuperior/IconeTelefonico6"]
 [editable path="Linha/ColunaSuperior/IconeTelefonico6/Pino"]
 [editable path="Linha/ColunaSuperior/IconeTelefonico7"]
-[editable path="Linha/ColunaSuperior/IconeTelefonico7/Pino"]
 [editable path="Linha/ColunaSuperior/IconeTelefonico7/PinoTransparente"]
+[editable path="Linha/ColunaSuperior/IconeTelefonico7/Pino"]
 [editable path="Painel"]

@@ -754,6 +754,10 @@ Nome = "ParteNariz"
 [node name="Texto" parent="ZonaNascimento/CorpoHumanoPecaNarizTransparente" index="1"]
 custom_fonts/font = SubResource( 2 )
 
+[node name="Area" parent="ZonaNascimento/CorpoHumanoPecaNarizTransparente" index="3"]
+monitoring = false
+monitorable = false
+
 [node name="Mao" type="TextureRect" parent="ZonaNascimento"]
 self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5

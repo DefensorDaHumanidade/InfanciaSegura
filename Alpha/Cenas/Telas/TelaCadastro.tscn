@@ -184,6 +184,7 @@ anims/Padrao = SubResource( 8 )
 
 [connection signal="focus_exited" from="Centro/Horizontal/CampoTexto" to="." method="_TextoInserido"]
 [connection signal="text_changed" from="Centro/Horizontal/CampoTexto" to="." method="_TextoInicial"]
+[connection signal="text_entered" from="Centro/Horizontal/CampoTexto" to="." method="_TextoDigitado"]
 [connection signal="pressed" from="Centro/Horizontal/Jogar" to="." method="_trocarCena"]
 
 [editable path="Centro/Horizontal/Jogar"]

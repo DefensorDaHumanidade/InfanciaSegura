@@ -20,13 +20,11 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Jogo"
+config/name="Infância Segura"
 run/main_scene="res://Cenas/Telas/TelaInicial.tscn"
 boot_splash/image="res://Elementos/Visuais/Fundo/Tela.png"
 boot_splash/bg_color=Color( 0, 0.392157, 0, 1 )
 config/icon="res://Elementos/Visuais/Bandeiras/Brasil.png"
-config/macos_native_icon="res://Elementos/Visuais/Bandeiras/Brasil.png"
-config/windows_native_icon="res://Elementos/Visuais/Bandeiras/Brasil.png"
 config/versao="0.1"
 
 [autoload]
@@ -82,5 +80,8 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
+threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false

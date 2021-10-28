@@ -318,6 +318,8 @@ __meta__ = {
 stream = ExtResource( 11 )
 
 [node name="Area" type="Area2D" parent="ZonaNascimento/ToqueTransparente"]
+monitoring = false
+monitorable = false
 
 [node name="Contato" type="CollisionShape2D" parent="ZonaNascimento/ToqueTransparente/Area"]
 position = Vector2( 200, 200 )
